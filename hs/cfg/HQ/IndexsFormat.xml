@@ -1,0 +1,857 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+	[Fmat:%.4f:0]
+		参数1：格式化话字符串
+		参数2：当值为0时返回的字符串类型（0不特殊处理，1返回-，2返回0）									
+	[Calc:4:100:1:2:4]  计算并格式化		
+		参数1：运算方式（0不运算1加2减3乘4除）
+		参数2：运算数		
+		参数3：小数位保留类型（1.固定小数位，2.自动小数位(值位数>小数位数 或 无单位时隐藏小数位)）
+		参数4：小数点位数
+		参数5：运算结果单位格式化（1自动英文，2自动中文，3无单位，4万单位，5亿单位, 6百分号单位)
+	[Chan:2:0]  变化值格式化，大于加+
+		参数1：格式化保留小数位数
+		参数2：当值为0时返回的字符串类型（0返回0，1返回空）
+	[Date:1:0]  日期格式化
+		参数1：是否显示年份 0不显示 1显示
+		参数2：分隔符0为-，1为/，2为.
+	[Time:1]  时间格式化			
+		参数1：是否显示秒 0不显示 1显示
+	[Enum]	枚举格式化-转换为FormatEnum节点配置的枚举值
+
+	字符串指标格式化
+		1. 枚举格式化[Enum]，转化为枚举值
+		2. 其他配置为一般格式化，当指标值为空时显示format字段配置的值，当指标值不为空时，直接显示原值
+-->
+<Config> 
+  <!--指标格式化配置-->  
+  <IndexsFormat> 
+    <Market name="X.HK,IF.CFE,TF.CFE,FU1.SHF,FU1.DCE,FU1.CZC,FU2.SHF,FU2.DCE,FU2.CZC,FU3.SHF,FU4.SHF,FU5.DCE,FU5.CZC,FU4.INE"> 
+      <Index name="TotalVolume" caption="总成交量(股)" format="[Calc:0:1:2:2:2]" defcolor="VolumeValue"/>  
+      <Index name="DealVolume" caption="分笔-现量" format="[Fmat:%.0f:0]" defcolor="VolumeValue"/>  
+      <Index name="business_amount_out" caption="外盘(股)" format="[Calc:0:1:2:2:2]" defcolor="PriceUp"/>  
+      <Index name="business_amount_in" caption="内盘(股)" format="[Calc:0:1:2:2:2]" defcolor="PriceDown"/>  
+      <Index name="current_amount" caption="现量(股)" format="[Calc:0:1:2:2:2]" defcolor="VolumeValue"/>  
+      <Index name="business_amount" caption="总成交量(股)" format="[Calc:0:1:2:2:2]" defcolor="VolumeValue"/>  
+      <Index name="entrust_diff" caption="委差(股)" format="[Calc:0:1:2:2:2]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BuyVolume1" caption="买一量(股)" format="[Calc:0:1:2:2:2]" defcolor="VolumeValue"/>  
+      <Index name="BuyVolume2" caption="买二量(股)" format="[Calc:0:1:2:2:2]" defcolor="VolumeValue"/>  
+      <Index name="BuyVolume3" caption="买三量(股)" format="[Calc:0:1:2:2:2]" defcolor="VolumeValue"/>  
+      <Index name="BuyVolume4" caption="买四量(股)" format="[Calc:0:1:2:2:2]" defcolor="VolumeValue"/>  
+      <Index name="BuyVolume5" caption="买五量(股)" format="[Calc:0:1:2:2:2]" defcolor="VolumeValue"/>
+      <Index name="BuyVolume6" caption="买六量(股)" format="[Calc:0:1:2:2:2]" defcolor="VolumeValue"/>  
+      <Index name="BuyVolume7" caption="买七量(股)" format="[Calc:0:1:2:2:2]" defcolor="VolumeValue"/>  
+      <Index name="BuyVolume8" caption="买八量(股)" format="[Calc:0:1:2:2:2]" defcolor="VolumeValue"/>  
+      <Index name="BuyVolume9" caption="买九量(股)" format="[Calc:0:1:2:2:2]" defcolor="VolumeValue"/>  
+      <Index name="BuyVolume10" caption="买十量(股)" format="[Calc:0:1:2:2:2]" defcolor="VolumeValue"/>  
+      <Index name="SellVolume1" caption="卖一量(股)" format="[Calc:0:1:2:2:2]" defcolor="VolumeValue"/>  
+      <Index name="SellVolume2" caption="卖二量(股)" format="[Calc:0:1:2:2:2]" defcolor="VolumeValue"/>  
+      <Index name="SellVolume3" caption="卖三量(股)" format="[Calc:0:1:2:2:2]" defcolor="VolumeValue"/>  
+      <Index name="SellVolume4" caption="卖四量(股)" format="[Calc:0:1:2:2:2]" defcolor="VolumeValue"/>  
+      <Index name="SellVolume5" caption="卖五量(股)" format="[Calc:0:1:2:2:2]" defcolor="VolumeValue"/>  
+      <Index name="SellVolume6" caption="卖六量(股)" format="[Calc:0:1:2:2:2]" defcolor="VolumeValue"/>  
+      <Index name="SellVolume7" caption="卖七量(股)" format="[Calc:0:1:2:2:2]" defcolor="VolumeValue"/>  
+      <Index name="SellVolume8" caption="卖八量(股)" format="[Calc:0:1:2:2:2]" defcolor="VolumeValue"/>  
+      <Index name="SellVolume9" caption="卖九量(股)" format="[Calc:0:1:2:2:2]" defcolor="VolumeValue"/>  
+      <Index name="SellVolume10" caption="卖十量(股)" format="[Calc:0:1:2:2:2]" defcolor="VolumeValue"/>  
+      <Index name="AmountChange" caption="增仓" format="[Fmat:%.0f:0]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>
+    </Market>    
+    <Market name="IF.CFE,FU5.DCE,FU4.INE"> 
+      <Index name="last_px" caption="现价" format="[Fmat:%.1f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="preclose_px" caption="前收价" format="[Fmat:%.1f:1]" defcolor="PriceSame"/>  
+      <Index name="px_change" caption="涨跌" format="[Fmat:%.1f:0]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="open_px" caption="今开价" format="[Fmat:%.1f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="high_px" caption="最高价" format="[Fmat:%.1f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="low_px" caption="最低价" format="[Fmat:%.1f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="wavg_px" caption="加权均价" format="[Fmat:%.1f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="up_px" caption="涨停价格" format="[Fmat:%.1f:1]" defcolor="PriceUp"/>  
+      <Index name="down_px" caption="跌停价格" format="[Fmat:%.1f:1]" defcolor="PriceDown"/>  
+      <Index name="w52_high_px" caption="52周最高" format="[Fmat:%.1f:1]" defcolor="PriceUp"/>  
+      <Index name="w52_low_px" caption="52周最低" format="[Fmat:%.1f:1]" defcolor="PriceDown"/>  
+      <Index name="settlement" caption="结算价" format="[Fmat:%.1f:1]" defcolor="PriceSame"/>  
+      <Index name="prev_settlement" caption="昨结价" format="[Fmat:%.1f:1]" defcolor="PriceSame"/> 
+      <Index name="BuyPrice1" caption="买一" format="[Fmat:%.1f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BuyPrice2" caption="买二" format="[Fmat:%.1f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BuyPrice3" caption="买三" format="[Fmat:%.1f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BuyPrice4" caption="买四" format="[Fmat:%.1f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BuyPrice5" caption="买五" format="[Fmat:%.1f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BuyPrice6" caption="买六" format="[Fmat:%.1f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BuyPrice7" caption="买七" format="[Fmat:%.1f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BuyPrice8" caption="买八" format="[Fmat:%.1f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BuyPrice9" caption="买九" format="[Fmat:%.1f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BuyPrice10" caption="买十" format="[Fmat:%.1f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="SellPrice1" caption="卖一" format="[Fmat:%.1f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="SellPrice2" caption="卖二" format="[Fmat:%.1f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="SellPrice3" caption="卖三" format="[Fmat:%.1f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="SellPrice4" caption="卖四" format="[Fmat:%.1f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="SellPrice5" caption="卖五" format="[Fmat:%.1f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="SellPrice6" caption="卖六" format="[Fmat:%.1f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="SellPrice7" caption="卖七" format="[Fmat:%.1f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="SellPrice8" caption="卖八" format="[Fmat:%.1f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="SellPrice9" caption="卖九" format="[Fmat:%.1f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="SellPrice10" caption="卖十" format="[Fmat:%.1f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/> 
+    </Market>   
+    <Market name="TF.CFE"> 
+      <Index name="last_px" caption="现价" format="[Fmat:%.3f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="preclose_px" caption="前收价" format="[Fmat:%.3f:1]" defcolor="PriceSame"/>  
+      <Index name="px_change" caption="涨跌" format="[Fmat:%.3f:0]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="open_px" caption="今开价" format="[Fmat:%.3f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="high_px" caption="最高价" format="[Fmat:%.3f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="low_px" caption="最低价" format="[Fmat:%.3f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="wavg_px" caption="加权均价" format="[Fmat:%.3f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="up_px" caption="涨停价格" format="[Fmat:%.3f:1]" defcolor="PriceUp"/>  
+      <Index name="down_px" caption="跌停价格" format="[Fmat:%.3f:1]" defcolor="PriceDown"/>  
+      <Index name="w52_high_px" caption="52周最高" format="[Fmat:%.3f:1]" defcolor="PriceUp"/>  
+      <Index name="w52_low_px" caption="52周最低" format="[Fmat:%.3f:1]" defcolor="PriceDown"/>  
+      <Index name="settlement" caption="结算价" format="[Fmat:%.3f:1]" defcolor="PriceSame"/>  
+      <Index name="prev_settlement" caption="昨结价" format="[Fmat:%.3f:1]" defcolor="PriceSame"/> 
+      <Index name="BuyPrice1" caption="买一" format="[Fmat:%.3f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BuyPrice2" caption="买二" format="[Fmat:%.3f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BuyPrice3" caption="买三" format="[Fmat:%.3f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BuyPrice4" caption="买四" format="[Fmat:%.3f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BuyPrice5" caption="买五" format="[Fmat:%.3f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BuyPrice6" caption="买六" format="[Fmat:%.3f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BuyPrice7" caption="买七" format="[Fmat:%.3f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BuyPrice8" caption="买八" format="[Fmat:%.3f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BuyPrice9" caption="买九" format="[Fmat:%.3f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BuyPrice10" caption="买十" format="[Fmat:%.3f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="SellPrice1" caption="卖一" format="[Fmat:%.3f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="SellPrice2" caption="卖二" format="[Fmat:%.3f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="SellPrice3" caption="卖三" format="[Fmat:%.3f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="SellPrice4" caption="卖四" format="[Fmat:%.3f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="SellPrice5" caption="卖五" format="[Fmat:%.3f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="SellPrice6" caption="卖六" format="[Fmat:%.3f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="SellPrice7" caption="卖七" format="[Fmat:%.3f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="SellPrice8" caption="卖八" format="[Fmat:%.3f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="SellPrice9" caption="卖九" format="[Fmat:%.3f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="SellPrice10" caption="卖十" format="[Fmat:%.3f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/> 
+    </Market>
+     <Market name="FU1.SHF,FU1.DCE,FU2.SHF,FU2.DCE,FU3.SHF,FU1.CZC,FU.CBOT,FU.CME,FU.CMX,FU.NYM"> 
+      <Index name="last_px" caption="现价" format="[Fmat:%.0f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="preclose_px" caption="前收价" format="[Fmat:%.0f:1]" defcolor="PriceSame"/>  
+      <Index name="px_change" caption="涨跌" format="[Fmat:%.0f:0]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="open_px" caption="今开价" format="[Fmat:%.0f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="high_px" caption="最高价" format="[Fmat:%.0f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="low_px" caption="最低价" format="[Fmat:%.0f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="wavg_px" caption="加权均价" format="[Fmat:%.0f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="up_px" caption="涨停价格" format="[Fmat:%.0f:1]" defcolor="PriceUp"/>  
+      <Index name="down_px" caption="跌停价格" format="[Fmat:%.0f:1]" defcolor="PriceDown"/>  
+      <Index name="w52_high_px" caption="52周最高" format="[Fmat:%.0f:1]" defcolor="PriceUp"/>  
+      <Index name="w52_low_px" caption="52周最低" format="[Fmat:%.0f:1]" defcolor="PriceDown"/>  
+      <Index name="settlement" caption="结算价" format="[Fmat:%.0f:1]" defcolor="PriceSame"/>  
+      <Index name="prev_settlement" caption="昨结价" format="[Fmat:%.0f:1]" defcolor="PriceSame"/> 
+      <Index name="BuyPrice1" caption="买一" format="[Fmat:%.0f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BuyPrice2" caption="买二" format="[Fmat:%.0f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BuyPrice3" caption="买三" format="[Fmat:%.0f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BuyPrice4" caption="买四" format="[Fmat:%.0f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BuyPrice5" caption="买五" format="[Fmat:%.0f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BuyPrice6" caption="买六" format="[Fmat:%.0f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BuyPrice7" caption="买七" format="[Fmat:%.0f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BuyPrice8" caption="买八" format="[Fmat:%.0f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BuyPrice9" caption="买九" format="[Fmat:%.0f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BuyPrice10" caption="买十" format="[Fmat:%.0f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="SellPrice1" caption="卖一" format="[Fmat:%.0f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="SellPrice2" caption="卖二" format="[Fmat:%.0f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="SellPrice3" caption="卖三" format="[Fmat:%.0f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="SellPrice4" caption="卖四" format="[Fmat:%.0f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="SellPrice5" caption="卖五" format="[Fmat:%.0f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="SellPrice6" caption="卖六" format="[Fmat:%.0f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="SellPrice7" caption="卖七" format="[Fmat:%.0f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="SellPrice8" caption="卖八" format="[Fmat:%.0f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="SellPrice9" caption="卖九" format="[Fmat:%.0f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="SellPrice10" caption="卖十" format="[Fmat:%.0f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/> 
+	  
+    </Market>
+	
+	<!-- 郑州商品期货  -->
+	<Market name="FU2.CZC,FU5.CZC"> 
+      <Index name="last_px" caption="现价" format="[Fmat:%.1f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="preclose_px" caption="前收价" format="[Fmat:%.1f:1]" defcolor="PriceSame"/>  
+      <Index name="px_change" caption="涨跌" format="[Fmat:%.1f:0]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="open_px" caption="今开价" format="[Fmat:%.1f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="high_px" caption="最高价" format="[Fmat:%.1f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="low_px" caption="最低价" format="[Fmat:%.1f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="wavg_px" caption="加权均价" format="[Fmat:%.1f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="up_px" caption="涨停价格" format="[Fmat:%.1f:1]" defcolor="PriceUp"/>  
+      <Index name="down_px" caption="跌停价格" format="[Fmat:%.1f:1]" defcolor="PriceDown"/>  
+      <Index name="w52_high_px" caption="52周最高" format="[Fmat:%.1f:1]" defcolor="PriceUp"/>  
+      <Index name="w52_low_px" caption="52周最低" format="[Fmat:%.1f:1]" defcolor="PriceDown"/>  
+      <Index name="settlement" caption="结算价" format="[Fmat:%.1f:1]" defcolor="PriceSame"/>  
+      <Index name="prev_settlement" caption="昨结价" format="[Fmat:%.1f:1]" defcolor="PriceSame"/> 
+      <Index name="BuyPrice1" caption="买一" format="[Fmat:%.1f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BuyPrice2" caption="买二" format="[Fmat:%.1f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BuyPrice3" caption="买三" format="[Fmat:%.1f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BuyPrice4" caption="买四" format="[Fmat:%.1f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BuyPrice5" caption="买五" format="[Fmat:%.1f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BuyPrice6" caption="买六" format="[Fmat:%.1f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BuyPrice7" caption="买七" format="[Fmat:%.1f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BuyPrice8" caption="买八" format="[Fmat:%.1f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BuyPrice9" caption="买九" format="[Fmat:%.1f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BuyPrice10" caption="买十" format="[Fmat:%.1f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="SellPrice1" caption="卖一" format="[Fmat:%.1f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="SellPrice2" caption="卖二" format="[Fmat:%.1f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="SellPrice3" caption="卖三" format="[Fmat:%.1f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="SellPrice4" caption="卖四" format="[Fmat:%.1f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="SellPrice5" caption="卖五" format="[Fmat:%.1f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="SellPrice6" caption="卖六" format="[Fmat:%.1f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="SellPrice7" caption="卖七" format="[Fmat:%.1f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="SellPrice8" caption="卖八" format="[Fmat:%.1f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="SellPrice9" caption="卖九" format="[Fmat:%.1f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="SellPrice10" caption="卖十" format="[Fmat:%.1f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/> 
+	  
+    </Market>
+	
+     <Market name="FU4.SHF"> 
+      <Index name="last_px" caption="现价" format="[Fmat:%.2f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="preclose_px" caption="前收价" format="[Fmat:%.2f:1]" defcolor="PriceSame"/>  
+      <Index name="px_change" caption="涨跌" format="[Fmat:%.2f:0]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="open_px" caption="今开价" format="[Fmat:%.2f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="high_px" caption="最高价" format="[Fmat:%.2f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="low_px" caption="最低价" format="[Fmat:%.2f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="wavg_px" caption="加权均价" format="[Fmat:%.2f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="up_px" caption="涨停价格" format="[Fmat:%.2f:1]" defcolor="PriceUp"/>  
+      <Index name="down_px" caption="跌停价格" format="[Fmat:%.2f:1]" defcolor="PriceDown"/>  
+      <Index name="w52_high_px" caption="52周最高" format="[Fmat:%.2f:1]" defcolor="PriceUp"/>  
+      <Index name="w52_low_px" caption="52周最低" format="[Fmat:%.2f:1]" defcolor="PriceDown"/>  
+      <Index name="settlement" caption="结算价" format="[Fmat:%.2f:1]" defcolor="PriceSame"/>  
+      <Index name="prev_settlement" caption="昨结价" format="[Fmat:%.2f:1]" defcolor="PriceSame"/> 
+      <Index name="BuyPrice1" caption="买一" format="[Fmat:%.2f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BuyPrice2" caption="买二" format="[Fmat:%.2f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BuyPrice3" caption="买三" format="[Fmat:%.2f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BuyPrice4" caption="买四" format="[Fmat:%.2f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BuyPrice5" caption="买五" format="[Fmat:%.2f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BuyPrice6" caption="买六" format="[Fmat:%.2f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BuyPrice7" caption="买七" format="[Fmat:%.2f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BuyPrice8" caption="买八" format="[Fmat:%.2f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BuyPrice9" caption="买九" format="[Fmat:%.2f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BuyPrice10" caption="买十" format="[Fmat:%.2f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="SellPrice1" caption="卖一" format="[Fmat:%.2f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="SellPrice2" caption="卖二" format="[Fmat:%.2f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="SellPrice3" caption="卖三" format="[Fmat:%.2f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="SellPrice4" caption="卖四" format="[Fmat:%.2f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="SellPrice5" caption="卖五" format="[Fmat:%.2f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="SellPrice6" caption="卖六" format="[Fmat:%.2f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="SellPrice7" caption="卖七" format="[Fmat:%.2f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="SellPrice8" caption="卖八" format="[Fmat:%.2f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="SellPrice9" caption="卖九" format="[Fmat:%.2f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="SellPrice10" caption="卖十" format="[Fmat:%.2f:1]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/> 
+    </Market>
+    <Market name="X.HK,F.SH,F.SZ,B.SH"> 
+      <Index name="last_px" caption="现价" format="[Fmat:%.3f:1]" compareto="preclose_px" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="preclose_px" caption="前收价" format="[Fmat:%.3f:1]" defcolor="PriceSame"/>  
+      <Index name="px_change" caption="涨跌" format="[Fmat:%.3f:0]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="open_px" caption="今开价" format="[Fmat:%.3f:1]" compareto="preclose_px" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="high_px" caption="最高价" format="[Fmat:%.3f:1]" compareto="preclose_px" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="low_px" caption="最低价" format="[Fmat:%.3f:1]" compareto="preclose_px" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="wavg_px" caption="加权均价" format="[Fmat:%.3f:1]" compareto="preclose_px" ecolor="PriceSame" defcolor="PriceSame"/>        
+      <Index name="up_px" caption="涨停价格" format="[Fmat:%.3f:1]" defcolor="PriceUp"/>  
+      <Index name="down_px" caption="跌停价格" format="[Fmat:%.3f:1]" defcolor="PriceDown"/>  
+      <Index name="vol_ratio" caption="量比" format="[Fmat:%.3f:0]" defcolor="PriceSame"/>  
+      <Index name="eps" caption="每股收益" format="[Fmat:%.3f:0]" defcolor="VolumeValue"/>  
+      <Index name="eps_ttm" caption="每股股收益TTM" format="[Fmat:%.3f:0]" defcolor="VolumeValue"/>
+      <Index name="eps_year" caption="上一年度每股收益" format="[Fmat:%.3f:0]" defcolor="VolumeValue"/>
+      <Index name="bps" caption="每股净资产" format="[Fmat:%.3f:0]" defcolor="VolumeValue"/>  
+      <Index name="pe_rate" caption="市盈率" format="[Fmat:%.3f:0]" defcolor="PriceSame"/>  
+      <Index name="ttm_pe_rate" caption="市盈率TTM" format="[Fmat:%.3f:0]" defcolor="PriceSame"/>  
+      <Index name="dyn_pb_rate" caption="市净率" format="[Fmat:%.3f:0]" defcolor="PriceSame"/>  
+      <Index name="w52_high_px" caption="52周最高" format="[Fmat:%.3f:1]" defcolor="PriceUp"/>  
+      <Index name="w52_low_px" caption="52周最低" format="[Fmat:%.3f:1]" defcolor="PriceDown"/>
+      <Index name="BuyPrice1" caption="买一" format="[Fmat:%.3f:1]" compareto="preclose_px" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BuyPrice2" caption="买二" format="[Fmat:%.3f:1]" compareto="preclose_px" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BuyPrice3" caption="买三" format="[Fmat:%.3f:1]" compareto="preclose_px" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BuyPrice4" caption="买四" format="[Fmat:%.3f:1]" compareto="preclose_px" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BuyPrice5" caption="买五" format="[Fmat:%.3f:1]" compareto="preclose_px" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BuyPrice6" caption="买六" format="[Fmat:%.3f:1]" compareto="preclose_px" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BuyPrice7" caption="买七" format="[Fmat:%.3f:1]" compareto="preclose_px" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BuyPrice8" caption="买八" format="[Fmat:%.3f:1]" compareto="preclose_px" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BuyPrice9" caption="买九" format="[Fmat:%.3f:1]" compareto="preclose_px" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BuyPrice10" caption="买十" format="[Fmat:%.3f:1]" compareto="preclose_px" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="SellPrice1" caption="卖一" format="[Fmat:%.3f:1]" compareto="preclose_px" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="SellPrice2" caption="卖二" format="[Fmat:%.3f:1]" compareto="preclose_px" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="SellPrice3" caption="卖三" format="[Fmat:%.3f:1]" compareto="preclose_px" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="SellPrice4" caption="卖四" format="[Fmat:%.3f:1]" compareto="preclose_px" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="SellPrice5" caption="卖五" format="[Fmat:%.3f:1]" compareto="preclose_px" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="SellPrice6" caption="卖六" format="[Fmat:%.3f:1]" compareto="preclose_px" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="SellPrice7" caption="卖七" format="[Fmat:%.3f:1]" compareto="preclose_px" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="SellPrice8" caption="卖八" format="[Fmat:%.3f:1]" compareto="preclose_px" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="SellPrice9" caption="卖九" format="[Fmat:%.3f:1]" compareto="preclose_px" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="SellPrice10" caption="卖十" format="[Fmat:%.3f:1]" compareto="preclose_px" ecolor="PriceSame" defcolor="PriceSame"/> 
+    </Market>  
+    <Market name="S.SH,S.SZ,S.OC,S.CSI,S.HK,S"> 
+      <Index name="Volume" caption="总成交量(手)" format="[Calc:0:0:2:2:2]" defcolor="VolumeValue"/>  
+      <Index name="DeltaVolume" caption="现量(手)" format="[Calc:0:0:2:2:2]" defcolor="VolumeValue"/> 
+    </Market>
+    <!-- 基金净值 -->  
+    <Market name="OF,OFT"> 
+      <Index name="HoldOfPostDate" caption="任职日期" format="[Date:1:0]" defcolor="PriceSame"/>  
+      <Index name="DimissionDate" caption="离职日期" format="[Date:1:0]" defcolor="PriceSame"/>  
+      <Index name="HoldOfPostReturn" caption="任职总回报" format="[Fmat:%.2f:1]" defcolor="PriceSame"/>  
+      <Index name="YearReturn" caption="年化回报" format="[Fmat:%.2f:1]" defcolor="PriceSame"/>  
+      <Index name="last_px" caption="现价" format="[Fmat:%.4f:1]" compareto="preclose_px" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="Fund_NAV" caption="最新净值" format="[Fmat:%.4f:0]" compareto="Fund_PrevNAV" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="Fund_PrevNAV" caption="上期净值" format="[Fmat:%.4f:0]" defcolor="PriceSame"/>  
+      <Index name="Fund_CumulativeNAV" caption="最近累计净值" format="[Fmat:%.4f:0]" defcolor="PriceSame"/>  
+      <Index name="Fund_Date" caption="基金最新日期" format="[Date:1:0]" defcolor="PriceSame"/>  
+      <Index name="Fund_DiscountRate" caption="贴水率" format="[Fmat:%.2f%%:0]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="Fund_IOPV" caption="IOPV" format="[Fmat:%.4f:0]" defcolor="VolumeValue"/>  
+      <Index name="Fund_PremDiscRate" caption="溢折率" format="[Fmat:%.2f%%:0]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="Fund_NGRLast1W" caption="最近一周净值增长率" format="[Calc:4:100:1:2:6]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="Fund_NGRLast1M" caption="最近一月净值增长率" format="[Calc:4:100:1:2:6]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="Fund_NGRLast3M" caption="最近三月净值增长率" format="[Calc:4:100:1:2:6]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="Fund_NGRLast6M" caption="最近六月净值增长率" format="[Calc:4:100:1:2:6]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="Fund_NGRLast1Y" caption="最近一年净值增长率" format="[Calc:4:100:1:2:6]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="Fund_NGRLast3Y" caption="最近三年净值增长率" format="[Calc:4:100:1:2:6]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="Fund_NGRLast5Y" caption="最近五年净值增长率" format="[Calc:4:100:1:2:6]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="Fund_NGRSinceInception" caption="成立以来净值增长率" format="[Calc:4:100:1:2:6]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="Fund_AnnualizedReturn" caption="平均年化收益率" format="[Calc:4:100:1:2:6]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="Fund_InceptionDate" caption="基金成立日期" format="[Date:1:0]" defcolor="PriceSame"/>  
+      <Index name="Fund_LiquidationDate" caption="基金成立日期" format="[Date:1:0]" defcolor="PriceSame"/>  
+      <Index name="Fund_AssetClass" caption="投资类型" format="-" defcolor="VolumeValue"/>  
+      <Index name="Fund_TypeDesc" caption="类型说明" format="-" defcolor="VolumeValue"/>  
+      <Index name="Fund_LastSize" caption="最新规模" format="[Fmat:%.2f:1]" defcolor="VolumeValue"/>  
+      <Index name="Fund_PurChaseState" caption="申赎状态" format="-" defcolor="VolumeValue"/>  
+      <Index name="Fund_Manager" caption="基金经理" format="-" defcolor="VolumeValue"/>  
+      <Index name="Fund_Company" caption="基金公司" format="-" defcolor="VolumeValue"/>  
+      <Index name="Fund_Custodian" caption="基金托管人" format="-" defcolor="VolumeValue"/>  
+      <Index name="Fund_Yield" caption="万份基金收益" format="[Fmat:%.4f:0]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="Fund_7DaysYield" caption="七日年化收益率" format="[Fmat:%.4f%%:1]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="NGR" caption="增长率" format="[Calc:4:100:1:2:6]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="latest_change_rate" caption="最新涨幅" format="[Calc:4:100:1:2:6]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/> 
+    </Market>  
+    <!--上交所，深交所债券-->  
+    <Market name="BO.SH,BO.SZ,BO.IB,BOND"> 
+      <Index name="BuyPrice1" caption="买一" format="[Fmat:%.4f:1]" compareto="preclose_px" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BuyPrice2" caption="买二" format="[Fmat:%.4f:1]" compareto="preclose_px" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BuyPrice3" caption="买三" format="[Fmat:%.4f:1]" compareto="preclose_px" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BuyPrice4" caption="买四" format="[Fmat:%.4f:1]" compareto="preclose_px" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BuyPrice5" caption="买五" format="[Fmat:%.4f:1]" compareto="preclose_px" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BuyPrice6" caption="买六" format="[Fmat:%.4f:1]" compareto="preclose_px" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BuyPrice7" caption="买七" format="[Fmat:%.4f:1]" compareto="preclose_px" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BuyPrice8" caption="买八" format="[Fmat:%.4f:1]" compareto="preclose_px" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BuyPrice9" caption="买九" format="[Fmat:%.4f:1]" compareto="preclose_px" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BuyPrice10" caption="买十" format="[Fmat:%.4f:1]" compareto="preclose_px" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="SellPrice1" caption="卖一" format="[Fmat:%.4f:1]" compareto="preclose_px" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="SellPrice2" caption="卖二" format="[Fmat:%.4f:1]" compareto="preclose_px" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="SellPrice3" caption="卖三" format="[Fmat:%.4f:1]" compareto="preclose_px" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="SellPrice4" caption="卖四" format="[Fmat:%.4f:1]" compareto="preclose_px" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="SellPrice5" caption="卖五" format="[Fmat:%.4f:1]" compareto="preclose_px" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="SellPrice6" caption="卖六" format="[Fmat:%.4f:1]" compareto="preclose_px" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="SellPrice7" caption="卖七" format="[Fmat:%.4f:1]" compareto="preclose_px" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="SellPrice8" caption="卖八" format="[Fmat:%.4f:1]" compareto="preclose_px" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="SellPrice9" caption="卖九" format="[Fmat:%.4f:1]" compareto="preclose_px" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="SellPrice10" caption="卖十" format="[Fmat:%.4f:1]" compareto="preclose_px" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="last_px" caption="现价" format="[Fmat:%.4f:1]" compareto="preclose_px" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="preclose_px" caption="前收价" format="[Fmat:%.2f:1]" defcolor="PriceSame"/>  
+      <Index name="px_change" caption="涨跌" format="[Fmat:%.4f:0]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="open_px" caption="今开价" format="[Fmat:%.4f:1]" compareto="preclose_px" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="high_px" caption="最高价" format="[Fmat:%.4f:1]" compareto="preclose_px" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="low_px" caption="最低价" format="[Fmat:%.4f:1]" compareto="preclose_px" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="wavg_px" caption="加权均价" format="[Fmat:%.4f:1]" compareto="preclose_px" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="up_px" caption="涨停价格" format="[Fmat:%.4f:1]" defcolor="PriceUp"/>  
+      <Index name="down_px" caption="跌停价格" format="[Fmat:%.4f:1]" defcolor="PriceDown"/> 
+	  <Index name="YLD_NT_CHG2" caption="涨跌BP" format="[Calc:4:100:1:5:3]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+    </Market>  
+    <Market name="BO.SH,BO.SZ,BO.IB,BOND"> 
+      <Index name="TotalVolume" caption="总成交量(手)" format="[Calc:4:10:2:2:2]" defcolor="VolumeValue"/>
+      <Index name="DealVolume" caption="分笔-现手" format="[Calc:4:10:1:0:3]" defcolor="VolumeValue"/>
+      <Index name="business_amount_out" caption="外盘(手)" format="[Calc:4:10:2:2:2]" defcolor="PriceUp"/>  
+      <Index name="business_amount_in" caption="内盘(手)" format="[Calc:4:10:2:2:2]" defcolor="PriceDown"/>  
+      <Index name="current_amount" caption="现量(手)" format="[Calc:4:10:2:0:3]" defcolor="VolumeValue"/>  
+      <Index name="business_amount" caption="总成交量(手)" format="[Calc:4:10:2:2:2]" defcolor="VolumeValue"/>  
+      <Index name="entrust_diff" caption="委差(手)" format="[Calc:4:10:2:2:2]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>
+      <Index name="BuyVolume1" caption="买一量(手)" format="[Calc:4:10:1:0:3]" defcolor="VolumeValue"/>  
+      <Index name="BuyVolume2" caption="买二量(手)" format="[Calc:4:10:1:0:3]" defcolor="VolumeValue"/>  
+      <Index name="BuyVolume3" caption="买三量(手)" format="[Calc:4:10:1:0:3]" defcolor="VolumeValue"/>  
+      <Index name="BuyVolume4" caption="买四量(手)" format="[Calc:4:10:1:0:3]" defcolor="VolumeValue"/>  
+      <Index name="BuyVolume5" caption="买五量(手)" format="[Calc:4:10:1:0:3]" defcolor="VolumeValue"/>  
+      <Index name="BuyVolume6" caption="买六量(手)" format="[Calc:4:10:1:0:3]" defcolor="VolumeValue"/>  
+      <Index name="BuyVolume7" caption="买七量(手)" format="[Calc:4:10:1:0:3]" defcolor="VolumeValue"/>  
+      <Index name="BuyVolume8" caption="买八量(手)" format="[Calc:4:10:1:0:3]" defcolor="VolumeValue"/>  
+      <Index name="BuyVolume9" caption="买九量(手)" format="[Calc:4:10:1:0:3]" defcolor="VolumeValue"/>  
+      <Index name="BuyVolume10" caption="买十量(手)" format="[Calc:4:10:1:0:3]" defcolor="VolumeValue"/>  
+      <Index name="SellVolume1" caption="卖一量(手)" format="[Calc:4:10:1:0:3]" defcolor="VolumeValue"/>  
+      <Index name="SellVolume2" caption="卖二量(手)" format="[Calc:4:10:1:0:3]" defcolor="VolumeValue"/>  
+      <Index name="SellVolume3" caption="卖三量(手)" format="[Calc:4:10:1:0:3]" defcolor="VolumeValue"/>  
+      <Index name="SellVolume4" caption="卖四量(手)" format="[Calc:4:10:1:0:3]" defcolor="VolumeValue"/>  
+      <Index name="SellVolume5" caption="卖五量(手)" format="[Calc:4:10:1:0:3]" defcolor="VolumeValue"/>  
+      <Index name="SellVolume6" caption="卖六量(手)" format="[Calc:4:10:1:0:3]" defcolor="VolumeValue"/>  
+      <Index name="SellVolume7" caption="卖七量(手)" format="[Calc:4:10:1:0:3]" defcolor="VolumeValue"/>  
+      <Index name="SellVolume8" caption="卖八量(手)" format="[Calc:4:10:1:0:3]" defcolor="VolumeValue"/>  
+      <Index name="SellVolume9" caption="卖九量(手)" format="[Calc:4:10:1:0:3]" defcolor="VolumeValue"/>  
+      <Index name="SellVolume10" caption="卖十量(手)" format="[Calc:4:10:1:0:3]" defcolor="VolumeValue"/>  
+    </Market>
+	
+    <Market name="FSR.CFES,FSQ.CFES,RBD.CFES">
+  	  <Index name="last_px" caption="现价" format="[Fmat:%.4f:1]" compareto="preclose_px" ecolor="PriceSame" defcolor="PriceSame"/>
+      <Index name="preclose_px" caption="前收价" format="[Fmat:%.4f:1]" defcolor="PriceSame"/>	  
+	  <Index name="px_change" caption="涨跌" format="[Fmat:%.4f:1]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>
+	  <Index name="px_change_rate" caption="涨跌幅" format="[Calc:4:10000:1:2:6]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+	  <Index name="open_px" caption="今开价" format="[Fmat:%.4f:1]" compareto="preclose_px" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="high_px" caption="最高价" format="[Fmat:%.4f:1]" compareto="preclose_px" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="low_px" caption="最低价" format="[Fmat:%.4f:1]" compareto="preclose_px" ecolor="PriceSame" defcolor="PriceSame"/>  
+	  <Index name="up_px" caption="涨停价" format="[Fmat:%.4f:1]" compareto="preclose_px" ecolor="PriceSame" defcolor="PriceSame"/>
+	  <Index name="down_px" caption="跌停价" format="[Fmat:%.4f:1]" compareto="preclose_px" ecolor="PriceSame" defcolor="PriceSame"/>
+	  <Index name="special_close_px" caption="特殊收盘价" format="[Fmat:%.4f:1]" compareto="preclose_px" ecolor="PriceSame" defcolor="PriceSame"/>  
+	  <Index name="last_px0" caption="最新价0" format="[Fmat:%.4f:1]" defcolor="PriceSame"/>
+	  <Index name="open_px0" caption="开盘价0" format="[Fmat:%.4f:1]" defcolor="PriceSame"/>
+	  <Index name="high_px0" caption="最高价0" format="[Fmat:%.4f:1]" defcolor="PriceSame"/>
+	  <Index name="low_px0" caption="最低价0" format="[Fmat:%.4f:1]" defcolor="PriceSame"/>
+	  <Index name="business_final_px0" caption="末笔价0" format="[Fmat:%.4f:1]" defcolor="PriceSame"/>
+	  <Index name="px_change0" caption="涨跌0" format="[Fmat:%.4f:1]" defcolor="PriceSame"/>
+	  <Index name="last_px1" caption="最新价1" format="[Fmat:%.4f:1]" defcolor="PriceSame"/>
+	  <Index name="open_px1" caption="开盘价1" format="[Fmat:%.4f:1]" defcolor="PriceSame"/>
+	  <Index name="high_px1" caption="最高价1" format="[Fmat:%.4f:1]" defcolor="PriceSame"/>
+	  <Index name="low_px1" caption="最低价1" format="[Fmat:%.4f:1]" defcolor="PriceSame"/>
+	  <Index name="business_final_px1" caption="末笔价1" format="[Fmat:%.4f:1]" defcolor="PriceSame"/>
+	  <Index name="px_change1" caption="涨跌1" format="[Fmat:%.4f:1]" defcolor="PriceSame"/>
+	  <Index name="business_final_px" caption="上一末笔价" format="[Fmat:%.4f:1]" defcolor="PriceSame"/> 	  
+	  <Index name="data_timestamp" caption="时间戳" format="[Time:0]" defcolor="PriceSame"/>
+	  
+      <!--
+      
+      <Index name="last_ext_px" caption="最新成交价" format="[Fmat:%.5f:1]" compareto="open_px" ecolor="PriceSame" defcolor="PriceSame"/>  
+	  <Index name="low_timestamp" caption="最低价时间" format="[Date:1:0]" defcolor="PriceSame"/>  
+	  <Index name="start_rest_date" caption="起息日" format="[Date:1:0]" defcolor="PriceSame"/>  	 
+	  <Index name="high_timestamp" caption="最高价时间" format="[Date:1:0]" defcolor="PriceSame"/> 	  
+	  <Index name="px_change" caption="涨跌(BP)" format="[Calc:3:100:1:1:2]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>
+	  -->
+	</Market>
+
+	<Market name="FWR.CFES,FWQ.CFES">
+	  <Index name="data_timestamp" caption="时间戳" format="[Time:0]" defcolor="PriceSame"/>
+	  <Index name="px_change_rate" caption="涨跌幅" format="[Calc:4:10000:1:2:6]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>
+	  <Index name="last_px0" caption="最新价0" format="[Fmat:%.2f:1]" defcolor="PriceSame"/>
+	  <Index name="open_px0" caption="开盘价0" format="[Fmat:%.2f:1]" defcolor="PriceSame"/>
+	  <Index name="high_px0" caption="最高价0" format="[Fmat:%.2f:1]" defcolor="PriceSame"/>
+	  <Index name="low_px0" caption="最低价0" format="[Fmat:%.2f:1]" defcolor="PriceSame"/>
+	  <Index name="business_final_px0" caption="末笔价0" format="[Fmat:%.2f:1]" defcolor="PriceSame"/>
+	  <Index name="px_change0" caption="涨跌0" format="[Fmat:%.2f:1]" defcolor="PriceSame"/>
+	  <Index name="last_px1" caption="最新价1" format="[Fmat:%.2f:1]" defcolor="PriceSame"/>
+	  <Index name="open_px1" caption="开盘价1" format="[Fmat:%.2f:1]" defcolor="PriceSame"/>
+	  <Index name="high_px1" caption="最高价1" format="[Fmat:%.2f:1]" defcolor="PriceSame"/>
+	  <Index name="low_px1" caption="最低价1" format="[Fmat:%.2f:1]" defcolor="PriceSame"/>
+	  <Index name="px_change1" caption="涨跌1" format="[Fmat:%.2f:1]" defcolor="PriceSame"/>
+	  <Index name="business_final_px1" caption="末笔价1" format="[Fmat:%.2f:1]" defcolor="PriceSame"/>
+    </Market>
+	<Market name="FFR.CFES">
+	  <Index name="data_timestamp" caption="时间戳" format="[Time:0]" defcolor="PriceSame"/>
+	  <Index name="last_px0" caption="最新价0" format="[Fmat:%.6f:1]" defcolor="PriceSame"/>
+	  <Index name="open_px0" caption="开盘价0" format="[Fmat:%.6f:1]" defcolor="PriceSame"/>
+	  <Index name="high_px0" caption="最高价0" format="[Fmat:%.6f:1]" defcolor="PriceSame"/>
+	  <Index name="low_px0" caption="最低价0" format="[Fmat:%.6f:1]" defcolor="PriceSame"/>
+	  <Index name="business_final_px0" caption="末笔价0" format="[Fmat:%.6f:1]" defcolor="PriceSame"/>
+	  <Index name="px_change0" caption="涨跌0" format="[Fmat:%.6f:1]" defcolor="PriceSame"/>
+	  <Index name="last_px1" caption="最新价1" format="[Fmat:%.2f:1]" defcolor="PriceSame"/>
+	  <Index name="open_px1" caption="开盘价1" format="[Fmat:%.2f:1]" defcolor="PriceSame"/>
+	  <Index name="high_px1" caption="最高价1" format="[Fmat:%.2f:1]" defcolor="PriceSame"/>
+	  <Index name="low_px1" caption="最低价1" format="[Fmat:%.2f:1]" defcolor="PriceSame"/>
+	  <Index name="px_change1" caption="涨跌1" format="[Fmat:%.2f:1]" defcolor="PriceSame"/>
+	  <Index name="business_final_px1" caption="末笔价1" format="[Fmat:%.2f:1]" defcolor="PriceSame"/>
+    </Market>
+	<Market name="FOR.CFES">
+	  <Index name="data_timestamp" caption="时间戳" format="[Time:0]" defcolor="PriceSame"/>
+	  <Index name="volatility" caption="波动率" format="[Fmat:%.4f:1]" defcolor="PriceSame"/>
+	  <Index name="option_fee_rate" caption="期权费率" format="[Fmat:%.2f:1]" defcolor="PriceSame"/>
+	  <Index name="option_fee_type" caption="期权费率类型" format="-" defcolor="PriceSame"/>  
+	  <Index name="option_portfolio_type" caption="期权组合类型" format="-" defcolor="PriceSame"/>
+	</Market>
+    <Market name="default"> 
+      <!--基础指标-->  
+      <Index name="change_rate_5days" caption="5日涨跌幅" format="[Fmat:%.2f%%:0]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="change_rate_10days" caption="10日涨跌幅" format="[Fmat:%.2f%%:0]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="change_rate_20days" caption="20日涨跌幅" format="[Fmat:%.2f%%:0]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="change_rate_60days" caption="60日涨跌幅" format="[Fmat:%.2f%%:0]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="change_rate_120days" caption="120日涨跌幅" format="[Fmat:%.2f%%:0]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="change_rate_250days" caption="250日涨跌幅" format="[Fmat:%.2f%%:0]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="change_rate_lastyear" caption="年初至今涨跌幅" format="[Fmat:%.2f%%:0]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/> 
+      <Index name="change_rate_1month" caption="近1月涨跌幅" format="[Fmat:%.2f%%:0]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>
+      <Index name="change_rate_3month" caption="近3月涨跌幅" format="[Fmat:%.2f%%:0]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>
+      <Index name="change_rate_6month" caption="近6月涨跌幅" format="[Fmat:%.2f%%:0]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>
+      <Index name="change_rate_1year" caption="近1年涨跌幅" format="[Fmat:%.2f%%:0]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>
+      <Index name="change_rate_2year" caption="近2年涨跌幅" format="[Fmat:%.2f%%:0]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>
+      <Index name="change_rate_3year" caption="近3年涨跌幅" format="[Fmat:%.2f%%:0]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>
+      <Index name="change_rate_thisyear" caption="今年以来涨跌幅" format="[Fmat:%.2f%%:0]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>
+      <Index name="change_rate_1day" caption="日回报" format="[Fmat:%.2f%%:0]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>   
+      <Index name="LastTradeDate" caption="时间" format="[Fmat:%.2f%%:0]"  ecolor="PriceSame" defcolor="PriceSame"/>
+      <Index name="data_timestamp" caption="时间戳" format="[Time:1]" defcolor="PriceSame"/>  
+      <Index name="last_px" caption="现价" format="[Fmat:%.2f:1]" compareto="preclose_px" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="preclose_px" caption="前收价" format="[Fmat:%.2f:1]" defcolor="PriceSame"/>  
+      <Index name="px_change" caption="涨跌" format="[Fmat:%.2f:0]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="px_change_rate" caption="涨跌幅" format="[Fmat:%.2f%%:0]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="open_px" caption="今开价" format="[Fmat:%.2f:1]" compareto="preclose_px" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="high_px" caption="最高价" format="[Fmat:%.2f:1]" compareto="preclose_px" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="low_px" caption="最低价" format="[Fmat:%.2f:1]" compareto="preclose_px" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="wavg_px" caption="加权均价" format="[Fmat:%.2f:1]" compareto="preclose_px" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="up_px" caption="涨停价格" format="[Fmat:%.2f:1]" defcolor="PriceUp"/>  
+      <Index name="down_px" caption="跌停价格" format="[Fmat:%.2f:1]" defcolor="PriceDown"/>  
+      <Index name="business_balance" caption="总成交额" format="[Calc:0:0:2:2:2]" defcolor="VolumeValue"/>  
+      <Index name="business_balance_am" caption="盘后成交额" format="[Calc:0:0:2:2:2]" defcolor="VolumeValue"/>  
+      <Index name="amplitude" caption="振幅" format="[Fmat:%.2f%%:0]" defcolor="PriceSame"/>  
+      <Index name="current_amount" caption="现量(手)" format="[Calc:4:100:2:0:3]" defcolor="VolumeValue"/>  
+      <Index name="business_amount" caption="总成交量(手)" format="[Calc:4:100:2:2:2]" defcolor="VolumeValue"/>  
+      <Index name="business_amount_am" caption="盘后成交量(手)" format="[Calc:4:100:2:2:2]" defcolor="VolumeValue"/>
+      <Index name="turnover_ratio" caption="换手率" format="[Fmat:%.2f%%:0]" defcolor="PriceSame"/>  
+      <Index name="vol_ratio" caption="量比" format="[Fmat:%.2f:0]" defcolor="PriceSame"/>  
+      <Index name="business_amount_out" caption="外盘(手)" format="[Calc:4:100:2:2:2]" defcolor="PriceUp"/>  
+      <Index name="business_amount_in" caption="内盘(手)" format="[Calc:4:100:2:2:2]" defcolor="PriceDown"/>  
+      <Index name="eps" caption="每股收益" format="[Fmat:%.2f:0]" defcolor="VolumeValue"/>  
+      <Index name="eps_ttm" caption="每股股收益TTM" format="[Fmat:%.2f:0]" defcolor="VolumeValue"/>
+      <Index name="eps_year" caption="上一年度每股收益" format="[Fmat:%.2f:0]" defcolor="VolumeValue"/>
+      <Index name="bps" caption="每股净资产" format="[Fmat:%.2f:0]" defcolor="VolumeValue"/>  
+      <Index name="pe_rate" caption="市盈率" format="[Fmat:%.2f:0]" defcolor="PriceSame"/>  
+      <Index name="ttm_pe_rate" caption="市盈率TTM" format="[Fmat:%.2f:0]" defcolor="PriceSame"/>  
+      <Index name="dyn_pb_rate" caption="市净率" format="[Fmat:%.2f:0]" defcolor="PriceSame"/>  
+      <Index name="circulation_amount" caption="流通股本" format="[Calc:0:0:2:2:2]" defcolor="VolumeValue"/>  
+      <Index name="total_shares" caption="总股本" format="[Calc:0:0:2:2:2]" defcolor="VolumeValue"/>  
+      <Index name="circulation_value" caption="流通市值" format="[Calc:0:0:2:2:2]" defcolor="PriceSame"/>  
+      <Index name="market_value" caption="总市值" format="[Calc:0:0:2:2:2]" defcolor="PriceSame"/>  
+      <Index name="w52_high_px" caption="52周最高" format="[Fmat:%.2f:1]" defcolor="PriceUp"/>  
+      <Index name="w52_low_px" caption="52周最低" format="[Fmat:%.2f:1]" defcolor="PriceDown"/>  
+      <Index name="entrust_rate" caption="委比" format="[Fmat:%.2f%%:0]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="entrust_diff" caption="委差(手)" format="[Calc:4:100:2:2:2]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="min5_chgpct" caption="5分钟涨跌幅" format="[Fmat:%.2f%%:0]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="DealVolume" caption="分笔-现手" format="[Calc:4:100:1:0:3]" defcolor="VolumeValue"/>  
+      <Index name="DealTurnover" caption="分笔-现额" format="[Calc:0:0:2:2:2]" defcolor="VolumeValue"/>  
+      <Index name="rise_count" caption="上涨家数" format="[Fmat:%.0f:2]" defcolor="PriceUp"/>  
+      <Index name="fall_count" caption="下跌家数" format="[Fmat:%.0f:2]" defcolor="PriceDown"/>  
+      <Index name="same_count" caption="持平家数" format="[Fmat:%.0f:2]" defcolor="PriceSame"/>  
+      <Index name="trade_status" caption="交易状态" format="[Enum]" defcolor="PriceSame"/>  
+      <Index name="business_count" caption="现手笔数" format="[Fmat:%.0f:2]" defcolor="VolumeValue"/>  
+      <Index name="amount" caption="持仓量" format="[Calc:0:1:2:2:2]" defcolor="VolumeValue"/>  
+      <Index name="settlement" caption="结算价" format="[Fmat:%.2f:1]" defcolor="PriceSame"/>  
+      <Index name="prev_settlement" caption="昨结价" format="[Fmat:%.2f:1]" defcolor="PriceSame"/> 
+	  <Index name="market_date" caption="市场日期" format="[Date:1:0]" defcolor="PriceSame"/>	  
+	  <Index name="business_final_px" caption="上一末笔价" format="[Fmat:%.2f:1]" defcolor="PriceSame"/>
+	  <Index name="business_term" caption="期限" format="-" defcolor="VolumeValue"/>  
+	  <Index name="last_closedate" caption="上收盘日期" format="[Date:1:0]" defcolor="PriceSame"/> 
+	  <Index name="last_closedate0" caption="上收盘日期0" format="[Date:1:0]" defcolor="PriceSame"/>
+	  <Index name="last_closedate1" caption="上收盘日期1" format="[Date:1:0]" defcolor="PriceSame"/>
+	  <Index name="start_rest_date" caption="起息日" format="[Date:1:0]" defcolor="PriceSame"/>	  
+      <!--自定义指标-->  
+      <Index name="BuyPrice1" caption="买一" format="[Fmat:%.2f:1]" compareto="preclose_px" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BuyPrice2" caption="买二" format="[Fmat:%.2f:1]" compareto="preclose_px" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BuyPrice3" caption="买三" format="[Fmat:%.2f:1]" compareto="preclose_px" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BuyPrice4" caption="买四" format="[Fmat:%.2f:1]" compareto="preclose_px" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BuyPrice5" caption="买五" format="[Fmat:%.2f:1]" compareto="preclose_px" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BuyPrice6" caption="买六" format="[Fmat:%.2f:1]" compareto="preclose_px" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BuyPrice7" caption="买七" format="[Fmat:%.2f:1]" compareto="preclose_px" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BuyPrice8" caption="买八" format="[Fmat:%.2f:1]" compareto="preclose_px" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BuyPrice9" caption="买九" format="[Fmat:%.2f:1]" compareto="preclose_px" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BuyPrice10" caption="买十" format="[Fmat:%.2f:1]" compareto="preclose_px" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="SellPrice1" caption="卖一" format="[Fmat:%.2f:1]" compareto="preclose_px" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="SellPrice2" caption="卖二" format="[Fmat:%.2f:1]" compareto="preclose_px" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="SellPrice3" caption="卖三" format="[Fmat:%.2f:1]" compareto="preclose_px" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="SellPrice4" caption="卖四" format="[Fmat:%.2f:1]" compareto="preclose_px" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="SellPrice5" caption="卖五" format="[Fmat:%.2f:1]" compareto="preclose_px" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="SellPrice6" caption="卖六" format="[Fmat:%.2f:1]" compareto="preclose_px" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="SellPrice7" caption="卖七" format="[Fmat:%.2f:1]" compareto="preclose_px" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="SellPrice8" caption="卖八" format="[Fmat:%.2f:1]" compareto="preclose_px" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="SellPrice9" caption="卖九" format="[Fmat:%.2f:1]" compareto="preclose_px" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="SellPrice10" caption="卖十" format="[Fmat:%.2f:1]" compareto="preclose_px" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BuyVolume1" caption="买一量(手)" format="[Calc:4:100:1:0:3]" defcolor="VolumeValue"/>  
+      <Index name="BuyVolume2" caption="买二量(手)" format="[Calc:4:100:1:0:3]" defcolor="VolumeValue"/>  
+      <Index name="BuyVolume3" caption="买三量(手)" format="[Calc:4:100:1:0:3]" defcolor="VolumeValue"/>  
+      <Index name="BuyVolume4" caption="买四量(手)" format="[Calc:4:100:1:0:3]" defcolor="VolumeValue"/>  
+      <Index name="BuyVolume5" caption="买五量(手)" format="[Calc:4:100:1:0:3]" defcolor="VolumeValue"/>  
+      <Index name="BuyVolume6" caption="买六量(手)" format="[Calc:4:100:1:0:3]" defcolor="VolumeValue"/>  
+      <Index name="BuyVolume7" caption="买七量(手)" format="[Calc:4:100:1:0:3]" defcolor="VolumeValue"/>  
+      <Index name="BuyVolume8" caption="买八量(手)" format="[Calc:4:100:1:0:3]" defcolor="VolumeValue"/>  
+      <Index name="BuyVolume9" caption="买九量(手)" format="[Calc:4:100:1:0:3]" defcolor="VolumeValue"/>  
+      <Index name="BuyVolume10" caption="买十量(手)" format="[Calc:4:100:1:0:3]" defcolor="VolumeValue"/>  
+      <Index name="SellVolume1" caption="卖一量(手)" format="[Calc:4:100:1:0:3]" defcolor="VolumeValue"/>  
+      <Index name="SellVolume2" caption="卖二量(手)" format="[Calc:4:100:1:0:3]" defcolor="VolumeValue"/>  
+      <Index name="SellVolume3" caption="卖三量(手)" format="[Calc:4:100:1:0:3]" defcolor="VolumeValue"/>  
+      <Index name="SellVolume4" caption="卖四量(手)" format="[Calc:4:100:1:0:3]" defcolor="VolumeValue"/>  
+      <Index name="SellVolume5" caption="卖五量(手)" format="[Calc:4:100:1:0:3]" defcolor="VolumeValue"/>  
+      <Index name="SellVolume6" caption="卖六量(手)" format="[Calc:4:100:1:0:3]" defcolor="VolumeValue"/>  
+      <Index name="SellVolume7" caption="卖七量(手)" format="[Calc:4:100:1:0:3]" defcolor="VolumeValue"/>  
+      <Index name="SellVolume8" caption="卖八量(手)" format="[Calc:4:100:1:0:3]" defcolor="VolumeValue"/>  
+      <Index name="SellVolume9" caption="卖九量(手)" format="[Calc:4:100:1:0:3]" defcolor="VolumeValue"/>  
+      <Index name="SellVolume10" caption="卖十量(手)" format="[Calc:4:100:1:0:3]" defcolor="VolumeValue"/>  
+      <Index name="BuyVolumeDiff1" caption="买一量差" format="[Chan:0:1]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BuyVolumeDiff2" caption="买二量差" format="[Chan:0:1]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BuyVolumeDiff3" caption="买三量差" format="[Chan:0:1]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BuyVolumeDiff4" caption="买四量差" format="[Chan:0:1]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BuyVolumeDiff5" caption="买五量差" format="[Chan:0:1]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BuyVolumeDiff6" caption="买六量差" format="[Chan:0:1]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BuyVolumeDiff7" caption="买七量差" format="[Chan:0:1]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BuyVolumeDiff8" caption="买八量差" format="[Chan:0:1]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BuyVolumeDiff9" caption="买九量差" format="[Chan:0:1]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BuyVolumeDiff10" caption="买十量差" format="[Chan:0:1]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="SellVolumeDiff1" caption="卖一量差" format="[Chan:0:1]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="SellVolumeDiff2" caption="卖二量差" format="[Chan:0:1]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="SellVolumeDiff3" caption="卖三量差" format="[Chan:0:1]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="SellVolumeDiff4" caption="卖四量差" format="[Chan:0:1]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="SellVolumeDiff5" caption="卖五量差" format="[Chan:0:1]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="SellVolumeDiff6" caption="卖六量差" format="[Chan:0:1]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="SellVolumeDiff7" caption="卖七量差" format="[Chan:0:1]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="SellVolumeDiff8" caption="卖八量差" format="[Chan:0:1]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="SellVolumeDiff9" caption="卖九量差" format="[Chan:0:1]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="SellVolumeDiff10" caption="卖十量差" format="[Chan:0:1]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BuyVolumeDiffLot1" caption="买量差1手(手)" format="[Chan:0:1]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BuyVolumeDiffLot2" caption="买量差2手(手)" format="[Chan:0:1]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BuyVolumeDiffLot3" caption="买量差3手(手)" format="[Chan:0:1]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BuyVolumeDiffLot4" caption="买量差4手(手)" format="[Chan:0:1]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BuyVolumeDiffLot5" caption="买量差5手(手)" format="[Chan:0:1]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BuyVolumeDiffLot6" caption="买量差6手(手)" format="[Chan:0:1]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BuyVolumeDiffLot7" caption="买量差7手(手)" format="[Chan:0:1]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BuyVolumeDiffLot8" caption="买量差8手(手)" format="[Chan:0:1]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BuyVolumeDiffLot9" caption="买量差9手(手)" format="[Chan:0:1]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BuyVolumeDiffLot10" caption="买量差10手(手)" format="[Chan:0:1]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="SellVolumeDiffLot1" caption="卖量差1手(手)" format="[Chan:0:1]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="SellVolumeDiffLot2" caption="卖量差2手(手)" format="[Chan:0:1]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="SellVolumeDiffLot3" caption="卖量差3手(手)" format="[Chan:0:1]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="SellVolumeDiffLot4" caption="卖量差4手(手)" format="[Chan:0:1]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="SellVolumeDiffLot5" caption="卖量差5手(手)" format="[Chan:0:1]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="SellVolumeDiffLot6" caption="卖量差6手(手)" format="[Chan:0:1]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="SellVolumeDiffLot7" caption="卖量差7手(手)" format="[Chan:0:1]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="SellVolumeDiffLot8" caption="卖量差8手(手)" format="[Chan:0:1]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="SellVolumeDiffLot9" caption="卖量差9手(手)" format="[Chan:0:1]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="SellVolumeDiffLot10" caption="卖量差10手(手)" format="[Chan:0:1]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="DealAmountChange" caption="增仓" format="[Calc:0:1:2:2:2]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>
+      <Index name="TotalVolume" caption="总成交量(手)" format="[Calc:4:100:2:2:2]" defcolor="VolumeValue"/>
+	  <!-- 非实时指标格式化 -->
+	  <Index name="Indicator_TRIX" caption="非实时指标格式化" format="[Fmat:%.3f:1]" defcolor="PriceSame"/>  
+      <!--老指标-->  
+      <Index name="VolumeTitle" caption="总成交量(手)--K线标题" format="[Calc:0:0:2:2:2]" defcolor="VolumeValue"/>  
+      <Index name="VolumeAxis" caption="总成交量(手)--坐标轴" format="[Calc:4:100:1:0:2]" defcolor="VolumeValue"/>  
+      <Index name="TradeTime_Deal" caption="分笔明细--交易时间" format="[Time:1]" defcolor="PriceSame"/>  
+      <Index name="TradeDate" caption="交易日期" format="[Date:1:0]" defcolor="PriceSame"/>  
+      <Index name="TradeTime" caption="交易时间" format="[Time:0]" defcolor="PriceSame"/>  
+      <Index name="NewPrice" caption="现价" format="[Fmat:%.2f:1]" compareto="PrevClose" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="PrevClose" caption="前收价" format="[Fmat:%.2f:1]" defcolor="PriceSame"/>  
+      <Index name="TodayOpen" caption="今开价" format="[Fmat:%.2f:1]" compareto="PrevClose" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="TodayHigh" caption="最高价" format="[Fmat:%.2f:1]" compareto="PrevClose" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="TodayLow" caption="最低价" format="[Fmat:%.2f:1]" compareto="PrevClose" ecolor="PriceSame" defcolor="PriceSame"/>      
+      <Index name="Volume" caption="总成交量(手)" format="[Calc:4:100:1:0:3]" defcolor="VolumeValue"/>  
+      <Index name="DeltaAmount" caption="现额" format="[Calc:0:0:2:2:2]" defcolor="VolumeValue"/>  
+      <Index name="DeltaVolume" caption="现量(手)" format="[Calc:4:100:1:0:3]" defcolor="VolumeValue"/>  
+      <Index name="CurrentTransactionCount" caption="现手笔数" format="[Fmat:%.0f:0]" defcolor="PriceSame"/>  
+      <Index name="Position" caption="持仓量" format="[Calc:0:0:2:2:2]" defcolor="VolumeValue"/>  
+      <Index name="PrevPosition" caption="前持仓量" format="[Calc:0:0:2:2:2]" defcolor="VolumeValue"/>  
+      <Index name="VSpread" caption="基差" format="[Fmat:%.2f:1]" defcolor="PriceSame"/>  
+      <Index name="Settle" caption="结算价" format="[Fmat:%.2f:1]" defcolor="PriceSame"/>  
+      <Index name="PositionChange" caption="持仓量变化" format="[Chan:0:0]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="DailyPositionChange" caption="日增仓" format="[Calc:0:0:2:2:2]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BidPrice1" caption="买一" format="[Fmat:%.2f:1]" compareto="PrevClose" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BidPrice2" caption="买二" format="[Fmat:%.2f:1]" compareto="PrevClose" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BidPrice3" caption="买三" format="[Fmat:%.2f:1]" compareto="PrevClose" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BidPrice4" caption="买四" format="[Fmat:%.2f:1]" compareto="PrevClose" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BidPrice5" caption="买五" format="[Fmat:%.2f:1]" compareto="PrevClose" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BidPrice6" caption="买六" format="[Fmat:%.2f:1]" compareto="PrevClose" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BidPrice7" caption="买七" format="[Fmat:%.2f:1]" compareto="PrevClose" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BidPrice8" caption="买八" format="[Fmat:%.2f:1]" compareto="PrevClose" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BidPrice9" caption="买九" format="[Fmat:%.2f:1]" compareto="PrevClose" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BidPrice10" caption="买十" format="[Fmat:%.2f:1]" compareto="PrevClose" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="AskPrice1" caption="卖一" format="[Fmat:%.2f:1]" compareto="PrevClose" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="AskPrice2" caption="卖二" format="[Fmat:%.2f:1]" compareto="PrevClose" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="AskPrice3" caption="卖三" format="[Fmat:%.2f:1]" compareto="PrevClose" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="AskPrice4" caption="卖四" format="[Fmat:%.2f:1]" compareto="PrevClose" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="AskPrice5" caption="卖五" format="[Fmat:%.2f:1]" compareto="PrevClose" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="AskPrice6" caption="卖六" format="[Fmat:%.2f:1]" compareto="PrevClose" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="AskPrice7" caption="卖七" format="[Fmat:%.2f:1]" compareto="PrevClose" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="AskPrice8" caption="卖八" format="[Fmat:%.2f:1]" compareto="PrevClose" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="AskPrice9" caption="卖九" format="[Fmat:%.2f:1]" compareto="PrevClose" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="AskPrice10" caption="卖十" format="[Fmat:%.2f:1]" compareto="PrevClose" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BidVolume1" caption="买一量(手)" format="[Calc:4:100:1:0:3]" defcolor="VolumeValue"/>  
+      <Index name="BidVolume2" caption="买二量(手)" format="[Calc:4:100:1:0:3]" defcolor="VolumeValue"/>  
+      <Index name="BidVolume3" caption="买三量(手)" format="[Calc:4:100:1:0:3]" defcolor="VolumeValue"/>  
+      <Index name="BidVolume4" caption="买四量(手)" format="[Calc:4:100:1:0:3]" defcolor="VolumeValue"/>  
+      <Index name="BidVolume5" caption="买五量(手)" format="[Calc:4:100:1:0:3]" defcolor="VolumeValue"/>  
+      <Index name="BidVolume6" caption="买六量(手)" format="[Calc:4:100:1:0:3]" defcolor="VolumeValue"/>  
+      <Index name="BidVolume7" caption="买七量(手)" format="[Calc:4:100:1:0:3]" defcolor="VolumeValue"/>  
+      <Index name="BidVolume8" caption="买八量(手)" format="[Calc:4:100:1:0:3]" defcolor="VolumeValue"/>  
+      <Index name="BidVolume9" caption="买九量(手)" format="[Calc:4:100:1:0:3]" defcolor="VolumeValue"/>  
+      <Index name="BidVolume10" caption="买十量(手)" format="[Calc:4:100:1:0:3]" defcolor="VolumeValue"/>  
+      <Index name="AskVolume1" caption="卖一量(手)" format="[Calc:4:100:1:0:3]" defcolor="VolumeValue"/>  
+      <Index name="AskVolume2" caption="卖二量(手)" format="[Calc:4:100:1:0:3]" defcolor="VolumeValue"/>  
+      <Index name="AskVolume3" caption="卖三量(手)" format="[Calc:4:100:1:0:3]" defcolor="VolumeValue"/>  
+      <Index name="AskVolume4" caption="卖四量(手)" format="[Calc:4:100:1:0:3]" defcolor="VolumeValue"/>  
+      <Index name="AskVolume5" caption="卖五量(手)" format="[Calc:4:100:1:0:3]" defcolor="VolumeValue"/>  
+      <Index name="AskVolume6" caption="卖六量(手)" format="[Calc:4:100:1:0:3]" defcolor="VolumeValue"/>  
+      <Index name="AskVolume7" caption="卖七量(手)" format="[Calc:4:100:1:0:3]" defcolor="VolumeValue"/>  
+      <Index name="AskVolume8" caption="卖八量(手)" format="[Calc:4:100:1:0:3]" defcolor="VolumeValue"/>  
+      <Index name="AskVolume9" caption="卖九量(手)" format="[Calc:4:100:1:0:3]" defcolor="VolumeValue"/>  
+      <Index name="AskVolume10" caption="卖十量(手)" format="[Calc:4:100:1:0:3]" defcolor="VolumeValue"/>  
+      <Index name="TotalBidVolume" caption="外盘(手)" format="[Calc:4:100:1:0:3]" defcolor="PriceUp"/>  
+      <Index name="TotalAskVolume" caption="内盘(手)" format="[Calc:4:100:1:0:3]" defcolor="PriceDown"/>  
+      <Index name="TotalAmount" caption="总成交额" format="[Calc:0:0:2:2:2]" defcolor="VolumeValue"/>  
+      <Index name="AveragePrice" caption="均价" format="[Fmat:%.2f:1]" compareto="PrevClose" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="Change" caption="涨跌" format="[Fmat:%.2f:0]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="ChangeRange" caption="涨跌幅" format="[Fmat:%.2f%%:0]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="ChangeHandRate" caption="换手率" format="[Fmat:%.2f%%:0]" defcolor="PriceSame"/>  
+      <Index name="LiangBi" caption="量比" format="[Fmat:%.2f:0]" defcolor="PriceSame"/>  
+      <Index name="Fluctuation" caption="振幅" format="[Fmat:%.2f%%:0]" defcolor="PriceSame"/>  
+      <Index name="PE_TTM" caption="市盈率TTM" format="[Fmat:%.1f:0]" defcolor="PriceSame"/>  
+      <Index name="PE_Projected" caption="市盈率预测" format="[Fmat:%.1f:0]" defcolor="PriceSame"/>  
+      <Index name="PB_MRQ" caption="市净率MRQ" format="[Fmat:%.2f:0]" defcolor="PriceSame"/>  
+      <Index name="PE_LYR" caption="市盈率LastYear" format="[Fmat:%.1f:0]" defcolor="PriceSame"/>  
+      <Index name="ListedStock" caption="流通股本" format="[Calc:0:0:2:2:2]" defcolor="VolumeValue"/>  
+      <Index name="CapitalStock" caption="总股本" format="[Calc:0:0:2:2:2]" defcolor="VolumeValue"/>  
+      <Index name="ListedMarketValue" caption="流通市值" format="[Calc:0:0:2:2:2]" defcolor="PriceSame"/>  
+      <Index name="CapitalMarketValue" caption="总市值" format="[Calc:0:0:2:2:2]" defcolor="PriceSame"/>  
+      <Index name="High52Week" caption="52周最高" format="[Fmat:%.2f:1]" defcolor="PriceUp"/>  
+      <Index name="Low52Week" caption="52周最低" format="[Fmat:%.2f:1]" defcolor="PriceDown"/>  
+      <Index name="HighLimit" caption="涨停价" format="[Fmat:%.2f:1]" defcolor="PriceUp"/>  
+      <Index name="LowLimit" caption="跌停价" format="[Fmat:%.2f:1]" defcolor="PriceDown"/>  
+      <Index name="WeiBi" caption="委比" format="[Fmat:%.2f%%:0]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="ChangeRange1Min" caption="1分钟涨跌幅" format="[Fmat:%.2f%%:0]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="ChangeRange3Min" caption="3分钟涨跌幅" format="[Fmat:%.2f%%:0]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="ChangeRange5Min" caption="5分钟涨跌幅" format="[Fmat:%.2f%%:0]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="Change5Days" caption="5日涨跌幅" format="[Fmat:%.2f%%:0]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="Change10Days" caption="10日涨跌幅" format="[Fmat:%.2f%%:0]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="Change20Days" caption="20日涨跌幅" format="[Fmat:%.2f%%:0]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="Change60Days" caption="60日涨跌幅" format="[Fmat:%.2f%%:0]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="Change120Days" caption="120日涨跌幅" format="[Fmat:%.2f%%:0]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="Change250Days" caption="250日涨跌幅" format="[Fmat:%.2f%%:0]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="ChangeYearBegin" caption="年初至今涨跌幅" format="[Fmat:%.2f%%:0]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="IOPV" caption="IOPV" format="[Fmat:%.4f:0]" defcolor="VolumeValue"/>  
+      <Index name="NetValue" caption="最新净值" format="[Fmat:%.4f:0]" compareto="PrevNetValue" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="PrevNetValue" caption="上期净值" format="[Fmat:%.4f:0]" defcolor="PriceSame"/>  
+      <Index name="GrowthRateThisYear" caption="年初以来净值增长率" format="[Calc:4:10000:1:2:6]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="GrowthRateLastWeek" caption="近一周净值增长率" format="[Calc:4:10000:1:2:6]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="PremiumDiscountRate" caption="溢折率" format="[Fmat:%.2f%%:0]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="ForwardDiscount" caption="贴水率" format="[Fmat:%.2f%%:0]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="GrowthRateLastMonth" caption="最近一月周净值增长率" format="[Calc:4:10000:1:2:6]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="GrowthRateLastSeason" caption="最近一季净值增长率" format="[Calc:4:10000:1:2:6]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="GrowthRateLast6Month" caption="最近6月净值增长率" format="[Calc:4:10000:1:2:6]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="GrowthRateLastYear" caption="最近一年净值增长率" format="[Calc:4:10000:1:2:6]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="GrowthRate" caption="最新净值增长率" format="[Calc:4:10000:1:2:6]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="AccumulatedNetValue" caption="最近累计净值" format="[Fmat:%.4f:0]" defcolor="PriceSame"/>  
+      <Index name="Fund_LastestDate" caption="基金最新日期" format="[Date:1:0]" defcolor="PriceSame"/>  
+      <Index name="Fund_Change3Year" caption="近三年涨跌幅" format="[Calc:4:10000:1:2:6]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="Fund_Change5Year" caption="近五年涨跌幅" format="[Calc:4:10000:1:2:6]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="GrowthRateFromDay1" caption="成立以来净值增长率" format="[Calc:4:10000:1:2:6]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="AverateYearYied" caption="平均年化收益率" format="[Calc:4:10000:1:2:6]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="Fund_NIR" caption="今年净值增长率" format="[Fmat:%.2f%%:1]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="Fund_NIRPre1" caption="前1年净值增长率" format="[Fmat:%.2f%%:1]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="Fund_NIRPre2" caption="前2年净值增长率" format="[Fmat:%.2f%%:1]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="Fund_NIRPre3" caption="前3年净值增长率" format="[Fmat:%.2f%%:1]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="Fund_NIRPre4" caption="前4年净值增长率" format="[Fmat:%.2f%%:1]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="Fund_NIRPre5" caption="前5年净值增长率" format="[Fmat:%.2f%%:1]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="Fund_IRR" caption="今年增长率排名" format="[Fmat:%.0f:2]" defcolor="PriceSame"/>  
+      <Index name="Fund_IRRPre1" caption="前1年增长率排名" format="[Fmat:%.0f:2]" defcolor="PriceSame"/>  
+      <Index name="Fund_IRRPre2" caption="前2年增长率排名" format="[Fmat:%.0f:2]" defcolor="PriceSame"/>  
+      <Index name="Fund_IRRPre3" caption="前3年增长率排名" format="[Fmat:%.0f:2]" defcolor="PriceSame"/>  
+      <Index name="Fund_IRRPre4" caption="前4年增长率排名" format="[Fmat:%.0f:2]" defcolor="PriceSame"/>  
+      <Index name="Fund_IRRPre5" caption="前5年增长率排名" format="[Fmat:%.0f:2]" defcolor="PriceSame"/>  
+      <Index name="Fund_TRR" caption="今年排名总数" format="[Fmat:%.0f:2]" defcolor="PriceSame"/>  
+      <Index name="Fund_TRRPre1" caption="前1年排名总数" format="[Fmat:%.0f:2]" defcolor="PriceSame"/>  
+      <Index name="Fund_TRRPre2" caption="前2年排名总数" format="[Fmat:%.0f:2]" defcolor="PriceSame"/>  
+      <Index name="Fund_TRRPre3" caption="前3年排名总数" format="[Fmat:%.0f:2]" defcolor="PriceSame"/>  
+      <Index name="Fund_TRRPre4" caption="前4年排名总数" format="[Fmat:%.0f:2]" defcolor="PriceSame"/>  
+      <Index name="Fund_TRRPre5" caption="前5年排名总数" format="[Fmat:%.0f:2]" defcolor="PriceSame"/>  
+      <Index name="Fund_Date" caption="成立日期" format="[Date:1:0]" defcolor="PriceSame"/>  
+      <Index name="Fund_MaturityDate" caption="到期日期" format="[Date:1:0]" defcolor="PriceSame"/>  
+      <Index name="Fund_InvestType" caption="投资类型" format="-" defcolor="VolumeValue"/>  
+      <Index name="Fund_TypeNote" caption="类型说明" format="-" defcolor="VolumeValue"/>  
+      <Index name="Shares" caption="最新份额" format="[Calc:0:0:2:2:2]" defcolor="VolumeValue"/>  
+      <Index name="Fund_PurChaseState" caption="申赎状态" format="-" defcolor="VolumeValue"/>  
+      <Index name="Fund_Manager" caption="基金经理" format="-" defcolor="VolumeValue"/>  
+      <Index name="Fund_Copany" caption="基金公司" format="-" defcolor="VolumeValue"/>  
+      <!--函数指标-->  
+      <Index name="BidPrice1Change" caption="买一涨跌" format="[Fmat:%.2f:0]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BidPrice2Change" caption="买二涨跌" format="[Fmat:%.2f:0]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BidPrice3Change" caption="买三涨跌" format="[Fmat:%.2f:0]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BidPrice4Change" caption="买四涨跌" format="[Fmat:%.2f:0]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BidPrice5Change" caption="买五涨跌" format="[Fmat:%.2f:0]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BidPrice6Change" caption="买六涨跌" format="[Fmat:%.2f:0]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BidPrice7Change" caption="买七涨跌" format="[Fmat:%.2f:0]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BidPrice8Change" caption="买八涨跌" format="[Fmat:%.2f:0]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BidPrice9Change" caption="买九涨跌" format="[Fmat:%.2f:0]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BidPrice10Change" caption="买十涨跌" format="[Fmat:%.2f:0]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="AskPrice1Change" caption="卖一涨跌" format="[Fmat:%.2f:0]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="AskPrice2Change" caption="卖二涨跌" format="[Fmat:%.2f:0]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="AskPrice3Change" caption="卖三涨跌" format="[Fmat:%.2f:0]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="AskPrice4Change" caption="卖四涨跌" format="[Fmat:%.2f:0]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="AskPrice5Change" caption="卖五涨跌" format="[Fmat:%.2f:0]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="AskPrice6Change" caption="卖六涨跌" format="[Fmat:%.2f:0]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="AskPrice7Change" caption="卖七涨跌" format="[Fmat:%.2f:0]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="AskPrice8Change" caption="卖八涨跌" format="[Fmat:%.2f:0]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="AskPrice9Change" caption="卖九涨跌" format="[Fmat:%.2f:0]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="AskPrice10Change" caption="卖十涨跌" format="[Fmat:%.2f:0]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BidVolumeDiffLot1" caption="买量差1手(手)" format="[Chan:0:1]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BidVolumeDiffLot2" caption="买量差2手(手)" format="[Chan:0:1]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BidVolumeDiffLot3" caption="买量差3手(手)" format="[Chan:0:1]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BidVolumeDiffLot4" caption="买量差4手(手)" format="[Chan:0:1]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BidVolumeDiffLot5" caption="买量差5手(手)" format="[Chan:0:1]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BidVolumeDiffLot6" caption="买量差6手(手)" format="[Chan:0:1]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BidVolumeDiffLot7" caption="买量差7手(手)" format="[Chan:0:1]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BidVolumeDiffLot8" caption="买量差8手(手)" format="[Chan:0:1]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BidVolumeDiffLot9" caption="买量差9手(手)" format="[Chan:0:1]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BidVolumeDiffLot10" caption="买量差10手(手)" format="[Chan:0:1]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="AskVolumeDiffLot1" caption="卖量差1手(手)" format="[Chan:0:1]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="AskVolumeDiffLot2" caption="卖量差2手(手)" format="[Chan:0:1]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="AskVolumeDiffLot3" caption="卖量差3手(手)" format="[Chan:0:1]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="AskVolumeDiffLot4" caption="卖量差4手(手)" format="[Chan:0:1]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="AskVolumeDiffLot5" caption="卖量差5手(手)" format="[Chan:0:1]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="AskVolumeDiffLot6" caption="卖量差6手(手)" format="[Chan:0:1]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="AskVolumeDiffLot7" caption="卖量差7手(手)" format="[Chan:0:1]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="AskVolumeDiffLot8" caption="卖量差8手(手)" format="[Chan:0:1]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="AskVolumeDiffLot9" caption="卖量差9手(手)" format="[Chan:0:1]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="AskVolumeDiffLot10" caption="卖量差10手(手)" format="[Chan:0:1]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="ProjectedYear" caption="预测年份" format="[Calc:4:10000:1:0:3]" defcolor="PriceSame"/>  
+      <Index name="Fund_CurYear" caption="今年" format="[Calc:4:10000:1:0:3]" defcolor="PriceSame"/>  
+      <Index name="Fund_Pre1Year" caption="前一年" format="[Calc:4:10000:1:0:3]" defcolor="PriceSame"/>  
+      <Index name="Fund_Pre2Year" caption="前二年" format="[Calc:4:10000:1:0:3]" defcolor="PriceSame"/>  
+      <Index name="Fund_Pre3Year" caption="前三年" format="[Calc:4:10000:1:0:3]" defcolor="PriceSame"/>  
+      <Index name="Fund_Pre4Year" caption="前四年" format="[Calc:4:10000:1:0:3]" defcolor="PriceSame"/>  
+      <Index name="Fund_Pre5Year" caption="前五年" format="[Calc:4:10000:1:0:3]" defcolor="PriceSame"/> 
+    </Market> 
+	<!-- 全部外汇 -->
+    <Market name="FX">   
+      <Index name="last_px" caption="现价" format="[Calc:4:100:1:5:3]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="preclose_px" caption="前收价" format="[Calc:4:100:1:5:3]" defcolor="PriceSame"/>  
+      <Index name="px_change" caption="涨跌" format="[Calc:4:100:1:5:3]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="open_px" caption="今开价" format="[Calc:4:100:1:5:3]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="high_px" caption="最高价" format="[Calc:4:100:1:5:3]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="low_px" caption="最低价" format="[Calc:4:100:1:5:3]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="wavg_px" caption="加权均价" format="[Calc:4:100:1:5:3]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="up_px" caption="涨停价格" format="[Calc:4:100:1:5:3]" defcolor="PriceUp"/>  
+      <Index name="down_px" caption="跌停价格" format="[Calc:4:100:1:5:3]" defcolor="PriceDown"/>  
+      <Index name="w52_high_px" caption="52周最高" format="[Calc:4:100:1:5:3]" defcolor="PriceUp"/>  
+      <Index name="w52_low_px" caption="52周最低" format="[Calc:4:100:1:5:3]" defcolor="PriceDown"/>  
+      <Index name="settlement" caption="结算价" format="[Calc:4:100:1:5:3]" defcolor="PriceSame"/>  
+      <Index name="prev_settlement" caption="昨结价" format="[Calc:4:100:1:5:3]" defcolor="PriceSame"/> 
+      <Index name="BuyPrice1" caption="买一" format="[Calc:4:100:1:5:3]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BuyPrice2" caption="买二" format="[Calc:4:100:1:5:3]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BuyPrice3" caption="买三" format="[Calc:4:100:1:5:3]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BuyPrice4" caption="买四" format="[Calc:4:100:1:5:3]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BuyPrice5" caption="买五" format="[Calc:4:100:1:5:3]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BuyPrice6" caption="买六" format="[Calc:4:100:1:5:3]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BuyPrice7" caption="买七" format="[Calc:4:100:1:5:3]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BuyPrice8" caption="买八" format="[Calc:4:100:1:5:3]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BuyPrice9" caption="买九" format="[Calc:4:100:1:5:3]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="BuyPrice10" caption="买十" format="[Calc:4:100:1:5:3]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="SellPrice1" caption="卖一" format="[Calc:4:100:1:5:3]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="SellPrice2" caption="卖二" format="[Calc:4:100:1:5:3]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="SellPrice3" caption="卖三" format="[Calc:4:100:1:5:3]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="SellPrice4" caption="卖四" format="[Calc:4:100:1:5:3]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="SellPrice5" caption="卖五" format="[Calc:4:100:1:5:3]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="SellPrice6" caption="卖六" format="[Calc:4:100:1:5:3]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="SellPrice7" caption="卖七" format="[Calc:4:100:1:5:3]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="SellPrice8" caption="卖八" format="[Calc:4:100:1:5:3]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="SellPrice9" caption="卖九" format="[Calc:4:100:1:5:3]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/>  
+      <Index name="SellPrice10" caption="卖十" format="[Calc:4:100:1:5:3]" compareto="prev_settlement" ecolor="PriceSame" defcolor="PriceSame"/> 
+	</Market>  
+	<Market name="LV1.IB,LV2.IB"> 
+		<Index name="YLD_NT_CHG1" caption="涨跌BP" format="[Calc:4:100:1:5:3]" compareto="{$zero}" ecolor="PriceSame" defcolor="PriceSame"/>  
+	</Market> 
+  </IndexsFormat>  
+  <!--格式化枚举值-->  
+  <FormatEnum> 
+    <Index name="trade_status" caption="交易状态"> 
+      <Enum value="START" text="市场启动"/>  
+      <Enum value="PRETR" text="盘前"/>  
+      <Enum value="OCALL" text="集合竞价"/>  
+      <Enum value="TRADE" text="正常交易"/>  
+      <Enum value="HALT" text="暂停交易"/>  
+      <Enum value="SUSP" text="停牌"/>  
+      <Enum value="BREAK" text="休市"/>  
+      <Enum value="POSTR" text="盘后"/>  
+      <Enum value="ENDTR" text="交易结束"/>  
+      <Enum value="STOPT" text="连续停牌"/> 
+    </Index> 
+  </FormatEnum> 
+</Config>

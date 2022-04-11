@@ -1,0 +1,212 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Menus>
+<MenuItem Title="报价牌">     
+     <component Title="报价列表"                        
+               ModuleClassName = "CEIS.Module.Quote.QuoteHSBoard"
+               ModuleDllName = "CEIS.Module.Quote" IsGroup = "true" IsHaveMarketAttribute ="true"/>
+<component Title="自选股"                        
+               ModuleClassName = "CEIS.Module.Quote.QuoteIndividual"
+               ModuleDllName = "CEIS.Module.Quote" IsGroup = "true" IsHaveMarketAttribute ="true"/>
+<component Title="简单报价盘"                        
+               ModuleClassName = "CEIS.Module.Quote.QuoteSimpleBoard"
+               ModuleDllName = "CEIS.Module.Quote" IsGroup = "true" IsHaveMarketAttribute ="true"/>
+<component Title="自选股和板块股"                        
+               ModuleClassName = "CEIS.Module.Quote.QuoteBlockBoard"
+               ModuleDllName = "CEIS.Module.Quote" IsGroup = "true" IsHaveMarketAttribute ="true"/>
+<component Title="沪深重要指数"
+               ModuleClassName = "CEIS.Module.Quote.QuoteHSIndex"
+               ModuleDllName = "CEIS.Module.Quote" IsGroup = "true" IsHaveMarketAttribute ="true"/>
+<component Title="香港重要指数"
+               ModuleClassName = "CEIS.Module.Quote.QuoteHKIndex"
+               ModuleDllName = "CEIS.Module.Quote" IsGroup = "true" IsHaveMarketAttribute ="true"/>				   
+<component Title="债券重要指数"
+               ModuleClassName = "CEIS.Module.Quote.QuoteBondIndex"
+               ModuleDllName = "CEIS.Module.Quote" IsGroup = "true" IsHaveMarketAttribute ="true"/>
+   <component Title="申万板块"
+               ModuleClassName = "CEIS.Module.Quote.QuoteSWBoard"
+               ModuleDllName = "CEIS.Module.Quote" IsGroup = "true" IsHaveMarketAttribute ="true"/>
+	<component Title="行业板块"
+               ModuleClassName = "CEIS.Module.Quote.QuoteHYBoard"
+               ModuleDllName = "CEIS.Module.Quote" IsGroup = "true" IsHaveMarketAttribute ="true"/>
+   <component Title="概念板块"
+               ModuleClassName = "CEIS.Module.Quote.QuoteGNBoard"
+               ModuleDllName = "CEIS.Module.Quote" IsGroup = "true" IsHaveMarketAttribute ="true"/>
+	<component Title="地域板块"
+               ModuleClassName = "CEIS.Module.Quote.QuoteDYBoard"
+               ModuleDllName = "CEIS.Module.Quote" IsGroup = "true" IsHaveMarketAttribute ="true"/>
+    <component Title="证监会行业"
+               ModuleClassName = "CEIS.Module.Quote.QuoteZJHHYBoard"
+               ModuleDllName = "CEIS.Module.Quote" IsGroup = "true" IsHaveMarketAttribute ="true"/>
+			   
+<component Title="Shibor"                        
+               ModuleClassName = "CEIS.Module.Quote.QuoteCurrencyBuybackShibor"
+               ModuleDllName = "CEIS.Module.Quote" IsGroup = "true" IsHaveMarketAttribute ="true"/>
+<component Title="回购定盘"                        
+               ModuleClassName = "CEIS.Module.Quote.QuoteCurrencyBuybackFixing"
+               ModuleDllName = "CEIS.Module.Quote" IsGroup = "true" IsHaveMarketAttribute ="true"/>
+<component Title="银拆借"                        
+               ModuleClassName = "CEIS.Module.Quote.QuoteCurrencyBuybackLending"
+               ModuleDllName = "CEIS.Module.Quote" IsGroup = "true" IsHaveMarketAttribute ="true"/>
+<component Title="银质押"                        
+               ModuleClassName = "CEIS.Module.Quote.QuoteCurrencyBuybackPledge"
+               ModuleDllName = "CEIS.Module.Quote" IsGroup = "true" IsHaveMarketAttribute ="true"/>
+<component Title="银买断"                        
+               ModuleClassName = "CEIS.Module.Quote.QuoteCurrencyBuybackBuyOut"
+               ModuleDllName = "CEIS.Module.Quote" IsGroup = "true" IsHaveMarketAttribute ="true"/>
+<component Title="上回购"                        
+               ModuleClassName = "CEIS.Module.Quote.QuoteCurrencyBuybackGBuy"
+               ModuleDllName = "CEIS.Module.Quote" IsGroup = "true" IsHaveMarketAttribute ="true"/>
+<component Title="深回购"                        
+               ModuleClassName = "CEIS.Module.Quote.QuoteCurrencyBuybackEBuy"
+               ModuleDllName = "CEIS.Module.Quote" IsGroup = "true" IsHaveMarketAttribute ="true"/>
+<component Title="人民币即期询价"                        
+               ModuleClassName = "CEIS.Module.Quote.QuoteOnShoreRMB"
+               ModuleDllName = "CEIS.Module.Quote" IsGroup = "true" IsHaveMarketAttribute ="true"/>
+<component Title="外币对即期询价"                        
+               ModuleClassName = "CEIS.Module.Quote.QuoteFxCurrencyPairs"
+               ModuleDllName = "CEIS.Module.Quote" IsGroup = "true" IsHaveMarketAttribute ="true"/>
+<component Title="外汇报价牌"                        
+               ModuleClassName = "CEIS.Module.Quote.QuoteForeignExchangeMarket"
+               ModuleDllName = "CEIS.Module.Quote" IsGroup = "true" IsHaveMarketAttribute ="true"/>
+  </MenuItem> 
+    <MenuItem Title="矩阵">
+	<component Title="外汇行情矩阵"
+               ModuleClassName = "CEIS.Module.Quote.QuoteBenchmarkCurrencyCrossRate"
+               ModuleDllName = "CEIS.Module.Quote" IsGroup = "false" IsHaveMarketAttribute ="true"/>
+	<component Title="商品价差矩阵"
+               ModuleClassName = "CEIS.Module.Quote.QuoteSpreadsMatrix"
+               ModuleDllName = "CEIS.Module.Quote" IsGroup = "false" IsHaveMarketAttribute ="true"/>
+  </MenuItem>
+  <MenuItem Title="走势图">
+    <component Title="分时图"
+               ModuleClassName = "CEIS.Module.Quote.QuoteTrendChart"
+               ModuleDllName = "CEIS.Module.Quote" IsGroup = "true" IsHaveMarketAttribute ="true"/>
+    <component Title="K线图"
+               ModuleClassName = "CEIS.Module.Quote.QuoteKLineChart"
+               ModuleDllName = "CEIS.Module.Quote" IsGroup = "true" IsHaveMarketAttribute ="true"/>
+    <component Title="Tick图"
+               ModuleClassName = "CEIS.Module.Quote.QuoteTickChart"
+               ModuleDllName = "CEIS.Module.Quote" IsGroup = "true" IsHaveMarketAttribute ="true"/>
+    <component Title="净值走势图"
+               ModuleClassName = "CEIS.Module.Quote.QuoteFundTargetChart"
+               ModuleDllName = "CEIS.Module.Quote" IsGroup = "true" IsHaveMarketAttribute ="true"/>
+    <component Title="综合走势图"
+               ModuleClassName = "CEIS.Module.Quote.QuoteStockChart"
+               ModuleDllName = "CEIS.Module.Quote" IsGroup = "true" IsHaveMarketAttribute ="true"/>
+	<component Title="价差走势图"
+               ModuleClassName = "CEIS.Module.Quote.QuoteSpreadsAnalyze"
+               ModuleDllName = "CEIS.Module.Quote" IsGroup = "false" IsHaveMarketAttribute ="true"/>
+	<component Title="季节性走势图"
+               ModuleClassName = "CEIS.Module.Quote.QuoteSeasonalTargetChart"
+               ModuleDllName = "CEIS.Module.Quote" IsGroup = "true" IsHaveMarketAttribute ="true"/>
+  </MenuItem>
+   <MenuItem Title="行情信息">    		
+    <component Title="证券信息栏（通用）"
+               ModuleClassName = "CEIS.Module.Quote.QuoteStockTitle"
+               ModuleDllName = "CEIS.Module.Quote" IsGroup = "true" IsHaveMarketAttribute ="true"/>
+    <component Title="委托档位（股票商品外汇）"
+               ModuleClassName = "CEIS.Module.Quote.QuoteBidOffer"
+               ModuleDllName = "CEIS.Module.Quote" IsGroup = "true" IsHaveMarketAttribute ="true"/>
+    <component Title="盘口基本报价"
+               ModuleClassName = "CEIS.Module.Quote.QuoteSnapshot"
+               ModuleDllName = "CEIS.Module.Quote" IsGroup = "true" IsHaveMarketAttribute ="true"/>
+  </MenuItem> 
+<MenuItem Title="成交数据">     
+<component Title="分笔成交"                        
+               ModuleClassName = "CEIS.Module.Quote.QuoteTick"
+               ModuleDllName = "CEIS.Module.Quote" IsGroup = "true" IsHaveMarketAttribute ="true"/>
+<component Title="价量分布"                        
+               ModuleClassName = "CEIS.Module.Quote.QuotePriceVolumeDistribution"
+               ModuleDllName = "CEIS.Module.Quote" IsGroup = "true" IsHaveMarketAttribute ="true"/>
+  </MenuItem>
+<MenuItem Title="综合排名">     
+     <component Title="综合排名"                        
+               ModuleClassName = "CEIS.Module.Quote.QuoteRank"
+               ModuleDllName = "CEIS.Module.Quote" IsGroup = "true" IsHaveMarketAttribute ="true"/>
+<component Title="今日涨幅排名"                        
+               ModuleClassName = "CEIS.Module.Quote.QuoteRankingChangePct"
+               ModuleDllName = "CEIS.Module.Quote" IsGroup = "true" IsHaveMarketAttribute ="true"/>
+<component Title="快速涨幅排名"                        
+               ModuleClassName = "CEIS.Module.Quote.QuoteRankingChangePctMin5"
+               ModuleDllName = "CEIS.Module.Quote" IsGroup = "true" IsHaveMarketAttribute ="true"/>
+<component Title="即时委比前几名"                        
+               ModuleClassName = "CEIS.Module.Quote.QuoteRankingEntrustRate"
+               ModuleDllName = "CEIS.Module.Quote" IsGroup = "true" IsHaveMarketAttribute ="true"/>
+<component Title="今日跌幅排名"                        
+               ModuleClassName = "CEIS.Module.Quote.QuoteRankingChangePctDesc"
+               ModuleDllName = "CEIS.Module.Quote" IsGroup = "true" IsHaveMarketAttribute ="true"/>
+<component Title="快速跌幅排名"                        
+               ModuleClassName = "CEIS.Module.Quote.QuoteRankingChangePctMin5Desc"
+               ModuleDllName = "CEIS.Module.Quote" IsGroup = "true" IsHaveMarketAttribute ="true"/>
+<component Title="即时委比后几名"                        
+               ModuleClassName = "CEIS.Module.Quote.QuoteRankingEntrustRateDesc"
+               ModuleDllName = "CEIS.Module.Quote" IsGroup = "true" IsHaveMarketAttribute ="true"/>
+<component Title="今日振幅排名"                        
+               ModuleClassName = "CEIS.Module.Quote.QuoteRankingAmplitude"
+               ModuleDllName = "CEIS.Module.Quote" IsGroup = "true" IsHaveMarketAttribute ="true"/>
+<component Title="今日量比排名"                        
+               ModuleClassName = "CEIS.Module.Quote.QuoteRankingVolRatio"
+               ModuleDllName = "CEIS.Module.Quote" IsGroup = "true" IsHaveMarketAttribute ="true"/>
+<component Title="今日成交额排名"                        
+               ModuleClassName = "CEIS.Module.Quote.QuoteRankingTotalBalance"
+               ModuleDllName = "CEIS.Module.Quote" IsGroup = "true" IsHaveMarketAttribute ="true"/>
+  </MenuItem>
+   <MenuItem Title="非联动组件">    	
+	<component Title="沪深指数对比图"
+               ModuleClassName = "CEIS.Module.Quote.QuoteHSIndexTargetChart"
+               ModuleDllName = "CEIS.Module.Quote" IsGroup = "false" IsHaveMarketAttribute ="true"/>
+	<component Title="香港指数对比图"
+               ModuleClassName = "CEIS.Module.Quote.QuoteHKIndexTargetChart"
+               ModuleDllName = "CEIS.Module.Quote" IsGroup = "false" IsHaveMarketAttribute ="true"/>
+  </MenuItem>
+
+  <MenuItem Title="资讯组件">
+    <component Title="沪深快讯"
+               ModuleClassName = "CEIS.Module.Information.InfoHSRollingNews"
+               ModuleDllName = "CEIS.Module.Information" IsGroup = "true" IsHaveMarketAttribute ="true"/>
+    <component Title="港股快讯"
+               ModuleClassName = "CEIS.Module.Information.InfoHKRollingNews"
+               ModuleDllName = "CEIS.Module.Information" IsGroup = "true" IsHaveMarketAttribute ="true"/>
+    <component Title="基金快讯"
+               ModuleClassName = "CEIS.Module.Information.InfoFundRollingNews"
+               ModuleDllName = "CEIS.Module.Information" IsGroup = "true" IsHaveMarketAttribute ="true"/>  
+    <component Title="外汇快讯"
+               ModuleClassName = "CEIS.Module.Information.InfoRMBFXRollingNews"
+               ModuleDllName = "CEIS.Module.Information" IsGroup = "true" IsHaveMarketAttribute ="true"/>  
+    <component Title="个券新闻"
+               ModuleClassName = "CEIS.Module.Information.InfoNews"
+               ModuleDllName = "CEIS.Module.Information" IsGroup = "true" IsHaveMarketAttribute ="true"/>
+    <component Title="个券公告"
+               ModuleClassName = "CEIS.Module.Information.InfoAnnouncement"
+               ModuleDllName = "CEIS.Module.Information" IsGroup = "true" IsHaveMarketAttribute ="true"/>			   
+    <component Title="个券研报"
+               ModuleClassName = "CEIS.Module.Information.InfoReport"
+               ModuleDllName = "CEIS.Module.Information" IsGroup = "true" IsHaveMarketAttribute ="true"/>
+    <component Title="全市场快讯"
+               ModuleClassName = "CEIS.Module.Information.InfoRealTime"
+               ModuleDllName = "CEIS.Module.Information" IsGroup = "true" IsHaveMarketAttribute ="true"/>     
+    <component Title="全球股市资讯"
+               ModuleClassName = "CEIS.Module.Information.InfoGlobalNews"
+               ModuleDllName = "CEIS.Module.Information" IsGroup = "true" IsHaveMarketAttribute ="true"/>  
+    <component Title="国内期市资讯"
+               ModuleClassName = "CEIS.Module.Information.InfoFutureNews"
+               ModuleDllName = "CEIS.Module.Information" IsGroup = "true" IsHaveMarketAttribute ="true"/>  
+  </MenuItem>  
+ 
+  <MenuItem Title="特色数据">
+	<component Title="新股中心"
+               ModuleClassName = "CEIS.Module.Information.InfoNewShares"
+               ModuleDllName = "CEIS.Module.Information" IsGroup = "false" IsHaveMarketAttribute ="true"/>
+	<component Title="股市日历"
+               ModuleClassName = "CEIS.Module.Information.InfoCalendar"
+               ModuleDllName = "CEIS.Module.Information" IsGroup = "false" IsHaveMarketAttribute ="true"/>
+    <component Title="债市日历"
+               ModuleClassName = "CEIS.Module.Information.InfoBondCalendar"
+               ModuleDllName = "CEIS.Module.Information" IsGroup = "true" IsHaveMarketAttribute ="true"/>  
+	<component Title="基本面"
+               ModuleClassName = "CEIS.Module.Information.InfoFinance"
+               ModuleDllName = "CEIS.Module.Information" IsGroup = "true" IsHaveMarketAttribute ="true"/>
+  </MenuItem>
+  
+
+</Menus>

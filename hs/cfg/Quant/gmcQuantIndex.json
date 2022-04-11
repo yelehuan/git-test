@@ -1,0 +1,40 @@
+﻿[
+{"NAME":"沪深股票",
+	"GROUP":
+	[
+		{"NAME":"最高价","FUNCNAME":"high"},
+		{"NAME":"最低价","FUNCNAME":"low"},
+		{"NAME":"开盘价","FUNCNAME":"open"},
+		{"NAME":"收盘价","FUNCNAME":"close"},		
+		{"NAME":"涨跌","FUNCNAME":"change"},
+		{"NAME":"涨跌幅","FUNCNAME":"pctchange"},
+		{"NAME":"成交量","FUNCNAME":"volume"},
+		{"NAME":"成交额","FUNCNAME":"turover"}		
+	]
+},
+{"NAME":"指数",
+	"GROUP":
+	[
+		{"NAME":"最高价","FUNCNAME":"high"},
+		{"NAME":"最低价","FUNCNAME":"low"},
+		{"NAME":"开盘价","FUNCNAME":"open"},
+		{"NAME":"收盘价","FUNCNAME":"close"},		
+		{"NAME":"涨跌","FUNCNAME":"change"},
+		{"NAME":"涨跌幅","FUNCNAME":"pctchange"},
+		{"NAME":"成交量","FUNCNAME":"volume"},
+		{"NAME":"成交额","FUNCNAME":"turover"}		
+	]
+},
+{"NAME":"期货",
+	"GROUP":
+	[
+		{"NAME":"最高价","FUNCNAME":"high"},
+		{"NAME":"最低价","FUNCNAME":"low"},
+		{"NAME":"开盘价","FUNCNAME":"open"},
+		{"NAME":"收盘价","FUNCNAME":"close"},
+		{"NAME":"持仓量(手)","FUNCNAME":"interest"},
+		{"NAME":"成交量","FUNCNAME":"volume"},
+		{"NAME":"成交额","FUNCNAME":"turover"}		
+	]
+},
+]

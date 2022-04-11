@@ -1,0 +1,3664 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>IUV.Component.Information</name>
+    </assembly>
+    <members>
+        <member name="T:IUV.Component.Information.InfoCalendarModel">
+            <summary>
+            股市日历
+            </summary>
+        </member>
+        <member name="M:IUV.Component.Information.InfoCalendarModel.#ctor">
+            <summary>
+            InformationModel
+            </summary>
+        </member>
+        <member name="M:IUV.Component.Information.InfoCalendarModel.#ctor(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            InformationModel
+            </summary>
+            <param name="date"></param>
+            <param name="prodCode"></param>
+            <param name="prodName"></param>
+            <param name="info"></param>
+            <param name="type"></param>
+        </member>
+        <member name="P:IUV.Component.Information.InfoCalendarModel.Date">
+            <summary>
+            日期
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.InfoCalendarModel.ProdCode">
+            <summary>
+            证券代码
+            </summary>        
+        </member>
+        <member name="P:IUV.Component.Information.InfoCalendarModel.ProdName">
+            <summary>
+            证券名称
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.InfoCalendarModel.Info">
+            <summary>
+            提示内容
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.InfoCalendarModel.Type">
+            <summary>
+            类型
+            </summary>
+        </member>
+        <member name="T:IUV.Component.Information.InfoEconomicCalendarModel">
+            <summary>
+            宏观经济日历
+            </summary>
+        </member>
+        <member name="M:IUV.Component.Information.InfoEconomicCalendarModel.#ctor">
+            <summary>
+            InfoEconomicCalendarModel
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.InfoEconomicCalendarModel.Date">
+            <summary>
+            日期
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.InfoEconomicCalendarModel.Time">
+            <summary>
+            时间
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.InfoEconomicCalendarModel.Country">
+            <summary>
+            国家
+            </summary>        
+        </member>
+        <member name="P:IUV.Component.Information.InfoEconomicCalendarModel.IndexName">
+            <summary>
+            指标名称
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.InfoEconomicCalendarModel.PredictValue">
+            <summary>
+            预测值
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.InfoEconomicCalendarModel.PublishValue">
+            <summary>
+            公布值
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.InfoEconomicCalendarModel.PreValue">
+            <summary>
+            前值
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.InfoEconomicCalendarModel.Importance">
+            <summary>
+            重要性
+            </summary>
+        </member>
+        <member name="T:IUV.Component.Information.InfoNewSharesModel">
+            <summary>
+            新股中心
+            </summary>
+        </member>
+        <member name="M:IUV.Component.Information.InfoNewSharesModel.#ctor">
+            <summary>
+            InfoNewSharesModel
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.InfoNewSharesModel.ProdCode">
+            <summary>
+            股票代码
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.InfoNewSharesModel.ProdName">
+            <summary>
+            证券名称
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.InfoNewSharesModel.Date">
+            <summary>
+            申购日期
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.InfoNewSharesModel.ApplyCode">
+            <summary>
+            申购代码
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.InfoNewSharesModel.Price">
+            <summary>
+            申购价格
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.InfoNewSharesModel.ApplyLimit">
+            <summary>
+            申购限额
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.InfoNewSharesModel.TotalAmount">
+            <summary>
+            发行总量
+            </summary>
+        </member>
+        <member name="T:IUV.Component.Information.InformationModel">
+            <summary>
+            资讯
+            </summary>
+        </member>
+        <member name="M:IUV.Component.Information.InformationModel.#ctor">
+            <summary>
+            InformationModel
+            </summary>
+        </member>
+        <member name="M:IUV.Component.Information.InformationModel.#ctor(System.String,System.String,System.String,System.DateTime)">
+            <summary>
+            InformationModel
+            </summary>
+            <param name="title">标题</param>
+            <param name="content">内容</param>
+            <param name="source">来源</param>
+            <param name="time">时间</param>
+        </member>
+        <member name="M:IUV.Component.Information.InformationModel.#ctor(System.String,System.String,System.DateTime,System.String)">
+            <summary>
+            InformationModel
+            </summary>
+            <param name="title">标题</param>
+            <param name="url">链接</param>
+            <param name="time">时间</param>
+            <param name="type">类型</param>
+        </member>
+        <member name="P:IUV.Component.Information.InformationModel.Title">
+            <summary>
+            标题
+            </summary>        
+        </member>
+        <member name="P:IUV.Component.Information.InformationModel.Type">
+            <summary>
+            类型
+            </summary>        
+        </member>
+        <member name="P:IUV.Component.Information.InformationModel.Content">
+            <summary>
+            内容
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.InformationModel.Source">
+            <summary>
+            来源
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.InformationModel.SourceToolTip">
+            <summary>
+            来源ToolTip
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.InformationModel.Time">
+            <summary>
+            时间
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.InformationModel.URL">
+            <summary>
+            链接URL
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.InformationModel.Name">
+            <summary>
+            图标触发时显示的标题
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.InformationModel.Date">
+            <summary>
+            日期
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.InformationModel.ProdCode">
+            <summary>
+            股票代码
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.InformationModel.ID">
+            <summary>
+            资讯ID
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.InformationModel.SourceName">
+            <summary>
+            来源名称
+            </summary>
+        </member>
+        <member name="T:IUV.Component.Information.InfoMarketType">
+            <summary>
+            消息市场类型
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.InfoMarketType.HS">
+            <summary>
+            沪深
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.InfoMarketType.HK">
+            <summary>
+            港股
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.InfoMarketType.Fund">
+            <summary>
+            基金
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.InfoMarketType.OnShoreRMB">
+            <summary>
+            在岸人民币
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.InfoMarketType.RMBFX">
+            <summary>
+            人民币外汇
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.InfoMarketType.Bond">
+            <summary>
+            债券
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.InfoMarketType.Future">
+            <summary>
+            商品
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.InfoMarketType.Global">
+            <summary>
+            全球股市
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.InfoMarketType.GlbalFuture">
+            <summary>
+            全球期市资讯
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.InfoMarketType.FXFuture">
+            <summary>
+            外盘期市资讯
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.InfoMarketType.OffShoreRMB">
+            <summary>
+            离岸外汇资讯
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.InfoMarketType.FXNews">
+            <summary>
+            外汇新闻
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.InfoMarketType.CentralBank">
+            <summary>
+            央行动态
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.InfoMarketType.Macro">
+            <summary>
+            宏观经济日历
+            </summary>
+        </member>
+        <member name="T:IUV.Component.Information.FundFlowModel">
+            <summary>
+            资金流
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.FundFlowModel.TurnoverIn">
+            <summary>
+            流入成交额
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.FundFlowModel.TurnoverOut">
+            <summary>
+            流出成交额
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.FundFlowModel.TurnoverWorth">
+            <summary>
+            净值成交额
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.FundFlowModel.Direction">
+            <summary>
+            流出入方向
+            </summary>
+        </member>
+        <member name="T:IUV.Component.Information.FundFlowMultiModel">
+            <summary>
+            资金流
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.FundFlowMultiModel.MainWorthIn">
+            <summary>
+            主力净流入
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.FundFlowMultiModel.MainWorthAmount">
+            <summary>
+            大单净量
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.FundFlowMultiModel.Direction">
+            <summary>
+            主力净流入方向
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.FundFlowMultiModel.DirectionWorth">
+            <summary>
+            净量方向
+            </summary>
+        </member>
+        <member name="T:IUV.Component.Information.FundFlowColumnModel">
+            <summary>
+            近期资金流
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.FundFlowColumnModel.MainWorthIn">
+            <summary>
+            主力净流入
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.FundFlowColumnModel.Date">
+            <summary>
+            时间
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.FundFlowColumnModel.ColumnHeight">
+            <summary>
+            时间
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.FundFlowColumnModel.Direction">
+            <summary>
+            主力净流入方向
+            </summary>
+        </member>
+        <member name="T:IUV.Component.Information.InOutDirection">
+            <summary>
+            流出入类型
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.InOutDirection.Normal">
+            <summary>
+            平流
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.InOutDirection.In">
+            <summary>
+            流入
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.InOutDirection.Out">
+            <summary>
+            流出
+            </summary>
+        </member>
+        <member name="T:IUV.Component.Information.NewsBlock">
+            <summary>
+            滚动新闻
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.NewsBlock.CurrentInfoBrush">
+            <summary>
+            CurrentInfoBrushs
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.NewsBlock.Info">
+            <summary>
+            Info
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.NewsBlock.URL">
+            <summary>
+            Info
+            </summary>
+        </member>
+        <member name="T:IUV.Component.Information.InfoNewsListControl">
+            <summary>
+            InfoNewsListControl.xaml 的交互逻辑
+            </summary>
+            <summary>
+            InfoNewsListControl
+            </summary>
+        </member>
+        <member name="M:IUV.Component.Information.InfoNewsListControl.#ctor">
+            <summary>
+            ctor
+            </summary>
+        </member>
+        <member name="M:IUV.Component.Information.InfoNewsListControl.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:IUV.Component.Information.InformationDetailWnd">
+            <summary>
+            资讯详情交互逻辑
+            </summary>
+            <summary>
+            InformationDetailWnd
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.InformationDetailWnd.TitleBackground">
+            <summary>
+            标题背景色
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.InformationDetailWnd.TitleBackgroundProperty">
+            <summary>
+            标题背景色
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.InformationDetailWnd._url">
+            <summary>
+            网页链接
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.InformationDetailWnd._title">
+            <summary>
+            网页标题
+            </summary>
+        </member>
+        <member name="M:IUV.Component.Information.InformationDetailWnd.#ctor">
+            <summary>
+            InformationDetailWnd
+            </summary>
+        </member>
+        <member name="M:IUV.Component.Information.InformationDetailWnd.#ctor(System.String,System.String)">
+             <summary>
+            资讯详情（网页版）
+             </summary>
+             <param name="url">链接</param>
+             <param name="title">标题</param>
+        </member>
+        <member name="M:IUV.Component.Information.InformationDetailWnd.OpenPage(System.String,System.String)">
+            <summary>
+            打开网页资讯详情
+            </summary>
+            <param name="url">链接</param>
+            <param name="title">标题</param>
+        </member>
+        <member name="M:IUV.Component.Information.InformationDetailWnd.Dispose">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:IUV.Component.Information.InformationDetailWnd.MsgHandle(IUV.Common.Models.ThemeChangedMessage,System.String)">
+            <summary>
+            换肤
+            </summary>
+            <param name="value"></param>
+            <param name="srcHandleID"></param>
+        </member>
+        <member name="M:IUV.Component.Information.InformationDetailWnd.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:IUV.Component.Information.IuvBondInformation">
+            <summary>
+            债券资讯
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvBondInformation.RollingNews">
+            <summary>
+            滚动新闻
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvBondInformation.Announcement">
+            <summary>
+            债市公告
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvBondInformation.Calendar">
+            <summary>
+            债市日历
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvBondInformation.InfoClickedEvent">
+            <summary>
+            公告列表单击事件
+            </summary>
+        </member>
+        <member name="E:IUV.Component.Information.IuvBondInformation.InfoClicked">
+            <summary>
+            公告列表单击事件
+            </summary>
+        </member>
+        <member name="M:IUV.Component.Information.IuvBondInformation.OnInfoClicked(IUV.Component.Information.IuvInfoDetailEventArgs)">
+            <summary>
+            响应列表单击事件
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvBondInformation.NewsClickedEvent">
+            <summary>
+            新闻列表单击事件
+            </summary>
+        </member>
+        <member name="E:IUV.Component.Information.IuvBondInformation.NewsClicked">
+            <summary>
+            新闻列表单击事件
+            </summary>
+        </member>
+        <member name="M:IUV.Component.Information.IuvBondInformation.OnNewsClicked(IUV.Component.Information.IuvInfoDetailEventArgs)">
+            <summary>
+            新闻列表单击事件
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvBondInformation.BondCommand">
+            <summary>
+            资讯点击命令
+            </summary>
+        </member>
+        <member name="M:IUV.Component.Information.IuvBondInformation.#ctor">
+            <summary>
+            ctor
+            </summary>
+        </member>
+        <member name="M:IUV.Component.Information.IuvBondInformation.OnComponentContentInitialized(System.Windows.RoutedEventArgs)">
+            <summary>
+            OnComponentContentInitialized
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:IUV.Component.Information.IuvBondInformation.Dispose">
+            <summary>
+            Dispose
+            </summary>
+        </member>
+        <member name="T:IUV.Component.Information.IuvFundFlowChart">
+            <summary>
+            资金流组件
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvFundFlowChart._prodCode">
+            <summary>
+            股票代码
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvFundFlowChart._mic">
+            <summary>
+            市场代码
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvFundFlowChart._unit">
+            <summary>
+            转换单位
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvFundFlowChart.EnableActiveAndDeactive">
+            <summary>
+            启用页面激活失效处理
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvFundFlowChart.EnableActiveAndDeActiveProperty">
+            <summary>
+            启用页面激活
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvFundFlowChart.StockCodeKey">
+            <summary>
+            股票信息
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvFundFlowChart.StockCodeKeyProperty">
+            <summary>
+            股票信息
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvFundFlowChart.NullDisplayString">
+            <summary>
+            空值或者默认显示字符串,默认为 -
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvFundFlowChart.NullDisplayStringProperty">
+            <summary>
+            空值或者默认显示字符串,默认为 -
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvFundFlowChart.ValueNormalBrush">
+            <summary>
+            股票详情属性值正常颜色
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvFundFlowChart.ValueNormalBrushProperty">
+            <summary>
+            股票详情属性值正常颜色
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvFundFlowChart.ValueUpBrush">
+            <summary>
+            股票详情属性值上涨颜色
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvFundFlowChart.ValueUpBrushProperty">
+            <summary>
+            股票详情属性值上涨颜色
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvFundFlowChart.ValueDownBrush">
+            <summary>
+            股票详情属性值下跌颜色
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvFundFlowChart.ValueDownBrushProperty">
+            <summary>
+            股票详情属性值下跌颜色
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvFundFlowChart.SpliterBrush">
+            <summary>
+            分割线颜色
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvFundFlowChart.SpliterBrushProperty">
+            <summary>
+            分割线颜色
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvFundFlowChart.MainBackground">
+            <summary>
+            表格背景色
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvFundFlowChart.MainBackgroundProperty">
+            <summary>
+            表格背景色
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvFundFlowChart.TitleForeground">
+            <summary>
+            标题栏前景色
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvFundFlowChart.TitleForegroundProperty">
+            <summary>
+            标题栏前景色
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvFundFlowChart.MainForeground">
+            <summary>
+            标题栏前景色
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvFundFlowChart.MainForegroundProperty">
+            <summary>
+            标题栏前景色
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvFundFlowChart.LabelForeground">
+            <summary>
+            标签前景色
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvFundFlowChart.LabelForegroundProperty">
+            <summary>
+            标签前景色
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvFundFlowChart.SuperInBrush">
+            <summary>
+            特大单流入色
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvFundFlowChart.SuperInBrushProperty">
+            <summary>
+            特大单流入色
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvFundFlowChart.LargeInBrush">
+            <summary>
+            大单流入色
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvFundFlowChart.LargeInBrushProperty">
+            <summary>
+            大单流入色
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvFundFlowChart.MediumInBrush">
+            <summary>
+            中单流入色
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvFundFlowChart.MediumInBrushProperty">
+            <summary>
+            中单流入色
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvFundFlowChart.LittleInBrush">
+            <summary>
+            小单流入色
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvFundFlowChart.LittleInBrushProperty">
+            <summary>
+            小单流入色
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvFundFlowChart.SuperOutBrush">
+            <summary>
+            特大单流出色
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvFundFlowChart.SuperOutBrushProperty">
+            <summary>
+            特大单流出色
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvFundFlowChart.LargeOutBrush">
+            <summary>
+            大单流出色
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvFundFlowChart.LargeOutBrushProperty">
+            <summary>
+            大单流出色
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvFundFlowChart.MediumOutBrush">
+            <summary>
+            中单流出色
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvFundFlowChart.MediumOutBrushProperty">
+            <summary>
+            中单流出色
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvFundFlowChart.LittleOutBrush">
+            <summary>
+            小单流出色
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvFundFlowChart.LittleOutBrushProperty">
+            <summary>
+            小单流出色
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvFundFlowChart.ToolTipInfoForeground">
+            <summary>
+            帮助提示前景色
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvFundFlowChart.ToolTipInfoForegroundProperty">
+            <summary>
+            帮助提示前景色
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvFundFlowChart.ToolTipForeground">
+            <summary>
+            帮助前景色
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvFundFlowChart.ToolTipForegroundProperty">
+            <summary>
+            帮助前景色
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvFundFlowChart.ToolTipBackground">
+            <summary>
+            帮助背景色
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvFundFlowChart.ToolTipBackgroundProperty">
+            <summary>
+            帮助背景色
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvFundFlowChart.RefreshInterval">
+            <summary>
+            定时刷新间隔(单位:毫秒)
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvFundFlowChart.RefreshIntervalProperty">
+            <summary>
+            定时刷新间隔(单位:毫秒)
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvFundFlowChart.CurrentFundFlow">
+            <summary>
+            今日净资金流数据源
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvFundFlowChart._pieChart">
+            <summary>
+            PieChart
+            </summary>
+        </member>
+        <member name="M:IUV.Component.Information.IuvFundFlowChart.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:IUV.Component.Information.IuvFundFlowChart.OnComponentContentInitialized(System.Windows.RoutedEventArgs)">
+            <summary>
+            组件加载
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:IUV.Component.Information.IuvFundFlowChart.SetNullDisplay">
+            <summary>
+            设置默认显示值
+            </summary>
+        </member>
+        <member name="M:IUV.Component.Information.IuvFundFlowChart.LoadFundFlowData">
+            <summary>
+            加载资金流列表
+            </summary>
+        </member>
+        <member name="M:IUV.Component.Information.IuvFundFlowChart.SetPieChart(IUV.Common.Models.IFundFlowSnapshotGrp)">
+            <summary>
+            设置饼状图
+            </summary>
+            <param name="currentItem">IFundFlowSnapshotGrp</param>
+        </member>
+        <member name="M:IUV.Component.Information.IuvFundFlowChart.GetPieSeries(System.Windows.Media.Brush)">
+            <summary>
+            设置饼状图项
+            </summary>
+            <param name="fillBrush"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.Component.Information.IuvFundFlowChart.SetFundFlow(IUV.Component.Information.FundFlowModel,IUV.Common.Models.IFundFlowInOutItem,IUV.Common.Models.IFundFlowInOutItem)">
+            <summary>
+            计算主力资金流
+            </summary>
+            <param name="fundFlowModel"></param>
+            <param name="supItem"></param>
+            <param name="largeItem"></param>
+        </member>
+        <member name="M:IUV.Component.Information.IuvFundFlowChart.SetFundFlow(IUV.Component.Information.FundFlowModel,IUV.Common.Models.IFundFlowInOutItem)">
+            <summary>
+            设置资金流
+            </summary>
+            <param name="fundFlowModel"></param>
+            <param name="item"></param>
+        </member>
+        <member name="M:IUV.Component.Information.IuvFundFlowChart.OnComponentDeactived(System.Windows.RoutedEventArgs)">
+            <summary>
+            OnComponentDeactived
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:IUV.Component.Information.IuvFundFlowChart.OnComponentActived(System.Windows.RoutedEventArgs)">
+            <summary>
+            OnComponentActived
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:IUV.Component.Information.IuvFundFlowChart.Dispose">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:IUV.Component.Information.IuvFundFlowMultiChart">
+            <summary>
+            资金流组件
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvFundFlowMultiChart._prodCode">
+            <summary>
+            股票代码
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvFundFlowMultiChart._mic">
+            <summary>
+            市场代码
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvFundFlowMultiChart.EnableActiveAndDeactive">
+            <summary>
+            启用页面激活失效处理
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvFundFlowMultiChart.EnableActiveAndDeActiveProperty">
+            <summary>
+            启用页面激活
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvFundFlowMultiChart.StockCodeKey">
+            <summary>
+            股票信息
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvFundFlowMultiChart.StockCodeKeyProperty">
+            <summary>
+            股票信息
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvFundFlowMultiChart.NullDisplayString">
+            <summary>
+            空值或者默认显示字符串,默认为 -
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvFundFlowMultiChart.NullDisplayStringProperty">
+            <summary>
+            空值或者默认显示字符串,默认为 -
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvFundFlowMultiChart.ValueNormalBrush">
+            <summary>
+            股票详情属性值正常颜色
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvFundFlowMultiChart.ValueNormalBrushProperty">
+            <summary>
+            股票详情属性值正常颜色
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvFundFlowMultiChart.ValueUpBrush">
+            <summary>
+            股票详情属性值上涨颜色
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvFundFlowMultiChart.ValueUpBrushProperty">
+            <summary>
+            股票详情属性值上涨颜色
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvFundFlowMultiChart.ValueDownBrush">
+            <summary>
+            股票详情属性值下跌颜色
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvFundFlowMultiChart.ValueDownBrushProperty">
+            <summary>
+            股票详情属性值下跌颜色
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvFundFlowMultiChart.SpliterBrush">
+            <summary>
+            分割线颜色
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvFundFlowMultiChart.SpliterBrushProperty">
+            <summary>
+            分割线颜色
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvFundFlowMultiChart.MainBackground">
+            <summary>
+            表格背景色
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvFundFlowMultiChart.MainBackgroundProperty">
+            <summary>
+            表格背景色
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvFundFlowMultiChart.TitleForeground">
+            <summary>
+            标题栏前景色
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvFundFlowMultiChart.TitleForegroundProperty">
+            <summary>
+            标题栏前景色
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvFundFlowMultiChart.LabelForeground">
+            <summary>
+            标签前景色
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvFundFlowMultiChart.LabelForegroundProperty">
+            <summary>
+            标签前景色
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvFundFlowMultiChart.RefreshInterval">
+            <summary>
+            定时刷新间隔(单位:毫秒)
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvFundFlowMultiChart.RefreshIntervalProperty">
+            <summary>
+            定时刷新间隔(单位:毫秒)
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvFundFlowMultiChart.FifthColumnModel">
+            <summary>
+            近五日倒数第五日资金流数据源
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvFundFlowMultiChart.FourthColumnModel">
+            <summary>
+            近五日倒数第四日资金流数据源
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvFundFlowMultiChart.ThirdlyColumnModel">
+            <summary>
+            近五日倒数第四日资金流数据源
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvFundFlowMultiChart.SecondaryColumnModel">
+            <summary>
+            近五日倒数第四日资金流数据源
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvFundFlowMultiChart.PrimaryColumnModel">
+            <summary>
+            近五日倒数第一日资金流数据源
+            </summary>
+        </member>
+        <member name="M:IUV.Component.Information.IuvFundFlowMultiChart.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:IUV.Component.Information.IuvFundFlowMultiChart.OnComponentContentInitialized(System.Windows.RoutedEventArgs)">
+            <summary>
+            组件加载
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:IUV.Component.Information.IuvFundFlowMultiChart.SetNullDisplay">
+            <summary>
+            设置默认显示值
+            </summary>
+        </member>
+        <member name="M:IUV.Component.Information.IuvFundFlowMultiChart.LoadFundFlowData">
+            <summary>
+            加载资金流列表
+            </summary>
+        </member>
+        <member name="M:IUV.Component.Information.IuvFundFlowMultiChart.SetColumnFundFlow(IUV.Component.Information.FundFlowColumnModel,IUV.Common.Models.IFundFlowSnapshotGrp,System.Int64)">
+            <summary>
+            设置多日资金流
+            </summary>
+            <param name="fundFlowColumnModel"></param>
+            <param name="item"></param>
+            <param name="maxInOut"></param>
+        </member>
+        <member name="M:IUV.Component.Information.IuvFundFlowMultiChart.SetMultiFundFlow(IUV.Component.Information.FundFlowMultiModel,System.Collections.Generic.List{IUV.Common.Models.IFundFlowSnapshotGrp})">
+            <summary>
+            设置多日资金流
+            </summary>
+            <param name="fundFlowMultiModel"></param>
+            <param name="items"></param>
+        </member>
+        <member name="M:IUV.Component.Information.IuvFundFlowMultiChart.OnComponentDeactived(System.Windows.RoutedEventArgs)">
+            <summary>
+            OnComponentDeactived
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:IUV.Component.Information.IuvFundFlowMultiChart.OnComponentActived(System.Windows.RoutedEventArgs)">
+            <summary>
+            OnComponentActived
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:IUV.Component.Information.IuvFundFlowMultiChart.Dispose">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:IUV.Component.Information.IuvFundFlowMultiTable">
+            <summary>
+            资金流组件
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvFundFlowMultiTable._prodCode">
+            <summary>
+            股票代码
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvFundFlowMultiTable._mic">
+            <summary>
+            市场代码
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvFundFlowMultiTable.EnableActiveAndDeactive">
+            <summary>
+            启用页面激活失效处理
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvFundFlowMultiTable.EnableActiveAndDeActiveProperty">
+            <summary>
+            启用页面激活
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvFundFlowMultiTable.StockCodeKey">
+            <summary>
+            股票信息
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvFundFlowMultiTable.StockCodeKeyProperty">
+            <summary>
+            股票信息
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvFundFlowMultiTable.NullDisplayString">
+            <summary>
+            空值或者默认显示字符串,默认为 -
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvFundFlowMultiTable.NullDisplayStringProperty">
+            <summary>
+            空值或者默认显示字符串,默认为 -
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvFundFlowMultiTable.ValueNormalBrush">
+            <summary>
+            股票详情属性值正常颜色
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvFundFlowMultiTable.ValueNormalBrushProperty">
+            <summary>
+            股票详情属性值正常颜色
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvFundFlowMultiTable.ValueUpBrush">
+            <summary>
+            股票详情属性值上涨颜色
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvFundFlowMultiTable.ValueUpBrushProperty">
+            <summary>
+            股票详情属性值上涨颜色
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvFundFlowMultiTable.ValueDownBrush">
+            <summary>
+            股票详情属性值下跌颜色
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvFundFlowMultiTable.ValueDownBrushProperty">
+            <summary>
+            股票详情属性值下跌颜色
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvFundFlowMultiTable.SpliterBrush">
+            <summary>
+            分割线颜色
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvFundFlowMultiTable.SpliterBrushProperty">
+            <summary>
+            分割线颜色
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvFundFlowMultiTable.MainBackground">
+            <summary>
+            表格背景色
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvFundFlowMultiTable.MainBackgroundProperty">
+            <summary>
+            表格背景色
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvFundFlowMultiTable.TitleForeground">
+            <summary>
+            标题栏前景色
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvFundFlowMultiTable.TitleForegroundProperty">
+            <summary>
+            标题栏前景色
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvFundFlowMultiTable.LabelForeground">
+            <summary>
+            标签前景色
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvFundFlowMultiTable.LabelForegroundProperty">
+            <summary>
+            标签前景色
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvFundFlowMultiTable.RefreshInterval">
+            <summary>
+            定时刷新间隔(单位:毫秒)
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvFundFlowMultiTable.RefreshIntervalProperty">
+            <summary>
+            定时刷新间隔(单位:毫秒)
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvFundFlowMultiTable.Day5MultiModel">
+            <summary>
+            5日中单资金流数据源
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvFundFlowMultiTable.Day10MultiModel">
+            <summary>
+            10日中单资金流数据源
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvFundFlowMultiTable.Day20MultiModel">
+            <summary>
+            5日中单资金流数据源
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvFundFlowMultiTable.Day60MultiModel">
+            <summary>
+            10日中单资金流数据源
+            </summary>
+        </member>
+        <member name="M:IUV.Component.Information.IuvFundFlowMultiTable.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:IUV.Component.Information.IuvFundFlowMultiTable.OnComponentContentInitialized(System.Windows.RoutedEventArgs)">
+            <summary>
+            组件加载
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:IUV.Component.Information.IuvFundFlowMultiTable.SetNullDisplay">
+            <summary>
+            设置默认显示值
+            </summary>
+        </member>
+        <member name="M:IUV.Component.Information.IuvFundFlowMultiTable.LoadFundFlowData">
+            <summary>
+            加载资金流列表
+            </summary>
+        </member>
+        <member name="M:IUV.Component.Information.IuvFundFlowMultiTable.SetMultiFundFlow(IUV.Component.Information.FundFlowMultiModel,System.Collections.Generic.List{IUV.Common.Models.IFundFlowSnapshotGrp})">
+            <summary>
+            设置多日资金流
+            </summary>
+            <param name="fundFlowMultiModel"></param>
+            <param name="items"></param>
+        </member>
+        <member name="M:IUV.Component.Information.IuvFundFlowMultiTable.OnComponentDeactived(System.Windows.RoutedEventArgs)">
+            <summary>
+            OnComponentDeactived
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:IUV.Component.Information.IuvFundFlowMultiTable.OnComponentActived(System.Windows.RoutedEventArgs)">
+            <summary>
+            OnComponentActived
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:IUV.Component.Information.IuvFundFlowMultiTable.Dispose">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:IUV.Component.Information.IuvFundFlowTable">
+            <summary>
+            资金流组件
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvFundFlowTable._prodCode">
+            <summary>
+            股票代码
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvFundFlowTable._mic">
+            <summary>
+            市场代码
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvFundFlowTable.EnableActiveAndDeactive">
+            <summary>
+            启用页面激活失效处理
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvFundFlowTable.EnableActiveAndDeActiveProperty">
+            <summary>
+            启用页面激活
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvFundFlowTable.StockCodeKey">
+            <summary>
+            股票信息
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvFundFlowTable.StockCodeKeyProperty">
+            <summary>
+            股票信息
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvFundFlowTable.NullDisplayString">
+            <summary>
+            空值或者默认显示字符串,默认为 -
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvFundFlowTable.NullDisplayStringProperty">
+            <summary>
+            空值或者默认显示字符串,默认为 -
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvFundFlowTable.ValueNormalBrush">
+            <summary>
+            股票详情属性值正常颜色
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvFundFlowTable.ValueNormalBrushProperty">
+            <summary>
+            股票详情属性值正常颜色
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvFundFlowTable.ValueUpBrush">
+            <summary>
+            股票详情属性值上涨颜色
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvFundFlowTable.ValueUpBrushProperty">
+            <summary>
+            股票详情属性值上涨颜色
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvFundFlowTable.ValueDownBrush">
+            <summary>
+            股票详情属性值下跌颜色
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvFundFlowTable.ValueDownBrushProperty">
+            <summary>
+            股票详情属性值下跌颜色
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvFundFlowTable.SpliterBrush">
+            <summary>
+            分割线颜色
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvFundFlowTable.SpliterBrushProperty">
+            <summary>
+            分割线颜色
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvFundFlowTable.MainBackground">
+            <summary>
+            表格背景色
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvFundFlowTable.MainBackgroundProperty">
+            <summary>
+            表格背景色
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvFundFlowTable.TitleForeground">
+            <summary>
+            标题栏前景色
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvFundFlowTable.TitleForegroundProperty">
+            <summary>
+            标题栏前景色
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvFundFlowTable.LabelForeground">
+            <summary>
+            标签前景色
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvFundFlowTable.LabelForegroundProperty">
+            <summary>
+            标签前景色
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvFundFlowTable.RefreshInterval">
+            <summary>
+            定时刷新间隔(单位:毫秒)
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvFundFlowTable.RefreshIntervalProperty">
+            <summary>
+            定时刷新间隔(单位:毫秒)
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvFundFlowTable.SuperFundFlow">
+            <summary>
+            今日超大资金流数据源
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvFundFlowTable.LargeFundFlow">
+            <summary>
+            今日大单资金流数据源
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvFundFlowTable.MediumFundFlow">
+            <summary>
+            今日中单资金流数据源
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvFundFlowTable.LittleFundFlow">
+            <summary>
+            今日小单资金流数据源
+            </summary>
+        </member>
+        <member name="M:IUV.Component.Information.IuvFundFlowTable.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:IUV.Component.Information.IuvFundFlowTable.OnComponentContentInitialized(System.Windows.RoutedEventArgs)">
+            <summary>
+            组件加载
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:IUV.Component.Information.IuvFundFlowTable.SetNullDisplay">
+            <summary>
+            设置默认显示值
+            </summary>
+        </member>
+        <member name="M:IUV.Component.Information.IuvFundFlowTable.LoadFundFlowData">
+            <summary>
+            加载资金流列表
+            </summary>
+        </member>
+        <member name="M:IUV.Component.Information.IuvFundFlowTable.SetFundFlow(IUV.Component.Information.FundFlowModel,IUV.Common.Models.IFundFlowInOutItem)">
+            <summary>
+            设置资金流
+            </summary>
+            <param name="fundFlowModel"></param>
+            <param name="item"></param>
+        </member>
+        <member name="M:IUV.Component.Information.IuvFundFlowTable.OnComponentDeactived(System.Windows.RoutedEventArgs)">
+            <summary>
+            OnComponentDeactived
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:IUV.Component.Information.IuvFundFlowTable.OnComponentActived(System.Windows.RoutedEventArgs)">
+            <summary>
+            OnComponentActived
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:IUV.Component.Information.IuvFundFlowTable.Dispose">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:IUV.Component.Information.IuvFundInformation">
+            <summary>
+            港股资讯
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvFundInformation.RollingNews">
+            <summary>
+            滚动新闻
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvFundInformation.NewsClickedEvent">
+            <summary>
+            新闻列表单击事件
+            </summary>
+        </member>
+        <member name="E:IUV.Component.Information.IuvFundInformation.NewsClicked">
+            <summary>
+            新闻列表单击事件
+            </summary>
+        </member>
+        <member name="M:IUV.Component.Information.IuvFundInformation.OnNewsClicked(IUV.Component.Information.IuvInfoDetailEventArgs)">
+            <summary>
+            新闻列表单击事件
+            </summary>
+        </member>
+        <member name="M:IUV.Component.Information.IuvFundInformation.#ctor">
+            <summary>
+            ctor
+            </summary>
+        </member>
+        <member name="M:IUV.Component.Information.IuvFundInformation.OnComponentContentInitialized(System.Windows.RoutedEventArgs)">
+            <summary>
+            OnComponentContentInitialized
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:IUV.Component.Information.IuvFundInformation.Dispose">
+            <summary>
+            Dispose
+            </summary>
+        </member>
+        <member name="T:IUV.Component.Information.IuvFxInformation">
+            <summary>
+            外汇综合屏资讯
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvFxInformation.RollingNews">
+            <summary>
+            外汇新闻
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvFxInformation.Calendar">
+            <summary>
+            经济日历
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvFxInformation.CentralBankNews">
+            <summary>
+            央行动态
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvFxInformation.CategoryCommand">
+            <summary>
+            新闻类型命令
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvFxInformation.NewsClickedEvent">
+            <summary>
+            新闻列表单击事件
+            </summary>
+        </member>
+        <member name="E:IUV.Component.Information.IuvFxInformation.NewsClicked">
+            <summary>
+            新闻列表单击事件
+            </summary>
+        </member>
+        <member name="M:IUV.Component.Information.IuvFxInformation.OnNewsClicked(IUV.Component.Information.IuvInfoDetailEventArgs)">
+            <summary>
+            新闻列表单击事件
+            </summary>
+        </member>
+        <member name="M:IUV.Component.Information.IuvFxInformation.#ctor">
+            <summary>
+            ctor
+            </summary>
+        </member>
+        <member name="M:IUV.Component.Information.IuvFxInformation.OnComponentContentInitialized(System.Windows.RoutedEventArgs)">
+            <summary>
+            OnComponentContentInitialized
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:IUV.Component.Information.IuvFxInformation.Dispose">
+            <summary>
+            Dispose
+            </summary>
+        </member>
+        <member name="T:IUV.Component.Information.IuvGlobalIndexInformation">
+            <summary>
+            全球指数资讯
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvGlobalIndexInformation.RollingNews">
+            <summary>
+            滚动新闻
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvGlobalIndexInformation.Calendar">
+            <summary>
+            财经日历
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvGlobalIndexInformation.CategoryCommand">
+            <summary>
+            新闻类型命令
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvGlobalIndexInformation.NewsClickedEvent">
+            <summary>
+            新闻列表单击事件
+            </summary>
+        </member>
+        <member name="E:IUV.Component.Information.IuvGlobalIndexInformation.NewsClicked">
+            <summary>
+            新闻列表单击事件
+            </summary>
+        </member>
+        <member name="M:IUV.Component.Information.IuvGlobalIndexInformation.OnNewsClicked(IUV.Component.Information.IuvInfoDetailEventArgs)">
+            <summary>
+            新闻列表单击事件
+            </summary>
+        </member>
+        <member name="M:IUV.Component.Information.IuvGlobalIndexInformation.#ctor">
+            <summary>
+            ctor
+            </summary>
+        </member>
+        <member name="M:IUV.Component.Information.IuvGlobalIndexInformation.OnComponentContentInitialized(System.Windows.RoutedEventArgs)">
+            <summary>
+            OnComponentContentInitialized
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:IUV.Component.Information.IuvGlobalIndexInformation.Dispose">
+            <summary>
+            Dispose
+            </summary>
+        </member>
+        <member name="T:IUV.Component.Information.IuvHKInformation">
+            <summary>
+            港股资讯
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvHKInformation.CategoryCommand">
+            <summary>
+            新闻类型命令
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvHKInformation.NewsClickedEvent">
+            <summary>
+            新闻列表单击事件
+            </summary>
+        </member>
+        <member name="E:IUV.Component.Information.IuvHKInformation.NewsClicked">
+            <summary>
+            新闻列表单击事件
+            </summary>
+        </member>
+        <member name="M:IUV.Component.Information.IuvHKInformation.OnNewsClicked(IUV.Component.Information.IuvInfoDetailEventArgs)">
+            <summary>
+            新闻列表单击事件
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvHKInformation.RollingNews">
+            <summary>
+            滚动新闻
+            </summary>
+        </member>
+        <member name="M:IUV.Component.Information.IuvHKInformation.#ctor">
+            <summary>
+            ctor
+            </summary>
+        </member>
+        <member name="M:IUV.Component.Information.IuvHKInformation.OnComponentContentInitialized(System.Windows.RoutedEventArgs)">
+            <summary>
+            OnComponentContentInitialized
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:IUV.Component.Information.IuvHKInformation.Dispose">
+            <summary>
+            Dispose
+            </summary>
+        </member>
+        <member name="T:IUV.Component.Information.IuvInfoCalendar">
+            <summary>
+            新闻组件
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoCalendar.ItemHeight">
+            <summary>
+            行高
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoCalendar.ItemHeightProperty">
+            <summary>
+            行高属性
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoCalendar.TitleForeground">
+            <summary>
+            标题前景色
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoCalendar.TitleForegroundProperty">
+            <summary>
+            标题前景色
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoCalendar.TitleBackground">
+            <summary>
+            标题背景色
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoCalendar.TitleBackgroundProperty">
+            <summary>
+            标题背景色
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoCalendar.ItemSelectedBackground">
+            <summary>
+            选中背景色
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoCalendar.ItemSelectedBackgroundProperty">
+            <summary>
+            选中背景色
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoCalendar.ItemMouseOverBackground">
+            <summary>
+            鼠标移入背景色
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoCalendar.ItemMouseOverBackgroundProperty">
+            <summary>
+            鼠标移入背景色
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoCalendar.SourceForeground">
+            <summary>
+            来源前景色
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoCalendar.SourceForegroundProperty">
+            <summary>
+            来源前景色
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoCalendar.ShowTitle">
+            <summary>
+            是否显示标题行
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoCalendar.ShowTitleProperty">
+            <summary>
+            是否显示标题行
+            </summary>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoCalendar.#ctor">
+            <summary>
+            IuvInfoCalendar
+            </summary>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoCalendar.OnComponentContentInitialized(System.Windows.RoutedEventArgs)">
+            <summary>
+            组件加载
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoCalendar.Initialize">
+            <summary>
+            初始化
+            </summary>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoCalendar.CalculateItemHeight(System.Double)">
+            <summary>
+            计算行高
+            </summary>
+            <param name="containerHeihgt"></param>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoCalendar.RefreshTick(System.Object,System.EventArgs)">
+            <summary>
+            刷新数据
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoCalendar.OnRenderSizeChanged(System.Windows.SizeChangedInfo)">
+            <summary>
+            OnRenderSizeChanged
+            </summary>
+            <param name="sizeInfo"></param>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoCalendar.LoadInfoCalendarData">
+            <summary>
+            加载股市日历列表
+            </summary>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoCalendar.OnComponentDeactived(System.Windows.RoutedEventArgs)">
+            <summary>
+            OnComponentDeactived
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoCalendar.OnComponentActived(System.Windows.RoutedEventArgs)">
+            <summary>
+            OnComponentActived
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoCalendar.Dispose">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:IUV.Component.Information.IuvInfoEconomicCalendar">
+            <summary>
+            宏观经济日历组件
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoEconomicCalendar.ItemHeight">
+            <summary>
+            行高
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoEconomicCalendar.ItemHeightProperty">
+            <summary>
+            行高属性
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoEconomicCalendar.TitleForeground">
+            <summary>
+            标题前景色
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoEconomicCalendar.TitleForegroundProperty">
+            <summary>
+            标题前景色
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoEconomicCalendar.TitleBackground">
+            <summary>
+            标题背景色
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoEconomicCalendar.TitleBackgroundProperty">
+            <summary>
+            标题背景色
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoEconomicCalendar.ItemSelectedBackground">
+            <summary>
+            选中背景色
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoEconomicCalendar.ItemSelectedBackgroundProperty">
+            <summary>
+            选中背景色
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoEconomicCalendar.ItemMouseOverBackground">
+            <summary>
+            鼠标移入背景色
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoEconomicCalendar.ItemMouseOverBackgroundProperty">
+            <summary>
+            鼠标移入背景色
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoEconomicCalendar.SourceForeground">
+            <summary>
+            来源前景色
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoEconomicCalendar.SourceForegroundProperty">
+            <summary>
+            来源前景色
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoEconomicCalendar.ShowTitle">
+            <summary>
+            是否显示标题行
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoEconomicCalendar.ShowTitleProperty">
+            <summary>
+            是否显示标题行
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoEconomicCalendar.RefreshInterval">
+            <summary>
+            定时刷新间隔
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoEconomicCalendar.RefreshIntervalProperty">
+            <summary>
+            定时刷新间隔
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoEconomicCalendar.EnableActiveAndDeactive">
+            <summary>
+            启用页面激活失效处理
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoEconomicCalendar.EnableActiveAndDeActiveProperty">
+            <summary>
+            启用页面激活
+            </summary>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoEconomicCalendar.#ctor">
+            <summary>
+            IuvInfoEconomicCalendar
+            </summary>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoEconomicCalendar.OnComponentContentInitialized(System.Windows.RoutedEventArgs)">
+            <summary>
+            组件加载
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoEconomicCalendar.Initialize">
+            <summary>
+            初始化
+            </summary>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoEconomicCalendar.CalculateItemHeight(System.Double)">
+            <summary>
+            计算行高
+            </summary>
+            <param name="containerHeihgt"></param>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoEconomicCalendar.RefreshTick(System.Object,System.EventArgs)">
+            <summary>
+            刷新数据
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoEconomicCalendar.InitializeRefreshTimer">
+            <summary>
+            定时刷新
+            </summary>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoEconomicCalendar.OnRenderSizeChanged(System.Windows.SizeChangedInfo)">
+            <summary>
+            OnRenderSizeChanged
+            </summary>
+            <param name="sizeInfo"></param>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoEconomicCalendar.LoadInfoEconomicCalendarData">
+            <summary>
+            加载宏观经济日历列表
+            </summary>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoEconomicCalendar.OnComponentDeactived(System.Windows.RoutedEventArgs)">
+            <summary>
+            OnComponentDeactived
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoEconomicCalendar.OnComponentActived(System.Windows.RoutedEventArgs)">
+            <summary>
+            OnComponentActived
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoEconomicCalendar.Dispose">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:IUV.Component.Information.IuvInfoFinancialNews">
+            <summary>
+            新闻组件
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoFinancialNews.EnableActiveAndDeactive">
+            <summary>
+            启用页面激活失效处理
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoFinancialNews.EnableActiveAndDeActiveProperty">
+            <summary>
+            启用页面激活
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoFinancialNews.ItemHeight">
+            <summary>
+            行高
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoFinancialNews.ItemHeightProperty">
+            <summary>
+            行高属性
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoFinancialNews.TitleForeground">
+            <summary>
+            标题前景色
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoFinancialNews.TitleForegroundProperty">
+            <summary>
+            标题前景色
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoFinancialNews.TitleBackground">
+            <summary>
+            标题背景色
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoFinancialNews.TitleBackgroundProperty">
+            <summary>
+            标题背景色
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoFinancialNews.EvenBackground">
+            <summary>
+            隔行背景色
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoFinancialNews.EvenBackgroundProperty">
+            <summary>
+            选中背景色
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoFinancialNews.ItemSelectedBackground">
+            <summary>
+            选中背景色
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoFinancialNews.ItemSelectedBackgroundProperty">
+            <summary>
+            选中背景色
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoFinancialNews.ItemMouseOverBackground">
+            <summary>
+            鼠标移入背景色
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoFinancialNews.ItemMouseOverBackgroundProperty">
+            <summary>
+            鼠标移入背景色
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoFinancialNews.SourceForeground">
+            <summary>
+            来源前景色
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoFinancialNews.SourceForegroundProperty">
+            <summary>
+            来源前景色
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoFinancialNews.RefreshInterval">
+            <summary>
+            定时刷新间隔
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoFinancialNews.RefreshIntervalProperty">
+            <summary>
+            定时刷新间隔
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoFinancialNews.RequestCount">
+            <summary>
+            请求个数
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoFinancialNews.RequestCountProperty">
+            <summary>
+            滚动间隔
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoFinancialNews.ShowTitle">
+            <summary>
+            是否显示标题行
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoFinancialNews.ShowTitleProperty">
+            <summary>
+            是否显示标题行
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoFinancialNews.DateFormat">
+            <summary>
+            日期格式
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoFinancialNews.DateFormatProperty">
+            <summary>
+            日期格式
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoFinancialNews.TimeFormat">
+            <summary>
+            时间格式
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoFinancialNews.TimeFormatProperty">
+            <summary>
+            时间格式
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoFinancialNews.IsShowInfoType">
+            <summary>
+            是否显示资讯类别
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoFinancialNews.IsShowInfoTypeProperty">
+            <summary>
+            是否显示资讯类别
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoFinancialNews.NullDisplayString">
+            <summary>
+            资讯来源为空时显示字符串
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoFinancialNews.NullDisplayStringProperty">
+            <summary>
+            资讯来源为空时显示字符串
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoFinancialNews.InfoClickedEvent">
+            <summary>
+            新闻列表单击事件
+            </summary>
+        </member>
+        <member name="E:IUV.Component.Information.IuvInfoFinancialNews.InfoClicked">
+            <summary>
+            新闻列表单击事件
+            </summary>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoFinancialNews.OnInfoClicked(IUV.Component.Information.IuvInfoDetailEventArgs)">
+            <summary>
+            响应列表单击事件
+            </summary>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoFinancialNews.#ctor">
+            <summary>
+            IuvInfoFinancialNews
+            </summary>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoFinancialNews.OnComponentContentInitialized(System.Windows.RoutedEventArgs)">
+            <summary>
+            组件加载
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoFinancialNews.Initialize">
+            <summary>
+            初始化
+            </summary>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoFinancialNews.CalculateItemHeight(System.Double)">
+            <summary>
+            计算行高
+            </summary>
+            <param name="containerHeihgt"></param>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoFinancialNews.InitializeRefreshTimer">
+            <summary>
+            定时刷新
+            </summary>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoFinancialNews.RefreshTick(System.Object,System.EventArgs)">
+            <summary>
+            刷新数据
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoFinancialNews.OnRenderSizeChanged(System.Windows.SizeChangedInfo)">
+            <summary>
+            OnRenderSizeChanged
+            </summary>
+            <param name="sizeInfo"></param>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoFinancialNews.LoadData">
+            <summary>
+            加载数据
+            </summary>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoFinancialNews.LoadFinancialNewsData">
+            <summary>
+            加载财经新闻列表
+            </summary>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoFinancialNews.OnComponentDeactived(System.Windows.RoutedEventArgs)">
+            <summary>
+            OnComponentDeactived
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoFinancialNews.OnComponentActived(System.Windows.RoutedEventArgs)">
+            <summary>
+            OnComponentActived
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoFinancialNews.Dispose">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:IUV.Component.Information.IuvInfoBondCalendar">
+            <summary>
+            新闻组件
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoBondCalendar.EnableActiveAndDeactive">
+            <summary>
+            启用页面激活失效处理
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoBondCalendar.EnableActiveAndDeActiveProperty">
+            <summary>
+            启用页面激活
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoBondCalendar.ItemHeight">
+            <summary>
+            行高
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoBondCalendar.ItemHeightProperty">
+            <summary>
+            行高属性
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoBondCalendar.TitleForeground">
+            <summary>
+            标题前景色
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoBondCalendar.TitleForegroundProperty">
+            <summary>
+            标题前景色
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoBondCalendar.TitleBackground">
+            <summary>
+            标题背景色
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoBondCalendar.TitleBackgroundProperty">
+            <summary>
+            标题背景色
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoBondCalendar.ItemSelectedBackground">
+            <summary>
+            选中背景色
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoBondCalendar.ItemSelectedBackgroundProperty">
+            <summary>
+            选中背景色
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoBondCalendar.ItemMouseOverBackground">
+            <summary>
+            鼠标移入背景色
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoBondCalendar.ItemMouseOverBackgroundProperty">
+            <summary>
+            鼠标移入背景色
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoBondCalendar.SourceForeground">
+            <summary>
+            来源前景色
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoBondCalendar.SourceForegroundProperty">
+            <summary>
+            来源前景色
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoBondCalendar.ShowTitle">
+            <summary>
+            是否显示标题行
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoBondCalendar.ShowTitleProperty">
+            <summary>
+            是否显示标题行
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoBondCalendar.DateFormat">
+            <summary>
+            日期格式
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoBondCalendar.DateFormatProperty">
+            <summary>
+            日期格式
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoBondCalendar.PageSize">
+            <summary>
+            单次获取数据上限
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoBondCalendar.PageSizeProperty">
+            <summary>
+            单次获取数据上限
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoBondCalendar.RefreshInterval">
+            <summary>
+            定时刷新间隔
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoBondCalendar.RefreshIntervalProperty">
+            <summary>
+            定时刷新间隔
+            </summary>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoBondCalendar.#ctor">
+            <summary>
+            IuvInfoBondCalendar
+            </summary>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoBondCalendar.OnComponentContentInitialized(System.Windows.RoutedEventArgs)">
+            <summary>
+            组件加载
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoBondCalendar.Initialize">
+            <summary>
+            初始化
+            </summary>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoBondCalendar.CalculateItemHeight(System.Double)">
+            <summary>
+            计算行高
+            </summary>
+            <param name="containerHeihgt"></param>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoBondCalendar.InitializeRefreshTimer">
+            <summary>
+            定时刷新
+            </summary>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoBondCalendar.RefreshTick(System.Object,System.EventArgs)">
+            <summary>
+            刷新数据
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoBondCalendar.OnRenderSizeChanged(System.Windows.SizeChangedInfo)">
+            <summary>
+            OnRenderSizeChanged
+            </summary>
+            <param name="sizeInfo"></param>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoBondCalendar.LoadInfoCalendarData">
+            <summary>
+            重新加载股市日历列表
+            </summary>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoBondCalendar.OnComponentDeactived(System.Windows.RoutedEventArgs)">
+            <summary>
+            OnComponentDeactived
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoBondCalendar.OnComponentActived(System.Windows.RoutedEventArgs)">
+            <summary>
+            OnComponentActived
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoBondCalendar.Dispose">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:IUV.Component.Information.IuvInfoNews">
+            <summary>
+            新闻组件
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoNews.ProdCode">
+            <summary>
+            股票代码
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoNews.MarketCode">
+            <summary>
+            市场代码
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoNews.InfoClickedEvent">
+            <summary>
+            新闻列表单击事件
+            </summary>
+        </member>
+        <member name="E:IUV.Component.Information.IuvInfoNews.InfoClicked">
+            <summary>
+            新闻列表单击事件
+            </summary>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoNews.OnInfoClicked(IUV.Component.Information.IuvInfoDetailEventArgs)">
+            <summary>
+            响应列表单击事件
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoNews.EnableActiveAndDeactive">
+            <summary>
+            启用页面激活失效处理
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoNews.EnableActiveAndDeActiveProperty">
+            <summary>
+            启用页面激活
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoNews.ItemHeight">
+            <summary>
+            行高
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoNews.ItemHeightProperty">
+            <summary>
+            行高属性
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoNews.TitleForeground">
+            <summary>
+            标题前景色
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoNews.TitleForegroundProperty">
+            <summary>
+            标题前景色
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoNews.TitleBackground">
+            <summary>
+            标题背景色
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoNews.TitleBackgroundProperty">
+            <summary>
+            标题背景色
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoNews.ItemSelectedBackground">
+            <summary>
+            选中背景色
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoNews.ItemSelectedBackgroundProperty">
+            <summary>
+            选中背景色
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoNews.ItemMouseOverBackground">
+            <summary>
+            鼠标移入背景色
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoNews.ItemMouseOverBackgroundProperty">
+            <summary>
+            鼠标移入背景色
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoNews.StockCodeKey">
+            <summary>
+            股票信息
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoNews.StockCodeKeyProperty">
+            <summary>
+            股票信息
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoNews.DateFormat">
+            <summary>
+            日期格式
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoNews.DateFormatProperty">
+            <summary>
+            日期格式
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoNews.TimeFormat">
+            <summary>
+            时间格式
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoNews.TimeFormatProperty">
+            <summary>
+            时间格式
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoNews.IsShowInfoType">
+            <summary>
+            是否显示资讯类别
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoNews.IsShowInfoTypeProperty">
+            <summary>
+            是否显示资讯类别
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoNews.RefreshInterval">
+            <summary>
+            定时刷新间隔
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoNews.RefreshIntervalProperty">
+            <summary>
+            定时刷新间隔
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoNews.ShowTitle">
+            <summary>
+            是否显示标题行
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoNews.ShowTitleProperty">
+            <summary>
+            是否显示标题行
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoNews.NullDisplayString">
+            <summary>
+            资讯来源为空时显示字符串
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoNews.NullDisplayStringProperty">
+            <summary>
+            资讯来源为空时显示字符串
+            </summary>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoNews.#ctor">
+            <summary>
+            IuvInfoNews
+            </summary>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoNews.OnComponentContentInitialized(System.Windows.RoutedEventArgs)">
+            <summary>
+            组件加载
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoNews.Initialize">
+            <summary>
+            初始化
+            </summary>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoNews.CalculateItemHeight(System.Double)">
+            <summary>
+            计算行高
+            </summary>
+            <param name="containerHeihgt"></param>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoNews.InitializeRefreshTimer">
+            <summary>
+            定时刷新
+            </summary>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoNews.RefreshTick(System.Object,System.EventArgs)">
+            <summary>
+            刷新数据
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoNews.OnRenderSizeChanged(System.Windows.SizeChangedInfo)">
+            <summary>
+            OnRenderSizeChanged
+            </summary>
+            <param name="sizeInfo"></param>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoNews.LoadData">
+            <summary>
+            加载数据
+            </summary>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoNews.LoadNewsData(System.Boolean)">
+            <summary>
+            加载新闻列表
+            </summary>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoNews.OnComponentDeactived(System.Windows.RoutedEventArgs)">
+            <summary>
+            OnComponentDeactived
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoNews.OnComponentActived(System.Windows.RoutedEventArgs)">
+            <summary>
+            OnComponentActived
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoNews.Dispose">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:IUV.Component.Information.IuvInfoNewShares">
+            <summary>
+            新闻组件
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoNewShares.ItemHeight">
+            <summary>
+            行高
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoNewShares.ItemHeightProperty">
+            <summary>
+            行高属性
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoNewShares.TitleForeground">
+            <summary>
+            标题前景色
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoNewShares.TitleForegroundProperty">
+            <summary>
+            标题前景色
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoNewShares.TitleBackground">
+            <summary>
+            标题背景色
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoNewShares.TitleBackgroundProperty">
+            <summary>
+            标题背景色
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoNewShares.ItemSelectedBackground">
+            <summary>
+            选中背景色
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoNewShares.ItemSelectedBackgroundProperty">
+            <summary>
+            选中背景色
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoNewShares.ItemMouseOverBackground">
+            <summary>
+            鼠标移入背景色
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoNewShares.ItemMouseOverBackgroundProperty">
+            <summary>
+            鼠标移入背景色
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoNewShares.SourceForeground">
+            <summary>
+            来源前景色
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoNewShares.SourceForegroundProperty">
+            <summary>
+            来源前景色
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoNewShares.ShowTitle">
+            <summary>
+            是否显示标题行
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoNewShares.ShowTitleProperty">
+            <summary>
+            是否显示标题行
+            </summary>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoNewShares.#ctor">
+            <summary>
+            IuvInfoNewShares
+            </summary>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoNewShares.OnComponentContentInitialized(System.Windows.RoutedEventArgs)">
+            <summary>
+            组件加载
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoNewShares.Initialize">
+            <summary>
+            初始化
+            </summary>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoNewShares.CalculateItemHeight(System.Double)">
+            <summary>
+            计算行高
+            </summary>
+            <param name="containerHeight"></param>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoNewShares.OnRenderSizeChanged(System.Windows.SizeChangedInfo)">
+            <summary>
+            OnRenderSizeChanged
+            </summary>
+            <param name="sizeInfo"></param>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoNewShares.LoadInfoCalendarData">
+            <summary>
+            加载新股列表
+            </summary>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoNewShares.OnComponentDeactived(System.Windows.RoutedEventArgs)">
+            <summary>
+            OnComponentDeactived
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoNewShares.OnComponentActived(System.Windows.RoutedEventArgs)">
+            <summary>
+            OnComponentActived
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoNewShares.Dispose">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:IUV.Component.Information.IuvInfoReport">
+            <summary>
+            研报组件
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoReport.ProdCode">
+            <summary>
+            股票代码
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoReport.MarketCode">
+            <summary>
+            市场代码
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoReport.EnableActiveAndDeactive">
+            <summary>
+            启用页面激活失效处理
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoReport.EnableActiveAndDeActiveProperty">
+            <summary>
+            启用页面激活
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoReport.ItemHeight">
+            <summary>
+            行高
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoReport.ItemHeightProperty">
+            <summary>
+            行高属性
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoReport.StockCodeKey">
+            <summary>
+            股票信息
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoReport.StockCodeKeyProperty">
+            <summary>
+            股票信息
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoReport.DateFormat">
+            <summary>
+            日期格式
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoReport.DateFormatProperty">
+            <summary>
+            日期格式
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoReport.TimeFormat">
+            <summary>
+            时间格式
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoReport.TimeFormatProperty">
+            <summary>
+            时间格式
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoReport.IsShowInfoType">
+            <summary>
+            是否显示资讯类别
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoReport.IsShowInfoTypeProperty">
+            <summary>
+            是否显示资讯类别
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoReport.RefreshInterval">
+            <summary>
+            定时刷新间隔
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoReport.RefreshIntervalProperty">
+            <summary>
+            定时刷新间隔
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoReport.ShowTitle">
+            <summary>
+            是否显示标题行
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoReport.ShowTitleProperty">
+            <summary>
+            是否显示标题行
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoReport.TitleForeground">
+            <summary>
+            标题前景色
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoReport.TitleForegroundProperty">
+            <summary>
+            标题颜色
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoReport.TitleBackground">
+            <summary>
+            标题背景色
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoReport.TitleBackgroundProperty">
+            <summary>
+            标题背景色
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoReport.ItemSelectedBackground">
+            <summary>
+            选中背景色
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoReport.ItemSelectedBackgroundProperty">
+            <summary>
+            选中背景色
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoReport.ItemMouseOverBackground">
+            <summary>
+            鼠标移入背景色
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoReport.ItemMouseOverBackgroundProperty">
+            <summary>
+            鼠标移入背景色
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoReport.InfoClickedEvent">
+            <summary>
+            研报列表单击事件
+            </summary>
+        </member>
+        <member name="E:IUV.Component.Information.IuvInfoReport.InfoClicked">
+            <summary>
+            研报列表单击事件
+            </summary>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoReport.OnInfoClicked(IUV.Component.Information.IuvInfoDetailEventArgs)">
+            <summary>
+            响应列表单击事件
+            </summary>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoReport.#ctor">
+            <summary>
+            IuvInfoReport
+            </summary>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoReport.OnComponentContentInitialized(System.Windows.RoutedEventArgs)">
+            <summary>
+            组件加载
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoReport.Initialize">
+            <summary>
+            初始化
+            </summary>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoReport.CalculateItemHeight(System.Double)">
+            <summary>
+            计算行高
+            </summary>
+            <param name="containerHeihgt"></param>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoReport.InitializeRefreshTimer">
+            <summary>
+            定时刷新
+            </summary>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoReport.RefreshTick(System.Object,System.EventArgs)">
+            <summary>
+            刷新数据
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoReport.OnRenderSizeChanged(System.Windows.SizeChangedInfo)">
+            <summary>
+            OnRenderSizeChanged
+            </summary>
+            <param name="sizeInfo"></param>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoReport.LoadData">
+            <summary>
+            加载数据
+            </summary>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoReport.LoadReportData(System.Boolean)">
+            <summary>
+            加载研报列表
+            </summary>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoReport.OnComponentDeactived(System.Windows.RoutedEventArgs)">
+            <summary>
+            OnComponentDeactived
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoReport.OnComponentActived(System.Windows.RoutedEventArgs)">
+            <summary>
+            OnComponentActived
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoReport.Dispose">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:IUV.Component.Information.IuvInfoAnnouncement">
+            <summary>
+            公告组件
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoAnnouncement.ProdCode">
+            <summary>
+            股票代码
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoAnnouncement.MarketCode">
+            <summary>
+            市场代码
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoAnnouncement.EnableActiveAndDeactive">
+            <summary>
+            启用页面激活失效处理
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoAnnouncement.EnableActiveAndDeActiveProperty">
+            <summary>
+            启用页面激活
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoAnnouncement.AnnouncementType">
+            <summary>
+            公告类型
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoAnnouncement.AnnouncementTypeProperty">
+            <summary>
+            公告类型
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoAnnouncement.InfoMarketType">
+            <summary>
+            资讯市场
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoAnnouncement.InfoMarketTypeProperty">
+            <summary>
+            资讯市场
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoAnnouncement.ItemHeight">
+            <summary>
+            行高
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoAnnouncement.ItemHeightProperty">
+            <summary>
+            行高属性
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoAnnouncement.TypeWidth">
+            <summary>
+            类型宽度
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoAnnouncement.TypeWidthProperty">
+            <summary>
+            类型宽度
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoAnnouncement.StockCodeKey">
+            <summary>
+            股票信息
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoAnnouncement.StockCodeKeyProperty">
+            <summary>
+            股票信息
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoAnnouncement.DateFormat">
+            <summary>
+            日期格式
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoAnnouncement.DateFormatProperty">
+            <summary>
+            日期格式
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoAnnouncement.TimeFormat">
+            <summary>
+            时间格式
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoAnnouncement.TimeFormatProperty">
+            <summary>
+            时间格式
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoAnnouncement.IsShowInfoType">
+            <summary>
+            是否显示资讯类别
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoAnnouncement.IsShowInfoTypeProperty">
+            <summary>
+            是否显示资讯类别
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoAnnouncement.RefreshInterval">
+            <summary>
+            定时刷新间隔
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoAnnouncement.RefreshIntervalProperty">
+            <summary>
+            定时刷新间隔
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoAnnouncement.ShowTitle">
+            <summary>
+            是否显示标题行
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoAnnouncement.ShowTitleProperty">
+            <summary>
+            是否显示标题行
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoAnnouncement.TitleForeground">
+            <summary>
+            标题前景色
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoAnnouncement.TitleForegroundProperty">
+            <summary>
+            标题前景色
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoAnnouncement.TitleBackground">
+            <summary>
+            标题背景色
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoAnnouncement.TitleBackgroundProperty">
+            <summary>
+            标题背景色
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoAnnouncement.ItemSelectedBackground">
+            <summary>
+            选中背景色
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoAnnouncement.ItemSelectedBackgroundProperty">
+            <summary>
+            选中背景色
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoAnnouncement.ItemMouseOverBackground">
+            <summary>
+            鼠标移入背景色
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoAnnouncement.ItemMouseOverBackgroundProperty">
+            <summary>
+            鼠标移入背景色
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoAnnouncement.InfoClickedEvent">
+            <summary>
+            公告列表单击事件
+            </summary>
+        </member>
+        <member name="E:IUV.Component.Information.IuvInfoAnnouncement.InfoClicked">
+            <summary>
+            公告列表单击事件
+            </summary>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoAnnouncement.OnInfoClicked(IUV.Component.Information.IuvInfoDetailEventArgs)">
+            <summary>
+            响应列表单击事件
+            </summary>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoAnnouncement.#ctor">
+            <summary>
+            IuvInfoAnnouncement
+            </summary>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoAnnouncement.OnComponentContentInitialized(System.Windows.RoutedEventArgs)">
+            <summary>
+            组件加载
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoAnnouncement.Initialize">
+            <summary>
+            初始化
+            </summary>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoAnnouncement.CalculateItemHeight(System.Double)">
+            <summary>
+            计算行高
+            </summary>
+            <param name="containerHeihgt"></param>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoAnnouncement.InitializeRefreshTimer">
+            <summary>
+            定时刷新
+            </summary>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoAnnouncement.RefreshTick(System.Object,System.EventArgs)">
+            <summary>
+            刷新数据
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoAnnouncement.OnRenderSizeChanged(System.Windows.SizeChangedInfo)">
+            <summary>
+            OnRenderSizeChanged
+            </summary>
+            <param name="sizeInfo"></param>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoAnnouncement.LoadData">
+            <summary>
+            加载数据
+            </summary>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoAnnouncement.LoadAnnouncementData(System.Boolean)">
+            <summary>
+            加载公告列表
+            </summary>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoAnnouncement.OnComponentDeactived(System.Windows.RoutedEventArgs)">
+            <summary>
+            OnComponentDeactived
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoAnnouncement.OnComponentActived(System.Windows.RoutedEventArgs)">
+            <summary>
+            OnComponentActived
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoAnnouncement.Dispose">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:IUV.Component.Information.AnnouncementType">
+            <summary>
+            公告类型
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.AnnouncementType.IndividualStock">
+            <summary>
+            个股公告
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.AnnouncementType.Market">
+            <summary>
+            全市场公告
+            </summary>
+        </member>
+        <member name="T:IUV.Component.Information.IuvInfoDetailEventHandler">
+            <summary>
+            公告列表单击事件路由委托
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:IUV.Component.Information.IuvInfoDetailEventArgs">
+            <summary>
+            公告列表单击事件
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoDetailEventArgs.Info">
+            <summary>
+            选中公告
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoDetailEventArgs.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoDetailEventArgs.#ctor(IUV.Component.Information.InformationModel,System.String,System.Windows.RoutedEvent)">
+            <summary>
+            IuvInfoDetailEventArgs
+            </summary>
+            <param name="info"></param>
+            <param name="title"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:IUV.Component.Information.IuvInfoNewsMarquee">
+            <summary>
+            跑马灯组件 交互逻辑
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoNewsMarquee._refreshTimer">
+            <summary>
+            定时刷新定时器
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoNewsMarquee.MouseLeftClickEvent">
+            <summary>
+            新闻点击事件
+            </summary>
+        </member>
+        <member name="E:IUV.Component.Information.IuvInfoNewsMarquee.MouseLeftClick">
+            <summary>
+            新闻点击事件
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoNewsMarquee.RollInterval">
+            <summary>
+            滚动间隔
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoNewsMarquee.RollIntervalProperty">
+            <summary>
+            滚动间隔
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoNewsMarquee.RefreshInterval">
+            <summary>
+            刷新间隔（10分钟刷新一次）
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoNewsMarquee.RefreshIntervalProperty">
+            <summary>
+            刷新间隔
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoNewsMarquee.RequestCount">
+            <summary>
+            请求个数
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoNewsMarquee.RequestCountProperty">
+            <summary>
+            滚动间隔
+            </summary>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoNewsMarquee.#ctor">
+            <summary>
+            IuvInfoNewsMarquee
+            </summary>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoNewsMarquee.#cctor">
+            <summary>
+            IuvInfoNewsMarquee
+            </summary>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoNewsMarquee.OnComponentContentInitialized(System.Windows.RoutedEventArgs)">
+            <summary>
+            组件加载
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoNewsMarquee.InitializeRefreshTimer">
+            <summary>
+            定时刷新
+            </summary>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoNewsMarquee.RefreshData(System.Object,System.EventArgs)">
+            <summary>
+            刷新数据
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoNewsMarquee.StartAnimation">
+            <summary>
+            重新启动动画
+            </summary>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoNewsMarquee.LoadMarqueeData">
+            <summary>
+            获取跑马灯列表
+            </summary>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoNewsMarquee.InitMarqueeList(IUV.Common.Models.IMarqueeList)">
+            <summary>
+            初始化跑马灯列表
+            </summary>
+            <param name="list"></param>
+        </member>
+        <member name="T:IUV.Component.Information.IuvHSInformation">
+            <summary>
+            市场资讯
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvHSInformation.FinancialNews">
+            <summary>
+            财经新闻
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvHSInformation.RollingNews">
+            <summary>
+            滚动新闻
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvHSInformation.Calendar">
+            <summary>
+            股市日历
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvHSInformation.NewShares">
+            <summary>
+            新股中心
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvHSInformation.NewsCommand">
+            <summary>
+            资讯点击命令
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvHSInformation.InfoClickedEvent">
+            <summary>
+            财经新闻列表单击事件
+            </summary>
+        </member>
+        <member name="E:IUV.Component.Information.IuvHSInformation.InfoClicked">
+            <summary>
+            财经新闻列表单击事件
+            </summary>
+        </member>
+        <member name="M:IUV.Component.Information.IuvHSInformation.OnInfoClicked(IUV.Component.Information.IuvInfoDetailEventArgs)">
+            <summary>
+            财经新闻列表单击事件
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvHSInformation.NewsClickedEvent">
+            <summary>
+            新闻列表单击事件
+            </summary>
+        </member>
+        <member name="E:IUV.Component.Information.IuvHSInformation.NewsClicked">
+            <summary>
+            新闻列表单击事件
+            </summary>
+        </member>
+        <member name="M:IUV.Component.Information.IuvHSInformation.OnNewsClicked(IUV.Component.Information.IuvInfoDetailEventArgs)">
+            <summary>
+            新闻列表单击事件
+            </summary>
+        </member>
+        <member name="M:IUV.Component.Information.IuvHSInformation.#ctor">
+            <summary>
+            ctor
+            </summary>
+        </member>
+        <member name="M:IUV.Component.Information.IuvHSInformation.OnComponentContentInitialized(System.Windows.RoutedEventArgs)">
+            <summary>
+            OnComponentContentInitialized
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:IUV.Component.Information.IuvHSInformation.Dispose">
+            <summary>
+            Dispose
+            </summary>
+        </member>
+        <member name="T:IUV.Component.Information.IuvInfoRollingNews">
+            <summary>
+            新闻组件
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoRollingNews.EnableActiveAndDeactive">
+            <summary>
+            启用页面激活失效处理
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoRollingNews.EnableActiveAndDeActiveProperty">
+            <summary>
+            启用页面激活
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoRollingNews.ItemHeight">
+            <summary>
+            行高
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoRollingNews.ItemHeightProperty">
+            <summary>
+            行高属性
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoRollingNews.TitleForeground">
+            <summary>
+            标题前景色
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoRollingNews.TitleForegroundProperty">
+            <summary>
+            标题前景色
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoRollingNews.TitleBackground">
+            <summary>
+            标题背景色
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoRollingNews.TitleBackgroundProperty">
+            <summary>
+            标题背景色
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoRollingNews.ItemSelectedBackground">
+            <summary>
+            选中背景色
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoRollingNews.ItemSelectedBackgroundProperty">
+            <summary>
+            选中背景色
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoRollingNews.ItemMouseOverBackground">
+            <summary>
+            鼠标移入背景色
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoRollingNews.ItemMouseOverBackgroundProperty">
+            <summary>
+            鼠标移入背景色
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoRollingNews.SourceForeground">
+            <summary>
+            来源前景色
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoRollingNews.SourceForegroundProperty">
+            <summary>
+            来源前景色
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoRollingNews.RefreshInterval">
+            <summary>
+            定时刷新间隔
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoRollingNews.RefreshIntervalProperty">
+            <summary>
+            定时刷新间隔
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoRollingNews.RequestCount">
+            <summary>
+            请求个数
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoRollingNews.RequestCountProperty">
+            <summary>
+            滚动间隔
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoRollingNews.ShowTitle">
+            <summary>
+            是否显示标题行
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoRollingNews.ShowTitleProperty">
+            <summary>
+            是否显示标题行
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoRollingNews.InfoMarketType">
+            <summary>
+            资讯市场
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoRollingNews.InfoMarketTypeProperty">
+            <summary>
+            资讯市场
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoRollingNews.DateFormat">
+            <summary>
+            日期格式
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoRollingNews.DateFormatProperty">
+            <summary>
+            日期格式
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoRollingNews.TimeFormat">
+            <summary>
+            时间格式
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoRollingNews.TimeFormatProperty">
+            <summary>
+            时间格式
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoRollingNews.IsShowInfoType">
+            <summary>
+            是否显示资讯类别
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoRollingNews.IsShowInfoTypeProperty">
+            <summary>
+            是否显示资讯类别
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.IuvInfoRollingNews.NullDisplayString">
+            <summary>
+            资讯来源为空时显示字符串
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoRollingNews.NullDisplayStringProperty">
+            <summary>
+            资讯来源为空时显示字符串
+            </summary>
+        </member>
+        <member name="F:IUV.Component.Information.IuvInfoRollingNews.InfoClickedEvent">
+            <summary>
+            新闻列表单击事件
+            </summary>
+        </member>
+        <member name="E:IUV.Component.Information.IuvInfoRollingNews.InfoClicked">
+            <summary>
+            新闻列表单击事件
+            </summary>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoRollingNews.OnInfoClicked(IUV.Component.Information.IuvInfoDetailEventArgs)">
+            <summary>
+            响应列表单击事件
+            </summary>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoRollingNews.#ctor">
+            <summary>
+            IuvInfoRollingNews
+            </summary>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoRollingNews.OnComponentContentInitialized(System.Windows.RoutedEventArgs)">
+            <summary>
+            组件加载
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoRollingNews.Initialize">
+            <summary>
+            初始化
+            </summary>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoRollingNews.CalculateItemHeight(System.Double)">
+            <summary>
+            计算行高
+            </summary>
+            <param name="containerHeihgt"></param>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoRollingNews.InitializeRefreshTimer">
+            <summary>
+            定时刷新
+            </summary>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoRollingNews.RefreshTick(System.Object,System.EventArgs)">
+            <summary>
+            刷新数据
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoRollingNews.OnRenderSizeChanged(System.Windows.SizeChangedInfo)">
+            <summary>
+            OnRenderSizeChanged
+            </summary>
+            <param name="sizeInfo"></param>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoRollingNews.LoadData">
+            <summary>
+            加载数据
+            </summary>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoRollingNews.OnComponentDeactived(System.Windows.RoutedEventArgs)">
+            <summary>
+            OnComponentDeactived
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoRollingNews.OnComponentActived(System.Windows.RoutedEventArgs)">
+            <summary>
+            OnComponentActived
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:IUV.Component.Information.IuvInfoRollingNews.Dispose">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:IUV.Component.Information.Properties.Resources">
+            <summary>
+              一个强类型的资源类，用于查找本地化的字符串等。
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.Properties.Resources.ResourceManager">
+            <summary>
+              返回此类使用的缓存的 ResourceManager 实例。
+            </summary>
+        </member>
+        <member name="P:IUV.Component.Information.Properties.Resources.Culture">
+            <summary>
+              重写当前线程的 CurrentUICulture 属性
+              重写当前线程的 CurrentUICulture 属性。
+            </summary>
+        </member>
+    </members>
+</doc>

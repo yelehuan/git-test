@@ -1,0 +1,3280 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>IUV.Adapter.Quote</name>
+    </assembly>
+    <members>
+        <member name="T:IUV.Adapter.Quote.IAnomalySignal">
+            <summary>
+            异动信号接口
+            </summary>
+        </member>
+        <member name="E:IUV.Adapter.Quote.IAnomalySignal.OnAnomalySignalPublished">
+            <summary>
+            策略异动信号推送时触发
+            </summary>
+        </member>
+        <member name="M:IUV.Adapter.Quote.IAnomalySignal.GetSignalList">
+            <summary>
+            获取服务器支持的异动信号列表
+            </summary>
+            <returns>异动信号标志列表</returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.IAnomalySignal.GetAnomalySignalFormat">
+            <summary>
+            获取信号结果信息格式对照表
+            </summary>
+            <returns>信号结果信息格式对照表</returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.IAnomalySignal.SubscribeSignalByCode(System.Collections.Generic.List{IUV.Common.Models.QuoteCode},System.Collections.Generic.List{IUV.Common.Models.AnomalySignalKey},System.Object,IUV.Common.Models.SubscribeType)">
+            <summary>
+            按代码订阅异动监控信号
+            </summary>
+            <param name="productKeys">证券代码</param>
+            <param name="AnomalySignals">异动信号标志列表</param>
+            <param name="targetObj">订阅对象</param>
+            <param name="subType">订阅还是退订, 如果是退订,允许异动信号列表为空,表示该连接的所有已订阅信息</param>
+        </member>
+        <member name="M:IUV.Adapter.Quote.IAnomalySignal.SubscribeSignalByMarket(System.Collections.Generic.List{System.String},System.Collections.Generic.List{IUV.Common.Models.AnomalySignalKey},System.Object,IUV.Common.Models.SubscribeType)">
+            <summary>
+            按市场订阅异动监控信号
+            </summary>
+            <param name="marketCodes">市场代码列表</param>
+            <param name="AnomalySignals">异动信号标志列表</param>
+            <param name="targetObj">订阅对象</param>
+            <param name="subType">订阅还是退订, 如果是退订,允许异动信号列表为空,表示该连接的所有已订阅信息</param>
+        </member>
+        <member name="M:IUV.Adapter.Quote.IAnomalySignal.SubscribeSignalByBlock(System.Collections.Generic.List{IUV.Common.Models.QuoteCode},System.Collections.Generic.List{IUV.Common.Models.AnomalySignalKey},System.Object,IUV.Common.Models.SubscribeType)">
+            <summary>
+            按板块订阅异动监控信号
+            </summary>
+            <param name="blockProductKeys">板块代码列表</param>
+            <param name="AnomalySignals">异动信号标志列表</param>
+            <param name="targetObj">订阅对象</param>
+            <param name="subType">订阅还是退订, 如果是退订,允许异动信号列表为空,表示该连接的所有已订阅信息</param>
+        </member>
+        <member name="M:IUV.Adapter.Quote.IAnomalySignal.GetSignalByTime(System.Int64,System.Int64,System.Collections.Generic.List{IUV.Common.Models.AnomalySignalKey},System.Collections.Generic.List{IUV.Common.Models.QuoteCode},System.Collections.Generic.List{IUV.Common.Models.QuoteCode},System.Collections.Generic.List{System.String},System.Action{System.Collections.Generic.List{IUV.Common.Models.AnomalySignal}})">
+            <summary>
+            按时间查询异动信号
+            <para>代码列表,板块代码列表,代码类型列表 三选一</para>
+            </summary>
+            <param name="startDateTime">开始时间 YYYYMMDDHHMMSS</param>
+            <param name="endDateTime">结束时间 YYYYMMDDHHMMSS</param>
+            <param name="AnomalySignals">异动信号标志列表</param>
+            <param name="productKeys">代码列表</param>
+            <param name="blockProductKeys">板块代码列表</param>
+            <param name="marketCodes">代码类型列表</param>
+            <param name="callback">异步回调委托，传入则以异步方式返回数据</param>
+            <returns>异动信号集合</returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.IAnomalySignal.GetSignalByOffset(System.Int32,System.Collections.Generic.List{IUV.Common.Models.AnomalySignalKey},System.Collections.Generic.List{IUV.Common.Models.QuoteCode},System.Collections.Generic.List{IUV.Common.Models.QuoteCode},System.Collections.Generic.List{System.String},System.Action{System.Collections.Generic.List{IUV.Common.Models.AnomalySignal}})">
+            <summary>
+            按偏移查询异动信号
+            <para>代码列表,板块代码列表,代码类型列表 三选一</para>
+            </summary>
+            <param name="dataCount">请求的个数</param>
+            <param name="AnomalySignals">异动信号标志列表</param>
+            <param name="productKeys">代码列表</param>
+            <param name="blockProductKeys">板块代码列表</param>
+            <param name="marketCodes">代码类型列表</param>
+            <param name="callback">异步回调委托，传入则以异步方式返回数据</param>
+            <returns>异动信号集合</returns>
+        </member>
+        <member name="T:IUV.Adapter.Quote.Constants.CacheConstant">
+            <summary>
+            缓存键值常量
+            </summary>
+        </member>
+        <member name="F:IUV.Adapter.Quote.Constants.CacheConstant.PreName">
+            <summary>
+            曾用名
+            </summary>
+        </member>
+        <member name="F:IUV.Adapter.Quote.Constants.CacheConstant.PreNameMicAbbr">
+            <summary>
+            曾用名MicAbbr
+            </summary>
+        </member>
+        <member name="F:IUV.Adapter.Quote.Constants.CacheConstant.ShortCuts">
+            <summary>
+            快捷键
+            </summary>
+        </member>
+        <member name="F:IUV.Adapter.Quote.Constants.CacheConstant.ShortCutsMicAbbr">
+            <summary>
+            快捷键MicAbbr
+            </summary>
+        </member>
+        <member name="F:IUV.Adapter.Quote.Constants.FunctionConstant.GetStaticSnapshot">
+            <summary>
+            查询静态快照
+            </summary>
+        </member>
+        <member name="F:IUV.Adapter.Quote.Constants.FunctionConstant.GetTickSnapshot">
+            <summary>
+            查询分笔快照
+            </summary>
+        </member>
+        <member name="F:IUV.Adapter.Quote.Constants.FunctionConstant.GetUnderlyingInfo">
+            <summary>
+            期权标的合约查询
+            </summary>
+        </member>
+        <member name="F:IUV.Adapter.Quote.Constants.FunctionConstant.GetTTypeQuotation">
+            <summary>
+            期权T型报价合约信息查询
+            </summary>
+        </member>
+        <member name="F:IUV.Adapter.Quote.Constants.FunctionConstant.GetTypeCode">
+            <summary>
+            获取品种的类型代码
+            </summary>
+        </member>
+        <member name="T:IUV.Adapter.Quote.MarketMIC">
+            <summary>
+            市场MIC常量
+            </summary>
+        </member>
+        <member name="F:IUV.Adapter.Quote.MarketMIC.SH_STOCK_A">
+            <summary>
+            上海A股
+            </summary>
+        </member>
+        <member name="F:IUV.Adapter.Quote.MarketMIC.SZ_STOCK_M">
+            <summary>
+            深圳主板
+            </summary>
+        </member>
+        <member name="F:IUV.Adapter.Quote.MarketMIC.SZ_STOCK_SM">
+            <summary>
+            深圳中小板
+            </summary>
+        </member>
+        <member name="F:IUV.Adapter.Quote.MarketMIC.HK_STOCK_M">
+            <summary>
+            香港主板
+            </summary>
+        </member>
+        <member name="F:IUV.Adapter.Quote.MarketMIC.US_STOCK_NJS">
+            <summary>
+            纽交所
+            </summary>
+        </member>
+        <member name="F:IUV.Adapter.Quote.MarketMIC.US_STOCK_MJS">
+            <summary>
+            美交所
+            </summary>
+        </member>
+        <member name="F:IUV.Adapter.Quote.MarketMIC.US_STOCK_NASDAQ">
+            <summary>
+            纳斯达克
+            </summary>
+        </member>
+        <member name="F:IUV.Adapter.Quote.MarketMIC.SH_INDEX">
+            <summary>
+            上证指数
+            </summary>
+        </member>
+        <member name="F:IUV.Adapter.Quote.MarketMIC.SZ_INDEX">
+            <summary>
+            深圳指数
+            </summary>
+        </member>
+        <member name="F:IUV.Adapter.Quote.MarketMIC.AH_INDEX">
+            <summary>
+            AH市场股
+            </summary>
+        </member>
+        <member name="F:IUV.Adapter.Quote.MarketMIC.AB_INDEX">
+            <summary>
+            AB市场股
+            </summary>
+        </member>
+        <member name="T:IUV.Adapter.Quote.ConfigManager">
+            <summary>
+            适配器配置管理类
+            </summary>
+        </member>
+        <member name="F:IUV.Adapter.Quote.ConfigManager._adapterLocker">
+            <summary>
+            私有锁对象
+            </summary>
+        </member>
+        <member name="P:IUV.Adapter.Quote.ConfigManager.Config">
+             <summary>
+            行情配置对象
+             </summary>
+        </member>
+        <member name="F:IUV.Adapter.Quote.ConfigManager._quoteAdapters">
+            <summary>
+            适配器Id - 适配器 映射关系 字典
+            </summary>
+        </member>
+        <member name="P:IUV.Adapter.Quote.ConfigManager.FunctionDic">
+            <summary>
+            方法接口缓存,Key为接口名
+            </summary>
+        </member>
+        <member name="F:IUV.Adapter.Quote.ConfigManager.ServerInfoDic">
+            <summary>
+            服务器缓存,key为适配器Id
+            </summary>
+        </member>
+        <member name="F:IUV.Adapter.Quote.ConfigManager._marketAdapterMapping">
+            <summary>
+            市场代码 - 适配器 映射关系 字典
+            </summary>
+        </member>
+        <member name="P:IUV.Adapter.Quote.ConfigManager.QuoteAdapters">
+            <summary>
+            适配器缓存,key 为适配器Id
+            </summary>
+        </member>
+        <member name="M:IUV.Adapter.Quote.ConfigManager.#ctor(System.String)">
+            <summary>
+            配置管理类构造函数
+            </summary>
+            <param name="fileName">配置文件路径</param>
+        </member>
+        <member name="M:IUV.Adapter.Quote.ConfigManager.#ctor(IUV.Adapter.Quote.AdapterConfig)">
+            <summary>
+            配置管理类构造函数
+            </summary>
+            <param name="config">配置对象</param>
+        </member>
+        <member name="M:IUV.Adapter.Quote.ConfigManager.GetDefaultAdapter">
+            <summary>
+            获取默认的适配器配置对象
+            <para>基于Route节点中设置的*适配器</para>
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.ConfigManager.GetQuoteBase(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="function"></param>
+            <param name="marketCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.ConfigManager.GenerateAdapterServerInfo">
+             <summary>
+            创建适配器所有的服务器对象缓存
+             </summary>
+        </member>
+        <member name="M:IUV.Adapter.Quote.ConfigManager.GenerateRouters">
+            <summary>
+            动态获取所有适配层接口，以及基于功能路由创建映射
+            </summary>
+        </member>
+        <member name="M:IUV.Adapter.Quote.ConfigManager.DeserializeAdapterConfig(System.String)">
+            <summary>
+            反序列化适配器配置文件
+            </summary>
+            <param name="fileName"></param>
+        </member>
+        <member name="M:IUV.Adapter.Quote.ConfigManager.LoadAdapterConfig(System.String)">
+            <summary>
+            加载适配器配置文件
+            </summary>
+            <param name="fileName"></param>
+        </member>
+        <member name="M:IUV.Adapter.Quote.ConfigManager.GenerateAdapters">
+            <summary>
+            生成适配器列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.ConfigManager.GetMarketAdapter(IUV.Adapter.Quote.Adapter)">
+            <summary>
+            反射生产适配实现层对象
+            </summary>
+            <param name="adapter"></param>
+            <returns></returns>
+        </member>
+        <member name="T:IUV.Adapter.Quote.QuoteAdapterException">
+            <summary>
+            QuoteAdapter 异常类
+            </summary>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapterException.#ctor(System.Int32,System.String)">
+            <summary>
+            初始化 QuoteAdapterException 异常类的实例
+            </summary>
+            <param name="errorNo">错误号</param>
+            <param name="errorInfo">错误信息</param>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapterException.#ctor(System.Int32,System.String,System.Exception)">
+            <summary>
+            初始化 QuoteAdapterException 异常类的实例
+            </summary>
+            <param name="errorNo">错误号</param>
+            <param name="errorInfo">错误信息</param>
+            <param name="innerException">内部异常</param>
+        </member>
+        <member name="P:IUV.Adapter.Quote.QuoteAdapterException.ErrorNo">
+            <summary>
+            错误号
+            </summary>
+        </member>
+        <member name="P:IUV.Adapter.Quote.QuoteAdapterException.ErrorInfo">
+            <summary>
+            错误信息
+            </summary>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapterException.ToShortString">
+            <summary>
+            格式化当前异常信息
+            </summary>
+            <returns>返回异常的概要描述信息</returns>
+        </member>
+        <member name="T:IUV.Adapter.Quote.QuoteAdapterLogger">
+            <summary>
+            QuoteAdapterLogger 日志类
+            </summary>
+        </member>
+        <member name="P:IUV.Adapter.Quote.QuoteAdapterLogger.Logger">
+            <summary>
+            Logger Instance
+            </summary>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapterLogger.RegisterLogger(IUV.Common.Models.IQuoteLogger)">
+            <summary>
+            外部注入
+            </summary>
+            <param name="logger"></param>
+        </member>
+        <member name="T:IUV.Adapter.Quote.IMonitoringSignal">
+            <summary>
+            异动信号接口
+            </summary>
+        </member>
+        <member name="E:IUV.Adapter.Quote.IMonitoringSignal.OnMonitoringSignalPublished">
+            <summary>
+            策略异动信号推送时触发
+            </summary>
+        </member>
+        <member name="M:IUV.Adapter.Quote.IMonitoringSignal.SubscribeSignalByCode(System.Collections.Generic.List{IUV.Common.Models.MonitoringSignal},System.Object,IUV.Common.Models.SubscribeType)">
+            <summary>
+            批量智能盯盘订阅
+            </summary>
+            <param name="MonitoringFields">异动信号标志列表</param>
+            <param name="targetObj">订阅对象</param>
+            <param name="subType">订阅还是退订, 如果是退订,允许异动信号列表为空,表示该连接的所有已订阅信息</param>
+        </member>
+        <member name="M:IUV.Adapter.Quote.IMonitoringSignal.UnSubscribeSignalByCode(System.Collections.Generic.List{IUV.Common.Models.MonitoringSignal},System.Object,IUV.Common.Models.SubscribeType)">
+            <summary>
+            批量智能盯盘退订 
+            </summary>
+            <param name="MonitoringFields"></param>
+            <param name="targetObj"></param>
+            <param name="subType"></param>
+        </member>
+        <member name="T:IUV.Adapter.Quote.QuoteAdapter">
+            <summary>
+            适配层接口实现类
+            </summary>
+        </member>
+        <member name="E:IUV.Adapter.Quote.QuoteAdapter.OnConnected">
+            <summary>
+            连接建立时触发事件
+            </summary>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapter.L2TranscationSubscribe(IUV.Common.Models.QuoteCode,System.Object,IUV.Common.Models.SubscribeType)">
+            <summary>
+            L2 逐笔委托订阅
+            </summary>
+            <param name="productKey"></param>
+            <param name="targetObj"></param>
+            <param name="subType"></param>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapter.L2OrderSubscribe(IUV.Common.Models.QuoteCode,System.Object,IUV.Common.Models.SubscribeType)">
+            <summary>
+            l2逐笔委托订阅
+            </summary>
+            <param name="productKey">证券信息</param>
+            <param name="targetObj">目标对象</param>
+            <param name="subType">订阅类型</param>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapter.GetL2Transcation(IUV.Common.Models.QuoteCode,System.Int32,System.Int32)">
+            <summary>
+            l2逐笔成交
+            </summary>
+            <param name="productKey">证券信息</param>
+            <param name="startPos">起始位置</param>
+            <param name="dataCount">数据量</param>
+            <returns>逐笔成交数据集合</returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapter.GetL2Order(IUV.Common.Models.QuoteCode,System.Int32,System.Int32)">
+            <summary>
+            l2逐笔委托
+            </summary>
+            <param name="productKey">证券信息</param>
+            <param name="startPos">起始位置</param>
+            <param name="dataCount">数据量</param>
+            <returns>逐笔委托信息集合</returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapter.GetThousandLevelSnapshot(System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            获取千档行情档位快照
+            </summary>
+            <param name="prodCode"></param>
+            <param name="marketCode"></param>
+            <param name="start"></param>
+            <param name="end"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapter.GetThousandLevelEntrustDetail(System.String,System.String,System.Decimal,IUV.Common.Models.EntrustDirection)">
+            <summary>
+            获取千档行情详细委托队列
+            </summary>
+            <param name="prodCode"></param>
+            <param name="marketCode"></param>
+            <param name="entrustPrice"></param>
+            <param name="direction"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapter.GetThousandLevelEntrustDetailByRange(System.String,System.String,IUV.Common.Models.EntrustDirection,System.Int32,System.Int32)">
+            <summary>
+            根据范围获取千档行情详细委托队列
+            </summary>
+            <param name="prodCode"></param>
+            <param name="marketCode"></param>
+            <param name="direction"></param>
+            <param name="start"></param>
+            <param name="end"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapter.GetBankHQSnapshot(IUV.Common.Models.BankQuoteCode,System.Action{IUV.Common.Models.BankHQRecvModel})">
+            <summary>
+            现券买卖市场行情快照
+            </summary>
+            <param name="quoteCode">银行间证券信息</param>
+            <param name="callback">异步回调委托，传入则以异步方式返回数据</param>
+            <returns>现券买卖市场行情快照</returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapter.GetStaticSnapshot(System.String,System.String,System.Action{IUV.Common.Models.StaticSnapshot})">
+            <summary>
+            查询静态快照
+            </summary>
+            <param name="prodCode">品种代码</param>
+            <param name="marketCode">市场代码</param>
+            <param name="callback"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapter.GetTickSnapshot(System.String,System.String,System.UInt32,System.UInt32)">
+            <summary>
+            查询分笔快照
+            </summary>
+            <param name="prodCode">品种代码</param>
+            <param name="marketCode">市场代码</param>
+            <param name="startMinute">开始分钟数</param>
+            <param name="endMinute">结束分钟数</param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapter.GetTypeCode(System.String,System.String)">
+            <summary>
+            查询分类代码
+            </summary>
+            <param name="prodCode"></param>
+            <param name="marketCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapter.Sort(System.String,System.String,System.String,System.Int32,System.Int32,IUV.Common.Models.SortType,System.Collections.Generic.IList{System.String},System.Action{System.String,System.String,System.Collections.Generic.IList{IUV.Common.Models.QuoteSnapshot}})">
+            <summary>
+            板块成分股排序
+            </summary>
+            <param name="prodCode">板块代码</param>
+            <param name="marketCode">市场代码</param>
+            <param name="sortFieldName">需要排序的字段<para>能排序的字段参考ProductSnap类定义</para></param>
+            <param name="startIndex">起始索引，表示排序后从第几条数据开始返回，默认为0</param>
+            <param name="count">最大返回个数，默认100只代码，最大请求数目10000</param>
+            <param name="sortType">排序方式<seealso cref="T:IUV.Common.Models.SortType"/>，默认降序</param>
+            <param name="returnFieldNames">需要返回的字段列表，默认为空表示返回全部字段
+            <para>相关字段获取建议采用如: nameof(QuoteSnapshot.ProdCode)</para></param>
+            <param name="callback">异步回调委托，传入则以异步方式返回数据</param>
+            <returns>排序后成分股列表</returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapter.GetSortGroup(System.Collections.Generic.IList{IUV.Common.Models.QuoteCode},System.Collections.Generic.IList{System.String},System.String,System.Collections.Generic.IList{System.String},System.Int32,System.Int32,IUV.Common.Models.SortType,System.Action{System.Collections.Generic.IList{IUV.Common.Models.QuoteSnapshot}},IUV.Common.Models.ParseToProductMode)">
+            <summary>
+            排序请求
+            <para>自选股集合,多板块排序</para>
+            </summary>
+            <param name="prodGrp">代码列表,可选,可以输入Null</param>
+            <param name="typeGrp">证券分类，可选，可以输入Null</param>
+            <param name="sortFieldName">需要排序的字段,只支持ProductSnap类型中,提示能排序的字段名</param>
+            <param name="returnFieldNames">需要的字段列表,相关字段获取建议采用如: nameof(ProductSnap.ProdCode)</param>
+            <param name="startIndex">起始位置,默认为0</param>
+            <param name="count">代码数目,默认100只代码，最大请求数目10000</param>
+            <param name="sortType">排序方式<seealso cref="T:IUV.Common.Models.SortType"/>，默认降序</param>
+            <param name="callback">异步回调委托，传入则以异步方式返回数据</param>
+            <param name="mode">转化数据方式</param>
+            <returns>排序后证券列表</returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapter.GetSortGroup(System.Collections.Generic.IList{IUV.Common.Models.QuoteCode},System.Collections.Generic.IList{System.String},IUV.Common.Models.SpecialMarker,System.String,System.Collections.Generic.IList{System.String},System.Int32,System.Int32,IUV.Common.Models.SortType,System.Action{System.Collections.Generic.IList{IUV.Common.Models.QuoteSnapshot}})">
+            <summary>
+            排序请求
+            <para>自选股集合,多板块排序</para>
+            </summary>
+            <param name="prodGrp">代码列表,可选,可以输入Null</param>
+            <param name="marketGrp">证券分类，可选，可以输入Null</param>
+            <param name="specialMarker">特殊标志</param>
+            <param name="sortFieldName"></param>
+            <param name="sortFieldID">需要排序的字段,只支持ProductSnap类型中,提示能排序的字段ID</param>
+            <param name="returnFieldNames">需要的字段列表,相关字段获取建议采用如: nameof(ProductSnap.ProdCode)</param>
+            <param name="startIndex">起始位置,默认为0</param>
+            <param name="count">代码数目,默认100只代码，最大请求数目10000</param>
+            <param name="sortType">排序方式<seealso cref="T:IUV.Common.Models.SortType"/>，默认降序</param>
+            <param name="callback">异步回调委托，传入则以异步方式返回数据</param>
+            <returns>排序后证券列表</returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapter.GetStockBlock(IUV.Common.Models.QuoteCode)">
+            <summary>
+            获取所属板块
+            </summary>
+            <param name="code">产品代码</param>
+            <returns>板块信息集合</returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapter.GetBelongBlock(System.String,System.String)">
+            <summary>
+            查找证券所属板块
+            </summary>
+            <param name="prodCode">证券代码</param>
+            <param name="marketCode">市场代码</param>
+            <returns>所属板块信息</returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapter.GetExRights(System.String,System.String)">
+            <summary>
+            获取证券除权信息
+            </summary>
+            <param name="prodCode">证券代码</param>
+            <param name="marketCode">市场代码</param>
+            <returns>除权信息</returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapter.GetMarketList(System.String)">
+            <summary>
+            取市场列表
+            <para>
+            </para>
+            调用示例：GetMarketList("XSHG"); // 获取上海证券交易所下市场分类信息
+            <para>
+            调用示例：GetBlockList("XSHG.N"); // 获取上海证券交易所下上证新股市场分类信息
+            </para>
+            </summary>
+            <param name="marketCode">市场类别<para>可以是沪深等交易所级别，也可以是上证指数等市场类别</para></param>
+            <returns>市场列表</returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapter.GetProductList(IUV.Common.Models.QuoteCode)">
+            <summary>
+            取市场或板块代码表
+            </summary>
+            <param name="quoteCode">市场or板块代码</param>
+            <returns>市场或板块信息</returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapter.GetProductInfo(System.String,System.Collections.Generic.List{System.String})">
+            <summary>
+            取产品信息
+            此接口走缓存数据，不走网络接口
+            </summary>
+            <param name="prodCode">产品代码</param>
+            <param name="filterMarketCodes">产品代码所属的市场</param>
+            <returns>市场或板块信息</returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapter.GetProductList(System.Collections.Generic.List{IUV.Common.Models.QuoteCode})">
+            <summary>
+            取多个市场或板块代码表
+            <para>支持同时取多个板块代码集</para>
+            </summary>
+            <param name="quoteCodes">市场or板块代码列表</param>
+            <returns>市场或板块信息</returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapter.GetSnapshotByCache(System.String,System.String)">
+            <summary>
+            通过缓存根据证券代码和市场代码获取行情快照
+            </summary>
+            <param name="quoteCode">请求关联的代码</param>
+            <param name="marketCode">市场代码</param>
+            <returns>行情快照</returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapter.GetGroupSnapshotByCache(System.Collections.Generic.List{IUV.Common.Models.QuoteCode})">
+            <summary>
+            通过缓存根据证券信息集合获取行情快照
+            </summary>
+            <param name="codes">请求关联的证券信息集合</param>
+            <returns>行情快照</returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapter.InitCodeList(System.Collections.Generic.List{System.String})">
+            <summary>
+            初始化多板块市场
+            </summary>
+            <param name="marketCodeList">市场代码集合</param>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapter.InitMarketInfo(System.Collections.Generic.List{System.String})">
+            <summary>
+            初始化市场
+            </summary>
+            <param name="marketCodeList">市场代码集合</param>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapter.GetStaticFile(IUV.Common.Models.FileType,System.String,System.Int32,System.Int64,System.Int32)">
+            <summary>
+            请求静态文件
+            </summary>
+            <param name="fileType">文件类型</param>
+            <param name="fileName">文件相对名称，请求板块时候，需要输入板块文件名如HSBlock.xml</param>
+            <param name="crc">文件CRC</param>
+            <param name="fileOffset">文件偏移</param>
+            <param name="fileLength">请求的长度（超过一定数值后，根据应答下次请求）</param>
+            <returns>静态文件</returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapter.GetUnderlyingCode(System.Collections.Generic.List{IUV.Common.Models.QuoteCode})">
+            <summary>
+            通过代码查找关联代码
+            </summary>
+            <param name="quoteCodes">请求关联的代码列表</param>
+            <returns>关联代码</returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapter.GetExeRights(System.Collections.Generic.List{IUV.Common.Models.QuoteCode})">
+            <summary>
+            除权信息
+            </summary>
+            <param name="quoteCodes">请求关联的代码列表</param>
+            <returns>除权信息</returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapter.GetF10Index(System.String,System.String,IUV.Common.Models.FileType,System.Int32)">
+            <summary>
+            请求资讯信息索引
+            </summary>
+            <param name="prodCode">股票代码</param>
+            <param name="marketCode">代码类型</param>
+            <param name="fileType">资讯类型</param>
+            <param name="crc">CRC校验信息</param>
+            <returns>资讯信息索引</returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapter.GetF10Txt(System.String,System.String,IUV.Common.Models.FileType,System.Collections.Generic.List{IUV.Common.Models.F10IndexInfo})">
+            <summary>
+            资讯内容
+            </summary>
+            <param name="prodCode">股票代码</param>
+            <param name="marketCode">代码类型</param>
+            <param name="fileType">资讯类型</param>
+            <param name="f10group">除权信息</param>
+            <returns>资讯内容</returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapter.GetCodeProperty(System.Collections.Generic.List{IUV.Common.Models.QuoteCode})">
+            <summary>
+            商品属性信息
+            </summary>
+            <param name="quoteCodes">请求关联的代码列表</param>
+            <returns>商品属性信息</returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapter.GetExeRightsByDate(System.Collections.Generic.List{IUV.Common.Models.QuoteCode},System.Int32,System.Int32)">
+            <summary>
+            按日期查询除权信息
+            </summary>
+            <param name="start">开始日期</param>
+            <param name="end">结束日期</param>
+            <param name="quoteCodes">请求关联的代码列表</param>
+            <returns>除权信息</returns>  
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapter.GetCustomMarketInfo(System.Object,System.Object)">
+            <summary>
+            获取自定义市场信息
+            </summary>
+            <param name="param1"></param>
+            <param name="param2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapter.GetProductList(IUV.Common.Models.OptionFilterParam)">
+            <summary>
+            取期权筛选后的代码表
+            </summary>
+            <param name="param">期权筛选条件</param>
+            <returns>市场或板块信息</returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapter.GetUnderlyingList(System.Collections.Generic.List{System.String})">
+            <summary>
+            根据市场代码获取期权集合
+            </summary>
+            <param name="marketCodes">市场代码集合</param>
+            <returns>快照集合</returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapter.GetUnderlyingInfo(System.Collections.Generic.List{System.String})">
+            <summary>
+            期权标的合约查询
+            </summary>
+            <param name="micList">市场列表</param>
+            <returns>各市场的期权标的列表</returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapter.GetTTypeQuotation(System.Collections.Generic.List{IUV.Common.Models.TTypeQuotationFilterParam})">
+            <summary>
+            期权T型报价合约信息查询
+            </summary>
+            <param name="filterParam">筛选条件</param>
+            <returns>T型报价信息</returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapter.GetBizType(System.String)">
+            <summary>
+            根据市场代码获取市场类型
+            </summary>
+            <param name="marketCode">市场代码</param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapter.GetMarketNameByCode(System.String)">
+            <summary>
+            根据市场代码获取市场类型
+            </summary>
+            <param name="marketCode">市场代码</param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapter.GetOptionContractVarietyList">
+            <summary>
+            获取期权合约品种
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapter.GetNoticeList(System.Collections.Generic.List{IUV.Common.Models.NoticeQueryParam})">
+            <summary>
+            查询单日历史深公告
+            </summary>
+            <param name="noticeParam"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapter.GetTradeSectionsByCache(System.String,System.String)">
+            <summary>
+            通过缓存根据证券代码和市场代码获取交易时间段
+            </summary>
+            <param name="quoteCode">股票代码</param>
+            <param name="marketCode">市场代码</param>
+            <returns>行情快照</returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapter.GetKeyboradWizardFromServer(System.String,System.Int32,System.Collections.Generic.IList{System.String})">
+            <summary>
+            通过键盘精灵根据证券代码获取数据
+            </summary>
+            <param name="prodCode">证券代码</param>
+            <param name="maxValue">最大返回数据数</param>
+            <param name="hqTypeCodeGroup">代码类型</param>
+            <returns>快照</returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapter.Subscribe(System.String,System.String,System.Object,IUV.Common.Models.SubscribeType)">
+            <summary>
+            订阅证券行情
+            <para>
+            注意：需要挂载OnPublished事件委托以收取行情推送
+            </para>
+            </summary>
+            <param name="prodCode">证券代码</param>
+            <param name="marketCode">市场代码</param>
+            <param name="targetObj">订阅的目标对象，不可为空</param>
+            <param name="subType">订阅类型<see cref="T:IUV.Common.Models.SubscribeType"/>，默认为追加订阅</param>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapter.SubscribeOptionIndex(System.String,System.String,System.Object,IUV.Common.Models.SubscribeType)">
+            <summary>
+            订阅证券行情
+            <para>
+            注意：需要挂载OnPublished事件委托以收取行情推送
+            </para>
+            </summary>
+            <param name="prodCode">证券代码</param>
+            <param name="marketCode">市场代码</param>
+            <param name="targetObj">订阅的目标对象，不可为空</param>
+            <param name="subType">订阅类型<see cref="T:IUV.Common.Models.SubscribeType"/>，默认为追加订阅</param>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapter.SubscribeBankHQ(System.String,IUV.Common.Models.BankSubscribeThemeType,System.Object,IUV.Common.Models.SubscribeType)">
+            <summary>
+            单个订阅
+            </summary>
+            <param name="marketCode">市场代码</param>
+            <param name="themeType">主题</param>
+            <param name="targetObj">订阅对象</param>
+            <param name="subType">订阅/取消</param>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapter.ExcuteOverSubscribe(System.Collections.Generic.IList{IUV.Common.Models.QuoteCode},System.Object)">
+            <summary>
+            执行覆盖订阅
+            </summary>
+            <param name="quoteCodes"></param>
+            <param name="targetObj"></param>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapter.Subscribe(IUV.Common.Models.QuoteCode,System.Object,IUV.Common.Models.SubscribeType)">
+            <summary>
+            订阅证券行情
+            <para>
+            注意：需要挂载OnPublished事件委托以收取行情推送
+            </para>
+            </summary>
+            <param name="productKey">证券标识</param>
+            <param name="targetObj">订阅的目标对象，不可为空</param>
+            <param name="subType">订阅类型<see cref="T:IUV.Common.Models.SubscribeType"/>，默认为追加订阅</param>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapter.Subscribe(System.Collections.Generic.IList{IUV.Common.Models.QuoteCode},System.Object,IUV.Common.Models.SubscribeType)">
+            <summary>
+            批量订阅证券行情
+            <para>
+            注意：需要挂载OnPublished事件委托以收取行情推送
+            </para>
+            </summary>
+            <param name="productKeys">证券标识集合</param>
+            <param name="targetObj">订阅的目标对象，不可为空</param>
+            <param name="subType">订阅类型<see cref="T:IUV.Common.Models.SubscribeType"/>，默认为追加订阅</param>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapter.SubscribeGroup(System.Collections.Generic.IList{IUV.Common.Models.QuoteCode},System.Collections.Generic.IList{IUV.Common.Models.QuoteCode},System.Object,IUV.Common.Models.SubscribeType)">
+            <summary>
+            订阅组合证券行情
+            </summary>
+            <para>
+            注意：需要挂载OnPublished事件委托以收取行情推送
+            </para>
+            <param name="cacheKeys">缓存的证券标识集合</param>
+            <param name="productKeys">证券标识集合</param>
+            <param name="targetObj">订阅的目标对象，不可为空</param>
+            <param name="subType">订阅类型<see cref="T:IUV.Common.Models.SubscribeType"/>，默认为追加订阅</param>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapter.CancelSubscribe(System.Object)">
+            <summary>
+            取消订阅所有证券行情
+            </summary>
+            <param name="targetObj">取消订阅的目标对象，不可为空</param>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapter.CancelSubscribe(System.String,System.String,System.Object)">
+            <summary>
+            取消订阅证券行情
+            </summary>
+            <param name="prodCode">证券代码</param>
+            <param name="marketCode">市场代码</param>
+            <param name="targetObj">取消订阅的目标对象，不可为空</param>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapter.CancelSubscribe(IUV.Common.Models.QuoteCode,System.Object)">
+            <summary>
+            取消订阅证券行情
+            </summary>
+            <param name="productKey">证券标识</param>
+            <param name="targetObj">取消订阅的目标对象，不可为空</param>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapter.CancelSubscribe(System.Collections.Generic.IList{IUV.Common.Models.QuoteCode},System.Object)">
+            <summary>
+            批量取消订阅证券行情
+            </summary>
+            <param name="productKeys">证券标识集合</param>
+            <param name="targetObj">取消订阅的目标对象，不可为空</param>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapter.QuoteAdapter_OnPublished(System.Object,IUV.Common.Models.QuoteSnapshot)">
+            <summary>
+            行情订阅推送事件
+            </summary>
+            <param name="sender">发送者</param>
+            <param name="snapshot">快照信息</param>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapter.QuoteAdapter_OnBankHQPublished(System.Object,IUV.Common.Models.BankHQRecvModel)">
+            <summary>
+            银行间行情订阅推送事件
+            </summary>
+            <param name="sender">发送者</param>
+            <param name="snapshot">银行间快照信息</param>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapter.QuoteAdapter_OnOptionIndexPublished(System.Object,IUV.Common.Models.OptionIndexSnapshot)">
+            <summary>
+            期权指数快照推送事件
+            </summary>
+            <param name="sender">发送者</param>
+            <param name="snapshot">期权指数快照</param>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapter.QuoteAdapter_OnL2TranscationPublish(System.Object,IUV.Common.Models.TranscationSnap)">
+            <summary>
+            L2 逐笔成交推送事件
+            </summary>
+            <param name="sender">发送者</param>
+            <param name="snap">逐笔成交信息</param>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapter.QuoteAdapter_OnNoticePublished(System.Object,IUV.Common.Models.NoticeInfo)">
+            <summary>
+            公告推送事件 
+            </summary>
+            <param name="sender">发送者</param>
+            <param name="noticeInfo">通知信息</param>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapter.QuoteAdapter_OnReceiveSubscribeResult(System.Object,IUV.Common.Models.SubscribeResultInfo)">
+            <summary>
+            行情订阅结果消息推送事件 
+            </summary>
+            <param name="sender">发送者</param>
+            <param name="infos">订阅信息</param>
+        </member>
+        <member name="P:IUV.Adapter.Quote.QuoteAdapter.ProductFilterHandler">
+            <summary>
+            品种代码过滤器
+            </summary>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapter.GetKeyboradWizardForOutsidePartFutures(System.String,System.Int32,System.Collections.Generic.IList{System.String},System.Collections.Generic.IList{System.String},System.Collections.Generic.IList{System.String},System.Boolean,System.Boolean)">
+            <summary>
+            通过键盘精灵查询证券列表
+            </summary>
+            <param name="searchCode">查找代码<para>可以是字母、数字、中文</para></param>
+            <param name="maxValue">最大返回个数，默认返回20个</param>
+            <param name="filterTypeCodes">需要筛选的证券分类，默认为空表示全筛选</param>
+            <param name="outsideMarketTypeCodes">需要过滤掉的证券分类，默认为空，表示不过滤。</param>
+            <param name="outsideFuturesByChars">按字符过滤期货合约，默认为空表示不过滤</param>
+            <param name="queryPreName">是否查询曾用名，默认不查询</param>
+            <param name="queryShortCuts">是否查询快捷键，默认不查询</param>
+            <returns>证券代码列表</returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapter.GetKeyboradWizardPreName(System.String)">
+            <summary>
+            键盘精灵曾用名
+            </summary>
+            <param name="key">关键字</param>
+            <returns>键盘精灵曾用名集合</returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:IUV.Adapter.Quote.QuoteAdapter.GetKeyboradWizard(System.String,System.Int32,System.Collections.Generic.IList{System.String},System.Collections.Generic.IList{System.String})" -->
+        <member name="M:IUV.Adapter.Quote.QuoteAdapter.GetTick(System.String,System.String,System.Int32,System.Int32,IUV.Common.Models.SearchDirection,System.Int32,System.Action{System.String,System.String,System.Collections.Generic.IList{IUV.Common.Models.TickInfo}})">
+            <summary>
+            取指定日期分笔数据
+            <para>
+            异步调用示例：GetTick("600570", "SS", callback: 回调委托);
+            </para>
+            </summary>
+            <param name="prodCode">证券代码</param>
+            <param name="marketCode">市场代码</param>
+            <param name="date">查找日期，默认为0表示当前日期</param>
+            <param name="startIndex">起始偏移位置，默认为0<para>向后查时有效</para></param>
+            <param name="direction">查找方向 <seealso cref="T:IUV.Common.Models.SearchDirection"/>，默认向前查找</param>
+            <param name="count">最大返回个数，默认全部返回</param>
+            <param name="callback">异步回调委托，传入则以异步方式返回数据</param>
+            <returns>分笔列表</returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapter.GetTick(System.String,System.String,IUV.Common.Models.BusinessType,System.Int32,System.Int32,IUV.Common.Models.SearchDirection,System.Int32)">
+            <summary>
+            取指定日期分笔数据
+            </summary>
+            <param name="prodCode">证券代码</param>
+            <param name="marketCode">市场代码</param>
+            <param name="businessType">TICK/K线业务类型</param>
+            <param name="date">查找日期，默认为0表示当前日期</param>
+            <param name="startIndex">起始偏移位置，默认为0<para>向后查时有效</para></param>
+            <param name="direction">查找方向 <seealso cref="T:IUV.Common.Models.SearchDirection"/>，默认向前查找</param>
+            <param name="count">最大返回个数，默认全部返回</param>
+            <returns>分笔列表</returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapter.GetTickByMin(System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.Action{System.String,System.String,System.Collections.Generic.IList{IUV.Common.Models.TickInfo}})">
+            <summary>
+            取指定日期特定分钟范围内分笔
+            <para>
+            分钟为离开市分钟偏移
+            注意：目前仅支持当日分笔
+            </para>
+            </summary>
+            <param name="prodCode">证券代码</param>
+            <param name="marketCode">市场代码</param>
+            <param name="date">查找日期，默认为0表示当前日期</param>
+            <param name="startMin">起始分钟数，如1表示离开市1分钟，默认为0表示从开市开始</param>
+            <param name="endMin">结束分钟数，如2表示离开市2分钟，默认为-1表示到收市结束</param>
+            <param name="count">最大多少个，默认为0表示全部返回</param>
+            <param name="callback">异步回调委托，传入则以异步方式返回数据</param>
+            <returns>分笔列表</returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapter.GetTrend(System.String,System.String,System.Int32,System.Int32,System.Int32,System.Action{System.String,System.String,System.Collections.Generic.IList{IUV.Common.Models.TrendInfo}})">
+            <summary>
+            按指定的日期取分时数据
+            <para>
+            增量分时只针对当日分时有效
+            todo: 确认crc作用
+            </para>
+            </summary>
+            <param name="prodCode">证券代码</param>
+            <param name="marketCode">市场代码</param>
+            <param name="date">查找日期，默认为0表示当前日期</param>
+            <param name="minTime">增量请求分时的开始时间HHMM，默认为当日的第一分钟，必须为有效的时间（交易时间范围内）</param>
+            <param name="dateOffset">距离当前日期的偏移天数，向前取分时 时好用</param>
+            <param name="callback">异步回调委托，传入则以异步方式返回数据</param>
+            <returns>分时数据列表</returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapter.GetTrendRealTime(System.String,System.String,System.Int32,System.Int32,System.Int32,System.Action{System.String,System.String,System.Collections.Generic.IList{IUV.Common.Models.TrendInfo}})">
+            <summary>
+            按指定的日期取分时数据
+            <para>
+            增量分时只针对当日分时有效
+            todo: 确认crc作用
+            </para>
+            </summary>
+            <param name="prodCode">证券代码</param>
+            <param name="marketCode">市场代码</param>
+            <param name="date">查找日期，默认为0表示当前日期</param>
+            <param name="minTime">增量请求分时的开始时间HHMM，默认为当日的第一分钟，必须为有效的时间（交易时间范围内）</param>
+            <param name="dateOffset">距离当前日期的偏移天数，向前取分时 时好用</param>
+            <param name="callback">异步回调委托，传入则以异步方式返回数据</param>
+            <returns>分时数据列表</returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapter.GetTrendDay5(System.String,System.String,System.Action{System.String,System.String,System.Collections.Generic.IList{IUV.Common.Models.TrendInfo}})">
+            <summary>
+            取5日分时数据
+            </summary>
+            <param name="prodCode">证券代码</param>
+            <param name="marketCode">市场代码</param>
+            <param name="callback">异步回调委托，传入则以异步方式返回数据</param>
+            <returns>分时数据列表</returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapter.GetKLineByOffset(System.String,System.String,IUV.Common.Models.KLinePeriod,System.Int32,System.Int32,System.Int32,IUV.Common.Models.SearchDirection,IUV.Common.Models.RightRecoveryMode,System.Action{System.String,System.String,System.Collections.Generic.IList{IUV.Common.Models.KLineInfo}})">
+            <summary>
+            按偏移取K线
+            <para>
+            异步调用示例：GetKLineByOffset("600570", "SS", callback: 回调委托);
+            todo: 取分钟线时自动补全日期
+            </para>
+            </summary>
+            <param name="prodCode">证券代码</param>
+            <param name="marketCode">市场代码</param>
+            <param name="period">K线周期 <see cref="T:IUV.Common.Models.KLinePeriod"/>，默认日线</param>
+            <param name="date">起始日期，默认为0表示当前日期</param>
+            <param name="time">起始时间(格式hhmm)<para>取分钟K线时用，默认-1表示不设置该字段,0 最新的市场时间</para></param>
+            <param name="count">最大返回根数，默认200</param>
+            <param name="direction">查找方向 <seealso cref="T:IUV.Common.Models.SearchDirection"/>，默认向前</param>
+            <param name="mode">复权模式 <seealso cref="T:IUV.Common.Models.RightRecoveryMode"/>，默认向前复权</param>
+            <param name="callback">异步回调委托，传入则以异步方式返回数据</param>
+            <returns>K线列表</returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapter.GetKLineByOffset(System.String,System.String,IUV.Common.Models.RelateType,IUV.Common.Models.KLinePeriod,System.Int32,System.Int32,System.Int32,IUV.Common.Models.SearchDirection,IUV.Common.Models.RightRecoveryMode,System.Action{System.String,System.String,System.Collections.Generic.IList{IUV.Common.Models.KLineInfo}})">
+            <summary>
+            按偏移取K线
+            <para>
+            异步调用示例：GetKLineByOffset("600570", "SS", callback: 回调委托);
+            todo: 取分钟线时自动补全日期
+            </para>
+            </summary>
+            <param name="prodCode">证券代码</param>
+            <param name="marketCode">市场代码</param>
+            <param name="relateType">关联历史数据模式 <see cref="T:IUV.Common.Models.RelateType"/>，默认日线</param>
+            <param name="period">K线周期 <see cref="T:IUV.Common.Models.KLinePeriod"/>，默认日线</param>
+            <param name="date">起始日期，默认为0表示当前日期</param>
+            <param name="time">起始时间(格式hhmm)<para>取分钟K线时用，默认-1表示不设置该字段,0 最新的市场时间</para></param>
+            <param name="count">最大返回根数，默认200</param>
+            <param name="direction">查找方向 <seealso cref="T:IUV.Common.Models.SearchDirection"/>，默认向前</param>
+            <param name="mode">复权模式 <seealso cref="T:IUV.Common.Models.RightRecoveryMode"/>，默认向前复权</param>
+            <param name="callback">异步回调委托，传入则以异步方式返回数据</param>
+            <returns>K线列表</returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapter.GetKLineByOffsetWithType(System.String,System.String,IUV.Common.Models.BusinessType,IUV.Common.Models.KLinePeriod,System.Int32,System.Int32,System.Int32,IUV.Common.Models.SearchDirection,IUV.Common.Models.RightRecoveryMode,System.Action{System.String,System.String,System.Collections.Generic.IList{IUV.Common.Models.KLineInfo}})">
+            <summary>
+            按偏移取K线
+            <para>
+            异步调用示例：GetKLineByOffset("600570", "SS", callback: 回调委托);
+            todo: 取分钟线时自动补全日期
+            </para>
+            </summary>
+            <param name="prodCode">证券代码</param>
+            <param name="marketCode">市场代码</param>
+            <param name="businessType">TICK/K线业务类型</param>
+            <param name="period">K线周期 <see cref="T:IUV.Common.Models.KLinePeriod"/>，默认日线</param>
+            <param name="date">起始日期，默认为0表示当前日期</param>
+            <param name="time">起始时间(格式hhmm)<para>取分钟K线时用，默认-1表示不设置该字段,0 最新的市场时间</para></param>
+            <param name="count">最大返回根数，默认200</param>
+            <param name="direction">查找方向 <seealso cref="T:IUV.Common.Models.SearchDirection"/>，默认向前</param>
+            <param name="mode">复权模式 <seealso cref="T:IUV.Common.Models.RightRecoveryMode"/>，默认向前复权</param>
+            <param name="callback">异步回调委托，传入则以异步方式返回数据</param>
+            <returns>K线列表</returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapter.GetKLineByRange(System.String,System.String,System.Int64,System.Int64,IUV.Common.Models.KLinePeriod,IUV.Common.Models.RightRecoveryMode,System.Action{System.String,System.String,System.Collections.Generic.IList{IUV.Common.Models.KLineInfo}})">
+            <summary>
+            按日期时间范围取K线
+            <para>
+            异步调用示例：GetKLineByRange("600570", "SS", callback: 回调委托);
+            </para>
+            </summary>
+            <param name="prodCode">证券代码</param>
+            <param name="marketCode">市场代码</param>
+            <param name="startDateTime">起始日期，格式：YYYYMMDD 或 YYYYMMDDHHMM</param>
+            <param name="endDateTime">结束日期，格式：YYYYMMDD 或 YYYYMMDDHHMM</param>
+            <param name="period">K线周期 <seealso cref="T:IUV.Common.Models.KLinePeriod"/>，默认日线</param>
+            <param name="mode">复权模式 <seealso cref="T:IUV.Common.Models.RightRecoveryMode"/>，默认向前复权</param>
+            <param name="callback">异步回调委托，传入则以异步方式返回数据</param>
+            <returns>K线列表</returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapter.GetKLineByRange(System.String,System.String,System.Int64,System.Int64,IUV.Common.Models.RelateType,IUV.Common.Models.KLinePeriod,IUV.Common.Models.RightRecoveryMode,System.Action{System.String,System.String,System.Collections.Generic.IList{IUV.Common.Models.KLineInfo}})">
+            <summary>
+            按日期时间范围取K线
+            <para>
+            异步调用示例：GetKLineByRange("600570", "SS", callback: 回调委托);
+            </para>
+            </summary>
+            <param name="prodCode">证券代码</param>
+            <param name="marketCode">市场代码</param>
+            <param name="startDateTime">起始日期，格式：YYYYMMDD 或 YYYYMMDDHHMM</param>
+            <param name="endDateTime">结束日期，格式：YYYYMMDD 或 YYYYMMDDHHMM</param>
+            <param name="relateType">关联历史数据模式<see cref="T:IUV.Common.Models.RelateType"/></param>
+            <param name="period">K线周期 <seealso cref="T:IUV.Common.Models.KLinePeriod"/>，默认日线</param>
+            <param name="mode">复权模式 <seealso cref="T:IUV.Common.Models.RightRecoveryMode"/>，默认向前复权</param>
+            <param name="callback">异步回调委托，传入则以异步方式返回数据</param>
+            <returns>K线列表</returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapter.GetGroupKLineByOffset(System.Collections.Generic.List{IUV.Common.Models.QuoteCode},IUV.Common.Models.KLinePeriod,System.Int32,System.Int32,System.Int32,IUV.Common.Models.SearchDirection,IUV.Common.Models.RightRecoveryMode,System.Action{System.Collections.Generic.List{IUV.Common.Models.QuoteCode},System.Collections.Generic.IList{IUV.Common.Models.KLineInfo}})">
+            <summary>
+            按偏移取组合K线
+            <para>
+            异步调用示例：GetKLineByOffset("600570", "SS", callback: 回调委托);
+            todo: 取分钟线时自动补全日期
+            </para>
+            </summary>
+            <param name="codes">证券组合代码</param>
+            <param name="period">K线周期 <see cref="T:IUV.Common.Models.KLinePeriod"/>，默认日线</param>
+            <param name="date">起始日期，默认为0表示当前日期</param>
+            <param name="time">起始时间(格式hhmm)<para>取分钟K线时用，默认-1表示不设置该字段,0 最新的市场时间</para></param>
+            <param name="count">最大返回根数，默认200</param>
+            <param name="direction">查找方向 <seealso cref="T:IUV.Common.Models.SearchDirection"/>，默认向前</param>
+            <param name="mode">复权模式 <seealso cref="T:IUV.Common.Models.RightRecoveryMode"/>，默认向前复权</param>
+            <param name="callback">异步回调委托，传入则以异步方式返回数据</param>
+            <returns>K线列表</returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapter.GetGroupTick(System.String,System.String,System.Int32,System.Int32,IUV.Common.Models.SearchDirection,System.Int32,System.Action{System.String,System.String,System.Collections.Generic.IList{IUV.Common.Models.TickInfo}})">
+            <summary>
+            取指定日期分笔数据
+            <para>
+            异步调用示例：GetTick("600570", "SS", callback: 回调委托);
+            </para>
+            </summary>
+            <param name="prodCode">证券代码</param>
+            <param name="marketCode">市场代码</param>
+            <param name="date">查找日期，默认为0表示当前日期</param>
+            <param name="startIndex">起始偏移位置，默认为0<para>向后查时有效</para></param>
+            <param name="direction">查找方向 <seealso cref="T:IUV.Common.Models.SearchDirection"/>，默认向前查找</param>
+            <param name="count">最大返回个数，默认全部返回</param>
+            <param name="callback">异步回调委托，传入则以异步方式返回数据</param>
+            <returns>分笔列表</returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapter.GetOcallTick(System.String,System.String,System.Int32)">
+            <summary>
+            获取指定日期竞价集合阶段的分笔
+            </summary>
+            <param name="prodCode"></param>
+            <param name="marketCode"></param>
+            <param name="date"></param>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapter.GetGilCode(System.String)">
+            <summary>
+            获取聚源市场后缀
+            </summary>
+            <param name="marketCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:IUV.Adapter.Quote.QuoteAdapter.Status">
+            <summary>
+            适配器状态
+            </summary>
+        </member>
+        <member name="P:IUV.Adapter.Quote.QuoteAdapter.ConfigManager">
+            <summary>
+            适配器配置管理
+            </summary>
+        </member>
+        <member name="E:IUV.Adapter.Quote.QuoteAdapter.OnResetInitMarketProductDatas">
+            <summary>
+            重新初始化市场数据
+            </summary>
+        </member>
+        <member name="P:IUV.Adapter.Quote.QuoteAdapter.CachedData">
+            <summary>
+            缓存适配数据
+            </summary>
+        </member>
+        <member name="P:IUV.Adapter.Quote.QuoteAdapter.AllSevers">
+            <summary>
+            所有配置的服务器
+            </summary>
+        </member>
+        <member name="P:IUV.Adapter.Quote.QuoteAdapter.AliveServers">
+            <summary>
+            所有运行中的服务器
+            </summary>
+        </member>
+        <member name="P:IUV.Adapter.Quote.QuoteAdapter.ConnectedServers">
+            <summary>
+            所有连接的服务器
+            </summary>
+        </member>
+        <member name="P:IUV.Adapter.Quote.QuoteAdapter.AnomalySignal">
+            <summary>
+            异动信号
+            </summary>
+        </member>
+        <member name="P:IUV.Adapter.Quote.QuoteAdapter.MonitoringSignal">
+            <summary>
+            盯盘信号
+            </summary>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapter.Init(System.String)">
+            <summary>
+            初始化配置
+            </summary>
+            <param name="configFile">配置文件路径</param>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapter.Init(IUV.Adapter.Quote.AdapterConfig)">
+            <summary>
+            初始化配置
+            </summary>
+            <param name="config">配置信息</param>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapter.InitConfig(System.Object)">
+            <summary>
+            初始化配置
+            </summary>
+            <param name="config">配置项</param>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapter.StartExtraAdapter">
+            <summary>
+            启动适配器相关操作
+            </summary>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapter.QuoteAdapter_OnConnected(System.Object,IUV.Common.Models.ServerInfo,IUV.Common.Models.SessionStatus)">
+            <summary>
+            建立连接事件
+            </summary>
+            <param name="sender">适配器信息</param>
+            <param name="serverInfo">服务器信息</param>
+            <param name="status">Session状态</param>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapter.QuoteAdapter_OnResetInitMarketProductDatas(System.Object,System.Collections.Generic.List{System.String})">
+            <summary>
+            重置市场信息事件
+            </summary>
+            <param name="sender">适配器信息</param>
+            <param name="marketCodeList">市场代码集合</param>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapter.Connect(System.String,System.Int32)">
+            <summary>
+            适配器连接
+            </summary>
+            <param name="configFile">配置文件路径</param>
+            <param name="timeout">超时时间</param>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapter.Connect(System.Int32)">
+            <summary>
+            行情连接
+            </summary>
+            <param name="timeout">超时时间</param>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapter.Connect(IUV.Adapter.Quote.AdapterConfig,System.Int32)">
+            <summary>
+            适配器连接
+            </summary>
+            <param name="configFile">配置信息</param>
+            <param name="timeout">超时时间</param>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapter.InitData(System.Collections.Generic.List{System.String},System.Int32)">
+            <summary>
+            初始化行情数据
+            </summary>
+            <param name="marketCodeList">初始化市场代码列表</param>
+            <param name="timeout">超时时间，单位秒<para>默认-1秒，-1表示异步初始化</para></param>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapter.SetQuoteStatusByMarketProduct(System.Collections.Generic.List{System.String})">
+            <summary>
+            通过初始化市场数据设置适配器状态
+            </summary>
+            <param name="marketCodeList">初始化市场代码列表</param>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapter.Dispose">
+            <summary>
+            清空适配器
+            </summary>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapter.InitPreNameData">
+            <summary>
+            初始化曾用名数据
+            </summary>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapter.InitKeyBoardWizardShortCut">
+            <summary>
+            初始化键盘精灵快捷键
+            </summary>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapter.InitMarketProductData(System.Collections.Generic.List{System.String})">
+            <summary>
+            根据市场代码初始化市场相关数据
+            </summary>
+            <param name="marketCodeList">市场代码集合</param>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapter.GetSnapshot(System.String,System.String,System.Collections.Generic.IList{System.String},System.Action{IUV.Common.Models.QuoteSnapshot})">
+            <summary>
+            取行情快照
+            </summary>
+            <param name="prodCode">证券代码</param>
+            <param name="marketCode">市场代码</param>
+            <param name="returnFieldNames">需要返回的字段列表，默认为空表示返回全部字段</param>
+            <param name="callback">异步回调委托，传入则以异步方式返回数据</param>
+            <returns>行情快照</returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapter.GetSnapshot(System.Collections.Generic.IList{IUV.Common.Models.QuoteCode},System.Collections.Generic.IList{System.String},System.Action{System.Collections.Generic.IList{IUV.Common.Models.QuoteSnapshot}})">
+            <summary>
+            批量取行情快照
+            </summary>
+            <param name="productKeys">证券标识集合</param>
+            <param name="returnFieldNames">需要返回的字段列表，默认为空表示返回全部字段</param>
+            <param name="callback">异步回调委托，传入则以异步方式返回数据</param>
+            <returns>行情快照列表</returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapter.QuoteAdapter_OnQuoteInitialized(System.Object,IUV.Adapter.Quote.Adapter,IUV.Common.Models.SessionStatus)">
+            <summary>
+            行情服务器初始化完毕
+            <para>包括适配器初始化与行情服务器连接</para>
+            </summary>
+            <param name="sender">适配器信息</param>
+            <param name="adapter">适配层配置类</param>
+            <param name="status">Session状态</param>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapter.QuoteAdapter_OnSessionStatusChanged(System.Object,IUV.Common.Models.ServerInfo,IUV.Common.Models.MarketInfo,IUV.Common.Models.SessionStatus)">
+            <summary>
+            会话状态改变时触发事件
+            </summary>
+            <param name="sender">适配器信息</param>
+            <param name="serverInfo">服务器信息</param>
+            <param name="marketInfo">市场信息</param>
+            <param name="status">Session状态</param>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapter.QuoteAdapter_OnServerStatusChanged(System.Object,IUV.Common.Models.ServerInfo,IUV.Common.Models.SessionStatus)">
+            <summary>
+            市场状态改变时触发
+            </summary>
+            <param name="sender">适配器信息</param>
+            <param name="serverInfo">服务器信息</param>
+            <param name="status">Session状态</param>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapter.QuoteAdapter_OnMarketInitialized(System.Object,IUV.Common.Models.ServerInfo,IUV.Common.Models.MarketInfo)">
+            <summary>
+            市场初始化事件
+            <para>服务器市场初始化事件</para>
+            </summary>
+            <param name="sender">适配器信息</param>
+            <param name="serverInfo">服务器信息</param>
+            <param name="status">Session状态</param>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapter.QuoteAdapter_OnL2LoginOut(System.Object,IUV.Common.Models.ServerInfo,IUV.Common.Models.L2LoginOutType,System.String)">
+            <summary>
+            L2账户退出事件所挂载的委托定义
+            <para>服务器市场初始化事件</para>
+            </summary>
+            <param name="sender">适配器信息</param>
+            <param name="serverInfo">服务器信息</param>
+            <param name="l2LoginOutType">L2登出类型枚举</param>
+            <param name="errorMsg">错误信息</param>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapter.ServerSwitch(IUV.Common.Models.ServerInfo,IUV.Common.Models.ServerInfo)">
+            <summary>
+            服务器切换
+            </summary>
+            <param name="server">服务器地址信息</param>
+            <param name="originalServer">原服务器地址，填入则用新地址替换该地址，默认为空</param>
+            <returns>切换是否成功</returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapter.ServerTest(System.Action{System.Int32,IUV.Common.Models.ServerInfo})">
+            <summary>
+            服务器测速
+            <para>对适配器内所有服务器进行测速</para>
+            </summary>
+            <param name="callback">测速回调委托，传入则异步测速，并在每个地址测速完成时回调
+            <para>参数说明：1-测速地址索引，2-当前测速服务器</para></param>
+            <returns>服务器测速结果</returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapter.ServerTest(IUV.Common.Models.ServerInfo@,System.Action{System.Int32,IUV.Common.Models.ServerInfo})">
+            <summary>
+            服务器测速
+            <para>对适配器内所有服务器进行测速</para>
+            </summary>
+            <param name="server">服务器信息</param>
+            <param name="callback">测速回调委托，传入则异步测速，并在每个地址测速完成时回调
+            <para>参数说明：1-测速地址索引，2-当前测速服务器</para></param>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapter.ServerTest(System.Collections.Generic.List{IUV.Common.Models.ServerInfo}@,System.Action{System.Int32,IUV.Common.Models.ServerInfo})">
+            <summary>
+            服务器测速
+            <para>对适配器内所有服务器进行测速</para>
+            </summary>
+            <param name="server">服务器信息</param>
+            <param name="callback">测速回调委托，传入则异步测速，并在每个地址测速完成时回调
+            <para>参数说明：1-测速地址索引，2-当前测速服务器</para></param>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapter.GetServerInfo(System.String,System.Action{IUV.Common.Models.MarketInfo})">
+            <summary>
+            请求市场交易信息
+            </summary>
+            <param name="mic">市场代码</param>
+            <param name="callback">请求市场交易信息回调委托</param>
+            <returns>市场交易信息（MarketInfo的Mic、Name、InitDate、BusinessTime、Time字段有效）</returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapter.GetServerInfo(System.Collections.Generic.List{System.String},System.Action{System.Collections.Generic.IList{IUV.Common.Models.MarketInfo}})">
+            <summary>
+            批量请求市场交易信息
+            </summary>
+            <param name="mic">交易所MIC码集合</param>
+            <param name="callback">请求市场交易信息回调委托</param>
+            <returns>市场交易信息（MarketInfo的Mic、Name、InitDate、BusinessTime、Time字段有效）</returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapter.GetServerInfo(System.Action{IUV.Common.Models.ServerInfo})">
+            <summary>
+            获取服务器信息（MarketInfo的Mic、Name、InitDate、BusinessTime、Time字段有效）
+            </summary>
+            <param name="callback">请求市场交易信息回调委托</param>
+            <returns>服务器信息</returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapter.InitAnomalySignal">
+            <summary>
+            初始化异动信号接口
+            </summary>
+            <returns>异动信号</returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapter.InitMonitoringSignal">
+            <summary>
+            初始化盯盘信号接口
+            </summary>
+            <returns>盯盘信号</returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapter.GetQuoteLevel(System.String)">
+            <summary>
+            获取市场的行情级别（返回-1时，表示不存在该市场的行情级别。）
+            </summary>
+            <param name="mic">交易所MIC码</param>
+            <returns>行情级别</returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.QuoteAdapter.IsCloneSnapshot">
+            <summary>
+            是否克隆的快照
+            </summary>
+            <returns>布尔类型 true:是  false:否</returns>
+        </member>
+        <member name="T:IUV.Adapter.Quote.AdapterConfig">
+            <summary>
+            行情配置类
+            </summary>
+        </member>
+        <member name="M:IUV.Adapter.Quote.AdapterConfig.#ctor">
+            <summary>
+            初始化 AdapterConfig 类的实例
+            </summary>
+        </member>
+        <member name="P:IUV.Adapter.Quote.AdapterConfig.Context">
+            <summary>
+            上下文操作实例
+            <para>
+            可以将外部资源（如T2连接）传递到内部调用
+            </para>
+            </summary>
+        </member>
+        <member name="P:IUV.Adapter.Quote.AdapterConfig.GlobalSettings">
+            <summary>
+            全局配置
+            </summary>
+        </member>
+        <member name="P:IUV.Adapter.Quote.AdapterConfig.QuoteAdapters">
+            <summary>
+            适配层配置集合
+            </summary>
+        </member>
+        <member name="M:IUV.Adapter.Quote.AdapterConfig.Load(System.String)">
+            <summary>
+            加载配置文件
+            </summary>
+            <param name="configFile">配置文件名</param>
+        </member>
+        <member name="M:IUV.Adapter.Quote.AdapterConfig.Load(System.String,System.Boolean,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="configFile"></param>
+            <param name="hasHSQCAdapter"></param>
+            <param name="adapterLibPath"></param>
+            <param name="adapterId"></param>
+            <returns></returns>
+        </member>
+        <member name="T:IUV.Adapter.Quote.Adapter">
+            <summary>
+            适配层配置类
+            </summary>
+        </member>
+        <member name="M:IUV.Adapter.Quote.Adapter.#ctor">
+            <summary>
+            初始化 Adapter类的实例
+            </summary>
+        </member>
+        <member name="P:IUV.Adapter.Quote.Adapter.Id">
+            <summary>
+            适配器Id
+            </summary>
+        </member>
+        <member name="P:IUV.Adapter.Quote.Adapter.Name">
+            <summary>
+            适配器名称
+            </summary>
+        </member>
+        <member name="P:IUV.Adapter.Quote.Adapter.User">
+            <summary>
+            用户密码
+            </summary>
+        </member>
+        <member name="P:IUV.Adapter.Quote.Adapter.Password">
+            <summary>
+            用户密码
+            </summary>
+        </member>
+        <member name="P:IUV.Adapter.Quote.Adapter.Assembly">
+            <summary>
+            行情程序集的相对路径
+            <para>
+             如：DLL\IUV\Quote\IUV.H5SdkImple.dll
+            </para>
+            </summary>
+        </member>
+        <member name="P:IUV.Adapter.Quote.Adapter.ClassName">
+            <summary>
+            程序集反射类名,含命名空间
+            <para>
+            如：IUV.H5SdkImple.SdkQuoteAdapter
+            </para>
+            </summary>
+        </member>
+        <member name="P:IUV.Adapter.Quote.Adapter.Servers">
+            <summary>
+            服务器列表
+            </summary>
+        </member>
+        <member name="P:IUV.Adapter.Quote.Adapter.CustomData">
+            <summary>
+            客户自定义适配器数据
+            </summary>
+        </member>
+        <member name="P:IUV.Adapter.Quote.Adapter.ServerInfos">
+            <summary>
+            适配器服务器列表
+            </summary>
+        </member>
+        <member name="T:IUV.Adapter.Quote.GlobalSettings">
+            <summary>
+            全局配置类
+            </summary>
+        </member>
+        <member name="P:IUV.Adapter.Quote.GlobalSettings.Log">
+            <summary>
+            日志配置
+            </summary>
+        </member>
+        <member name="P:IUV.Adapter.Quote.GlobalSettings.Routers">
+            <summary>
+            功能路由配置
+            </summary>
+        </member>
+        <member name="T:IUV.Adapter.Quote.Router">
+            <summary>
+            功能路由配置类
+            指定具体功能路由,具体功能名称参照接口文档
+            </summary>
+        </member>
+        <member name="P:IUV.Adapter.Quote.Router.Func">
+            <summary>
+            功能名称 即接口的方法名
+            设置为*,表示默认所有功能号路由到设置的适配器
+            </summary>
+        </member>
+        <member name="P:IUV.Adapter.Quote.Router.AdapterId">
+            <summary>
+            适配器Id
+            </summary>
+        </member>
+        <member name="P:IUV.Adapter.Quote.Router.ServerId">
+            <summary>
+            服务器Id,默认为空
+            </summary>
+        </member>
+        <member name="T:IUV.Adapter.Quote.Log">
+            <summary>
+            日志配置类
+            </summary>
+        </member>
+        <member name="P:IUV.Adapter.Quote.Log.Path">
+            <summary>
+            日志系统路径
+            </summary>
+        </member>
+        <member name="P:IUV.Adapter.Quote.Log.LogLevel">
+            <summary>
+            日志级别
+            1:info,2: error, 3: all
+            </summary>
+        </member>
+        <member name="T:IUV.Adapter.Quote.Server">
+            <summary>
+            服务器配置类
+            </summary>
+        </member>
+        <member name="M:IUV.Adapter.Quote.Server.#ctor">
+            <summary>
+            服务器配置类
+            </summary>
+        </member>
+        <member name="P:IUV.Adapter.Quote.Server.Id">
+            <summary>
+            服务器Id
+            </summary>
+        </member>
+        <member name="P:IUV.Adapter.Quote.Server.Ip">
+            <summary>
+            Ip地址
+            </summary>
+        </member>
+        <member name="P:IUV.Adapter.Quote.Server.Port">
+            <summary>
+            端口号
+            </summary>
+        </member>
+        <member name="P:IUV.Adapter.Quote.Server.ServerName">
+            <summary>
+            服务器名称
+            </summary>
+        </member>
+        <member name="P:IUV.Adapter.Quote.Server.User">
+            <summary>
+            用户密码
+            </summary>
+        </member>
+        <member name="P:IUV.Adapter.Quote.Server.Password">
+            <summary>
+            用户密码
+            </summary>
+        </member>
+        <member name="P:IUV.Adapter.Quote.Server.AuthId">
+            <summary>
+            AuthId
+            </summary>
+        </member>
+        <member name="P:IUV.Adapter.Quote.Server.UserToken">
+            <summary>
+            UserToken
+            </summary>
+        </member>
+        <member name="P:IUV.Adapter.Quote.Server.QuoteLevel">
+            <summary>
+            服务器行情等级
+            <para>需要在QuoteConfig当中进行配置QuoteLevel,默认为L1</para>
+            <para>相关市场同时存在L1,L2行情时,优先使用L2行情</para>
+            </summary>
+        </member>
+        <member name="P:IUV.Adapter.Quote.Server.Markets">
+            <summary>
+            市场列表
+            </summary>
+        </member>
+        <member name="P:IUV.Adapter.Quote.Server.CustomData">
+            <summary>
+            客户自定义服务器配置
+            </summary>
+        </member>
+        <member name="P:IUV.Adapter.Quote.Server.AppKey">
+            <summary>
+            行情授权key
+            </summary>
+        </member>
+        <member name="P:IUV.Adapter.Quote.Server.AppSecret">
+            <summary>
+            行情授权秘钥
+            </summary>
+        </member>
+        <member name="T:IUV.Adapter.Quote.Market">
+            <summary>
+            市场配置类
+            </summary>
+        </member>
+        <member name="P:IUV.Adapter.Quote.Market.MIC">
+            <summary>
+            市场Mic码
+            全球交易市场唯一码
+            </summary>
+        </member>
+        <member name="P:IUV.Adapter.Quote.Market.Describe">
+            <summary>
+            交易所描述
+            可以是交易所名称等信息
+            </summary>
+        </member>
+        <member name="P:IUV.Adapter.Quote.Market.MarketType">
+            <summary>
+            十六进制市场类型
+            <para >主要用于H5API市场分类定位</para>
+            </summary>
+        </member>
+        <member name="P:IUV.Adapter.Quote.Market.IsSelected">
+            <summary>
+            是否被选中
+            </summary>
+        </member>
+        <member name="T:IUV.Adapter.Quote.VirtualQuoteBase">
+            <summary>
+            基类
+            </summary>
+        </member>
+        <member name="P:IUV.Adapter.Quote.VirtualQuoteBase.AnomalySignal">
+            <summary>
+            异动信号
+            </summary>
+        </member>
+        <member name="P:IUV.Adapter.Quote.VirtualQuoteBase.MonitoringSignal">
+            <summary>
+            盯盘信号
+            </summary>
+        </member>
+        <member name="P:IUV.Adapter.Quote.VirtualQuoteBase.CachedData">
+            <summary>
+            缓存适配层
+            </summary>
+        </member>
+        <member name="P:IUV.Adapter.Quote.VirtualQuoteBase.ConnectedServers">
+            <summary>
+            已经连接的服务器信息
+            </summary>
+        </member>
+        <member name="M:IUV.Adapter.Quote.VirtualQuoteBase.RaiseOnL2LoginOut(System.Object,IUV.Common.Models.ServerInfo,IUV.Common.Models.L2LoginOutType,System.String)">
+            <summary>
+            L2账户退出事件
+            </summary>
+            <param name="sender">适配器信息</param>
+            <param name="serverInfo">服务器信息</param>
+            <param name="outType">L2登出类型</param>
+            <param name="errorMsg">错误信息</param>
+        </member>
+        <member name="M:IUV.Adapter.Quote.VirtualQuoteBase.RaiseOnL2TranscationPublish(System.Object,IUV.Common.Models.TranscationSnap)">
+            <summary>
+            L2 逐笔成交主推事件
+            </summary>
+            <param name="sender">适配器信息</param>
+            <param name="snap">逐笔快照</param>
+        </member>
+        <member name="M:IUV.Adapter.Quote.VirtualQuoteBase.RaiseOnMarketInitialized(System.Object,IUV.Common.Models.ServerInfo,IUV.Common.Models.MarketInfo)">
+            <summary>
+            市场初始化完成事件
+            </summary>
+            <param name="sender">适配性信息</param>
+            <param name="serverInfo">服务器信息</param>
+            <param name="marketInfo">市场信息</param>
+        </member>
+        <member name="M:IUV.Adapter.Quote.VirtualQuoteBase.RaiseOnServerStatusChanged(System.Object,IUV.Common.Models.ServerInfo,IUV.Common.Models.SessionStatus)">
+            <summary>
+            服务器状态变化事件所挂载的委托定义
+            </summary>
+            <param name="sender">发送者</param>
+            <param name="serverInfo">服务器信息</param>
+            <param name="status">会话状态</param>
+        </member>
+        <member name="M:IUV.Adapter.Quote.VirtualQuoteBase.RaiseOnSessionStatusChanged(System.Object,IUV.Common.Models.ServerInfo,IUV.Common.Models.MarketInfo,IUV.Common.Models.SessionStatus)">
+            <summary>
+            市场会话状态变更推送事件
+            </summary>
+            <param name="sender">发送者</param>
+            <param name="serverInfo">服务器信息</param>
+            <param name="marketInfo">市场信息</param>
+            <param name="status">会话状态</param>
+        </member>
+        <member name="M:IUV.Adapter.Quote.VirtualQuoteBase.RaiseOnQuoteInitialized(System.Object,IUV.Adapter.Quote.Adapter,IUV.Common.Models.SessionStatus)">
+            <summary>
+            初始化行情数据完成事件
+            </summary>
+            <param name="sender">发送者</param>
+            <param name="adapter">适配器配置对象,内置服务器状态,市场状态等</param>
+            <param name="status">会话状态</param>
+        </member>
+        <member name="M:IUV.Adapter.Quote.VirtualQuoteBase.RaiseOnResetInitMarketProductDatas(System.Object,System.Collections.Generic.List{System.String})">
+            <summary>
+            重置市场数据
+            </summary>
+            <param name="sender">发送者</param>
+            <param name="marketCodeList">市场代码集合</param>
+        </member>
+        <member name="M:IUV.Adapter.Quote.VirtualQuoteBase.RaiseOnConnected(System.Object,IUV.Common.Models.ServerInfo,IUV.Common.Models.SessionStatus)">
+            <summary>
+            服务器状态变化事件
+            </summary>
+            <param name="sender">发送者</param>
+            <param name="serverInfo">服务器信息</param>
+            <param name="status">会话状态</param>
+        </member>
+        <member name="M:IUV.Adapter.Quote.VirtualQuoteBase.RaiseOnPublished(System.Object,IUV.Common.Models.QuoteSnapshot)">
+            <summary>
+            行情快照推送事件
+            </summary>
+            <param name="sender">发送者</param>
+            <param name="snap">行情快照</param>
+        </member>
+        <member name="M:IUV.Adapter.Quote.VirtualQuoteBase.RaiseOnReceiveSubscribeResult(System.Object,IUV.Common.Models.SubscribeResultInfo)">
+            <summary>
+            行情订阅结果消息
+            </summary>
+            <param name="sender">发送者</param>
+            <param name="info">订阅信息</param>
+        </member>
+        <member name="M:IUV.Adapter.Quote.VirtualQuoteBase.RaiseOnBankHQCBTProductStaticsPublished(System.Object,IUV.Common.Models.BankHQCBTProductStaticsSnapshot)">
+            <summary>
+            现券买卖交易品种行情推送事件
+            </summary>
+            <param name="sender">发送者</param>
+            <param name="snap">现券买卖交易品种行情快照</param>
+        </member>
+        <member name="M:IUV.Adapter.Quote.VirtualQuoteBase.RaiseOnBankHQPublished(System.Object,IUV.Common.Models.BankHQRecvModel)">
+            <summary>
+            银行间债券行情推送事件
+            </summary>
+            <param name="sender">发送者</param>
+            <param name="snap">银行间债券行情快照</param>
+        </member>
+        <member name="M:IUV.Adapter.Quote.VirtualQuoteBase.RaiseOnBankHQCBTDepthofBookPublished(System.Object,IUV.Common.Models.BankHQCBTDepthofBookSnapshot)">
+            <summary>
+            利率互换报价深度行情推送事件
+            </summary>
+            <param name="sender">发送者</param>
+            <param name="snap">利率互换报价深度行情快照</param>
+        </member>
+        <member name="M:IUV.Adapter.Quote.VirtualQuoteBase.RaiseOnBankHQCBTNewMarketMakingPublished(System.Object,IUV.Common.Models.BankHQCBTNewMarketMakingSnapshot)">
+            <summary>
+            现券买卖做市报价档位行情推送事件
+            </summary>
+            <param name="sender">发送者</param>
+            <param name="snap">现券买卖做市报价档位行情快照</param>
+        </member>
+        <member name="M:IUV.Adapter.Quote.VirtualQuoteBase.RaiseOnNoticePublished(System.Object,IUV.Common.Models.NoticeInfo)">
+            <summary>
+            公告推送事件所挂载的委托定义
+            </summary>
+            <param name="sender">发送者</param>
+            <param name="noticeInfo">通知列表</param>
+        </member>
+        <member name="M:IUV.Adapter.Quote.VirtualQuoteBase.CancelSubscribe(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="targetObj"></param>
+        </member>
+        <member name="M:IUV.Adapter.Quote.VirtualQuoteBase.SubscribeGroup(System.Collections.Generic.IList{IUV.Common.Models.QuoteCode},System.Collections.Generic.IList{IUV.Common.Models.QuoteCode},System.Object,IUV.Common.Models.SubscribeType)">
+            <summary>
+            订阅组合行情
+            </summary>
+            <param name="cacheKeys"></param>
+            <param name="productKeys"></param>
+            <param name="targetObj"></param>
+            <param name="subType"></param>
+        </member>
+        <member name="M:IUV.Adapter.Quote.VirtualQuoteBase.GetUnderlyingList(System.Collections.Generic.List{System.String})">
+            <summary>
+            
+            </summary>
+            <param name="marketCodes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.VirtualQuoteBase.GetProductList(IUV.Common.Models.OptionFilterParam)">
+            <summary>
+            
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.VirtualQuoteBase.GetBizType(System.String)">
+            <summary>
+            根据市场代码获取市场类型
+            </summary>
+            <param name="marketCode">市场代码</param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.VirtualQuoteBase.GetMarketNameByCode(System.String)">
+            <summary>
+            根据市场代码获取市场名称
+            </summary>
+            <param name="marketCode">市场代码</param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.VirtualQuoteBase.GetOptionContractVarietyList">
+            <summary>
+            获取所有期权合约品种
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.VirtualQuoteBase.GetQuoteLevel(System.String)">
+            <summary>
+            获取市场的行情级别（返回-1时，表示不存在该市场的行情级别。）
+            </summary>
+            <param name="mic">市场MIC码</param>
+            <returns>行情级别</returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.VirtualQuoteBase.IsCloneSnapshot">
+            <summary>
+            是否克隆的快照
+            </summary>
+            <returns>布尔类型 true:是  false:否</returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.VirtualQuoteBase.GetGroupTick(System.String,System.String,System.Int32,System.Int32,IUV.Common.Models.SearchDirection,System.Int32,System.Action{System.String,System.String,System.Collections.Generic.IList{IUV.Common.Models.TickInfo}})">
+            <summary>
+            
+            </summary>
+            <param name="prodCode"></param>
+            <param name="marketCode"></param>
+            <param name="date"></param>
+            <param name="startIndex"></param>
+            <param name="direction"></param>
+            <param name="count"></param>
+            <param name="callback"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.VirtualQuoteBase.GetGroupTrend(System.String,System.String,System.Int32,System.Int32,System.Int32,System.Action{System.String,System.String,System.Collections.Generic.IList{IUV.Common.Models.TrendInfo}})">
+            <summary>
+            
+            </summary>
+            <param name="prodCode"></param>
+            <param name="marketCode"></param>
+            <param name="date"></param>
+            <param name="dateOffset"></param>
+            <param name="minTime"></param>
+            <param name="callback"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.VirtualQuoteBase.GetNoticeList(System.Collections.Generic.List{IUV.Common.Models.NoticeQueryParam})">
+            <summary>
+            查询市场通知信息
+            </summary>
+            <param name="noticeParam"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.VirtualQuoteBase.GetOptionIVTrend(System.String,System.String,System.Int32,System.Int32,System.Action{System.String,System.String,System.Collections.Generic.IList{IUV.Common.Models.OptionIVTrendInfo}})">
+            <summary>
+            GetOptionIVTrend
+            </summary>
+            <param name="prodCode"></param>
+            <param name="typeCode"></param>
+            <param name="startDate"></param>
+            <param name="endData"></param>
+            <param name="callback"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.VirtualQuoteBase.GetOcallTick(System.String,System.String,System.Int32)">
+            <summary>
+            获取指定日期竞价集合阶段的分笔
+            </summary>
+            <param name="prodCode"></param>
+            <param name="marketCode"></param>
+            <param name="date"></param>
+        </member>
+        <member name="M:IUV.Adapter.Quote.VirtualQuoteBase.GetGilCode(System.String)">
+            <summary>
+            获取聚源市场后缀
+            Gilcode市场后缀如下：
+            上证：SH 深证：SZ 新三板：OC 港股：HK 基金：OF
+            </summary>
+            <param name="marketCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.VirtualQuoteBase.GetTradeSectionsByCache(System.String,System.String)">
+            <summary>
+            通过缓存根据证券代码和市场代码获取交易时间段
+            </summary>
+            <param name="quoteCode">股票代码</param>
+            <param name="marketCode">市场代码</param>
+            <returns>交易时间段</returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.VirtualQuoteBase.GetThousandLevelSnapshot(System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            获取千档行情档位快照
+            </summary>
+            <param name="prodCode"></param>
+            <param name="marketCode"></param>
+            <param name="start"></param>
+            <param name="end"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.VirtualQuoteBase.GetThousandLevelEntrustDetail(System.String,System.String,System.Decimal,IUV.Common.Models.EntrustDirection)">
+            <summary>
+            获取千档行情详细委托队列
+            </summary>
+            <param name="prodCode"></param>
+            <param name="marketCode"></param>
+            <param name="entrustPrice"></param>
+            <param name="direction"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.VirtualQuoteBase.GetThousandLevelEntrustDetailByRange(System.String,System.String,IUV.Common.Models.EntrustDirection,System.Int32,System.Int32)">
+            <summary>
+            根据范围获取千档行情详细委托队列
+            </summary>
+            <param name="prodCode"></param>
+            <param name="marketCode"></param>
+            <param name="direction"></param>
+            <param name="start"></param>
+            <param name="end"></param>
+            <returns></returns>
+        </member>
+        <member name="P:IUV.Adapter.Quote.VirtualQuoteBase.ProductFilterHandler">
+            <summary>
+            品种代码过滤器
+            </summary>
+        </member>
+        <member name="M:IUV.Adapter.Quote.VirtualQuoteBase.GetStaticSnapshot(System.String,System.String,System.Action{IUV.Common.Models.StaticSnapshot})">
+            <summary>
+            查询静态快照
+            </summary>
+            <param name="prodCode">品种代码</param>
+            <param name="marketCode">市场代码</param>
+            <param name="callback">回调函数</param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.VirtualQuoteBase.GetKeyboradWizardFromServer(System.String,System.Int32,System.Collections.Generic.IList{System.String})">
+            <summary>
+            键盘精灵消息
+            </summary>
+            <param name="prodCode"></param>
+            <param name="maxValue">最大返回个数</param>
+            <param name="hqTypeCodeGroup">需要筛选的证券分类</param>
+            <returns>快照列表</returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.VirtualQuoteBase.GetTickSnapshot(System.String,System.String,System.UInt32,System.UInt32)">
+            <summary>
+            查询分笔快照
+            </summary>
+            <param name="prodCode">品种代码</param>
+            <param name="marketCode">市场代码</param>
+            <param name="startMinute">开始分钟数</param>
+            <param name="endMinute">结束分钟数</param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.VirtualQuoteBase.GetUnderlyingInfo(System.Collections.Generic.List{System.String})">
+            <summary>
+            期权标的合约查询
+            </summary>
+            <param name="micList">市场列表</param>
+            <returns>各市场的期权标的列表</returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.VirtualQuoteBase.GetTTypeQuotation(System.Collections.Generic.List{IUV.Common.Models.TTypeQuotationFilterParam})">
+            <summary>
+            期权T型报价合约信息查询
+            </summary>
+            <param name="filterParam">筛选条件</param>
+            <returns>T型报价信息</returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.VirtualQuoteBase.GetTypeCode(System.String,System.String)">
+            <summary>
+            查询分类代码
+            </summary>
+            <param name="prodCode"></param>
+            <param name="marketCode"></param>
+            <returns></returns>
+        </member>
+        <member name="T:IUV.Adapter.Quote.IQuoteAdapter">
+            <summary>
+            行情适配器接口
+            <para>
+            行情组件及行情应用直接使用该接口实例
+            </para>
+            </summary>
+        </member>
+        <member name="P:IUV.Adapter.Quote.IQuoteAdapter.Status">
+            <summary>
+            行情适配器状态
+            </summary>
+        </member>
+        <member name="P:IUV.Adapter.Quote.IQuoteAdapter.ConfigManager">
+            <summary>
+            行情配置管理对象
+            </summary>
+        </member>
+        <member name="P:IUV.Adapter.Quote.IQuoteAdapter.AllSevers">
+            <summary>
+            获取所有服务器信息
+            </summary>
+        </member>
+        <member name="P:IUV.Adapter.Quote.IQuoteAdapter.AliveServers">
+            <summary>
+            获取可达服务器信息
+            </summary>
+        </member>
+        <member name="M:IUV.Adapter.Quote.IQuoteAdapter.Init(System.String)">
+            <summary>
+            初始化行情适配器
+            <para>只进行配置加载</para>
+            </summary>
+            <param name="configFile">配置文件</param>
+        </member>
+        <member name="M:IUV.Adapter.Quote.IQuoteAdapter.Connect(System.String,System.Int32)">
+            <summary>
+            初始化行情适配器
+            <para>包含连接的建立</para>
+            </summary>
+            <param name="configFile">配置文件</param>
+            <param name="timeout">超时时间，单位秒
+            <para>默认10秒，-1表示异步初始化</para></param>
+        </member>
+        <member name="M:IUV.Adapter.Quote.IQuoteAdapter.Connect(IUV.Adapter.Quote.AdapterConfig,System.Int32)">
+            <summary>
+            初始化行情适配器
+            <para>包含连接的建立</para>
+            </summary>
+            <param name="config">配置实例</param>
+            <param name="timeout">超时时间，单位秒
+            <para>默认10秒，-1表示异步初始化</para></param>
+        </member>
+        <member name="M:IUV.Adapter.Quote.IQuoteAdapter.ServerTest(System.Action{System.Int32,IUV.Common.Models.ServerInfo})">
+            <summary>
+            服务器测速
+            <para>对适配器内所有服务器进行测速</para>
+            </summary>
+            <param name="callback">测速回调委托，传入则异步测速，并在每个地址测速完成时回调
+            <para>参数说明：1-测速地址索引，2-当前测速服务器</para></param>
+            <returns>服务器测速结果</returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.IQuoteAdapter.InitData(System.Collections.Generic.List{System.String},System.Int32)">
+            <summary>
+            初始化行情数据
+            </summary>
+            <param name="marketCodeList">初始化市场代码列表</param>
+            <param name="timeout">超时时间，单位秒<para>默认-1秒，-1表示异步初始化</para></param>
+        </member>
+        <member name="E:IUV.Adapter.Quote.IQuoteAdapter.OnQuoteDataInitialized">
+            <summary>
+            异步调用数据初始化时触发
+            </summary>
+        </member>
+        <member name="M:IUV.Adapter.Quote.IQuoteAdapter.Dispose">
+            <summary>
+            接口释放
+            </summary>
+        </member>
+        <member name="T:IUV.Adapter.Quote.OnQuotePublishedEventHandler">
+            <summary>
+            行情快照推送事件所挂载的委托定义
+            </summary>
+            <param name="sender">发送者</param>
+            <param name="snapshot">行情快照</param>
+        </member>
+        <member name="T:IUV.Adapter.Quote.OnOptionIndexPublishedEventHandler">
+            <summary>
+            期权指数快照推送事件所挂载的委托定义
+            </summary>
+            <param name="sender">发送者</param>
+            <param name="snapshot">期权指数快照</param>
+        </member>
+        <member name="T:IUV.Adapter.Quote.OnBankHQCBTProductStaticsPublishedEventHandler">
+            <summary>
+            现券买卖交易品种行情推送事件所挂载的委托定义
+            </summary>
+            <param name="sender">发送者</param>
+            <param name="snapshot">现券买卖交易品种行情快照</param>
+        </member>
+        <member name="T:IUV.Adapter.Quote.OnBankHQPublishedEventHandler">
+            <summary>
+            银行间债券行情推送事件所挂载的委托定义
+            </summary>
+            <param name="sender">发送者</param>
+            <param name="snapshot">银行间债券行情快照</param>
+        </member>
+        <member name="T:IUV.Adapter.Quote.OnBankHQCBTDepthofBookPublishedEventHandler">
+            <summary>
+            利率互换报价深度行情推送事件所挂载的委托定义
+            </summary>
+            <param name="sender">发送者</param>
+            <param name="snapshot">利率互换报价快照</param>
+        </member>
+        <member name="T:IUV.Adapter.Quote.OnBankHQCBTNewMarketMakingPublishedEventHandler">
+            <summary>
+            现券买卖做市报价档位行情推送事件所挂载的委托定义
+            </summary>
+            <param name="sender">发送者</param>
+            <param name="snapshot">现券买卖做市报价档位快照</param>
+        </member>
+        <member name="T:IUV.Adapter.Quote.OnQuoteDataInitializedEventHandler">
+            <summary>
+            初始化行情数据完成事件所挂载的委托定义
+            </summary>
+            <param name="sender">发送者</param>
+            <param name="marketCodeList">初始化市场列表</param>
+        </member>
+        <member name="T:IUV.Adapter.Quote.OnMarketInitializedEventHandler">
+            <summary>
+            市场初始化完成事件所挂载的委托定义
+            </summary>
+            <param name="sender">发送者</param>
+            <param name="serverInfo">服务器信息</param>
+            <param name="marketInfo">市场信息</param>
+        </member>
+        <member name="T:IUV.Adapter.Quote.OnQuoteInitializedEventHandler">
+            <summary>
+            初始化行情数据完成事件所挂载的委托定义
+            </summary>
+            <param name="sender">发送者</param>
+            <param name="adapter">适配器配置对象,内置服务器状态,市场状态等</param>
+            <param name="status">会话状态</param>
+        </member>
+        <member name="T:IUV.Adapter.Quote.OnResetInitMarketProductDatasEventHandler">
+            <summary>
+            重置市场数据委托定义
+            </summary>
+            <param name="sender"></param>
+            <param name="marketCodeList"></param>
+        </member>
+        <member name="T:IUV.Adapter.Quote.OnSessionStatusChangedEventHandler">
+            <summary>
+            市场会话状态变更推送事件所挂载的委托定义
+            </summary>
+            <param name="sender">发送者</param>
+            <param name="serverInfo">服务器信息</param>
+            <param name="marketInfo">市场信息</param>
+            <param name="status">会话状态</param>
+        </member>
+        <member name="T:IUV.Adapter.Quote.OnServerStatusChangedEventHandler">
+            <summary>
+            服务器状态变化事件所挂载的委托定义
+            </summary>
+            <param name="sender">发送者</param>
+            <param name="serverInfo">服务器信息</param>
+            <param name="status">会话状态</param>
+        </member>
+        <member name="T:IUV.Adapter.Quote.OnL2LoginOutEventHandler">
+            <summary>
+            L2账户退出事件所挂载的委托定义
+            </summary>
+            <param name="sender">发送者</param>
+            <param name="serverInfo">服务器信息</param>
+            <param name="l2LoginOutType">退出类型,分为连接失败,降权被服务器踢出</param>
+            <param name="errorMsg">错误信息</param>
+        </member>
+        <member name="T:IUV.Adapter.Quote.OnAnomalySignalPublishedEventHandler">
+            <summary>
+            策略异动信号推送事件所挂载的委托定义
+            </summary>
+            <param name="sender">发送者</param>
+            <param name="anomalyData">异动信号</param>
+        </member>
+        <member name="T:IUV.Adapter.Quote.OnL2TranscationPublishEventHandler">
+            <summary>
+            L2 逐笔成交主推
+            </summary>
+            <param name="sender">发送者</param>
+            <param name="snap">逐笔成交信息</param>
+        </member>
+        <member name="T:IUV.Adapter.Quote.OnMonitoringSignalPublishedEventHandler">
+            <summary>
+            盯盘信号推送事件所挂载的委托定义
+            </summary>
+            <param name="sender">发送者</param>
+            <param name="monitorData">盯盘信号</param>
+        </member>
+        <member name="T:IUV.Adapter.Quote.OnNoticePublishedEventHandler">
+            <summary>
+            公告推送事件所挂载的委托定义
+            </summary>
+            <param name="sender">发送者</param>
+            <param name="noticeInfo">通知列表</param>
+        </member>
+        <member name="T:IUV.Adapter.Quote.OnReceiveSubscribeResultEventHandler">
+            <summary>
+            行情订阅结果消息
+            </summary>
+            <param name="sender">发送者</param>
+            <param name="infos">订阅信息</param>
+        </member>
+        <member name="T:IUV.Adapter.Quote.IQuoteBase">
+            <summary>
+            累积类行情
+            K线、分时、分笔
+            </summary>
+            <summary>
+            事件定义
+            </summary>
+            <summary>
+            实时数据接口
+            行情快照、键盘精灵
+            </summary>
+            <summary>
+            排序类接口
+            </summary>
+            <summary>
+            排序类接口
+            </summary>
+            <summary>
+            静态数据类接口
+            市场列表、代码列表、所属板块、除权信息
+            </summary>
+            <summary>
+            订阅主推类消息
+            </summary>
+            <summary>
+            系统类消息,静态信息
+            </summary>
+        </member>
+        <member name="M:IUV.Adapter.Quote.IQuoteBase.GetKLineByOffset(System.String,System.String,IUV.Common.Models.KLinePeriod,System.Int32,System.Int32,System.Int32,IUV.Common.Models.SearchDirection,IUV.Common.Models.RightRecoveryMode,System.Action{System.String,System.String,System.Collections.Generic.IList{IUV.Common.Models.KLineInfo}})">
+            <summary>
+            按偏移取K线
+            <para>
+            异步调用示例：GetKLineByOffset("600570", "SS", callback: 回调委托);
+            todo: 取分钟线时自动补全日期
+            </para>
+            </summary>
+            <param name="prodCode">证券代码</param>
+            <param name="marketCode">市场代码</param>
+            <param name="period">K线周期 <see cref="T:IUV.Common.Models.KLinePeriod"/>，默认日线</param>
+            <param name="date">起始日期，默认为0表示当前日期</param>
+            <param name="time">起始时间(格式hhmm)<para>取分钟K线时用，默认-1表示不设置该字段,0 最新的市场时间</para></param>
+            <param name="count">最大返回根数，默认200</param>
+            <param name="direction">查找方向 <seealso cref="T:IUV.Common.Models.SearchDirection"/>，默认向前</param>
+            <param name="mode">复权模式 <seealso cref="T:IUV.Common.Models.RightRecoveryMode"/>，默认向前复权</param>
+            <param name="callback">异步回调委托，传入则以异步方式返回数据</param>
+            <returns>K线列表</returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.IQuoteBase.GetKLineByOffset(System.String,System.String,IUV.Common.Models.RelateType,IUV.Common.Models.KLinePeriod,System.Int32,System.Int32,System.Int32,IUV.Common.Models.SearchDirection,IUV.Common.Models.RightRecoveryMode,System.Action{System.String,System.String,System.Collections.Generic.IList{IUV.Common.Models.KLineInfo}})">
+            <summary>
+            按偏移取K线
+            <para>
+            异步调用示例：GetKLineByOffset("600570", "SS", callback: 回调委托);
+            todo: 取分钟线时自动补全日期
+            </para>
+            </summary>
+            <param name="prodCode">证券代码</param>
+            <param name="marketCode">市场代码</param>
+            <param name="relateType">关联历史数据模式 <see cref="T:IUV.Common.Models.RelateType"/>，默认日线</param>
+            <param name="period">K线周期 <see cref="T:IUV.Common.Models.KLinePeriod"/>，默认日线</param>
+            <param name="date">起始日期，默认为0表示当前日期</param>
+            <param name="time">起始时间(格式hhmm)<para>取分钟K线时用，默认-1表示不设置该字段,0 最新的市场时间</para></param>
+            <param name="count">最大返回根数，默认200</param>
+            <param name="direction">查找方向 <seealso cref="T:IUV.Common.Models.SearchDirection"/>，默认向前</param>
+            <param name="mode">复权模式 <seealso cref="T:IUV.Common.Models.RightRecoveryMode"/>，默认向前复权</param>
+            <param name="callback">异步回调委托，传入则以异步方式返回数据</param>
+            <returns>K线列表</returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.IQuoteBase.GetKLineByOffsetWithType(System.String,System.String,IUV.Common.Models.BusinessType,IUV.Common.Models.KLinePeriod,System.Int32,System.Int32,System.Int32,IUV.Common.Models.SearchDirection,IUV.Common.Models.RightRecoveryMode,System.Action{System.String,System.String,System.Collections.Generic.IList{IUV.Common.Models.KLineInfo}})">
+            <summary>
+            按偏移取K线
+            <para>
+            异步调用示例：GetKLineByOffset("600570", "SS", callback: 回调委托);
+            todo: 取分钟线时自动补全日期
+            </para>
+            </summary>
+            <param name="prodCode">证券代码</param>
+            <param name="marketCode">市场代码</param>
+            <param name="businessType">TICK/K线业务类型</param>
+            <param name="period">K线周期 <see cref="T:IUV.Common.Models.KLinePeriod"/>，默认日线</param>
+            <param name="date">起始日期，默认为0表示当前日期</param>
+            <param name="time">起始时间(格式hhmm)<para>取分钟K线时用，默认-1表示不设置该字段,0 最新的市场时间</para></param>
+            <param name="count">最大返回根数，默认200</param>
+            <param name="direction">查找方向 <seealso cref="T:IUV.Common.Models.SearchDirection"/>，默认向前</param>
+            <param name="mode">复权模式 <seealso cref="T:IUV.Common.Models.RightRecoveryMode"/>，默认向前复权</param>
+            <param name="callback">异步回调委托，传入则以异步方式返回数据</param>
+            <returns>K线列表</returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.IQuoteBase.GetKLineByRange(System.String,System.String,System.Int64,System.Int64,IUV.Common.Models.KLinePeriod,IUV.Common.Models.RightRecoveryMode,System.Action{System.String,System.String,System.Collections.Generic.IList{IUV.Common.Models.KLineInfo}})">
+            <summary>
+            按日期时间范围取K线
+            <para>
+            异步调用示例：GetKLineByRange("600570", "SS", callback: 回调委托);
+            </para>
+            </summary>
+            <param name="prodCode">证券代码</param>
+            <param name="marketCode">市场代码</param>
+            <param name="startDateTime">起始日期，格式：YYYYMMDD 或 YYYYMMDDHHMM</param>
+            <param name="endDateTime">结束日期，格式：YYYYMMDD 或 YYYYMMDDHHMM</param>
+            <param name="period">K线周期 <seealso cref="T:IUV.Common.Models.KLinePeriod"/>，默认日线</param>
+            <param name="mode">复权模式 <seealso cref="T:IUV.Common.Models.RightRecoveryMode"/>，默认向前复权</param>
+            <param name="callback">异步回调委托，传入则以异步方式返回数据</param>
+            <returns>K线列表</returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.IQuoteBase.GetKLineByRange(System.String,System.String,System.Int64,System.Int64,IUV.Common.Models.RelateType,IUV.Common.Models.KLinePeriod,IUV.Common.Models.RightRecoveryMode,System.Action{System.String,System.String,System.Collections.Generic.IList{IUV.Common.Models.KLineInfo}})">
+            <summary>
+            按日期时间范围取K线
+            <para>
+            异步调用示例：GetKLineByRange("600570", "SS", callback: 回调委托);
+            </para>
+            </summary>
+            <param name="prodCode">证券代码</param>
+            <param name="marketCode">市场代码</param>
+            <param name="startDateTime">起始日期，格式：YYYYMMDD 或 YYYYMMDDHHMM</param>
+            <param name="endDateTime">结束日期，格式：YYYYMMDD 或 YYYYMMDDHHMM</param>
+            <param name="relateType">关联历史数据模式<see cref="T:IUV.Common.Models.RelateType"/></param>
+            <param name="period">K线周期 <seealso cref="T:IUV.Common.Models.KLinePeriod"/>，默认日线</param>
+            <param name="mode">复权模式 <seealso cref="T:IUV.Common.Models.RightRecoveryMode"/>，默认向前复权</param>
+            <param name="callback">异步回调委托，传入则以异步方式返回数据</param>
+            <returns>K线列表</returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.IQuoteBase.GetTrend(System.String,System.String,System.Int32,System.Int32,System.Int32,System.Action{System.String,System.String,System.Collections.Generic.IList{IUV.Common.Models.TrendInfo}})">
+            <summary>
+            按指定的日期取分时数据
+            <para>
+            增量分时只针对当日分时有效
+            todo: 确认crc作用
+            </para>
+            </summary>
+            <param name="prodCode">证券代码</param>
+            <param name="marketCode">市场代码</param>
+            <param name="date">查找日期，默认为0表示当前日期</param>
+            <param name="minTime">增量请求分时的开始时间HHMM，默认为当日的第一分钟，必须为有效的时间（交易时间范围内）</param>
+            <param name="dateOffset">距离当前日期的偏移天数，向前取分时 时好用</param>
+            <param name="callback">异步回调委托，传入则以异步方式返回数据</param>
+            <returns>分时数据列表</returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.IQuoteBase.GetTrendRealTime(System.String,System.String,System.Int32,System.Int32,System.Int32,System.Action{System.String,System.String,System.Collections.Generic.IList{IUV.Common.Models.TrendInfo}})">
+            <summary>
+            按指定的日期取分时数据
+            <para>
+            增量分时只针对当日分时有效
+            todo: 确认crc作用
+            </para>
+            </summary>
+            <param name="prodCode">证券代码</param>
+            <param name="marketCode">市场代码</param>
+            <param name="date">查找日期，默认为0表示当前日期</param>
+            <param name="minTime">增量请求分时的开始时间HHMM，默认为当日的第一分钟，必须为有效的时间（交易时间范围内）</param>
+            <param name="dateOffset">距离当前日期的偏移天数，向前取分时 时好用</param>
+            <param name="callback">异步回调委托，传入则以异步方式返回数据</param>
+            <returns>分时数据列表</returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.IQuoteBase.GetTrendDay5(System.String,System.String,System.Action{System.String,System.String,System.Collections.Generic.IList{IUV.Common.Models.TrendInfo}})">
+            <summary>
+            取5日分时数据
+            </summary>
+            <param name="prodCode">证券代码</param>
+            <param name="marketCode">市场代码</param>
+            <param name="callback">异步回调委托，传入则以异步方式返回数据</param>
+            <returns>分时数据列表</returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.IQuoteBase.GetTick(System.String,System.String,System.Int32,System.Int32,IUV.Common.Models.SearchDirection,System.Int32,System.Action{System.String,System.String,System.Collections.Generic.IList{IUV.Common.Models.TickInfo}})">
+            <summary>
+            取指定日期分笔数据
+            <para>
+            异步调用示例：GetTick("600570", "SS", callback: 回调委托);
+            </para>
+            </summary>
+            <param name="prodCode">证券代码</param>
+            <param name="marketCode">市场代码</param>
+            <param name="date">查找日期，默认为0表示当前日期</param>
+            <param name="startIndex">起始偏移位置，默认为0<para>向后查时有效</para></param>
+            <param name="direction">查找方向 <seealso cref="T:IUV.Common.Models.SearchDirection"/>，默认向前查找</param>
+            <param name="count">最大返回个数，默认全部返回</param>
+            <param name="callback">异步回调委托，传入则以异步方式返回数据</param>
+            <returns>分笔列表</returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.IQuoteBase.GetTick(System.String,System.String,IUV.Common.Models.BusinessType,System.Int32,System.Int32,IUV.Common.Models.SearchDirection,System.Int32)">
+            <summary>
+            取指定日期分笔数据
+            </summary>
+            <param name="prodCode">证券代码</param>
+            <param name="marketCode">市场代码</param>
+            <param name="businessType">TICK/K线业务类型</param>
+            <param name="date">查找日期，默认为0表示当前日期</param>
+            <param name="startIndex">起始偏移位置，默认为0<para>向后查时有效</para></param>
+            <param name="direction">查找方向 <seealso cref="T:IUV.Common.Models.SearchDirection"/>，默认向前查找</param>
+            <param name="count">最大返回个数，默认全部返回</param>
+            <returns>分笔列表</returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.IQuoteBase.GetTickByMin(System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.Action{System.String,System.String,System.Collections.Generic.IList{IUV.Common.Models.TickInfo}})">
+            <summary>
+            取指定日期特定分钟范围内分笔
+            <para>
+            分钟为离开市分钟偏移
+            注意：目前仅支持当日分笔
+            </para>
+            </summary>
+            <param name="prodCode">证券代码</param>
+            <param name="marketCode">市场代码</param>
+            <param name="date">查找日期，默认为0表示当前日期</param>
+            <param name="startMin">起始分钟数，如1表示离开市1分钟，默认为0表示从开市开始</param>
+            <param name="endMin">结束分钟数，如2表示离开市2分钟，默认为-1表示到收市结束</param>
+            <param name="count">最大多少个，默认为0表示全部返回</param>
+            <param name="callback">异步回调委托，传入则以异步方式返回数据</param>
+            <returns>分笔列表</returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.IQuoteBase.GetServerInfo(System.String,System.Action{IUV.Common.Models.MarketInfo})">
+            <summary>
+            请求市场交易信息
+            </summary>
+            <param name="mic">市场代码</param>
+            <param name="callback"></param>
+            <returns>服务器信息（MarketInfo的Mic、Name、InitDate、BusinessTime、Time字段有效）</returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.IQuoteBase.GetServerInfo(System.Collections.Generic.List{System.String},System.Action{System.Collections.Generic.IList{IUV.Common.Models.MarketInfo}})">
+            <summary>
+            请求市场交易信息
+            </summary>
+            <param name="mic">市场代码集合</param>
+            <param name="callback"></param>
+            <returns>服务器信息（MarketInfo的Mic、Name、InitDate、BusinessTime、Time字段有效）</returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.IQuoteBase.GetServerInfo(System.Action{IUV.Common.Models.ServerInfo})">
+            <summary>
+            服务器信息（MarketInfo的Mic、Name、InitDate、BusinessTime、Time字段有效）
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.IQuoteBase.GetGroupKLineByOffset(System.Collections.Generic.List{IUV.Common.Models.QuoteCode},IUV.Common.Models.KLinePeriod,System.Int32,System.Int32,System.Int32,IUV.Common.Models.SearchDirection,IUV.Common.Models.RightRecoveryMode,System.Action{System.Collections.Generic.List{IUV.Common.Models.QuoteCode},System.Collections.Generic.IList{IUV.Common.Models.KLineInfo}})">
+            <summary>
+            按偏移取组合K线
+            <para>
+            异步调用示例：GetKLineByOffset("600570", "SS", callback: 回调委托);
+            todo: 取分钟线时自动补全日期
+            </para>
+            </summary>
+            <param name="codes">证券组合代码</param>
+            <param name="period">K线周期 <see cref="T:IUV.Common.Models.KLinePeriod"/>，默认日线</param>
+            <param name="date">起始日期，默认为0表示当前日期</param>
+            <param name="time">起始时间(格式hhmm)<para>取分钟K线时用，默认-1表示不设置该字段,0 最新的市场时间</para></param>
+            <param name="count">最大返回根数，默认200</param>
+            <param name="direction">查找方向 <seealso cref="T:IUV.Common.Models.SearchDirection"/>，默认向前</param>
+            <param name="mode">复权模式 <seealso cref="T:IUV.Common.Models.RightRecoveryMode"/>，默认向前复权</param>
+            <param name="callback">异步回调委托，传入则以异步方式返回数据</param>
+            <returns>K线列表</returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.IQuoteBase.ClearOptionCompositeBuildMonitorCache(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="mic"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.IQuoteBase.GetGroupTick(System.String,System.String,System.Int32,System.Int32,IUV.Common.Models.SearchDirection,System.Int32,System.Action{System.String,System.String,System.Collections.Generic.IList{IUV.Common.Models.TickInfo}})">
+            <summary>
+            取指定日期分笔数据
+            <para>
+            异步调用示例：GetTick("600570", "SS", callback: 回调委托);
+            </para>
+            </summary>
+            <param name="prodCode">证券代码</param>
+            <param name="marketCode">市场代码</param>
+            <param name="date">查找日期，默认为0表示当前日期</param>
+            <param name="startIndex">起始偏移位置，默认为0<para>向后查时有效</para></param>
+            <param name="direction">查找方向 <seealso cref="T:IUV.Common.Models.SearchDirection"/>，默认向前查找</param>
+            <param name="count">最大返回个数，默认全部返回</param>
+            <param name="callback">异步回调委托，传入则以异步方式返回数据</param>
+            <returns>分笔列表</returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.IQuoteBase.GetGroupTrend(System.String,System.String,System.Int32,System.Int32,System.Int32,System.Action{System.String,System.String,System.Collections.Generic.IList{IUV.Common.Models.TrendInfo}})">
+            <summary>
+            
+            </summary>
+            <param name="prodCode"></param>
+            <param name="marketCode"></param>
+            <param name="date"></param>
+            <param name="dateOffset"></param>
+            <param name="minTime"></param>
+            <param name="callback"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.IQuoteBase.GetOptionIVTrend(System.String,System.String,System.Int32,System.Int32,System.Action{System.String,System.String,System.Collections.Generic.IList{IUV.Common.Models.OptionIVTrendInfo}})">
+            <summary>
+            
+            </summary>
+            <param name="prodCode"></param>
+            <param name="typeCode"></param>
+            <param name="startDate"></param>
+            <param name="endData"></param>
+            <param name="callback"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.IQuoteBase.GetOcallTick(System.String,System.String,System.Int32)">
+            <summary>
+            获取指定日期竞价集合阶段的分笔
+            </summary>
+            <param name="prodCode"></param>
+            <param name="marketCode"></param>
+            <param name="date"></param>
+        </member>
+        <member name="M:IUV.Adapter.Quote.IQuoteBase.GetGilCode(System.String)">
+            <summary>
+            获取聚源市场后缀
+            </summary>
+            <param name="marketCode"></param>
+            <returns></returns>
+        </member>
+        <member name="E:IUV.Adapter.Quote.IQuoteBase.OnPublished">
+            <summary>
+            行情快照推送时触发
+            </summary>
+        </member>
+        <member name="E:IUV.Adapter.Quote.IQuoteBase.OnOptionIndexPublished">
+            <summary>
+            期权指数推送时触发
+            </summary>
+        </member>
+        <member name="E:IUV.Adapter.Quote.IQuoteBase.OnBankHQPublished">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="E:IUV.Adapter.Quote.IQuoteBase.OnSessionStatusChanged">
+            <summary>
+            会话状态改变时触发
+            </summary>
+        </member>
+        <member name="E:IUV.Adapter.Quote.IQuoteBase.OnServerStatusChanged">
+            <summary>
+            市场状态改变时触发
+            </summary>
+        </member>
+        <member name="E:IUV.Adapter.Quote.IQuoteBase.OnQuoteInitialized">
+            <summary>
+            行情服务器初始化完毕
+            <para>包括适配器初始化与行情服务器连接</para>
+            </summary>
+        </member>
+        <member name="E:IUV.Adapter.Quote.IQuoteBase.OnResetInitMarketProductDatas">
+            <summary>
+            重置市场数据事件
+            </summary>
+        </member>
+        <member name="E:IUV.Adapter.Quote.IQuoteBase.OnMarketInitialized">
+            <summary>
+            市场初始化事件
+            <para>服务器市场初始化事件</para>
+            </summary>
+        </member>
+        <member name="E:IUV.Adapter.Quote.IQuoteBase.OnL2LoginOut">
+            <summary>
+            L2账户退出事件所挂载的委托定义
+            <para>服务器市场初始化事件</para>
+            </summary>
+        </member>
+        <member name="E:IUV.Adapter.Quote.IQuoteBase.OnL2TranscationPublish">
+            <summary>
+            L2 逐笔成交 主推
+            </summary>
+        </member>
+        <member name="E:IUV.Adapter.Quote.IQuoteBase.OnConnected">
+            <summary>
+            连接建立时触发事件
+            </summary>
+        </member>
+        <member name="E:IUV.Adapter.Quote.IQuoteBase.OnNoticePublished">
+            <summary>
+            通知推送时触发
+            </summary>
+        </member>
+        <member name="E:IUV.Adapter.Quote.IQuoteBase.OnReceiveSubscribeResult">
+            <summary>
+            行情订阅结果消息
+            </summary>
+        </member>
+        <member name="M:IUV.Adapter.Quote.IQuoteBase.GetSnapshot(System.String,System.String,System.Collections.Generic.IList{System.String},System.Action{IUV.Common.Models.QuoteSnapshot})">
+            <summary>
+            取行情快照
+            </summary>
+            <param name="prodCode">证券代码</param>
+            <param name="marketCode">市场代码</param>
+            <param name="returnFieldNames">需要返回的字段列表，默认为空表示返回全部字段</param>
+            <param name="callback">异步回调委托，传入则以异步方式返回数据</param>
+            <returns>行情快照</returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.IQuoteBase.GetSnapshot(System.Collections.Generic.IList{IUV.Common.Models.QuoteCode},System.Collections.Generic.IList{System.String},System.Action{System.Collections.Generic.IList{IUV.Common.Models.QuoteSnapshot}})">
+            <summary>
+            批量取行情快照
+            </summary>
+            <param name="productKeys">证券标识集合</param>
+            <param name="returnFieldNames">需要返回的字段列表，默认为空表示返回全部字段</param>
+            <param name="callback">异步回调委托，传入则以异步方式返回数据</param>
+            <returns>行情快照列表</returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.IQuoteBase.GetBankHQSnapshot(IUV.Common.Models.BankQuoteCode,System.Action{IUV.Common.Models.BankHQRecvModel})">
+            <summary>
+            现券买卖市场行情快照
+            </summary>
+            <param name="quoteCode">银行间证券信息</param>
+            <param name="callback">异步回调委托，传入则以异步方式返回数据</param>
+            <returns>现券买卖市场行情快照</returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.IQuoteBase.GetKeyboradWizardForOutsidePartFutures(System.String,System.Int32,System.Collections.Generic.IList{System.String},System.Collections.Generic.IList{System.String},System.Collections.Generic.IList{System.String},System.Boolean,System.Boolean)">
+            <summary>
+            通过键盘精灵查询证券列表
+            </summary>
+            <param name="searchCode">查找代码<para>可以是字母、数字、中文</para></param>
+            <param name="maxValue">最大返回个数，默认返回20个</param>
+            <param name="filterTypeCodes">需要筛选的证券分类，默认为空表示全筛选</param>
+            <param name="outsideMarketTypeCodes">需要过滤掉的证券分类，默认为空，表示不过滤。</param>
+            <param name="outsideFuturesByChars">按字符过滤期货合约，默认为空表示不过滤</param>
+            <param name="queryPreName">是否查询曾用名，默认不查询</param>
+            <param name="queryShortCuts">是否查询快捷键，默认不查询</param>
+            <returns>证券代码列表</returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.IQuoteBase.GetKeyboradWizardPreName(System.String)">
+            <summary>
+            键盘精灵曾用名
+            </summary>
+            <param name="key">关键字</param>
+            <returns>曾用名集合</returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.IQuoteBase.GetKeyboradWizard(System.String,System.Int32,System.Collections.Generic.IList{System.String},System.Collections.Generic.IList{System.String})">
+            <summary>
+            通过键盘精灵查询证券列表
+            </summary>
+            <param name="searchCode">查找代码<para>可以是字母、数字、中文</para></param>
+            <param name="maxValue">最大返回个数，默认返回20个</param>
+            <param name="filterTypeCodes">需要筛选的证券分类，默认为空表示全筛选</param>
+            <param name="outsideMarketTypeCodes">需要过滤掉的证券分类，默认为空，表示不过滤。</param>
+            <returns>证券代码列表</returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.IQuoteBase.GetStaticSnapshot(System.String,System.String,System.Action{IUV.Common.Models.StaticSnapshot})">
+            <summary>
+            查询静态快照
+            </summary>
+            <param name="prodCode">品种代码</param>
+            <param name="marketCode">市场代码</param>
+            <param name="callback">回调函数</param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.IQuoteBase.GetTickSnapshot(System.String,System.String,System.UInt32,System.UInt32)">
+            <summary>
+            查询分笔快照
+            </summary>
+            <param name="prodCode">品种代码</param>
+            <param name="marketCode">市场代码</param>
+            <param name="startMinute">开始分钟数</param>
+            <param name="endMinute">结束分钟数</param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.IQuoteBase.GetTypeCode(System.String,System.String)">
+            <summary>
+            查询分类代码
+            </summary>
+            <param name="prodCode"></param>
+            <param name="marketCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.IQuoteBase.L2TranscationSubscribe(IUV.Common.Models.QuoteCode,System.Object,IUV.Common.Models.SubscribeType)">
+            <summary>
+            l2逐笔成交订阅
+            </summary>
+            <param name="productKey">证券信息</param>
+            <param name="targetObj">目标对象</param>
+            <param name="subType">订阅类型</param>
+        </member>
+        <member name="M:IUV.Adapter.Quote.IQuoteBase.L2OrderSubscribe(IUV.Common.Models.QuoteCode,System.Object,IUV.Common.Models.SubscribeType)">
+            <summary>
+            l2逐笔委托订阅
+            </summary>
+            <param name="productKey">证券信息</param>
+            <param name="targetObj">目标对象</param>
+            <param name="subType">订阅类型</param>
+        </member>
+        <member name="M:IUV.Adapter.Quote.IQuoteBase.GetL2Transcation(IUV.Common.Models.QuoteCode,System.Int32,System.Int32)">
+            <summary>
+            l2逐笔成交
+            </summary>
+            <param name="productKey">证券信息</param>
+            <param name="startPos">起始位置</param>
+            <param name="dataCount">数据量</param>
+            <returns>逐笔成交数据集合</returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.IQuoteBase.GetL2Order(IUV.Common.Models.QuoteCode,System.Int32,System.Int32)">
+            <summary>
+            l2逐笔委托
+            </summary>
+            <param name="productKey">证券信息</param>
+            <param name="startPos">起始位置</param>
+            <param name="dataCount">数据量</param>
+            <returns>逐笔委托信息集合</returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.IQuoteBase.GetThousandLevelSnapshot(System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            获取千档行情档位快照
+            </summary>
+            <param name="prodCode"></param>
+            <param name="marketCode"></param>
+            <param name="start"></param>
+            <param name="end"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.IQuoteBase.GetThousandLevelEntrustDetail(System.String,System.String,System.Decimal,IUV.Common.Models.EntrustDirection)">
+            <summary>
+            获取千档行情详细委托队列
+            </summary>
+            <param name="prodCode"></param>
+            <param name="marketCode"></param>
+            <param name="entrustPrice"></param>
+            <param name="direction"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.IQuoteBase.GetThousandLevelEntrustDetailByRange(System.String,System.String,IUV.Common.Models.EntrustDirection,System.Int32,System.Int32)">
+            <summary>
+            根据范围获取千档行情详细委托队列
+            </summary>
+            <param name="prodCode"></param>
+            <param name="marketCode"></param>
+            <param name="direction"></param>
+            <param name="start"></param>
+            <param name="end"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.IQuoteBase.Sort(System.String,System.String,System.String,System.Int32,System.Int32,IUV.Common.Models.SortType,System.Collections.Generic.IList{System.String},System.Action{System.String,System.String,System.Collections.Generic.IList{IUV.Common.Models.QuoteSnapshot}})">
+            <summary>
+            板块成分股排序
+            </summary>
+            <param name="prodCode">板块代码</param>
+            <param name="marketCode">市场代码</param>
+            <param name="sortFieldName">需要排序的字段<para>能排序的字段参考ProductSnap类定义</para></param>
+            <param name="startIndex">起始索引，表示排序后从第几条数据开始返回，默认为0</param>
+            <param name="count">最大返回个数，默认100只代码，最大请求数目10000</param>
+            <param name="sortType">排序方式<seealso cref="T:IUV.Common.Models.SortType"/>，默认降序</param>
+            <param name="returnFieldNames">需要返回的字段列表，默认为空表示返回全部字段
+            <para>相关字段获取建议采用如: nameof(QuoteSnapshot.ProdCode)</para></param>
+            <param name="callback">异步回调委托，传入则以异步方式返回数据</param>
+            <returns>排序后成分股列表</returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:IUV.Adapter.Quote.IQuoteBase.Sort(System.String,System.String,System.String,System.Collections.Generic.IList{System.String},IUV.Common.Models.ParseToProductMode,System.Int32,System.Int32,IUV.Common.Models.SortType)" -->
+        <member name="M:IUV.Adapter.Quote.IQuoteBase.GetSortGroup(System.Collections.Generic.IList{IUV.Common.Models.QuoteCode},System.Collections.Generic.IList{System.String},System.String,System.Collections.Generic.IList{System.String},System.Int32,System.Int32,IUV.Common.Models.SortType,System.Action{System.Collections.Generic.IList{IUV.Common.Models.QuoteSnapshot}},IUV.Common.Models.ParseToProductMode)">
+            <summary>
+            排序请求
+            <para>自选股集合,多板块排序</para>
+            </summary>
+            <param name="prodGrp">代码列表,可选,可以输入Null</param>
+            <param name="typeGrp">证券分类，可选，可以输入Null</param>
+            <param name="sortFieldName">需要排序的字段,只支持ProductSnap类型中,提示能排序的字段名</param>
+            <param name="returnFieldNames">需要的字段列表,相关字段获取建议采用如: nameof(ProductSnap.ProdCode)</param>
+            <param name="startIndex">起始位置,默认为0</param>
+            <param name="count">代码数目,默认100只代码，最大请求数目10000</param>
+            <param name="sortType">排序方式<seealso cref="T:IUV.Common.Models.SortType"/>，默认降序</param>
+            <param name="callback">异步回调委托，传入则以异步方式返回数据</param>
+            <returns>排序后证券列表</returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.IQuoteBase.GetSortGroup(System.Collections.Generic.IList{IUV.Common.Models.QuoteCode},System.Collections.Generic.IList{System.String},IUV.Common.Models.SpecialMarker,System.String,System.Collections.Generic.IList{System.String},System.Int32,System.Int32,IUV.Common.Models.SortType,System.Action{System.Collections.Generic.IList{IUV.Common.Models.QuoteSnapshot}})">
+            <summary>
+            排序请求
+            <para>自选股集合,多板块排序</para>
+            </summary>
+            <param name="prodGrp">代码列表,可选,可以输入Null</param>
+            <param name="marketGrp">证券分类，可选，可以输入Null</param>
+            <param name="specialMarker">特殊标志</param>
+            <param name="sortFieldID">需要排序的字段,只支持ProductSnap类型中,提示能排序的字段ID</param>
+            <param name="returnFieldNames">需要的字段列表,相关字段获取建议采用如: nameof(ProductSnap.ProdCode)</param>
+            <param name="startIndex">起始位置,默认为0</param>
+            <param name="count">代码数目,默认100只代码，最大请求数目10000</param>
+            <param name="sortType">排序方式<seealso cref="T:IUV.Common.Models.SortType"/>，默认降序</param>
+            <param name="callback">异步回调委托，传入则以异步方式返回数据</param>
+            <returns>排序后证券列表</returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.IQuoteBase.GetStockBlock(IUV.Common.Models.QuoteCode)">
+            <summary>
+            获取所属板块
+            </summary>
+            <param name="code">产品代码</param>
+            <returns>板块信息集合</returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.IQuoteBase.GetBlockSortTotalRecordCount(System.String,System.String,System.String,IUV.Common.Models.SortType)">
+            <summary>
+            获取板块成分股排序总数据数
+            </summary>
+            <param name="prodCode"></param>
+            <param name="marketCode"></param>
+            <param name="sortFieldName"></param>
+            <param name="sortType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.IQuoteBase.GetSortTotalRecordCount(System.Collections.Generic.IList{IUV.Common.Models.QuoteCode},System.Collections.Generic.IList{System.String},System.String,IUV.Common.Models.SortType)">
+            <summary>
+            获取排序结果总数
+            </summary>
+            <param name="prodCode"></param>
+            <param name="marketCode"></param>
+            <param name="sortFieldName"></param>
+            <param name="sortType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.IQuoteBase.GetMarketList(System.String)">
+            <summary>
+            取市场列表
+            <para>
+            </para>
+            调用示例：GetMarketList("XSHG"); // 获取上海证券交易所下市场分类信息
+            <para>
+            调用示例：GetBlockList("XSHG.N"); // 获取上海证券交易所下上证新股市场分类信息
+            </para>
+            </summary>
+            <param name="marketCode">市场类别<para>可以是沪深等交易所级别，也可以是上证指数等市场类别</para></param>
+            <returns>市场列表</returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.IQuoteBase.GetProductList(IUV.Common.Models.QuoteCode)">
+            <summary>
+            取市场或板块代码表
+            </summary>
+            <param name="quoteCode">市场or板块代码</param>
+            <returns>市场或板块信息</returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.IQuoteBase.GetProductList(IUV.Common.Models.OptionFilterParam)">
+            <summary>
+            取期权筛选后的代码表
+            </summary>
+            <param name="param">期权筛选条件</param>
+            <returns>市场或板块信息</returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.IQuoteBase.GetProductInfo(System.String,System.Collections.Generic.List{System.String})">
+            <summary>
+            取产品信息
+            此接口走缓存数据，不走网络接口
+            </summary>
+            <param name="prodCode">产品代码</param>
+            <param name="filterMarketCodes">产品代码所属的市场</param>
+            <returns>市场或板块信息</returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.IQuoteBase.GetProductList(System.Collections.Generic.List{IUV.Common.Models.QuoteCode})">
+            <summary>
+            取多个市场或板块代码表
+            <para>支持同时取多个板块代码集</para>
+            </summary>
+            <param name="quoteCodes">市场or板块代码列表</param>
+            <returns>市场或板块信息</returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.IQuoteBase.GetBelongBlock(System.String,System.String)">
+            <summary>
+            查找证券所属板块
+            </summary>
+            <param name="prodCode">证券代码</param>
+            <param name="marketCode">市场代码</param>
+            <returns>所属板块信息</returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.IQuoteBase.GetExRights(System.String,System.String)">
+            <summary>
+            获取证券除权信息
+            </summary>
+            <param name="prodCode">证券代码</param>
+            <param name="marketCode">市场代码</param>
+            <returns>除权信息</returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.IQuoteBase.GetStaticFile(IUV.Common.Models.FileType,System.String,System.Int32,System.Int64,System.Int32)">
+            <summary>
+            请求静态文件
+            </summary>
+            <param name="fileType">文件类型</param>
+            <param name="fileName">文件相对名称，请求板块时候，需要输入板块文件名如HSBlock.xml</param>
+            <param name="crc">文件CRC</param>
+            <param name="fileOffset">文件偏移</param>
+            <param name="fileLength">请求的长度（超过一定数值后，根据应答下次请求）</param>
+            <returns>静态文件</returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.IQuoteBase.GetUnderlyingCode(System.Collections.Generic.List{IUV.Common.Models.QuoteCode})">
+            <summary>
+            通过代码查找关联代码
+            </summary>
+            <param name="quoteCodes">请求关联的代码列表</param>
+            <returns>关联代码</returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.IQuoteBase.GetExeRights(System.Collections.Generic.List{IUV.Common.Models.QuoteCode})">
+            <summary>
+            除权信息
+            </summary>
+            <param name="quoteCodes">请求关联的代码列表</param>
+            <returns>除权信息</returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.IQuoteBase.GetF10Index(System.String,System.String,IUV.Common.Models.FileType,System.Int32)">
+            <summary>
+            请求资讯信息索引
+            </summary>
+            <param name="prodCode">股票代码</param>
+            <param name="hqTypeCode">代码类型</param>
+            <param name="fileType">资讯类型</param>
+            <param name="crc">CRC校验信息</param>
+            <returns>资讯信息索引</returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.IQuoteBase.GetF10Txt(System.String,System.String,IUV.Common.Models.FileType,System.Collections.Generic.List{IUV.Common.Models.F10IndexInfo})">
+            <summary>
+            资讯内容
+            </summary>
+            <param name="prodCode">股票代码</param>
+            <param name="hqType">代码类型</param>
+            <param name="fileType">资讯类型</param>
+            <param name="f10group">除权信息</param>
+            <returns>资讯内容</returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.IQuoteBase.GetCodeProperty(System.Collections.Generic.List{IUV.Common.Models.QuoteCode})">
+            <summary>
+            商品属性信息
+            </summary>
+            <param name="quoteCodes">请求关联的代码列表</param>
+            <returns>商品属性信息</returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.IQuoteBase.GetExeRightsByDate(System.Collections.Generic.List{IUV.Common.Models.QuoteCode},System.Int32,System.Int32)">
+            <summary>
+            按日期查询除权信息
+            </summary>
+            <param name="start">开始日期</param>
+            <param name="end">结束日期</param>
+            <param name="quoteCodes">请求关联的代码列表</param>
+            <returns>除权信息</returns>   
+        </member>
+        <member name="M:IUV.Adapter.Quote.IQuoteBase.GetSnapshotByCache(System.String,System.String)">
+            <summary>
+            通过缓存根据证券代码和市场代码获取行情快照
+            </summary>
+            <param name="quoteCode">请求关联的代码</param>
+            <param name="marketCode">市场代码</param>
+            <returns>行情快照</returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.IQuoteBase.GetGroupSnapshotByCache(System.Collections.Generic.List{IUV.Common.Models.QuoteCode})">
+            <summary>
+            通过缓存根据证券信息集合获取行情快照
+            </summary>
+            <param name="codes">请求关联的证券信息集合</param>
+            <returns>行情快照</returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.IQuoteBase.GetOptionCompositeBuildMonitorSnapshot(System.Collections.Generic.List{IUV.Common.Models.QuoteCode})">
+            <summary>
+            
+            </summary>
+            <param name="codes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.IQuoteBase.GetCustomMarketInfo(System.Object,System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="param1"></param>
+            <param name="param2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.IQuoteBase.GetUnderlyingList(System.Collections.Generic.List{System.String})">
+            <summary>
+            根据市场代码获取期权集合
+            </summary>
+            <param name="marketCodes">市场代码集合</param>
+            <returns>快照集合</returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.IQuoteBase.GetBizType(System.String)">
+            <summary>
+            根据市场代码获取市场类型
+            </summary>
+            <param name="marketCode">市场代码</param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.IQuoteBase.GetMarketNameByCode(System.String)">
+            <summary>
+            根据市场代码获取市场名称
+            </summary>
+            <param name="marketCode">市场代码</param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.IQuoteBase.GetOptionContractVarietyList">
+            <summary>
+            获取期权品种
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.IQuoteBase.GetNoticeList(System.Collections.Generic.List{IUV.Common.Models.NoticeQueryParam})">
+            <summary>
+            查询通知信息
+            </summary>
+            <param name="noticeParam"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.IQuoteBase.GetTradeSectionsByCache(System.String,System.String)">
+            <summary>
+            通过缓存根据证券代码和市场代码获取交易时间段
+            </summary>
+            <param name="quoteCode">股票代码</param>
+            <param name="marketCode">市场代码</param>
+            <returns>交易时间段</returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.IQuoteBase.GetKeyboradWizardFromServer(System.String,System.Int32,System.Collections.Generic.IList{System.String})">
+            <summary>
+            键盘精灵消息
+            </summary>
+            <param name="prodCode"></param>
+            <param name="maxValue">最大返回个数</param>
+            <param name="hqTypeCodeGroup">需要筛选的证券分类</param>
+            <returns>快照列表</returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.IQuoteBase.GetUnderlyingInfo(System.Collections.Generic.List{System.String})">
+            <summary>
+            期权标的合约查询
+            </summary>
+            <param name="micList">市场列表</param>
+            <returns>各市场的期权标的列表</returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.IQuoteBase.GetTTypeQuotation(System.Collections.Generic.List{IUV.Common.Models.TTypeQuotationFilterParam})">
+            <summary>
+            期权T型报价合约信息查询
+            </summary>
+            <param name="filterParam">筛选条件</param>
+            <returns>T型报价信息</returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.IQuoteBase.Subscribe(System.String,System.String,System.Object,IUV.Common.Models.SubscribeType)">
+            <summary>
+            订阅证券行情
+            <para>
+            注意：需要挂载OnPublished事件委托以收取行情推送
+            </para>
+            </summary>
+            <param name="prodCode">证券代码</param>
+            <param name="marketCode">市场代码</param>
+            <param name="targetObj">订阅的目标对象，不可为空</param>
+            <param name="subType">订阅类型<see cref="T:IUV.Common.Models.SubscribeType"/>，默认为追加订阅</param>
+        </member>
+        <member name="M:IUV.Adapter.Quote.IQuoteBase.SubscribeOptionIndex(System.String,System.String,System.Object,IUV.Common.Models.SubscribeType)">
+            <summary>
+            
+            </summary>
+            <param name="prodCode"></param>
+            <param name="marketCode"></param>
+            <param name="targetObj"></param>
+            <param name="subType"></param>
+        </member>
+        <member name="M:IUV.Adapter.Quote.IQuoteBase.SubscribeBankHQ(System.String,IUV.Common.Models.BankSubscribeThemeType,System.Object,IUV.Common.Models.SubscribeType)">
+            <summary>
+            
+            </summary>
+            <param name="marketCode"></param>
+            <param name="themeType"></param>
+            <param name="targetObj"></param>
+            <param name="subType"></param>
+        </member>
+        <member name="M:IUV.Adapter.Quote.IQuoteBase.Subscribe(IUV.Common.Models.QuoteCode,System.Object,IUV.Common.Models.SubscribeType)">
+            <summary>
+            订阅证券行情
+            <para>
+            注意：需要挂载OnPublished事件委托以收取行情推送
+            </para>
+            </summary>
+            <param name="productKey">证券标识</param>
+            <param name="targetObj">订阅的目标对象，不可为空</param>
+            <param name="subType">订阅类型<see cref="T:IUV.Common.Models.SubscribeType"/>，默认为追加订阅</param>
+        </member>
+        <member name="M:IUV.Adapter.Quote.IQuoteBase.Subscribe(System.Collections.Generic.IList{IUV.Common.Models.QuoteCode},System.Object,IUV.Common.Models.SubscribeType)">
+            <summary>
+            批量订阅证券行情
+            <para>
+            注意：需要挂载OnPublished事件委托以收取行情推送
+            </para>
+            </summary>
+            <param name="productKeys">证券标识集合</param>
+            <param name="targetObj">订阅的目标对象，不可为空</param>
+            <param name="subType">订阅类型<see cref="T:IUV.Common.Models.SubscribeType"/>，默认为追加订阅</param>
+        </member>
+        <member name="M:IUV.Adapter.Quote.IQuoteBase.SubscribeGroup(System.Collections.Generic.IList{IUV.Common.Models.QuoteCode},System.Collections.Generic.IList{IUV.Common.Models.QuoteCode},System.Object,IUV.Common.Models.SubscribeType)">
+            <summary>
+            订阅组合证券行情
+            </summary>
+            <para>
+            注意：需要挂载OnPublished事件委托以收取行情推送
+            </para>
+            <param name="cacheKeys">缓存的证券标识集合</param>
+            <param name="productKeys">证券标识集合</param>
+            <param name="targetObj">订阅的目标对象，不可为空</param>
+            <param name="subType">订阅类型<see cref="T:IUV.Common.Models.SubscribeType"/>，默认为追加订阅</param>
+        </member>
+        <member name="M:IUV.Adapter.Quote.IQuoteBase.CancelSubscribe(System.Object)">
+            <summary>
+            取消订阅所有证券行情
+            </summary>
+            <param name="targetObj">取消订阅的目标对象，不可为空</param>
+        </member>
+        <member name="M:IUV.Adapter.Quote.IQuoteBase.CancelSubscribe(System.String,System.String,System.Object)">
+            <summary>
+            取消订阅证券行情
+            </summary>
+            <param name="prodCode">证券代码</param>
+            <param name="marketCode">市场代码</param>
+            <param name="targetObj">取消订阅的目标对象，不可为空</param>
+        </member>
+        <member name="M:IUV.Adapter.Quote.IQuoteBase.CancelSubscribe(IUV.Common.Models.QuoteCode,System.Object)">
+            <summary>
+            取消订阅证券行情
+            </summary>
+            <param name="productKey">证券标识</param>
+            <param name="targetObj">取消订阅的目标对象，不可为空</param>
+        </member>
+        <member name="M:IUV.Adapter.Quote.IQuoteBase.CancelSubscribe(System.Collections.Generic.IList{IUV.Common.Models.QuoteCode},System.Object)">
+            <summary>
+            批量取消订阅证券行情
+            </summary>
+            <param name="productKeys">证券标识集合</param>
+            <param name="targetObj">取消订阅的目标对象，不可为空</param>
+        </member>
+        <member name="P:IUV.Adapter.Quote.IQuoteBase.ConnectedServers">
+            <summary>
+            获取已连接服务器信息
+            </summary>
+        </member>
+        <member name="P:IUV.Adapter.Quote.IQuoteBase.CachedData">
+            <summary>
+            行情适配器缓存对象
+            <para>包含全市场代码列表,市场分类,行情订阅列表等数据</para>
+            </summary>
+        </member>
+        <member name="P:IUV.Adapter.Quote.IQuoteBase.AnomalySignal">
+            <summary>
+            异动信号接口
+            </summary>
+        </member>
+        <member name="P:IUV.Adapter.Quote.IQuoteBase.MonitoringSignal">
+            <summary>
+            盯盘信号接口
+            </summary>
+        </member>
+        <member name="M:IUV.Adapter.Quote.IQuoteBase.ServerSwitch(IUV.Common.Models.ServerInfo,IUV.Common.Models.ServerInfo)">
+            <summary>
+            服务器切换
+            </summary>
+            <param name="server">服务器地址信息</param>
+            <param name="originalServer">原服务器地址，填入则用新地址替换该地址，默认为空</param>
+            <returns>切换是否成功</returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.IQuoteBase.ServerTest(IUV.Common.Models.ServerInfo@,System.Action{System.Int32,IUV.Common.Models.ServerInfo})">
+            <summary>
+            服务器测速
+            </summary>
+            <param name="server">服务器地址信息，测速完成返回测速结果</param>
+            <param name="callback">测速回调委托，传入则异步测速，并在测速完成时回调
+            <para>参数说明：1-测速地址索引，2-当前测速服务器</para></param>
+        </member>
+        <member name="M:IUV.Adapter.Quote.IQuoteBase.ServerTest(System.Collections.Generic.List{IUV.Common.Models.ServerInfo}@,System.Action{System.Int32,IUV.Common.Models.ServerInfo})">
+            <summary>
+            服务器测速
+            <para>批量测速</para>
+            </summary>
+            <param name="servers">服务器地址信息，测速完成返回测速结果</param>
+            <param name="callback">测速回调委托，传入则异步测速，并在每个地址测速完成时回调
+            <para>参数说明：1-测速地址索引，2-当前测速服务器</para></param>
+        </member>
+        <member name="M:IUV.Adapter.Quote.IQuoteBase.Init(IUV.Adapter.Quote.AdapterConfig)">
+            <summary>
+            初始化行情适配器
+            <para>只进行配置加载</para>
+            </summary>
+            <param name="config">配置对象</param>
+        </member>
+        <member name="M:IUV.Adapter.Quote.IQuoteBase.InitAnomalySignal">
+            <summary>
+            初始化异动信号接口
+            </summary>
+        </member>
+        <member name="M:IUV.Adapter.Quote.IQuoteBase.InitMonitoringSignal">
+            <summary>
+            初始化盯盘信号接口
+            </summary>
+        </member>
+        <member name="M:IUV.Adapter.Quote.IQuoteBase.Connect(System.Int32)">
+            <summary>
+            连接到行情服务器
+            <para>必须初始化以后建立连接</para>
+            </summary>
+            <param name="timeout">超时时间，单位秒
+            <para>默认10秒，-1表示异步初始化</para></param>
+        </member>
+        <member name="M:IUV.Adapter.Quote.IQuoteBase.Dispose">
+            <summary>
+            释放连接
+            </summary>
+        </member>
+        <member name="M:IUV.Adapter.Quote.IQuoteBase.GetQuoteLevel(System.String)">
+            <summary>
+            获取市场的行情级别（返回-1时，表示不存在该市场的行情级别。）
+            </summary>
+            <param name="mic">市场MIC码</param>
+            <returns>行情级别</returns>
+        </member>
+        <member name="M:IUV.Adapter.Quote.IQuoteBase.IsCloneSnapshot">
+            <summary>
+            是否克隆的快照
+            </summary>
+            <returns>布尔类型 true:是  false:否</returns>
+        </member>
+        <member name="P:IUV.Adapter.Quote.IQuoteBase.ProductFilterHandler">
+            <summary>
+            品种代码过滤器
+            </summary>
+        </member>
+        <member name="T:IUV.Adapter.Quote.ProductFilterHandler">
+            <summary>
+            品种代码过滤器
+            </summary>
+            <param name="markets"></param>
+            <param name="products"></param>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<IndexsFunction> 
+<!--
+
+/////////////////////  指标函数格式  ////////////////////////////////////////////////////////////////////////////////////////
+//支持的数字，变量，函数的四则混合运算。
+//支持的运算符 ： 加+  减-  乘*  除/  and or not 大于> 小于< 大于等于>=  小于等于<=  不等于<>  逻辑等于=
+//支持使用小括号()
+//
+//取指标的值：  {$指标名称}  表示 。
+//
+//
+//目前支持函数:
+//  IfThen(Condition, ValueTrue, ValueFalse) //如果Condition为true，则返回ValueTrue，否则返回ValueFalse
+//  IT(Condition, ValueTrue, ValueFalse) 同 IfThen
+//
+//  IsValidDouble(ValueDouble) //是否是有效的Double值
+//  IVD(ValueDouble) 同 IsValidDouble
+//
+//  IsValidFloat(ValueFloat)  //是否是有效的Float值
+//  IVF(ValueFloat) 同 IsValidFloat
+//
+//  NullDouble() 返回无效double值 Null_Double
+//  ND() 同 NullDouble
+//
+//  HFQ(last_px) //最新价后复权，参数传入最新价
+//
+//可定义变量。例如： X:={$last_px}; 定义变量X， X等于最新收盘价
+//
+//一条合法的指标函数公式可以包含若干变量定义语句(也可以没有变量定义语句)和一个表达式，
+//且表达式必须出现在公式的最后面， 该表达式的值作为公式的返回值。
+//例如：
+//  X:={$last_px}; Y:={$prev_px}; IfThen(not IsValidDouble(X), Y, X) //如果最新价不是Null_Double，则取最新价，否则取前收价
+//
+//
+// 请保证公式格式正确。因为本公式解析器没有做错误处理和类型检查，不合法的格式会导致不可预知的错误
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+-->
+
+  <Market name="default"> 
+    <Index name="BuyVolumeDiffLot1" caption="买量差1(手)" func="{$BuyVolumeDiff1} / 100"/>  
+    <Index name="BuyVolumeDiffLot2" caption="买量差2(手)" func="{$BuyVolumeDiff2} / 100"/>  
+    <Index name="BuyVolumeDiffLot3" caption="买量差3(手)" func="{$BuyVolumeDiff3} / 100"/>  
+    <Index name="BuyVolumeDiffLot4" caption="买量差4(手)" func="{$BuyVolumeDiff4} / 100"/>  
+    <Index name="BuyVolumeDiffLot5" caption="买量差5(手)" func="{$BuyVolumeDiff5} / 100"/>  
+    <Index name="BuyVolumeDiffLot6" caption="买量差6(手)" func="{$BuyVolumeDiff6} / 100"/>  
+    <Index name="BuyVolumeDiffLot7" caption="买量差7(手)" func="{$BuyVolumeDiff7} / 100"/>  
+    <Index name="BuyVolumeDiffLot8" caption="买量差8(手)" func="{$BuyVolumeDiff8} / 100"/>  
+    <Index name="BuyVolumeDiffLot9" caption="买量差9(手)" func="{$BuyVolumeDiff9} / 100"/>  
+    <Index name="BuyVolumeDiffLot10" caption="买量差10(手)" func="{$BuyVolumeDiff10} / 100"/>  
+    <Index name="SellVolumeDiffLot1" caption="卖量差1(手)" func="{$SellVolumeDiff1} / 100"/>  
+    <Index name="SellVolumeDiffLot2" caption="卖量差2(手)" func="{$SellVolumeDiff2} / 100"/>  
+    <Index name="SellVolumeDiffLot3" caption="卖量差3(手)" func="{$SellVolumeDiff3} / 100"/>  
+    <Index name="SellVolumeDiffLot4" caption="卖量差4(手)" func="{$SellVolumeDiff4} / 100"/>  
+    <Index name="SellVolumeDiffLot5" caption="卖量差5(手)" func="{$SellVolumeDiff5} / 100"/>  
+    <Index name="SellVolumeDiffLot6" caption="卖量差6(手)" func="{$SellVolumeDiff6} / 100"/>  
+    <Index name="SellVolumeDiffLot7" caption="卖量差7(手)" func="{$SellVolumeDiff7} / 100"/>  
+    <Index name="SellVolumeDiffLot8" caption="卖量差8(手)" func="{$SellVolumeDiff8} / 100"/>  
+    <Index name="SellVolumeDiffLot9" caption="卖量差9(手)" func="{$SellVolumeDiff9} / 100"/>  
+    <Index name="SellVolumeDiffLot10" caption="卖量差10(手)" func="{$SellVolumeDiff10} / 100"/>  
+    <Index name="same_count" caption="持平家数" func="{$member_count} - {$rise_count} - {$fall_count}"/>  
+    <Index name="AmountChange" caption="增仓" func="{$amount} - {$prev_amount}"/>  
+    <Index name="change_rate_5days" caption="5日涨跌幅"   func="L:={$last_px};  P:={$PrevClose5Days};   X:=(L - P)/P * 100; IT(not IVD(L) or not IVD(P) or L=0 or P=0, ND(), X)"/>  
+    <Index name="change_rate_10days" caption="10日涨跌幅" func="L:={$last_px};  P:={$PrevClose10Days};  X:=(L - P)/P * 100; IT(not IVD(L) or not IVD(P) or L=0 or P=0, ND(), X)" />  
+    <Index name="change_rate_20days" caption="20日涨跌幅" func= "L:={$last_px}; P:={$PrevClose20Days};  X:=(L - P)/P * 100; IT(not IVD(L) or not IVD(P) or L=0 or P=0, ND(), X)"/>  
+    <Index name="change_rate_60days" caption="60日涨跌幅" func= "L:={$last_px}; P:={$PrevClose60Days};  X:=(L - P)/P * 100; IT(not IVD(L) or not IVD(P) or L=0 or P=0, ND(), X)" />  
+    <Index name="change_rate_120days" caption="120日涨跌幅" func="L:={$last_px};P:={$PrevClose120Days}; X:=(L - P)/P * 100; IT(not IVD(L) or not IVD(P) or L=0 or P=0, ND(), X)" />  
+    <Index name="change_rate_250days" caption="250日涨跌幅" func="L:={$last_px};P:={$PrevClose250Days}; X:=(L - P)/P * 100; IT(not IVD(L) or not IVD(P) or L=0 or P=0, ND(), X)"/>  
+    <Index name="change_rate_lastyear" caption="年初至今涨跌幅" func="L:={$last_px};P:={$PrevCloseLastYear};X:=(L-P)/P*100; IT(not IVD(L) or not IVD(P) or L=0 or P=0, ND(), X)"/>  
+    <Index name="latest_change_rate" caption="最新涨幅" func="Fund_NAV:={$Fund_NAV};Fund_PrevNAV:={$Fund_PrevNAV}; IT(not IVD(Fund_NAV) or Fund_NAV=0 or not IVD(Fund_PrevNAV) or Fund_PrevNAV=0, ND(), Fund_NAV/Fund_PrevNAV*100 - 100)"/> 
+    <Index name="TotalVolume" caption="总成交量(股)" func="{$business_amount}"/> 
+	
+	<Index name="change_rate_1month" caption="近1月涨跌幅"   func="L:=HFQ({$last_px});  P:={$PreCloseLast1Month};   X:=(L - P)/P * 100; IT(not IVD(L) or not IVD(P) or L=0 or P=0, ND(), X)"/>  
+	<Index name="change_rate_3month" caption="近3月涨跌幅"   func="L:=HFQ({$last_px});  P:={$PreCloseLast3Month};   X:=(L - P)/P * 100; IT(not IVD(L) or not IVD(P) or L=0 or P=0, ND(), X)"/>  
+	<Index name="change_rate_6month" caption="近6月涨跌幅"   func="L:=HFQ({$last_px});  P:={$PreCloseLast6Month};   X:=(L - P)/P * 100; IT(not IVD(L) or not IVD(P) or L=0 or P=0, ND(), X)"/>  
+	<Index name="change_rate_1year" caption="近1年涨跌幅"   func="L:=HFQ({$last_px});  P:={$PreCloseLast1Year};   X:=(L - P)/P * 100; IT(not IVD(L) or not IVD(P) or L=0 or P=0, ND(), X)"/>  
+	<Index name="change_rate_2year" caption="近2年涨跌幅"   func="L:=HFQ({$last_px});  P:={$PreCloseLast2Year};   X:=(L - P)/P * 100; IT(not IVD(L) or not IVD(P) or L=0 or P=0, ND(), X)"/>  
+	<Index name="change_rate_3year" caption="近3年涨跌幅"   func="L:=HFQ({$last_px});  P:={$PreCloseLast3Year};   X:=(L - P)/P * 100; IT(not IVD(L) or not IVD(P) or L=0 or P=0, ND(), X)"/>  
+	<Index name="change_rate_thisyear" caption="今年以来涨跌幅"   func="L:=HFQ({$last_px});  P:={$PrevCloseLastYearafterReinstatement};   X:=(L - P)/P * 100; IT(not IVD(L) or not IVD(P) or L=0 or P=0, ND(), X)"/>  
+    <Index name="change_rate_1day" caption="日回报" func="{$px_change_rate}" />
+  </Market> 
+  <Market name="S.SH,S.SZ,S.OC,S.CSI,S.HK,S"> 
+	<Index name="TotalVolume" caption="总成交量(股)" func="{$business_amount} * 100"/> 
+  </Market> 
+</IndexsFunction>

@@ -1,0 +1,162 @@
+<?xml version="1.0"?>
+<MarketMenuItems>
+  <MarketMenuItem ID="0"  Description ="全部">
+    <MenuItem Name = "沪深"  MarketCode = "XSHG.ESA.M,XSHE.ESA.M,XSHG.N,XSHG.KSH,XSHG.ER,XSHE.N,XSHE.ESA.SMSE,XSHE.ESA.GEM" ParentName= "" InitSubItemsBySdk = "false"/>
+    <MenuItem Name = "沪深A股"  MarketCode = "XSHG.ESA.M,XSHE.ESA.M" ParentName = "沪深" InitSubItemsBySdk = "false"/>
+    <MenuItem Name = "沪深B股"  MarketCode = "XSHG.ESB,XSHE.ESB" ParentName = "沪深" InitSubItemsBySdk = "false"/>
+    <MenuItem Name = "沪深债券"  MarketCode = "XSHG.D,XSHE.D" ParentName = "沪深" InitSubItemsBySdk = "false"/>
+    <MenuItem Name = "沪深基金"  MarketCode = "XSHG.EU,XSHE.EU" ParentName = "沪深" InitSubItemsBySdk = "false"/>
+	<!-- 上海A股包含科创板 -->
+    <MenuItem Name = "上海A股"  MarketCode = "XSHG.ESA.M,XSHG.KSH" ParentName = "沪深" InitSubItemsBySdk = "false"/>
+    <MenuItem Name = "上海B股"  MarketCode = "XSHG.ESB" ParentName = "沪深" InitSubItemsBySdk = "false"/>
+    <MenuItem Name = "上海债券"  MarketCode = "XSHG.D" ParentName = "沪深" InitSubItemsBySdk = "false"/>
+    <MenuItem Name = "上海基金"  MarketCode = "XSHG.EU" ParentName = "沪深" InitSubItemsBySdk = "false"/>
+	<!-- 深圳A股包含中小板和创业板 -->
+    <MenuItem Name = "深圳A股"  MarketCode = "XSHE.ESA.M,XSHE.ESA.SMSE,XSHE.ESA.GEM" ParentName = "沪深" InitSubItemsBySdk = "false"/>
+    <MenuItem Name = "深圳B股"  MarketCode = "XSHE.ESB" ParentName = "沪深" InitSubItemsBySdk = "false"/>
+    <MenuItem Name = "深圳债券"  MarketCode = "XSHE.D" ParentName = "沪深" InitSubItemsBySdk = "false"/>
+    <MenuItem Name = "深圳基金"  MarketCode = "XSHE.EM.SF,XSHE.EM.ETF,XSHE.EM.LOF,XSHE.EM.CEF" ParentName = "沪深" InitSubItemsBySdk = "false"/>
+    <!-- <MenuItem Name = "中小板"  MarketCode = "XSHE.ESA.SMSE" ParentName= "" InitSubItemsBySdk = "false"/> -->
+    <MenuItem Name = "创业板"  MarketCode = "XSHE.ESA.GEM" ParentName= "" InitSubItemsBySdk = "false"/>
+    <MenuItem Name = "科创板"  MarketCode = "XSHG.KSH" ParentName= "" InitSubItemsBySdk = "false"/>
+    <MenuItem Name = "概念"  MarketCode = "XBHS.GN" ParentName= "" InitSubItemsBySdk = "true"/>
+    <MenuItem Name = "地域"  MarketCode = "XBHS.DY" ParentName= "" InitSubItemsBySdk = "true"/>
+    <MenuItem Name = "行业"  MarketCode = "XBHS.HY,XBHS.ZJHHY" ParentName= "" InitSubItemsBySdk = "true"/>
+    <!--<MenuItem Name = "自选股"  MarketCode = "WDZX" ParentName= "" InitSubItemsBySdk = "false"/>-->
+    <!--<MenuItem Name = "自定义"  MarketCode = "WDBK" ParentName= "" InitSubItemsBySdk = "false"/>-->
+    <MenuItem Name = "股转(新三板)"  MarketCode = "NEEQ" ParentName= "" InitSubItemsBySdk = "false"/>
+
+    <MenuItem Name = "基金"  MarketCode = "XSHG.EU,XSHE.EU" ParentName= "" InitSubItemsBySdk = "false"/>
+    <MenuItem Name = "基金"  MarketCode = "XSHG.EU,XSHE.EU" ParentName= "基金" InitSubItemsBySdk = "false"/>
+    <MenuItem Name = "ETF"  MarketCode = "XSHG.EM.ETF,XSHE.EM.ETF" ParentName = "基金" InitSubItemsBySdk = "false"/>
+    <MenuItem Name = "LOF"  MarketCode = "XSHG.EM.LOF,XSHE.EM.LOF" ParentName= "基金" InitSubItemsBySdk = "false"/>
+    <MenuItem Name = "QDII"  MarketCode = "XSHE.EM.LOF" ParentName= "基金" InitSubItemsBySdk = "false"/>
+    <MenuItem Name = "上证基金"  MarketCode = "XSHG.EU" ParentName= "基金" InitSubItemsBySdk = "false"/>
+    <MenuItem Name = "分级基金"  MarketCode = "XSHG.EM.SF,XSHE.EM.SF" ParentName= "基金" InitSubItemsBySdk = "false"/>
+    <MenuItem Name = "深证基金"  MarketCode = "XSHE.EM.SF,XSHE.EM.ETF,XSHE.EM.LOF,XSHE.EM.CEF" ParentName= "基金" InitSubItemsBySdk = "false"/>
+    <MenuItem Name = "债券型基金"  MarketCode = "XSHG.D,XSHE.D" ParentName= "基金" InitSubItemsBySdk = "false"/>
+    <MenuItem Name = "封闭式基金"  MarketCode = "XSHG.EM.CEF,XSHE.EM.CEF" ParentName= "基金" InitSubItemsBySdk = "false"/>
+    <MenuItem Name = "开放式基金"  MarketCode = "XSHG.EM.LOF" ParentName= "基金" InitSubItemsBySdk = "false"/>
+    <MenuItem Name = "混合型基金"  MarketCode = "XSHG.EM.LOF,XSHG.EM.SF" ParentName= "基金" InitSubItemsBySdk = "false"/>
+    <MenuItem Name = "股票型基金"  MarketCode = "XSHE.EM.SF" ParentName= "基金" InitSubItemsBySdk = "false"/>
+    <MenuItem Name = "货币型基金"  MarketCode = "XSHG.EM.ETF" ParentName= "基金" InitSubItemsBySdk = "false"/>
+
+    <MenuItem Name = "期货"  MarketCode = "CCFX,XSGE,XDCE,XZCE,XINE" ParentName= "" InitSubItemsBySdk = "false"/>
+    <MenuItem Name = "中金期货"  MarketCode = "CCFX" ParentName = "期货" InitSubItemsBySdk = "false"/>
+    <MenuItem Name = "上海商品"  MarketCode = "XSGE" ParentName = "期货" InitSubItemsBySdk = "false"/>
+    <MenuItem Name = "大连商品"  MarketCode = "XDCE" ParentName = "期货" InitSubItemsBySdk = "false"/>
+    <MenuItem Name = "郑州商品"  MarketCode = "XZCE" ParentName = "期货" InitSubItemsBySdk = "false"/>
+    <MenuItem Name = "上海能源"  MarketCode = "XINE" ParentName = "期货" InitSubItemsBySdk = "false"/>
+    <MenuItem Name = "期权"  MarketCode = "XSHO,XSZO,XSGE-O,XDCE-O,XZCE-O" ParentName= "" InitSubItemsBySdk = "false"/>
+    <MenuItem Name = "上海个股期权"  MarketCode = "XSHO" ParentName = "期权" InitSubItemsBySdk = "false"/>
+    <MenuItem Name = "深圳个股期权"  MarketCode = "XSZO" ParentName = "期权" InitSubItemsBySdk = "false"/>
+    <MenuItem Name = "上海商品期权"  MarketCode = "XSGE-O" ParentName = "期权" InitSubItemsBySdk = "false"/>
+    <MenuItem Name = "大连商品期权"  MarketCode = "XDCE-O" ParentName = "期权" InitSubItemsBySdk = "false"/>
+    <MenuItem Name = "郑州商品期权"  MarketCode = "XZCE-O" ParentName = "期权" InitSubItemsBySdk = "false"/>
+
+    <MenuItem Name = "港股"  MarketCode = "XHKG" ParentName= "" InitSubItemsBySdk = "false"/>
+    <MenuItem Name = "香港主板"  MarketCode ="XHKG-M.ES" ParentName= "港股" InitSubItemsBySdk = "false"/>
+    <MenuItem Name = "创业板"  MarketCode = "XHKG-G" ParentName = "港股" InitSubItemsBySdk = "false"/>
+    <MenuItem Name = "指数"  MarketCode = "XHKG-I.MRI" ParentName= "港股" InitSubItemsBySdk = "false"/>
+    <MenuItem Name = "沪港通"  MarketCode = "XHKG-SS" ParentName= "港股" InitSubItemsBySdk = "false"/>
+    <MenuItem Name = "深港通"  MarketCode = "XHKG-SZ" ParentName= "港股" InitSubItemsBySdk = "false"/>
+  </MarketMenuItem>
+
+  <MarketMenuItem ID="1"  Description ="沪深">
+    <MenuItem Name = "全部A股"  BlockId = "1101001" BlockCode="X00001.XI" MarketCode="XBCJHS" ParentName = "" InitSubItemsBySdk = "false"  DataSourceType="ComponentData"/>
+    <MenuItem Name = "全部B股"  BlockId = "1101009" BlockCode="X00008.XI" MarketCode="XBCJHS" ParentName = "" InitSubItemsBySdk = "false" DataSourceType="ComponentData"/>
+    <!-- <MenuItem Name = "主板A股"  MarketCode = "1101004,1101005" ParentName= "" InitSubItemsBySdk = "false" DataSourceType="ComponentData"/> -->
+    <MenuItem Name = "创业板"  BlockId = "1101006" BlockCode="X00005.XI" MarketCode="XBCJHS" ParentName= "" InitSubItemsBySdk = "false" DataSourceType="ComponentData"/>
+    <MenuItem Name = "科创板"  BlockId = "1101025" BlockCode="X00032.XI" MarketCode="XBCJHS" ParentName= "" InitSubItemsBySdk = "false" DataSourceType="ComponentData"/>
+    <MenuItem Name = "陆股通"  BlockId = "1101007,1101008" ParentName= "" InitSubItemsBySdk = "false"  DataSourceType="ComponentData"/>
+    <MenuItem Name = "自选股"  MarketCode = "自选股" ParentName= "" InitSubItemsBySdk = "false" />
+    <MenuItem Name = "行业"  BlockId = "1104,1102" ParentName= "" InitSubItemsBySdk = "true"  DataSourceType="ComponentData" />
+    <MenuItem Name = "概念"  BlockId = "1108" ParentName= "" InitSubItemsBySdk = "true" DataSourceType="ComponentData"/>
+    <MenuItem Name = "地域"  BlockId = "1109" ParentName= "" InitSubItemsBySdk = "true" DataSourceType="ComponentData" IsShowByTree="true"/>
+  </MarketMenuItem>
+
+  <MarketMenuItem ID="2"  Description ="港股">
+    <MenuItem Name = "恒指成分股"  BlockId = "1405001" BlockCode="X07451.XI" MarketCode="XBCJHK"  ParentName = "" InitSubItemsBySdk = "false" DataSourceType="ComponentData"/>
+    <MenuItem Name = "含A股的H股"  BlockId = "1401006" BlockCode="X07090.XI" MarketCode="XBCJHK"  ParentName = "" InitSubItemsBySdk = "false" DataSourceType="ComponentData"/>
+    <MenuItem Name = "H股" BlockId = "1401005" ParentName= "" InitSubItemsBySdk = "false" DataSourceType="ComponentData"/>
+    <MenuItem Name = "红筹股" BlockId = "1401007" BlockCode="X07091.XI" MarketCode="XBCJHK"  ParentName= "" InitSubItemsBySdk = "false" DataSourceType="ComponentData"/>
+    <!-- <MenuItem Name = "港股主板"  BlockId = "1401002" ParentName= "" InitSubItemsBySdk = "false" DataSourceType="ComponentData"/> -->
+    <!-- <MenuItem Name = "创业板"  BlockId = "1401003" ParentName= "" InitSubItemsBySdk = "false" DataSourceType="ComponentData"/> -->
+    <MenuItem Name = "港股通"  BlockId = "1401009,1401010" ParentName= "" InitSubItemsBySdk = "false" DataSourceType="ComponentData"/>
+    <MenuItem Name = "全部港股"  BlockId = "1401001" ParentName= "" InitSubItemsBySdk = "false" DataSourceType="ComponentData"/>
+    <MenuItem Name = "自选股"  MarketCode = "自选股" ParentName= "" InitSubItemsBySdk = "false"/>
+    <MenuItem Name = "基金"  MarketCode = "XHKG-M.TR.REIT,XHKG-M.TR.ETF,XHKG-M.TR" ParentName= "" InitSubItemsBySdk = "false"/>
+    <MenuItem Name = "涡轮"  MarketCode = "XHKG-M.RW.EW.CALL,XHKG-M.RW.DW.PUT,XHKG-M.RW.DW.CALL" ParentName= "" InitSubItemsBySdk = "false"/>
+    <MenuItem Name = "牛熊证"  MarketCode = "XHKG-M.RW.CBBC.CALL,XHKG-M.RW.CBBC.PUT" ParentName= "" InitSubItemsBySdk = "false"/>
+  </MarketMenuItem>
+  <MarketMenuItem ID="3"  Description ="场内基金">
+    <MenuItem Name = "上证基金"  BlockId = "1211003" ParentName= "" InitSubItemsBySdk = "false" DataSourceType="ComponentData"/>
+    <MenuItem Name = "深证基金"  BlockId = "1211004" ParentName= "" InitSubItemsBySdk = "false"  DataSourceType="ComponentData"/>
+    <MenuItem Name = "ETF基金"  BlockId = "1211006" ParentName= "" InitSubItemsBySdk = "false"  DataSourceType="ComponentData"/>
+    <MenuItem Name = "LOF基金"  BlockId = "1211005" ParentName= "" InitSubItemsBySdk = "false"  DataSourceType="ComponentData"/>
+  </MarketMenuItem>
+  <MarketMenuItem ID="4"  Description ="开放式基金">
+    <MenuItem Name = "全部"  BlockId = "1201003001" ParentName= "" InitSubItemsBySdk = "false"  DataSourceType="ComponentData"/>
+    <MenuItem Name = "股票型基金"  BlockId = "1210002007" ParentName= "" InitSubItemsBySdk = "false" DataSourceType="ComponentData"/>
+    <MenuItem Name = "混合型基金"  BlockId = "1201003001002001" ParentName= "" InitSubItemsBySdk = "false" DataSourceType="ComponentData"/>
+    <MenuItem Name = "债券型基金"  BlockId = "1201003001002003" ParentName= "" InitSubItemsBySdk = "false" DataSourceType="ComponentData"/>
+    <MenuItem Name = "货币型基金"  BlockId = "1201003001003" ParentName= "" InitSubItemsBySdk = "false" DataSourceType="ComponentData"/>
+    <MenuItem Name = "QDII基金"  BlockId = "1201003001002" ParentName= "" InitSubItemsBySdk = "false" DataSourceType="ComponentData"/>
+  </MarketMenuItem>
+  <MarketMenuItem ID="5"  Description ="基金指数">
+    <MenuItem Name = "深证基金指数"  BlockId = "1702002" ParentName= "" InitSubItemsBySdk = "false"  DataSourceType="ComponentData"/>
+    <MenuItem Name = "上证基金指数"  BlockId = "1702001" ParentName= "" InitSubItemsBySdk = "false"  DataSourceType="ComponentData"/>
+    <!--<MenuItem Name = "中证基金指数"  BlockId = "1702003001" ParentName= "" InitSubItemsBySdk = "false"  DataSourceType="ComponentData"/>-->
+  </MarketMenuItem>
+
+  <MarketMenuItem ID="6"  Description ="期货商品报价">
+    <MenuItem Name = "中金所"  MarketCode = "CCFX" ParentName= "" InitSubItemsBySdk = "false"/>
+    <MenuItem Name = "上期所"  MarketCode = "XSGE" ParentName= "" InitSubItemsBySdk = "false"/>
+    <MenuItem Name = "上能源"  MarketCode = "XINE" ParentName= "" InitSubItemsBySdk = "false"/>
+    <MenuItem Name = "大商所"  MarketCode = "XDCE" ParentName= "" InitSubItemsBySdk = "false"/>
+    <MenuItem Name = "郑商所"  MarketCode = "XZCE" ParentName= "" InitSubItemsBySdk = "false"/>
+	<MenuItem Name = "上金所"  MarketCode = "SHGE" ParentName= "" InitSubItemsBySdk = "false"/>
+	<MenuItem Name = "夜盘合约"  MarketCode = "CCFX,XSGE,XINE,XDCE,XZCE,SHGE" ParentName= "" InitSubItemsBySdk = "false"/>
+	<MenuItem Name = "主力合约"  MarketCode = "CCFX,XSGE,XINE,XDCE,XZCE,SHGE" ParentName= "" InitSubItemsBySdk = "false"/>
+	<MenuItem Name = "CME"  MarketCode = "CMES" ParentName= "" InitSubItemsBySdk = "false"/>
+	<MenuItem Name = "CBOT"  MarketCode = "XCBT" ParentName= "" InitSubItemsBySdk = "false"/>
+	<MenuItem Name = "COMEX"  MarketCode = "XCEC" ParentName= "" InitSubItemsBySdk = "false"/>
+	<MenuItem Name = "NYMEX"  MarketCode = "XNYM" ParentName= "" InitSubItemsBySdk = "false"/>
+	<!-- <MenuItem Name = "LME"  MarketCode = "XLME" ParentName= "" InitSubItemsBySdk = "false"/> -->
+	<MenuItem Name = "ICE美国"  MarketCode = "ICEU" ParentName= "" InitSubItemsBySdk = "false"/>
+	<MenuItem Name = "ICE欧洲"  MarketCode = "ICEE" ParentName= "" InitSubItemsBySdk = "false"/>
+  </MarketMenuItem>
+  
+  <MarketMenuItem ID="7"  Description ="期权综合屏">
+    <MenuItem Name = "证券期权标的"  MarketCode = "XSHO,XSZO,CCFX-O" ParentName= "" InitSubItemsBySdk = "false"/>
+    <MenuItem Name = "商品期权标的"  MarketCode = "XSGE-O,XDCE-O,XZCE-O" ParentName= "" InitSubItemsBySdk = "false"/>
+    <MenuItem Name = "上交所期权标的"  MarketCode = "XSHO" ParentName= "" InitSubItemsBySdk = "false"/>
+    <MenuItem Name = "深交所期权标的"  MarketCode = "XSZO" ParentName= "" InitSubItemsBySdk = "false"/>
+    <MenuItem Name = "中金所期权标的"  MarketCode = "CCFX-O" ParentName= "" InitSubItemsBySdk = "false"/>
+	<MenuItem Name = "上期所期权标的"  MarketCode = "XSGE-O" ParentName= "" InitSubItemsBySdk = "false"/>
+	<MenuItem Name = "大商所期权标的"  MarketCode = "XDCE-O" ParentName= "" InitSubItemsBySdk = "false"/>
+	<MenuItem Name = "郑商所期权标的"  MarketCode = "XZCE-O" ParentName= "" InitSubItemsBySdk = "false"/>
+  </MarketMenuItem>
+  
+  <MarketMenuItem ID="8"  Description ="场外基金">
+    <MenuItem Name = "全部"  BlockId = "1202" ParentName= "" InitSubItemsBySdk = "false"/>
+    <MenuItem Name = "股票型基金"  BlockId = "1202007" ParentName= "" InitSubItemsBySdk = "false"/>
+    <MenuItem Name = "混合型基金"  BlockId = "1202008" ParentName= "" InitSubItemsBySdk = "false"/>
+    <MenuItem Name = "债券型基金"  BlockId = "1202009" ParentName= "" InitSubItemsBySdk = "false"/>
+    <MenuItem Name = "货币型基金"  BlockId = "1202010" ParentName= "" InitSubItemsBySdk = "false"/>
+	<MenuItem Name = "QDII基金"  BlockId = "1202011" ParentName= "" InitSubItemsBySdk = "false"/>
+	<MenuItem Name = "其他"  BlockId = "1202012" ParentName= "" InitSubItemsBySdk = "false"/>
+  </MarketMenuItem>
+  
+  <MarketMenuItem ID="9"  Description ="北向成分股">
+    <MenuItem Name = "陆股通"  BlockId = "1101027" BlockCode="X00033.XI" MarketCode="XBCJHS" ParentName= "" InitSubItemsBySdk = "false" DataSourceType="ComponentData"/>
+    <MenuItem Name = "沪股通"  BlockId = "1101007" BlockCode="X00006.XI" MarketCode="XBCJHS" ParentName= "" InitSubItemsBySdk = "false" DataSourceType="ComponentData"/>
+    <MenuItem Name = "深股通"  BlockId = "1101008" BlockCode="X00007.XI" MarketCode="XBCJHS" ParentName= "" InitSubItemsBySdk = "false" DataSourceType="ComponentData"/>
+  </MarketMenuItem>
+  
+  <MarketMenuItem ID="10"  Description ="南向成分股">
+    <MenuItem Name = "港股通"  BlockId = "1401009,1401010" BlockCode="X07093.XI" MarketCode="XBCJHK" ParentName= "" InitSubItemsBySdk = "false" DataSourceType="ComponentData"/>
+    <MenuItem Name = "港股通沪"  BlockId = "1401009" BlockCode="X07092.XI" MarketCode="XBCJHK" ParentName= "" InitSubItemsBySdk = "false" DataSourceType="ComponentData"/>
+    <MenuItem Name = "港股通深"  BlockId = "1401010" BlockCode="X07093.XI" MarketCode="XBCJHK" ParentName= "" InitSubItemsBySdk = "false" DataSourceType="ComponentData"/>
+  </MarketMenuItem>
+</MarketMenuItems>

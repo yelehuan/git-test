@@ -1,0 +1,9 @@
+{20220411-161509-518}{INFO} {500384}{1} {} {websocket tryOpen}
+{20220411-161511-580}{INFO} {500384}{26}{} {Ws_Opened}
+{20220411-161512-925}{INFO} {500384}{1} {} {NewsReminder websocket try open}
+{20220411-161513-756}{INFO} {500384}{29}{} {NewsReminder websocket try subscribe}
+{20220411-161513-756}{INFO} {500384}{29}{} {NewsReminder websocket opened}
+{20220411-161514-265}{INFO} {500384}{28}{} {NewsReminder websocket subscribe success}
+{20220411-161518-690}{INFO} {500384}{1} {} {退出接口调用logout...耗时：00:00:00.5032306}
+{20220411-161518-808}{INFO} {500384}{1} {} {NewsReminder websocket unsubscribe}
+{20220411-161518-829}{INFO} {500384}{29}{} {websocket Ws_Closed}

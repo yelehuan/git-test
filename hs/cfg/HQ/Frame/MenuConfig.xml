@@ -1,0 +1,308 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MenuConfig>
+  <PopupMenu key="F6Minute" caption="F6分时图菜单">
+	<Item caption="切换分时/K线[空格键]" bindname="ctMinuteKLine" propname="SwitchKlineMinute" propvalue="true"/>
+    <Item caption="加入自选" image="0">
+      <Item caption="自选股变量菜单" bindname="[Frame]" propname="AddToUserSector" propvalue="[UserSector]" itemtype="mtVar"/>
+    </Item>
+    <Item caption="深度资料" bindname="[Frame]" propname="DoMenuCommand" propvalue="f9"/>
+  </PopupMenu>
+  <PopupMenu key="Minute" caption="分时图菜单">
+    <Item caption="加入自选" image="0">
+      <Item caption="自选股变量菜单" bindname="[Frame]" propname="AddToUserSector" propvalue="[UserSector]" itemtype="mtVar"/>
+    </Item>
+    <Item caption="历史走势" bindname="[Frame]" propname="DoMenuCommand" propvalue="kline"/>
+    <Item caption="闪电预警" bindname="[Frame]" propname="DoMenuCommand" propvalue="monitor"/>
+    <Item caption="成交明细" bindname="[Frame]" propname="DoMenuCommand" propvalue="f1"/>
+  </PopupMenu>  
+  <PopupMenu key="KLine" caption="K线菜单">
+    <Item caption="加入自选" image="0">
+      <Item caption="自选股变量菜单" bindname="[Frame]" propname="AddToUserSector" propvalue="[UserSector]" itemtype="mtVar"/>
+    </Item>
+	<Item caption="闪电预警" bindname="[Frame]" propname="DoMenuCommand" propvalue="monitor" visibleprop="IsShowMonitor"/>
+	<Item caption="-"/>
+    <Item caption="叠加MA(移动平均线)">
+      <Item caption="均线组1" istoggle="true" bindname="kline" propname="Overlay" propvalue="ma1"/>
+      <Item caption="均线组2" istoggle="true" bindname="kline" propname="Overlay" propvalue="ma2"/>
+      <Item caption="均线组3" istoggle="true" bindname="kline" propname="Overlay" propvalue="ma3"/>
+      <Item caption="均线组4" istoggle="true" bindname="kline" propname="Overlay" propvalue="ma4"/>
+      <Item caption="均线组5" istoggle="true" bindname="kline" propname="Overlay" propvalue="ma5"/>
+	  <Item caption="-"/>
+      <Item caption="隐藏均线" istoggle="true" bindname="kline" propname="Overlay" propvalue="null"/>	  
+	  <Item caption="均线参数设置" bindname="kline" propname="Params" propvalue="1"/>	  
+    </Item>
+	<Item caption="叠加其它主图指标">
+    <Item caption="叠加SAR(止损点转向线)" istoggle="true" bindname="kline" propname="Overlay" propvalue="sar"/>
+    <Item caption="叠加BOLL(布林线)" istoggle="true" bindname="kline" propname="Overlay" propvalue="boll"/>
+    </Item>
+	<Item caption="-"/>
+	<Item caption="指标公式管理" bindname="klinecontainer" propname="IndicatorFormulaMgr" propvalue="0"/>
+	
+	<Item caption="-"/>
+	<Item caption="缺口提示">
+      <Item caption="显示1个缺口" istoggle="true" bindname="kline" propname="ShowGapsCount" propvalue="1"/>
+	  <Item caption="显示2个缺口" istoggle="true" bindname="kline" propname="ShowGapsCount" propvalue="2"/>	  
+	  <Item caption="显示3个缺口" istoggle="true" bindname="kline" propname="ShowGapsCount" propvalue="3"/>	
+	  <Item caption="隐藏缺口" istoggle="true" bindname="kline" propname="ShowGapsCount" propvalue="0"/>
+    </Item>	
+	<Item caption="-"/>
+	<Item caption="复权方式" bindname="kline" visibleprop="IsShowAFQDType">
+		<Item caption="不复权" istoggle="true" bindname="kline" propname="ExerType" propvalue="etOriginal" selchangecaption="true"/>
+		<Item caption="后复权" istoggle="true" bindname="kline" propname="ExerType" propvalue="etBackward" selchangecaption="true" visibleprop="IsShowBackwardExerType"/>
+		<Item caption="前复权" istoggle="true" bindname="kline" propname="ExerType" propvalue="etForward" selchangecaption="true" visibleprop="IsShowForwardExerType"/>
+	</Item>
+    <Item caption="周期">
+      <Item caption="日线" istoggle="true" bindname="kline" propname="Period" propvalue="ptDay" selchangecaption="true"/>
+      <Item caption="周线" istoggle="true" bindname="kline" propname="Period" propvalue="ptWeek" selchangecaption="true"/>
+      <Item caption="月线" istoggle="true" bindname="kline" propname="Period" propvalue="ptMonth" selchangecaption="true"/>
+      <Item caption="年线" istoggle="true" bindname="kline" propname="Period" propvalue="ptYear" selchangecaption="true"/>
+      <Item caption="-"/>
+      <Item caption="1分钟线" istoggle="true" bindname="kline" propname="Period" propvalue="pt1Min" selchangecaption="true" visibleprop="PeriodMenuVisisble"/>
+      <Item caption="5分钟线" istoggle="true" bindname="kline" propname="Period" propvalue="pt5Min" selchangecaption="true" visibleprop="PeriodMenuVisisble"/>
+      <Item caption="15分钟线" istoggle="true" bindname="kline" propname="Period" propvalue="pt15Min" selchangecaption="true" visibleprop="PeriodMenuVisisble"/>
+      <Item caption="30分钟线" istoggle="true" bindname="kline" propname="Period" propvalue="pt30Min" selchangecaption="true" visibleprop="PeriodMenuVisisble"/>
+      <Item caption="60分钟线" istoggle="true" bindname="kline" propname="Period" propvalue="pt60Min" selchangecaption="true" visibleprop="PeriodMenuVisisble"/>
+    </Item>
+	<Item caption="-"/>
+    <Item caption="主图类型">
+      <Item caption="趋势线" istoggle="true" bindname="kline" propname="DrawMode" propvalue="DMLine"/>
+      <Item caption="蜡烛线" istoggle="true" bindname="kline" propname="DrawMode" propvalue="DMCandle"/>
+      <Item caption="美国线" istoggle="true" bindname="kline" propname="DrawMode" propvalue="DMStick"/>
+      <Item caption="宝塔线" istoggle="true" bindname="kline" propname="DrawMode" propvalue="DMTower"/>
+      <Item caption="面积图" istoggle="true" bindname="kline" propname="DrawMode" propvalue="DMArea"/>
+    </Item>
+    <Item caption="主图坐标">
+      <Item caption="普通坐标" istoggle="true" bindname="kline" propname="CoordType" propvalue="CTNormal"/>
+      <Item caption="百分比坐标" istoggle="true" bindname="kline" propname="CoordType" propvalue="CTPercent"/>
+      <Item caption="对数坐标" istoggle="true" bindname="kline" propname="CoordType" propvalue="CTLogarithm" visibleprop="IsShowLogarithmCoord"/>
+	  <Item caption="整数坐标" istoggle="true" bindname="kline" propname="CoordType" propvalue="CTInteger"/>
+    </Item>
+	<Item caption="网格">
+		<Item caption="显示横坐标线" istoggle="true" bindname="klinecontainer" propname="IsShowHorizontalLine" propvalue="true"/>
+		<Item caption="显示纵坐标线" istoggle="true" bindname="klinecontainer" propname="IsShowVerticalLine" propvalue="true"/>
+	</Item>
+    <Item caption="图表偏移">
+      <Item caption="无" istoggle="true" bindname="klinecontainer" propname="Offset" propvalue="0"/>
+      <Item caption="30像素" istoggle="true" bindname="klinecontainer" propname="Offset" propvalue="30"/>
+      <Item caption="60像素" istoggle="true" bindname="klinecontainer" propname="Offset" propvalue="60"/>
+      <Item caption="120像素" istoggle="true" bindname="klinecontainer" propname="Offset" propvalue="120"/>
+      <Item caption="180像素" istoggle="true" bindname="klinecontainer" propname="Offset" propvalue="180"/>
+    </Item>
+	<Item caption="切换时锁定K线时段" istoggle="true" bindname="kline" propname="Locked" propvalue="true"/>
+    <Item caption="显示K线浮动面板" istoggle="true" bindname="klinecontainer" propname="showfloatpanel" propvalue="true"/>
+    <Item caption="显示十字光标" istoggle="true" bindname="klinecontainer" propname="ShowCross" propvalue="true"/>
+	<Item caption="-"/>
+		<Item caption="显示成交量" istoggle="true" bindname="klinevolume" propname="visible" propvalue="true"/>
+		<Item caption="显示成交额" istoggle="true" bindname="klineamount" propname="visible" propvalue="true"/>
+    <Item caption="-"/>
+    <Item caption="显示筹码" istoggle="true" bindname="kline" propname="ShowChip" propvalue="true" visibleprop="IsShowChip"/>
+	<Item caption="显示历史分时" bindname="klinecontainer" propname="ShowHistoryMinute" propvalue="false" visibleprop="ShowHistoryMinute"/>
+	
+  </PopupMenu>
+  <PopupMenu key="KLine_Fix" caption="K线附图菜单">
+    <Item caption="加入自选" image="0">
+      <Item caption="自选股变量菜单" bindname="[Frame]" propname="AddToUserSector" propvalue="[UserSector]" itemtype="mtVar"/>
+    </Item>
+    <Item caption="主图类型">
+      <Item caption="趋势线" istoggle="true" bindname="kline" propname="DrawMode" propvalue="DMLine"/>
+      <Item caption="蜡烛线" istoggle="true" bindname="kline" propname="DrawMode" propvalue="DMCandle"/>
+      <Item caption="美国线" istoggle="true" bindname="kline" propname="DrawMode" propvalue="DMStick"/>
+      <Item caption="宝塔线" istoggle="true" bindname="kline" propname="DrawMode" propvalue="DMTower"/>
+      <Item caption="面积图" istoggle="true" bindname="kline" propname="DrawMode" propvalue="DMArea"/>
+    </Item>
+    <Item caption="周期">
+      <Item caption="日线" istoggle="true" bindname="kline" propname="Period" propvalue="ptDay" selchangecaption="true"/>
+      <Item caption="周线" istoggle="true" bindname="kline" propname="Period" propvalue="ptWeek" selchangecaption="true"/>
+      <Item caption="月线" istoggle="true" bindname="kline" propname="Period" propvalue="ptMonth" selchangecaption="true"/>
+      <Item caption="年线" istoggle="true" bindname="kline" propname="Period" propvalue="ptYear" selchangecaption="true"/>
+      <Item caption="-"/>
+      <Item caption="1分钟线" istoggle="true" bindname="kline" propname="Period" propvalue="pt1Min" selchangecaption="true"/>
+      <Item caption="5分钟线" istoggle="true" bindname="kline" propname="Period" propvalue="pt5Min" selchangecaption="true"/>
+      <Item caption="15分钟线" istoggle="true" bindname="kline" propname="Period" propvalue="pt15Min" selchangecaption="true"/>
+      <Item caption="30分钟线" istoggle="true" bindname="kline" propname="Period" propvalue="pt30Min" selchangecaption="true"/>
+      <Item caption="60分钟线" istoggle="true" bindname="kline" propname="Period" propvalue="pt60Min" selchangecaption="true"/>
+    </Item>
+    <Item caption="编辑参数" bindname="kline" propname="Params" propvalue="1"/>
+  </PopupMenu>
+  <PopupMenu key="Report" caption="报价菜单" maxrowcount="20">
+    <Item caption="加入自选" image="0">
+      <Item caption="自选股变量菜单" bindname="[Frame]" propname="AddToUserSector" propvalue="[UserSector]" itemtype="mtVar"/>
+    </Item>
+    <Item caption="从自选股中删除" image="1" bindname="DynamicReport" propname="DelFromUserSector" propvalue="true" visibleprop="DelFromUserSector"/>
+    <Item caption="-"/>
+    <Item caption="实时行情" image="2" bindname="[Frame]" propname="DoMenuCommand" propvalue="Minute"/>
+    <Item caption="历史行情" image="3" bindname="[Frame]" propname="DoMenuCommand" propvalue="KLine"/>
+    <Item caption="深度资料" image="4" bindname="[Frame]" propname="DoMenuCommand" propvalue="F9"/>
+    <Item caption="个股资料" image="5" bindname="[Frame]" propname="DoMenuCommand" propvalue="F10"/>
+  </PopupMenu>
+  <PopupMenu key="KLine_Period" caption="K线周期切换按钮">
+    <Item caption="日线" istoggle="true" bindname="kline" propname="Period" propvalue="ptDay" selchangecaption="true"/>
+    <Item caption="周线" istoggle="true" bindname="kline" propname="Period" propvalue="ptWeek" selchangecaption="true"/>
+    <Item caption="月线" istoggle="true" bindname="kline" propname="Period" propvalue="ptMonth" selchangecaption="true"/>
+    <Item caption="年线" istoggle="true" bindname="kline" propname="Period" propvalue="ptYear" selchangecaption="true"/>
+    <Item caption="-"/>
+    <Item caption="1分钟线" istoggle="true" bindname="kline" propname="Period" propvalue="pt1Min" selchangecaption="true"/>
+    <Item caption="5分钟线" istoggle="true" bindname="kline" propname="Period" propvalue="pt5Min" selchangecaption="true"/>
+    <Item caption="15分钟线" istoggle="true" bindname="kline" propname="Period" propvalue="pt15Min" selchangecaption="true"/>
+    <Item caption="30分钟线" istoggle="true" bindname="kline" propname="Period" propvalue="pt30Min" selchangecaption="true"/>
+    <Item caption="60分钟线" istoggle="true" bindname="kline" propname="Period" propvalue="pt60Min" selchangecaption="true"/>
+  </PopupMenu>
+  <PopupMenu key="KLine_AreaStat" caption="K线区间统计按钮">
+    <Item caption="区间统计 Ctrl+左键框选" bindname="kline" propname="ShowAreaStatDialog" propvalue="1"/>
+    <Item caption="测距 Shift+左键拖拽" bindname="kline" propname="Ranging" propvalue="1"/>
+  </PopupMenu>
+  <PopupMenu key="KLine_Set" caption="K线主图设置按钮">
+    <Item caption="叠加MA(移动平均线)">
+      <Item caption="均线组1" istoggle="true" bindname="kline" propname="Overlay" propvalue="ma1"/>
+      <Item caption="均线组2" istoggle="true" bindname="kline" propname="Overlay" propvalue="ma2"/>
+      <Item caption="均线组3" istoggle="true" bindname="kline" propname="Overlay" propvalue="ma3"/>
+      <Item caption="均线组4" istoggle="true" bindname="kline" propname="Overlay" propvalue="ma4"/>
+      <Item caption="均线组5" istoggle="true" bindname="kline" propname="Overlay" propvalue="ma5"/>
+      <Item caption="隐藏均线" istoggle="true" bindname="kline" propname="Overlay" propvalue="null"/>
+    </Item>
+
+    <Item caption="叠加SAR(止损点转向线)" istoggle="true" bindname="kline" propname="Overlay" propvalue="sar"/>
+
+    <Item caption="叠加BOLL(布林线)" istoggle="true" bindname="kline" propname="Overlay" propvalue="boll"/>
+    <Item caption="-"/>
+    <Item caption="主图类型">
+      <Item caption="走势线" istoggle="true" bindname="kline" propname="DrawMode" propvalue="DMLine"/>
+      <Item caption="蜡烛线" istoggle="true" bindname="kline" propname="DrawMode" propvalue="DMCandle"/>
+      <Item caption="美国线" istoggle="true" bindname="kline" propname="DrawMode" propvalue="DMStick"/>
+      <Item caption="宝塔线" istoggle="true" bindname="kline" propname="DrawMode" propvalue="DMTower"/>
+      <Item caption="面积图" istoggle="true" bindname="kline" propname="DrawMode" propvalue="DMArea"/>
+    </Item>
+    <Item caption="主图坐标">
+      <Item caption="普通坐标" istoggle="true" bindname="kline" propname="CoordType" propvalue="CTNormal"/>
+      <Item caption="百分比坐标" istoggle="true" bindname="kline" propname="CoordType" propvalue="CTPercent"/>
+      <Item caption="对数坐标" istoggle="true" bindname="kline" propname="CoordType" propvalue="CTLogarithm"/>
+    </Item>
+    <Item caption="图表偏移">
+      <Item caption="无" istoggle="true" bindname="klinecontainer" propname="Offset" propvalue="0"/>
+      <Item caption="30像素" istoggle="true" bindname="klinecontainer" propname="Offset" propvalue="30"/>
+      <Item caption="60像素" istoggle="true" bindname="klinecontainer" propname="Offset" propvalue="60"/>
+      <Item caption="120像素" istoggle="true" bindname="klinecontainer" propname="Offset" propvalue="120"/>
+      <Item caption="180像素" istoggle="true" bindname="klinecontainer" propname="Offset" propvalue="180"/>
+    </Item>
+    <Item caption="显示K线浮动面板" istoggle="true" bindname="klinecontainer" propname="showfloatpanel" propvalue="true"/>
+    <Item caption="-"/>
+    <Item caption="显示十字光标" istoggle="true" bindname="klinecontainer" propname="ShowCross" propvalue="true"/>
+    <Item caption="显示成交量" istoggle="true" bindname="klinevolume" propname="visible" propvalue="true"/>
+    <Item caption="显示成交额" istoggle="true" bindname="klineamount" propname="visible" propvalue="true"/>
+    <Item caption="-"/>
+    <Item caption="显示筹码" istoggle="true" bindname="kline" propname="ShowChip" propvalue="true"/>
+  </PopupMenu>
+  <PopupMenu key="KLine_UserSector" caption="K线加入自选股按钮">
+    <Item caption="自选股变量菜单" bindname="[Frame]" propname="AddToUserSector" propvalue="[UserSector]" itemtype="mtVar"/>
+    <Item caption="-"/>
+    <Item caption="设置自选…" bindname="[Frame]" propname="DoMenuCommand" propvalue="F7"/>
+  </PopupMenu>
+  <PopupMenu key="KLine_Export" caption="K线导出行情数据按钮">
+    <Item caption="导出原始行情数据" bindname="klinecontainer" propname="ExportRawData" propvalue="1"/>
+    <Item caption="导出屏幕范围内数据" bindname="klinecontainer" propname="ExportScreenData" propvalue="1"/>
+  </PopupMenu>
+  <PopupMenu key="KLine_EditParam" caption="K线编辑参数菜单">
+	<Item caption="编辑参数" bindname="klineIndex" propname="Params" propvalue="1"/>
+	<Item caption="指标公式管理" bindname="klinecontainer" propname="IndicatorFormulaMgr" propvalue="1"/>
+  </PopupMenu>
+  <PopupMenu key="MulitMinute" caption="多日走势">
+    <Item caption="1日" istoggle="true" bindname="minutecontainer" propname="DayCount" propvalue="1"/>
+    <Item caption="2日" istoggle="true" bindname="minutecontainer" propname="DayCount" propvalue="2"/>
+    <Item caption="3日" istoggle="true" bindname="minutecontainer" propname="DayCount" propvalue="3"/>
+    <Item caption="4日" istoggle="true" bindname="minutecontainer" propname="DayCount" propvalue="4"/>
+    <Item caption="5日" istoggle="true" bindname="minutecontainer" propname="DayCount" propvalue="5"/>
+    <Item caption="6日" istoggle="true" bindname="minutecontainer" propname="DayCount" propvalue="6"/>
+    <Item caption="7日" istoggle="true" bindname="minutecontainer" propname="DayCount" propvalue="7"/>
+    <Item caption="8日" istoggle="true" bindname="minutecontainer" propname="DayCount" propvalue="8"/>
+    <Item caption="9日" istoggle="true" bindname="minutecontainer" propname="DayCount" propvalue="9"/>
+    <Item caption="10日" istoggle="true" bindname="minutecontainer" propname="DayCount" propvalue="10"/>
+  </PopupMenu>
+  <PopupMenu key="KlienToMinute" caption="K线切多日分时">
+    <Item caption="1日" bindname="[Frame]" propname="DoMenuCommand" propvalue="minute,1"/>
+    <Item caption="2日" bindname="[Frame]" propname="DoMenuCommand" propvalue="minute,2"/>
+    <Item caption="3日" bindname="[Frame]" propname="DoMenuCommand" propvalue="minute,3"/>
+    <Item caption="4日" bindname="[Frame]" propname="DoMenuCommand" propvalue="minute,4"/>
+    <Item caption="5日" bindname="[Frame]" propname="DoMenuCommand" propvalue="minute,5"/>
+    <Item caption="6日" bindname="[Frame]" propname="DoMenuCommand" propvalue="minute,6"/>
+    <Item caption="7日" bindname="[Frame]" propname="DoMenuCommand" propvalue="minute,7"/>
+    <Item caption="8日" bindname="[Frame]" propname="DoMenuCommand" propvalue="minute,8"/>
+    <Item caption="9日" bindname="[Frame]" propname="DoMenuCommand" propvalue="minute,9"/>
+    <Item caption="10日" bindname="[Frame]" propname="DoMenuCommand" propvalue="minute,10"/>
+  </PopupMenu>
+  <PopupMenu key="MinuteOverlay" caption="品种叠加">
+    <Item caption="大盘指数" istoggle="true" bindname="minute" propname="ShowIndexIndicator" propvalue="true" visibleprop="IsShowOverlayIndex"/>
+    <Item caption="任意品种…" bindname="minute" propname="ShowOverlayDialog" propvalue="true"/>
+    <Item caption="-"/>
+    <Item caption="取消叠加" bindname="minute" propname="CancelOverlay" propvalue="true"/>
+  </PopupMenu>
+  <PopupMenu key="MinuteOverlay_Index" caption="指数品种叠加">
+    <Item caption="任意品种…" bindname="minute" propname="ShowOverlayDialog" propvalue="true"/>
+    <Item caption="-"/>
+    <Item caption="取消叠加" bindname="minute" propname="CancelOverlay" propvalue="true"/>
+  </PopupMenu>  
+  <PopupMenu key="KLineOverlay" caption="品种叠加">
+    <Item caption="大盘指数" istoggle="true" bindname="kline" propname="ShowIndexIndicator" propvalue="true" visibleprop="IsShowOverlayIndex"/>
+    <Item caption="任意品种…" bindname="kline" propname="ShowOverlayDialog" propvalue="true"/>
+    <Item caption="-"/>
+    <Item caption="取消叠加" bindname="kline" propname="CancelOverlay" propvalue="true"/>
+  </PopupMenu>  
+  <PopupMenu key="KLineOverlay_Index" caption="指数品种叠加">
+    <Item caption="任意品种…" bindname="kline" propname="ShowOverlayDialog" propvalue="true"/>
+    <Item caption="-"/>
+    <Item caption="取消叠加" bindname="kline" propname="CancelOverlay" propvalue="true"/>
+  </PopupMenu>
+  <PopupMenu key="MinuteTool" caption="分时工具按钮菜单">
+    <Item caption="成交明细" bindname="[Frame]" propname="DoMenuCommand" propvalue="f1"/>
+    <Item caption="闪电预警" bindname="[Frame]" propname="DoMenuCommand" propvalue="monitor"/>
+    <Item caption="导出数据" bindname="minutecontainer" propname="ExportRawData" propvalue="1"/>
+    <Item caption="保存图形" bindname="minutecontainer" propname="DoMenuCommand" propvalue="PrintScreen"/>
+  </PopupMenu>
+  <PopupMenu key="KLineTool" caption="K线工具按钮菜单">
+    <Item caption="区间统计 Ctrl+左键框选" bindname="kline" propname="ShowAreaStatDialog" propvalue="1"/>
+    <Item caption="测距     Shift+左键拖拽" bindname="kline" propname="Ranging" propvalue="1"/>
+    <Item caption="查看历史分时" bindname="klinecontainer" propname="ShowHistoryMinute" propvalue="false" visibleprop="ShowHistoryMinute"/>
+    <Item caption="K线报表" bindname="klinecontainer" propname="ShowHistoryKLine" propvalue="true"/>
+    <Item caption="闪电预警" bindname="[Frame]" propname="DoMenuCommand" propvalue="monitor"/>
+    <Item caption="-"/>
+    <Item caption="导出数据">
+      <Item caption="导出原始行情数据" bindname="klinecontainer" propname="ExportRawData" propvalue="1"/>
+      <Item caption="导出屏幕范围内数据" bindname="klinecontainer" propname="ExportScreenData" propvalue="1"/>
+    </Item>
+    <Item caption="图形导出" bindname="klinecontainer" propname="DoMenuCommand" propvalue="PrintScreen"/>
+  </PopupMenu>
+  <PopupMenu key="AFQDType" caption="复权">
+    <Item caption="不复权" istoggle="true" bindname="kline" propname="ExerType" propvalue="etOriginal" selchangecaption="true"/>
+    <Item caption="后复权" istoggle="true" bindname="kline" propname="ExerType" propvalue="etBackward" selchangecaption="true" visibleprop="IsShowBackwardExerType"/>
+    <Item caption="前复权" istoggle="true" bindname="kline" propname="ExerType" propvalue="etForward" selchangecaption="true" visibleprop="IsShowForwardExerType"/>
+  </PopupMenu>
+  
+  <PopupMenu key="HeaderAddToUser" caption="股票信息弹出自选股菜单">
+      <Item caption="自选股变量菜单" bindname="[Frame]" propname="AddToUserSector" propvalue="[UserSector]" itemtype="mtVar"/>
+  </PopupMenu>
+  
+  <PopupMenu key="ShowUserSectorMenu" caption="自选股面板弹出自选股菜单">
+      <Item caption="自选股变量菜单" bindname="usrUserSectorReport" propname="ChangeUserSector" propvalue="[UserSector]" itemtype="mtVar"/>
+  </PopupMenu> 
+
+  <PopupMenu key="SameCol_Period" caption="分时同列周期切换按钮">
+	<Item caption="分时图" istoggle="true" bindname="multichart" propname="ShowKLine" propvalue="false" selchangecaption="true"/> 
+	<Item caption="-"/>
+    <Item caption="1分钟线" istoggle="true" bindname="multichart" propname="Period" propvalue="pt1Min" selchangecaption="true"/>
+    <Item caption="5分钟线" istoggle="true" bindname="multichart" propname="Period" propvalue="pt5Min" selchangecaption="true"/>
+    <Item caption="15分钟线" istoggle="true" bindname="multichart" propname="Period" propvalue="pt15Min" selchangecaption="true"/>
+    <Item caption="30分钟线" istoggle="true" bindname="multichart" propname="Period" propvalue="pt30Min" selchangecaption="true"/>
+    <Item caption="60分钟线" istoggle="true" bindname="multichart" propname="Period" propvalue="pt60Min" selchangecaption="true"/> 
+	<Item caption="-"/>	
+    <Item caption="日线" istoggle="true" bindname="multichart" propname="Period" propvalue="ptDay" selchangecaption="true"/>
+    <Item caption="周线" istoggle="true" bindname="multichart" propname="Period" propvalue="ptWeek" selchangecaption="true"/>
+    <Item caption="月线" istoggle="true" bindname="multichart" propname="Period" propvalue="ptMonth" selchangecaption="true"/>
+    <Item caption="年线" istoggle="true" bindname="multichart" propname="Period" propvalue="ptYear" selchangecaption="true"/>
+  </PopupMenu> 
+
+  <PopupMenu key="KLineSort" caption="分时同列排序">
+    <Item caption="按涨幅" bindname="multichart" propname="SortByRise" propvalue="true"/>
+    <Item caption="按跌幅" bindname="multichart" propname="SortByRise" propvalue="false"/>
+	<Item caption="按成交量" bindname="multichart" propname="SortByVolume" propvalue="true"/>
+	<Item caption="默认顺序" bindname="multichart" propname="DefaultOrder" propvalue="true"/>
+  </PopupMenu>
+</MenuConfig>

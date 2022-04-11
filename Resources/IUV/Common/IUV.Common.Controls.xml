@@ -1,0 +1,2688 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>IUV.Common.Controls</name>
+    </assembly>
+    <members>
+        <member name="T:IUV.Common.Controls.EnumToHeaderConverter">
+            <summary>
+            枚举标题转换器
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.EnumToHeaderConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            header转换
+            </summary>
+            <param name="value"></param>
+            <param name="targetType"></param>
+            <param name="parameter"></param>
+            <param name="culture"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.Common.Controls.EnumToHeaderConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+            <param name="targetType"></param>
+            <param name="parameter"></param>
+            <param name="culture"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.Common.Controls.EnumToHeaderConverter.GetIuvEnumHeader(System.Object)">
+            <summary>
+            获取Header
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="T:IUV.Common.Controls.Converter.TextBlockToolTipConverter">
+            <summary>
+              TextBlockToolTipConverter
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.Converter.TextBlockToolTipConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Convert
+            </summary>
+            <param name="value"></param>
+            <param name="targetType"></param>
+            <param name="parameter"></param>
+            <param name="culture"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.Common.Controls.Converter.TextBlockToolTipConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            TextBlockToolTipConverter 
+            </summary>
+            <param name="value"></param>
+            <param name="targetType"></param>
+            <param name="parameter"></param>
+            <param name="culture"></param>
+            <returns></returns>
+        </member>
+        <member name="T:IUV.Common.Controls.Converter.TextBlockToolTipWidthConverter">
+            <summary>
+              TextBlockToolTipConverterTextBlockToolTipWidthConverter
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.Converter.TextBlockToolTipWidthConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Convert
+            </summary>
+            <param name="value"></param>
+            <param name="targetType"></param>
+            <param name="parameter"></param>
+            <param name="culture"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.Common.Controls.Converter.TextBlockToolTipWidthConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            TextBlockToolTipConverter 
+            </summary>
+            <param name="value"></param>
+            <param name="targetType"></param>
+            <param name="parameter"></param>
+            <param name="culture"></param>
+            <returns></returns>
+        </member>
+        <member name="T:IUV.Common.Controls.DragDropControl.DefaultDragHandler">
+            <summary>
+            The default drag handler for GongSolutions.Wpf.DragDrop.
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.DefaultDragHandler.StartDrag(IUV.Common.Controls.DragDropControl.IDragInfo)">
+            <summary>
+            Queries whether a drag can be started.
+            </summary>
+            <param name="dragInfo">Information about the drag.</param>
+            <remarks>
+            To allow a drag to be started, the <see cref="P:IUV.Common.Controls.DragDropControl.DragInfo.Effects" /> property on <paramref name="dragInfo" />
+            should be set to a value other than <see cref="F:System.Windows.DragDropEffects.None" />.
+            </remarks>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.DefaultDragHandler.CanStartDrag(IUV.Common.Controls.DragDropControl.IDragInfo)">
+            <summary>
+            Determines whether this instance [can start drag] the specified drag information.
+            </summary>
+            <param name="dragInfo">The drag information.</param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.DefaultDragHandler.Dropped(IUV.Common.Controls.DragDropControl.IDropInfo)">
+            <summary>
+            Notifies the drag handler that a drop has occurred.
+            </summary>
+            <param name="dropInfo">Information about the drop.</param>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.DefaultDragHandler.DragDropOperationFinished(System.Windows.DragDropEffects,IUV.Common.Controls.DragDropControl.IDragInfo)">
+            <summary>
+            Notifies the drag handler that a drag and drop operation has finished.
+            </summary>
+            <param name="operationResult">The operation result.</param>
+            <param name="dragInfo">The drag information.</param>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.DefaultDragHandler.DragCancelled">
+            <summary>
+            Notifies the drag handler that a drag has been aborted.
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.DefaultDragHandler.TryCatchOccurredException(System.Exception)">
+            <summary>
+            Notifies that an exception has occurred upon dragging.
+            </summary>
+            <param name="exception">The exception that occurrred.</param>
+            <returns>
+            Boolean indicating whether the exception is handled in the drag handler.
+            False will rethrow the exception.
+            </returns>
+        </member>
+        <member name="T:IUV.Common.Controls.DragDropControl.DefaultDropHandler">
+            <summary>
+            A default insertion drop handler for the most common usages
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.DefaultDropHandler.CanAcceptData(IUV.Common.Controls.DragDropControl.IDropInfo)">
+            <summary>
+            Test the specified drop information for the right data.
+            </summary>
+            <param name="dropInfo">The drop information.</param>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.DefaultDropHandler.SelectDroppedItems(IUV.Common.Controls.DragDropControl.IDropInfo,System.Collections.IEnumerable,System.Boolean,System.Boolean)">
+            <summary>
+            Clears the current selected items and selects the given items.
+            </summary>
+            <param name="dropInfo">The drop information.</param>
+            <param name="items">The items which should be select.</param>
+            <param name="applyTemplate">if set to <c>true</c> then for all items the ApplyTemplate will be invoked.</param>
+            <param name="focusVisualTarget">if set to <c>true</c> the visual target will be focused.</param>
+            <exception cref="T:System.ArgumentNullException"><paramref name="dropInfo" /> is <see langword="null" /></exception>
+            <exception cref="T:System.ArgumentNullException"><paramref name="dropInfo" /> is <see langword="null" /></exception>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.DefaultDropHandler.ShouldCopyData(IUV.Common.Controls.DragDropControl.IDropInfo)">
+            <summary>
+            Determines whether the data of the drag drop action should be copied otherwise moved.
+            </summary>
+            <param name="dropInfo">The DropInfo with a valid DragInfo.</param>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.DefaultDropHandler.DragOver(IUV.Common.Controls.DragDropControl.IDropInfo)">
+            <summary>
+            Updates the current drag state.
+            </summary>
+            <param name="dropInfo">Information about the drag.</param>
+            <remarks>
+            To allow a drop at the current drag position, the <see cref="P:IUV.Common.Controls.DragDropControl.DropInfo.Effects" /> property on
+            <paramref name="dropInfo" /> should be set to a value other than <see cref="F:System.Windows.DragDropEffects.None" />
+            and <see cref="P:IUV.Common.Controls.DragDropControl.DropInfo.Data" /> should be set to a non-null value.
+            </remarks>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.DefaultDropHandler.Drop(IUV.Common.Controls.DragDropControl.IDropInfo)">
+            <summary>
+            Performs a drop.
+            </summary>
+            <param name="dropInfo">Information about the drop.</param>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.DragDrop.TryGetDragHandler(IUV.Common.Controls.DragDropControl.DragInfo,System.Windows.UIElement)">
+            <summary>
+            Gets the drag handler from the drag info or from the sender, if the drag info is null
+            </summary>
+            <param name="dragInfo">the drag info object</param>
+            <param name="sender">the sender from an event, e.g. mouse down, mouse move</param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.DragDrop.TryGetDropHandler(IUV.Common.Controls.DragDropControl.DropInfo,System.Windows.UIElement)">
+            <summary>
+            Gets the drop handler from the drop info or from the sender, if the drop info is null
+            </summary>
+            <param name="dropInfo">the drop info object</param>
+            <param name="sender">the sender from an event, e.g. drag over</param>
+            <returns></returns>
+        </member>
+        <member name="P:IUV.Common.Controls.DragDropControl.DragDrop.DataFormat">
+            <summary>
+            The default data format which will be used for the drag and drop actions.
+            </summary>
+        </member>
+        <member name="F:IUV.Common.Controls.DragDropControl.DragDrop.DataFormatProperty">
+            <summary>
+            Gets or sets the data format which will be used for the drag and drop actions.
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.DragDrop.GetDataFormat(System.Windows.UIElement)">
+            <summary>
+            Gets the data format which will be used for the drag and drop actions.
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.DragDrop.SetDataFormat(System.Windows.UIElement,System.Windows.DataFormat)">
+            <summary>
+            Sets the data format which will be used for the drag and drop actions.
+            </summary>
+        </member>
+        <member name="F:IUV.Common.Controls.DragDropControl.DragDrop.IsDragSourceProperty">
+            <summary>
+            Gets or Sets whether the control can be used as drag source.
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.DragDrop.GetIsDragSource(System.Windows.UIElement)">
+            <summary>
+            Gets whether the control can be used as drag source.
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.DragDrop.SetIsDragSource(System.Windows.UIElement,System.Boolean)">
+            <summary>
+            Sets whether the control can be used as drag source.
+            </summary>
+        </member>
+        <member name="F:IUV.Common.Controls.DragDropControl.DragDrop.IsDropTargetProperty">
+            <summary>
+            Gets or Sets whether the control can be used as drop target.
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.DragDrop.GetIsDropTarget(System.Windows.UIElement)">
+            <summary>
+            Gets whether the control can be used as drop target.
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.DragDrop.SetIsDropTarget(System.Windows.UIElement,System.Boolean)">
+            <summary>
+            Sets whether the control can be used as drop target.
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.DragDrop.GetDropEventType(System.Windows.DependencyObject)">
+            <summary>
+            Gets which type of events are subscribed for the drag and drop events.
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.DragDrop.SetDropEventType(System.Windows.DependencyObject,IUV.Common.Controls.DragDropControl.EventType)">
+            <summary>
+            Sets which type of events are subscribed for the drag and drop events.
+            </summary>
+        </member>
+        <member name="F:IUV.Common.Controls.DragDropControl.DragDrop.DropEventTypeProperty">
+            <summary>
+            Gets or sets the events which are subscribed for the drag and drop events
+            </summary>
+        </member>
+        <member name="F:IUV.Common.Controls.DragDropControl.DragDrop.CanDragWithMouseRightButtonProperty">
+            <summary>
+            Gets or Sets whether the control can be used as drag source together with the right mouse.
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.DragDrop.GetCanDragWithMouseRightButton(System.Windows.UIElement)">
+            <summary>
+            Gets whether the control can be used as drag source together with the right mouse.
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.DragDrop.SetCanDragWithMouseRightButton(System.Windows.UIElement,System.Boolean)">
+            <summary>
+            Sets whether the control can be used as drag source together with the right mouse.
+            </summary>
+        </member>
+        <member name="P:IUV.Common.Controls.DragDropControl.DragDrop.DefaultDragHandler">
+            <summary>
+            Gets the default DragHandler.
+            </summary>
+        </member>
+        <member name="P:IUV.Common.Controls.DragDropControl.DragDrop.DefaultDropHandler">
+            <summary>
+            Gets the default DropHandler.
+            </summary>
+        </member>
+        <member name="F:IUV.Common.Controls.DragDropControl.DragDrop.DragHandlerProperty">
+            <summary>
+            Gets or Sets the handler for the drag action.
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.DragDrop.GetDragHandler(System.Windows.UIElement)">
+            <summary>
+            Gets the handler for the drag action.
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.DragDrop.SetDragHandler(System.Windows.UIElement,IUV.Common.Controls.DragDropControl.IDragSource)">
+            <summary>
+            Sets the handler for the drag action.
+            </summary>
+        </member>
+        <member name="F:IUV.Common.Controls.DragDropControl.DragDrop.DropHandlerProperty">
+            <summary>
+            Gets or Sets the handler for the drop action.
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.DragDrop.GetDropHandler(System.Windows.UIElement)">
+            <summary>
+            Gets the handler for the drop action.
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.DragDrop.SetDropHandler(System.Windows.UIElement,IUV.Common.Controls.DragDropControl.IDropTarget)">
+            <summary>
+            Sets the handler for the drop action.
+            </summary>
+        </member>
+        <member name="F:IUV.Common.Controls.DragDropControl.DragDrop.DropScrollingModeProperty">
+            <summary>
+            Gets or Sets the ScrollingMode for the drop action.
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.DragDrop.GetDropScrollingMode(System.Windows.UIElement)">
+            <summary>
+            Gets the ScrollingMode for the drop action.
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.DragDrop.SetDropScrollingMode(System.Windows.UIElement,IUV.Common.Controls.DragDropControl.ScrollingMode)">
+            <summary>
+            Sets the ScrollingMode for the drop action.
+            </summary>
+        </member>
+        <member name="F:IUV.Common.Controls.DragDropControl.DragDrop.ShowAlwaysDropTargetAdornerProperty">
+            <summary>
+            Gets or Sets whether to show the DropTargetAdorner (DropTargetInsertionAdorner) on an empty target too.
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.DragDrop.GetShowAlwaysDropTargetAdorner(System.Windows.UIElement)">
+            <summary>
+            Gets whether to show the DropTargetAdorner (DropTargetInsertionAdorner) on an empty target too.
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.DragDrop.SetShowAlwaysDropTargetAdorner(System.Windows.UIElement,System.Boolean)">
+            <summary>
+            Sets whether to show the DropTargetAdorner (DropTargetInsertionAdorner) on an empty target too.
+            </summary>
+        </member>
+        <member name="F:IUV.Common.Controls.DragDropControl.DragDrop.DropTargetAdornerBrushProperty">
+            <summary>
+            Gets or Sets the brush for the DropTargetAdorner.
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.DragDrop.GetDropTargetAdornerBrush(System.Windows.UIElement)">
+            <summary>
+            Gets the brush for the DropTargetAdorner.
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.DragDrop.SetDropTargetAdornerBrush(System.Windows.UIElement,System.Windows.Media.Brush)">
+            <summary>
+            Sets the brush for the DropTargetAdorner.
+            </summary>
+        </member>
+        <member name="F:IUV.Common.Controls.DragDropControl.DragDrop.DragDropContextProperty">
+            <summary>
+            Gets or Sets a context for a control. Only controls with the same context are allowed for drag or drop actions.
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.DragDrop.GetDragDropContext(System.Windows.UIElement)">
+            <summary>
+            Gets a context for a control. Only controls with the same context are allowed for drag or drop actions.
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.DragDrop.SetDragDropContext(System.Windows.UIElement,System.String)">
+            <summary>
+            Sets a context for a control. Only controls with the same context are allowed for drag or drop actions.
+            </summary>
+        </member>
+        <member name="F:IUV.Common.Controls.DragDropControl.DragDrop.DragSourceIgnoreProperty">
+            <summary>
+            Gets or Sets whether an element under the mouse should be ignored for the drag action.
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.DragDrop.GetDragSourceIgnore(System.Windows.UIElement)">
+            <summary>
+            Gets whether an element under the mouse should be ignored for the drag action.
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.DragDrop.SetDragSourceIgnore(System.Windows.UIElement,System.Boolean)">
+            <summary>
+            Sets whether an element under the mouse should be ignored for the drag action.
+            </summary>
+        </member>
+        <member name="F:IUV.Common.Controls.DragDropControl.DragDrop.DragDirectlySelectedOnlyProperty">
+            <summary>
+            Gets or Sets wheter the drag action should be started only directly on a selected item
+            or also on the free control space (e.g. in a ListBox).
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.DragDrop.GetDragDirectlySelectedOnly(System.Windows.DependencyObject)">
+            <summary>
+            Gets wheter the drag action should be started only directly on a selected item.
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.DragDrop.SetDragDirectlySelectedOnly(System.Windows.DependencyObject,System.Boolean)">
+            <summary>
+            Sets wheter the drag action should be started only directly on a selected item.
+            </summary>
+        </member>
+        <member name="F:IUV.Common.Controls.DragDropControl.DragDrop.DragDropCopyKeyStateProperty">
+            <summary>
+            The drag drop copy key state property (default None).
+            So the drag drop action is
+            - Move, within the same control or from one to another, if the drag drop key state is None
+            - Copy, from one to another control with the given drag drop copy key state
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.DragDrop.GetDragDropCopyKeyState(System.Windows.UIElement)">
+            <summary>
+            Gets the copy key state which indicates the effect of the drag drop operation.
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.DragDrop.SetDragDropCopyKeyState(System.Windows.UIElement,System.Windows.DragDropKeyStates)">
+            <summary>
+            Sets the copy key state which indicates the effect of the drag drop operation.
+            </summary>
+        </member>
+        <member name="F:IUV.Common.Controls.DragDropControl.DragDrop.UseDefaultDragAdornerProperty">
+            <summary>
+            Gets or Sets whether if the default DragAdorner should be use.
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.DragDrop.GetUseDefaultDragAdorner(System.Windows.UIElement)">
+            <summary>
+            Gets whether if the default DragAdorner is used.
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.DragDrop.SetUseDefaultDragAdorner(System.Windows.UIElement,System.Boolean)">
+            <summary>
+            Sets whether if the default DragAdorner should be use.
+            </summary>
+        </member>
+        <member name="F:IUV.Common.Controls.DragDropControl.DragDrop.DefaultDragAdornerOpacityProperty">
+            <summary>
+            Gets or Sets the opacity of the default DragAdorner.
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.DragDrop.GetDefaultDragAdornerOpacity(System.Windows.UIElement)">
+            <summary>
+            Gets the opacity of the default DragAdorner.
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.DragDrop.SetDefaultDragAdornerOpacity(System.Windows.UIElement,System.Double)">
+            <summary>
+            Sets the opacity of the default DragAdorner.
+            </summary>
+        </member>
+        <member name="F:IUV.Common.Controls.DragDropControl.DragDrop.DragMouseAnchorPointProperty">
+            <summary>
+            Gets or Sets the horizontal and vertical proportion at which the pointer will anchor on the DragAdorner.
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.DragDrop.GetDragMouseAnchorPoint(System.Windows.UIElement)">
+            <summary>
+            Gets the horizontal and vertical proportion at which the pointer will anchor on the DragAdorner.
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.DragDrop.SetDragMouseAnchorPoint(System.Windows.UIElement,System.Windows.Point)">
+            <summary>
+            Sets the horizontal and vertical proportion at which the pointer will anchor on the DragAdorner.
+            </summary>
+        </member>
+        <member name="F:IUV.Common.Controls.DragDropControl.DragDrop.DragAdornerTranslationProperty">
+            <summary>
+            Gets or Sets the translation transform which will be used for the DragAdorner.
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.DragDrop.GetDragAdornerTranslation(System.Windows.UIElement)">
+            <summary>
+            Gets the translation transform which will be used for the DragAdorner.
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.DragDrop.SetDragAdornerTranslation(System.Windows.UIElement,System.Windows.Point)">
+            <summary>
+            Sets the translation transform which will be used for the DragAdorner.
+            </summary>
+        </member>
+        <member name="F:IUV.Common.Controls.DragDropControl.DragDrop.EffectAdornerTranslationProperty">
+            <summary>
+            Gets or Sets the translation transform which will be used for the EffectAdorner.
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.DragDrop.GetEffectAdornerTranslation(System.Windows.UIElement)">
+            <summary>
+            Gets the translation transform which will be used for the EffectAdorner.
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.DragDrop.SetEffectAdornerTranslation(System.Windows.UIElement,System.Windows.Point)">
+            <summary>
+            Sets the translation transform which will be used for the EffectAdorner.
+            </summary>
+        </member>
+        <member name="F:IUV.Common.Controls.DragDropControl.DragDrop.DragAdornerTemplateProperty">
+            <summary>
+            Gets or Sets a DataTemplate for the DragAdorner.
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.DragDrop.GetDragAdornerTemplate(System.Windows.UIElement)">
+            <summary>
+            Gets the DataTemplate for the DragAdorner.
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.DragDrop.SetDragAdornerTemplate(System.Windows.UIElement,System.Windows.DataTemplate)">
+            <summary>
+            Sets the DataTemplate for the DragAdorner.
+            </summary>
+        </member>
+        <member name="F:IUV.Common.Controls.DragDropControl.DragDrop.DropAdornerTemplateProperty">
+            <summary>
+            Gets or Sets a DataTemplate for the DragAdorner based on the DropTarget.
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.DragDrop.GetDropAdornerTemplate(System.Windows.UIElement)">
+            <summary>
+            Gets the DataTemplate for the DragAdorner based on the DropTarget.
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.DragDrop.SetDropAdornerTemplate(System.Windows.UIElement,System.Windows.DataTemplate)">
+            <summary>
+            Sets the DataTemplate for the DragAdorner based on the DropTarget.
+            </summary>
+        </member>
+        <member name="F:IUV.Common.Controls.DragDropControl.DragDrop.DragAdornerTemplateSelectorProperty">
+            <summary>
+            Gets or Sets a DataTemplateSelector for the DragAdorner.
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.DragDrop.SetDragAdornerTemplateSelector(System.Windows.DependencyObject,System.Windows.Controls.DataTemplateSelector)">
+            <summary>
+            Gets the DataTemplateSelector for the DragAdorner.
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.DragDrop.GetDragAdornerTemplateSelector(System.Windows.DependencyObject)">
+            <summary>
+            Gets the DataTemplateSelector for the DragAdorner.
+            </summary>
+        </member>
+        <member name="F:IUV.Common.Controls.DragDropControl.DragDrop.DropAdornerTemplateSelectorProperty">
+            <summary>
+            Gets or Sets a DataTemplateSelector for the DragAdorner based on the DropTarget.
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.DragDrop.SetDropAdornerTemplateSelector(System.Windows.DependencyObject,System.Windows.Controls.DataTemplateSelector)">
+            <summary>
+            Gets the DataTemplateSelector for the DragAdorner based on the DropTarget.
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.DragDrop.GetDropAdornerTemplateSelector(System.Windows.DependencyObject)">
+            <summary>
+            Gets the DataTemplateSelector for the DragAdorner based on the DropTarget.
+            </summary>
+        </member>
+        <member name="F:IUV.Common.Controls.DragDropControl.DragDrop.UseVisualSourceItemSizeForDragAdornerProperty">
+            <summary>
+            Use descendant bounds of the VisualSourceItem as MinWidth for the DragAdorner.
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.DragDrop.GetUseVisualSourceItemSizeForDragAdorner(System.Windows.UIElement)">
+            <summary>
+            Get the flag which indicates if the DragAdorner use the descendant bounds of the VisualSourceItem as MinWidth.
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.DragDrop.SetUseVisualSourceItemSizeForDragAdorner(System.Windows.UIElement,System.Boolean)">
+            <summary>
+            Set the flag which indicates if the DragAdorner use the descendant bounds of the VisualSourceItem as MinWidth.
+            </summary>
+        </member>
+        <member name="F:IUV.Common.Controls.DragDropControl.DragDrop.UseDefaultEffectDataTemplateProperty">
+            <summary>
+            Gets or Sets whether if the default DataTemplate for the effects should be use.
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.DragDrop.GetUseDefaultEffectDataTemplate(System.Windows.UIElement)">
+            <summary>
+            Gets whether if the default DataTemplate for the effects should be use.
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.DragDrop.SetUseDefaultEffectDataTemplate(System.Windows.UIElement,System.Boolean)">
+            <summary>
+            Sets whether if the default DataTemplate for the effects should be use.
+            </summary>
+        </member>
+        <member name="F:IUV.Common.Controls.DragDropControl.DragDrop.EffectNoneAdornerTemplateProperty">
+            <summary>
+            Gets or Sets a EffectAdorner DataTemplate for effect type None.
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.DragDrop.GetEffectNoneAdornerTemplate(System.Windows.UIElement)">
+            <summary>
+            Gets a EffectAdorner DataTemplate for effect type None.
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.DragDrop.SetEffectNoneAdornerTemplate(System.Windows.UIElement,System.Windows.DataTemplate)">
+            <summary>
+            Sets a EffectAdorner DataTemplate for effect type None.
+            </summary>
+        </member>
+        <member name="F:IUV.Common.Controls.DragDropControl.DragDrop.EffectCopyAdornerTemplateProperty">
+            <summary>
+            Gets or Sets a EffectAdorner DataTemplate for effect type Copy.
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.DragDrop.GetEffectCopyAdornerTemplate(System.Windows.UIElement)">
+            <summary>
+            Gets a EffectAdorner DataTemplate for effect type Copy.
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.DragDrop.SetEffectCopyAdornerTemplate(System.Windows.UIElement,System.Windows.DataTemplate)">
+            <summary>
+            Sets a EffectAdorner DataTemplate for effect type Copy.
+            </summary>
+        </member>
+        <member name="F:IUV.Common.Controls.DragDropControl.DragDrop.EffectMoveAdornerTemplateProperty">
+            <summary>
+            Gets or Sets a EffectAdorner DataTemplate for effect type Move.
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.DragDrop.GetEffectMoveAdornerTemplate(System.Windows.UIElement)">
+            <summary>
+            Gets a EffectAdorner DataTemplate for effect type Move.
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.DragDrop.SetEffectMoveAdornerTemplate(System.Windows.UIElement,System.Windows.DataTemplate)">
+            <summary>
+            Sets a EffectAdorner DataTemplate for effect type Move.
+            </summary>
+        </member>
+        <member name="F:IUV.Common.Controls.DragDropControl.DragDrop.EffectLinkAdornerTemplateProperty">
+            <summary>
+            Gets or Sets a EffectAdorner DataTemplate for effect type Link.
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.DragDrop.GetEffectLinkAdornerTemplate(System.Windows.UIElement)">
+            <summary>
+            Gets a EffectAdorner DataTemplate for effect type Link.
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.DragDrop.SetEffectLinkAdornerTemplate(System.Windows.UIElement,System.Windows.DataTemplate)">
+            <summary>
+            Sets a EffectAdorner DataTemplate for effect type Link.
+            </summary>
+        </member>
+        <member name="F:IUV.Common.Controls.DragDropControl.DragDrop.EffectAllAdornerTemplateProperty">
+            <summary>
+            Gets or Sets a EffectAdorner DataTemplate for effect type All.
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.DragDrop.GetEffectAllAdornerTemplate(System.Windows.UIElement)">
+            <summary>
+            Gets a EffectAdorner DataTemplate for effect type All.
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.DragDrop.SetEffectAllAdornerTemplate(System.Windows.UIElement,System.Windows.DataTemplate)">
+            <summary>
+            Sets a EffectAdorner DataTemplate for effect type All.
+            </summary>
+        </member>
+        <member name="F:IUV.Common.Controls.DragDropControl.DragDrop.EffectScrollAdornerTemplateProperty">
+            <summary>
+            Gets or Sets a EffectAdorner DataTemplate for effect type Scroll.
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.DragDrop.GetEffectScrollAdornerTemplate(System.Windows.UIElement)">
+            <summary>
+            Gets a EffectAdorner DataTemplate for effect type Scroll.
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.DragDrop.SetEffectScrollAdornerTemplate(System.Windows.UIElement,System.Windows.DataTemplate)">
+            <summary>
+            Sets a EffectAdorner DataTemplate for effect type Scroll.
+            </summary>
+        </member>
+        <member name="F:IUV.Common.Controls.DragDropControl.DragDrop.ItemsPanelOrientationProperty">
+            <summary>
+            Gets or Sets the Orientation which should be used for the drag drop action (default null).
+            Normally it will be look up to find the correct orientaion of the inner ItemsPanel,
+            but sometimes it's necessary to force the oreintation, if the look up is wrong.
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.DragDrop.GetItemsPanelOrientation(System.Windows.UIElement)">
+            <summary>
+            Gets the Orientation which should be used for the drag drop action (default null).
+            Normally it will be look up to find the correct orientaion of the inner ItemsPanel,
+            but sometimes it's necessary to force the oreintation, if the look up is wrong.
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.DragDrop.SetItemsPanelOrientation(System.Windows.UIElement,System.Nullable{System.Windows.Controls.Orientation})">
+            <summary>
+            Sets the Orientation which should be used for the drag drop action (default null).
+            Normally it will be look up to find the correct orientaion of the inner ItemsPanel,
+            but sometimes it's necessary to force the oreintation, if the look up is wrong.
+            </summary>
+        </member>
+        <member name="F:IUV.Common.Controls.DragDropControl.DragDrop.MinimumHorizontalDragDistanceProperty">
+            <summary>
+            Gets or sets the minimum horizontal drag distance to allow for limited movement of the mouse pointer before a drag operation begins.
+            Default is SystemParameters.MinimumHorizontalDragDistance.
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.DragDrop.GetMinimumHorizontalDragDistance(System.Windows.UIElement)">
+            <summary>
+            Sets the minimum horizontal drag distance.
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.DragDrop.SetMinimumHorizontalDragDistance(System.Windows.UIElement,System.Double)">
+            <summary>
+            Sets the minimum horizontal drag distance.
+            </summary>
+        </member>
+        <member name="F:IUV.Common.Controls.DragDropControl.DragDrop.MinimumVerticalDragDistanceProperty">
+            <summary>
+            Gets or sets the minimum vertical drag distance to allow for limited movement of the mouse pointer before a drag operation begins.
+            Default is SystemParameters.MinimumVerticalDragDistance.
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.DragDrop.GetMinimumVerticalDragDistance(System.Windows.UIElement)">
+            <summary>
+            Gets the minimum vertical drag distance.
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.DragDrop.SetMinimumVerticalDragDistance(System.Windows.UIElement,System.Double)">
+            <summary>
+            Sets the minimum vertical drag distance.
+            </summary>
+        </member>
+        <member name="F:IUV.Common.Controls.DragDropControl.DragDrop.SelectDroppedItemsProperty">
+            <summary>
+            Gets or sets whether if the dropped items should be select again (should keep the selection).
+            Default is false.
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.DragDrop.GetSelectDroppedItems(System.Windows.UIElement)">
+            <summary>
+            Gets whether if the dropped items should be select again (should keep the selection).
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.DragDrop.SetSelectDroppedItems(System.Windows.UIElement,System.Boolean)">
+            <summary>
+            Sets whether if the dropped items should be select again (should keep the selection).
+            </summary>
+        </member>
+        <member name="F:IUV.Common.Controls.DragDropControl.DragDrop.DropTargetScrollViewerProperty">
+            <summary>
+            Gets or sets the <see cref="T:System.Windows.Controls.ScrollViewer"/> that will be used as <see cref="P:IUV.Common.Controls.DragDropControl.DropInfo.TargetScrollViewer"/>.
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.DragDrop.SetDropTargetScrollViewer(System.Windows.DependencyObject,System.Windows.Controls.ScrollViewer)">
+            <summary>
+            Sets the <see cref="T:System.Windows.Controls.ScrollViewer"/> that will be used as <see cref="P:IUV.Common.Controls.DragDropControl.DropInfo.TargetScrollViewer"/>.
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.DragDrop.GetDropTargetScrollViewer(System.Windows.DependencyObject)">
+            <summary>
+            Gets the <see cref="T:System.Windows.Controls.ScrollViewer"/> that will be used as <see cref="P:IUV.Common.Controls.DragDropControl.DropInfo.TargetScrollViewer"/>.
+            </summary>
+        </member>
+        <member name="F:IUV.Common.Controls.DragDropControl.DragDrop.ShowInsertionByDragSourceSizeProperty">
+            <summary>
+            用被拖动元素的大小显示插入点，并隐藏原拖动元素
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.DragDrop.GetShowInsertionByDragSourceSize(System.Windows.UIElement)">
+            <summary>
+            获取是否用被拖动元素的大小显示插入点，并隐藏原拖动元素
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.DragDrop.SetShowInsertionByDragSourceSize(System.Windows.UIElement,System.Boolean)">
+            <summary>
+            设置是否用被拖动元素的大小显示插入点，并隐藏原拖动元素
+            </summary>
+        </member>
+        <member name="F:IUV.Common.Controls.DragDropControl.DragDrop.InsertionBorderPenProperty">
+            <summary>
+            用被拖动元素的大小显示插入点时，插入点的边框样式
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.DragDrop.GetInsertionBorderPen(System.Windows.UIElement)">
+            <summary>
+            获取插入点的边框样式
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.DragDrop.SetInsertionBorderPen(System.Windows.UIElement,System.Windows.Media.Pen)">
+            <summary>
+            设置插入点的边框样式
+            </summary>
+        </member>
+        <member name="F:IUV.Common.Controls.DragDropControl.DragDrop.IsDragAdornerXFollowMouseProperty">
+            <summary>
+            DragAdorner的横坐标是否随鼠标位置移动
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.DragDrop.GetIsDragAdornerXFollowMouse(System.Windows.UIElement)">
+            <summary>
+            获取是否DragAdorner的横坐标是否随鼠标位置移动
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.DragDrop.SetIsDragAdornerXFollowMouse(System.Windows.UIElement,System.Boolean)">
+            <summary>
+            设置是否DragAdorner的横坐标是否随鼠标位置移动
+            </summary>
+        </member>
+        <member name="F:IUV.Common.Controls.DragDropControl.DragDrop.FrozenIndexProperty">
+            <summary>
+            不可移动的行/列
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.DragDrop.GetFrozenIndex(System.Windows.UIElement)">
+            <summary>
+            获取不可移动的行/列
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.DragDrop.SetFrozenIndex(System.Windows.UIElement,System.Int32)">
+            <summary>
+            设置不可移动的行/列
+            </summary>
+        </member>
+        <member name="F:IUV.Common.Controls.DragDropControl.DragDrop.CursorProperty">
+            <summary>
+            移动时的鼠标样式
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.DragDrop.GetCursor(System.Windows.UIElement)">
+            <summary>
+            获取鼠标样式
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.DragDrop.SetCursor(System.Windows.UIElement,System.Windows.FrameworkElement)">
+            <summary>
+            设置鼠标样式
+            </summary>
+        </member>
+        <member name="T:IUV.Common.Controls.DragDropControl.DragInfo">
+            <summary>
+            Holds information about a the source of a drag drop operation.
+            </summary>
+            
+            <remarks>
+            The <see cref="T:IUV.Common.Controls.DragDropControl.DragInfo"/> class holds all of the framework's information about the source
+            of a drag. It is used by <see cref="M:IUV.Common.Controls.DragDropControl.IDragSource.StartDrag(IUV.Common.Controls.DragDropControl.IDragInfo)"/> to determine whether a drag 
+            can start, and what the dragged data should be.
+            </remarks>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.DragInfo.#ctor(System.Object,System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            Initializes a new instance of the DragInfo class.
+            </summary>
+            
+            <param name="sender">
+            The sender of the mouse event that initiated the drag.
+            </param>
+            
+            <param name="e">
+            The mouse event that initiated the drag.
+            </param>
+        </member>
+        <member name="P:IUV.Common.Controls.DragDropControl.DragInfo.DataFormat">
+            <summary>
+            Gets or sets the data format which will be used for the drag and drop actions.
+            </summary>
+            <value>The data format.</value>
+        </member>
+        <member name="P:IUV.Common.Controls.DragDropControl.DragInfo.Data">
+            <summary>
+            Gets or sets the drag data.
+            </summary>
+            
+            <remarks>
+            This must be set by a drag handler in order for a drag to start.
+            </remarks>
+        </member>
+        <member name="P:IUV.Common.Controls.DragDropControl.DragInfo.DragStartPosition">
+            <summary>
+            Gets the position of the click that initiated the drag, relative to <see cref="P:IUV.Common.Controls.DragDropControl.DragInfo.VisualSource"/>.
+            </summary>
+        </member>
+        <member name="P:IUV.Common.Controls.DragDropControl.DragInfo.PositionInDraggedItem">
+            <summary>
+            Gets the point where the cursor was relative to the item being dragged when the drag was started.
+            </summary>
+        </member>
+        <member name="P:IUV.Common.Controls.DragDropControl.DragInfo.Effects">
+            <summary>
+            Gets or sets the allowed effects for the drag.
+            </summary>
+            
+            <remarks>
+            This must be set to a value other than <see cref="F:System.Windows.DragDropEffects.None"/> by a drag handler in order 
+            for a drag to start.
+            </remarks>
+        </member>
+        <member name="P:IUV.Common.Controls.DragDropControl.DragInfo.MouseButton">
+            <summary>
+            Gets the mouse button that initiated the drag.
+            </summary>
+        </member>
+        <member name="P:IUV.Common.Controls.DragDropControl.DragInfo.SourceCollection">
+            <summary>
+            Gets the collection that the source ItemsControl is bound to.
+            </summary>
+            
+            <remarks>
+            If the control that initated the drag is unbound or not an ItemsControl, this will be null.
+            </remarks>
+        </member>
+        <member name="P:IUV.Common.Controls.DragDropControl.DragInfo.SourceIndex">
+            <summary>
+            Gets the position from where the item was dragged.
+            </summary>
+            <value>The index of the source.</value>
+        </member>
+        <member name="P:IUV.Common.Controls.DragDropControl.DragInfo.SourceItem">
+            <summary>
+            Gets the object that a dragged item is bound to.
+            </summary>
+            
+            <remarks>
+            If the control that initated the drag is unbound or not an ItemsControl, this will be null.
+            </remarks>
+        </member>
+        <member name="P:IUV.Common.Controls.DragDropControl.DragInfo.SourceItems">
+            <summary>
+            Gets a collection of objects that the selected items in an ItemsControl are bound to.
+            </summary>
+            
+            <remarks>
+            If the control that initated the drag is unbound or not an ItemsControl, this will be empty.
+            </remarks>
+        </member>
+        <member name="P:IUV.Common.Controls.DragDropControl.DragInfo.SourceGroup">
+            <summary>
+            Gets the group from a dragged item if the drag is currently from an ItemsControl with groups.
+            </summary>
+        </member>
+        <member name="P:IUV.Common.Controls.DragDropControl.DragInfo.VisualSource">
+            <summary>
+            Gets the control that initiated the drag.
+            </summary>
+        </member>
+        <member name="P:IUV.Common.Controls.DragDropControl.DragInfo.VisualSourceItem">
+            <summary>
+            Gets the item in an ItemsControl that started the drag.
+            </summary>
+            
+            <remarks>
+            If the control that initiated the drag is an ItemsControl, this property will hold the item
+            container of the clicked item. For example, if <see cref="P:IUV.Common.Controls.DragDropControl.DragInfo.VisualSource"/> is a ListBox this
+            will hold a ListBoxItem.
+            </remarks>
+        </member>
+        <member name="P:IUV.Common.Controls.DragDropControl.DragInfo.VisualSourceFlowDirection">
+            <summary>
+            Gets the FlowDirection of the current drag source.
+            </summary>
+        </member>
+        <member name="P:IUV.Common.Controls.DragDropControl.DragInfo.DataObject">
+            <summary>
+            Gets the <see cref="T:System.Windows.IDataObject"/> which is used by the drag and drop operation. Set it to
+            a custom instance if custom drag and drop behavior is needed.
+            </summary>
+        </member>
+        <member name="P:IUV.Common.Controls.DragDropControl.DragInfo.DragDropHandler">
+            <summary>Initiates a drag-and-drop operation.</summary>
+            <param name="dragSource">A reference to the dependency object that is the source of the data being dragged.</param>
+            <param name="data">A data object that contains the data being dragged.</param>
+            <param name="allowedEffects">One of the <see cref="T:System.Windows.DragDropEffects" /> values that specifies permitted effects of the drag-and-drop operation.</param>
+            <returns>One of the <see cref="T:System.Windows.DragDropEffects" /> values that specifies the final effect that was performed during the drag-and-drop operation.</returns>
+        </member>
+        <member name="P:IUV.Common.Controls.DragDropControl.DragInfo.DragDropCopyKeyState">
+            <summary>
+            Gets the drag drop copy key state indicating the effect of the drag drop operation.
+            </summary>
+        </member>
+        <member name="T:IUV.Common.Controls.DragDropControl.DropInfo">
+            <summary>
+            Holds information about a the target of a drag drop operation.
+            </summary>
+            
+            <remarks>
+            The <see cref="T:IUV.Common.Controls.DragDropControl.DropInfo"/> class holds all of the framework's information about the current 
+            target of a drag. It is used by <see cref="M:IUV.Common.Controls.DragDropControl.IDropTarget.DragOver(IUV.Common.Controls.DragDropControl.IDropInfo)"/> method to determine whether 
+            the current drop target is valid, and by <see cref="M:IUV.Common.Controls.DragDropControl.IDropTarget.Drop(IUV.Common.Controls.DragDropControl.IDropInfo)"/> to perform the drop.
+            </remarks>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.DropInfo.#ctor(System.Object,System.Windows.DragEventArgs,IUV.Common.Controls.DragDropControl.DragInfo,IUV.Common.Controls.DragDropControl.EventType)">
+            <summary>
+            Initializes a new instance of the DropInfo class.
+            </summary>
+            
+            <param name="sender">
+            The sender of the drag event.
+            </param>
+            
+            <param name="e">
+            The drag event.
+            </param>
+            
+            <param name="dragInfo">
+            Information about the source of the drag, if the drag came from within the framework.
+            </param>
+            
+            <param name="eventType">
+            The type of the underlying event (tunneled or bubbled).
+            </param>
+        </member>
+        <member name="P:IUV.Common.Controls.DragDropControl.DropInfo.Data">
+            <summary>
+            Gets the drag data.
+            </summary>
+            
+            <remarks>
+            If the drag came from within the framework, this will hold:
+            
+            - The dragged data if a single item was dragged.
+            - A typed IEnumerable if multiple items were dragged.
+            </remarks>
+        </member>
+        <member name="P:IUV.Common.Controls.DragDropControl.DropInfo.DragInfo">
+            <summary>
+            Gets a <see cref="P:IUV.Common.Controls.DragDropControl.DropInfo.DragInfo"/> object holding information about the source of the drag, 
+            if the drag came from within the framework.
+            </summary>
+        </member>
+        <member name="P:IUV.Common.Controls.DragDropControl.DropInfo.DropPosition">
+            <summary>
+            Gets the mouse position relative to the VisualTarget
+            </summary>
+        </member>
+        <member name="P:IUV.Common.Controls.DragDropControl.DropInfo.DropTargetAdorner">
+            <summary>
+            Gets or sets the class of drop target to display.
+            </summary>
+            
+            <remarks>
+            The standard drop target adorner classes are held in the <see cref="T:IUV.Common.Controls.DragDropControl.DropTargetAdorners"/>
+            class.
+            </remarks>
+        </member>
+        <member name="P:IUV.Common.Controls.DragDropControl.DropInfo.Effects">
+            <summary>
+            Gets or sets the allowed effects for the drop.
+            </summary>
+            
+            <remarks>
+            This must be set to a value other than <see cref="F:System.Windows.DragDropEffects.None"/> by a drop handler in order 
+            for a drop to be possible.
+            </remarks>
+        </member>
+        <member name="P:IUV.Common.Controls.DragDropControl.DropInfo.InsertIndex">
+            <summary>
+            Gets the current insert position within <see cref="P:IUV.Common.Controls.DragDropControl.DropInfo.TargetCollection"/>.
+            </summary>
+        </member>
+        <member name="P:IUV.Common.Controls.DragDropControl.DropInfo.UnfilteredInsertIndex">
+            <summary>
+            Gets the current insert position within the source (unfiltered) <see cref="P:IUV.Common.Controls.DragDropControl.DropInfo.TargetCollection"/>.
+            </summary>
+            <remarks>
+            This should be only used in a Drop action.
+            This works only correct with different objects (string, int, etc won't work correct).
+            </remarks>
+        </member>
+        <member name="P:IUV.Common.Controls.DragDropControl.DropInfo.TargetCollection">
+            <summary>
+            Gets the collection that the target ItemsControl is bound to.
+            </summary>
+            
+            <remarks>
+            If the current drop target is unbound or not an ItemsControl, this will be null.
+            </remarks>
+        </member>
+        <member name="P:IUV.Common.Controls.DragDropControl.DropInfo.TargetItem">
+            <summary>
+            Gets the object that the current drop target is bound to.
+            </summary>
+            
+            <remarks>
+            If the current drop target is unbound or not an ItemsControl, this will be null.
+            </remarks>
+        </member>
+        <member name="P:IUV.Common.Controls.DragDropControl.DropInfo.TargetGroup">
+            <summary>
+            Gets the current group target.
+            </summary>
+            
+            <remarks>
+            If the drag is currently over an ItemsControl with groups, describes the group that
+            the drag is currently over.
+            </remarks>
+        </member>
+        <member name="P:IUV.Common.Controls.DragDropControl.DropInfo.TargetScrollViewer">
+            <summary>
+            Gets the ScrollViewer control for the visual target.
+            </summary>
+        </member>
+        <member name="P:IUV.Common.Controls.DragDropControl.DropInfo.TargetScrollingMode">
+            <summary>
+            Gets or Sets the ScrollingMode for the drop action.
+            </summary>
+        </member>
+        <member name="P:IUV.Common.Controls.DragDropControl.DropInfo.VisualTarget">
+            <summary>
+            Gets the control that is the current drop target.
+            </summary>
+        </member>
+        <member name="P:IUV.Common.Controls.DragDropControl.DropInfo.VisualTargetItem">
+            <summary>
+            Gets the item in an ItemsControl that is the current drop target.
+            </summary>
+            
+            <remarks>
+            If the current drop target is unbound or not an ItemsControl, this will be null.
+            </remarks>
+        </member>
+        <member name="P:IUV.Common.Controls.DragDropControl.DropInfo.VisualTargetOrientation">
+            <summary>
+            Gets the orientation of the current drop target.
+            </summary>
+        </member>
+        <member name="P:IUV.Common.Controls.DragDropControl.DropInfo.VisualTargetFlowDirection">
+            <summary>
+            Gets the orientation of the current drop target.
+            </summary>
+        </member>
+        <member name="P:IUV.Common.Controls.DragDropControl.DropInfo.DestinationText">
+            <summary>
+            Gets and sets the text displayed in the DropDropEffects adorner.
+            </summary>
+        </member>
+        <member name="P:IUV.Common.Controls.DragDropControl.DropInfo.EffectText">
+            <summary>
+            Gets and sets the effect text displayed in the DropDropEffects adorner.
+            </summary>
+        </member>
+        <member name="P:IUV.Common.Controls.DragDropControl.DropInfo.InsertPosition">
+            <summary>
+            Gets the relative position the item will be inserted to compared to the TargetItem
+            </summary>
+        </member>
+        <member name="P:IUV.Common.Controls.DragDropControl.DropInfo.KeyStates">
+            <summary>
+            Gets a flag enumeration indicating the current state of the SHIFT, CTRL, and ALT keys, as well as the state of the mouse buttons.
+            </summary>
+        </member>
+        <member name="P:IUV.Common.Controls.DragDropControl.DropInfo.IsSameDragDropContextAsSource">
+            <summary>
+            Gets a value indicating whether the target is in the same context as the source, <see cref="F:IUV.Common.Controls.DragDropControl.DragDrop.DragDropContextProperty" />.
+            </summary>
+        </member>
+        <member name="P:IUV.Common.Controls.DragDropControl.DropInfo.EventType">
+            <summary>
+            Gets the current mode of the underlying routed event.
+            </summary>
+        </member>
+        <member name="P:IUV.Common.Controls.DragDropControl.DropTargetAdorner.Pen">
+            <summary>
+            Gets or Sets the pen which can be used for the render process.
+            </summary>
+        </member>
+        <member name="P:IUV.Common.Controls.DragDropControl.DropTargetAdorners.Highlight">
+            <summary>
+            Gets the type of the default highlight target adorner.
+            </summary>
+        </member>
+        <member name="P:IUV.Common.Controls.DragDropControl.DropTargetAdorners.Insert">
+            <summary>
+            Gets the type of the default insert target adorner.
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.DropTargetHighlightAdorner.OnRender(System.Windows.Media.DrawingContext)">
+            <summary>
+            When overridden in a derived class, participates in rendering operations that are directed by the layout system.
+            The rendering instructions for this element are not used directly when this method is invoked, and are instead preserved for
+            later asynchronous use by layout and drawing.
+            </summary>
+            <param name="drawingContext">The drawing instructions for a specific element. This context is provided to the layout system.</param>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.DropTargetInsertionAdorner.OnRender(System.Windows.Media.DrawingContext)">
+            <summary>
+            When overridden in a derived class, participates in rendering operations that are directed by the layout system.
+            The rendering instructions for this element are not used directly when this method is invoked, and are instead preserved for
+            later asynchronous use by layout and drawing.
+            </summary>
+            <param name="drawingContext">The drawing instructions for a specific element. This context is provided to the layout system.</param>
+        </member>
+        <member name="T:IUV.Common.Controls.DragDropControl.Icons.IconFactory">
+            <summary>
+            Static class to provide access to standard application images
+            </summary>
+        </member>
+        <member name="P:IUV.Common.Controls.DragDropControl.Icons.IconFactory.EffectNone">
+            <summary>
+            Gets the icon which can be used for the effect type None.
+            </summary>
+        </member>
+        <member name="P:IUV.Common.Controls.DragDropControl.Icons.IconFactory.EffectCopy">
+            <summary>
+            Gets the icon which can be used for the effect type Copy.
+            </summary>
+        </member>
+        <member name="P:IUV.Common.Controls.DragDropControl.Icons.IconFactory.EffectMove">
+            <summary>
+            Gets the icon which can be used for the effect type Move.
+            </summary>
+        </member>
+        <member name="P:IUV.Common.Controls.DragDropControl.Icons.IconFactory.EffectLink">
+            <summary>
+            Gets the icon which can be used for the effect type Link.
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.Icons.IconFactory.GetImage(System.String,System.Int32)">
+            <summary>
+            Loads an image based on the name and size required.
+            Images need to be marked as 'Resource' in the project for them be loaded.
+            </summary>
+            <param name="iconName">Name of the icon</param>
+            <param name="size">The size of the icon</param>
+            <returns>The image to be displayed</returns>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.Icons.IconFactory.CreateCursor(System.Double,System.Double,System.Windows.Media.SolidColorBrush,System.Windows.Media.Pen)">
+            <summary>
+            Creates a custom cursor.
+            </summary>
+            <param name="rx"></param>
+            <param name="ry"></param>
+            <param name="brush"></param>
+            <param name="pen"></param>
+            <returns></returns>
+        </member>
+        <member name="P:IUV.Common.Controls.DragDropControl.IDragInfo.DataFormat">
+            <summary>
+            Gets or sets the data format which will be used for the drag and drop actions.
+            </summary>
+            <value>The data format.</value>
+        </member>
+        <member name="P:IUV.Common.Controls.DragDropControl.IDragInfo.Data">
+            <summary>
+            Gets or sets the drag data.
+            </summary>
+            
+            <remarks>
+            This must be set by a drag handler in order for a drag to start.
+            </remarks>
+        </member>
+        <member name="P:IUV.Common.Controls.DragDropControl.IDragInfo.DragStartPosition">
+            <summary>
+            Gets the position of the click that initiated the drag, relative to <see cref="P:IUV.Common.Controls.DragDropControl.IDragInfo.VisualSource"/>.
+            </summary>
+        </member>
+        <member name="P:IUV.Common.Controls.DragDropControl.IDragInfo.PositionInDraggedItem">
+            <summary>
+            Gets the point where the cursor was relative to the item being dragged when the drag was started.
+            </summary>
+        </member>
+        <member name="P:IUV.Common.Controls.DragDropControl.IDragInfo.Effects">
+            <summary>
+            Gets or sets the allowed effects for the drag.
+            </summary>
+            
+            <remarks>
+            This must be set to a value other than <see cref="F:System.Windows.DragDropEffects.None"/> by a drag handler in order 
+            for a drag to start.
+            </remarks>
+        </member>
+        <member name="P:IUV.Common.Controls.DragDropControl.IDragInfo.MouseButton">
+            <summary>
+            Gets the mouse button that initiated the drag.
+            </summary>
+        </member>
+        <member name="P:IUV.Common.Controls.DragDropControl.IDragInfo.SourceCollection">
+            <summary>
+            Gets the collection that the source ItemsControl is bound to.
+            </summary>
+            
+            <remarks>
+            If the control that initated the drag is unbound or not an ItemsControl, this will be null.
+            </remarks>
+        </member>
+        <member name="P:IUV.Common.Controls.DragDropControl.IDragInfo.SourceIndex">
+            <summary>
+            Gets the position from where the item was dragged.
+            </summary>
+        </member>
+        <member name="P:IUV.Common.Controls.DragDropControl.IDragInfo.SourceItem">
+            <summary>
+            Gets the object that a dragged item is bound to.
+            </summary>
+            
+            <remarks>
+            If the control that initated the drag is unbound or not an ItemsControl, this will be null.
+            </remarks>
+        </member>
+        <member name="P:IUV.Common.Controls.DragDropControl.IDragInfo.SourceItems">
+            <summary>
+            Gets a collection of objects that the selected items in an ItemsControl are bound to.
+            </summary>
+            
+            <remarks>
+            If the control that initated the drag is unbound or not an ItemsControl, this will be empty.
+            </remarks>
+        </member>
+        <member name="P:IUV.Common.Controls.DragDropControl.IDragInfo.SourceGroup">
+            <summary>
+            Gets the group from a dragged item if the drag is currently from an ItemsControl with groups.
+            </summary>
+        </member>
+        <member name="P:IUV.Common.Controls.DragDropControl.IDragInfo.VisualSource">
+            <summary>
+            Gets the control that initiated the drag.
+            </summary>
+        </member>
+        <member name="P:IUV.Common.Controls.DragDropControl.IDragInfo.VisualSourceItem">
+            <summary>
+            Gets the item in an ItemsControl that started the drag.
+            </summary>
+            
+            <remarks>
+            If the control that initiated the drag is an ItemsControl, this property will hold the item
+            container of the clicked item. For example, if <see cref="P:IUV.Common.Controls.DragDropControl.IDragInfo.VisualSource"/> is a ListBox this
+            will hold a ListBoxItem.
+            </remarks>
+        </member>
+        <member name="P:IUV.Common.Controls.DragDropControl.IDragInfo.VisualSourceFlowDirection">
+            <summary>
+            Gets the FlowDirection of the current drag source.
+            </summary>
+        </member>
+        <member name="P:IUV.Common.Controls.DragDropControl.IDragInfo.DataObject">
+            <summary>
+            Gets the <see cref="T:System.Windows.IDataObject"/> which is used by the drag and drop operation. Set it to
+            a custom instance if custom drag and drop behavior is needed.
+            </summary>
+        </member>
+        <member name="P:IUV.Common.Controls.DragDropControl.IDragInfo.DragDropHandler">
+            <summary>Initiates a drag-and-drop operation.</summary>
+            <param name="dragSource">A reference to the dependency object that is the source of the data being dragged.</param>
+            <param name="data">A data object that contains the data being dragged.</param>
+            <param name="allowedEffects">One of the <see cref="T:System.Windows.DragDropEffects" /> values that specifies permitted effects of the drag-and-drop operation.</param>
+            <returns>One of the <see cref="T:System.Windows.DragDropEffects" /> values that specifies the final effect that was performed during the drag-and-drop operation.</returns>
+        </member>
+        <member name="P:IUV.Common.Controls.DragDropControl.IDragInfo.DragDropCopyKeyState">
+            <summary>
+            Gets the drag drop copy key state indicating the effect of the drag drop operation.
+            </summary>
+        </member>
+        <member name="T:IUV.Common.Controls.DragDropControl.IDragSource">
+            <summary>
+            Interface implemented by Drag Handlers.
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.IDragSource.StartDrag(IUV.Common.Controls.DragDropControl.IDragInfo)">
+            <summary>
+            Queries whether a drag can be started.
+            </summary>
+            
+            <param name="dragInfo">
+            Information about the drag.
+            </param>
+            
+            <remarks>
+            To allow a drag to be started, the <see cref="P:IUV.Common.Controls.DragDropControl.DragInfo.Effects"/> property on <paramref name="dragInfo"/> 
+            should be set to a value other than <see cref="F:System.Windows.DragDropEffects.None"/>. 
+            </remarks>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:IUV.Common.Controls.DragDropControl.IDragSource.CanStartDrag(IUV.Common.Controls.DragDropControl.IDragInfo)" -->
+        <member name="M:IUV.Common.Controls.DragDropControl.IDragSource.Dropped(IUV.Common.Controls.DragDropControl.IDropInfo)">
+            <summary>
+            Notifies the drag handler that a drop has occurred.
+            </summary>
+            
+            <param name="dropInfo">
+              Information about the drop.
+            </param>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.IDragSource.DragDropOperationFinished(System.Windows.DragDropEffects,IUV.Common.Controls.DragDropControl.IDragInfo)">
+            <summary>
+            Notifies the drag handler that a drag and drop operation has finished.
+            </summary>
+            <param name="operationResult">The operation result.</param>
+            <param name="dragInfo">The drag information.</param>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.IDragSource.DragCancelled">
+            <summary>
+            Notifies the drag handler that a drag has been aborted.
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.IDragSource.TryCatchOccurredException(System.Exception)">
+            <summary>
+            Notifies that an exception has occurred upon dragging.
+            </summary>
+            <param name="exception">
+            The exception that occurrred.
+            </param>
+            <returns>
+            Boolean indicating whether the exception is handled in the drag handler.
+            False will rethrow the exception.
+            </returns>
+        </member>
+        <member name="P:IUV.Common.Controls.DragDropControl.IDropInfo.Data">
+            <summary>
+            Gets the drag data.
+            </summary>
+            
+            <remarks>
+            If the drag came from within the framework, this will hold:
+            
+            - The dragged data if a single item was dragged.
+            - A typed IEnumerable if multiple items were dragged.
+            </remarks>
+        </member>
+        <member name="P:IUV.Common.Controls.DragDropControl.IDropInfo.DragInfo">
+            <summary>
+            Gets a <see cref="P:IUV.Common.Controls.DragDropControl.IDropInfo.DragInfo"/> object holding information about the source of the drag, 
+            if the drag came from within the framework.
+            </summary>
+        </member>
+        <member name="P:IUV.Common.Controls.DragDropControl.IDropInfo.DropPosition">
+            <summary>
+            Gets the mouse position relative to the VisualTarget
+            </summary>
+        </member>
+        <member name="P:IUV.Common.Controls.DragDropControl.IDropInfo.DropTargetAdorner">
+            <summary>
+            Gets or sets the class of drop target to display.
+            </summary>
+            
+            <remarks>
+            The standard drop target adorner classes are held in the <see cref="T:IUV.Common.Controls.DragDropControl.DropTargetAdorners"/>
+            class.
+            </remarks>
+        </member>
+        <member name="P:IUV.Common.Controls.DragDropControl.IDropInfo.Effects">
+            <summary>
+            Gets or sets the allowed effects for the drop.
+            </summary>
+            
+            <remarks>
+            This must be set to a value other than <see cref="F:System.Windows.DragDropEffects.None"/> by a drop handler in order 
+            for a drop to be possible.
+            </remarks>
+        </member>
+        <member name="P:IUV.Common.Controls.DragDropControl.IDropInfo.InsertIndex">
+            <summary>
+            Gets the current insert position within <see cref="P:IUV.Common.Controls.DragDropControl.IDropInfo.TargetCollection"/>.
+            </summary>
+        </member>
+        <member name="P:IUV.Common.Controls.DragDropControl.IDropInfo.UnfilteredInsertIndex">
+            <summary>
+            Gets the current insert position within the source (unfiltered) <see cref="P:IUV.Common.Controls.DragDropControl.IDropInfo.TargetCollection"/>.
+            </summary>
+            <remarks>
+            This should be only used in a Drop action.
+            This works only correct with different objects (string, int, etc won't work correct).
+            </remarks>
+        </member>
+        <member name="P:IUV.Common.Controls.DragDropControl.IDropInfo.TargetCollection">
+            <summary>
+            Gets the collection that the target ItemsControl is bound to.
+            </summary>
+            
+            <remarks>
+            If the current drop target is unbound or not an ItemsControl, this will be null.
+            </remarks>
+        </member>
+        <member name="P:IUV.Common.Controls.DragDropControl.IDropInfo.TargetItem">
+            <summary>
+            Gets the object that the current drop target is bound to.
+            </summary>
+            
+            <remarks>
+            If the current drop target is unbound or not an ItemsControl, this will be null.
+            </remarks>
+        </member>
+        <member name="P:IUV.Common.Controls.DragDropControl.IDropInfo.TargetGroup">
+            <summary>
+            Gets the current group target.
+            </summary>
+            
+            <remarks>
+            If the drag is currently over an ItemsControl with groups, describes the group that
+            the drag is currently over.
+            </remarks>
+        </member>
+        <member name="P:IUV.Common.Controls.DragDropControl.IDropInfo.VisualTarget">
+            <summary>
+            Gets the control that is the current drop target.
+            </summary>
+        </member>
+        <member name="P:IUV.Common.Controls.DragDropControl.IDropInfo.VisualTargetItem">
+            <summary>
+            Gets the item in an ItemsControl that is the current drop target.
+            </summary>
+            
+            <remarks>
+            If the current drop target is unbound or not an ItemsControl, this will be null.
+            </remarks>
+        </member>
+        <member name="P:IUV.Common.Controls.DragDropControl.IDropInfo.VisualTargetOrientation">
+            <summary>
+            Gets the orientation of the current drop target.
+            </summary>
+        </member>
+        <member name="P:IUV.Common.Controls.DragDropControl.IDropInfo.VisualTargetFlowDirection">
+            <summary>
+            Gets the FlowDirection of the current drop target.
+            </summary>
+        </member>
+        <member name="P:IUV.Common.Controls.DragDropControl.IDropInfo.DestinationText">
+            <summary>
+            Gets and sets the text displayed in the DropDropEffects adorner.
+            </summary>
+        </member>
+        <member name="P:IUV.Common.Controls.DragDropControl.IDropInfo.EffectText">
+            <summary>
+            Gets and sets the effect text displayed in the DropDropEffects adorner.
+            </summary>
+        </member>
+        <member name="P:IUV.Common.Controls.DragDropControl.IDropInfo.InsertPosition">
+            <summary>
+            Gets the relative position the item will be inserted to compared to the TargetItem
+            </summary>
+        </member>
+        <member name="P:IUV.Common.Controls.DragDropControl.IDropInfo.KeyStates">
+            <summary>
+            Gets a flag enumeration indicating the current state of the SHIFT, CTRL, and ALT keys, as well as the state of the mouse buttons.
+            </summary>
+        </member>
+        <member name="P:IUV.Common.Controls.DragDropControl.IDropInfo.NotHandled">
+            <summary>
+            Indicates if the drop info should be handled by itself (useful for child elements)
+            </summary>
+        </member>
+        <member name="P:IUV.Common.Controls.DragDropControl.IDropInfo.IsSameDragDropContextAsSource">
+            <summary>
+            Gets a value indicating whether the target is in the same context as the source, <see cref="F:IUV.Common.Controls.DragDropControl.DragDrop.DragDropContextProperty" />.
+            </summary>
+        </member>
+        <member name="P:IUV.Common.Controls.DragDropControl.IDropInfo.EventType">
+            <summary>
+            Gets the current mode of the underlying routed event.
+            </summary>
+        </member>
+        <member name="T:IUV.Common.Controls.DragDropControl.IDropTarget">
+            <summary>
+            Interface implemented by Drop Handlers.
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.IDropTarget.DragOver(IUV.Common.Controls.DragDropControl.IDropInfo)">
+            <summary>
+            Updates the current drag state.
+            </summary>
+            
+            <param name="dropInfo">
+              Information about the drag.
+            </param>
+            
+            <remarks>
+            To allow a drop at the current drag position, the <see cref="P:IUV.Common.Controls.DragDropControl.DropInfo.Effects"/> property on 
+            <paramref name="dropInfo"/> should be set to a value other than <see cref="F:System.Windows.DragDropEffects.None"/>
+            and <see cref="P:IUV.Common.Controls.DragDropControl.DropInfo.Data"/> should be set to a non-null value.
+            </remarks>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.IDropTarget.Drop(IUV.Common.Controls.DragDropControl.IDropInfo)">
+            <summary>
+            Performs a drop.
+            </summary>
+            
+            <param name="dropInfo">
+              Information about the drop.
+            </param>
+        </member>
+        <member name="T:IUV.Common.Controls.DragDropControl.ScrollingMode">
+            <summary>
+            Specifies how <see cref="T:System.Windows.Controls.ScrollViewer" /> reacts to drop operation.
+            </summary>
+        </member>
+        <member name="T:IUV.Common.Controls.DragDropControl.Utilities.DpiHelper">
+            <summary>
+            A helper class for Dpi logicm cause Microsoft hides this with the internal flag.
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.Utilities.DpiHelper.LogicalPixelsToDevice(System.Windows.Point)">
+            <summary>
+            Convert a point in device independent pixels (1/96") to a point in the system coordinates.
+            </summary>
+            <param name="logicalPoint">A point in the logical coordinate system.</param>
+            <returns>Returns the point converted to the system's coordinates.</returns>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.Utilities.DpiHelper.DevicePixelsToLogical(System.Windows.Point)">
+            <summary>
+            Convert a point in system coordinates to a point in device independent pixels (1/96").
+            </summary>
+            <param name="devicePoint">A point in the physical coordinate system.</param>
+            <returns>Returns the point converted to the device independent coordinate system.</returns>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.Utilities.DragDropExtensions.IsDragSourceIgnored(System.Windows.UIElement)">
+            <summary>
+            Determines whether the given element is ignored on drag start (<see cref="!:DragDrop.DragSourceIgnore"/>).
+            </summary>
+            <param name="element">The given element.</param>
+            <returns>Element is ignored or not.</returns>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.Utilities.DragDropExtensions.IsDragSource(System.Windows.UIElement)">
+            <summary>
+            Determines whether the given element is ignored on drop action (<see cref="!:DragDrop.IsDragSource"/>).
+            </summary>
+            <param name="element">The given element.</param>
+            <returns>Element is ignored or not.</returns>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.Utilities.DragDropExtensions.IsDropTarget(System.Windows.UIElement)">
+            <summary>
+            Determines whether the given element is ignored on drop action (<see cref="!:DragDrop.IsDropTarget"/>).
+            </summary>
+            <param name="element">The given element.</param>
+            <returns>Element is ignored or not.</returns>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.Utilities.DragDropExtensions.DirectlyOverElement(System.Windows.Point,System.Windows.UIElement,System.Windows.UIElement)">
+            <summary>
+            Gets if drop position is directly over element
+            </summary>
+            <param name="dropPosition">Drop position</param>
+            <param name="element">element to check whether or not the drop position is directly over or not</param>
+            <param name="relativeToElement">element to which the drop position is related</param>
+            <returns>drop position is directly over element or not</returns>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.Utilities.DragDropExtensions.GetCaptureScreenDataTemplate(System.Windows.UIElement,System.Windows.FlowDirection)">
+            <summary>
+            Capture screen and create data template containing the captured image
+            </summary>
+            <param name="element">visual source to capture screen of</param>
+            <param name="visualSourceFlowDirection">Flowdirection of visual source</param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.Utilities.HitTestUtilities.IsNotPartOfSender(System.Object,System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            thx to @osicka from issue #84
+            
+            e.g. original source is part of a popup (e.g. ComboBox drop down), the hit test needs to be done on the original source.
+            Because the popup is not attached to the visual tree of the sender.
+            This function test this by looping back from the original source to the sender and if it didn't end up at the sender stopped the drag.
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.Utilities.ItemsControlExtensions.GetItemsPanelOrientation(System.Windows.Controls.ItemsControl)">
+            <summary>
+            Gets the Orientation which will be used for the drag drop action.
+            Normally it will be look up to find the correct orientaion of the inner ItemsPanel,
+            but sometimes it's necessary to force the oreintation, if the look up is wrong.
+            If so, the ItemsPanelOrientation value is taken.
+            </summary>
+            <param name="itemsControl">The ItemsControl for the look up.</param>
+            <returns>Orientation for the given ItemsControl.</returns>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.Utilities.ItemsControlExtensions.GetItemsPanelFlowDirection(System.Windows.Controls.ItemsControl)">
+            <summary>
+            Gets the FlowDirection which will be used for the drag drop action.
+            </summary>
+            <param name="itemsControl">The ItemsControl for the look up.</param>
+            <returns>FlowDirection for the given ItemsControl.</returns>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.Utilities.ItemsControlExtensions.SetSelectedItem(System.Windows.Controls.ItemsControl,System.Object)">
+            <summary>
+            Sets the given object as selected item at the ItemsControl.
+            </summary>
+            <param name="itemsControl">The ItemsControl which contains the item.</param>
+            <param name="item">The object which should be selected.</param>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.Utilities.ItemsControlExtensions.ClearSelectedItems(System.Windows.Controls.ItemsControl)">
+            <summary>
+            Clears the selected items.
+            </summary>
+            <param name="itemsControl">The items control.</param>
+        </member>
+        <member name="T:IUV.Common.Controls.DragDropControl.Utilities.TreeViewItemExtensions">
+            <summary>
+            Extension methods for TreeViewItem
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.Utilities.TreeViewItemExtensions.GetHeaderSize(System.Windows.Controls.TreeViewItem)">
+            <summary>
+            Try get the height of the header part for the given TreeViewItem.
+            If there is no PART_Header it will return Size.Empty.
+            </summary>
+            <param name="item">The TreeViewItem.</param>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.Utilities.TreeViewItemExtensions.GetHeaderControl(System.Windows.Controls.TreeViewItem)">
+            <summary>
+            Try get the header part of the given TreeViewItem.
+            If there is no PART_Header it will return null.
+            </summary>
+            <param name="item">The TreeViewItem.</param>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.Utilities.TypeUtilities.TryGetList(System.Collections.IEnumerable)">
+            <summary>
+            Gets the enumerable as list.
+            If enumerable is an ICollectionView then it returns the SourceCollection as list.
+            </summary>
+            <param name="enumerable">The enumerable.</param>
+            <returns>Returns a list.</returns>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.Utilities.VisualTreeExtensions.TryGetNextAncestorDropTargetElement(System.Windows.UIElement)">
+            <summary>
+            Gets the next ancestor element which is a drop target.
+            </summary>
+            <param name="element">The start element.</param>
+            <returns>The first element which is a drop target.</returns>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.Utilities.VisualTreeExtensions.GetVisualAncestor(System.Windows.DependencyObject,System.Type,System.Windows.Controls.ItemsControl,System.Type)">
+            <summary>
+            find the visual ancestor item by type
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.DragDropControl.Utilities.VisualTreeExtensions.GetVisualAncestor(System.Windows.DependencyObject,System.Type,System.Windows.Controls.ItemsControl)">
+            <summary>
+            find the visual ancestor by type and go through the visual tree until the given itemsControl will be found
+            </summary>
+        </member>
+        <member name="T:IUV.Common.Controls.IuvClosableTabControl">
+            <summary>
+            IuvClosableTabControl
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.IuvClosableTabControl.GetContainerForItemOverride">
+            <summary>
+            GetContainerForItemOverride
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:IUV.Common.Controls.IuvClosableTabControl.AddCommandProperty">
+            <summary>
+            AddCommandProperty
+            </summary>
+        </member>
+        <member name="P:IUV.Common.Controls.IuvClosableTabControl.AddCommand">
+            <summary>
+            AddCommand
+            </summary>
+        </member>
+        <member name="T:IUV.Common.Controls.IuvClosableTabItem">
+            <summary>
+            IuvIuvClosableTabItem
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.IuvClosableTabItem.#ctor">
+            <summary>
+            IuvClosableTabItem
+            </summary>
+        </member>
+        <member name="P:IUV.Common.Controls.IuvClosableTabItem.CanClose">
+            <summary>
+            是否可以关闭
+            </summary>
+        </member>
+        <member name="F:IUV.Common.Controls.IuvClosableTabItem.CanCloseProperty">
+            <summary>
+            CanCloseProperty
+            </summary>
+        </member>
+        <member name="F:IUV.Common.Controls.IuvClosableTabItem.SavedProperty">
+            <summary>
+            SavedProperty
+            </summary>
+        </member>
+        <member name="P:IUV.Common.Controls.IuvClosableTabItem.NormalBackground">
+            <summary>
+            正常背景色
+            </summary>
+        </member>
+        <member name="F:IUV.Common.Controls.IuvClosableTabItem.NormalBackgroundProperty">
+            <summary>
+            NormalBackgroundProperty
+            </summary>
+        </member>
+        <member name="P:IUV.Common.Controls.IuvClosableTabItem.OverBackgound">
+            <summary>
+            悬浮背景色
+            </summary>
+        </member>
+        <member name="F:IUV.Common.Controls.IuvClosableTabItem.OverBackgoundProperty">
+            <summary>
+            OverBackgoundProperty
+            </summary>
+        </member>
+        <member name="P:IUV.Common.Controls.IuvClosableTabItem.SelectedBackgound">
+            <summary>
+            选中背景色
+            </summary>
+        </member>
+        <member name="F:IUV.Common.Controls.IuvClosableTabItem.SelectedBackgoundProperty">
+            <summary>
+            SelectedBackgoundProperty
+            </summary>
+        </member>
+        <member name="P:IUV.Common.Controls.IuvClosableTabItem.NormalForeground">
+            <summary>
+            默认前景色
+            </summary>
+        </member>
+        <member name="F:IUV.Common.Controls.IuvClosableTabItem.NormalForegroundProperty">
+            <summary>
+            NormalForegroundProperty
+            </summary>
+        </member>
+        <member name="P:IUV.Common.Controls.IuvClosableTabItem.OverForeground">
+            <summary>
+            悬浮前景色
+            </summary>
+        </member>
+        <member name="F:IUV.Common.Controls.IuvClosableTabItem.OverForegroundProperty">
+            <summary>
+            OverForegroundProperty
+            </summary>
+        </member>
+        <member name="P:IUV.Common.Controls.IuvClosableTabItem.SelectedForeground">
+            <summary>
+            选中前景色
+            </summary>
+        </member>
+        <member name="F:IUV.Common.Controls.IuvClosableTabItem.SelectedForegroundProperty">
+            <summary>
+            SelectedForegroundProperty
+            </summary>
+        </member>
+        <member name="P:IUV.Common.Controls.IuvClosableTabItem.CornerRadius">
+            <summary>
+            控件圆角
+            </summary>
+        </member>
+        <member name="P:IUV.Common.Controls.IuvClosableTabItem.LogoIcon">
+            <summary>
+            前置Logo
+            </summary>
+        </member>
+        <member name="P:IUV.Common.Controls.IuvClosableTabItem.LogoIconWidth">
+            <summary>
+            前置Logo宽度
+            </summary>
+        </member>
+        <member name="P:IUV.Common.Controls.IuvClosableTabItem.LogoIconHeigth">
+            <summary>
+            前置Logo高度
+            </summary>
+        </member>
+        <member name="P:IUV.Common.Controls.IuvClosableTabItem.LogoPadding">
+            <summary>
+            LogoPadding
+            </summary>
+        </member>
+        <member name="E:IUV.Common.Controls.IuvClosableTabItem.CloseItem">
+            <summary>
+            关闭item事件
+            </summary>
+        </member>
+        <member name="T:IUV.Common.Controls.IuvDataGrid">
+            <summary>
+            IuvDataGrid
+            </summary>
+        </member>
+        <member name="P:IUV.Common.Controls.IuvDataGrid.SortedColumn">
+            <summary>
+            当前排序列
+            </summary>
+        </member>
+        <member name="P:IUV.Common.Controls.IuvDataGrid.Sorted">
+            <summary>
+            是否排序过
+            </summary>
+        </member>
+        <member name="F:IUV.Common.Controls.IuvDataGrid.SortedProperty">
+            <summary>
+            是否排序过
+            </summary>
+        </member>
+        <member name="P:IUV.Common.Controls.IuvDataGrid.RestoreSortCommand">
+            <summary>
+            排序恢复
+            </summary>
+        </member>
+        <member name="F:IUV.Common.Controls.IuvDataGrid.RestoreSortCommandProperty">
+            <summary>
+            排序恢复
+            </summary>
+        </member>
+        <member name="P:IUV.Common.Controls.IuvDataGrid.SettingCommand">
+            <summary>
+            表头设置
+            </summary>
+        </member>
+        <member name="F:IUV.Common.Controls.IuvDataGrid.SettingCommandProperty">
+            <summary>
+            表头设置
+            </summary>
+        </member>
+        <member name="P:IUV.Common.Controls.IuvDataGrid.SortCommand">
+            <summary>
+            表头设置
+            </summary>
+        </member>
+        <member name="F:IUV.Common.Controls.IuvDataGrid.SortCommandProperty">
+            <summary>
+            表头设置
+            </summary>
+        </member>
+        <member name="P:IUV.Common.Controls.IuvDataGrid.IuvDataGridHeadFontSize">
+            <summary>
+            表头字体大小
+            </summary>
+        </member>
+        <member name="F:IUV.Common.Controls.IuvDataGrid.IuvDataGridHeadFontSizeProperty">
+            <summary>
+            表头字体大小
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.IuvDataGrid.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.IuvDataGrid.GetVisualChild``1(System.Windows.Media.Visual)">
+            <summary>
+            获取父可视对象中第一个指定类型的子可视对象
+            </summary>
+            <typeparam name="T">可视对象类型</typeparam>
+            <param name="parent">父可视对象</param>
+            <returns>第一个指定类型的子可视对象</returns>
+        </member>
+        <member name="T:IUV.Common.Controls.IuvGridSplitter">
+            <summary>
+            IuvGridSplitter
+            </summary>
+        </member>
+        <member name="F:IUV.Common.Controls.IuvGridSplitter.DockCommandProperty">
+            <summary>
+            DockCommandProperty
+            </summary>
+        </member>
+        <member name="P:IUV.Common.Controls.IuvGridSplitter.DockCommand">
+            <summary>
+            DockCommand
+            </summary>
+        </member>
+        <member name="F:IUV.Common.Controls.IuvGridSplitter.TogglePrevProperty">
+            <summary>
+            TogglePrevProperty
+            </summary>
+        </member>
+        <member name="P:IUV.Common.Controls.IuvGridSplitter.TogglePrev">
+            <summary>
+            TogglePrev
+            </summary>
+        </member>
+        <member name="F:IUV.Common.Controls.IuvGridSplitter.ToggleNextProperty">
+            <summary>
+            TogglePrevProperty
+            </summary>
+        </member>
+        <member name="P:IUV.Common.Controls.IuvGridSplitter.ToggleNext">
+            <summary>
+            TogglePrev
+            </summary>
+        </member>
+        <member name="F:IUV.Common.Controls.IuvGridSplitter.DockTypeProperty">
+            <summary>
+            DockTypeProperty
+            </summary>
+        </member>
+        <member name="P:IUV.Common.Controls.IuvGridSplitter.DockType">
+            <summary>
+            DockType
+            </summary>
+        </member>
+        <member name="F:IUV.Common.Controls.IuvGridSplitter.CanResizeProperty">
+            <summary>
+            CanResizeProperty
+            </summary>
+        </member>
+        <member name="P:IUV.Common.Controls.IuvGridSplitter.CanResize">
+            <summary>
+            CanResize
+            </summary>
+        </member>
+        <member name="F:IUV.Common.Controls.IuvGridSplitter.EffectiveResizeDirectionProperty">
+            <summary>
+            EffectiveResizeDirectionProperty
+            </summary>
+        </member>
+        <member name="P:IUV.Common.Controls.IuvGridSplitter.EffectiveResizeDirection">
+            <summary>
+            EffectiveResizeDirection
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.IuvGridSplitter.#ctor">
+            <summary>
+            ctor
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.IuvGridSplitter.OnPropertyChanged(System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            OnPropertyChanged
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:IUV.Common.Controls.IuvGridSplitter.GetEffectiveResizeDirection">
+            <summary>
+            GetEffectiveResizeDirection
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:IUV.Common.Controls.DockType">
+            <summary>
+            DockType
+            </summary>
+        </member>
+        <member name="F:IUV.Common.Controls.DockType.Prev">
+            <summary>
+            Prev
+            </summary>
+        </member>
+        <member name="F:IUV.Common.Controls.DockType.None">
+            <summary>
+            None
+            </summary>
+        </member>
+        <member name="F:IUV.Common.Controls.DockType.Next">
+            <summary>
+            Next
+            </summary>
+        </member>
+        <member name="T:IUV.Common.Controls.IuvGroupBox">
+            <summary>
+            IuvGroupPanel
+            </summary>
+        </member>
+        <member name="F:IUV.Common.Controls.IuvGroupBox.HeaderBackgroundProperty">
+            <summary>
+            HeaderBackgroundProperty
+            </summary>
+        </member>
+        <member name="P:IUV.Common.Controls.IuvGroupBox.HeaderBackground">
+            <summary>
+            HeaderBackground
+            </summary>
+        </member>
+        <member name="F:IUV.Common.Controls.IuvGroupBox.HeaderForegroundProperty">
+            <summary>
+            HeaderForegroundProperty
+            </summary>
+        </member>
+        <member name="P:IUV.Common.Controls.IuvGroupBox.HeaderForeground">
+            <summary>
+            HeaderForeground
+            </summary>
+        </member>
+        <member name="F:IUV.Common.Controls.IuvGroupBox.ToolTipProperty">
+            <summary>
+            TooltipProperty
+            </summary>
+        </member>
+        <member name="P:IUV.Common.Controls.IuvGroupBox.ToolTip">
+            <summary>
+            ToolTip
+            </summary>
+        </member>
+        <member name="F:IUV.Common.Controls.IuvGroupBox.ToolTipForegroundProperty">
+            <summary>
+            TooltipForegroundProperty
+            </summary>
+        </member>
+        <member name="P:IUV.Common.Controls.IuvGroupBox.ToolTipForeground">
+            <summary>
+            TooltipForeground
+            </summary>
+        </member>
+        <member name="T:IUV.Common.Controls.IuvMultiComboBox">
+            <summary>
+            多选ComboBox
+            </summary>
+        </member>
+        <member name="F:IUV.Common.Controls.IuvMultiComboBox._lastSelectedItems">
+            <summary>
+            上次选中项
+            </summary>
+        </member>
+        <member name="F:IUV.Common.Controls.IuvMultiComboBox._comboBox">
+            <summary>
+            ComboBox
+            </summary>
+        </member>
+        <member name="F:IUV.Common.Controls.IuvMultiComboBox._isRaiseCheckChanged">
+            <summary>
+            是否触发选中状态改变事件，由于全选引起的选中变化不触发选中状态改变事件
+            </summary>
+        </member>
+        <member name="F:IUV.Common.Controls.IuvMultiComboBox._isRaiseSelectAll">
+            <summary>
+            是否触发全选状态改变事件，由选中状态改变事件引起的全选状态改变不触发全选事件
+            </summary>
+        </member>
+        <member name="P:IUV.Common.Controls.IuvMultiComboBox.CheckableItems">
+            <summary>
+            CheckableItems
+            </summary>
+        </member>
+        <member name="P:IUV.Common.Controls.IuvMultiComboBox.SelectValues">
+            <summary>
+            选中项
+            </summary>
+        </member>
+        <member name="F:IUV.Common.Controls.IuvMultiComboBox.SelectValuesProperty">
+            <summary>
+            选中项
+            </summary>
+        </member>
+        <member name="P:IUV.Common.Controls.IuvMultiComboBox.DisplayMember">
+            <summary>
+            显示列
+            </summary>
+        </member>
+        <member name="F:IUV.Common.Controls.IuvMultiComboBox.DisplayMemberProperty">
+            <summary>
+            显示列
+            </summary>
+        </member>
+        <member name="P:IUV.Common.Controls.IuvMultiComboBox.ValueMember">
+            <summary>
+            数据列
+            </summary>
+        </member>
+        <member name="F:IUV.Common.Controls.IuvMultiComboBox.ValueMemberProperty">
+            <summary>
+            显示列
+            </summary>
+        </member>
+        <member name="P:IUV.Common.Controls.IuvMultiComboBox.ItemsSource">
+            <summary>
+            数据源
+            </summary>
+        </member>
+        <member name="F:IUV.Common.Controls.IuvMultiComboBox.ItemsSourceProperty">
+            <summary>
+            数据源
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.IuvMultiComboBox.ItemsSourcePropertyChangedCallback(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            重载数据源
+            </summary>
+            <param name="dependencyObject"></param>
+            <param name="e"></param>
+        </member>
+        <member name="P:IUV.Common.Controls.IuvMultiComboBox.DisplayText">
+            <summary>
+            展示文字
+            </summary>
+        </member>
+        <member name="F:IUV.Common.Controls.IuvMultiComboBox.DisplayTextProperty">
+            <summary>
+            展示文字 
+            </summary>
+        </member>
+        <member name="P:IUV.Common.Controls.IuvMultiComboBox.DisplayTextForeground">
+            <summary>
+            展示文字前景色
+            </summary>
+        </member>
+        <member name="F:IUV.Common.Controls.IuvMultiComboBox.DisplayTextForegroundProperty">
+            <summary>
+            展示文字前景色 
+            </summary>
+        </member>
+        <member name="P:IUV.Common.Controls.IuvMultiComboBox.WaterMark">
+            <summary>
+            默认文字
+            </summary>
+        </member>
+        <member name="F:IUV.Common.Controls.IuvMultiComboBox.WaterMarkProperty">
+            <summary>
+            默认文字 
+            </summary>
+        </member>
+        <member name="P:IUV.Common.Controls.IuvMultiComboBox.IsSelectedAll">
+            <summary>
+            是否全选
+            </summary>
+        </member>
+        <member name="F:IUV.Common.Controls.IuvMultiComboBox.IsSelectedAllProperty">
+            <summary>
+            是否全选 
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.IuvMultiComboBox.IsSelectedAllPropertyChangedCallback(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            全选状态改变事件
+            </summary>
+            <param name="dependencyObject"></param>
+            <param name="e"></param>
+        </member>
+        <member name="P:IUV.Common.Controls.IuvMultiComboBox.CheckBoxStyle">
+            <summary>
+            CheckBoxStyle
+            </summary>
+        </member>
+        <member name="F:IUV.Common.Controls.IuvMultiComboBox.CheckBoxStyleProperty">
+            <summary>
+            CheckBoxStyle 
+            </summary>
+        </member>
+        <member name="P:IUV.Common.Controls.IuvMultiComboBox.AllowSelectedEmpty">
+            <summary>
+            是否允许选择项为空
+            </summary>
+        </member>
+        <member name="P:IUV.Common.Controls.IuvMultiComboBox.DefalutSelectAll">
+            <summary>
+            是否默认全选
+            </summary>
+        </member>
+        <member name="F:IUV.Common.Controls.IuvMultiComboBox.SelectionChangedEvent">
+            <summary>
+            选中项改变事件
+            </summary>
+        </member>
+        <member name="E:IUV.Common.Controls.IuvMultiComboBox.SelectionChanged">
+            <summary>
+            选中项改变事件
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.IuvMultiComboBox.OnSelectionChanged(IUV.Common.Controls.IuvComboBoxSelectionChangedEventArgs)">
+            <summary>
+            选中项改变事件
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.IuvMultiComboBox.RaiseSelectionChangeEvent">
+            <summary>
+            若选中项发生变化，触发选中项改变事件，并记录本次选中项
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.IuvMultiComboBox.CheckBoxItem_CheckedChanged(System.Object,System.ComponentModel.PropertyChangedEventArgs)">
+            <summary>
+            选中状态改变事件，改变展示文字与全选框的选中状态
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:IUV.Common.Controls.IuvMultiComboBox.SelectAll(System.Nullable{System.Boolean})">
+            <summary>
+            全选事件
+            </summary>
+            <param name="oldValue"></param>
+        </member>
+        <member name="M:IUV.Common.Controls.IuvMultiComboBox.SetDisplayText">
+            <summary>
+            设置展示文字
+            </summary>
+        </member>
+        <member name="T:IUV.Common.Controls.IuvComboBoxSelectionChangedHandler">
+            <summary>
+            选中项改变委托
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:IUV.Common.Controls.IuvComboBoxSelectionChangedEventArgs">
+            <summary>
+            选中项改变事件参数
+            </summary>
+        </member>
+        <member name="F:IUV.Common.Controls.IuvComboBoxSelectionChangedEventArgs.SelectedItems">
+            <summary>
+            选中项
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.IuvComboBoxSelectionChangedEventArgs.#ctor(System.Collections.Generic.List{System.String})">
+            <summary>
+            创建一个  IuvComboBoxSelectionChangedEventArgs 实例
+            </summary>
+            <param name="selectedItems"></param>
+        </member>
+        <member name="M:IUV.Common.Controls.IuvComboBoxSelectionChangedEventArgs.#ctor(System.Collections.Generic.List{System.String},System.Windows.RoutedEvent)">
+            <summary>
+            创建一个  IuvComboBoxSelectionChangedEventArgs 实例
+            </summary>
+            <param name="selectedItems"></param>
+            <param name="routedEvent"></param>
+        </member>
+        <member name="T:IUV.Common.Controls.CheckboxItemModel">
+            <summary>
+            多选下拉框数据源
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.CheckboxItemModel.#ctor(System.Nullable{System.Boolean},System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="isChecked"></param>
+            <param name="content"></param>
+        </member>
+        <member name="P:IUV.Common.Controls.CheckboxItemModel.IsChecked">
+            <summary>
+            是否选中
+            </summary>
+        </member>
+        <member name="P:IUV.Common.Controls.CheckboxItemModel.Content">
+            <summary>
+            展示字段
+            </summary>
+        </member>
+        <member name="P:IUV.Common.Controls.CheckboxItemModel.Value">
+            <summary>
+            值
+            </summary>
+        </member>
+        <member name="T:IUV.Common.Controls.IuvRadioButton">
+            <summary>
+            IuvRadioButton
+            </summary>
+        </member>
+        <member name="P:IUV.Common.Controls.IuvRadioButton.MouseOverBackground">
+            <summary>
+            鼠标悬浮背景色
+            </summary>
+        </member>
+        <member name="F:IUV.Common.Controls.IuvRadioButton.MouseOverBackgroundProperty">
+            <summary>
+            鼠标悬浮背景色 
+            </summary>
+        </member>
+        <member name="P:IUV.Common.Controls.IuvRadioButton.MouseOverForeground">
+            <summary>
+            鼠标悬浮前景色
+            </summary>
+        </member>
+        <member name="F:IUV.Common.Controls.IuvRadioButton.MouseOverForegroundProperty">
+            <summary>
+            鼠标悬浮前景色 
+            </summary>
+        </member>
+        <member name="P:IUV.Common.Controls.IuvRadioButton.MouseOverBorderBrush">
+            <summary>
+            鼠标悬浮边框色
+            </summary>
+        </member>
+        <member name="F:IUV.Common.Controls.IuvRadioButton.MouseOverBorderBrushProperty">
+            <summary>
+            鼠标悬浮边框色 
+            </summary>
+        </member>
+        <member name="P:IUV.Common.Controls.IuvRadioButton.SelectedBackground">
+            <summary>
+            选中背景色
+            </summary>
+        </member>
+        <member name="F:IUV.Common.Controls.IuvRadioButton.SelectedBackgroundProperty">
+            <summary>
+            选中背景色 
+            </summary>
+        </member>
+        <member name="P:IUV.Common.Controls.IuvRadioButton.SelectedForeground">
+            <summary>
+            选中前景色
+            </summary>
+        </member>
+        <member name="F:IUV.Common.Controls.IuvRadioButton.SelectedForegroundProperty">
+            <summary>
+            选中前景色 
+            </summary>
+        </member>
+        <member name="P:IUV.Common.Controls.IuvRadioButton.SelectedBorderBrush">
+            <summary>
+            选中边框色
+            </summary>
+        </member>
+        <member name="F:IUV.Common.Controls.IuvRadioButton.SelectedBorderBrushProperty">
+            <summary>
+            选中边框色 
+            </summary>
+        </member>
+        <member name="P:IUV.Common.Controls.IuvRadioButton.TextTrimming">
+            <summary>
+            描述当文本溢出其包含框的边缘时如何修整文本
+            </summary>
+        </member>
+        <member name="F:IUV.Common.Controls.IuvRadioButton.TextTrimmingProperty">
+            <summary>
+            描述当文本溢出其包含框的边缘时如何修整文本
+            </summary>
+        </member>
+        <member name="T:IUV.Common.Controls.IuvSvgButton">
+            <summary>
+            IuvSvgButton 
+            </summary>
+        </member>
+        <member name="F:IUV.Common.Controls.IuvSvgButton.SourceTargetProperty">
+            <summary>
+            SourceTarget Property
+            </summary>
+        </member>
+        <member name="P:IUV.Common.Controls.IuvSvgButton.SourceTarget">
+            <summary>
+            SourceTarget
+            </summary>
+        </member>
+        <member name="F:IUV.Common.Controls.IuvSvgButton.SourceProperty">
+            <summary>
+            Source Property
+            </summary>
+        </member>
+        <member name="P:IUV.Common.Controls.IuvSvgButton.Source">
+            <summary>
+            Source
+            </summary>
+        </member>
+        <member name="F:IUV.Common.Controls.IuvSvgButton.MouseOverSourceProperty">
+            <summary>
+            MouseOverSource Property
+            </summary>
+        </member>
+        <member name="P:IUV.Common.Controls.IuvSvgButton.MouseOverSource">
+            <summary>
+            MouseOverSource
+            </summary>
+        </member>
+        <member name="F:IUV.Common.Controls.IuvSvgButton.MouseOverBackgroundProperty">
+            <summary>
+            MouseOverBackground Property
+            </summary>
+        </member>
+        <member name="P:IUV.Common.Controls.IuvSvgButton.MouseOverBackground">
+            <summary>
+            MouseOverBackground
+            </summary>
+        </member>
+        <member name="F:IUV.Common.Controls.IuvSvgButton.MousePressSourceProperty">
+            <summary>
+            MousePressSource Property
+            </summary>
+        </member>
+        <member name="P:IUV.Common.Controls.IuvSvgButton.MousePressSource">
+            <summary>
+            MousePressSource
+            </summary>
+        </member>
+        <member name="F:IUV.Common.Controls.IuvSvgButton.DisableSourceProperty">
+            <summary>
+            MousePressSource Property
+            </summary>
+        </member>
+        <member name="P:IUV.Common.Controls.IuvSvgButton.DisableSource">
+            <summary>
+            MousePressSource
+            </summary>
+        </member>
+        <member name="T:IUV.Common.Controls.SvgAnimationLayer">
+            <summary>
+            This creates a host for visuals derived from the <see cref="T:System.Windows.Controls.Canvas"/> class.
+            </summary>
+            <remarks>
+            This class provides layout, event handling, and container support for the 
+            child visual objects.
+            </remarks>
+        </member>
+        <member name="T:IUV.Common.Controls.SvgAnimator">
+            <summary>
+            This provides a wrapper for the Scoreboard, which is used for opacity animation.
+            </summary>
+        </member>
+        <member name="T:IUV.Common.Controls.SvgCanvas">
+            <summary>
+            This is the main drawing canvas for the wiring diagrams.
+            </summary>
+        </member>
+        <member name="F:IUV.Common.Controls.SvgCanvas.SourceTargetProperty">
+            <summary>
+            SourceTarget Property
+            </summary>
+        </member>
+        <member name="P:IUV.Common.Controls.SvgCanvas.SourceTarget">
+            <summary>
+            SourceTarget
+            </summary>
+        </member>
+        <member name="F:IUV.Common.Controls.SvgCanvas.SourceProperty">
+            <summary>
+            SourceProperty 
+            </summary>
+        </member>
+        <member name="P:IUV.Common.Controls.SvgCanvas.Source">
+            <summary>
+            Source
+            </summary>
+        </member>
+        <member name="T:IUV.Common.Controls.SvgImage">
+            <summary>
+            This class, if placed at the root of a XAML file which is loaded by XamlReader.Load()
+            will end up having all named elements contained in its nameTable automatically.
+            If you want to get that list, it is now in your power.
+            </summary>
+            <remarks>
+            This class is based on the discussion, which can be found here
+            <see href="http://social.msdn.microsoft.com/Forums/en-US/wpf/thread/5c226430-c54d-45b8-a8a2-7e4a79e3692a"/>
+            </remarks>
+        </member>
+        <member name="F:IUV.Common.Controls.SharpTreeNode.listParent">
+            <summary>The parent in the flat list</summary>
+        </member>
+        <member name="F:IUV.Common.Controls.SharpTreeNode.left">
+            <summary>Left/right nodes in the flat list</summary>
+        </member>
+        <member name="F:IUV.Common.Controls.SharpTreeNode.right">
+            <summary>Left/right nodes in the flat list</summary>
+        </member>
+        <member name="F:IUV.Common.Controls.SharpTreeNode.height">
+            <summary>Subtree height in the flat list tree</summary>
+        </member>
+        <member name="F:IUV.Common.Controls.SharpTreeNode.totalListLength">
+            <summary>Length in the flat list, including children (children within the flat list). -1 = invalidated</summary>
+        </member>
+        <member name="M:IUV.Common.Controls.SharpTreeNode.Rebalance(IUV.Common.Controls.SharpTreeNode)">
+            <summary>
+            Balances the subtree rooted in <paramref name="node"/> and recomputes the 'height' field.
+            This method assumes that the children of this node are already balanced and have an up-to-date 'height' value.
+            </summary>
+            <returns>The new root node</returns>
+        </member>
+        <member name="P:IUV.Common.Controls.SharpTreeNode.IsVisible">
+            <summary>
+            Return true when this node is not hidden and when all parent nodes are expanded and not hidden.
+            </summary>
+        </member>
+        <member name="P:IUV.Common.Controls.SharpTreeNode.CanExpandRecursively">
+            <summary>
+            Gets whether this node can be expanded recursively.
+            If not overridden, this property returns false if the node is using lazy-loading, and true otherwise.
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.SharpTreeNode.EnsureLazyChildren">
+            <summary>
+            Ensures the children were initialized (loads children if lazy loading is enabled)
+            </summary>
+        </member>
+        <member name="P:IUV.Common.Controls.SharpTreeNode.IsCut">
+            <summary>
+            Gets whether the node should render transparently because it is 'cut' (but not actually removed yet).
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.SharpTreeNode.GetDropEffect(System.Windows.DragEventArgs,System.Int32)">
+            <summary>
+            Gets the possible drop effects.
+            If the method returns more than one of (Copy|Move|Link), the tree view will choose one effect based
+            on the allowed effects and keyboard status.
+            </summary>
+        </member>
+        <member name="P:IUV.Common.Controls.SharpTreeNode.Model">
+            <summary>
+            Gets the underlying model object.
+            </summary>
+            <remarks>
+            This property calls the virtual <see cref="M:IUV.Common.Controls.SharpTreeNode.GetModel"/> helper method.
+            I didn't make the property itself virtual because deriving classes
+            may wish to replace it with a more specific return type,
+            but C# doesn't support variance in override declarations.
+            </remarks>
+        </member>
+        <member name="M:IUV.Common.Controls.SharpTreeNode.ActivateItem(System.Windows.RoutedEventArgs)">
+            <summary>
+            Gets called when the item is double-clicked.
+            </summary>
+        </member>
+        <member name="T:IUV.Common.Controls.GridViewColumnAutoSize">
+            <summary>
+            This class adds the AutoWidth property to the WPF ListView.
+            It supports a semi-colon-separated list of values, for each defined cell.
+            Each value can either be a fixed size double, or a percentage.
+            The sizes of columns with a percentage will be calculated from the
+            remaining width (after assigning the fixed sizes).
+            Examples: 50%;25%;25% or 30;100%;50
+            </summary>
+        </member>
+        <member name="T:IUV.Common.Controls.IuvTreeView">
+            <summary>
+            IuvTreeView
+            </summary>
+        </member>
+        <member name="T:IUV.Common.Controls.SharpTreeNodeCollection">
+            <summary>
+            Collection that validates that inserted nodes do not have another parent.
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.SharpTreeView.HandleExpanding(IUV.Common.Controls.SharpTreeNode)">
+            <summary>
+            Handles the node expanding event in the tree view.
+            This method gets called only if the node is in the visible region (a SharpTreeNodeView exists).
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.SharpTreeView.FocusNode(IUV.Common.Controls.SharpTreeNode)">
+            <summary>
+            Scrolls the specified node in view and sets keyboard focus on it.
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.SharpTreeView.GetTopLevelSelection">
+            <summary>
+            Gets the selected items which do not have any of their ancestors selected.
+            </summary>
+        </member>
+        <member name="F:IUV.Common.Controls.TreeFlattener.root">
+            <summary>
+            The root node of the flat list tree.
+            Tjis is not necessarily the root of the model!
+            </summary>
+        </member>
+        <member name="T:IUV.Common.Controls.TreeTraversal">
+            <summary>
+            Static helper methods for traversing trees.
+            </summary>
+        </member>
+        <member name="M:IUV.Common.Controls.TreeTraversal.PreOrder``1(``0,System.Func{``0,System.Collections.Generic.IEnumerable{``0}})">
+            <summary>
+            Converts a tree data structure into a flat list by traversing it in pre-order.
+            </summary>
+            <param name="root">The root element of the tree.</param>
+            <param name="recursion">The function that gets the children of an element.</param>
+            <returns>Iterator that enumerates the tree structure in pre-order.</returns>
+        </member>
+        <member name="M:IUV.Common.Controls.TreeTraversal.PreOrder``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Collections.Generic.IEnumerable{``0}})">
+            <summary>
+            Converts a tree data structure into a flat list by traversing it in pre-order.
+            </summary>
+            <param name="input">The root elements of the forest.</param>
+            <param name="recursion">The function that gets the children of an element.</param>
+            <returns>Iterator that enumerates the tree structure in pre-order.</returns>
+        </member>
+        <member name="T:IUV.Common.Controls.Properties.Resources">
+            <summary>
+              一个强类型的资源类，用于查找本地化的字符串等。
+            </summary>
+        </member>
+        <member name="P:IUV.Common.Controls.Properties.Resources.ResourceManager">
+            <summary>
+              返回此类使用的缓存的 ResourceManager 实例。
+            </summary>
+        </member>
+        <member name="P:IUV.Common.Controls.Properties.Resources.Culture">
+            <summary>
+              重写当前线程的 CurrentUICulture 属性
+              重写当前线程的 CurrentUICulture 属性。
+            </summary>
+        </member>
+        <member name="T:XamlGeneratedNamespace.GeneratedInternalTypeHelper">
+            <summary>
+            GeneratedInternalTypeHelper
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.CreateInstance(System.Type,System.Globalization.CultureInfo)">
+            <summary>
+            CreateInstance
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.GetPropertyValue(System.Reflection.PropertyInfo,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            GetPropertyValue
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.SetPropertyValue(System.Reflection.PropertyInfo,System.Object,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            SetPropertyValue
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.CreateDelegate(System.Type,System.Object,System.String)">
+            <summary>
+            CreateDelegate
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.AddEventHandler(System.Reflection.EventInfo,System.Object,System.Delegate)">
+            <summary>
+            AddEventHandler
+            </summary>
+        </member>
+    </members>
+</doc>

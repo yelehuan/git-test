@@ -1,0 +1,264 @@
+ImageRuntimeVersion: v4.0.30319
+Assembly QFormulaSharp, Version=1.0.*, Culture=固定语言(固定国家/地区): 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Class QFormula.QFormulaCommon: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.String DATAKEY_DATE IsConst : Public, Static
+    System.String DATAKEY_TIME IsConst : Public, Static
+    System.String DATAKEY_OPEN IsConst : Public, Static
+    System.String DATAKEY_HIGH IsConst : Public, Static
+    System.String DATAKEY_LOW IsConst : Public, Static
+    System.String DATAKEY_CLOSE IsConst : Public, Static
+    System.String DATAKEY_VOL IsConst : Public, Static
+    System.String DATAKEY_AMOUNT IsConst : Public, Static
+    Int32 StockDataID_Snapshot_TradeMins IsConst : Public, Static, HasDefault
+    Int32 StockDataID_Snapshot_PreClosePx IsConst : Public, Static, HasDefault
+    Int32 StockDataID_Snapshot_OpenPx IsConst : Public, Static, HasDefault
+    Int32 StockDataID_Snapshot_LastPx IsConst : Public, Static, HasDefault
+    Int32 StockDataID_Snapshot_HighPx IsConst : Public, Static, HasDefault
+    Int32 StockDataID_Snapshot_LowPx IsConst : Public, Static, HasDefault
+    Int32 StockDataID_Snapshot_ClosePx IsConst : Public, Static, HasDefault
+    Int32 StockDataID_Snapshot_BusinessAmount IsConst : Public, Static, HasDefault
+    Int32 StockDataID_Snapshot_BusinessBalance IsConst : Public, Static, HasDefault
+    Int32 StockDataID_Snapshot_UpPx IsConst : Public, Static, HasDefault
+    Int32 StockDataID_Snapshot_DownPx IsConst : Public, Static, HasDefault
+    Int32 StockDataID_Snapshot_CurrentAmount IsConst : Public, Static, HasDefault
+    Int32 StockDataID_Snapshot_BuinessAmountIn IsConst : Public, Static, HasDefault
+    Int32 StockDataID_Snapshot_BuinessAmountOut IsConst : Public, Static, HasDefault
+    Int32 StockDataID_Snapshot_EntrustRate IsConst : Public, Static, HasDefault
+    Int32 StockDataID_Snapshot_EntrustDiff IsConst : Public, Static, HasDefault
+    Int32 StockDataID_Snapshot_PxChange IsConst : Public, Static, HasDefault
+    Int32 StockDataID_Snapshot_PxChangeRate IsConst : Public, Static, HasDefault
+    Int32 StockDataID_Snapshot_Amplitude IsConst : Public, Static, HasDefault
+    Int32 StockDataID_Snapshot_VolRatio IsConst : Public, Static, HasDefault
+    Int32 StockDataID_Snapshot_TrunoverRatio IsConst : Public, Static, HasDefault
+    Int32 StockDataID_Snapshot_Min5Chgpct IsConst : Public, Static, HasDefault
+    Int32 StockDataID_Snapshot_BidPx1 IsConst : Public, Static, HasDefault
+    Int32 StockDataID_Snapshot_BidPx2 IsConst : Public, Static, HasDefault
+    Int32 StockDataID_Snapshot_BidPx3 IsConst : Public, Static, HasDefault
+    Int32 StockDataID_Snapshot_BidPx4 IsConst : Public, Static, HasDefault
+    Int32 StockDataID_Snapshot_BidPx5 IsConst : Public, Static, HasDefault
+    Int32 StockDataID_Snapshot_BidAmount1 IsConst : Public, Static, HasDefault
+    Int32 StockDataID_Snapshot_BidAmount2 IsConst : Public, Static, HasDefault
+    Int32 StockDataID_Snapshot_BidAmount3 IsConst : Public, Static, HasDefault
+    Int32 StockDataID_Snapshot_BidAmount4 IsConst : Public, Static, HasDefault
+    Int32 StockDataID_Snapshot_BidAmount5 IsConst : Public, Static, HasDefault
+    Int32 StockDataID_Snapshot_OfferPx1 IsConst : Public, Static, HasDefault
+    Int32 StockDataID_Snapshot_OfferPx2 IsConst : Public, Static, HasDefault
+    Int32 StockDataID_Snapshot_OfferPx3 IsConst : Public, Static, HasDefault
+    Int32 StockDataID_Snapshot_OfferPx4 IsConst : Public, Static, HasDefault
+    Int32 StockDataID_Snapshot_OfferPx5 IsConst : Public, Static, HasDefault
+    Int32 StockDataID_Snapshot_OfferAmount1 IsConst : Public, Static, HasDefault
+    Int32 StockDataID_Snapshot_OfferAmount2 IsConst : Public, Static, HasDefault
+    Int32 StockDataID_Snapshot_OfferAmount3 IsConst : Public, Static, HasDefault
+    Int32 StockDataID_Snapshot_OfferAmount4 IsConst : Public, Static, HasDefault
+    Int32 StockDataID_Snapshot_OfferAmount5 IsConst : Public, Static, HasDefault
+    Int32 StockDataID_Snapshot_PERate IsConst : Public, Static, HasDefault
+    Int32 StockDataID_Snapshot_PBRate IsConst : Public, Static, HasDefault
+    Int32 StockDataID_INFORMATION_LeaderHoldingStock IsConst : Public, Static, HasDefault
+    Int32 StockDataID_INFORMATION_PCF IsConst : Public, Static, HasDefault
+    Int32 StockDataID_INFORMATION_TurnoverRate IsConst : Public, Static, HasDefault
+    Int32 StockDataID_INFORMATION_LTCWCRatio IsConst : Public, Static, HasDefault
+    Int32 StockDataID_INFORMATION_NetProfitGrowthRate IsConst : Public, Static, HasDefault
+    Int32 StockDataID_INFORMATION_BuyerAgencyResearch IsConst : Public, Static, HasDefault
+    Int32 VARIABLE_ASSIGNMENT IsConst : Public, Static, HasDefault
+    Int32 VARIABLE_COLON IsConst : Public, Static, HasDefault
+    Int32 VARIABLENAME_MAX_LEN IsConst : Public, Static, HasDefault
+Class QFormula.VariableProperty: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Methods:
+    Alloc(Int32): PrivateScope, Public, HideBySig
+    Free(): PrivateScope, Public, HideBySig
+    SetPos(Int32): PrivateScope, Public, HideBySig
+    GetPos(): PrivateScope, Public, HideBySig
+    IsStyle(UInt32): PrivateScope, Public, HideBySig
+    AddStyle(UInt32): PrivateScope, Public, HideBySig
+    RemoveStyle(UInt32): PrivateScope, Public, HideBySig
+    SetStyle(UInt32): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Struct QFormula.StringUtil: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Interface QFormula.IHSKnown: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, BeforeFieldInit
+  Methods:
+    AddRef(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Release(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Class QFormula.FormulaData: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    QFormula.IHSKnown
+  Methods:
+    Join(String, Double[], Int32): PrivateScope, Public, HideBySig
+    ModifyKeyValue(String, Double): PrivateScope, Public, HideBySig
+    ModifyKeyValue(String, Double, Int32): PrivateScope, Public, HideBySig
+    AppendKey(String, Double[], Int32): PrivateScope, Public, HideBySig
+    RemoveKey(String): PrivateScope, Public, HideBySig
+    ClearKey(String): PrivateScope, Public, HideBySig
+    GetKeyCount(): PrivateScope, Public, HideBySig
+    GetKeyByIndex(Int32): PrivateScope, Public, HideBySig
+    GetSizeByKey(String): PrivateScope, Public, HideBySig
+    GetValueByKeyPos(String, Int32): PrivateScope, Public, HideBySig
+    GetValuesByKey(String, Double[], Int32): PrivateScope, Public, HideBySig
+    GetKeyStyle(String): PrivateScope, Public, HideBySig
+    JoinExt(String, Double[], Int32, Int32): PrivateScope, Public, HideBySig
+    MemmoveKey(String, Int32): PrivateScope, Public, HideBySig
+    MemmoveKey(String, Int32, Int32): PrivateScope, Public, HideBySig
+    AddRef(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Release(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class QFormula.FormulaIndex: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    QFormula.IHSKnown
+  Methods:
+    GetName(): PrivateScope, Public, HideBySig
+    GetContent(): PrivateScope, Public, HideBySig
+    GetDescription(): PrivateScope, Public, HideBySig
+    GetParamCount(): PrivateScope, Public, HideBySig
+    GetParamName(Int32): PrivateScope, Public, HideBySig
+    GetParamValue(Int32): PrivateScope, Public, HideBySig
+    AddRef(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Release(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class QFormula.FormulaCompiler: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    QFormula.IHSKnown
+  Methods:
+    SetFormulaContent(String): PrivateScope, Public, HideBySig
+    AddFormulaParam(String, Double): PrivateScope, Public, HideBySig
+    RemoveFormulaParam(String): PrivateScope, Public, HideBySig
+    RemoveAllFormulaParam(): PrivateScope, Public, HideBySig
+    TestFormula(): PrivateScope, Public, HideBySig
+    GetErrorInfo(): PrivateScope, Public, HideBySig
+    CreateFormulaIndex(String, String, FormulaIndex): PrivateScope, Public, HideBySig
+    SetFormulaName(String): PrivateScope, Public, HideBySig
+    AddRef(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Release(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class QFormula.FormulaDataGroup: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(Void*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    GetFormulaData(FormulaData* IsImplicitlyDereferenced): PrivateScope, Public, HideBySig
+    GetFormulaData(FormulaData* IsImplicitlyDereferenced, String): PrivateScope, Public, HideBySig
+    GetFormulaDataCount(): PrivateScope, Public, HideBySig
+    GetFormulaNameByIndex(Int32): PrivateScope, Public, HideBySig
+    RemoveFormulaData(String): PrivateScope, Public, HideBySig
+Class QFormula.CalcDataSource: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    QFormula.IHSKnown
+  Methods:
+    GetDataByID(SByte*, SByte*, SourceDataTypeWarpper, Int32): PrivateScope, Public, HideBySig
+    AddRef(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Release(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class QFormula.FormulaCalc: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    QFormula.IHSKnown
+  Methods:
+    SetCode(String, String): PrivateScope, Public, HideBySig
+    GetCode(): PrivateScope, Public, HideBySig
+    GetMkt(): PrivateScope, Public, HideBySig
+    SetPeriod(PeriodTypeWarpper): PrivateScope, Public, HideBySig
+    GetPeriod(): PrivateScope, Public, HideBySig
+    GetFormulaName(): PrivateScope, Public, HideBySig
+    GetVariableCount(): PrivateScope, Public, HideBySig
+    GetVariableName(Int32): PrivateScope, Public, HideBySig
+    GetVariableIndex(String): PrivateScope, Public, HideBySig
+    ModifyParamValue(String, Double): PrivateScope, Public, HideBySig
+    GetParamValue(String): PrivateScope, Public, HideBySig
+    GetNeedLenOfIncrementCalc(): PrivateScope, Public, HideBySig
+    GetNeedKLineLenOfIncrementCalc(): PrivateScope, Public, HideBySig
+    GetNeedDataType(): PrivateScope, Public, HideBySig
+    CalcFormula(FormulaDataGroup): PrivateScope, Public, HideBySig
+    CalcFormula(VariableProperty, Int32): PrivateScope, Public, HideBySig
+    CalcFormula(FormulaData): PrivateScope, Public, HideBySig
+    CalcFormula(FormulaData, Int32): PrivateScope, Public, HideBySig
+    SetDataByKey(DataTypeWarpper, Double[], Int32): PrivateScope, Public, HideBySig
+    AddRef(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Release(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class QFormula.FormulaCore: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(IFormulaCore*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    QFormula.IHSKnown
+  Methods:
+    InitFormula(String): PrivateScope, Public, HideBySig
+    CreateFormulaCompiler(FormulaCompiler): PrivateScope, Public, HideBySig
+    CreateFormulaData(FormulaData): PrivateScope, Public, HideBySig
+    CreateFormulaDataGroup(FormulaDataGroup): PrivateScope, Public, HideBySig
+    CreateFormulaCalc(FormulaIndex, CalcDataSource, FormulaCalc): PrivateScope, Public, HideBySig
+    CreateFormulaCalc(FormulaCompiler, CalcDataSource, FormulaCalc): PrivateScope, Public, HideBySig
+    CreateFormulaCalc(String, CalcDataSource, FormulaCalc): PrivateScope, Public, HideBySig
+    GetAllFormulaIndexCount(): PrivateScope, Public, HideBySig
+    GetFormulaIndex(String, FormulaIndex): PrivateScope, Public, HideBySig
+    GetFormulaIndex(Int32, FormulaIndex): PrivateScope, Public, HideBySig
+    GetErrorInfo(Int32): PrivateScope, Public, HideBySig
+    ModifyFormula(FormulaCompiler, String, String, Int32): PrivateScope, Public, HideBySig
+    FindFormulaReference(String): PrivateScope, Public, HideBySig
+    AddRef(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Release(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Struct QFormula.DataTypeWarpper: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    QFormula.DataTypeWarpper DATATYPE_DATE = 1 : Public, Static, Literal, HasDefault
+    QFormula.DataTypeWarpper DATATYPE_TIME = 2 : Public, Static, Literal, HasDefault
+    QFormula.DataTypeWarpper DATATYPE_OPEN = 4 : Public, Static, Literal, HasDefault
+    QFormula.DataTypeWarpper DATATYPE_HIGH = 8 : Public, Static, Literal, HasDefault
+    QFormula.DataTypeWarpper DATATYPE_LOW = 16 : Public, Static, Literal, HasDefault
+    QFormula.DataTypeWarpper DATATYPE_CLOSE = 32 : Public, Static, Literal, HasDefault
+    QFormula.DataTypeWarpper DATATYPE_VOL = 64 : Public, Static, Literal, HasDefault
+    QFormula.DataTypeWarpper DATATYPE_AMOUNT = 128 : Public, Static, Literal, HasDefault
+Struct QFormula.PeriodTypeWarpper: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    QFormula.PeriodTypeWarpper PEROIDTYPE_1MIN = 1 : Public, Static, Literal, HasDefault
+    QFormula.PeriodTypeWarpper PEROIDTYPE_5MIN = 2 : Public, Static, Literal, HasDefault
+    QFormula.PeriodTypeWarpper PEROIDTYPE_15MIN = 3 : Public, Static, Literal, HasDefault
+    QFormula.PeriodTypeWarpper PEROIDTYPE_30MIN = 4 : Public, Static, Literal, HasDefault
+    QFormula.PeriodTypeWarpper PEROIDTYPE_60MIN = 5 : Public, Static, Literal, HasDefault
+    QFormula.PeriodTypeWarpper PEROIDTYPE_DAY = 6 : Public, Static, Literal, HasDefault
+    QFormula.PeriodTypeWarpper PEROIDTYPE_WEEK = 7 : Public, Static, Literal, HasDefault
+    QFormula.PeriodTypeWarpper PEROIDTYPE_MONTH = 8 : Public, Static, Literal, HasDefault
+    QFormula.PeriodTypeWarpper PEROIDTYPE_YEAR = 9 : Public, Static, Literal, HasDefault
+Struct QFormula.SourceDataTypeWarpper: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    QFormula.SourceDataTypeWarpper SOURCEDATATYPE_FINANCE = 1 : Public, Static, Literal, HasDefault
+    QFormula.SourceDataTypeWarpper SOURCEDATATYPE_REAL = 2 : Public, Static, Literal, HasDefault
+    QFormula.SourceDataTypeWarpper SOURCEDATATYPE_INFORMATION = 3 : Public, Static, Literal, HasDefault
+Class QFormula.QFormulaApi: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    GetFormulaCore(): PrivateScope, Public, HideBySig
+    GetInterfaceErrorInfo(Int32): PrivateScope, Public, HideBySig
+    InitFormula(String): PrivateScope, Public, HideBySig
+    GetFormulaCount(): PrivateScope, Public, HideBySig
+    GetFormulaName(Int32): PrivateScope, Public, HideBySig
+    GetFormulaVariableCount(String): PrivateScope, Public, HideBySig
+    GetFormulaVariableName(String, Int32): PrivateScope, Public, HideBySig
+    GetFormulaVariableStyleByIndex(String, Int32): PrivateScope, Public, HideBySig
+    GetFormulaVariableStyleByName(String, String): PrivateScope, Public, HideBySig
+    CreateFormulaDataGroup(): PrivateScope, Public, HideBySig
+    ReleaseFormulaDataGroup(FormulaDataGroup): PrivateScope, Public, HideBySig
+    AddFormulaData(FormulaDataGroup, String, Double[], Int32): PrivateScope, Public, HideBySig
+    ModifyFormulaData(FormulaDataGroup, String, Double): PrivateScope, Public, HideBySig
+    ModifyFormulaData(FormulaDataGroup, String, Double, Int32): PrivateScope, Public, HideBySig
+    AppendFormulaData(FormulaDataGroup, String, Double[], Int32): PrivateScope, Public, HideBySig
+    RemoveFormulaData(FormulaDataGroup, String): PrivateScope, Public, HideBySig
+    GetFormulaDataItem(FormulaDataGroup, String, String, Double[], Int32): PrivateScope, Public, HideBySig
+    GetFormulaDataItem(FormulaDataGroup, String, String, Double[], Int32, Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    CalcFormula(FormulaDataGroup, String, Double[], Int32, String, String, Int32): PrivateScope, Public, HideBySig
+    NormalizationFormulaDataGroup(FormulaDataGroup): PrivateScope, Public, HideBySig
+    CaleExpression(FormulaDataGroup, String, Double[], Int32): PrivateScope, Public, HideBySig
+    CaleExpression(FormulaDataGroup, String, Double[], Int32, Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig

@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<Index>
+	<CommonIndex>
+		<CommonIndexItem ProdCode = "000001"  MarketCode = "XSHG.MRI" Name="上证指数"/>
+		<CommonIndexItem ProdCode = "399001"  MarketCode = "XSHE.MRI" Name="深证成指"/>
+		<CommonIndexItem ProdCode = "399006"  MarketCode = "XSHE.MRI" Name="创业板指"/>
+		<CommonIndexItem ProdCode = "000300"  MarketCode = "XSHG.MRI" Name="沪深300"/>
+		<CommonIndexItem ProdCode = "000905"  MarketCode = "XSHG.MRI" Name="中证500"/>
+	</CommonIndex>
+</Index>

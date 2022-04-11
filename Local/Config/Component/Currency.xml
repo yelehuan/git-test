@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfCurrency xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Currency name="人民币" abbr="CNY">
+    <Markets>
+      <CurrencyMarket name="外汇交易中心债券市场" code="BONDCFES" />
+      <CurrencyMarket name="中债-收益率曲线" code="CCDC-C" />
+      <CurrencyMarket name="中债-债券估值" code="CCDC-V" />
+      <CurrencyMarket name="中国金融期货交易所" code="CCFX" />
+      <CurrencyMarket name="国证指数" code="CNI" />
+      <CurrencyMarket name="中证指数" code="CSI" />
+      <CurrencyMarket name="股份转让" code="NEEQ" />
+      <CurrencyMarket name="上海黄金现货交易所" code="SHGE" />
+      <CurrencyMarket name="外汇交易中心债券板块" code="XBBD" />
+      <CurrencyMarket name="沪深板块" code="XBHS" />
+      <CurrencyMarket name="外汇交易中心货币板块" code="XBMM" />
+      <CurrencyMarket name="大连商品交易所" code="XDCE" />
+      <CurrencyMarket name="上海能源期货交易中心" code="XINE" />
+      <CurrencyMarket name="上海期货交易所" code="XSGE" />
+      <CurrencyMarket name="上海商品期权" code="XSGE-O" />
+      <CurrencyMarket name="深圳证券交易所" code="XSHE" />
+      <CurrencyMarket name="上海证券交易所" code="XSHG" />
+      <CurrencyMarket name="郑州商品交易所" code="XZCE" />
+    </Markets>
+  </Currency>
+  <Currency name="美元" abbr="USD">
+    <Markets>
+      <CurrencyMarket name="芝加哥商业" code="CMES" />
+      <CurrencyMarket name="芝加哥商品期货MINI" code="XCBM" />
+      <CurrencyMarket name="芝加哥商品期货" code="XCBT" />
+      <CurrencyMarket name="纽约商品期货" code="XCEC" />
+      <CurrencyMarket name="伦敦金属交易所" code="XLME" />
+      <CurrencyMarket name="纽约商业期货" code="XNYM" />
+    </Markets>
+  </Currency>
+  <Currency name="澳元" abbr="AUD">
+    <Markets>
+      <CurrencyMarket name="澳大利亚普通股指数" code="GL-AUST" />
+    </Markets>
+  </Currency>
+  <Currency name="欧元" abbr="EUR">
+    <Markets>
+      <CurrencyMarket name="荷兰AEX指数" code="GL-AEX" />
+      <CurrencyMarket name="奥地利ATX指数" code="GL-ATX" />
+      <CurrencyMarket name="比利时BFX指数" code="GL-BFX" />
+      <CurrencyMarket name="法国巴黎CAC40指数" code="GL-FCHI" />
+      <CurrencyMarket name="德国法兰克福DAX指数" code="GL-GDAXI" />
+      <CurrencyMarket name="西班牙IBEX35" code="GL-IBEX" />
+      <CurrencyMarket name="意大利MIB指数" code="GL-MIB" />
+    </Markets>
+  </Currency>
+  <Currency name="加元" abbr="CAD">
+    <Markets>
+      <CurrencyMarket name="加拿大多伦多综合指数" code="GL-GSPTSE" />
+    </Markets>
+  </Currency>
+  <Currency name="日元" abbr="JPY">
+    <Markets>
+      <CurrencyMarket name="日经225" code="GL-N225" />
+    </Markets>
+  </Currency>
+  <Currency name="新西兰元" abbr="NZD">
+    <Markets>
+      <CurrencyMarket name="新西兰股市NZ50指数" code="GL-NZLD" />
+    </Markets>
+  </Currency>
+  <Currency name="新加坡元" abbr="SGD">
+    <Markets />
+  </Currency>
+  <Currency name="英镑" abbr="GBP">
+    <Markets>
+      <CurrencyMarket name="伦敦金融时报100指数" code="GL-LDUN" />
+    </Markets>
+  </Currency>
+  <Currency name="港币" abbr="HKD">
+    <Markets>
+      <CurrencyMarket name="香港恒生指数" code="GL-HKHS" />
+      <CurrencyMarket name="香港交易所-ETS" code="XHKG-E" />
+      <CurrencyMarket name="香港交易所-创业板" code="XHKG-G" />
+      <CurrencyMarket name="香港交易所-指数" code="XHKG-I" />
+      <CurrencyMarket name="香港交易所-主板" code="XHKG-M" />
+      <CurrencyMarket name="香港交易所-纳斯达克" code="XHKG-N" />
+    </Markets>
+  </Currency>
+  <Currency name="瑞士法郎" abbr="CHF">
+    <Markets>
+      <CurrencyMarket name="瑞士苏黎士市场指数" code="GL-SSMI" />
+    </Markets>
+  </Currency>
+  <Currency name="无" abbr="NONE">
+    <Markets>
+      <CurrencyMarket name="外汇交易中心黄金外汇" code="AUCFES" />
+      <CurrencyMarket name="中债-指数指标" code="CCDC-I" />
+      <CurrencyMarket name="外汇交易中心" code="FXCFES" />
+      <CurrencyMarket name="美洲区" code="GL-AMER" />
+      <CurrencyMarket name="外汇交易中心货币市场" code="MMCFES" />
+      <CurrencyMarket name="外汇交易中心黄金板块" code="XBAU" />
+      <CurrencyMarket name="中债板块" code="XBCB" />
+      <CurrencyMarket name="外汇交易中心板块" code="XBFX" />
+      <CurrencyMarket name="国证指数板块" code="XBZS" />
+    </Markets>
+  </Currency>
+  <Currency name="瑞典克朗" abbr="SEK">
+    <Markets>
+      <CurrencyMarket name="瑞典OMXSPI指数" code="GL-OMXSPI" />
+    </Markets>
+  </Currency>
+  <Currency name="卢布" abbr="RUB">
+    <Markets>
+      <CurrencyMarket name="俄罗斯RTS指数" code="GL-RUSA" />
+    </Markets>
+  </Currency>
+  <Currency name="巴西雷亚尔" abbr="BRL">
+    <Markets>
+      <CurrencyMarket name="圣保罗IBOVESPA指数" code="GL-SAPI" />
+    </Markets>
+  </Currency>
+  <Currency name="印度卢比" abbr="INR">
+    <Markets>
+      <CurrencyMarket name="印度孟买Sensex指数" code="GL-MUBA" />
+    </Markets>
+  </Currency>
+  <Currency name="新台币" abbr="TWD">
+    <Markets>
+      <CurrencyMarket name="台湾加权指数" code="GL-TWII" />
+    </Markets>
+  </Currency>
+  <Currency name="墨西哥比索" abbr="MXN">
+    <Markets>
+      <CurrencyMarket name="墨西哥MXX指数" code="GL-LEUM" />
+    </Markets>
+  </Currency>
+  <Currency name="韩元" abbr="KRW">
+    <Markets>
+      <CurrencyMarket name="韩国综合指数" code="GL-KS11" />
+    </Markets>
+  </Currency>
+  <Currency name="印度尼西亚卢比" abbr="IDR">
+    <Markets>
+      <CurrencyMarket name="印尼雅加达综合指数" code="GL-INDO" />
+    </Markets>
+  </Currency>
+  <Currency name="林吉特" abbr="MYR">
+    <Markets>
+      <CurrencyMarket name="马来西亚吉隆坡指数" code="GL-KLSE" />
+    </Markets>
+  </Currency>
+</ArrayOfCurrency>

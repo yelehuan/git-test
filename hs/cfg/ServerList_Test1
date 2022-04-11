@@ -1,0 +1,71 @@
+{
+    "serverlist": [
+        {
+            "name": "Login",
+            "tag": "",
+            "value": "http://121.46.253.106/authuser/zd/login",
+            "desc": "登录服务"
+        },
+        {
+            "name": "Update",
+            "tag": "",
+            "value": "http://121.46.253.106/update/info",
+            "desc": "升级"
+        },
+        {
+            "name": "File",
+            "tag": "",
+            "value": "http://121.46.253.106/http",
+            "desc": "文件服务"
+        },
+        {
+            "name": "HQ0",
+            "tag": "",
+            "value": "gildata.hq.hs.net:9999",
+            "desc": "行情服务0"
+        },
+        {
+            "name": "Web",
+            "tag": "",
+            "value": "http://121.46.253.106",
+            "desc": "Web服务"
+        },
+        {
+            "name": "News",
+            "tag": "",
+            "value": "http://121.46.253.106",
+            "desc": "新闻服务"
+        },
+        {
+            "name": "User",
+            "tag": "",
+            "value": "http://121.46.253.106/user/manager",
+            "desc": "用户服务"
+        },
+        {
+            "name": "Data",
+            "tag": "",
+            "value": "http://121.46.253.106/http",
+            "desc": "数据服务"
+        },
+        {
+            "name": "MACRO",
+            "tag": "",
+            "value": "http://121.46.253.106/http",
+            "desc": "宏观数据服务"
+        },
+        {
+            "name": "F10",
+            "tag": "",
+            "value": "http://121.46.253.106/f10/view/",
+            "desc": "F10页面服务"
+        },
+        {
+            "name": "Log",
+            "tag": "",
+            "value": "http://122.224.126.17:8083/logstorage-adapter/log/handleLogEvent.hsn",
+            "desc": "行为日志服务"
+        }
+    ],
+    "rsakey": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCW46TUB+974NNcaMTJd94feN++AkoHUR4uvIlerPo+oFJDNTNB9O2VkmOpbZCE6T3yDESOmFwKMVI0n8m8f9LgKF5gRaD5CVmUbKrs9+dV08Rd1TpiIuYs1q1OhxP7Sqw4y3+8O3e5a9XQj9budk5BGrByEiJqcWsn7wOB0/Q2pQIDAQAB"
+}

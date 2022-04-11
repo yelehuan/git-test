@@ -1,0 +1,282 @@
+{20220331-162451-892}{INFO} {20252}{5} {AutoUpdater.StartHttpUpdate} {Start autoupdater...}
+{20220331-162451-895}{INFO} {20252}{5} {AutoUpdater.StartHttpUpdate} {服务器地址https://client.cnfic.com.cn:443/upgrade/gray/window/level01/}
+{20220331-162451-917}{ERROR}{20252}{5} {} {read server FileModuleList fail:System.Net.WebException: 远程服务器返回错误: (404) 未找到。
+   在 System.Net.WebClient.DownloadDataInternal(Uri address, WebRequest& request)
+   在 System.Net.WebClient.DownloadString(Uri address)
+   在 System.Net.WebClient.DownloadString(String address)
+   在 HSUCF.Tools.WebFileUpdater.GetModuleList(Exception& errorinfo, Int32 timeout)}
+{20220331-162451-928}{ERROR}{20252}{5} {} {read local fileversion file fail:System.FormatException: 输入的不是有效的 Base-64 字符串，因为它包含非 Base-64 字符、两个以上的填充字符，或者填充字符间包含非法字符。
+   在 System.Convert.FromBase64_ComputeResultLength(Char* inputPtr, Int32 inputLength)
+   在 System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   在 System.Convert.FromBase64String(String s)
+   在 HSUCF.Tools.DESCryptoService.Decode(String data)
+   在 HSUCF.Tools.WebFileUpdater.GetLocalFileVersion(String path)}
+{20220331-162451-928}{INFO} {20252}{5} {AutoUpdater.StartHttpUpdate} {localVersion/localLastForceUpdateVersion:null/null fileVersion/fileLastForceUpdateVersion:2.3.12.10/null}
+{20220331-162454-029}{INFO} {20252}{5} {AutoUpdater.StartHttpUpdate 升级确认耗时：2136} {Start autoupdater...}
+{20220331-162454-033}{INFO} {20252}{5} {HSUCF.Tools.AutoUpdater.StartUpdater(UpdaterStartInfo)} {启动自动更新程序...}
+{20220331-162454-188}{INFO} {21364}{1} {HSUCF.Update.Program.ClearTempFiles(string)} {开始清理自动更新垃圾文件----- C:\Program Files (x86)\CEIS...}
+{20220331-162454-207}{INFO} {21364}{1} {HSUCF.Update.Program.ClearTempFiles(string)} {清理自动更新垃圾文件 成功}
+{20220331-162454-337}{ERROR}{21364}{1} {} {read local fileversion file fail:System.FormatException: 输入的不是有效的 Base-64 字符串，因为它包含非 Base-64 字符、两个以上的填充字符，或者填充字符间包含非法字符。
+   在 System.Convert.FromBase64_ComputeResultLength(Char* inputPtr, Int32 inputLength)
+   在 System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   在 System.Convert.FromBase64String(String s)
+   在 HSUCF.Tools.DESCryptoService.Decode(String data)
+   在 HSUCF.WPF.Update.WebFileUpdater.GetLocalFileVersion(String path)}
+{20220331-162458-803}{INFO} {21364}{1} {} {获取更新列表耗时: 4592}
+{20220331-162654-278}{INFO} {22328}{1} {HSUCF.Update.Program.ClearTempFiles(string)} {开始清理自动更新垃圾文件----- ...}
+{20220331-162654-281}{INFO} {22328}{1} {HSUCF.Update.Program.ClearTempFiles(string)} {清理自动更新垃圾文件 成功}
+{20220331-162654-290}{WARN} {22328}{1} {DeleteWaitFiles} {开始删除待删除的文件}
+{20220331-162654-444}{INFO} {22300}{1} {HSUCF.UpdateManager.Program.Main()} {重启主程序}
+{20220331-162654-449}{INFO} {22300}{1} {HSUCF.UpdateManager.Program.FinishUpdate(string[])} {备份耗时：0}
+{20220331-162654-449}{INFO} {22300}{1} {HSUCF.UpdateManager.Program.FinishUpdate(string[])} {开始 清理稍后删除文件...}
+{20220331-162654-450}{INFO} {22300}{1} {HSUCF.UpdateManager.Program.FinishUpdate(string[])} {清理稍后删除文件 成功...}
+{20220331-162654-450}{INFO} {22300}{1} {HSUCF.UpdateManager.Program.FinishUpdate(string[])} {开始 拷贝更新文件...}
+{20220331-162654-666}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.SetNormalAttribute(string)} {《.\CEIS.exe》设置正常属性 成功}
+{20220331-162654-667}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.CopyFiles(string, string)} {拷贝文件《CEIS.exe》成功}
+{20220331-162654-668}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.SetNormalAttribute(string)} {《.\Common\CEIS.Common.BasicData.Json.dll》设置正常属性 成功}
+{20220331-162654-668}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.CopyFiles(string, string)} {拷贝文件《CEIS.Common.BasicData.Json.dll》成功}
+{20220331-162654-669}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.SetNormalAttribute(string)} {《.\Common\CEIS.Common.dll》设置正常属性 成功}
+{20220331-162654-669}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.CopyFiles(string, string)} {拷贝文件《CEIS.Common.dll》成功}
+{20220331-162654-670}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.SetNormalAttribute(string)} {《.\Common\CEIS.Common.Screenshoter.exe》设置正常属性 成功}
+{20220331-162654-670}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.CopyFiles(string, string)} {拷贝文件《CEIS.Common.Screenshoter.exe》成功}
+{20220331-162654-671}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.SetNormalAttribute(string)} {《.\Common\Module\CEIS.Module.Information.dll》设置正常属性 成功}
+{20220331-162654-671}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.CopyFiles(string, string)} {拷贝文件《CEIS.Module.Information.dll》成功}
+{20220331-162654-678}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.SetNormalAttribute(string)} {《.\Common\Module\CEIS.Module.Quote.dll》设置正常属性 成功}
+{20220331-162654-679}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.CopyFiles(string, string)} {拷贝文件《CEIS.Module.Quote.dll》成功}
+{20220331-162654-680}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.SetNormalAttribute(string)} {《.\Framework\HSUCF.Framework.Cache.dll》设置正常属性 成功}
+{20220331-162654-680}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.CopyFiles(string, string)} {拷贝文件《HSUCF.Framework.Cache.dll》成功}
+{20220331-162654-680}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.SetNormalAttribute(string)} {《.\Framework\HSUCF.Framework.Container.dll》设置正常属性 成功}
+{20220331-162654-681}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.CopyFiles(string, string)} {拷贝文件《HSUCF.Framework.Container.dll》成功}
+{20220331-162654-682}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.SetNormalAttribute(string)} {《.\Framework\HSUCF.Framework.SDK.HTTP.dll》设置正常属性 成功}
+{20220331-162654-682}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.CopyFiles(string, string)} {拷贝文件《HSUCF.Framework.SDK.HTTP.dll》成功}
+{20220331-162654-682}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.SetNormalAttribute(string)} {《.\Framework\HSUCF.Framework.ThreadPool.dll》设置正常属性 成功}
+{20220331-162654-683}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.CopyFiles(string, string)} {拷贝文件《HSUCF.Framework.ThreadPool.dll》成功}
+{20220331-162654-683}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.SetNormalAttribute(string)} {《.\Menu\CEIS.Menu.HomePage.dll》设置正常属性 成功}
+{20220331-162654-684}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.CopyFiles(string, string)} {拷贝文件《CEIS.Menu.HomePage.dll》成功}
+{20220331-162654-684}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.SetNormalAttribute(string)} {《.\Menu\CEIS.Menu.Quote.Analyze.dll》设置正常属性 成功}
+{20220331-162654-685}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.CopyFiles(string, string)} {拷贝文件《CEIS.Menu.Quote.Analyze.dll》成功}
+{20220331-162654-685}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.SetNormalAttribute(string)} {《.\Menu\CEIS.Menu.Quote.Forex.dll》设置正常属性 成功}
+{20220331-162654-686}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.CopyFiles(string, string)} {拷贝文件《CEIS.Menu.Quote.Forex.dll》成功}
+{20220331-162654-686}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.SetNormalAttribute(string)} {《.\Menu\CEIS.Menu.Quote.Index.dll》设置正常属性 成功}
+{20220331-162654-687}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.CopyFiles(string, string)} {拷贝文件《CEIS.Menu.Quote.Index.dll》成功}
+{20220331-162654-687}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.SetNormalAttribute(string)} {《.\Menu\CEIS.Menu.Quote.IntegratedScreen.dll》设置正常属性 成功}
+{20220331-162654-687}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.CopyFiles(string, string)} {拷贝文件《CEIS.Menu.Quote.IntegratedScreen.dll》成功}
+{20220331-162654-688}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.SetNormalAttribute(string)} {《.\Menu\CEIS.Menu.Quote.Market.dll》设置正常属性 成功}
+{20220331-162654-688}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.CopyFiles(string, string)} {拷贝文件《CEIS.Menu.Quote.Market.dll》成功}
+{20220331-162654-689}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.SetNormalAttribute(string)} {《.\Menu\CEIS.Menu.Quote.Stock.dll》设置正常属性 成功}
+{20220331-162654-689}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.CopyFiles(string, string)} {拷贝文件《CEIS.Menu.Quote.Stock.dll》成功}
+{20220331-162654-690}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.SetNormalAttribute(string)} {《.\Menu\CEIS.Menu.Tool.dll》设置正常属性 成功}
+{20220331-162654-690}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.CopyFiles(string, string)} {拷贝文件《CEIS.Menu.Tool.dll》成功}
+{20220331-162654-691}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.SetNormalAttribute(string)} {《.\Menu\CEIS.Menu.WebBrowser.dll》设置正常属性 成功}
+{20220331-162654-691}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.CopyFiles(string, string)} {拷贝文件《CEIS.Menu.WebBrowser.dll》成功}
+{20220331-162654-691}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.SetNormalAttribute(string)} {《.\Menu\HSUCF.Menu.Common.dll》设置正常属性 成功}
+{20220331-162654-692}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.CopyFiles(string, string)} {拷贝文件《HSUCF.Menu.Common.dll》成功}
+{20220331-162654-692}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.SetNormalAttribute(string)} {《.\Menu\HSUCF.Menu.WebBrowser.dll》设置正常属性 成功}
+{20220331-162654-693}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.CopyFiles(string, string)} {拷贝文件《HSUCF.Menu.WebBrowser.dll》成功}
+{20220331-162654-693}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.SetNormalAttribute(string)} {《.\Platform\CEIS.Launcher.ImplementPart.dll》设置正常属性 成功}
+{20220331-162654-696}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.CopyFiles(string, string)} {拷贝文件《CEIS.Launcher.ImplementPart.dll》成功}
+{20220331-162654-696}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.SetNormalAttribute(string)} {《.\Platform\HSUCF.Platform.Assistant.ImplementPart.dll》设置正常属性 成功}
+{20220331-162654-697}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.CopyFiles(string, string)} {拷贝文件《HSUCF.Platform.Assistant.ImplementPart.dll》成功}
+{20220331-162654-697}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.SetNormalAttribute(string)} {《.\Platform\HSUCF.Platform.Cache.dll》设置正常属性 成功}
+{20220331-162654-698}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.CopyFiles(string, string)} {拷贝文件《HSUCF.Platform.Cache.dll》成功}
+{20220331-162654-698}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.SetNormalAttribute(string)} {《.\Platform\HSUCF.Platform.Core.dll》设置正常属性 成功}
+{20220331-162654-698}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.CopyFiles(string, string)} {拷贝文件《HSUCF.Platform.Core.dll》成功}
+{20220331-162654-699}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.SetNormalAttribute(string)} {《.\Platform\HSUCF.Platform.Dock.dll》设置正常属性 成功}
+{20220331-162654-699}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.CopyFiles(string, string)} {拷贝文件《HSUCF.Platform.Dock.dll》成功}
+{20220331-162654-699}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.SetNormalAttribute(string)} {《.\Platform\HSUCF.Platform.FlexScreen.dll》设置正常属性 成功}
+{20220331-162654-699}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.CopyFiles(string, string)} {拷贝文件《HSUCF.Platform.FlexScreen.dll》成功}
+{20220331-162654-700}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.SetNormalAttribute(string)} {《.\Platform\HSUCF.Platform.ImplementPart.dll》设置正常属性 成功}
+{20220331-162654-700}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.CopyFiles(string, string)} {拷贝文件《HSUCF.Platform.ImplementPart.dll》成功}
+{20220331-162654-702}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.SetNormalAttribute(string)} {《.\Platform\HSUCF.Platform.Infrastructure.dll》设置正常属性 成功}
+{20220331-162654-702}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.CopyFiles(string, string)} {拷贝文件《HSUCF.Platform.Infrastructure.dll》成功}
+{20220331-162654-703}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.SetNormalAttribute(string)} {《.\Platform\HSUCF.Platform.MvvM.dll》设置正常属性 成功}
+{20220331-162654-703}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.CopyFiles(string, string)} {拷贝文件《HSUCF.Platform.MvvM.dll》成功}
+{20220331-162654-704}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.SetNormalAttribute(string)} {《.\Resources\HSUCF.WPF.Update.exe》设置正常属性 成功}
+{20220331-162654-704}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.CopyFiles(string, string)} {拷贝文件《HSUCF.WPF.Update.exe》成功}
+{20220331-162654-705}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.SetNormalAttribute(string)} {《.\Resources\HSUCF\HSUCF.Tools.dll》设置正常属性 成功}
+{20220331-162654-706}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.CopyFiles(string, string)} {拷贝文件《HSUCF.Tools.dll》成功}
+{20220331-162654-706}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.SetNormalAttribute(string)} {《.\Resources\HSUCF\HSUCF.WPF.Controls.dll》设置正常属性 成功}
+{20220331-162654-714}{ERROR}{22300}{5} {HSUCF.UpdateManager.Program.CopyFiles(string, string)} {拷贝文件《HSUCF.WPF.Controls.dll》失败, 尝试重命名文件... (文件“.\Resources\HSUCF\HSUCF.WPF.Controls.dll”正由另一进程使用，因此该进程无法访问此文件。)}
+{20220331-162654-716}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.CopyFiles(string, string)} {拷贝文件《HSUCF.WPF.Controls.dll》成功}
+{20220331-162654-717}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.SetNormalAttribute(string)} {《.\Resources\HSUCF\Cef75\libcef.dll》设置正常属性 成功}
+{20220331-162654-768}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.CopyFiles(string, string)} {拷贝文件《libcef.dll》成功}
+{20220331-162654-769}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.SetNormalAttribute(string)} {《.\Resources\IUV\Common\IUV.Adapter.Communication.dll》设置正常属性 成功}
+{20220331-162654-769}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.CopyFiles(string, string)} {拷贝文件《IUV.Adapter.Communication.dll》成功}
+{20220331-162654-770}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.CopyFiles(string, string)} {拷贝文件《IUV.Adapter.Communication.pdb》成功}
+{20220331-162654-770}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.SetNormalAttribute(string)} {《.\Resources\IUV\Common\IUV.Common.Config.dll》设置正常属性 成功}
+{20220331-162654-771}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.CopyFiles(string, string)} {拷贝文件《IUV.Common.Config.dll》成功}
+{20220331-162654-771}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.CopyFiles(string, string)} {拷贝文件《IUV.Common.Config.pdb》成功}
+{20220331-162654-772}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.SetNormalAttribute(string)} {《.\Resources\IUV\Common\IUV.Common.Controls.dll》设置正常属性 成功}
+{20220331-162654-772}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.CopyFiles(string, string)} {拷贝文件《IUV.Common.Controls.dll》成功}
+{20220331-162654-774}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.CopyFiles(string, string)} {拷贝文件《IUV.Common.Controls.pdb》成功}
+{20220331-162654-774}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.SetNormalAttribute(string)} {《.\Resources\IUV\Common\IUV.Common.IntentionManager.dll》设置正常属性 成功}
+{20220331-162654-775}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.CopyFiles(string, string)} {拷贝文件《IUV.Common.IntentionManager.dll》成功}
+{20220331-162654-776}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.CopyFiles(string, string)} {拷贝文件《IUV.Common.IntentionManager.pdb》成功}
+{20220331-162654-776}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.SetNormalAttribute(string)} {《.\Resources\IUV\Common\IUV.Common.Keys.dll》设置正常属性 成功}
+{20220331-162654-776}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.CopyFiles(string, string)} {拷贝文件《IUV.Common.Keys.dll》成功}
+{20220331-162654-777}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.CopyFiles(string, string)} {拷贝文件《IUV.Common.Keys.pdb》成功}
+{20220331-162654-777}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.SetNormalAttribute(string)} {《.\Resources\IUV\Common\IUV.Common.Models.dll》设置正常属性 成功}
+{20220331-162654-778}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.CopyFiles(string, string)} {拷贝文件《IUV.Common.Models.dll》成功}
+{20220331-162654-779}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.CopyFiles(string, string)} {拷贝文件《IUV.Common.Models.pdb》成功}
+{20220331-162654-780}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.SetNormalAttribute(string)} {《.\Resources\IUV\Common\IUV.Common.Themes.dll》设置正常属性 成功}
+{20220331-162654-780}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.CopyFiles(string, string)} {拷贝文件《IUV.Common.Themes.dll》成功}
+{20220331-162654-781}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.CopyFiles(string, string)} {拷贝文件《IUV.Common.Themes.pdb》成功}
+{20220331-162654-781}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.SetNormalAttribute(string)} {《.\Resources\IUV\Common\IUV.Common.ThemesManager.dll》设置正常属性 成功}
+{20220331-162654-782}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.CopyFiles(string, string)} {拷贝文件《IUV.Common.ThemesManager.dll》成功}
+{20220331-162654-782}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.CopyFiles(string, string)} {拷贝文件《IUV.Common.ThemesManager.pdb》成功}
+{20220331-162654-783}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.SetNormalAttribute(string)} {《.\Resources\IUV\Common\IUV.Core.dll》设置正常属性 成功}
+{20220331-162654-784}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.CopyFiles(string, string)} {拷贝文件《IUV.Core.dll》成功}
+{20220331-162654-785}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.CopyFiles(string, string)} {拷贝文件《IUV.Core.pdb》成功}
+{20220331-162654-785}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.SetNormalAttribute(string)} {《.\Resources\IUV\Engine\IUV.Engine.QFormula.dll》设置正常属性 成功}
+{20220331-162654-786}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.CopyFiles(string, string)} {拷贝文件《IUV.Engine.QFormula.dll》成功}
+{20220331-162654-787}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.SetNormalAttribute(string)} {《.\Resources\IUV\Quote\IUV.Adapter.ComponentData.dll》设置正常属性 成功}
+{20220331-162654-787}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.CopyFiles(string, string)} {拷贝文件《IUV.Adapter.ComponentData.dll》成功}
+{20220331-162654-788}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.CopyFiles(string, string)} {拷贝文件《IUV.Adapter.ComponentData.pdb》成功}
+{20220331-162654-788}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.SetNormalAttribute(string)} {《.\Resources\IUV\Quote\IUV.Adapter.Information.dll》设置正常属性 成功}
+{20220331-162654-789}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.CopyFiles(string, string)} {拷贝文件《IUV.Adapter.Information.dll》成功}
+{20220331-162654-789}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.CopyFiles(string, string)} {拷贝文件《IUV.Adapter.Information.pdb》成功}
+{20220331-162654-790}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.SetNormalAttribute(string)} {《.\Resources\IUV\Quote\IUV.Adapter.Quote.dll》设置正常属性 成功}
+{20220331-162654-790}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.CopyFiles(string, string)} {拷贝文件《IUV.Adapter.Quote.dll》成功}
+{20220331-162654-791}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.CopyFiles(string, string)} {拷贝文件《IUV.Adapter.Quote.pdb》成功}
+{20220331-162654-791}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.SetNormalAttribute(string)} {《.\Resources\IUV\Quote\IUV.Component.Information.Develop.dll》设置正常属性 成功}
+{20220331-162654-792}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.CopyFiles(string, string)} {拷贝文件《IUV.Component.Information.Develop.dll》成功}
+{20220331-162654-792}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.SetNormalAttribute(string)} {《.\Resources\IUV\Quote\IUV.Component.Information.dll》设置正常属性 成功}
+{20220331-162654-793}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.CopyFiles(string, string)} {拷贝文件《IUV.Component.Information.dll》成功}
+{20220331-162654-794}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.CopyFiles(string, string)} {拷贝文件《IUV.Component.Information.pdb》成功}
+{20220331-162654-794}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.SetNormalAttribute(string)} {《.\Resources\IUV\Quote\IUV.Component.Quote.Develop.dll》设置正常属性 成功}
+{20220331-162654-796}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.CopyFiles(string, string)} {拷贝文件《IUV.Component.Quote.Develop.dll》成功}
+{20220331-162654-799}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.CopyFiles(string, string)} {拷贝文件《IUV.Component.Quote.Develop.pdb》成功}
+{20220331-162654-800}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.SetNormalAttribute(string)} {《.\Resources\IUV\Quote\IUV.Component.Quote.dll》设置正常属性 成功}
+{20220331-162654-802}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.CopyFiles(string, string)} {拷贝文件《IUV.Component.Quote.dll》成功}
+{20220331-162654-805}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.CopyFiles(string, string)} {拷贝文件《IUV.Component.Quote.pdb》成功}
+{20220331-162654-805}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.SetNormalAttribute(string)} {《.\Resources\IUV\Quote\IUV.ComponentDataAdapter.GilData.dll》设置正常属性 成功}
+{20220331-162654-806}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.CopyFiles(string, string)} {拷贝文件《IUV.ComponentDataAdapter.GilData.dll》成功}
+{20220331-162654-807}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.CopyFiles(string, string)} {拷贝文件《IUV.ComponentDataAdapter.GilData.pdb》成功}
+{20220331-162654-807}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.SetNormalAttribute(string)} {《.\Resources\IUV\Quote\IUV.InformationAdapter.GilDataImpl.dll》设置正常属性 成功}
+{20220331-162654-808}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.CopyFiles(string, string)} {拷贝文件《IUV.InformationAdapter.GilDataImpl.dll》成功}
+{20220331-162654-809}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.CopyFiles(string, string)} {拷贝文件《IUV.InformationAdapter.GilDataImpl.pdb》成功}
+{20220331-162654-809}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.SetNormalAttribute(string)} {《.\Resources\IUV\Quote\IUV.InformationAdapter.GTNImpl.dll》设置正常属性 成功}
+{20220331-162654-810}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.CopyFiles(string, string)} {拷贝文件《IUV.InformationAdapter.GTNImpl.dll》成功}
+{20220331-162654-810}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.CopyFiles(string, string)} {拷贝文件《IUV.InformationAdapter.GTNImpl.pdb》成功}
+{20220331-162654-811}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.SetNormalAttribute(string)} {《.\Resources\IUV\Quote\IUV.QuoteAdapter.H5SdkImpl.dll》设置正常属性 成功}
+{20220331-162654-811}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.CopyFiles(string, string)} {拷贝文件《IUV.QuoteAdapter.H5SdkImpl.dll》成功}
+{20220331-162654-812}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.CopyFiles(string, string)} {拷贝文件《IUV.QuoteAdapter.H5SdkImpl.pdb》成功}
+{20220331-162654-813}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.SetNormalAttribute(string)} {《.\Resources\IUV\Quote\IUV.QuoteAdapter.QuoteCommon.dll》设置正常属性 成功}
+{20220331-162654-813}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.CopyFiles(string, string)} {拷贝文件《IUV.QuoteAdapter.QuoteCommon.dll》成功}
+{20220331-162654-814}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.CopyFiles(string, string)} {拷贝文件《IUV.QuoteAdapter.QuoteCommon.pdb》成功}
+{20220331-162654-815}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.SetNormalAttribute(string)} {《.\Resources\IUV\Tool\IUV.Tool.QFormulaTool.dll》设置正常属性 成功}
+{20220331-162654-815}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.CopyFiles(string, string)} {拷贝文件《IUV.Tool.QFormulaTool.dll》成功}
+{20220331-162654-816}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.SetNormalAttribute(string)} {《.\Resources\Others\ModulusFE.StockChartX.dll》设置正常属性 成功}
+{20220331-162654-817}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.CopyFiles(string, string)} {拷贝文件《ModulusFE.StockChartX.dll》成功}
+{20220331-162654-817}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.SetNormalAttribute(string)} {《.\Resources\pts\resources\app.asar》设置正常属性 成功}
+{20220331-162654-829}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.CopyFiles(string, string)} {拷贝文件《app.asar》成功}
+{20220331-162654-829}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.SetNormalAttribute(string)} {《.\Resources\pts\resources\pts.asar》设置正常属性 成功}
+{20220331-162654-835}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.CopyFiles(string, string)} {拷贝文件《pts.asar》成功}
+{20220331-162654-836}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.SetNormalAttribute(string)} {《.\Resources\pts\resources\theme.asar》设置正常属性 成功}
+{20220331-162654-839}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.CopyFiles(string, string)} {拷贝文件《theme.asar》成功}
+{20220331-162654-839}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.SetNormalAttribute(string)} {《.\Resources\Skin\CEIS.Platform.DarkSkin.dll》设置正常属性 成功}
+{20220331-162654-840}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.CopyFiles(string, string)} {拷贝文件《CEIS.Platform.DarkSkin.dll》成功}
+{20220331-162654-840}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.SetNormalAttribute(string)} {《.\Resources\Skin\CEIS.Platform.WhiteSkin.dll》设置正常属性 成功}
+{20220331-162654-841}{INFO} {22300}{5} {HSUCF.UpdateManager.Program.CopyFiles(string, string)} {拷贝文件《CEIS.Platform.WhiteSkin.dll》成功}
+{20220331-162657-684}{INFO} {22300}{1} {HSUCF.UpdateManager.Program.FinishUpdate(string[])} {拷贝更新文件 成功.}
+{20220331-162657-684}{INFO} {22300}{1} {HSUCF.UpdateManager.Program.FinishUpdate(string[])} {开始 删除更新文件...}
+{20220331-162657-686}{INFO} {22300}{1} {HSUCF.UpdateManager.Program.DeleteDirectory(string, bool)} {删除文件《CEIS.exe》成功}
+{20220331-162657-686}{INFO} {22300}{1} {HSUCF.UpdateManager.Program.DeleteDirectory(string, bool)} {删除文件《filelist.xml》成功}
+{20220331-162657-686}{INFO} {22300}{1} {HSUCF.UpdateManager.Program.DeleteDirectory(string, bool)} {删除文件《fileversion.xml》成功}
+{20220331-162657-688}{INFO} {22300}{1} {HSUCF.UpdateManager.Program.DeleteDirectory(string, bool)} {删除文件《CEIS.Common.BasicData.Json.dll》成功}
+{20220331-162657-688}{INFO} {22300}{1} {HSUCF.UpdateManager.Program.DeleteDirectory(string, bool)} {删除文件《CEIS.Common.dll》成功}
+{20220331-162657-688}{INFO} {22300}{1} {HSUCF.UpdateManager.Program.DeleteDirectory(string, bool)} {删除文件《CEIS.Common.Screenshoter.exe》成功}
+{20220331-162657-689}{INFO} {22300}{1} {HSUCF.UpdateManager.Program.DeleteDirectory(string, bool)} {删除文件《CEIS.Module.Information.dll》成功}
+{20220331-162657-689}{INFO} {22300}{1} {HSUCF.UpdateManager.Program.DeleteDirectory(string, bool)} {删除文件《CEIS.Module.Quote.dll》成功}
+{20220331-162657-690}{INFO} {22300}{1} {HSUCF.UpdateManager.Program.DeleteDirectory(string, bool)} {删除文件《HSUCF.Framework.Cache.dll》成功}
+{20220331-162657-691}{INFO} {22300}{1} {HSUCF.UpdateManager.Program.DeleteDirectory(string, bool)} {删除文件《HSUCF.Framework.Container.dll》成功}
+{20220331-162657-691}{INFO} {22300}{1} {HSUCF.UpdateManager.Program.DeleteDirectory(string, bool)} {删除文件《HSUCF.Framework.SDK.HTTP.dll》成功}
+{20220331-162657-691}{INFO} {22300}{1} {HSUCF.UpdateManager.Program.DeleteDirectory(string, bool)} {删除文件《HSUCF.Framework.ThreadPool.dll》成功}
+{20220331-162657-692}{INFO} {22300}{1} {HSUCF.UpdateManager.Program.DeleteDirectory(string, bool)} {删除文件《CEIS.Menu.HomePage.dll》成功}
+{20220331-162657-692}{INFO} {22300}{1} {HSUCF.UpdateManager.Program.DeleteDirectory(string, bool)} {删除文件《CEIS.Menu.Quote.Analyze.dll》成功}
+{20220331-162657-693}{INFO} {22300}{1} {HSUCF.UpdateManager.Program.DeleteDirectory(string, bool)} {删除文件《CEIS.Menu.Quote.Forex.dll》成功}
+{20220331-162657-693}{INFO} {22300}{1} {HSUCF.UpdateManager.Program.DeleteDirectory(string, bool)} {删除文件《CEIS.Menu.Quote.Index.dll》成功}
+{20220331-162657-693}{INFO} {22300}{1} {HSUCF.UpdateManager.Program.DeleteDirectory(string, bool)} {删除文件《CEIS.Menu.Quote.IntegratedScreen.dll》成功}
+{20220331-162657-694}{INFO} {22300}{1} {HSUCF.UpdateManager.Program.DeleteDirectory(string, bool)} {删除文件《CEIS.Menu.Quote.Market.dll》成功}
+{20220331-162657-694}{INFO} {22300}{1} {HSUCF.UpdateManager.Program.DeleteDirectory(string, bool)} {删除文件《CEIS.Menu.Quote.Stock.dll》成功}
+{20220331-162657-695}{INFO} {22300}{1} {HSUCF.UpdateManager.Program.DeleteDirectory(string, bool)} {删除文件《CEIS.Menu.Tool.dll》成功}
+{20220331-162657-695}{INFO} {22300}{1} {HSUCF.UpdateManager.Program.DeleteDirectory(string, bool)} {删除文件《CEIS.Menu.WebBrowser.dll》成功}
+{20220331-162657-696}{INFO} {22300}{1} {HSUCF.UpdateManager.Program.DeleteDirectory(string, bool)} {删除文件《HSUCF.Menu.Common.dll》成功}
+{20220331-162657-696}{INFO} {22300}{1} {HSUCF.UpdateManager.Program.DeleteDirectory(string, bool)} {删除文件《HSUCF.Menu.WebBrowser.dll》成功}
+{20220331-162657-698}{INFO} {22300}{1} {HSUCF.UpdateManager.Program.DeleteDirectory(string, bool)} {删除文件《CEIS.Launcher.ImplementPart.dll》成功}
+{20220331-162657-699}{INFO} {22300}{1} {HSUCF.UpdateManager.Program.DeleteDirectory(string, bool)} {删除文件《HSUCF.Platform.Assistant.ImplementPart.dll》成功}
+{20220331-162657-699}{INFO} {22300}{1} {HSUCF.UpdateManager.Program.DeleteDirectory(string, bool)} {删除文件《HSUCF.Platform.Cache.dll》成功}
+{20220331-162657-700}{INFO} {22300}{1} {HSUCF.UpdateManager.Program.DeleteDirectory(string, bool)} {删除文件《HSUCF.Platform.Core.dll》成功}
+{20220331-162657-701}{INFO} {22300}{1} {HSUCF.UpdateManager.Program.DeleteDirectory(string, bool)} {删除文件《HSUCF.Platform.Dock.dll》成功}
+{20220331-162657-701}{INFO} {22300}{1} {HSUCF.UpdateManager.Program.DeleteDirectory(string, bool)} {删除文件《HSUCF.Platform.FlexScreen.dll》成功}
+{20220331-162657-701}{INFO} {22300}{1} {HSUCF.UpdateManager.Program.DeleteDirectory(string, bool)} {删除文件《HSUCF.Platform.ImplementPart.dll》成功}
+{20220331-162657-701}{INFO} {22300}{1} {HSUCF.UpdateManager.Program.DeleteDirectory(string, bool)} {删除文件《HSUCF.Platform.Infrastructure.dll》成功}
+{20220331-162657-702}{INFO} {22300}{1} {HSUCF.UpdateManager.Program.DeleteDirectory(string, bool)} {删除文件《HSUCF.Platform.MvvM.dll》成功}
+{20220331-162657-702}{INFO} {22300}{1} {HSUCF.UpdateManager.Program.DeleteDirectory(string, bool)} {删除文件《HSUCF.WPF.Update.exe》成功}
+{20220331-162657-703}{INFO} {22300}{1} {HSUCF.UpdateManager.Program.DeleteDirectory(string, bool)} {删除文件《HSUCF.Tools.dll》成功}
+{20220331-162657-703}{INFO} {22300}{1} {HSUCF.UpdateManager.Program.DeleteDirectory(string, bool)} {删除文件《HSUCF.WPF.Controls.dll》成功}
+{20220331-162657-712}{INFO} {22300}{1} {HSUCF.UpdateManager.Program.DeleteDirectory(string, bool)} {删除文件《libcef.dll》成功}
+{20220331-162657-715}{INFO} {22300}{1} {HSUCF.UpdateManager.Program.DeleteDirectory(string, bool)} {删除文件《IUV.Adapter.Communication.dll》成功}
+{20220331-162657-715}{INFO} {22300}{1} {HSUCF.UpdateManager.Program.DeleteDirectory(string, bool)} {删除文件《IUV.Adapter.Communication.pdb》成功}
+{20220331-162657-717}{INFO} {22300}{1} {HSUCF.UpdateManager.Program.DeleteDirectory(string, bool)} {删除文件《IUV.Common.Config.dll》成功}
+{20220331-162657-718}{INFO} {22300}{1} {HSUCF.UpdateManager.Program.DeleteDirectory(string, bool)} {删除文件《IUV.Common.Config.pdb》成功}
+{20220331-162657-718}{INFO} {22300}{1} {HSUCF.UpdateManager.Program.DeleteDirectory(string, bool)} {删除文件《IUV.Common.Controls.dll》成功}
+{20220331-162657-719}{INFO} {22300}{1} {HSUCF.UpdateManager.Program.DeleteDirectory(string, bool)} {删除文件《IUV.Common.Controls.pdb》成功}
+{20220331-162657-719}{INFO} {22300}{1} {HSUCF.UpdateManager.Program.DeleteDirectory(string, bool)} {删除文件《IUV.Common.IntentionManager.dll》成功}
+{20220331-162657-719}{INFO} {22300}{1} {HSUCF.UpdateManager.Program.DeleteDirectory(string, bool)} {删除文件《IUV.Common.IntentionManager.pdb》成功}
+{20220331-162657-720}{INFO} {22300}{1} {HSUCF.UpdateManager.Program.DeleteDirectory(string, bool)} {删除文件《IUV.Common.Keys.dll》成功}
+{20220331-162657-721}{INFO} {22300}{1} {HSUCF.UpdateManager.Program.DeleteDirectory(string, bool)} {删除文件《IUV.Common.Keys.pdb》成功}
+{20220331-162657-721}{INFO} {22300}{1} {HSUCF.UpdateManager.Program.DeleteDirectory(string, bool)} {删除文件《IUV.Common.Models.dll》成功}
+{20220331-162657-721}{INFO} {22300}{1} {HSUCF.UpdateManager.Program.DeleteDirectory(string, bool)} {删除文件《IUV.Common.Models.pdb》成功}
+{20220331-162657-721}{INFO} {22300}{1} {HSUCF.UpdateManager.Program.DeleteDirectory(string, bool)} {删除文件《IUV.Common.Themes.dll》成功}
+{20220331-162657-722}{INFO} {22300}{1} {HSUCF.UpdateManager.Program.DeleteDirectory(string, bool)} {删除文件《IUV.Common.Themes.pdb》成功}
+{20220331-162657-722}{INFO} {22300}{1} {HSUCF.UpdateManager.Program.DeleteDirectory(string, bool)} {删除文件《IUV.Common.ThemesManager.dll》成功}
+{20220331-162657-722}{INFO} {22300}{1} {HSUCF.UpdateManager.Program.DeleteDirectory(string, bool)} {删除文件《IUV.Common.ThemesManager.pdb》成功}
+{20220331-162657-724}{INFO} {22300}{1} {HSUCF.UpdateManager.Program.DeleteDirectory(string, bool)} {删除文件《IUV.Core.dll》成功}
+{20220331-162657-724}{INFO} {22300}{1} {HSUCF.UpdateManager.Program.DeleteDirectory(string, bool)} {删除文件《IUV.Core.pdb》成功}
+{20220331-162657-725}{INFO} {22300}{1} {HSUCF.UpdateManager.Program.DeleteDirectory(string, bool)} {删除文件《IUV.Engine.QFormula.dll》成功}
+{20220331-162657-726}{INFO} {22300}{1} {HSUCF.UpdateManager.Program.DeleteDirectory(string, bool)} {删除文件《IUV.Adapter.ComponentData.dll》成功}
+{20220331-162657-726}{INFO} {22300}{1} {HSUCF.UpdateManager.Program.DeleteDirectory(string, bool)} {删除文件《IUV.Adapter.ComponentData.pdb》成功}
+{20220331-162657-726}{INFO} {22300}{1} {HSUCF.UpdateManager.Program.DeleteDirectory(string, bool)} {删除文件《IUV.Adapter.Information.dll》成功}
+{20220331-162657-726}{INFO} {22300}{1} {HSUCF.UpdateManager.Program.DeleteDirectory(string, bool)} {删除文件《IUV.Adapter.Information.pdb》成功}
+{20220331-162657-727}{INFO} {22300}{1} {HSUCF.UpdateManager.Program.DeleteDirectory(string, bool)} {删除文件《IUV.Adapter.Quote.dll》成功}
+{20220331-162657-727}{INFO} {22300}{1} {HSUCF.UpdateManager.Program.DeleteDirectory(string, bool)} {删除文件《IUV.Adapter.Quote.pdb》成功}
+{20220331-162657-728}{INFO} {22300}{1} {HSUCF.UpdateManager.Program.DeleteDirectory(string, bool)} {删除文件《IUV.Component.Information.Develop.dll》成功}
+{20220331-162657-729}{INFO} {22300}{1} {HSUCF.UpdateManager.Program.DeleteDirectory(string, bool)} {删除文件《IUV.Component.Information.dll》成功}
+{20220331-162657-729}{INFO} {22300}{1} {HSUCF.UpdateManager.Program.DeleteDirectory(string, bool)} {删除文件《IUV.Component.Information.pdb》成功}
+{20220331-162657-730}{INFO} {22300}{1} {HSUCF.UpdateManager.Program.DeleteDirectory(string, bool)} {删除文件《IUV.Component.Quote.Develop.dll》成功}
+{20220331-162657-731}{INFO} {22300}{1} {HSUCF.UpdateManager.Program.DeleteDirectory(string, bool)} {删除文件《IUV.Component.Quote.Develop.pdb》成功}
+{20220331-162657-732}{INFO} {22300}{1} {HSUCF.UpdateManager.Program.DeleteDirectory(string, bool)} {删除文件《IUV.Component.Quote.dll》成功}
+{20220331-162657-732}{INFO} {22300}{1} {HSUCF.UpdateManager.Program.DeleteDirectory(string, bool)} {删除文件《IUV.Component.Quote.pdb》成功}
+{20220331-162657-733}{INFO} {22300}{1} {HSUCF.UpdateManager.Program.DeleteDirectory(string, bool)} {删除文件《IUV.ComponentDataAdapter.GilData.dll》成功}
+{20220331-162657-733}{INFO} {22300}{1} {HSUCF.UpdateManager.Program.DeleteDirectory(string, bool)} {删除文件《IUV.ComponentDataAdapter.GilData.pdb》成功}
+{20220331-162657-734}{INFO} {22300}{1} {HSUCF.UpdateManager.Program.DeleteDirectory(string, bool)} {删除文件《IUV.InformationAdapter.GilDataImpl.dll》成功}
+{20220331-162657-734}{INFO} {22300}{1} {HSUCF.UpdateManager.Program.DeleteDirectory(string, bool)} {删除文件《IUV.InformationAdapter.GilDataImpl.pdb》成功}
+{20220331-162657-735}{INFO} {22300}{1} {HSUCF.UpdateManager.Program.DeleteDirectory(string, bool)} {删除文件《IUV.InformationAdapter.GTNImpl.dll》成功}
+{20220331-162657-735}{INFO} {22300}{1} {HSUCF.UpdateManager.Program.DeleteDirectory(string, bool)} {删除文件《IUV.InformationAdapter.GTNImpl.pdb》成功}
+{20220331-162657-735}{INFO} {22300}{1} {HSUCF.UpdateManager.Program.DeleteDirectory(string, bool)} {删除文件《IUV.QuoteAdapter.H5SdkImpl.dll》成功}
+{20220331-162657-736}{INFO} {22300}{1} {HSUCF.UpdateManager.Program.DeleteDirectory(string, bool)} {删除文件《IUV.QuoteAdapter.H5SdkImpl.pdb》成功}
+{20220331-162657-737}{INFO} {22300}{1} {HSUCF.UpdateManager.Program.DeleteDirectory(string, bool)} {删除文件《IUV.QuoteAdapter.QuoteCommon.dll》成功}
+{20220331-162657-738}{INFO} {22300}{1} {HSUCF.UpdateManager.Program.DeleteDirectory(string, bool)} {删除文件《IUV.QuoteAdapter.QuoteCommon.pdb》成功}
+{20220331-162657-739}{INFO} {22300}{1} {HSUCF.UpdateManager.Program.DeleteDirectory(string, bool)} {删除文件《IUV.Tool.QFormulaTool.dll》成功}
+{20220331-162657-740}{INFO} {22300}{1} {HSUCF.UpdateManager.Program.DeleteDirectory(string, bool)} {删除文件《ModulusFE.StockChartX.dll》成功}
+{20220331-162657-743}{INFO} {22300}{1} {HSUCF.UpdateManager.Program.DeleteDirectory(string, bool)} {删除文件《app.asar》成功}
+{20220331-162657-745}{INFO} {22300}{1} {HSUCF.UpdateManager.Program.DeleteDirectory(string, bool)} {删除文件《pts.asar》成功}
+{20220331-162657-746}{INFO} {22300}{1} {HSUCF.UpdateManager.Program.DeleteDirectory(string, bool)} {删除文件《theme.asar》成功}
+{20220331-162657-747}{INFO} {22300}{1} {HSUCF.UpdateManager.Program.DeleteDirectory(string, bool)} {删除文件《CEIS.Platform.DarkSkin.dll》成功}
+{20220331-162657-747}{INFO} {22300}{1} {HSUCF.UpdateManager.Program.DeleteDirectory(string, bool)} {删除文件《CEIS.Platform.WhiteSkin.dll》成功}
+{20220331-162657-749}{INFO} {22300}{1} {HSUCF.UpdateManager.Program.FinishUpdate(string[])} {删除更新文件 成功.}
+{20220331-162657-751}{INFO} {22300}{1} {HSUCF.UpdateManager.Program.FinishUpdate(string[])} {拷贝耗时：3300}
+{20220331-162657-826}{INFO} {22300}{1} {HSUCF.UpdateManager.Program.Restart(string)} {开始 重启主程序...}
+{20220331-162657-896}{INFO} {22300}{1} {HSUCF.UpdateManager.Program.Restart(string)} {重启主程序 "CEIS.exe" 成功}
+{20220331-162657-896}{INFO} {22300}{1} {HSUCF.UpdateManager.Program.Main()} {重启主程序 成功}
+{20220331-162704-325}{INFO} {20204}{3} {AutoUpdater.StartHttpUpdate} {Start autoupdater...}
+{20220331-162704-328}{INFO} {20204}{3} {AutoUpdater.StartHttpUpdate} {服务器地址https://client.cnfic.com.cn:443/upgrade/gray/window/level01/}
+{20220331-162704-341}{INFO} {20204}{8} {HSUCF.Tools.AutoUpdater.ClearTempDirectory(string)} {Delete file 《C:\Program Files (x86)\CEIS\Resources\HSUCF\HSUCF.WPF.Controls.dll.C#UCF_TEMP》 success}
+{20220331-162704-359}{ERROR}{20204}{3} {} {read server FileModuleList fail:System.Net.WebException: 远程服务器返回错误: (404) 未找到。
+   在 System.Net.WebClient.DownloadDataInternal(Uri address, WebRequest& request)
+   在 System.Net.WebClient.DownloadString(Uri address)
+   在 System.Net.WebClient.DownloadString(String address)
+   在 HSUCF.Tools.WebFileUpdater.GetModuleList(Exception& errorinfo, Int32 timeout)}
+{20220331-162704-364}{INFO} {20204}{3} {AutoUpdater.StartHttpUpdate} {localVersion/localLastForceUpdateVersion:2.3.12.10/null fileVersion/fileLastForceUpdateVersion:2.3.12.10/null}
+{20220331-162704-364}{INFO} {20204}{3} {AutoUpdater.StartHttpUpdate 升级确认耗时：39} {Start autoupdater...}

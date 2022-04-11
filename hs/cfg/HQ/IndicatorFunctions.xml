@@ -1,0 +1,1486 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Categories>
+	<Category Name="数学函数">
+		<Function id="0">
+			<Prototype>POWER()</Prototype>
+			<BriefName>求幂</BriefName>
+			<Description>Power(Base, Exponent)返回底数的任何次幂。其中Base是底数， Exponent是指数</Description>
+			<Declare>function Power(Base, Exponent: Extended): Extended;</Declare>
+		</Function> 
+		
+		<Function id="1">
+			<Prototype>COS()</Prototype>
+			<BriefName>余弦</BriefName>
+			<Description>Cos(X)求余弦函数。 X是弧度。</Description>
+			<Declare>function Cos(X: Extended): Extended;</Declare>
+		</Function>
+		
+		<Function id="2">
+			<Prototype>SIN()</Prototype>
+			<BriefName>正弦</BriefName>
+			<Description>Sin(X)求正弦函数。 X是弧度。</Description>
+			<Declare>function Sin(X: Extended): Extended;</Declare>
+		</Function>
+
+		<Function id="3">
+			<Prototype>TAN()</Prototype>
+			<BriefName>正切</BriefName>
+			<Description>Tan(X)求正切函数。 X是弧度。</Description>
+			<Declare>function Tan(X: Extended): Extended;</Declare>
+		</Function>
+
+		<Function id="4">
+			<Prototype>COTAN()</Prototype>
+			<BriefName>余切</BriefName>
+			<Description>CoTan(X)求余切函数。 X是弧度。</Description>
+			<Declare>function CoTan(X: Extended): Extended;</Declare>
+		</Function>	
+		
+		<Function id="5">
+			<Prototype>MOD()</Prototype>
+			<BriefName>求模</BriefName>
+			<Description>MOD(M,N),返回M关于N的模(M除以N的余数)</Description>
+			<Declare>function MOD(M,N:Integer): Integer;</Declare>
+		</Function>	
+		
+		<Function id="6">
+			<Prototype>ABS()</Prototype>
+			<BriefName>求绝对值</BriefName>
+			<Description>ABS(M),返回M绝对值</Description>
+			<Declare>function ABS(M:Extended): Extended;</Declare>
+		</Function>	
+		
+		<Function id="7">
+			<Prototype>MAX()</Prototype>
+			<BriefName>求最大值</BriefName>
+			<Description>Max(M,N),返回M，N中较大的数</Description>
+			<Declare>function Max(M,N:Extended): Extended;</Declare>
+		</Function>	
+		
+		<Function id="8">
+			<Prototype>MIN()</Prototype>
+			<BriefName>求最小值</BriefName>
+			<Description>Min(M,N),返回M，N中较小的数</Description>
+			<Declare>function Min(M,N:Extended): Extended;</Declare>
+		</Function>	
+
+		<Function id="9">
+			<Prototype>ASIN()</Prototype>
+			<BriefName>求反正弦值</BriefName>
+			<Description>ASIN(X)返回X的反正弦值</Description>
+			<Declare>function ASIN(X:Extended): Extended;</Declare>
+		</Function>	
+
+		<Function id="10">
+			<Prototype>ACOS()</Prototype>
+			<BriefName>求反余弦值</BriefName>
+			<Description>ACOS(X)返回X的反余弦值</Description>
+			<Declare>function ACOS(X:Extended): Extended;</Declare>
+		</Function>	
+
+		<Function id="11">
+			<Prototype>ATAN()</Prototype>
+			<BriefName>求反正切值</BriefName>
+			<Description>ATAN(X)返回X的反正切值</Description>
+			<Declare>function ATAN(X:Extended): Extended;</Declare>
+		</Function>	
+
+		<Function id="12">
+			<Prototype>EXP()</Prototype>
+			<BriefName>求指数</BriefName>
+			<Description>EXP(X)为e的X次幂</Description>
+			<Declare>function EXP(X:Extended): Extended;</Declare>
+		</Function>	
+
+		<Function id="13">
+			<Prototype>LN()</Prototype>
+			<BriefName>求自然对数</BriefName>
+			<Description>LN(X)以e为底的对数</Description>
+			<Declare>function LN(X:Extended): Extended;</Declare>
+		</Function>	
+
+		<Function id="14">
+			<Prototype>LOG()</Prototype>
+			<BriefName>求10为底的对数</BriefName>
+			<Description>LOG(X)取得X的对数</Description>
+			<Declare>function LOG(X:Extended): Extended;</Declare>
+		</Function>	
+
+		<Function id="15">
+			<Prototype>SQRT()</Prototype>
+			<BriefName>求平方根</BriefName>
+			<Description>SQRT(X)为X的平方根</Description>
+			<Declare>function SQRT(X:Extended): Extended;</Declare>
+		</Function>	
+
+		<Function id="16">
+			<Prototype>CEILING()</Prototype>
+			<BriefName>向上舍入</BriefName>
+			<Description>CEILING(A)返回沿A数值增大方向最接近的整数</Description>
+			<Declare>function CEILING(X:Extended): Integer;</Declare>
+		</Function>	
+
+		<Function id="17">
+			<Prototype>FLOOR()</Prototype>
+			<BriefName>向下舍入</BriefName>
+			<Description><![CDATA[FLOOR(A)返回沿A数值减小方向最接近的整数
+例如:
+ FLOOR(12.3)求得12,FLOOR(-3.5)求得-4
+			]]></Description>
+			<Declare>function FLOOR(X:Extended): Integer;</Declare>
+		</Function>	
+
+		<Function id="18">
+			<Prototype>INTPART()</Prototype>
+			<BriefName>取整</BriefName>
+			<Description><![CDATA[INTPART(A)返回沿A绝对值减小方向最接近的整数
+例如:
+ INTPART(12.3)求得12,INTPART(-3.5)求得-3]]></Description>
+			<Declare>function INTPART(X:Extended): Integer;</Declare>
+		</Function>		
+
+		<Function id="19">
+			<Prototype>BETWEEN()</Prototype>
+			<BriefName>介于</BriefName>
+			<Description><![CDATA[ BETWEEN(A,B,C)表示A处于B和C之间时返回True,否则返回False
+例如:
+ BETWEEN(CLOSE,MA(CLOSE,10),MA(CLOSE,5))表示收盘价介于5日均线和10日均线之间]]></Description>
+			<Declare>function BETWEEN(A,B,C:Extended): Boolean;</Declare>
+		</Function>		
+
+		<Function id="20">
+			<Prototype>FRACPART()</Prototype>
+			<BriefName>小数部分</BriefName>
+			<Description><![CDATA[FRACPART(X),返回X的小数部分]]></Description>
+			<Declare>function FRACPART(X:Extended): Integer;</Declare>
+		</Function>		
+
+		<Function id="21">
+			<Prototype>ROUND()</Prototype>
+			<BriefName>四舍五入</BriefName>
+			<Description><![CDATA[ROUND(X),返回X四舍五入到个位的数值]]></Description>
+			<Declare>function ROUND(X:Extended): Integer;</Declare>
+		</Function>		
+
+		<Function id="22">
+			<Prototype>ROUND2()</Prototype>
+			<BriefName>四舍五入</BriefName>
+			<Description><![CDATA[ROUND2(X,N),返回X四舍五入到N位小数的数值。使用了银行家算法。]]></Description>
+			<Declare>function ROUND2(X:Extended): Extended;</Declare>
+		</Function>		
+
+		<Function id="23">
+			<Prototype>SIGN()</Prototype>
+			<BriefName>取符号</BriefName>
+			<Description><![CDATA[SIGN(X),返回X的符号.当X>0,X=0,X<0分别返回1,0,-1]]></Description>
+			<Declare>function SIGN(X:Extended): Integer;</Declare>
+		</Function>		
+
+		<Function id="24">
+			<Prototype>RAND()</Prototype>
+			<BriefName>取随机数</BriefName>
+			<Description><![CDATA[RAND(N),返回一个范围在1-N的随机整数]]></Description>
+			<Declare>function RAND(X:Integer): Integer;</Declare>
+		</Function>				
+	</Category>
+	
+	<Category Name="选择函数">
+		<Function id="30">
+			<Prototype>IF()</Prototype>
+			<BriefName>条件判断</BriefName>
+			<Description>IF(X,A,B)若X不为0则返回A,否则返回B。</Description>
+			<Declare>function IF(X:Boolean; A,B:Variant):Variant;</Declare>
+		</Function> 
+		
+		<Function id="31">
+			<Prototype>IFN()</Prototype>
+			<BriefName>根据条件求不同的值,同IF判断相反</BriefName>
+			<Description>IFN(X,A,B)若X不为0则返回B,否则返回A</Description>
+			<Declare>function IFN(X:Boolean; A,B:Variant):Variant;</Declare>
+		</Function>
+
+		<Function id="32">
+			<Prototype>IFC()</Prototype>
+			<BriefName>根据条件求不同的值,可中止</BriefName>
+			<Description><![CDATA[IFC(X,A,B)若X不为0则返回A,否则返回B.IFC与IF函数的区别:根据X的值来选择性执行A、B表达式.
+例如:
+ IFC(CLOSE>OPEN,HIGH,TESTSKIP(1));L;表示当日收阳则返回最高值,并执行下一句"L;",否则退出公式计算。]]></Description>
+			<Declare>function IFC(X:Boolean; A:Variant; B:Variant):Variant;</Declare>
+		</Function>	
+
+		<Function id="33">
+			<Prototype>VALUEWHEN()</Prototype>
+			<BriefName>VALUEWHEN(COND,X)当COND条件成立时,取X的当前值,否则取VALUEWHEN的上个值 </BriefName>
+			<Description>VALUEWHEN(COND,X)当COND条件成立时,取X的当前值,否则取VALUEWHEN的上个值.</Description>
+			<Declare>function VALUEWHEN(X:Boolean; A,B:Extended):Extended;</Declare>
+		</Function>
+
+		<Function id="34">
+			<Prototype>TESTSKIP()</Prototype>
+			<BriefName>TESTSKIP(A):满足A则直接返回.</BriefName>
+			<Description> <![CDATA[TESTSKIP(A) 
+ 表示如果满足条件A则该公式直接返回,不再计算接下来的表达式 注意:A为非序列数据,只取最后一个数据]]></Description>
+			<Declare>function TESTSKIP(X:Boolean):Void;</Declare>
+		</Function>		
+	</Category>	
+	
+	<Category Name="序列行情函数">
+		<Function id="51">
+			<Prototype>HIGH()</Prototype>
+			<BriefName>最高价</BriefName>
+			<Description>HIGH取最高价。</Description>
+			<Declare>function HIGH():Extended;</Declare>
+		</Function> 
+		
+		<Function id="52">
+			<Prototype>LOW()</Prototype>
+			<BriefName>最低价</BriefName>
+			<Description>LOW取最低价</Description>
+			<Declare>function LOW():Extended;</Declare>
+		</Function> 
+		
+		<Function id="53">
+			<Prototype>OPEN()</Prototype>
+			<BriefName>开盘价</BriefName>
+			<Description>OPEN取开盘价</Description>
+			<Declare>function OPEN():Extended;</Declare>
+		</Function> 
+		
+		<Function id="54">
+			<Prototype>CLOSE()</Prototype>
+			<BriefName>收盘价</BriefName>
+			<Description>CLOSE取收盘价</Description>
+			<Declare>function CLOSE():Extended;</Declare>
+		</Function> 
+		
+		<Function id="55">
+			<Prototype>AMOUNT()</Prototype>
+			<BriefName>成交额</BriefName>
+			<Description>AMOUNT取成交额(元)</Description>
+			<Declare>function AMOUNT():Extended;</Declare>
+		</Function> 
+		
+		<Function id="56">
+			<Prototype>VOL()</Prototype>
+			<BriefName>成交量</BriefName>
+			<Description>VOL取成交量(手)</Description>
+			<Declare>function VOL():Extended;</Declare>
+		</Function> 
+		
+		<Function id="57">
+			<Prototype>FUNDFLOW()</Prototype>
+			<BriefName>资金流向</BriefName>
+			<Description>FUNDFLOW取资金流向数据</Description>
+			<Declare>function FUNDFLOW():Extended;</Declare>
+		</Function> 
+
+		<Function id="58">
+			<Prototype>FINANCING()</Prototype>
+			<BriefName>融资融券差值</BriefName>
+			<Description>FINANCING取融资融券差值</Description>
+			<Declare>function FINANCING():Extended;</Declare>
+		</Function> 	
+
+<!--
+		<Function id="59">
+			<Prototype>ADVANCE()</Prototype>
+			<BriefName>返回该周期上涨家数</BriefName>
+			<Description>ADVANCE(本函数仅对沪深指数有效)</Description>
+			<Declare>function ADVANCE():Integer;</Declare>
+		</Function> 	
+
+		<Function id="60">
+			<Prototype>DECLINE()</Prototype>
+			<BriefName>返回该周期下跌家数</BriefName>
+			<Description>DECLINE(本函数仅对沪深指数有效)</Description>
+			<Declare>function DECLINE():Integer;</Declare>
+		</Function> 
+-->
+		<Function id="61">
+			<Prototype>HSL()</Prototype>
+			<BriefName>换手率</BriefName>
+			<Description>HSL取得换手率</Description>
+			<Declare>function HSL():Extended;</Declare>
+		</Function> 		
+	</Category>		
+	
+	<Category Name="时间函数">
+		<Function id="91">
+			<Prototype>PERIOD()</Prototype>
+			<BriefName>周期类型</BriefName>
+			<Description>取得周期类型.
+结果从1到9,依次分别是1/5/15/30/60分钟,日/周/月/年 。值为0表示取周期出错。
+			</Description>
+			<Declare>function PERIOD():Integer;</Declare>
+		</Function> 
+		
+		<Function id="92">
+			<Prototype>TOTALFZNUM()</Prototype>
+			<BriefName>求该品种的每天的总交易分钟数</BriefName>
+			<Description><![CDATA[用法:
+ TOTALFZNUM
+ TOTALFZNUM.返回当前品种的每天的总交易分钟数,单位为分钟.]]>
+			</Description>
+			<Declare>function TOTALFZNUM():Integer;</Declare>
+		</Function>	
+
+		<Function id="93">
+			<Prototype>FROMOPEN()</Prototype>
+			<BriefName>求该品种当前时刻已开盘有多长分钟</BriefName>
+			<Description><![CDATA[用法:
+ FROMOPEN
+ FROMOPEN.返回当前时刻距开盘有多长时间(开市期间的相对时间),单位为分钟.]]>
+			</Description>
+			<Declare>function FROMOPEN():Integer;</Declare>
+		</Function>	
+
+		<Function id="94">
+			<Prototype>DATE()</Prototype>
+			<BriefName>取得该周期从1900以来的的年月日</BriefName>
+			<Description><![CDATA[用法:
+ DATE
+ 例如函数返回1000101,表示2000年1月1日,DATE+19000000后才是真正的日期值]]>
+			</Description>
+			<Declare>function DATE():Integer;</Declare>
+		</Function>	
+
+		<Function id="95">
+			<Prototype>TIME()</Prototype>
+			<BriefName>取得该周期的时分</BriefName>
+			<Description><![CDATA[取得该周期的时分,适用于日线以下周期
+用法: 
+ TIME
+ 函数返回有效值范围为(0000-2359)]]>
+			</Description>
+			<Declare>function TIME():Integer;</Declare>
+		</Function>	
+
+		<Function id="96">
+			<Prototype>TIME2()</Prototype>
+			<BriefName>取得该周期的时分秒</BriefName>
+			<Description><![CDATA[取得该周期的时分秒,适用于日线以下周期.
+用法: 
+ TIME2
+ 函数返回有效值范围为(000000-235959)]]>
+			</Description>
+			<Declare>function TIME2():Integer;</Declare>
+		</Function>	
+
+		<Function id="97">
+			<Prototype>YEAR()</Prototype>
+			<BriefName>取得该周期的年份</BriefName>
+			<Description><![CDATA[取得该周期的年份.
+用法:
+ YEAR
+
+注:YEAR关键字也可用于跨周期年线引用]]>
+			</Description>
+			<Declare>function YEAR():Integer;</Declare>
+		</Function>	
+
+		<Function id="98">
+			<Prototype>MONTH()</Prototype>
+			<BriefName>取得该周期的月份</BriefName>
+			<Description><![CDATA[取得该周期的月份.
+用法:
+ MONTH
+ 函数返回有效值范围为(1-12)]]>
+			</Description>
+			<Declare>function MONTH():Integer;</Declare>
+		</Function>	
+
+		<Function id="99">
+			<Prototype>WEEKOFYEAR()</Prototype>
+			<BriefName>取得该周是年内第几个周</BriefName>
+			<Description><![CDATA[]]>
+			</Description>
+			<Declare>function WEEKOFYEAR():Integer;</Declare>
+		</Function>	
+
+		<Function id="100">
+			<Prototype>WEEKDAY()</Prototype>
+			<BriefName>取得该周期的星期数</BriefName>
+			<Description><![CDATA[取得该周期的星期数.
+用法:
+ WEEKDAY
+ 函数返回有效值范围为(1,2,3,4,5,6,0)]]>
+			</Description>
+			<Declare>function WEEKDAY():Integer;</Declare>
+		</Function>		
+
+		<Function id="101">
+			<Prototype>DAYSTOTODAY()</Prototype>
+			<BriefName>取得该周期的日期离今天的天数</BriefName>
+			<Description><![CDATA[取得该周期的日期离今天的天数]]>
+			</Description>
+			<Declare>function DAYSTOTODAY():Integer;</Declare>			
+		</Function>	
+
+		<Function id="102">
+			<Prototype>DAY()</Prototype>
+			<BriefName>取得该周期的日期</BriefName>
+			<Description><![CDATA[取得该周期的日期.
+用法:
+ DAY
+ 函数返回有效值范围为(1-31)]]>
+			</Description>
+			<Declare>function DAY():Integer;</Declare>			
+		</Function>	
+
+		<Function id="103">
+			<Prototype>HOUR()</Prototype>
+			<BriefName>取得该周期的小时数</BriefName>
+			<Description><![CDATA[取得该周期的小时数.
+用法:
+ HOUR
+ 函数返回有效值范围为(0-23),对于日线及更长的分析周期值为0]]>
+			</Description>
+			<Declare>function HOUR():Integer;</Declare>			
+		</Function>	
+
+		<Function id="104">
+			<Prototype>MINUTE()</Prototype>
+			<BriefName>取得该周期的分钟数</BriefName>
+			<Description><![CDATA[取得该周期的分钟数.
+用法:
+ MINUTE
+ 函数返回有效值范围为(0-59),对于日线及更长的分析周期值为0]]>
+			</Description>
+			<Declare>function MINUTE():Integer;</Declare>			
+		</Function>	
+
+		<Function id="105">
+			<Prototype>DATETODAY()</Prototype>
+			<BriefName>指定日期到1990.12.19的天数</BriefName>
+			<Description><![CDATA[指定日期到1990.12.19的天数.
+用法:
+ DATETODAY(date)
+ DATETODAY(date).返回date到1990.12.19的天数.有效日期为(901219-1341231)
+例如:
+ DATETODAY(901219)返回0.]]>
+			</Description>
+			<Declare>function DATETODAY(D:Integer):Integer;</Declare>			
+		</Function>	
+
+		<Function id="106">
+			<Prototype>DAYTODAY()</Prototype>
+			<BriefName>求1990.12.19后第若干天的日期</BriefName>
+			<Description><![CDATA[求1990.12.19后第若干天的日期.
+用法:
+ DAYTODATE(N)
+ DAYTODATE(N).返回1990.12.19后第N天的日期.有效天数为(0-20000)
+例如:
+ DAYTODATE(0)返回901219.]]>
+			</Description>
+			<Declare>function DAYTODAY(N:Integer):Integer;</Declare>			
+		</Function>		
+
+
+		<Function id="107">
+			<Prototype>TIMETOSEC()</Prototype>
+			<BriefName>求指定时刻距0时有多长时间</BriefName>
+			<Description><![CDATA[求指定时刻距0时有多长时间.
+用法:
+ TIMETOSEC(time)
+ TIMETOSEC(time).返回time时刻距0时有多长时间,单位为秒.有效时间为(0-235959)
+例如:
+ TIMETOSEC(93000)返回34200.]]>
+			</Description>
+			<Declare>function TIMETOSEC(T:Integer):Integer;</Declare>			
+		</Function>		
+		
+		<Function id="108">
+			<Prototype>SECTOTIME()</Prototype>
+			<BriefName>求0时后若干秒是什么时间</BriefName>
+			<Description><![CDATA[求0时后若干秒是什么时间.
+用法:
+ SECTOTIME(N)
+ SECTOTIME(N).返回0时后N秒是什么时间.有效秒数为(0-86399)
+例如:
+ SECTOTIME(34200)返回93000.]]>
+			</Description>
+			<Declare>function SECTOTIME(Sec:Integer):Integer;</Declare>			
+		</Function>	
+		
+		<Function id="109">
+			<Prototype>MACHINEDATE()</Prototype>
+			<BriefName>当前系统日期</BriefName>
+			<Description><![CDATA[取得当前客户端机器从1900以来的的年月日,比如2016年10月1日为:01161001,MACHINEDATE+19000000后才是真正的日期值]]>
+			</Description>
+			<Declare>function MACHINEDATE():Integer;</Declare>			
+		</Function>		
+		
+		<Function id="110">
+			<Prototype>MACHINETIME()</Prototype>
+			<BriefName>当前系统时间</BriefName>
+			<Description><![CDATA[取得当前客户端机器的时间,比如11:01:15时为110115]]>
+			</Description>
+			<Declare>function MACHINETIME():Integer;</Declare>			
+		</Function>		
+		
+		<Function id="111">
+			<Prototype>MACHINEWEEK()</Prototype>
+			<BriefName>当前系统星期</BriefName>
+			<Description><![CDATA[取得当前客户端机器为星期几(1,2,3,4,5,6,0)]]>
+			</Description>
+			<Declare>function MACHINEWEEK():Integer;</Declare>			
+		</Function>				
+	</Category>	
+	
+	<Category Name="引用函数">
+		<Function id="121">
+			<Prototype>MA()</Prototype>
+			<BriefName>简单移动平均</BriefName>
+			<Description>返回简单移动平均
+用法:
+ MA(X,N):X的N日简单移动平均,算法(X1+X2+X3+...+Xn)/N
+			</Description>
+			<Declare>function MA(X1:Extended; N1:Integer):Extended;</Declare>
+		</Function> 
+		
+		<Function id="122">
+			<Prototype>REF()</Prototype>
+			<BriefName>引用前N个周期的值</BriefName>
+			<Description>REF(X, N)引用X的前N个周期的值。</Description>
+			<Declare>function REF(X:Extended; N:Integer):Extended;</Declare>
+		</Function> 
+		
+		<Function id="123">
+			<Prototype>COUNT()</Prototype>
+			<BriefName>统计</BriefName>
+			<Description><![CDATA[统计满足条件的周期数.
+用法:
+ COUNT(X,N),统计N周期中满足X条件的周期数,若N<0则从第一个有效值开始.
+例如:
+ COUNT(CLOSE()>OPEN(),20)表示统计20周期内收阳的周期数]]></Description>
+			<Declare>function COUNT(X:Boolean; N:Integer):Extended;</Declare>
+		</Function> 
+		
+		<Function id="124">
+			<Prototype>HHV()</Prototype>
+			<BriefName>最高值</BriefName>
+			<Description><![CDATA[求最高值.
+用法:
+ HHV(X,N),求N周期内X最高值,N=0则从第一个有效值开始.
+例如:
+ HHV(HIGH(),30)表示求30日最高价]]></Description>
+			<Declare>function HHV(X:Extended; N:Integer):Extended;</Declare>
+		</Function> 
+
+		<Function id="125">
+			<Prototype>LLV()</Prototype>
+			<BriefName>最低值</BriefName>
+			<Description><![CDATA[求最低值.
+用法:
+ LLV(X,N),求N周期内X最低值,N=0则从第一个有效值开始.
+例如:
+ LLV(LOW(),0)表示求历史最低价]]></Description>
+			<Declare>function LLV(X:Extended; N:Integer):Extended;</Declare>
+		</Function> 
+
+		<Function id="126">
+			<Prototype>SMA()</Prototype>
+			<BriefName>移动平均</BriefName>
+			<Description><![CDATA[求移动平均。
+用法:
+SMA(X,N,M),求X的N日移动平均，M为权重。
+算法: 若Y=SMA(X,N,M)
+则 Y=[M*X+(N-M)*Y')]/N,其中Y'表示上一周期Y值,N必须大于M。
+例如：SMA(CLOSE(),30,1)表示求30日移动平均价]]></Description>
+			<Declare>function SMA(X:Extended; N,M:Integer):Extended;</Declare>
+		</Function> 
+
+		<Function id="127">
+			<Prototype>SUM()</Prototype>
+			<BriefName>累和</BriefName>
+			<Description><![CDATA[求总和.
+用法:
+ SUM(X,N),统计N周期中X的总和,N=0则从第一个有效值开始.
+例如:
+ SUM(VOL(),0)表示统计从上市第一天以来的成交量总和]]></Description>
+			<Declare>function SUM(X:Extended; N:Integer):Extended;</Declare>
+		</Function> 	
+		
+		<Function id="128">
+			<Prototype>EMA()</Prototype>
+			<BriefName>指数移动平均</BriefName>
+			<Description><![CDATA[返回指数移动平均
+用法:
+ EMA(X,N):X的N日指数移动平均. 算法:Y=(X*2+Y'*(N-1))/(N+1)
+ EMA(X,N)相当于SMA(X,N+1,2)]]></Description>
+			<Declare>function EMA(X:Extended; N:Integer):Extended;</Declare>
+		</Function> 
+
+		<Function id="129">
+			<Prototype>DMA()</Prototype>
+			<BriefName>动态移动平均</BriefName>
+			<Description><![CDATA[求动态移动平均.
+用法:
+ DMA(X,A),求X的动态移动平均.
+算法:Y=A*X+(1-A)*Y',其中Y'表示上一周期Y值,A必须大于0且小于1.
+例如:
+ DMA(CLOSE(),VOL()/CAPITAL())表示求以换手率作平滑因子的平均价]]></Description>
+			<Declare>function DMA(X:Extended; A:Integer):Extended;</Declare>
+		</Function>	
+
+		<!--Function id="130">
+			<Prototype>BARSCOUNT()</Prototype>
+			<BriefName>求总的周期数</BriefName>
+			<Description><![CDATA[求总的周期数.
+用法:
+ BARSCOUNT()第一个有效数据到当前的天数]]></Description>
+			<Declare>function BARSCOUNT():Integer;</Declare>
+		</Function-->
+
+		<Function id="131">
+			<Prototype>MEMA()</Prototype>
+			<BriefName>平滑移动平均</BriefName>
+			<Description><![CDATA[返回平滑移动平均
+用法:
+ MEMA(X,N):X的N日平滑移动平均,如Y=(X+Y'*(N-1))/N
+ MEMA(X,N)相当于SMA(X,N,1)]]></Description>
+			<Declare>function MEMA(X:Extended; N:Integer):Extended;</Declare>
+		</Function>	
+
+		<Function id="132">
+			<Prototype>EXPMEMA()</Prototype>
+			<BriefName>指数平滑移动平均</BriefName>
+			<Description><![CDATA[ EXPMEMA(X,N):X的N日指数平滑移动平均
+ EXPMEMA同EMA(EXPMA)的差别在于他的起始值为一平滑值]]></Description>
+			<Declare>function EXPMEMA(X:Extended; N:Integer):Extended;</Declare>
+		</Function>	
+
+		<Function id="133">
+			<Prototype>CURRBARSCOUNT()</Prototype>
+			<BriefName>求到最后交易日的周期数</BriefName>
+			<Description><![CDATA[用法:
+ CURRBARSCOUNT 求到最后交易日的周期数]]></Description>
+			<Declare>function CURRBARSCOUNT():Extended;</Declare>
+		</Function>		
+
+		<Function id="134">
+			<Prototype>BARSLAST()</Prototype>
+			<BriefName>上一次条件成立到当前的周期数</BriefName>
+			<Description><![CDATA[用法:
+ BARSLAST(X):上一次X不为0到现在的天数
+例如:
+ BARSLAST(CLOSE()/REF(CLOSE(),1)>=1.1)表示上一个涨停板到当前的周期数]]></Description>
+			<Declare>function BARSLAST(Cond:Boolean):Integer;</Declare>
+		</Function>		
+
+		<Function id="135">
+			<Prototype>ISLASTBAR()</Prototype>
+			<BriefName>判断是否为最后一个周期</BriefName>
+			<Description><![CDATA[用法:
+ ISLASTBAR 判断是否为最后一个周期]]></Description>
+			<Declare>function ISLASTBAR():Boolean;</Declare>
+		</Function>		
+
+		<Function id="136">
+			<Prototype>HHVBARS()</Prototype>
+			<BriefName>求上一高点到当前的周期数</BriefName>
+			<Description><![CDATA[用法:
+ HHVBARS(X,N):求N周期内X最高值到当前周期数,N=0表示从第一个有效值开始统计
+例如:
+ HHVBARS(HIGH,0)求得历史新高到到当前的周期数]]></Description>
+			<Declare>function HHVBARS(X:Double; N:Integer):Integer;</Declare>
+		</Function>			
+		
+		<Function id="137">
+			<Prototype>LLVBARS()</Prototype>
+			<BriefName>求上一低点到当前的周期数</BriefName>
+			<Description><![CDATA[用法:
+ LLVBARS(X,N):求N周期内X最低值到当前周期数,N=0表示从第一个有效值开始统计
+例如:
+ LLVBARS(HIGH,20)求得20日最低点到当前的周期数]]></Description>
+			<Declare>function LLVBARS(X:Double; N:Integer):Integer;</Declare>
+		</Function>					
+	</Category>	
+
+	<Category Name="统计函数">
+		<Function id="150">
+			<Prototype>AVEDEV()</Prototype>
+			<BriefName>平均绝对偏差</BriefName>
+			<Description>AVEDEV(X, N)返回平均绝对偏差。</Description>
+			<Declare>function AVEDEV(X:Extended; N:Integer):Extended;</Declare>
+		</Function> 
+		
+		<Function id="151">
+			<Prototype>STD()</Prototype>
+			<BriefName>估算标准差</BriefName>
+			<Description>STD(X, N)返回估算标准差。</Description>
+			<Declare>function STD(X:Extended; N:Integer):Extended;</Declare>
+		</Function> 	
+
+		<Function id="152">
+			<Prototype>STDDEV()</Prototype>
+			<BriefName>标准偏差</BriefName>
+			<Description>STDDEV(X, N)返回标准偏差。</Description>
+			<Declare>function STDDEV(X:Extended; N:Integer):Extended;</Declare>
+		</Function> 
+
+		<Function id="153">
+			<Prototype>SLOPE()</Prototype>
+			<BriefName>线性回归斜率</BriefName>
+			<Description><![CDATA[SLOPE(X,N) 返回线性回归斜率]]></Description>
+			<Declare>function SLOPE(X:Extended; N:Integer):Extended;</Declare>
+		</Function>		
+
+		<Function id="154">
+			<Prototype>FORCAST()</Prototype>
+			<BriefName>线性回归预测值</BriefName>
+			<Description><![CDATA[FORCAST(X,N) 返回线性回归预测值]]></Description>
+			<Declare>function FORCAST(X:Extended; N:Integer):Extended;</Declare>
+		</Function>			
+	</Category>	
+	
+	<Category Name="线型和资源函数">
+		<Function id="201">
+			<Prototype>COLORSTICK()</Prototype>
+			<BriefName>彩色柱状线</BriefName>
+			<Description>彩色柱状线。数据为正数时，向上画红色柱状线，反之向下画绿线
+			</Description>
+			<Declare>function COLORSTICK():Void;</Declare>
+		</Function> 
+		
+		<Function id="202">
+			<Prototype>VOLSTICK1()</Prototype>
+			<BriefName>柱状线</BriefName>
+			<Description>柱状线。当值为正时向上画红色实心柱，反之则向下画绿色实心柱
+			</Description>
+			<Declare>function VOLSTICK1():Void;</Declare>
+		</Function> 
+
+		<Function id="203">
+			<Prototype>VOLSTICK()</Prototype>
+			<BriefName>成交量柱状线</BriefName>
+			<Description>成交量柱状线。当股价上涨时显示红色空心柱，反之则显示绿色实心柱
+			</Description>
+			<Declare>function VOLSTICK():Void;</Declare>
+		</Function> 
+
+		<Function id="204" DoNotCompile="True">
+			<Prototype>#BBGGRR</Prototype>
+			<BriefName>自定义颜色</BriefName>
+			<Description><![CDATA[格式为#BBGGRR：BB、GG、RR表示蓝色、绿色和红色的分量，每种颜色的取值范围是00-FF，采用了16进制。
+例如：MA5:MA(CLOSE(),5)，#00FFFF表示纯红色与纯绿色的混合色; #808000表示淡蓝色和淡绿色的混合色。]]>
+			</Description>
+			<Declare></Declare>
+		</Function> 	
+
+		<Function id="205" DoNotCompile="True">
+			<Prototype>#BLACK</Prototype>
+			<BriefName>黑色</BriefName>
+			<Description><![CDATA[画黑色]]>
+			</Description>
+			<Declare></Declare>
+		</Function> 
+
+		<Function id="206" DoNotCompile="True">
+			<Prototype>#BLUE</Prototype>
+			<BriefName>蓝色</BriefName>
+			<Description><![CDATA[画蓝色]]>
+			</Description>
+			<Declare></Declare>
+		</Function> 
+
+		<Function id="207" DoNotCompile="True">
+			<Prototype>#GREEN</Prototype>
+			<BriefName>绿色</BriefName>
+			<Description><![CDATA[画绿色]]>
+			</Description>
+			<Declare></Declare>
+		</Function> 
+
+		<Function id="208" DoNotCompile="True">
+			<Prototype>#CYAN</Prototype>
+			<BriefName>青色</BriefName>
+			<Description><![CDATA[画青色]]>
+			</Description>
+			<Declare></Declare>
+		</Function> 
+
+		<Function id="209" DoNotCompile="True">
+			<Prototype>#RED</Prototype>
+			<BriefName>红色</BriefName>
+			<Description><![CDATA[画红色]]>
+			</Description>
+			<Declare></Declare>
+		</Function> 
+
+		<Function id="210" DoNotCompile="True">
+			<Prototype>#MAGENTA</Prototype>
+			<BriefName>洋红色</BriefName>
+			<Description><![CDATA[画洋红色]]>
+			</Description>
+			<Declare></Declare>
+		</Function> 
+		
+		<Function id="211" DoNotCompile="True">
+			<Prototype>#BROWN</Prototype>
+			<BriefName>棕色</BriefName>
+			<Description><![CDATA[画棕色]]>
+			</Description>
+			<Declare></Declare>
+		</Function> 
+
+		<Function id="212" DoNotCompile="True">
+			<Prototype>#LIGRAY</Prototype>
+			<BriefName>淡灰色</BriefName>
+			<Description><![CDATA[画淡灰色]]>
+			</Description>
+			<Declare></Declare>
+		</Function> 
+
+		<Function id="213" DoNotCompile="True">
+			<Prototype>#GRAY</Prototype>
+			<BriefName>深灰色</BriefName>
+			<Description><![CDATA[画深灰色]]>
+			</Description>
+			<Declare></Declare>
+		</Function> 
+
+		<Function id="214" DoNotCompile="True">
+			<Prototype>#LIBLUE</Prototype>
+			<BriefName>淡蓝色</BriefName>
+			<Description><![CDATA[画淡蓝色]]>
+			</Description>
+			<Declare></Declare>
+		</Function> 
+
+		<Function id="215" DoNotCompile="True">
+			<Prototype>#LIGREEN</Prototype>
+			<BriefName>淡绿色</BriefName>
+			<Description><![CDATA[画淡绿色]]>
+			</Description>
+			<Declare></Declare>
+		</Function> 
+
+		<Function id="216" DoNotCompile="True">
+			<Prototype>#LICYAN</Prototype>
+			<BriefName>淡青色</BriefName>
+			<Description><![CDATA[画淡青色]]>
+			</Description>
+			<Declare></Declare>
+		</Function> 
+
+		<Function id="217" DoNotCompile="True">
+			<Prototype>#LIRED</Prototype>
+			<BriefName>淡红色</BriefName>
+			<Description><![CDATA[画淡红色]]>
+			</Description>
+			<Declare></Declare>
+		</Function> 	
+
+		<Function id="218" DoNotCompile="True">
+			<Prototype>#LIMAGENTA</Prototype>
+			<BriefName>淡洋红色</BriefName>
+			<Description><![CDATA[画淡洋红色]]>
+			</Description>
+			<Declare></Declare>
+		</Function> 	
+		<Function id="219" DoNotCompile="True">
+			<Prototype>#YELLOW</Prototype>
+			<BriefName>黄色</BriefName>
+			<Description><![CDATA[画黄色]]>
+			</Description>
+			<Declare></Declare>
+		</Function> 
+		
+		<Function id="220" DoNotCompile="True">
+			<Prototype>#WHITE</Prototype>
+			<BriefName>白色</BriefName>
+			<Description><![CDATA[画白色]]>
+			</Description>
+			<Declare></Declare>
+		</Function> 	
+
+		<Function id="221" DoNotCompile="True">
+			<Prototype>DRAWABOVE()</Prototype>
+			<BriefName>显示在位置之上</BriefName>
+			<Description><![CDATA[显示在位置之上,对于DRAWTEXT和DRAWNUMBER等函数有用,放在语句的最后面(不能与LINETHICK等函数共用),比如:
+  DRAWNUMBER(CLOSE()>OPEN(),HIGH(),CLOSE()),DRAWABOVE();]]>
+			</Description>
+			<Declare></Declare>
+		</Function> 
+
+		<Function id="222" DoNotCompile="True">
+			<Prototype>NODRAW()</Prototype>
+			<BriefName>空线条</BriefName>
+			<Description><![CDATA[不画该线]]>
+			</Description>
+			<Declare></Declare>
+		</Function> 	
+
+
+		<Function id="223" DoNotCompile="True">
+			<Prototype>DRAWNULL</Prototype>
+			<BriefName>无效数</BriefName>
+			<Description><![CDATA[用法:
+ DRAWNULL
+例如:
+ IF(CLOSE()>REF(CLOSE(),1),CLOSE(),DRAWNULL)表示下跌时不画线]]>
+			</Description>
+			<Declare></Declare>
+		</Function> 		
+	</Category>
+	
+	<Category Name="逻辑函数">
+		<Function id="250">
+			<Prototype>CROSS()</Prototype>
+			<BriefName>两条线交叉</BriefName>
+			<Description>用法:
+ CROSS(A,B)表示当A从下方向上穿过B时返回1,否则返回0
+例如:
+ CROSS(MA(CLOSE(),5),MA(CLOSE(),10))表示5日均线与10日均线交金叉
+			</Description>
+			<Declare>function CROSS(A:Extended; B:Extended):Boolean;</Declare>
+		</Function>
+
+		<Function id="251">
+			<Prototype>LONGCROSS()</Prototype>
+			<BriefName>两条线维持一定周期后交叉</BriefName>
+			<Description>用法:LONGCROSS(A,B,N)表示A在N周期内都小于B,本周期从下方向上穿过B时返回1,否则返回0
+			</Description>
+			<Declare>function LONGCROSS(A:Extended; B:Extended; N:Integer):Boolean;</Declare>
+		</Function>	
+
+		<Function id="252">
+			<Prototype>UPNDAY()</Prototype>
+			<BriefName>返回是否连涨周期数</BriefName>
+			<Description><![CDATA[用法:
+ UPNDAY(CLOSE,M)
+ 表示连涨M个周期,M为常量]]>
+			</Description>
+			<Declare>function UPNDAY(A:Extended; N:Integer):Boolean;</Declare>
+		</Function>		
+
+		<Function id="253">
+			<Prototype>DOWNNDAY()</Prototype>
+			<BriefName>返回是否连跌周期</BriefName>
+			<Description><![CDATA[用法:
+ DOWNNDAY(CLOSE,M)
+ 表示连跌M个周期,M为常量]]>
+			</Description>
+			<Declare>function DOWNNDAY(A:Extended; N:Integer):Boolean;</Declare>
+		</Function>	
+
+		<Function id="254">
+			<Prototype>NDAY()</Prototype>
+			<BriefName><![CDATA[返回是否持续存在X>Y]]></BriefName>
+			<Description><![CDATA[用法:
+ NDAY(CLOSE,OPEN,3)
+ 表示连续3日收阳线]]>
+			</Description>
+			<Declare>function NDAY(A:Extended; B:Extended; N:Integer):Boolean;</Declare>
+		</Function>	
+
+		<Function id="255">
+			<Prototype>EXIST()</Prototype>
+			<BriefName>是否存在</BriefName>
+			<Description><![CDATA[例如:
+ EXIST(CLOSE>OPEN,10) 
+ 表示10日内存在着阳线]]>
+			</Description>
+			<Declare>function EXIST(A:Boolean; N:Integer):Boolean;</Declare>
+		</Function>	
+
+		<Function id="256">
+			<Prototype>EVERY()</Prototype>
+			<BriefName>一直存在</BriefName>
+			<Description><![CDATA[
+例如:
+ EVERY(CLOSE>OPEN,N) 
+ 表示N日内一直阳线(N应大于0,小于总周期数,N支持变量)]]>
+			</Description>
+			<Declare>function EVERY(A:Boolean; N:Integer):Boolean;</Declare>
+		</Function>			
+	</Category>
+
+	<Category Name="关联财务函数">
+		<Function id="350">
+			<Prototype>CAPITAL()</Prototype>
+			<BriefName>当前流通股本</BriefName>
+			<Description>CAPITAL()当前流通股本
+			</Description>
+			<Declare>function CAPITAL():Extended;</Declare>
+		</Function> 
+	</Category>		
+	
+	<Category Name="指数函数">
+		<Function id="450">
+			<Prototype>INDEXC()</Prototype>
+			<BriefName>返回对应的大盘收盘价</BriefName>
+			<Description><![CDATA[INDEXC    返回对应的大盘收盘价,分别是上证指数,深证成指,中小板指和创业板指,港股为恒生指数,国内期货为对应的L9指数品种
+
+(对应指数的数据必须要先下载到本地)]]>
+			</Description>
+			<Declare>function INDEXC():Extended;</Declare>
+		</Function> 
+		
+		<Function id="451">
+			<Prototype>INDEXA()</Prototype>
+			<BriefName>返回对应的大盘成交额</BriefName>
+			<Description><![CDATA[INDEXA    返回对应的大盘成交额,分别是上证指数,深证成指,中小板指和创业板指,港股为恒生指数,国内期货为对应的L9指数品种(持仓量)
+
+(对应指数的数据必须要先下载到本地)]]>
+			</Description>
+			<Declare>function INDEXA():Extended;</Declare>
+		</Function> 		
+		
+		<Function id="452">
+			<Prototype>INDEXH()</Prototype>
+			<BriefName>返回对应的大盘最高价</BriefName>
+			<Description><![CDATA[INDEXH    返回对应的大盘最高价,分别是上证指数,深证成指,中小板指和创业板指,港股为恒生指数,国内期货为对应的L9指数品种
+
+(对应指数的数据必须要先下载到本地)]]>
+			</Description>
+			<Declare>function INDEXH():Extended;</Declare>
+		</Function> 
+		
+		<Function id="453">
+			<Prototype>INDEXL()</Prototype>
+			<BriefName>返回对应的大盘最低价</BriefName>
+			<Description><![CDATA[INDEXL    返回对应的大盘最低价,分别是上证指数,深证成指,中小板指和创业板指,港股为恒生指数,国内期货为对应的L9指数品种
+
+(对应指数的数据必须要先下载到本地)]]>
+			</Description>
+			<Declare>function INDEXL():Extended;</Declare>
+		</Function> 
+		
+		<Function id="454">
+			<Prototype>INDEXO()</Prototype>
+			<BriefName>返回对应的大盘开盘价</BriefName>
+			<Description><![CDATA[INDEXO    返回对应的大盘开盘价,分别是上证指数,深证成指,中小板指和创业板指,港股为恒生指数,国内期货为对应的L9指数品种
+
+(对应指数的数据必须要先下载到本地)]]>
+			</Description>
+			<Declare>function INDEXO():Extended;</Declare>
+		</Function> 
+		
+		<Function id="455">
+			<Prototype>INDEXV()</Prototype>
+			<BriefName>返回对应的大盘成交量</BriefName>
+			<Description><![CDATA[INDEXV    返回对应的大盘成交量,分别是上证指数,深证成指,中小板指和创业板指,港股为恒生指数,国内期货为对应的L9指数品种
+
+(对应指数的数据必须要先下载到本地)]]>
+			</Description>
+			<Declare>function INDEXV():Extended;</Declare>
+		</Function> 
+	</Category>	
+
+	<Category Name="绘图函数">	
+		<Function id="550">
+			<Prototype>POLYLINE()</Prototype>
+			<BriefName>绘制折线段</BriefName>
+			<Description><![CDATA[用法:
+ PLOYLINE(COND,PRICE),当COND条件满足时,以PRICE位置为顶点画折线连接.
+例如:
+ PLOYLINE(HIGH()>=HHV(HIGH(),20),HIGH())表示在创20天新高点之间画折线]]>
+			</Description>
+			<Declare>function POLYLINE(COND:Boolean; PRICE:Double):Void;</Declare>
+		</Function>
+
+
+		<Function id="551">
+			<Prototype>DRAWLINE()</Prototype>
+			<BriefName>绘制直线段</BriefName>
+			<Description><![CDATA[用法:
+ DRAWLINE(COND1,PRICE1,COND2,PRICE2,EXPAND),当COND1条件满足时,在PRICE1位置画直线起点,当COND2条件满足时,在PRICE2位置画直线终点,EXPAND为延长类型.
+例如:
+ DRAWLINE(HIGH()>=HHV(HIGH(),20),HIGH(),LOW()<=LLV(LOW(),20),LOW(),1)表示在创20天新高与创20天新低之间画直线并且向右延长.]]>
+			</Description>
+			<Declare>function DRAWLINE(COND1:Boolean; PRICE1:Double; COND2:Boolean; PRICE2:Double; EXPAND:Integer):Void;</Declare>
+		</Function> 		
+
+		<Function id="552">
+			<Prototype>DRAWSL()</Prototype>
+			<BriefName>绘制斜线</BriefName>
+			<Description><![CDATA[用法:
+  DRAWSL(COND,PRICE,SLOPE,LEN,DIRECT),当COND条件满足时,在PRICE位置画斜线,SLOPE为斜率,LEN为长度,DIRECT为0向右延伸,1向左延伸,2双向延伸.
+注意:
+1.K线间的纵向高度差为SLOPE;
+2.SLOPE为0时,为水平线;
+3.SLOPE为10000时,为垂直线,LEN为向上的像素高度,DIRECT表示向上或向下延伸;
+4.SLOPE和LEN支持变量;]]>
+			</Description>
+			<Declare>function DRAWSL(ACOND:Boolean; APRICE,ASLOPE,ALEN:Double; ADIRECT:Integer):Void;</Declare>
+		</Function> 
+
+		<Function id="553">
+			<Prototype>DRAWTEXT()</Prototype>
+			<BriefName>显示文字</BriefName>
+			<Description><![CDATA[用法:
+ DRAWTEXT(COND,PRICE,TEXT),当COND条件满足时,在PRICE位置书写文字TEXT.
+例如:
+ DRAWTEXT(CLOSE()/OPEN()>1.08,LOW(),'大阳线')表示当日实体阳线大于8%时在最低价位置显示'大阳线'字样.]]>
+			</Description>
+			<Declare>function DRAWTEXT(COND:Boolean;PRICE:Double; TEXT:string):Void;</Declare>
+		</Function> 	
+
+		<Function id="554">
+			<Prototype>DRAWTEXT_FIX()</Prototype>
+			<BriefName>固定位置显示文字</BriefName>
+			<Description><![CDATA[用法:
+ DRAWTEXT_FIX(COND,X,Y,TYPE,TEXT),当COND条件满足时,在当前指标窗口内(X,Y)位置书写文字TEXT,X,Y为书写点在窗口中相对于左上角的坐标,TYPE:0为左对齐,1为右对齐.
+例如:
+ DRAWTEXT_FIX(CURRBARSCOUNT()=1 AND CLOSE()/OPEN()>1.08,0.5,0.5,0,'大阳线')表示最后一个交易日实体阳线大于8%时在窗口中间位置显示'大阳线'字样.]]>
+			</Description>
+			<Declare>function DRAWTEXT_FIX(COND:Boolean;X,Y:Double; TYPE:Integer; TEXT:string):Void;</Declare>
+		</Function> 	
+
+		<Function id="555">
+			<Prototype>DRAWNUMBER()</Prototype>
+			<BriefName>画出数字</BriefName>
+			<Description><![CDATA[用法:
+ DRAWNUMBER(COND,PRICE,NUMBER),当COND条件满足时,在PRICE位置书写数字NUMBER.
+例如:
+ DRAWNUMBER(CLOSE()/OPEN()>1.08,LOW(),CLOSE())表示当日实体阳线大于8%时在最低价位置显示收盘价.]]>
+			</Description>
+			<Declare>function DRAWNUMBER(COND:Boolean;PRICE:Double; NUMBER:Double):Void;</Declare>
+		</Function> 
+
+		<Function id="556">
+			<Prototype>DRAWNUMBER_FIX()</Prototype>
+			<BriefName>固定位置显示数字</BriefName>
+			<Description><![CDATA[用法:
+ DRAWNUMBER_FIX(COND,X,Y,TYPE,NUMBER),当COND条件满足时,在当前指标窗口内(X,Y)位置书写数字NUMBER,X,Y为书写点在窗口中相对于左上角的坐标,TYPE:0为左对齐,1为右对齐.
+例如:
+ DRAWNUMBER_FIX(CURRBARSCOUNT()=1 AND CLOSE()/OPEN()>1.08,0.5,0.5,0,CLOSE())表示最后一个交易日实体阳线大于8%时在窗口中间位置显示收盘价.]]>
+			</Description>
+			<Declare>function DRAWNUMBER_FIX(COND:Boolean;X,Y:Double; TYPE:Integer; NUMBER:Double):Void;</Declare>
+		</Function> 
+
+		<Function id="557">
+			<Prototype>DRAWKLINE()</Prototype>
+			<BriefName>画K线</BriefName>
+			<Description><![CDATA[用法:
+ 以HIGH为最高价,OPEN为开盘价,LOW为最低,CLOSE收盘画K线]]>
+			</Description>
+			<Declare>function DRAWKLINE(HIGHPRICE,OPENPRICE,LOWPRICE,CLOSEPRICE:Double):Void;</Declare>
+		</Function> 
+
+		<Function id="558">
+			<Prototype>STICKLINE()</Prototype>
+			<BriefName>绘制柱线</BriefName>
+			<Description><![CDATA[用法:
+ STICKLINE(COND,PRICE1,PRICE2,WIDTH,EMPTY),当COND条件满足时,在PRICE1和PRICE2位置之间画柱状线,宽度为WIDTH(10为标准间距),EMPTH为0画实心柱,-1画虚线空心柱,否则画实线空心柱.
+例如:
+ STICKLINE(CLOSE()>OPEN(),CLOSE(),OPEN(),0.8,1)表示画K线中阳线的空心柱体部分.]]>
+			</Description>
+			<Declare>function STICKLINE(COND:Boolean; PRICE1,PRICE2:Double; WIDTH:Double; EMPTY:Integer):Void;</Declare>
+		</Function> 
+
+		<Function id="558">
+			<Prototype>DRAWICON()</Prototype>
+			<BriefName>绘制小图标</BriefName>
+			<Description><![CDATA[用法:
+ DRAWICON(COND,PRICE,filename),当COND条件满足时,在PRICE位置画图标.图标名称由filename指定。图标必须放在bin\signals\目录下。DRAWICON也能绘制bmp,jpg和png文件。
+例如:
+ DRAWICON(CLOSE()>OPEN(),LOW(),'1.ico')表示当收阳时在最低价位置画1.ico图标.]]>
+			</Description>
+			<Declare>function DRAWICON(COND:Boolean; PRICE:Double; filename:string):Void;</Declare>
+		</Function> 		
+
+	</Category>	
+	
+	
+	<Category Name="即时行情函数">	
+		<Function id="650">
+			<Prototype>DYNAINFO()</Prototype>
+			<BriefName>取即时行情数据</BriefName>
+			<Description><![CDATA[用法:
+DYNAINFO(3)  前收盘价 即时行情数据 期货和期权品种为昨结算价
+DYNAINFO(4)  开盘价 即时行情数据 在开盘前,值为0,在使用时需要判断
+DYNAINFO(5)  最高价 即时行情数据 在开盘前,值为0,在使用时需要判断
+DYNAINFO(6)  最低价 即时行情数据 在开盘前,值为0,在使用时需要判断
+DYNAINFO(7)  现价 即时行情数据 在开盘前,值为0,在使用时需要判断
+DYNAINFO(8) 总量 即时行情数据
+DYNAINFO(9) 现量 即时行情数据
+DYNAINFO(10)  总金额 即时行情数据
+DYNAINFO(11) 均价 即时行情数据
+DYNAINFO(12) 日涨跌 即时行情数据
+DYNAINFO(13) 振幅 即时行情数据 转换成幅度需要乘100
+DYNAINFO(14) 涨幅 即时行情数据(沪深早盘竞价期间使用匹配价的涨幅) 转换成幅度需要乘100
+DYNAINFO(15) 开盘时的成交金额(暂不支持)  即时行情数据
+DYNAINFO(16) 前5日每分钟均量(暂不支持) 盘中不变化
+DYNAINFO(17) 量比 即时行情数据
+DYNAINFO(18) 上涨家数(对沪深指数和通达信板块指数有效) 即时行情数据
+DYNAINFO(19) 下跌家数(对沪深指数和通达信板块指数有效) 即时行情数据
+DYNAINFO(20)  最新买价 即时行情数据
+DYNAINFO(21)  最新卖价 即时行情数据
+DYNAINFO(22) 返回内盘 即时行情数据
+DYNAINFO(23) 返回外盘 即时行情数据
+DYNAINFO(37) 换手率 转换成幅度需要乘100 比如DYNAINFO(37)>0.25表示换手超过25%
+]]>
+			</Description>
+			<Declare>function DYNAINFO(type:Integer):Double;</Declare>
+		</Function>
+		
+		<Function id="651">
+			<Prototype>SELLVOL()</Prototype>
+			<BriefName>内盘</BriefName>
+			<Description><![CDATA[用法:
+返回内盘,即DYNAINFO(22) 即时行情数据
+]]>
+			</Description>
+			<Declare>function SELLVOL():Double;</Declare>
+		</Function>		
+		
+		<Function id="652">
+			<Prototype>BUYVOL()</Prototype>
+			<BriefName>外盘</BriefName>
+			<Description><![CDATA[用法:
+返回外盘,即DYNAINFO(23) 即时行情数据
+]]>
+			</Description>
+			<Declare>function BUYVOL():Double;</Declare>
+		</Function>	
+
+
+		
+	</Category>	
+
+	<Category Name="操作符">
+		<Function id="-1"  DoNotCompile="True">
+			<Prototype>TRUE</Prototype>
+			<BriefName>布尔值。 表示真。</BriefName>
+			<Description><![CDATA[0表示FALSE；所有非0值都为TRUE。
+例如: DRAWNUMBER(TRUE,HIGH(),HIGH()),DRAWABOVE(); 在最高价位置显示最高价 ]]>
+			</Description>
+		</Function>
+		
+		<Function id="-1"  DoNotCompile="True">
+			<Prototype>FALSE</Prototype>
+			<BriefName>布尔值。表示假。</BriefName>
+			<Description><![CDATA[0表示FALSE；所有非0值都为TRUE。]]>
+			</Description>
+		</Function>
+		
+		<Function id="-1" DoNotShowHint="True" DoNotCompile="True">
+			<Prototype>+</Prototype>
+			<BriefName>加</BriefName>
+			<Description><![CDATA[数值相加 或 字符串相加。 例如: X + Y          '多头' + '开仓']]>
+			</Description>
+		</Function>
+
+		<Function id="-1" DoNotShowHint="True"  DoNotCompile="True">
+			<Prototype>-</Prototype>
+			<BriefName>减</BriefName>
+			<Description><![CDATA[例如: X - Y]]>
+			</Description>
+		</Function>		
+
+		<Function id="-1" DoNotShowHint="True"  DoNotCompile="True">
+			<Prototype>*</Prototype>
+			<BriefName>乘</BriefName>
+			<Description><![CDATA[数值相乘 或 字符串和数值相乘。 例如: X * Y      'AB' * 3 等]]>
+			</Description>
+		</Function>	
+		
+		<Function id="-1" DoNotShowHint="True"  DoNotCompile="True">
+			<Prototype>/</Prototype>
+			<BriefName>除</BriefName>
+			<Description><![CDATA[例如: X / Y]]>
+			</Description>
+		</Function>	
+
+		<Function id="-1" DoNotShowHint="True"  DoNotCompile="True">
+			<Prototype><![CDATA[<]]></Prototype>
+			<BriefName>小于</BriefName>
+			<Description><![CDATA[例如: X < Y]]>
+			</Description>
+		</Function>	
+
+		<Function id="-1" DoNotShowHint="True"  DoNotCompile="True">
+			<Prototype><![CDATA[>]]></Prototype>
+			<BriefName>大于</BriefName>
+			<Description><![CDATA[例如: X > Y]]>
+			</Description>
+		</Function>	
+
+		<Function id="-1" DoNotShowHint="True"  DoNotCompile="True">
+			<Prototype><![CDATA[<=]]></Prototype>
+			<BriefName>小于等于</BriefName>
+			<Description><![CDATA[例如: X <= Y]]>
+			</Description>
+		</Function>	
+
+		<Function id="-1" DoNotShowHint="True"  DoNotCompile="True">
+			<Prototype><![CDATA[>=]]></Prototype>
+			<BriefName>大于等于</BriefName>
+			<Description><![CDATA[例如: X >= Y]]>
+			</Description>
+		</Function>	
+
+		<Function id="-1" DoNotShowHint="True"  DoNotCompile="True">
+			<Prototype>=</Prototype>
+			<BriefName>等于</BriefName>
+			<Description><![CDATA[例如: X = Y]]>
+			</Description>
+		</Function>	
+
+		<Function id="-1" DoNotShowHint="True"  DoNotCompile="True">
+			<Prototype><![CDATA[<>]]></Prototype>
+			<BriefName>不等于</BriefName>
+			<Description><![CDATA[例如: X <> Y]]>
+			</Description>
+		</Function>	
+
+		<Function id="-1" DoNotShowHint="True"  DoNotCompile="True">
+			<Prototype>!=</Prototype>
+			<BriefName>不等于</BriefName>
+			<Description><![CDATA[例如: X != Y]]>
+			</Description>
+		</Function>	
+
+		<Function id="-1" DoNotShowHint="True"  DoNotCompile="True">
+			<Prototype>/*   */</Prototype>
+			<BriefName>注释</BriefName>
+			<Description><![CDATA[用法：   /*注释内容*/]]>
+			</Description>
+		</Function>	
+
+		<Function id="-1" DoNotShowHint="True"  DoNotCompile="True">
+			<Prototype>AND</Prototype>
+			<BriefName>并且</BriefName>
+			<Description><![CDATA[例如: X AND Y]]>
+			</Description>
+		</Function>	
+
+		<Function id="-1" DoNotShowHint="True"  DoNotCompile="True">
+			<Prototype>OR</Prototype>
+			<BriefName>或者</BriefName>
+			<Description><![CDATA[例如: X OR Y]]>
+			</Description>
+		</Function>	
+
+		<Function id="-1" DoNotShowHint="True"  DoNotCompile="True">
+			<Prototype>NOT</Prototype>
+			<BriefName>取反</BriefName>
+			<Description><![CDATA[例如: NOT X]]>
+			</Description>
+		</Function>	
+
+		<Function id="-1" DoNotShowHint="True"  DoNotCompile="True">
+			<Prototype>(</Prototype>
+			<BriefName>括号</BriefName>
+			<Description><![CDATA[例如:HIGH()/(CLOSE()+OPEN())]]>
+			</Description>
+		</Function>	
+
+		<Function id="-1" DoNotShowHint="True"  DoNotCompile="True">
+			<Prototype>)</Prototype>
+			<BriefName>反括号</BriefName>
+			<Description><![CDATA[例如:HIGH()/(CLOSE()+OPEN())]]>
+			</Description>
+		</Function>	
+
+		<Function id="-1" DoNotShowHint="True"  DoNotCompile="True">
+			<Prototype>,</Prototype>
+			<BriefName>逗号</BriefName>
+			<Description><![CDATA[例如: MA(CLOSE(),3)]]>
+			</Description>
+		</Function>	
+
+		<Function id="-1" DoNotShowHint="True"  DoNotCompile="True">
+			<Prototype>:</Prototype>
+			<BriefName>输出</BriefName>
+			<Description><![CDATA[例如:    输出:CLOSE()+OPEN()]]>
+			</Description>
+		</Function>	
+
+		<Function id="-1" DoNotShowHint="True"  DoNotCompile="True">
+			<Prototype>:=</Prototype>
+			<BriefName>赋值</BriefName>
+			<Description><![CDATA[例如:    变量1:=HIGH()]]>
+			</Description>
+		</Function>	
+		
+		<Function id="-1" DoNotShowHint="True"  DoNotCompile="True">
+			<Prototype>'</Prototype>
+			<BriefName>单引号(定义字符串)</BriefName>
+			<Description><![CDATA[单引号用来定义字符串。例如:   DRAWTEXT(CLOSE()>OPEN(),HIGH(),'阳线'), DRAWABOVE(); ]]>
+			</Description>
+		</Function>		
+
+		<Function id="-1" DoNotShowHint="True"  DoNotCompile="True">
+			<Prototype>;</Prototype>
+			<BriefName>分号</BriefName>
+			<Description><![CDATA[分号表示语句结束。例如:   A:=CLOSE(); ]]>
+			</Description>
+		</Function>		
+		<Function id="-1" DoNotShowHint="True"  DoNotCompile="True">
+			<Prototype><![CDATA["]]></Prototype>
+			<BriefName>双引号</BriefName>
+			<Description><![CDATA[双引号表示引用其它指标公式。例如:   "KDJ.J" 表示引用KDJ公式的J分量。 ]]>
+			</Description>
+		</Function>			
+	</Category>	
+	
+	
+	<Category Name="板块字符函数">	
+		<Function id="700">
+			<Prototype>CON2STR()</Prototype>
+			<BriefName>数值转换成字符串</BriefName>
+			<Description><![CDATA[CON2STR(A,N):取A最后的值(非序列值)转为字符串,小数位数N.
+用法:
+ CON2STR(FINANCE(20),3)表示取营业收入,以3位小数转为字符串]]>
+			</Description>
+			<Declare>function CON2STR(Value:Double; Pos:Integer):string;</Declare>
+		</Function>
+		
+		<Function id="701">
+			<Prototype>STR2CON()</Prototype>
+			<BriefName>字符串转换成数值</BriefName>
+			<Description><![CDATA[STR2CON(S):将S字符串转化为数字.
+用法:
+ STR2CON('2365.02')表示将字符串'2365.02'转化为数字2365.02]]>
+			</Description>
+			<Declare>function STR2CON(Value:string):Double;</Declare>
+		</Function>	
+
+		<Function id="702">
+			<Prototype>STRCMP()</Prototype>
+			<BriefName>字符串比较</BriefName>
+			<Description><![CDATA[STRCMP(A,B):按字母序比较两个字符串A,B。  相等返回0； 否则返回非0。
+用法:
+ STRCMP(HYBLOCK,'房地产')将成分股行业字符串与'房地产'比较,是否相等,如果相等表示属于房地产板块]]>
+			</Description>
+			<Declare>function STRCMP(A,B:string):Integer;</Declare>
+		</Function>	
+		
+		<Function id="703">
+			<Prototype>FINDSTR()</Prototype>
+			<BriefName>字符串查找</BriefName>
+			<Description><![CDATA[FINDSTR(A,B):在字符串A中查找字符串B,如果找到取值大于等于1,否则返回0.
+用法:
+ FINDSTR('多头开仓','开仓')在字符串'多头开仓'中查找字符串'开仓',返回3]]>
+			</Description>
+			<Declare>function FINDSTR(A,B:string):Integer;</Declare>
+		</Function>			
+		
+		<Function id="704">
+			<Prototype>STRCAT()</Prototype>
+			<BriefName>字符串相加</BriefName>
+			<Description><![CDATA[STRCAT(A,B):将两个字符串A,B(非序列化)相加成一个字符串C.
+用法:
+ STRCAT('多头','开仓')将两个字符串'多头','开仓'相加成一个字符串'多头开仓']]>
+			</Description>
+			<Declare>function STRCAT(A,B:string):string;</Declare>
+		</Function>				
+	</Category>	
+<!--
+	<Category Name="形态函数">	
+		<Function id="850">
+			<Prototype>SAR()</Prototype>
+			<BriefName>抛物转向</BriefName>
+			<Description><![CDATA[用法:
+ SAR(N,S,M),N为计算周期,S为步长,M为极值
+例如:
+ SAR(10,2,20)表示计算10日抛物转向,步长为2%,极限值为20%]]>
+			</Description>
+			<Declare>function SAR(N:Integer; Step:Double; Extreme:Double):string;</Declare>
+		</Function>		
+	</Category>-->
+</Categories>

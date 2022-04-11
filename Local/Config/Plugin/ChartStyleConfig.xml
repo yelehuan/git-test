@@ -1,0 +1,10 @@
+﻿<?xml version="1.0"?>
+<ArrayOfXmlConfigItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<XmlConfigItem>
+		<Key>SupportRedGreenProdCode</Key>
+		<Value>
+			<![CDATA[<?xml version="1.0"?>
+<string>000001XSHG.MRI,399001XSHE.MRI,399006XSHE.MRI,399005XSHE.MRI</string>]]>
+		</Value>
+	</XmlConfigItem>
+</ArrayOfXmlConfigItem>

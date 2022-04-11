@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Index>
+  <CommonIndicators>
+    <CommonIndicator IndicatorName="MACD" Description="平滑异同平均" IsTopPanel="false" />
+    <CommonIndicator IndicatorName="KDJ" Description="经典版KDJ" IsTopPanel="false" />
+    <CommonIndicator IndicatorName="RSI" Description="相对强弱指标" IsTopPanel="false" />
+    <CommonIndicator IndicatorName="WR" Description="威廉指标" IsTopPanel="false" />
+    <CommonIndicator IndicatorName="BIAS" Description="乖离率" IsTopPanel="false" />
+    <CommonIndicator IndicatorName="ASI" Description="振动升降指标" IsTopPanel="false" />
+    <CommonIndicator IndicatorName="VR" Description="成交量变异率" IsTopPanel="false" />
+    <CommonIndicator IndicatorName="ARBR" Description=" 情绪指标" IsTopPanel="false" />
+    <CommonIndicator IndicatorName="DPO" Description="区间震荡线" IsTopPanel="false" />
+    <CommonIndicator IndicatorName="TRIX" Description="三重指数平均线" IsTopPanel="false" />
+    <CommonIndicator IndicatorName="DMA" Description="平均差" IsTopPanel="false" />
+    <CommonIndicator IndicatorName="BBI" Description="多空指标" IsTopPanel="false" />
+    <CommonIndicator IndicatorName="MTM" Description="动量线" IsTopPanel="false" />
+    <CommonIndicator IndicatorName="OBV" Description="累积能量线" IsTopPanel="false" />
+  </CommonIndicators>
+</Index>

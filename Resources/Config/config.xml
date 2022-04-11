@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <module key="DebugServers" name="测试站点">
+    <item Id="0" Name="bjz" Desc="北京站" Server="client.cnfic.com.cn" Port="443" Url="/usercenter/auth/zd/serverlist" Tag="0" Protocol="https" />
+    <item Id="1" Name="shz" Desc="上海站" Server="client-sh.cnfic.com.cn" Port="443" Url="/usercenter/auth/zd/serverlist" Tag="1" Protocol="https" />
+    <item Id="2" Name="bjz2" Desc="北京站B" Server="client2.cnfic.com.cn" Port="443" Url="/usercenter/auth/zd/serverlist" Tag="2" Protocol="https" />
+    <item Id="3" Name="test" Desc="中经社测试环境" Server="client-test.cnfic.com.cn" Port="443" Url="/usercenter/auth/zd/serverlist" Tag="3" Protocol="https" />
+    <item Id="4" Name="dev" Desc="中经社开发环境" Server="clientdev-test.cnfic.com.cn" Port="443" Url="/usercenter/auth/zd/serverlist" Tag="4" Protocol="https" />
+  </module>
+  <module key="Servers" name="生产站点">
+    <item Id="0" Name="bjz" Desc="北京站" Server="client.cnfic.com.cn" Port="443" Url="/usercenter/auth/zd/serverlist" Tag="0" Protocol="https" />	
+  </module>
+  <module key="SDZL" name="深度资料功能号"> 
+     <item key="ZJS1000200" name="沪深F9" gilcode="600000.SH" />
+     <item key="ZJS1000210" name="港股F9" gilcode="00001.HK" />
+     <item key="ZJS1000220" name="三板F9" gilcode="430003.NQ" />
+     <item key="ZJS1000230" name="指数F9" gilcode="000300.SH" />	
+     <item key="ZJS1000240" name="信用债F9" gilcode="120303.SH" />
+     <item key="ZJS1000241" name="利率债F9" gilcode="019633.SH" />
+     <item key="ZJS1000242" name="可转债F9" gilcode="110079.SH" />
+     <item key="ZJS1000265" name="ABS债F9" gilcode="119461.SZ" />	
+     <item key="ZJS1000250" name="国债期货F9" gilcode="TF0I00.CFE" />
+     <item key="ZJS1000260" name="基金F9" gilcode="000011.OF" />
+     <item key="ZJS1000860" name="商品F9" gilcode="CU2108.SHF" />
+     <item key="ZJS1000870" name="股指F9" gilcode="IF0I00.CFE" />
+     <item key="ZJS1000940" name="券商资管F9" gilcode="SEC00002I0XD.XH" />
+     <item key="ZJS1000950" name="私募基金F9" gilcode="SEC0000EY314.XH" />
+     <item key="ZJS1000871" name="保险F9" gilcode="SEC00002SUE8.XH" />
+     <item key="ZJS1001043" name="信托F9" gilcode="SEC000030VJS.XH" />
+     <item key="ZJS101150" name="银行理财F9" gilcode="SEC00002JRJB.XH" />
+     <item key="ZJS1000391" name="京市F9" gilcode="430047.BJ" />
+   </module>
+  <module key="ZTBB" name="专题报表功能号"> 
+    <item key="ZJS1000130" name="沪深专题" />
+    <item key="ZJS1000140" name="港股专题" />
+	<item key="ZJS1000150" name="新三板专题" />
+    <item key="ZJS1000160" name="基金专题" />
+	<item key="ZJS1000170" name="商品专题" />
+	<item key="ZJS100175" name="中国宏观专题" />
+	<item key="ZJS1000180" name="指数专题" />
+	<item key="ZJS1000185" name="国债专题" />
+	<item key="ZJS1000470" name="行业专题" />
+	<item key="ZJS1000142" name="科创板专题" />
+
+  </module>
+  <module key="Plugin" name="功能插件"> 
+    <item filename="Menu/CEIS.Menu.WebBrowser.dll" name="web浏览器插件" />
+    <item filename="Menu/CEIS.Menu.Quote.Stock.dll" name="行情模块个股行情" />
+	<item filename="Menu/CEIS.Menu.Quote.Market.dll" name="行情模块市场行情" />
+	<item filename="Menu/CEIS.Menu.Quote.IntegratedScreen.dll" name="行情模块综合屏" />
+	<item filename="Menu/CEIS.Menu.Quote.Analyze.dll" name="行情模块_Analyze" />
+	<item filename="Menu/CEIS.Menu.Quote.Forex.dll" name="在岸人民币_人民币国际外汇" />
+	<item filename="Menu/CEIS.Menu.Tool.dll" name="自定义综合屏_灵活屏_板块管理" />
+	<item filename="Menu/CEIS.Menu.Quote.Index.dll" name="指数" />
+  </module>
+</config>

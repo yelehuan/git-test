@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Configs>
+  <convert sdkmarket="XSHG" market="SH" caption="上海证券交易所"/>
+  <convert sdkmarket="XSHE" market="SZ" caption="深圳证券交易所"/>
+  <convert sdkmarket="NEEQ" market="OC" caption="全国股转系统"/>
+  <convert sdkmarket="XHKG-M" market="HK" caption="港股MAIN"/>
+  <convert sdkmarket="XHKG-G" market="HK" caption="港股GEM"/>
+  <convert sdkmarket="XHKG-N" market="HK" caption="港股NASD"/>
+  <convert sdkmarket="XHKG-E" market="HK" caption="港股ETS"/>
+  <convert sdkmarket="XHKG-I" market="HI" caption="港股INDEX"/>
+  <convert sdkmarket="CSI" market="CSI" caption="中证指数"/>
+  <convert sdkmarket="SWI" market="SI" caption="申万指数"/>
+  <convert sdkmarket="CCFX" market="CFE" caption="中金期货"/>
+  <convert sdkmarket="XSGE" market="SHF" caption="上海期货"/>
+  <convert sdkmarket="XDCE" market="DCE" caption="大连期货"/>
+  <convert sdkmarket="XZCE" market="CZC" caption="郑州期货"/>
+  <convert sdkmarket="XINE" market="INE" caption="上海原油期货"/>
+  <convert sdkmarket="LWORK" market="FX" caption="全部外汇"/>
+  <convert sdkmarket="XSHO" market="SH" caption="上证期权"/>
+  <convert sdkmarket="FXCFES" market="CFES" caption="外汇交易中心-外汇"/>
+  
+  <convert sdkmarket="XSGE-O" market="SHF" caption="上期所期权"/>
+  
+  <convert sdkmarket="BONDCFES" market="IB" caption="外汇交易中心--银行间债券"/>
+  <convert sdkmarket="XSSI" market="SSI" caption="华证指数"/>
+  <convert sdkmarket="GL-HKHS" market="HK" caption="恒生指数"/>
+  <convert sdkmarket="MMCFES" market="IB" caption="外汇中心利率"/>
+  <convert sdkmarket="CNI" market="CNI" caption="新华指数"/>
+  <convert sdkmarket="CMES" market="CME" caption="新华指数"/>
+  <convert sdkmarket="XCBT" market="CBT" caption="CBOT期货"/>
+  <convert sdkmarket="XCEC" market="CMX" caption="COMEX期货"/>
+  <convert sdkmarket="XNYM" market="NYM" caption="NYMEX期货"/>
+  <convert sdkmarket="ICEU" market="CMX" caption="ICE美国期货"/>
+  <!--
+  <convert sdkmarket="XNAS" market="" caption="纳斯达克"/>
+  <convert sdkmarket="XASE" market="" caption="美交所"/>
+  <convert sdkmarket="XNYS" market="" caption="纽交所"/>    
+
+  
+  <convert sdkmarket="XCBT" market="" caption="芝加哥商品期货"/>
+  <convert sdkmarket="XLME" market="" caption="伦敦金属"/>
+  <convert sdkmarket="XCEC" market="" caption="纽约商品期货"/>
+  <convert sdkmarket="XNYM" market="" caption="纽约商业期货"/>
+  <convert sdkmarket="CMES" market="" caption="芝加哥商业"/>
+  -->
+</Configs>

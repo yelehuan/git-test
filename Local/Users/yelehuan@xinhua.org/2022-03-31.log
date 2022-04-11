@@ -1,0 +1,18 @@
+{20220331-162454-818}{INFO} {20252}{1} {} {websocket tryOpen}
+{20220331-162457-058}{INFO} {20252}{22}{} {Ws_Opened}
+{20220331-162458-987}{INFO} {20252}{1} {} {NewsReminder websocket try open}
+{20220331-162459-849}{INFO} {20252}{17}{} {NewsReminder websocket try subscribe}
+{20220331-162459-849}{INFO} {20252}{17}{} {NewsReminder websocket opened}
+{20220331-162500-367}{INFO} {20252}{21}{} {NewsReminder websocket subscribe success}
+{20220331-162641-614}{INFO} {20252}{1} {} {退出接口调用logout...耗时：00:00:00.4234393}
+{20220331-162641-723}{INFO} {20252}{1} {} {NewsReminder websocket unsubscribe}
+{20220331-162641-729}{INFO} {20252}{22}{} {websocket Ws_Closed}
+{20220331-162705-780}{INFO} {20204}{1} {} {websocket tryOpen}
+{20220331-162708-300}{INFO} {20204}{17}{} {Ws_Opened}
+{20220331-162709-479}{INFO} {20204}{1} {} {NewsReminder websocket try open}
+{20220331-162710-593}{INFO} {20204}{14}{} {NewsReminder websocket try subscribe}
+{20220331-162710-593}{INFO} {20204}{14}{} {NewsReminder websocket opened}
+{20220331-162711-052}{INFO} {20204}{14}{} {NewsReminder websocket subscribe success}
+{20220331-162836-964}{INFO} {20204}{1} {} {退出接口调用logout...耗时：00:00:00.4594510}
+{20220331-162837-081}{INFO} {20204}{1} {} {NewsReminder websocket unsubscribe}
+{20220331-162837-088}{INFO} {20204}{9} {} {websocket Ws_Closed}

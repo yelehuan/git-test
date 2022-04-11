@@ -1,0 +1,550 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--Report
+	name:		报价样式名称
+	caption:	报价样式标题
+	lockcol:	锁定列数量
+	sortindex:  排序指标
+	sortdir:	排序方向(sdDesc降序，sdAsc升序)
+	flag：		附加字段，默认为空
+-->
+<ReportConfig> 
+  <Group name="Stock" alias="SECTOR_1" caption="板块报价--股票"> 
+    <Report name="Dynamic" caption="动态报价" lockcol="3" sortindex="px_change_rate" sortdir="stDesc" flag=""> 
+      <Index name="SERIALID"/>  
+      <Index name="STOCKCODE"/>  
+      <Index name="STOCKNAME"/>  
+      <Index name="last_px"/>        
+      <Index name="px_change"/>  
+      <Index name="px_change_rate"/>
+      <Index name="change_rate_lastyear"/>
+      <Index name="min5_chgpct"/>
+      <Index name="TotalVolume"/> 
+      <Index name="business_balance"/>
+      <Index name="turnover_ratio"/>  
+      <Index name="vol_ratio"/>  
+      <Index name="amplitude"/>  
+      <Index name="high_px"/>  
+      <Index name="low_px"/>  
+      <Index name="preclose_px"/>  
+      <Index name="wavg_px"/>
+      <Index name="circulation_value"/>  
+      <Index name="market_value"/>  
+      <Index name="eps_ttm"/>  
+      <Index name="ttm_pe_rate"/>  
+      <Index name="dyn_pb_rate"/> 
+    </Report> 
+  </Group>  
+  <Group name="Fund_OFT" alias="SECTOR_2" caption="板块报价--非货币型基金净值"> 
+    <Report name="Dynamic" caption="动态报价" lockcol="3" sortindex="StockCode" sortdir="stAsc" flag=""> 
+      <Index name="SerialId"/>  
+      <Index name="StockCode"/>  
+      <Index name="StockName" width="200"/>  
+      <Index name="Fund_NAV"/>  
+      <Index name="Fund_PrevNAV"/>  
+      <Index name="Fund_CumulativeNAV"/>
+      <Index name="Fund_NGRLast1W"/>  
+      <Index name="Fund_NGRLast1M"/>  
+      <Index name="Fund_NGRLast3M"/>  
+      <Index name="Fund_NGRLast6M"/>  
+      <Index name="Fund_NGRLast1Y"/>  
+      <Index name="Fund_NGRLast3Y"/>  
+      <Index name="Fund_NGRLast5Y"/>  
+      <Index name="Fund_NGRSinceInception"/>  
+      <Index name="Fund_AnnualizedReturn"/>  
+      <Index name="Fund_InceptionDate"/>  
+      <Index name="Fund_AssetClass"/>  
+      <Index name="Fund_TypeDesc"/>  
+      <Index name="Fund_LastSize"/>  
+      <Index name="Fund_PurchaseState"/>  
+      <Index name="Fund_Manager"/>  
+      <Index name="Fund_Company"/>  
+      <Index name="Fund_Custodian"/>  
+    </Report> 
+  </Group>
+  <Group name="FUND_OF" alias="SECTOR_202" caption="板块报价--货币型基金净值"> 
+    <Report name="Dynamic" caption="动态报价" lockcol="3" sortindex="StockCode" sortdir="stAsc" flag=""> 
+      <Index name="SerialId"/>  
+      <Index name="StockCode"/>  
+      <Index name="StockName" width="200"/>        
+      <Index name="Fund_Date"/>  
+      <Index name="Fund_7DaysYield"/>        
+      <Index name="Fund_Yield"/>
+      <Index name="Fund_NGRLast1W"/>  
+      <Index name="Fund_NGRLast1M"/>  
+      <Index name="Fund_NGRLast3M"/>  
+      <Index name="Fund_NGRLast6M"/>  
+      <Index name="Fund_NGRLast1Y"/>  
+      <Index name="Fund_NGRLast3Y"/>  
+      <Index name="Fund_NGRLast5Y"/>  
+      <Index name="Fund_InceptionDate"/>  
+      <Index name="Fund_AssetClass"/>  
+      <Index name="Fund_TypeDesc"/>  
+      <Index name="Fund_LastSize"/>  
+      <Index name="Fund_PurchaseState"/>  
+      <Index name="Fund_Manager"/>  
+      <Index name="Fund_Company"/>  
+      <Index name="Fund_Custodian"/>
+    </Report> 
+  </Group>  
+  <Group name="fund" alias="SECTOR_-2" caption="板块报价--基金行情"> 
+    <Report name="Dynamic" caption="动态报价" lockcol="3" sortindex="px_change_rate" sortdir="stDesc" flag=""> 
+      <Index name="SerialId"/>  
+      <Index name="StockCode"/>  
+      <Index name="StockName" width="200"/>  
+      <Index name="last_px"/>
+      <Index name="px_change"/>
+      <Index name="px_change_rate"/>
+      <Index name="business_balance"/>
+      <Index name="TotalVolume"/>
+      <Index name="wavg_px"/>
+      <Index name="high_px"/>
+      <Index name="low_px"/>
+      <Index name="amplitude"/>
+      <Index name="business_amount_out"/>
+      <Index name="business_amount_in"/>      
+    </Report> 
+  </Group>
+  <Group name="Index" alias="SECTOR_3" caption="板块报价--指数"> 
+    <Report name="Dynamic" caption="动态报价" lockcol="3" sortindex="px_change_rate" sortdir="stDesc" flag=""> 
+      <Index name="SerialId"/>  
+      <Index name="StockCode" width="120"/>
+      <Index name="StockName" width="200"/>  
+      <Index name="last_px" width="120"/>
+      <Index name="px_change"/>
+      <Index name="px_change_rate"/>
+      <Index name="min5_chgpct"/>
+      <Index name="TotalVolume"/>
+      <Index name="business_balance"/>
+      <Index name="amplitude"/>
+      <Index name="preclose_px" width="120"/>
+      <Index name="high_px" width="120"/>
+      <Index name="low_px" width="120"/>
+    </Report> 
+  </Group>  
+  <Group name="bond" alias="SECTOR_5,SECTOR_505" caption="板块报价--债券"> 
+    <Report name="Dynamic" caption="动态报价" lockcol="3" sortindex="px_change_rate" sortdir="stDesc" flag=""> 
+      <Index name="SerialId"/>  
+      <Index name="StockCode" width="120"/>
+      <Index name="StockName" width="200"/>  
+      <Index name="last_px"/>  
+      <Index name="px_change"/>
+      <Index name="px_change_rate"/>
+      <Index name="min5_chgpct"/>
+      <Index name="TotalVolume"/>
+      <Index name="business_balance"/>
+      <Index name="amplitude"/>
+      <Index name="preclose_px"/>
+      <Index name="high_px" width="120"/>
+      <Index name="low_px" width="120"/>
+      <Index name="w52_high_px" width="150"/>
+      <Index name="w52_low_px" width="150"/>
+    </Report> 
+  </Group>  
+  <Group name="Futures" alias="SECTOR_6" caption="板块报价--期货"> 
+    <Report name="Dynamic" caption="动态报价" lockcol="3" sortindex="StockCode" sortdir="stDesc" flag=""> 
+      <Index name="SerialId"/>  
+      <Index name="StockCode"/>  
+      <Index name="StockName" width="250"/>  
+      <Index name="last_px"/>  
+      <Index name="px_change"/>
+      <Index name="px_change_rate"/>
+      <Index name="settlement"/>  
+      <Index name="prev_settlement"/>
+      <Index name="amount"/>
+      <Index name="AmountChange"/>
+      <Index name="TotalVolume"/>
+      <Index name="current_amount"/>
+      <Index name="high_px"/>
+      <Index name="low_px"/>
+      <Index name="wavg_px"/>
+      <Index name="amplitude"/>
+      <Index name="business_amount_out"/>
+      <Index name="business_amount_in"/>
+      <Index name="open_px"/>
+      <Index name="preclose_px"/>
+      <Index name="up_px"/>
+      <Index name="down_px"/>
+      <Index name="BuyPrice1"/>
+      <Index name="SellPrice1"/>
+    </Report> 
+  </Group>  
+  <Group name="FSRH" alias="SECTOR_802" caption="板块报价--外汇即期成交价"> 
+    <Report name="Dynamic" caption="动态报价" lockcol="3" sortindex="StockCode" sortdir="stDesc" flag=""> 
+      <Index name="SerialId"/>  
+      <Index name="StockCode" width="130"/>  
+      <Index name="StockName" width="320"/> 
+	  <Index name="last_px" caption="成交价" width="100"/> 
+	  <Index name="px_change" width="100"/>
+	  <Index name="data_timestamp"/>
+	  <Index name="market_date" caption="日期"/>
+      <Index name="open_px" caption="开盘价" width="100"/>
+      <Index name="high_px" caption="最高价" width="100"/>
+      <Index name="low_px" caption="最低价" width="100"/>
+	  <Index name="special_close_px"/>  
+	  <Index name="business_final_px"/>
+	  <Index name="last_closedate"/>
+    </Report> 
+  </Group>
+  <Group name="FSQ" alias="SECTOR_803" caption="板块报价--外汇即期最优报价"> 
+    <Report name="Dynamic" caption="动态报价" lockcol="3" sortindex="StockCode" sortdir="stDesc" flag=""> 
+      <Index name="SerialId"/>
+      <Index name="StockCode" width="130"/>  
+      <Index name="StockName" width="320"/> 
+	  <Index name="last_px0"/> 
+	  <Index name="last_px1"/>
+	  <Index name="open_px0"/>
+	  <Index name="open_px1"/>
+      <Index name="high_px0"/>
+	  <Index name="high_px1"/>
+      <Index name="low_px0"/>
+	  <Index name="low_px1"/>
+	  <Index name="data_timestamp"/>
+	  <Index name="market_date" caption="日期"/>
+    </Report> 
+  </Group>
+  <Group name="RBD" alias="SECTOR_801" caption="板块报价--人民币中间价"> 
+    <Report name="Dynamic" caption="动态报价" lockcol="3" sortindex="StockCode" sortdir="stDesc" flag=""> 
+      <Index name="SerialId"/>
+      <Index name="StockCode" width="140"/>  
+      <Index name="StockName" width="320"/> 
+	  <Index name="last_px" caption="中间价" width="120"/>
+	  <Index name="px_change" caption="涨跌" width="120"/>
+	  <Index name="up_px" caption="最高限价" width="120"/>  
+      <Index name="down_px" caption="最低限价" width="120"/>
+	  <Index name="data_timestamp" width="120"/>
+	  <Index name="market_date" caption="日期" width="140"/>
+    </Report>
+  </Group>
+  <Group name="FWR" alias="SECTOR_807" caption="板块报价--外汇掉期"> 
+    <Report name="Dynamic" caption="动态报价" lockcol="1" sortindex="" sortdir="" flag=""> 
+	  <Index name="business_term" width="120"/>
+	  <Index name="last_px" caption="成交价" width="120"/>
+	  <Index name="px_change" caption="涨跌" width="120"/>
+	  <Index name="data_timestamp" width="120"/>
+	  <Index name="market_date" caption="日期" width="140"/>
+      <Index name="open_px" caption="开盘价" width="120"/>
+      <Index name="high_px" caption="最高价" width="120"/>
+      <Index name="low_px" caption="最低价" width="120"/>
+	  <Index name="business_final_px" width="120"/>
+	  <Index name="last_closedate" width="140"/>
+    </Report> 
+  </Group>
+  <Group name="FWQ" alias="SECTOR_808" caption="板块报价--外汇掉期最优报价"> 
+    <Report name="Dynamic" caption="动态报价" lockcol="1" sortindex="" sortdir="" flag=""> 
+      <Index name="business_term" width="120"/>
+	  <Index name="last_px0"/> 
+	  <Index name="last_px1"/>
+	  <Index name="open_px0"/>
+	  <Index name="open_px1"/>
+      <Index name="high_px0"/>
+	  <Index name="high_px1"/>
+      <Index name="low_px0"/>
+	  <Index name="low_px1"/>
+	  <Index name="data_timestamp"/>
+	  <Index name="market_date" caption="日期"/>
+    </Report> 
+  </Group>
+  <Group name="FFR" alias="SECTOR_804" caption="板块报价--外汇远期"> 
+    <Report name="Dynamic" caption="动态报价" lockcol="1" sortindex="" sortdir="" flag=""> 
+	  <Index name="business_term" width="120"/>
+	  <Index name="last_px0" caption="成交价" width="140"/>
+	  <Index name="px_change0" caption="涨跌" width="140"/>
+	  <Index name="last_px1" caption="最新远期点" width="140"/>
+	  <Index name="data_timestamp" width="120"/>
+	  <Index name="market_date" caption="日期" width="140"/>
+	  <Index name="start_rest_date" caption="起息日" width="140"/>
+      <Index name="open_px0" caption="开盘价" width="140"/>
+      <Index name="high_px0" caption="最高价" width="140"/>
+      <Index name="low_px0" caption="最低价" width="140"/>
+	  <Index name="business_final_px0" caption="上末笔价" width="140"/>
+	  <Index name="last_closedate0" caption="上收盘日" width="140"/>
+    </Report> 
+  </Group>
+  <Group name="FOR" alias="SECTOR_805" caption="板块报价--外汇期权"> 
+    <Report name="Dynamic" caption="动态报价" lockcol="1" sortindex="" sortdir="" flag=""> 
+	  <Index name="business_term" width="120"/>
+	  <Index name="volatility"/>
+	  <Index name="option_portfolio_type"/>
+	  <Index name="option_fee_rate"/>
+	  <Index name="option_fee_type"/>
+	  <Index name="data_timestamp"/>
+	  <Index name="market_date" caption="日期"/>
+    </Report> 
+  </Group>
+  <Group name="default" caption="板块报价--默认"> 
+    <Report name="Dynamic" caption="动态报价" lockcol="3" sortindex="px_change_rate" sortdir="stDesc" flag=""> 
+      <Index name="SERIALID"/>  
+      <Index name="STOCKCODE"/>  
+      <Index name="STOCKNAME"/>  
+      <Index name="last_px"/>  
+      <Index name="preclose_px"/>  
+      <Index name="px_change"/>  
+      <Index name="px_change_rate"/>
+      <Index name="change_rate_lastyear"/>
+      <Index name="wavg_px"/>  
+      <Index name="amplitude"/>  
+      <Index name="high_px"/>  
+      <Index name="low_px"/>  
+      <Index name="vol_ratio"/>  
+      <Index name="turnover_ratio"/>  
+      <Index name="TotalVolume"/>  
+      <Index name="business_balance"/>  
+      <Index name="min5_chgpct"/>  
+      <Index name="circulation_value"/>  
+      <Index name="market_value"/>  
+      <Index name="eps_ttm"/>  
+      <Index name="ttm_pe_rate"/>  
+      <Index name="dyn_pb_rate"/> 
+    </Report> 
+  </Group>  
+  <Group name="Relate" caption="相关报价"> 
+    <Report name="RelateIndex" caption="相关指数报价" lockcol="1" sortindex="px_change_rate" sortdir="stDesc" flag=""> 
+      <Index name="STOCKNAME" caption="相关板块" width="140"/>  
+      <Index name="Change"/>  
+      <Index name="px_change_rate"/>  
+      <Index name="TotalAmount"/> 
+    </Report>  
+    <Report name="IndexSector" caption="指数对应板块报价" lockcol="1" sortindex="px_change_rate" sortdir="stDesc" flag=""> 
+      <Index name="SERIALID"/>  
+      <Index name="STOCKNAME"/>  
+      <Index name="NewPrice"/>  
+      <Index name="Change"/>  
+      <Index name="px_change_rate"/>  
+      <Index name="LiangBi"/>  
+      <Index name="ChangeHandRate"/>  
+      <Index name="TotalAmount"/> 
+    </Report> 
+  </Group>  
+  <Group name="ZHP" caption="综合屏报价"> 
+    <Report name="Index" caption="综合屏指数报价" lockcol="3" sortindex="STOCKCODE" sortdir="stAsc" flag=""> 
+      <Index name="SERIALID"/>  
+      <Index name="STOCKCODE"/>  
+      <Index name="STOCKNAME" width="150"/>  
+      <Index name="NewPrice"/>  
+      <Index name="Change"/>  
+      <Index name="px_change_rate"/>  
+      <Index name="TotalAmount" width="100"/>  
+      <Index name="ChangeYearBegin"/> 
+    </Report>  
+    <Report name="Stock" caption="综合屏股票报价" lockcol="3" sortindex="px_change_rate" sortdir="stDesc" flag=""> 
+      <Index name="SERIALID"/>  
+      <Index name="STOCKCODE"/>  
+      <Index name="STOCKNAME" width="150"/>  
+      <Index name="last_px"/>  
+      <Index name="preclose_px"/>  
+      <Index name="px_change"/>  
+      <Index name="px_change_rate"/>  
+      <Index name="TotalVolume"/>  
+      <Index name="business_balance"/> 
+    </Report>  
+    <Report name="Fund_Index" caption="基金指数报价" lockcol="1" sortindex="STOCKCODE" sortdir="stAsc" flag=""> 
+      <Index name="SERIALID"/>  
+      <Index name="STOCKCODE"/>  
+      <Index name="STOCKNAME" width="150"/>  
+      <Index name="NewPrice"/>  
+      <Index name="px_change_rate"/>  
+      <Index name="Volume" width="100"/>  
+      <Index name="TotalAmount" width="100"/>  
+      <Index name="ChangeYearBegin"/> 
+    </Report>  
+    <Report name="Fund_Close" caption="封闭式基金报价" lockcol="1" sortindex="px_change_rate" sortdir="stDesc" flag=""> 
+      <Index name="SERIALID"/>  
+      <Index name="STOCKCODE"/>  
+      <Index name="STOCKNAME" width="150"/>  
+      <Index name="NewPrice"/>  
+      <Index name="px_change_rate"/>  
+      <Index name="Volume"/>  
+      <Index name="TotalAmount"/>  
+      <Index name="NetValue"/>  
+      <Index name="ForwardDiscount"/> 
+    </Report>  
+    <Report name="Fund_Open" caption="开放式基金报价" lockcol="1" sortindex="px_change_rate" sortdir="stDesc" flag=""> 
+      <Index name="SERIALID"/>  
+      <Index name="STOCKCODE"/>  
+      <Index name="STOCKNAME" width="150"/>  
+      <Index name="NetValue"/>  
+      <Index name="GrowthRate"/>  
+      <Index name="GrowthRateFromDay1"/>  
+      <Index name="AverateYearYied"/>  
+      <Index name="GrowthRateLastMonth"/>  
+      <Index name="GrowthRateLastSeason"/>  
+      <Index name="GrowthRateLast6Month"/>  
+      <Index name="GrowthRateLastYear"/>  
+      <Index name="Fund_Change3Year"/>  
+      <Index name="AccumulatedNetValue"/>  
+      <Index name="Fund_LastestDate" width="150"/> 
+    </Report>  
+    <Report name="ZHPIndex" caption="指数综合屏报价" lockcol="3" sortindex="STOCKCODE" sortdir="stAsc" flag=""> 
+      <Index name="SERIALID"/>  
+      <Index name="STOCKCODE"/>  
+      <Index name="STOCKNAME" width="150"/>  
+      <Index name="NewPrice"/>  
+      <Index name="Change"/>  
+      <Index name="px_change_rate"/>  
+      <Index name="TotalAmount" width="100"/>  
+      <Index name="ChangeYearBegin"/>  
+      <Index name="Change5Days"/>  
+      <Index name="Change20Days"/>  
+      <Index name="Change60Days"/>  
+      <Index name="Change120Days"/>  
+      <Index name="Change250Days"/>  
+      <Index name="High52Week"/>  
+      <Index name="Low52Week"/> 
+    </Report> 
+  </Group>  
+  <Group name="FundNetValue" caption="基金净值页面"> 
+    <Report name="HevilyHeld" caption="重仓持股" lockcol="1" sortindex="STOCKNAME" sortdir="stDesc" flag=""> 
+      <Index name="STOCKNAME" width="150"/>  
+      <Index name="HoldVol"/>  
+      <Index name="HoldMarketValue"/>  
+      <Index name="StockMarketValuePecent"/>  
+      <Index name="last_px"/>  
+      <Index name="px_change_rate"/>  
+      <Index name="turnover_ratio"/>  
+      <Index name="change_rate_10days"/>  
+      <Index name="change_rate_20days"/>  
+      <Index name="change_rate_60days"/>  
+      <Index name="change_rate_lastyear"/>  
+      <Index name="circulation_value"/>  
+      <Index name="ttm_pe_rate"/>  
+      <Index name="dyn_pb_rate"/> 
+    </Report>  
+    <Report name="HevilyIndustry" caption="重仓行业" lockcol="1" sortindex="STOCKNAME" sortdir="stDesc" flag=""> 
+      <Index name="STOCKNAME" width="220"/>  
+      <Index name="HoldMarketValue" width="140"/>  
+      <Index name="StockMarketValuePecent"/>  
+      <Index name="MarketConfig"/>  
+      <Index name="px_change_rate"/>  
+      <Index name="change_rate_lastyear"/> 
+    </Report>  
+    <Report name="HevilyLoadedBond" caption="重仓债券" lockcol="1" sortindex="STOCKNAME" sortdir="stDesc" flag=""> 
+      <Index name="STOCKNAME" width="220"/>  
+      <Index name="HoldMarketValue" width="160"/>  
+      <Index name="NetValuePecent" width="160"/>  
+      <Index name="HoldBondPecent" width="160"/>  
+    </Report>  
+    <Report name="FundManager_OF" caption="基金经理" lockcol="1" sortindex="STOCKNAME" sortdir="stDesc" flag=""> 
+      <Index name="FundManager"/>  
+      <Index name="HoldOfPostDate"/>  
+      <Index name="DimissionDate"/>  
+      <Index name="HoldOfPostReturn"/>  
+      <Index name="YearReturn"/>  
+      <Index name="BenchmarkReturn"/> 
+    </Report>  
+    <Report name="FundManager_OFT" caption="基金经理" lockcol="1" sortindex="STOCKNAME" sortdir="stDesc" flag=""> 
+      <Index name="FundManager"/>  
+      <Index name="HoldOfPostDate"/>  
+      <Index name="DimissionDate"/>  
+      <Index name="HoldOfPostReturn"/>  
+      <Index name="YearReturn"/>  
+      <Index name="CongenerSort"/> 
+    </Report>  
+    <Report name="FundRanking" caption="基金净值增长率排名" lockcol="1" sortindex="Date" sortdir="stDesc" flag=""> 
+      <Index name="Date"/>  
+      <Index name="NGR"/>  
+      <Index name="Ranking"/> 
+    </Report> 
+  </Group> 
+  <Group name="UserSectorReportGroup1" caption="自选股面板"> 
+    <Report name="UserSectorReport" caption="自选股信息" lockcol="3" sortindex="px_change_rate" sortdir="stDesc" flag="">  
+      <Index name="STOCKCODE" width="85" />    
+      <Index name="last_px" width="60" />  
+      <Index name="px_change_rate" width="85" />
+    </Report> 
+  </Group>    
+  
+  <Group name="grpBelongSector" caption="所属板块">
+    <Report name="BelongSectorReport" caption="所属版块" lockcol="3" sortindex="STOCKCODE" sortdir="stDesc" flag="">  
+      <Index name="SERIALID"/>  
+      <!--Index name="STOCKCODE"/ -->  
+      <Index name="STOCKNAME" width="150"/>   
+      <!--Index name="px_change_rate"/>
+	  <Index name="last_px"/ -->
+    </Report> 
+	
+    <Report name="SectorElementReport" caption="版块成分" lockcol="3" sortindex="STOCKCODE" sortdir="stDesc" flag="">  
+      <Index name="SERIALID"/>  
+      <Index name="STOCKCODE"/>  
+      <Index name="STOCKNAME" width="150"/>   
+      <Index name="px_change_rate"/>
+	  <Index name="last_px"/>
+	  <Index name="amplitude"/>
+	  <Index name="circulation_value"/>
+	  <Index name="ttm_pe_rate"/>
+	  <Index name="min5_chgpct"/>
+	  <Index name="change_rate_5days"/>
+	  <Index name="change_rate_10days"/>
+	  <Index name="change_rate_20days"/>
+	  <Index name="change_rate_60days"/>
+	  <Index name="change_rate_120days"/>
+	  <Index name="change_rate_250days"/>
+	  <Index name="change_rate_lastyear"/>
+    </Report> 
+  </Group>   
+
+  <Group name="grpFundIndexPerformance" caption="基金指数表现">
+    <Report name="SHFundIndexPerformance" caption="沪深基金指数" lockcol="3" sortindex="STOCKCODE" sortdir="stDesc" flag="">  
+      <Index name="SERIALID"/>  
+      <Index name="STOCKCODE"/>  
+      <Index name="STOCKNAME" width="150"/>   
+	  <Index name="last_px"/>
+      <Index name="px_change_rate"/>
+	  <Index name="business_balance"/>
+	  <Index name="change_rate_thisyear"/>
+	  <Index name="LastTradeDate"/>
+    </Report> 
+	
+    <Report name="ZZFundIndexPerformance" caption="中证基金指数" lockcol="3" sortindex="STOCKCODE" sortdir="stDesc" flag="">  
+      <Index name="SERIALID"/>  
+      <Index name="STOCKCODE"/>  
+      <Index name="STOCKNAME" width="150"/>   
+	  <Index name="last_px"/>
+      <Index name="change_rate_1day"/>
+	  <Index name="LastTradeDate"/>
+	  <Index name="change_rate_thisyear"/>
+	  <Index name="change_rate_1month"/>
+	  <Index name="change_rate_3month"/>
+	  <Index name="change_rate_6month"/>
+	  <Index name="change_rate_1year"/>
+	  <Index name="change_rate_2year"/>
+	  <Index name="change_rate_3year"/>
+    </Report> 	
+  </Group>
+  
+  <Group name="grpMarketFundPerformance" caption="上市基金表现">
+    <Report name="MarketFundPerformance" caption="上证基金" lockcol="3" sortindex="STOCKCODE" sortdir="stDesc" flag="">  
+      <Index name="SERIALID"/>  
+      <Index name="STOCKCODE"/>  
+      <Index name="STOCKNAME" width="150"/>   
+	  <Index name="last_px"/>
+	  <Index name="px_change"/>
+      <Index name="px_change_rate"/>
+	  <Index name="business_balance"/>
+	  <Index name="change_rate_thisyear"/>
+	  <Index name="LastTradeDate"/>
+    </Report> 
+  </Group>  
+  
+  <Group name="grpFundPerformance" caption="基金表现">
+    <Report name="FundPerformance" caption="基金表现" lockcol="3" sortindex="STOCKCODE" sortdir="stDesc" flag="">  
+      <Index name="SERIALID"/>  
+      <Index name="STOCKCODE"/>  
+      <Index name="STOCKNAME" width="150"/>   
+	  <Index name="Fund_NAV"/>
+	  <Index name="Fund_Yield"/>
+      <Index name="Fund_7DaysYield"/>
+	  <Index name="change_rate_1day"/>
+	  <Index name="change_rate_thisyear"/>
+	  <Index name="change_rate_1month"/>
+	  <Index name="change_rate_3month"/>
+	  <Index name="change_rate_6month"/>
+	  <Index name="change_rate_1year"/>
+	  <Index name="change_rate_2year"/>
+	  <Index name="change_rate_3year"/>
+	  <Index name="Fund_NGRSinceInception"/>
+	  <Index name="Fund_AnnualizedReturn"/>
+	  <Index name="LastTradeDate"/>
+    </Report> 
+  </Group>    
+</ReportConfig>

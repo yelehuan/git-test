@@ -1,0 +1,9 @@
+{20220401-103232-535}{INFO} {56296}{6} {AutoUpdater.StartHttpUpdate} {Start autoupdater...}
+{20220401-103232-539}{INFO} {56296}{6} {AutoUpdater.StartHttpUpdate} {服务器地址https://client.cnfic.com.cn:443/upgrade/gray/window/level01/}
+{20220401-103232-564}{ERROR}{56296}{6} {} {read server FileModuleList fail:System.Net.WebException: 远程服务器返回错误: (404) 未找到。
+   在 System.Net.WebClient.DownloadDataInternal(Uri address, WebRequest& request)
+   在 System.Net.WebClient.DownloadString(Uri address)
+   在 System.Net.WebClient.DownloadString(String address)
+   在 HSUCF.Tools.WebFileUpdater.GetModuleList(Exception& errorinfo, Int32 timeout)}
+{20220401-103232-569}{INFO} {56296}{6} {AutoUpdater.StartHttpUpdate} {localVersion/localLastForceUpdateVersion:2.3.12.10/null fileVersion/fileLastForceUpdateVersion:2.3.12.10/null}
+{20220401-103232-570}{INFO} {56296}{6} {AutoUpdater.StartHttpUpdate 升级确认耗时：34} {Start autoupdater...}

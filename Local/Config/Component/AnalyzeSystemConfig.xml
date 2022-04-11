@@ -1,0 +1,216 @@
+<?xml version="1.0"?>
+<AnalyzeSystemConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+					 xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+					 AnalyzeRefreshTick="300000">
+	<SpreadsAnalysisTemplate>
+		<SpreadsCalculateModel>
+			<LongStock>
+				<StockCodeKey>
+					<ProdCode>IF888</ProdCode>
+					<MarketCode>CCFX</MarketCode>
+				</StockCodeKey>
+			</LongStock>
+			<ShortStock>
+				<StockCodeKey>
+					<ProdCode>000300</ProdCode>
+					<MarketCode>XSHG</MarketCode>
+				</StockCodeKey>
+			</ShortStock>
+		</SpreadsCalculateModel>
+		<IsSystem>true</IsSystem>
+	</SpreadsAnalysisTemplate>
+	<ArbitrageAnalyzeTemplates>
+		<SpreadsCalculateTemplate Name="豆一豆粕套利模板">
+			<SpreadsCalculateModel>
+				<LongStock>
+					<StockCodeKey>
+						<ProdCode>A9888</ProdCode>
+						<MarketCode>XDCE.FC.BEAN</MarketCode>
+					</StockCodeKey>
+				</LongStock>
+				<ShortStock>
+					<StockCodeKey>
+						<ProdCode>M9888</ProdCode>
+						<MarketCode>XDCE.FC.BEAN</MarketCode>
+					</StockCodeKey>
+				</ShortStock>
+			</SpreadsCalculateModel>
+			<IsSystem>true</IsSystem>
+		</SpreadsCalculateTemplate>
+		<SpreadsCalculateTemplate Name="沪深300期现套利">
+			<SpreadsCalculateModel>
+				<LongStock>
+					<StockCodeKey>
+						<ProdCode>IF888</ProdCode>
+						<MarketCode>CCFX.FF.INDEX.HS300</MarketCode>
+					</StockCodeKey>
+				</LongStock>
+				<ShortStock>
+					<StockCodeKey>
+						<ProdCode>000300</ProdCode>
+						<MarketCode>XSHG.MRI</MarketCode>
+					</StockCodeKey>
+				</ShortStock>
+			</SpreadsCalculateModel>
+			<IsSystem>true</IsSystem>
+		</SpreadsCalculateTemplate>
+	</ArbitrageAnalyzeTemplates>
+	<CorrelationAnalyzeTemplates>
+		<CorrelationAnalyzeTemplate Name="商品相关性"
+									ChartType="Day"
+									IsSystem="true"
+									DateType="ThreeMonth">
+			<RowVarieties>
+				<CorrelationVariety ProdCode="AU888"
+									MarketCode="XSGE.FC.GOLD"
+									ProdName="沪金主力" />
+				<CorrelationVariety ProdCode="AG888"
+									MarketCode="XSGE.FC.SILVER"
+									ProdName="沪银主力" />
+				<CorrelationVariety ProdCode="CU888"
+									MarketCode="XSGE.FC.METAL"
+									ProdName="沪铜主力" />
+				<CorrelationVariety ProdCode="ZN888"
+									MarketCode="XSGE.FC.METAL"
+									ProdName="沪锌主力" />
+				<CorrelationVariety ProdCode="RB888"
+									MarketCode="XSGE.FC.REBAR"
+									ProdName="螺纹钢主力" />
+				<CorrelationVariety ProdCode="I9888"
+									MarketCode="XDCE.FC.INRU"
+									ProdName="铁矿石主力" />
+				<CorrelationVariety ProdCode="J9888"
+									MarketCode="XDCE.FC.COKE"
+									ProdName="焦炭主力" />
+				<CorrelationVariety ProdCode="JM888"
+									MarketCode="XDCE.FC.COAL"
+									ProdName="焦煤主力" />
+				<CorrelationVariety ProdCode="SC888"
+									MarketCode="XINE.FC.OIL"
+									ProdName="原油主力" />
+				<CorrelationVariety ProdCode="TA888"
+									MarketCode="XZCE.FC.PTA"
+									ProdName="PTA主力" />
+				<CorrelationVariety ProdCode="FG888"
+									MarketCode="XZCE.FC.GLASS"
+									ProdName="玻璃主力" />
+				<CorrelationVariety ProdCode="A9888"
+									MarketCode="XDCE.FC.BEAN"
+									ProdName="豆一主力" />
+				<CorrelationVariety ProdCode="Y9888"
+									MarketCode="XDCE.FC.BOIL"
+									ProdName="豆油主力" />
+				<CorrelationVariety ProdCode="M9888"
+									MarketCode="XDCE.FC.BEAN"
+									ProdName="豆粕主力" />
+				<CorrelationVariety ProdCode="C9888"
+									MarketCode="XDCE.FC.CORN"
+									ProdName="玉米主力" />
+				<CorrelationVariety ProdCode="SR888"
+									MarketCode="XZCE.FC.SUGAR"
+									ProdName="白糖主力" />
+			</RowVarieties>
+			<ColumnVarieties>
+				<CorrelationVariety ProdCode="AU888"
+									MarketCode="XSGE.FC.GOLD"
+									ProdName="沪金主力" />
+				<CorrelationVariety ProdCode="AG888"
+									MarketCode="XSGE.FC.SILVER"
+									ProdName="沪银主力" />
+				<CorrelationVariety ProdCode="CU888"
+									MarketCode="XSGE.FC.METAL"
+									ProdName="沪铜主力" />
+				<CorrelationVariety ProdCode="ZN888"
+									MarketCode="XSGE.FC.METAL"
+									ProdName="沪锌主力" />
+				<CorrelationVariety ProdCode="RB888"
+									MarketCode="XSGE.FC.REBAR"
+									ProdName="螺纹钢主力" />
+				<CorrelationVariety ProdCode="I9888"
+									MarketCode="XDCE.FC.INRU"
+									ProdName="铁矿石主力" />
+				<CorrelationVariety ProdCode="J9888"
+									MarketCode="XDCE.FC.COKE"
+									ProdName="焦炭主力" />
+				<CorrelationVariety ProdCode="JM888"
+									MarketCode="XDCE.FC.COAL"
+									ProdName="焦煤主力" />
+				<CorrelationVariety ProdCode="SC888"
+									MarketCode="XINE.FC.OIL"
+									ProdName="原油主力" />
+				<CorrelationVariety ProdCode="TA888"
+									MarketCode="XZCE.FC.PTA"
+									ProdName="PTA主力" />
+				<CorrelationVariety ProdCode="FG888"
+									MarketCode="XZCE.FC.GLASS"
+									ProdName="玻璃主力" />
+				<CorrelationVariety ProdCode="A9888"
+									MarketCode="XDCE.FC.BEAN"
+									ProdName="豆一主力" />
+				<CorrelationVariety ProdCode="Y9888"
+									MarketCode="XDCE.FC.BOIL"
+									ProdName="豆油主力" />
+				<CorrelationVariety ProdCode="M9888"
+									MarketCode="XDCE.FC.BEAN"
+									ProdName="豆粕主力" />
+				<CorrelationVariety ProdCode="C9888"
+									MarketCode="XDCE.FC.CORN"
+									ProdName="玉米主力" />
+				<CorrelationVariety ProdCode="SR888"
+									MarketCode="XZCE.FC.SUGAR"
+									ProdName="白糖主力" />
+			</ColumnVarieties>
+		</CorrelationAnalyzeTemplate>
+		<CorrelationAnalyzeTemplate Name="指数相关性"
+									ChartType="Day"
+									IsSystem="true"
+									DateType="ThreeMonth">
+			<RowVarieties>
+				<CorrelationVariety ProdCode="000001"
+									MarketCode="XSHG.MRI"
+									ProdName="上证指数" />
+				<CorrelationVariety ProdCode="399001"
+									MarketCode="XSHE.MRI"
+									ProdName="深证成指" />
+				<CorrelationVariety ProdCode="399005"
+									MarketCode="XSHE.MRI"
+									ProdName="中小板指" />
+				<CorrelationVariety ProdCode="399006"
+									MarketCode="XSHE.MRI"
+									ProdName="创业板指" />
+				<CorrelationVariety ProdCode="000300"
+									MarketCode="XSHG.MRI"
+									ProdName="沪深300" />
+				<CorrelationVariety ProdCode="000905"
+									MarketCode="XSHG.MRI"
+									ProdName="中证500" />
+				<CorrelationVariety ProdCode="000852"
+									MarketCode="XSHG.MRI"
+									ProdName="中证1000" />
+			</RowVarieties>
+			<ColumnVarieties>
+				<CorrelationVariety ProdCode="000001"
+									MarketCode="XSHG.MRI"
+									ProdName="上证指数" />
+				<CorrelationVariety ProdCode="399001"
+									MarketCode="XSHE.MRI"
+									ProdName="深证成指" />
+				<CorrelationVariety ProdCode="399005"
+									MarketCode="XSHE.MRI"
+									ProdName="中小板指" />
+				<CorrelationVariety ProdCode="399006"
+									MarketCode="XSHE.MRI"
+									ProdName="创业板指" />
+				<CorrelationVariety ProdCode="000300"
+									MarketCode="XSHG.MRI"
+									ProdName="沪深300" />
+				<CorrelationVariety ProdCode="000905"
+									MarketCode="XSHG.MRI"
+									ProdName="中证500" />
+				<CorrelationVariety ProdCode="000852"
+									MarketCode="XSHG.MRI"
+									ProdName="中证1000" />
+			</ColumnVarieties>
+		</CorrelationAnalyzeTemplate>
+	</CorrelationAnalyzeTemplates>
+</AnalyzeSystemConfig>

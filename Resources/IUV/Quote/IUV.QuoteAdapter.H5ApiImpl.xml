@@ -1,0 +1,3797 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>IUV.QuoteAdapter.H5ApiImpl</name>
+    </assembly>
+    <members>
+        <member name="T:IUV.QuoteAdapter.H5ApiImpl.Common.ApiKTypeHelper">
+            <summary>
+             API的K线周期转换类
+            </summary>
+        </member>
+        <member name="M:IUV.QuoteAdapter.H5ApiImpl.Common.ApiKTypeHelper.ToApiKType(IUV.Common.Models.KLinePeriod)">
+            <summary>
+            转换适配器K线周期为API的K线周期
+            <para>注意：API当中不存在年线,因此设置为max,不存在10秒K线,因此设置为Unknown</para>
+            </summary>
+            <param name="period"></param>
+            <returns></returns>
+        </member>
+        <member name="T:IUV.QuoteAdapter.H5ApiImpl.Common.HqTypeCodeHelper">
+            <summary>
+            市场类型转换类
+            </summary>
+        </member>
+        <member name="M:IUV.QuoteAdapter.H5ApiImpl.Common.HqTypeCodeHelper.GetMarketNoByMic(System.String)">
+            <summary>
+            根据5.3MIC码获取5.0市场代码
+            </summary>
+            <param name="mic">MIC码</param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.QuoteAdapter.H5ApiImpl.Common.HqTypeCodeHelper.GetMarketMicByNo(System.Int32)">
+            <summary>
+            根据5.0市场代码获取5.3MIC码
+            </summary>
+            <param name="marketNo">5.0市场代码</param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.QuoteAdapter.H5ApiImpl.Common.HqTypeCodeHelper.GetMarketMicTypeCodeByNo(System.Int32,System.Int32)">
+            <summary>
+            根据5.0市场代码获取5.3MIC码 + hqTypeCode
+            </summary>
+            <param name="marketNo">市场代码</param>
+            <param name="codeType">分类代码</param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.QuoteAdapter.H5ApiImpl.Common.HqTypeCodeHelper.GetMarketNoByCodeType(System.String)">
+            <summary>
+            根据5.3市场代码获取50 hqTypeCode编码
+            </summary>
+            <param name="marketCodeType">市场代码+分类代码</param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.QuoteAdapter.H5ApiImpl.Common.HqTypeCodeHelper.MarketStatusChecking(System.Int32,Hundsun.Framework.Communication.MarketStatus)">
+            <summary>
+            校验该市场状态
+            <para >默认市场已经初始化好</para>
+            </summary>
+            <param name="marketNo">5.0市场代码</param>
+            <param name="mktStatus">需要校验的市场状态</param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.QuoteAdapter.H5ApiImpl.Common.HqTypeCodeHelper.MarketStatusChecking(System.String,Hundsun.Framework.Communication.MarketStatus)">
+            <summary>
+            校验该市场状态
+            <para >默认市场已经初始化好</para>
+            </summary>
+            <param name="marketCode">5.3市场代码</param>
+            <param name="mktStatus">需要校验的市场状态</param>
+            <returns></returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:IUV.QuoteAdapter.H5ApiImpl.Common.KlineDateRangeHelper.ValidateDateRange(Hundsun.Framework.Communication.KType,System.Int64,System.Int64,System.String,System.Collections.Generic.List{System.Int32},System.Collections.Generic.IList{IUV.Common.Models.TradeSection},System.Int32@,System.Int32@,System.DateTime@,System.DateTime@)" -->
+        <member name="M:IUV.QuoteAdapter.H5ApiImpl.Common.ParseHelper.ParseToMarketReference(Hundsun.Framework.Communication.IMarketOverview)">
+            <summary>
+            IMarketOverview 转换为 MarketSnap类型
+            </summary>
+            <param name="mktOverView"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.QuoteAdapter.H5ApiImpl.Common.ParseHelper.ParseToFutureData(Hundsun.Framework.Communication.IStockInfo,IUV.QuoteAdapter.H5ApiImpl.Common.SnapUpdatingMode)">
+            <summary>
+            IStockInfo 转换为Product 期货类型
+            </summary>
+            <param name="stockInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.QuoteAdapter.H5ApiImpl.Common.ParseHelper.ParseToSpotData(Hundsun.Framework.Communication.IStockInfo,IUV.QuoteAdapter.H5ApiImpl.Common.SnapUpdatingMode)">
+            <summary>
+            IStockInfo 转换为Product 现货类型
+            </summary>
+            <param name="stockInfo"></param>
+            <param name="updatingMode">回调标志位</param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.QuoteAdapter.H5ApiImpl.Common.ParseHelper.ParseToXSHOData(Hundsun.Framework.Communication.IStockInfo,IUV.QuoteAdapter.H5ApiImpl.Common.SnapUpdatingMode)">
+            <summary>
+            IStockInfo 转换为Product 个股期权
+            </summary>
+            <param name="stockInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.QuoteAdapter.H5ApiImpl.Common.ParseHelper.ParseToFutrueOptionData(Hundsun.Framework.Communication.IStockInfo,IUV.QuoteAdapter.H5ApiImpl.Common.SnapUpdatingMode)">
+            <summary>
+            IStockInfo 转换为Product 商品期权
+            </summary>
+            <param name="stockInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.QuoteAdapter.H5ApiImpl.Common.ParseHelper.ParseToNEEQData(Hundsun.Framework.Communication.IStockInfo,System.Boolean)">
+            <summary>
+            IStockInfo 转换为Product 股转市场信息
+            </summary>
+            <param name="stockInfo"></param>
+            <param name="sync"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.QuoteAdapter.H5ApiImpl.Common.ParseHelper.RealTimeInfoToSpotData(Hundsun.Framework.Communication.IStockRealTimeInfo)">
+            <summary>
+            IStockRealTimeInfo 转换为 Product类型
+            </summary>
+            <param name="stockInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="F:IUV.QuoteAdapter.H5ApiImpl.Common.SnapUpdatingMode.All">
+            <summary>
+            全数据更新
+            </summary>
+        </member>
+        <member name="F:IUV.QuoteAdapter.H5ApiImpl.Common.SnapUpdatingMode.OnlySimpleQuote">
+            <summary>
+            只更新基础信息
+            </summary>
+        </member>
+        <member name="F:IUV.QuoteAdapter.H5ApiImpl.Common.SnapUpdatingMode.OnlyBidOff">
+            <summary>
+            只更新买卖档位
+            </summary>
+        </member>
+        <member name="T:IUV.QuoteAdapter.H5ApiImpl.Common.PinYin">
+            <summary>
+            拼音帮助类
+            </summary>
+        </member>
+        <member name="F:IUV.QuoteAdapter.H5ApiImpl.Common.PinYin._charDictionary">
+            <summary>
+            汉字拼音首字母字典
+            </summary>
+        </member>
+        <member name="M:IUV.QuoteAdapter.H5ApiImpl.Common.PinYin.#cctor">
+            <summary>
+            初始化汉字拼音
+            </summary>
+        </member>
+        <member name="M:IUV.QuoteAdapter.H5ApiImpl.Common.PinYin.GetFirstPinyin(System.String)">
+            <summary>
+            汉字转化为拼音首字母组合
+            如果有多音字，则返回多个
+            </summary>
+            <param name="chinessStr">汉字</param>
+            <returns>首字母</returns>
+        </member>
+        <member name="M:IUV.QuoteAdapter.H5ApiImpl.Common.PinYin.InitCharDictionary">
+            <summary>
+            初始化汉字拼音首字母表
+            </summary>
+        </member>
+        <member name="T:IUV.QuoteAdapter.H5ApiImpl.Common.WorkingDateHelper">
+            <summary>
+            工作日时间间隔帮助类
+            </summary>
+        </member>
+        <member name="M:IUV.QuoteAdapter.H5ApiImpl.Common.WorkingDateHelper.GetTimeSpan(System.TimeSpan,System.TimeSpan,System.TimeSpan,System.TimeSpan)">
+            <summary>
+            计算时间间隔
+            </summary>
+            <param name="tsStart"></param>
+            <param name="tsEnd"></param>
+            <param name="time_start"></param>
+            <param name="time_end"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.QuoteAdapter.H5ApiImpl.Common.WorkingDateHelper.GetDateTimeSpan(System.DateTime,System.DateTime,System.TimeSpan,System.TimeSpan,System.Collections.Generic.List{System.Int32})">
+            <summary>
+            获取两日期的工作时间间隔
+            </summary>
+            <param name="dtStart"></param>
+            <param name="dtEnd"></param>
+            <param name="time_start"></param>
+            <param name="time_end"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.QuoteAdapter.H5ApiImpl.Common.WorkingDateHelper.GetDateTimeSpan(System.DateTime,System.DateTime,System.TimeSpan,System.TimeSpan,System.TimeSpan,System.TimeSpan,System.Collections.Generic.List{System.Int32})">
+            <summary>
+            获取两日期的工作时间间隔
+            </summary>
+            <param name="dtStart"></param>
+            <param name="dtEnd"></param>
+            <param name="time_start"></param>
+            <param name="time_end"></param>
+            <param name="time_start2"></param>
+            <param name="time_end2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.QuoteAdapter.H5ApiImpl.Common.WorkingDateHelper.IsWorkDay(System.DateTime,System.Collections.Generic.List{System.Int32})">
+            <summary>
+            判断是否为工作日
+            </summary>
+            <param name="dt"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.QuoteAdapter.H5ApiImpl.Common.WorkingDateHelper.GetDateTime(System.DateTime,System.TimeSpan,System.TimeSpan,System.TimeSpan,System.Collections.Generic.List{System.Int32})">
+            <summary>
+            给定时间点加上时间间隔后得出新的时间
+            </summary>
+            <param name="startDate"></param>
+            <param name="exTimeSpan"></param>
+            <param name="time_start"></param>
+            <param name="time_end"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.QuoteAdapter.H5ApiImpl.Common.WorkingDateHelper.GetDateSpan(System.DateTime,System.DateTime,System.Collections.Generic.List{System.Int32})">
+            <summary>
+            计算工作日间隔
+            </summary>
+            <param name="start"></param>
+            <param name="end"></param>
+            <returns></returns>
+        </member>
+        <member name="T:IUV.QuoteAdapter.H5ApiImpl.H5ApiConfigManager">
+            <summary>
+            H5API行情适配器配置管理类
+            </summary>
+        </member>
+        <member name="M:IUV.QuoteAdapter.H5ApiImpl.H5ApiConfigManager.GenerateSupportMkt(System.Collections.Generic.List{IUV.Adapter.Quote.Server},System.String,System.Boolean)">
+            <summary>
+            转换为Api原生xml格式文件,并且保存
+            </summary>
+            <param name="serverList"></param>
+            <param name="filePath"></param>
+            <param name="useDebugLogLevel">日志级别</param>
+        </member>
+        <member name="T:IUV.QuoteAdapter.H5ApiImpl.Config.Market">
+            <summary>
+            市场类别表
+            <para>5.3服务器请求和返回的codetype为这里的MIC.codetype,如上证指数分类类型为XSHG.MRI</para>
+            </summary>
+        </member>
+        <member name="P:IUV.QuoteAdapter.H5ApiImpl.Config.Market.CodetypeDic">
+            <summary>
+            5.3分类与5.0映射关系
+            5.3服务器请求和返回的codetype为这里的MIC.codetype
+            </summary>
+        </member>
+        <member name="P:IUV.QuoteAdapter.H5ApiImpl.Config.Market.CodeNoDic">
+            <summary>
+            5.0与5.3映射关系
+            TODO：由于5.0市场分类存在对应多个5.3分类的情况,默认使用第一个5.3市场分类
+            <para>key: 5.0市场分类编码,Value：5.3市场分类 </para>
+            </summary>
+        </member>
+        <member name="T:IUV.QuoteAdapter.H5ApiImpl.Config.Group">
+            <summary>
+            分类组
+            </summary>
+        </member>
+        <member name="F:IUV.QuoteAdapter.H5ApiImpl.ApiQuoteAdapter.trendLockObj">
+            <summary>
+            分时接口锁对象
+            </summary>
+        </member>
+        <member name="F:IUV.QuoteAdapter.H5ApiImpl.ApiQuoteAdapter.candleLockObj">
+            <summary>
+            内部K线锁对象
+            </summary>
+        </member>
+        <member name="M:IUV.QuoteAdapter.H5ApiImpl.ApiQuoteAdapter.GetTrendRealTime(System.String,System.String,System.Int32,System.Int32,System.Int32,System.Action{System.String,System.String,System.Collections.Generic.IList{IUV.Common.Models.TrendInfo}})">
+            <summary>
+            复制GetTrend接口实现
+            </summary>
+            <param name="prodCode"></param>
+            <param name="marketCode"></param>
+            <param name="date"></param>
+            <param name="dateOffset"></param>
+            <param name="minTime"></param>
+            <param name="callback"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.QuoteAdapter.H5ApiImpl.ApiQuoteAdapter.SetTrendDateTime(IUV.Common.Models.TrendInfo,System.Collections.Generic.IList{IUV.Common.Models.TradeSection},System.DateTime,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            递归设置时间日期
+            </summary>
+            <param name="trend">当前分时对象</param>
+            <param name="tradeSection">交易时间段</param>
+            <param name="dateTime">初始日期</param>
+            <param name="i">当前个数</param>
+            <param name="tradeIndex">当然交易的索引</param>
+            <param name="preTotal">之前累积的分钟数</param>
+        </member>
+        <member name="F:IUV.QuoteAdapter.H5ApiImpl.ApiQuoteAdapter.allMarketSnaps">
+            <summary>
+            H5API特有临时变量,缓存全市场的代码列表
+            </summary>
+        </member>
+        <member name="M:IUV.QuoteAdapter.H5ApiImpl.ApiQuoteAdapter.GetTradeSectionsByCache(System.String,System.String)">
+            <summary>
+            通过缓存根据证券代码和市场代码获取交易时间段
+            </summary>
+            <param name="quoteCode">股票代码</param>
+            <param name="marketCode">市场代码</param>
+            <returns>交易时间段</returns>
+        </member>
+        <member name="M:IUV.QuoteAdapter.H5ApiImpl.ApiQuoteAdapter.GetUnderlyingInfo(System.Collections.Generic.List{System.String})">
+            <summary>
+            期权标的合约查询
+            </summary>
+            <param name="micList">市场列表</param>
+            <returns>各市场的期权标的列表</returns>
+        </member>
+        <member name="M:IUV.QuoteAdapter.H5ApiImpl.ApiQuoteAdapter.GetTTypeQuotation(System.Collections.Generic.List{IUV.Common.Models.TTypeQuotationFilterParam})">
+            <summary>
+            期权T型报价合约信息查询
+            </summary>
+            <param name="filterParam">筛选条件</param>
+            <returns>T型报价信息</returns>
+        </member>
+        <member name="M:IUV.QuoteAdapter.H5ApiImpl.ApiQuoteAdapter.L2TranscationSubscribe(IUV.Common.Models.QuoteCode,System.Object,IUV.Common.Models.SubscribeType)">
+            <summary>
+            l2逐笔成交订阅
+            </summary>
+            <param name="productKey"></param>
+            <param name="targetObj"></param>
+            <param name="subType"></param>
+        </member>
+        <member name="M:IUV.QuoteAdapter.H5ApiImpl.ApiQuoteAdapter.L2OrderSubscribe(IUV.Common.Models.QuoteCode,System.Object,IUV.Common.Models.SubscribeType)">
+            <summary>
+            l2逐笔委托订阅
+            </summary>
+            <param name="productKey"></param>
+            <param name="targetObj"></param>
+            <param name="subType"></param>
+        </member>
+        <member name="M:IUV.QuoteAdapter.H5ApiImpl.ApiQuoteAdapter.GetL2Transcation(IUV.Common.Models.QuoteCode,System.Int32,System.Int32)">
+            <summary>
+            l2逐笔成交
+            </summary>
+            <param name="productKey"></param>
+            <param name="startPos"></param>
+            <param name="dataCount"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.QuoteAdapter.H5ApiImpl.ApiQuoteAdapter.GetL2Order(IUV.Common.Models.QuoteCode,System.Int32,System.Int32)">
+            <summary>
+            l2逐笔委托
+            </summary>
+            <param name="productKey"></param>
+            <param name="startPos"></param>
+            <param name="dataCount"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.QuoteAdapter.H5ApiImpl.ApiQuoteAdapter.RecvSpotSubMessage(Hundsun.Framework.Communication.IStockInfo,System.Int32,System.Int32,System.Int32[]@,System.Int32)">
+            <summary>
+            收到现货订阅消息回调函数
+            </summary>
+        </member>
+        <member name="M:IUV.QuoteAdapter.H5ApiImpl.ApiQuoteAdapter.RecvFutureSubMessage(Hundsun.Framework.Communication.IStockInfo,System.Int32,System.Int32,System.Int32[]@,System.Int32)">
+            <summary>
+            收到期货订阅消息回调函数
+            </summary>
+        </member>
+        <member name="F:IUV.QuoteAdapter.H5ApiImpl.ApiQuoteAdapter.dicNonTradingDays">
+            <summary>
+            非交易日日期字典
+            </summary>
+        </member>
+        <member name="F:IUV.QuoteAdapter.H5ApiImpl.ApiQuoteAdapter.IsConnected">
+            <summary>
+            是否已连接
+            </summary>
+        </member>
+        <member name="M:IUV.QuoteAdapter.H5ApiImpl.ApiQuoteAdapter.MarketStatusChangedAction(System.Int32,Hundsun.Framework.Communication.MarketStatus)">
+            <summary>
+            市场状态回调函数
+            </summary>
+        </member>
+        <member name="M:IUV.QuoteAdapter.H5ApiImpl.ApiQuoteAdapter.H5ApiConnect(System.Action{System.Int32,Hundsun.Framework.Communication.MarketStatus},System.Int32)">
+             <summary>
+             H5API连接
+             </summary>
+             <param name="marketStatusChangedAction">市场状态传递，建议回调函数仅将返回值保存
+             该回调里面一般只简单的展示市场状态信息，将市场信息通知出去，不建议做复杂的逻辑</param>
+            <param name="timeout">超时时间(s)</param>
+             <returns>bool</returns>
+        </member>
+        <member name="T:Hundsun.Framework.Communication.BidOffer">
+            <summary>
+            买卖档位信息
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.BidOffer.mgrBidoffer">
+            <summary>
+            买卖档信息读取接口
+            托管类型
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.BidOffer.#ctor(h5apiCharp.CH5IBidOffer)">
+            <summary>
+            初始化 BidOffer 类的实例
+            内部使用
+            </summary>
+            <param name="bidoffer">托管的买卖档信息读取接口实例</param>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.BidOffer.Levels">
+            <summary>
+            获取档位个数
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.BidOffer.GetBidInfo(System.Int32)">
+            <summary>
+            获取指定买档的信息
+            </summary>
+            <param name="levelNo">档位编号</param>
+            <returns>成功返回买档信息，失败返回null</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.BidOffer.GetOfferInfo(System.Int32)">
+            <summary>
+            获取指定卖档的信息
+            </summary>
+            <param name="levelNo">档位编号</param>
+            <returns>成功返回卖档信息，失败返回null</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.BidOffer.GetBidOffers(System.Int32@)">
+            <summary>
+            获取买卖档信息
+            按照卖3,2,1...买1,2,3的顺序返回
+            </summary>
+            <remarks>
+            2014-7-23 11:23:20
+            原来的123321方式改为321123
+            </remarks>
+            <param name="count">调用前表示需要获取档位数，调用后表示实际档位数</param>
+            <returns>成功返回买卖档信息集，失败返回null</returns>
+        </member>
+        <member name="T:Hundsun.Framework.Communication.ConnectInfo">
+            <summary>
+            连接信息
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.ConnectInfo.#ctor(h5apiCharp.CH5ConnectInfo)">
+            <summary>
+            连接信息初始化
+            </summary>
+            <param name="connectInfo">托管的连接信息操作接口实例</param>
+        </member>
+        <member name="T:Hundsun.Framework.Communication.H5ErrorNo">
+            <summary>
+            错误号
+            2012-6-18 17:11:28
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.H5ErrorNo.Initialed">
+            <summary>
+            已初始化
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.H5ErrorNo.UnInitialed">
+            <summary>
+            未初始化
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.H5ErrorNo.SubEventCountError">
+            <summary>
+            订阅事件个数需大于零
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.H5ErrorNo.SubRecvFuncError">
+            <summary>
+            传入的委托不能为空
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.H5ErrorNo.Authorized">
+            <summary>
+            已授权
+            </summary>
+        </member>
+        <member name="T:Hundsun.Framework.Communication.ServerNetStatus">
+            <summary>
+            网络状态，用于连接测速接口
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.ServerNetStatus.NET_UNREACHABLE">
+            <summary>
+            网络不可达 
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.ServerNetStatus.NET_NORMAL">
+            <summary>
+            网络正常
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.ServerNetStatus.NET_TIMEOUT">
+            <summary>
+            网络超时
+            </summary>
+        </member>
+        <member name="T:Hundsun.Framework.Communication.SubAction">
+            <summary>
+            订阅动作
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.SubAction.SUB_CANCEL">
+            <summary>
+            取消订阅
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.SubAction.SUB_ADD">
+            <summary>
+            追加式
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.SubAction.SUB_OVER">
+            <summary>
+            覆盖式
+            </summary>
+        </member>
+        <member name="T:Hundsun.Framework.Communication.SubAttribute">
+            <summary>
+            订阅属性
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.SubAttribute.ATTR_DEFAULT">
+            <summary>
+            普通订阅
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.SubAttribute.ATTR_PERSISTENT">
+            <summary>
+            持久订阅
+            </summary>
+        </member>
+        <member name="T:Hundsun.Framework.Communication.MarketStatus">
+            <summary>
+            市场状态
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.MarketStatus.MKT_LEVEL2_LOGIN_OTHER_ERROR">
+            <summary>
+            Level2登录其他错误：如用户名密码到期等，请查阅h5api日志确认
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.MarketStatus.MKT_LEVEL2_USER_MAX_ONLINE_LIMIT">
+            <summary>
+            Level2在线用户数超出现限制
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.MarketStatus.MKT_LEVEL2_USER_INFO_ERROR">
+            <summary>
+            Level2登录失败: 用户名密码错误
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.MarketStatus.MKT_FAIL">
+            <summary>
+            市场不可用(和市场对应的连接被中断,类似于MKT_CREATED)
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.MarketStatus.MKT_CREATED">
+            <summary>
+            市场刚刚创建,尚未连接
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.MarketStatus.MKT_CONNECTING">
+            <summary>
+            正在创建连接
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.MarketStatus.MKT_CONNECTED">
+            <summary>
+            和市场对应的连接已创建
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.MarketStatus.MKT_LOGINED">
+            <summary>
+            市场已登录
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.MarketStatus.MKT_INITIALIZING">
+            <summary>
+            市场正在初始化中
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.MarketStatus.MKT_GETTINGOVERVIEW">
+            <summary>
+            取市场全镜像中
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.MarketStatus.MKT_INITIALIZED">
+            <summary>
+            市场已初始化, (就绪状态)
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.MarketStatus.MKT_MAX_COUNT">
+            <summary>
+            市场状态最大个数。无业务含义，一般用于定义数组长度
+            </summary>
+        </member>
+        <member name="T:Hundsun.Framework.Communication.KType">
+            <summary>
+            K线类型
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.KType.KTYPE_UNKNOWN">
+            <summary>
+            未知
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.KType.KTYPE_MINUTE1">
+            <summary>
+            1分钟线
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.KType.KTYPE_MINUTE5">
+            <summary>
+            5分钟线
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.KType.KTYPE_MINUTE15">
+            <summary>
+            15分钟线
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.KType.KTYPE_MINUTE30">
+            <summary>
+            30分钟线
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.KType.KTYPE_MINUTE60">
+            <summary>
+            60分钟线
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.KType.KTYPE_MINUTE120">
+            <summary>
+            120分钟线
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.KType.KTYPE_DAY">
+            <summary>
+            日线
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.KType.KTYPE_WEEK">
+            <summary>
+            周线
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.KType.KTYPE_MONTH">
+            <summary>
+            月线
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.KType.KTYPE_MAX">
+            <summary>
+            最大类型
+            </summary>
+        </member>
+        <member name="T:Hundsun.Framework.Communication.ExpireStatus">
+            <summary>
+            到期状态
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.ExpireStatus.ES_FAIL">
+            <summary>
+            授权错误
+            表示在授权过程中出现了错误
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.ExpireStatus.ES_OK">
+            <summary>
+            授权成功
+            未到期且离到期日还有较长时间
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.ExpireStatus.ES_TO_EXPIRE">
+            <summary>
+            授权成功
+            将要到期但还未到期
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.ExpireStatus.ES_EXPIRED">
+            <summary>
+            授权失败
+            已经到期
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.ExpireStatus.ES_MAX_COUNT">
+            <summary>
+            最大状态个数
+            无业务含义，一般用于定义数组长度
+            </summary>
+        </member>
+        <member name="T:Hundsun.Framework.Communication.EnumApiParamType">
+            <summary>
+            SetApiParam接口的参数枚举类型
+            </summary>
+        </member>
+        <member name="T:Hundsun.Framework.Communication.SvrAddress">
+            <summary>
+            和特定市场关联的服务器信息
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.SvrAddress.#ctor">
+            <summary>
+            初始化 SvrAddress 类的实例
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.SvrAddress.#ctor(h5apiCharp.CH5tagSvrAddress)">
+            <summary>
+            初始化 SvrAddress 类的实例
+            内部使用
+            </summary>
+            <param name="h5SvrAddr">托管的行情服务器地址</param>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.SvrAddress.IP">
+            <summary>
+            ip地址
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.SvrAddress.Port">
+            <summary>
+            端口
+            </summary>
+        </member>
+        <member name="T:Hundsun.Framework.Communication.TrendUnit">
+            <summary>
+            分时单元
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.TrendUnit.#ctor">
+            <summary>
+            初始化 TrendUnit 类的实例
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.TrendUnit.#ctor(h5apiCharp.CH5TrendUnit)">
+            <summary>
+            初始化 TrendUnit 类的实例
+            内部使用
+            </summary>
+            <param name="h5TrendUnit">托管的分时单元</param>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.TrendUnit.Equals(Hundsun.Framework.Communication.TrendUnit)">
+            <summary>
+            确定指定的TrendUnit是否等于当前的TrendUnit
+            </summary>
+            <param name="toCmp">指定的TrendUnit</param>
+            <returns>相等返回true</returns>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.TrendUnit.LastPrice">
+            <summary>
+            最新价
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.TrendUnit.AveragePrice">
+            <summary>
+            均价
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.TrendUnit.DealVolume">
+            <summary>
+            成交量
+            </summary>
+        </member>
+        <member name="T:Hundsun.Framework.Communication.LevelInfo">
+            <summary>
+            档位信息
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.LevelInfo.#ctor">
+            <summary>
+            初始化 LevelInfo 类的实例
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.LevelInfo.#ctor(h5apiCharp.CH5LevelInfo)">
+            <summary>
+            初始化 LevelInfo 类的实例
+            内部使用
+            </summary>
+            <param name="h5LevelInfo">托管的档位信息</param>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.LevelInfo.Equals(Hundsun.Framework.Communication.LevelInfo)">
+            <summary>
+            确定指定的LevelInfo是否等于当前的LevelInfo
+            </summary>
+            <param name="toCmp">指定的LevelInfo</param>
+            <returns>相等返回true</returns>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.LevelInfo.Price">
+            <summary>
+            价
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.LevelInfo.Volume">
+            <summary>
+            量
+            </summary>
+        </member>
+        <member name="T:Hundsun.Framework.Communication.Kline">
+            <summary>
+            K线
+            2012-6-16 0:14:08，改为Kline
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.Kline.#ctor">
+            <summary>
+            初始化 Kline 类的实例
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.Kline.#ctor(h5apiCharp.CH5KInfo)">
+            <summary>
+            初始化 Kline 类的实例
+            内部使用
+            </summary>
+            <param name="h5KInfo">托管的Kline实例</param>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.Kline.Equals(Hundsun.Framework.Communication.Kline)">
+            <summary>
+            确定指定的KLine是否等于当前的KLine
+            </summary>
+            <param name="toCmp">指定的KLine</param>
+            <returns>相等返回true</returns>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.Kline.Time">
+            <summary>
+            时间
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.Kline.OpenPrice">
+            <summary>
+            开盘价
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.Kline.HighPrice">
+            <summary>
+            最高价
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.Kline.LowPrice">
+            <summary>
+            最低价
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.Kline.ClosePrice">
+            <summary>
+            收盘价
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.Kline.TotalVolume">
+            <summary>
+            总成交量
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.Kline.AvgPrice">
+            <summary>
+            均价
+            </summary>
+        </member>
+        <member name="T:Hundsun.Framework.Communication.ConnectTestResult">
+            <summary>
+            服务器测试返回数据
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.ConnectTestResult.#ctor">
+            <summary>
+            初始化 ConnectTestResult 类的实例
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.ConnectTestResult.IpAddress">
+            <summary>
+            IP
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.ConnectTestResult.Port">
+            <summary>
+            端口
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.ConnectTestResult.Delay">
+            <summary>
+            延时 毫秒
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.ConnectTestResult.Load">
+            <summary>
+            当前负载数
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.ConnectTestResult.TotalLoad">
+            <summary>
+            最大负载数
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.ConnectTestResult.Status">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="T:Hundsun.Framework.Communication.NEEQZSLevel">
+            <summary>
+            股转做市投资者档位信息
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.NEEQZSLevel.#ctor">
+            <summary>
+            初始化 NEEQZSLevel 类的实例
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.NEEQZSLevel.#ctor(h5apiCharp.CH5NEEQZSLevel)">
+            <summary>
+            初始化 NEEQZSLevel 类的实例
+            内部使用
+            </summary>
+            <param name="h5NEEQZSLevel">托管的档位信息</param>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.NEEQZSLevel.Equals(Hundsun.Framework.Communication.NEEQZSLevel)">
+            <summary>
+            确定指定的NEEQZSLevel是否等于当前的NEEQZSLevel
+            </summary>
+            <param name="toCmp">指定的NEEQZSLevel</param>
+            <returns>相等返回true</returns>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.NEEQZSLevel.Price">
+            <summary>
+            委托价格
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.NEEQZSLevel.Size">
+            <summary>
+            委托数量
+            </summary>
+        </member>
+        <member name="T:Hundsun.Framework.Communication.NEEQZSOrder">
+            <summary>
+            NEEQ做市商申报档位
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.NEEQZSOrder.#ctor">
+            <summary>
+            初始化 NEEQZSOrder 类的实例
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.NEEQZSOrder.#ctor(h5apiCharp.CH5NEEQZSOrder)">
+            <summary>
+            初始化 NEEQZSOrder 类的实例
+            内部使用
+            </summary>
+            <param name="h5NEEQZSOrder">托管的档位信息</param>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.NEEQZSOrder.Equals(Hundsun.Framework.Communication.NEEQZSOrder)">
+            <summary>
+            确定指定的NEEQZSOrder是否等于当前的NEEQZSOrder
+            </summary>
+            <param name="toCmp">指定的NEEQZSOrder</param>
+            <returns>相等返回true</returns>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.NEEQZSOrder.Price">
+            <summary>
+            申报价格
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.NEEQZSOrder.Size">
+            <summary>
+            申报数量
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.NEEQZSOrder.Timestamp">
+            <summary>
+            申报时间
+            </summary>
+        </member>
+        <member name="T:Hundsun.Framework.Communication.NEEQXYOrder">
+            <summary>
+            协议转让申报行情
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.NEEQXYOrder.#ctor">
+            <summary>
+            初始化 NEEQXYOrder 类的实例
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.NEEQXYOrder.#ctor(h5apiCharp.CH5NEEQXYOrder)">
+            <summary>
+            初始化 NEEQXYOrder 类的实例
+            内部使用
+            </summary>
+            <param name="h5NEEQXYOrder">托管的申报信息</param>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.NEEQXYOrder.OrderPrice">
+            <summary>
+            申报价格
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.NEEQXYOrder.OrderVolume">
+            <summary>
+            申报数量
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.NEEQXYOrder.DealNO">
+            <summary>
+            成交约定号
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.NEEQXYOrder.OrderTime">
+            <summary>
+            申报时间
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.NEEQXYOrder.Status">
+            <summary>
+            记录状态
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.NEEQXYOrder.SellSide">
+            <summary>
+            买卖方向
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.NEEQXYOrder.JYDY">
+            <summary>
+            业务单元
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.NEEQXYOrder.Reserved">
+            <summary>
+            备用标志位
+            </summary>
+        </member>
+        <member name="T:Hundsun.Framework.Communication.H5Adapter">
+            <summary>
+            H5行情适配器
+            </summary>
+            <remarks>
+            2012-11-22 15:21:41
+            需要增加多只股票订阅。。。
+            </remarks>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.H5Adapter.substockTable">
+            <summary>
+            订阅信息表
+            主要用于记录 各市场股票订阅者信息
+            {mktType, stockCode, {result, callback}}
+            股票代码为键，事件回调委托列表为值
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.H5Adapter.subYhjHQTable">
+            <summary>
+            银行间订阅信息表
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.H5Adapter._recvSubYhjhq">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.H5Adapter._onMktStatus">
+            <summary>
+            调用者传入的市场状态变化时的回调
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.H5Adapter._onExpire">
+            <summary>
+            授权状态
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.H5Adapter._recvSubStkInfo">
+            <summary>
+            调用者传入的订阅回调
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.H5Adapter.#ctor">
+            <summary>
+            初始化 H5行情适配器类 的实例
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.H5Adapter.AuthorizeApi(System.String,Hundsun.Framework.Communication.ExpireEventHandler)">
+            <summary>
+            对H5API进行授权，请确保在调用InitApi前调用此函数。只有在正确调用此函数并授权成功后才能正常使用h5api！
+            </summary>
+            <param name="licenseFile">许可授权xml文件名，如"h5apilicense.xml"</param>
+            <param name="onExpire">到期状态回调函数。此函数必须正确传入且不能为空！</param>
+            <remarks>
+            不管在什么情况下，AuthorizeApi中会马上同步回调onExpire，
+            而在AuthorizeApi函数返回后，会视授权情况异步回调onExpire。
+            授权错误:
+            expireStatus为ES_FAIL，expireDate为0，expireTip为错误描述，AuthorizeApi返回-1。
+            AuthorizeApi返回后会每隔10分钟异步回调一下onExpire，用于提醒h5api使用方能及时发现错误。
+            授权许可成功且离到期日超过一个月:
+            expireStatus为ES_OK，expireDate为实际许可到期日，expireTip为形如授权成功的字符串，AuthorizeApi返回0。
+            AuthorizeApi返回后不会再异步回调fpOnExpire。
+            授权许可成功但离到期日只有一个月:
+            expireStatus为ES_TO_EXPIRE，expireDate为实际许可到期日，expireTip为许可授权xml文件中配置的toexpiretip字符串，AuthorizeApi返回0。
+            AuthorizeApi返回后会每隔10分钟异步回调一下onExpire，用于提醒h5api使用方再次授权以使不影响正常使用。
+            授权许可到期:
+            expireStatus为ES_EXPIRED，expireDate为实际许可到期日，expireTip为许可授权xml文件中配置的expiredtip字符串，AuthorizeApi返回1。
+            AuthorizeApi返回后会每隔10分钟异步回调一下onExpire，用于提醒h5api使用方再次授权从而能再次正常使用。
+            </remarks>
+            <exception cref="T:System.ArgumentNullException">传入回调函数为空</exception>
+            <exception cref="T:Hundsun.Framework.Communication.H5Exception">已授权</exception>
+            <returns>返回值：
+            -1:		授权许可错误。表示在授权过程中出现了错误，错误描述在回调函数中提供。
+            0:		授权许可成功。
+            1:		授权许可到期。</returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Hundsun.Framework.Communication.H5Adapter.InitApi(System.String,Hundsun.Framework.Communication.MarketEventHandler,System.Int32)" -->
+        <member name="M:Hundsun.Framework.Communication.H5Adapter.ConnectTest(System.Collections.Generic.List{Hundsun.Framework.Communication.SvrAddress},System.Int32)">
+            <summary>
+            测速接口
+            </summary>
+            <param name="svrAddresses">服务器地址</param>
+            <param name="iTimeout">超时时间</param>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.H5Adapter.InitApi(System.String,Hundsun.Framework.Communication.MarketEventHandler)">
+            <summary>
+            根据配置文件, 初始化API
+            默认超时时间为1000ms
+            异常
+            H5Exception，已初始化
+            </summary>
+            <param name="cfgFile">配置文件名</param>
+            <param name="mktStatusFunc">市场状态变化时的回调函数
+            (一般来说,应用关心的是市场初始化事件)</param>
+            <returns>成功返回0，其他:	失败</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.H5Adapter.InitApi(System.String)">
+            <summary>
+            根据配置文件, 初始化API
+            默认无委托回调，超时时间为1000ms
+            异常
+            H5Exception，已初始化
+            </summary>
+            <param name="cfgFile">配置文件名</param>
+            <returns>成功返回0，其他:	失败</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.H5Adapter.SetLevel2UserInfo(System.String,System.String)">
+            <summary>
+            设置Level2用户名密码
+            </summary>
+            <param name="userName">用户名</param>
+            <param name="Password">密码</param>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.H5Adapter.SetCodeSwitchInfo(System.String)">
+            <summary>
+            配置code_switch.xml的路径
+            </summary>
+            <param name="codeSwitchFilePath">代码转换文件路径</param>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.H5Adapter.GetConnectInfoCount">
+             <summary>
+            获取有效连接个数
+             </summary>
+             <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.H5Adapter.GetConnectInfo(System.Int32)">
+            <summary>
+            获取连接信息
+            </summary>
+            <param name="index">连接序号数组下标，需和GetConnectInfoCount()配合使用</param>
+            <returns>返回指定连接信息IConnectInfo*数据NULL为失败，输入参数index应大于等于0且小于GetConnectInfoCount()</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.H5Adapter.SwitchConnAddress(System.Int32,System.Int32)">
+            <summary>
+            手动切换到指定的连接地址
+            </summary>
+            <param name="iConnectID">准备进行手动切换的连接序号</param>
+            <param name="iAddressID">需要切换到的地址序号</param>
+            <returns>返回0 表示切换成功 返回非0 表示切换失败。原因：iConnectID 应小于GetConnectInfoCount()，iAddressID应小于GetAddressCount()</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.H5Adapter.AddConnAddress(System.Int32,System.String,System.Int32)">
+            <summary>
+            添加连接的ip地址
+            </summary>
+            <param name="iConnectID">准备进行手动添加地址的连接号</param>
+            <param name="ipAddress">Ip地址</param>
+            <param name="iPort">端口号</param>
+            <returns>0 表示成功 1 表示失败，iConnectID输入应小于GetConnectInfoCount()</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.H5Adapter.ChangeConnAddress(System.Int32,System.Int32,System.String,System.Int32)">
+            <summary>
+            修改连接的指定序号的地址信息
+            </summary>
+            <param name="iConnectID"></param>
+            <param name="iAddressID"></param>
+            <param name="ipAddress"></param>
+            <param name="iPort"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.H5Adapter.UnInitApi">
+            <summary>
+            释放API占用的资源
+            异常
+            H5Exception，资源已释放
+            2012-6-7 17:49:22，去掉静态属性
+            </summary>
+            <returns>成功调用返回0，其他: 失败</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.H5Adapter.GetStockInfo(System.Int32,System.String,System.Boolean)">
+            <summary>
+            获取特定股票的信息
+            股票信息包含该股票所有的标准元数据,以及自定义结果集
+            </summary>
+            <param name="mktType">市场代码</param>
+            <param name="stkCode">股票代码</param>
+            <param name="isChangeMktType">是否需要市场类别进行转换，true：进行转换,false：不进行转换, 默认值为true</param>
+            <returns>成功返回取股票信息接口实例，失败返回null</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.H5Adapter.GetSupportMarketInfo(System.Int32,System.Int32,System.Int32@,System.Boolean)">
+            <summary>
+            获取市场概况
+            该请求是同步的, 应用会被阻塞, 一直到取得市场概要信息,
+            或者超时,或者api内部检测出错
+            </summary>
+            <param name="mktType">市场类别</param>
+            <param name="timeOut">超时时间</param>
+            <param name="errno">错误代码	0:成功	其他错误</param>
+            <param name="isChangeMktType">是否需要市场类别进行转换，true：进行转换,false：不进行转换, 默认值为true</param>
+            <returns>成功返回取市场概要信息接口实例，失败返回null</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.H5Adapter.SubStock(System.Byte,System.Int32,System.Int32,System.String,System.Int32,System.Int32[]@,Hundsun.Framework.Communication.RecvStockInfo,System.Int32,System.Boolean)">
+            <summary>
+            订阅股票信息
+            当需要服务端主推某个自定义结果集或者某个元数据时,可以订阅一个结果集编号的组合
+            只要该股票的这几个结果集中的任意一个发生变化,API就会调用注册的回调,以通知应用
+            无论是自定义结果集还是标准的内置的元数据,API都会为其分配一个ID,
+            编号定义见Constants.cs
+            异常
+            H5Exception 订阅事件个数小于1 或 传入的委托为空
+            </summary>
+            <remarks>
+            订阅事件个数需大于零，应用将自动筛选出合法的订阅事件
+            </remarks>
+            <param name="subType">分成2部分: 前3个BIT,作为订阅属性 后5个bit作为订阅动作</param>
+            <param name="regID">应用自行定义其含义,当行情变化时,
+            API回调应用注册的函数时,确保原样返回</param>
+            <param name="mktType">市场类别</param>
+            <param name="stockCode">订阅的股票</param>
+            <param name="results">订阅事件个数</param>
+            <param name="resultIds">订阅事件列表</param>
+            <param name="recvFunc">回调委托接口</param>
+            <param name="connectID">应用指定从某个连接去订阅行情,对于并不打算自行维护各个市场连接的应用来说,
+            无须传入该值,由API根据配置自动为你选择合适的连接</param>
+            <param name="isChangeMktType">是否需要市场类别进行转换，true：进行转换,false：不进行转换</param>
+            <returns>成功订阅返回0，其他：失败</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.H5Adapter.DoSubStock(Hundsun.Framework.Communication.SubAttribute,Hundsun.Framework.Communication.SubAction,System.Int32,System.Int32,System.String,System.Int32,System.Int32[]@,Hundsun.Framework.Communication.RecvStockInfo,System.Int32,System.Boolean)">
+            <summary>
+            订阅股票信息
+            </summary>
+            <param name="subAttribute">订阅属性，取值范围：0~7</param>
+            <param name="subAction">订阅动作，取值范围：0~31</param>
+            <param name="regID">应用自行定义其含义,当行情变化时,
+            API回调应用注册的函数时,确保原样返回</param>
+            <param name="mktType">市场类别</param>
+            <param name="stockCode">订阅的股票</param>
+            <param name="results">订阅事件个数</param>
+            <param name="resultIds">订阅事件列表</param>
+            <param name="recvFunc">回调委托接口</param>
+            <param name="connectID">应用指定从某个连接去订阅行情,对于并不打算自行维护各个市场连接的应用来说,
+            无须传入该值,由API根据配置自动为你选择合适的连接</param>
+            <param name="isChangeMktType">是否需要市场类别进行转换，true：进行转换,false：不进行转换</param>
+            <returns>成功订阅返回0，其他：失败</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.H5Adapter.CancelSubstock(System.Int32,System.Int32,System.String,System.Int32,System.Int32[]@,Hundsun.Framework.Communication.RecvStockInfo,System.Int32,System.Boolean)">
+            <summary>
+            取消订阅
+            </summary>
+            <param name="regID">应用自行定义其含义,当行情变化时,
+            API回调应用注册的函数时,确保原样返回</param>
+            <param name="mktType">市场类别</param>
+            <param name="stockCode">取消订阅的股票</param>
+            <param name="results">取消订阅事件个数</param>
+            <param name="resultIds">取消订阅事件列表</param>
+            <param name="recvFunc">回调委托接口</param>
+            <param name="connectID">应用指定从某个连接去订阅行情,对于并不打算自行维护各个市场连接的应用来说,
+            无须传入该值,由API根据配置自动为你选择合适的连接</param>
+            <param name="isChangeMktType">是否需要市场类别进行转换，true：进行转换,false：不进行转换</param>
+            <returns>成功取消订阅返回0，其他：失败</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.H5Adapter.SubStock(System.Byte,System.Int32,System.Int32,System.String,System.Int32,System.Int32[]@,Hundsun.Framework.Communication.RecvStockInfo,System.Boolean)">
+            <summary>
+            订阅股票信息
+            当需要服务端主推某个自定义结果集或者某个元数据时,可以订阅一个结果集编号的组合
+            只要该股票的这几个结果集中的任意一个发生变化,API就会调用注册的回调,以通知应用
+            无论是自定义结果集还是标准的内置的元数据,API都会为其分配一个ID,
+            编号定义见Constants.cs
+            异常
+            H5Exception 订阅事件个数小于1 或 传入的委托为空
+            </summary>
+            <remarks>
+            订阅事件个数需大于零，应用将自动筛选出合法的订阅事件
+            </remarks>
+            <param name="subType">分成2部分: 前3个BIT,作为订阅属性 后5个bit作为订阅动作</param>
+            <param name="regID">应用自行定义其含义,当行情变化时,
+            API回调应用注册的函数时,确保原样返回</param>
+            <param name="mktType">市场类别</param>
+            <param name="stockCode">订阅的股票</param>
+            <param name="results">订阅事件个数</param>
+            <param name="resultIds">订阅事件列表</param>
+            <param name="recvFunc">回调委托接口</param>
+            <param name="isChangeMktType">是否需要市场类别进行转换，true：进行转换,false：不进行转换</param>
+            <returns>成功订阅返回0，其他：失败</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.H5Adapter.SubStock(Hundsun.Framework.Communication.SubAttribute,Hundsun.Framework.Communication.SubAction,System.Int32,System.Int32,System.String,System.Int32,System.Int32[]@,Hundsun.Framework.Communication.RecvStockInfo,System.Int32,System.Boolean)">
+            <summary>
+            订阅股票信息
+            当需要服务端主推某个自定义结果集或者某个元数据时,可以订阅一个结果集编号的组合
+            只要该股票的这几个结果集中的任意一个发生变化,API就会调用注册的回调,以通知应用
+            无论是自定义结果集还是标准的内置的元数据,API都会为其分配一个ID,
+            编号定义见Constants.cs
+            异常
+            H5Exception 订阅事件个数小于1 或 传入的委托为空
+            </summary>
+            <remarks>
+            订阅事件个数需大于零，应用将自动筛选出合法的订阅事件
+            </remarks>
+            <param name="subAttribute">订阅属性，取值范围：0~7</param>
+            <param name="subAction">订阅动作，取值范围：0~31</param>
+            <param name="regID">应用自行定义其含义,当行情变化时,
+            API回调应用注册的函数时,确保原样返回</param>
+            <param name="mktType">市场类别</param>
+            <param name="stockCode">订阅的股票</param>
+            <param name="results">订阅事件个数</param>
+            <param name="resultIds">订阅事件列表</param>
+            <param name="recvFunc">回调委托接口</param>
+            <param name="connectID">应用指定从某个连接去订阅行情,对于并不打算自行维护各个市场连接的应用来说,
+            无须传入该值,由API根据配置自动为你选择合适的连接</param>
+            <param name="isChangeMktType">是否需要市场类别进行转换，true：进行转换,false：不进行转换</param>
+            <returns>成功订阅返回0，其他：失败</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.H5Adapter.SubStock(Hundsun.Framework.Communication.SubAttribute,Hundsun.Framework.Communication.SubAction,System.Int32,System.Int32,System.String,System.Int32,System.Int32[]@,Hundsun.Framework.Communication.RecvStockInfo,System.Boolean)">
+            <summary>
+            订阅股票信息
+            当需要服务端主推某个自定义结果集或者某个元数据时,可以订阅一个结果集编号的组合
+            只要该股票的这几个结果集中的任意一个发生变化,API就会调用注册的回调,以通知应用
+            无论是自定义结果集还是标准的内置的元数据, API都会为其分配一个ID,
+            编号定义见Constants.cs
+            异常
+            H5Exception 订阅事件个数小于1 或 传入的委托为空
+            </summary>
+            <remarks>
+            订阅事件个数需大于零，应用将自动筛选出合法的订阅事件
+            </remarks>
+            <param name="subAttribute">订阅属性，取值范围：0~7</param>
+            <param name="subAction">订阅动作，取值范围：0~31</param>
+            <param name="regID">应用自行定义其含义,当行情变化时,
+            API回调应用注册的函数时,确保原样返回</param>
+            <param name="mktType">市场类别</param>
+            <param name="stockCode">订阅的股票</param>
+            <param name="results">订阅事件个数</param>
+            <param name="resultIds">订阅事件列表</param>
+            <param name="recvFunc">回调委托接口</param>
+            <param name="isChangeMktType">是否需要市场类别进行转换，true：进行转换,false：不进行转换</param>
+            <returns>成功订阅返回0，其他：失败</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.H5Adapter.SubYHJHq(Hundsun.Framework.Communication.SubAction,System.Int32,System.Int32,Hundsun.Framework.Communication.RecvYhjHQ)">
+            <summary>
+            
+            </summary>
+            <param name="subAction"></param>
+            <param name="mktType"></param>
+            <param name="resultId"></param>
+            <param name="recvFunc"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.H5Adapter.CreatRealTimeEX">
+            <summary>
+            创建批量查询行情内存对象
+            </summary>
+            <returns>批量查询行情内存实例,可以重复使用</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.H5Adapter.GetRealTimeEx(Hundsun.Framework.Communication.IRealTimeEX,System.Int32,System.Int32,System.String[],System.Int32)">
+            <summary>
+             批量获取行情
+            </summary>
+            <param name="lpRealTimeEX">批量获取行情通过此接口返回给客户端</param>
+            <param name="iMktType">市场号</param>
+            <param name="iStockCount">请求的代码个数，不能多于5000只代码</param>
+            <param name="lpStockCodes">代码列表</param>
+            <param name="iResultid">订阅事件列表 </param>
+            <returns>0：成功。1：调用失败（市场不存在，或者请求的代码中没有有效代码）</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.H5Adapter.AddCallback(System.Int32,System.String,System.Int32,Hundsun.Framework.Communication.RecvStockInfo)">
+            <summary>
+            添加某只股票订阅回调委托方法
+            </summary>
+            <param name="stockCode">股票代码</param>
+            <param name="result">订阅事件</param>
+            <param name="recvStockInfo">回调委托方法</param>
+            <returns>返回股票当前事件订阅数</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.H5Adapter.DeleteCallback(System.Int32,System.String,System.Int32,Hundsun.Framework.Communication.RecvStockInfo)">
+            <summary>
+            移除某只股票订阅回调委托方法
+            </summary>
+            <param name="mktType">市场代码</param>
+            <param name="stockCode">股票代码</param>
+            <param name="result">订阅事件</param>
+            <param name="recvStockInfo">回调委托方法</param>
+            <returns>返回当前股票指定事件订阅数</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.H5Adapter.HasSubstock(System.Int32,System.String,System.Int32)">
+            <summary>
+            判断是否存在某股票特定事件订阅
+            </summary>
+            <param name="stockCode">股票代码</param>
+            <param name="result">事件</param>
+            <returns>存在返回true</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.H5Adapter.MktStatusCallBack(System.Int32,System.Int32,h5apiCharp.CH5enumMktStatu)">
+            <summary>
+            特定市场的状态变化通知
+            接收到通知时将回调调用者传入的委托
+            </summary>
+            <param name="iMktType">市场类别</param>
+            <param name="iConnectID">该市场对应的连接号</param>
+            <param name="mktStatus">市场状态</param>
+            <returns>返回值意义自行定义</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.H5Adapter.ExpireCallBack(h5apiCharp.CH5enumExpireStatus,System.UInt32,System.String)">
+            <summary>
+            到期状态通知
+            </summary>
+            <param name="status">到期状态</param>
+            <param name="expireDate">到期日期。格式YYYYMMDD</param>
+            <param name="expireNote">到期提示字符串</param>
+            <returns>未定义</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.H5Adapter.RecvSubStock(System.Int32,h5apiCharp.CH5IStockInfo,System.Int32,System.Int32*,System.Int32)">
+            <summary>
+            订阅回调
+            接收到订阅数据时将回调调用者传入的委托
+            </summary>
+            <param name="iRegID">应用自行定义其含义,当行情变化时,
+            API回调应用注册的函数时,确保原样返回</param>
+            <param name="stockInfo">股票信息读取接口，托管类型</param>
+            <param name="iResults">订阅事件个数</param>
+            <param name="lpResultid">订阅事件列表</param>
+            <param name="connectID">应用指定从某个连接去订阅行情,对于并不打算自行维护各个市场连接的应用来说,
+            无须传入该值,由API根据配置自动为你选择合适的连接</param>
+            <returns>成功订阅返回0，其他：失败</returns>
+        </member>
+        <member name="T:Hundsun.Framework.Communication.H5Constants">
+            <summary>
+            常量定义
+            **************************************************************** 
+            应用在使用下述的定义值时,请采用本文件定义的宏,不要自行采用数字 
+            以免后续开发期间我们更改宏定义时,应用程序需要相应修改 
+            ****************************************************************
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.H5Constants.INITAPI_WAITTIME">
+            <summary>
+            初始化等待时间
+            调用InitApi初始化后睡眠时间，ms
+            以等待数据初始化
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.H5Constants.TRADE_STOP">
+            <summary>
+            停牌
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.H5Constants.TRADE_RUNNING">
+            <summary>
+            正常交易
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.H5Constants.MKT_SH_L1">
+            <summary>
+            上海level1
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.H5Constants.MKT_SH_L2">
+            <summary>
+            上海level2
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.H5Constants.MKT_SZ_L1">
+            <summary>
+            深圳level1
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.H5Constants.MKT_SZ_L2">
+            <summary>
+            深圳level2
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.H5Constants.MKT_QH_CFFE">
+            <summary>
+            中金所期货
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.H5Constants.MKT_QH_SHFE">
+            <summary>
+            上期
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.H5Constants.MKT_QH_DLCE">
+            <summary>
+            大连商品交易所
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.H5Constants.MKT_QH_ZZCE">
+            <summary>
+            郑州商品交易所
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.H5Constants.MKT_QH_XINE">
+            <summary>
+            上海能源期货交易中心
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.H5Constants.MKT_QH_ZHHY">
+            <summary>
+            组合合约
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.H5Constants.MKT_NEEQ">
+            <summary>
+            新三板（股转）
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.H5Constants.MKT_GGQQ">
+            <summary>
+            个股期权
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.H5Constants.MKT_QQ_CFFE">
+            <summary>
+            中金所期权（股指期权）
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.H5Constants.MKT_QQ_SHFE">
+            <summary>
+            上期期权
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.H5Constants.MKT_QQ_DLCE">
+            <summary>
+            大连商品交易所期权
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.H5Constants.MKT_QQ_ZZCE">
+            <summary>
+            郑州商品交易所期权
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.H5Constants.RESULT_MARKET_OVERVIEW">
+            <summary>
+            市场概要
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.H5Constants.RESULT_MARKET_INIINFO">
+            <summary>
+            市场初始化信息
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.H5Constants.RESULT_TREND">
+            <summary>
+            基本分时
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.H5Constants.RESULT_SIMPLE_QUOTE">
+            <summary>
+            基本报价
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.H5Constants.RESULT_KLINE">
+            <summary>
+            基本K线
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.H5Constants.RESULT_BIDOFF">
+            <summary>
+            买卖档位信息
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.H5Constants.RESULT_NEEQ_ZS_LEVEL">
+            <summary>
+            股转做市投资者档位行情
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.H5Constants.RESULT_NEEQ_ZS_ORDER">
+            <summary>
+            股转做市做市商申报行情
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.H5Constants.RESULT_NEEQ_XY_ORDER">
+            <summary>
+            股转协议转让申报行情
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.H5Constants.RESULT_TREND_BSPOWER">
+            <summary>
+            分时买卖力道
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.H5Constants.RESULT_PRICE_LIST">
+            <summary>
+            分价表
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.H5Constants.RESULT_TREND_COMMON">
+            <summary>
+            通用分时
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.H5Constants.RESULT_FUTURES_">
+            <summary>
+            持仓量
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.H5Constants.RESULT_TRANSACTION1">
+            <summary>
+            分笔成交
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.H5Constants.RESULT_TRANSACTION2">
+            <summary>
+            逐笔成交
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.H5Constants.RESULT_ORDER_QUEUE">
+            <summary>
+            详细委托快照(买/卖)
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.H5Constants.RESULT_ORDER_EVENT">
+            <summary>
+            详细委托事件
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.H5Constants.FIELD_PREV_PRICE">
+            <summary>
+            昨收价
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.H5Constants.FIELD_OPEN_PRICE">
+            <summary>
+            开盘价
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.H5Constants.FIELD_HIGH_PRICE">
+            <summary>
+            最高价
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.H5Constants.FIELD_LOW_PRICE">
+            <summary>
+            最低价
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.H5Constants.FIELD_LAST_PRICE">
+            <summary>
+            现价（最新价）
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.H5Constants.FIELD_TOTAL_AMOUNT">
+            <summary>
+            总成交量
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.H5Constants.FIELD_TOTAL_VOLUM">
+            <summary>
+            总成交额
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.H5Constants.FIELD_TIMESTAMP">
+            <summary>
+            时间戳
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.H5Constants.FIELD_SIDE">
+            <summary>
+            买卖方向
+            </summary>
+        </member>
+        <member name="T:Hundsun.Framework.Communication.H5Exception">
+            <summary>
+            H5Adapter异常类
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.H5Exception.#ctor(System.Int32,System.String)">
+            <summary>
+            初始化 H5Exception 类的实例
+            </summary>
+            <param name="errorNo">错误号</param>
+            <param name="errorMsg">错误信息</param>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.H5Exception.ErrorNo">
+            <summary>
+            错误号
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.H5Exception.ErrorMsg">
+            <summary>
+            错误信息
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.H5Exception.ToString">
+            <summary>
+            将此实例的错误码错误信息转换为 "[errorNo]errorInfo" 格式的字符串
+            </summary>
+            <returns>格式化后的字符串</returns>
+        </member>
+        <member name="T:Hundsun.Framework.Communication.MarketEventHandler">
+            <summary>
+            特定市场的状态变化通知
+            这里 iMktType 和 iConnectID 一一对应, 
+            且在API的整个生命周期内, 该对应关系不会发生变化
+            </summary>
+            <param name="mktType">市场类别	见Constants.cs的定义</param>
+            <param name="connectID">该市场对应的连接号</param>
+            <param name="mktStatus">市场状态</param>
+            <备注>
+            在市场处于未就绪状态下,可以发送该市场请求,订阅,API会帮助应用缓存这些请求,
+            等市场就绪,就真正发送请求,订阅
+            所以,对于大多数应用,应用无须过分关注市场状态,除非应用程序有自己的切换逻辑,
+            如:L2VEL2市场未就绪,则转而向level1请求
+            如果,应用有这类逻辑,则必须严格关注市场状态变化消息,自行在各个市场间切换
+            </备注>
+            <修改记录>
+            2012-6-18 9:03:39，ON_MKT_STATUS改为MarketEventHandler
+            </修改记录>
+            <returns>返回值意义自行定义</returns>
+        </member>
+        <member name="T:Hundsun.Framework.Communication.ExpireEventHandler">
+            <summary>
+            到期状态通知回调委托接口
+            </summary>
+            <param name="status">到期状态</param>
+            <param name="expireDate">到期日期。格式YYYYMMDD</param>
+            <param name="expireTip">到期提示字符串</param>
+            <returns>未定义</returns>
+        </member>
+        <member name="T:Hundsun.Framework.Communication.RecvStockInfo">
+            <summary>
+            异步行情数据获取时的回调委托接口
+            异步数据返回时可以使用stockInfo取股票信息接口
+            获取对应的元数据
+            </summary>
+            <remarks>
+            创建时间：2012-5-18 10:54:08
+            </remarks>
+            <param name="stockInfo">取股票信息接口</param>
+            <param name="regID">应用自行定义其含义,当行情变化时,
+            API回调应用注册的函数时,确保原样返回</param>
+            <param name="results">订阅事件个数</param>
+            <param name="resultId">订阅事件列表</param>
+            <param name="connectID">指定从某个连接去获取数据</param>
+            <returns>返回值意义保留</returns>
+        </member>
+        <member name="T:Hundsun.Framework.Communication.RecvYhjHQ">
+            <summary>
+            
+            </summary>
+            <param name="mktType"></param>
+            <param name="resultId"></param>
+            <param name="lpStockInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Hundsun.Framework.Communication.ChangeMarketTypeHandler">
+            <summary>
+            市场类别转换委托
+            </summary>
+            <param name="sourceMarketType">源市场代码</param>
+            <returns>转换后的市场代码，即行情服务器的原始市场代码</returns>
+        </member>
+        <member name="T:Hundsun.Framework.Communication.IH5Adapter">
+            <summary>
+            h5行情适配器接口
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.IH5Adapter.ChangeMarketTypeEvent">
+            <summary>
+            市场类别转换委托属性
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.IH5Adapter.AuthorizeApi(System.String,Hundsun.Framework.Communication.ExpireEventHandler)">
+            <summary>
+            对H5API进行授权，请确保在调用InitApi前调用此函数。只有在正确调用此函数并授权成功后才能正常使用h5api！
+            </summary>
+            <param name="licenseFile">许可授权xml文件名，如"h5apilicense.xml"</param>
+            <param name="onExpire">到期状态回调函数。此函数必须正确传入且不能为空！</param>
+            <remarks>
+            不管在什么情况下，AuthorizeApi中会马上同步回调onExpire，
+            而在AuthorizeApi函数返回后，会视授权情况异步回调onExpire。
+            授权错误:
+            expireStatus为ES_FAIL，expireDate为0，expireTip为错误描述，AuthorizeApi返回-1。
+            AuthorizeApi返回后会每隔10分钟异步回调一下onExpire，用于提醒h5api使用方能及时发现错误。
+            授权许可成功且离到期日超过一个月:
+            expireStatus为ES_OK，expireDate为实际许可到期日，expireTip为形如授权成功的字符串，AuthorizeApi返回0。
+            AuthorizeApi返回后不会再异步回调fpOnExpire。
+            授权许可成功但离到期日只有一个月:
+            expireStatus为ES_TO_EXPIRE，expireDate为实际许可到期日，expireTip为许可授权xml文件中配置的toexpiretip字符串，AuthorizeApi返回0。
+            AuthorizeApi返回后会每隔10分钟异步回调一下onExpire，用于提醒h5api使用方再次授权以使不影响正常使用。
+            授权许可到期:
+            expireStatus为ES_EXPIRED，expireDate为实际许可到期日，expireTip为许可授权xml文件中配置的expiredtip字符串，AuthorizeApi返回1。
+            AuthorizeApi返回后会每隔10分钟异步回调一下onExpire，用于提醒h5api使用方再次授权从而能再次正常使用。
+            </remarks>
+            <exception cref="T:System.ArgumentNullException">传入回调函数为空</exception>
+            <exception cref="T:Hundsun.Framework.Communication.H5Exception">已授权</exception>
+            <returns>返回值：
+            -1:		授权许可错误。表示在授权过程中出现了错误，错误描述在回调函数中提供。
+            0:		授权许可成功。
+            1:		授权许可到期。</returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Hundsun.Framework.Communication.IH5Adapter.InitApi(System.String,Hundsun.Framework.Communication.MarketEventHandler,System.Int32)" -->
+        <member name="M:Hundsun.Framework.Communication.IH5Adapter.InitApi(System.String,Hundsun.Framework.Communication.MarketEventHandler)">
+            <summary>
+            根据配置文件, 初始化API
+            默认超时时间为1000ms
+            异常
+            H5Exception，已初始化
+            </summary>
+            <param name="cfgFile">配置文件名</param>
+            <param name="mktStatusFunc">市场状态变化时的回调函数
+            (一般来说,应用关心的是市场初始化事件)</param>
+            <returns>成功返回0，其他:	失败</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.IH5Adapter.InitApi(System.String)">
+            <summary>
+            根据配置文件, 初始化API
+            默认无委托回调，超时时间为1000ms
+            异常
+            H5Exception，已初始化
+            </summary>
+            <param name="cfgFile">配置文件名</param>
+            <returns>成功返回0，其他:	失败</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.IH5Adapter.SetLevel2UserInfo(System.String,System.String)">
+            <summary>
+            设置Level2用户名密码
+            </summary>
+            <param name="userName">用户名</param>
+            <param name="Password">密码</param>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.IH5Adapter.SetCodeSwitchInfo(System.String)">
+            <summary>
+            配置code_switch.xml的路径
+            </summary>
+            <param name="codeSwitchFilePath">代码转换文件路径</param>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.IH5Adapter.UnInitApi">
+            <summary>
+            释放API占用的资源
+            异常
+            H5Exception，资源已释放
+            2012-6-7 17:49:22，去掉静态属性
+            </summary>
+            <returns>成功调用返回0，其他: 失败</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.IH5Adapter.GetStockInfo(System.Int32,System.String,System.Boolean)">
+            <summary>
+            获取特定股票的信息
+            股票信息包含该股票所有的标准元数据,以及自定义结果集
+            </summary>
+            <param name="mktType">市场代码</param>
+            <param name="stkCode">股票代码</param>
+            <param name="isChangeMktType">是否需要市场类别进行转换，true代表进行转换,false代表不进行转换</param>
+            <returns>成功返回取股票信息接口实例，失败返回null</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.IH5Adapter.GetSupportMarketInfo(System.Int32,System.Int32,System.Int32@,System.Boolean)">
+            <summary>
+            获取市场概况
+            该请求是同步的, 应用会被阻塞, 一直到取得市场概要信息,
+            或者超时,或者api内部检测出错
+            </summary>
+            <param name="mktType">市场类别</param>
+            <param name="timeOut">超时时间</param>
+            <param name="errno">错误代码	0:成功	其他错误</param>
+            <param name="isChangeMktType">是否需要市场类别进行转换，true：进行转换,false：不进行转换</param>
+            <returns>成功返回取市场概要信息接口实例，失败返回null</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.IH5Adapter.SubStock(System.Byte,System.Int32,System.Int32,System.String,System.Int32,System.Int32[]@,Hundsun.Framework.Communication.RecvStockInfo,System.Int32,System.Boolean)">
+            <summary>
+            订阅股票信息
+            当需要服务端主推某个自定义结果集或者某个元数据时,可以订阅一个结果集编号的组合
+            只要该股票的这几个结果集中的任意一个发生变化,API就会调用注册的回调,以通知应用
+            无论是自定义结果集还是标准的内置的元数据,API都会为其分配一个ID,
+            编号定义见Constants.cs
+            异常
+            H5Exception 订阅事件个数小于1 或 传入的委托为空
+            </summary>
+            <remarks>
+            订阅事件个数需大于零，应用将自动筛选出合法的订阅事件
+            </remarks>
+            <param name="subType">分成2部分: 前3个BIT,作为订阅属性 后5个bit作为订阅动作</param>
+            <param name="regID">应用自行定义其含义,当行情变化时,
+            API回调应用注册的函数时,确保原样返回</param>
+            <param name="mktType">市场类别</param>
+            <param name="stockCode">订阅的股票</param>
+            <param name="results">订阅事件个数</param>
+            <param name="resultIds">订阅事件列表</param>
+            <param name="recvFunc">回调委托接口</param>
+            <param name="connectID">应用指定从某个连接去订阅行情,对于并不打算自行维护各个市场连接的应用来说,
+            无须传入该值,由API根据配置自动为你选择合适的连接</param>
+            <param name="isChangeMktType">是否需要市场类别进行转换，true：进行转换,false：不进行转换</param>
+            <returns>成功订阅返回0，其他：失败</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.IH5Adapter.SubYHJHq(Hundsun.Framework.Communication.SubAction,System.Int32,System.Int32,Hundsun.Framework.Communication.RecvYhjHQ)">
+            <summary>
+            
+            </summary>
+            <param name="subAction"></param>
+            <param name="mktType"></param>
+            <param name="resultId"></param>
+            <param name="recvFunc"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.IH5Adapter.SubStock(System.Byte,System.Int32,System.Int32,System.String,System.Int32,System.Int32[]@,Hundsun.Framework.Communication.RecvStockInfo,System.Boolean)">
+            <summary>
+            订阅股票信息
+            当需要服务端主推某个自定义结果集或者某个元数据时,可以订阅一个结果集编号的组合
+            只要该股票的这几个结果集中的任意一个发生变化,API就会调用注册的回调,以通知应用
+            无论是自定义结果集还是标准的内置的元数据,API都会为其分配一个ID,
+            编号定义见Constants.cs
+            异常
+            H5Exception 订阅事件个数小于1 或 传入的委托为空
+            </summary>
+            <remarks>
+            订阅事件个数需大于零，应用将自动筛选出合法的订阅事件
+            </remarks>
+            <param name="subType">分成2部分: 前3个BIT,作为订阅属性 后5个bit作为订阅动作</param>
+            <param name="regID">应用自行定义其含义,当行情变化时,
+            API回调应用注册的函数时,确保原样返回</param>
+            <param name="mktType">市场类别</param>
+            <param name="stockCode">订阅的股票</param>
+            <param name="results">订阅事件个数</param>
+            <param name="resultIds">订阅事件列表</param>
+            <param name="recvFunc">回调委托接口</param>
+            <param name="isChangeMktType">是否需要市场类别进行转换，true：进行转换,false：不进行转换</param>
+            <returns>成功订阅返回0，其他：失败</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.IH5Adapter.SubStock(Hundsun.Framework.Communication.SubAttribute,Hundsun.Framework.Communication.SubAction,System.Int32,System.Int32,System.String,System.Int32,System.Int32[]@,Hundsun.Framework.Communication.RecvStockInfo,System.Int32,System.Boolean)">
+            <summary>
+            订阅股票信息
+            当需要服务端主推某个自定义结果集或者某个元数据时,可以订阅一个结果集编号的组合
+            只要该股票的这几个结果集中的任意一个发生变化,API就会调用注册的回调,以通知应用
+            无论是自定义结果集还是标准的内置的元数据,API都会为其分配一个ID,
+            编号定义见Constants.cs
+            异常
+            H5Exception 订阅事件个数小于1 或 传入的委托为空
+            </summary>
+            <remarks>
+            订阅事件个数需大于零，应用将自动筛选出合法的订阅事件
+            </remarks>
+            <param name="subAttribute">订阅属性，取值范围：0~7</param>
+            <param name="subAction">订阅动作，取值范围：0~31</param>
+            <param name="regID">应用自行定义其含义,当行情变化时,
+            API回调应用注册的函数时,确保原样返回</param>
+            <param name="mktType">市场类别</param>
+            <param name="stockCode">订阅的股票</param>
+            <param name="results">订阅事件个数</param>
+            <param name="resultIds">订阅事件列表</param>
+            <param name="recvFunc">回调委托接口</param>
+            <param name="connectID">应用指定从某个连接去订阅行情,对于并不打算自行维护各个市场连接的应用来说,
+            无须传入该值,由API根据配置自动为你选择合适的连接</param>
+            <param name="isChangeMktType">是否需要市场类别进行转换，true：进行转换,false：不进行转换</param>
+            <returns>成功订阅返回0，其他：失败</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.IH5Adapter.SubStock(Hundsun.Framework.Communication.SubAttribute,Hundsun.Framework.Communication.SubAction,System.Int32,System.Int32,System.String,System.Int32,System.Int32[]@,Hundsun.Framework.Communication.RecvStockInfo,System.Boolean)">
+            <summary>
+            订阅股票信息
+            当需要服务端主推某个自定义结果集或者某个元数据时,可以订阅一个结果集编号的组合
+            只要该股票的这几个结果集中的任意一个发生变化,API就会调用注册的回调,以通知应用
+            无论是自定义结果集还是标准的内置的元数据, API都会为其分配一个ID,
+            编号定义见Constants.cs
+            异常
+            H5Exception 订阅事件个数小于1 或 传入的委托为空
+            </summary>
+            <remarks>
+            订阅事件个数需大于零，应用将自动筛选出合法的订阅事件
+            </remarks>
+            <param name="subAttribute">订阅属性，取值范围：0~7</param>
+            <param name="subAction">订阅动作，取值范围：0~31</param>
+            <param name="regID">应用自行定义其含义,当行情变化时,
+            API回调应用注册的函数时,确保原样返回</param>
+            <param name="mktType">市场类别</param>
+            <param name="stockCode">订阅的股票</param>
+            <param name="results">订阅事件个数</param>
+            <param name="resultIds">订阅事件列表</param>
+            <param name="recvFunc">回调委托接口</param>
+            <param name="isChangeMktType">是否需要市场类别进行转换，true：进行转换,false：不进行转换</param>
+            <returns>成功订阅返回0，其他：失败</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.IH5Adapter.CreatRealTimeEX">
+            <summary>
+            创建批量查询行情内存
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.IH5Adapter.GetRealTimeEx(Hundsun.Framework.Communication.IRealTimeEX,System.Int32,System.Int32,System.String[],System.Int32)">
+            <summary>
+             批量获取行情
+            </summary>
+            <param name="lpRealTimeEX">批量获取行情通过此接口返回给客户端</param>
+            <param name="iMktType">市场号</param>
+            <param name="iStockCount">请求的代码个数，不能多于5000只代码</param>
+            <param name="lpStockCodes">代码列表</param>
+            <param name="iResultid">订阅事件列表 </param>
+            <returns>0：成功。1：调用失败（市场不存在，或者请求的代码中没有有效代码）</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.IH5Adapter.GetConnectInfoCount">
+             <summary>
+            获取有效连接个数
+             </summary>
+             <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.IH5Adapter.GetConnectInfo(System.Int32)">
+            <summary>
+            获取连接信息
+            </summary>
+            <param name="index">连接序号数组下标，需和GetConnectInfoCount()配合使用</param>
+            <returns>返回指定连接信息IConnectInfo*数据NULL为失败，输入参数index应大于等于0且小于GetConnectInfoCount()</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.IH5Adapter.SwitchConnAddress(System.Int32,System.Int32)">
+            <summary>
+            手动切换到指定的连接地址
+            </summary>
+            <param name="iConnectID">准备进行手动切换的连接序号</param>
+            <param name="iAddressID">需要切换到的地址序号</param>
+            <returns>返回0 表示切换成功 返回非0 表示切换失败。原因：iConnectID 应小于GetConnectInfoCount()，iAddressID应小于GetAddressCount()</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.IH5Adapter.AddConnAddress(System.Int32,System.String,System.Int32)">
+            <summary>
+            添加连接的ip地址
+            </summary>
+            <param name="iConnectID">准备进行手动添加地址的连接号</param>
+            <param name="ipAddress">Ip地址</param>
+            <param name="iPort">端口号</param>
+            <returns>0 表示成功 1 表示失败，iConnectID输入应小于GetConnectInfoCount()</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.IH5Adapter.ChangeConnAddress(System.Int32,System.Int32,System.String,System.Int32)">
+            <summary>
+            修改连接的指定序号的地址信息
+            </summary>
+            <param name="iConnectID"></param>
+            <param name="iAddressID"></param>
+            <param name="ipAddress"></param>
+            <param name="iPort"></param>
+            <returns>0 表示成功 1 表示失败</returns>
+        </member>
+        <member name="T:Hundsun.Framework.Communication.IStockInfo">
+            <summary>
+            取特定股票信息接口
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.IStockInfo.GetInItInfo">
+            <summary>
+            取股票初始化信息, 同步调用
+            </summary>
+            <returns>成功返回取股票初始化信息接口实例，失败返回null</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.IStockInfo.GetSimpleTrendInfo(Hundsun.Framework.Communication.RecvStockInfo,System.Int32)">
+            <summary>
+            获取简单分时
+            </summary>
+            <param name="recvFunc">回调委托接口</param>
+            <param name="iConnectID">指定从某个连接去获取数据</param>
+            <returns>成功返回取分时信息接口实例，失败返回null</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.IStockInfo.GetHisSimpleTrendInfo(System.String,Hundsun.Framework.Communication.RecvStockInfo,System.Int32)">
+            <summary>
+            获取历史简单分时
+            </summary>
+            <param name="date">日期，如: 20120505</param>
+            <param name="recvFunc">回调委托接口</param>
+            <param name="iConnectID">指定从某个连接去获取数据</param>
+            <returns>成功返回取分时信息接口实例，失败返回null</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.IStockInfo.GetSimpleQuoteInfo(Hundsun.Framework.Communication.RecvStockInfo,System.Int32)">
+            <summary>
+            获取简单报价信息
+            </summary>
+            <param name="recvFunc">回调委托接口</param>
+            <param name="iConnectID">指定从某个连接去获取数据</param>
+            <returns>成功返回取简单报价信息接口实例，失败返回null</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.IStockInfo.GetBidOffer(Hundsun.Framework.Communication.RecvStockInfo,System.Int32)">
+            <summary>
+            获取买卖档位信息
+            </summary>
+            <param name="recvFunc">回调委托接口</param>
+            <param name="iConnectID">指定从某个连接去获取数据</param>
+            <returns>成功返回取买卖档信息接口实例，失败返回null</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.IStockInfo.GetKInfo(Hundsun.Framework.Communication.KType,System.Int32,System.Int32,System.Int32@,Hundsun.Framework.Communication.RecvStockInfo,System.Int32)">
+            <summary>
+            获取K线信息
+            </summary>
+            <param name="kType">K线类型 如 1分钟线 5分钟线该值作为枚举类型定义,只有请求/应答,没有订阅</param>
+            <param name="deriction">查询方向   0:往前查	1:往后查</param>
+            <param name="offset">开始查询的偏移,0作为一个特殊的值,当往前查时,
+            表示从最近一根线往前查,往后查时,表示从第一根线往后查</param>
+            <param name="number">调用时表示需要查询多少根线，返回时表明查询到多少根线</param>
+            <param name="recvFunc">回调委托接口</param>
+            <param name="connectID">指定从某个连接去获取数据</param>
+            <returns>成功返回取K线信息接口实例，失败返回null</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.IStockInfo.GetSimpleTrendCache">
+                    当前缓存中数据，不会与行情服务器交互，不能在异步回调函数或订阅回调函数之外使用此接口
+                    *
+            <summary>
+            获得分时快照
+            对应事件 RESULT_TREND=2;基本分时
+            </summary>
+            <returns>分时快照</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.IStockInfo.GetKLineCache">
+            <summary>
+            获取k线快照
+            对应事件 RESULT_KLINE=4;基本K线
+            </summary>
+            <returns>k线快照</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.IStockInfo.GetBidOfferCache">
+            <summary>
+            获得买卖档位信息快照
+            对应事件RESULT_BIDOFF=5;买卖档位信息
+            </summary>
+            <returns>买卖档位信息快照</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.IStockInfo.GetSimpleQuoteInfoCache">
+            <summary>
+            获得简单报价信息快照
+            对应事件RESULT_SIMPLE_QUOTE=3;基本报价
+            </summary>
+            <returns>简单报价信息快照</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.IStockInfo.GetNEEQZSLevelQuote(Hundsun.Framework.Communication.RecvStockInfo,System.Int32)">
+            <summary>
+            获取做市投资者档位行情
+            </summary>
+            <param name="recvFunc">回调委托接口</param>
+            <param name="iConnectID">指定从某个连接去获取数据</param>
+            <returns>成功返回取买卖档信息接口实例，失败返回null</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.IStockInfo.GetNEEQZSLevelQuoteCache">
+            <summary>
+            获取做市投资者档位行情快照
+            对应事件RESULT_NEEQ_ZS_LEVEL=6;做市投资者档位行情信息
+            </summary>
+            <returns>做市投资者档位行情快照</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.IStockInfo.GetNEEQZSOrderQuote(Hundsun.Framework.Communication.RecvStockInfo,System.Int32)">
+            <summary>
+            获取做市商申报行情
+            </summary>
+            <param name="recvFunc">回调委托接口</param>
+            <param name="iConnectID">指定从某个连接去获取数据</param>
+            <returns>成功返回取做市商申报行情接口实例，失败返回null</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.IStockInfo.GetNEEQZSOrderQuoteCache">
+            <summary>
+            获取做市商申报行情快照
+            对应事件RESULT_NEEQ_ZS_ORDER=7;做市商申报行情信息
+            </summary>
+            <returns>做市商申报行情快照</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.IStockInfo.GetNEEQXYOrderQuote(Hundsun.Framework.Communication.RecvStockInfo,System.Int32)">
+            <summary>
+            获取协议转让申报行情
+            </summary>
+            <param name="recvFunc">回调委托接口</param>
+            <param name="iConnectID">指定从某个连接去获取数据</param>
+            <returns>成功返回取协议转让申报行情接口实例，失败返回null</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.IStockInfo.GetNEEQXYOrderQuoteCache">
+            <summary>
+            获取协议转让申报行情快照
+            对应事件RESULT_NEEQ_XY_ORDER=8;协议转让申报行情信息
+            </summary>
+            <returns>协议转让申报行情</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.IStockInfo.GetNEEQZSOrderLevelQuote(Hundsun.Framework.Communication.RecvStockInfo,System.Int32)">
+            <summary>
+            获取股转做市做市商申报行情
+            </summary>
+            <param name="recvFunc">回调委托接口</param>
+            <param name="iConnectID">指定从某个连接去获取数据</param>
+            <returns>成功返回取股转做市做市商申报行情接口实例，失败返回null</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.IStockInfo.GetNEEQZSOrderLevelQuoteCache">
+            <summary>
+            获取股转做市做市商申报行情快照
+            对应事件RESULT_NEEQ_ZS_ORDER_LEVEL=12;股转做市做市商申报行情
+            </summary>
+            <returns>股转做市做市商申报行情</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.IStockInfo.GetByCloseBlockTrade(Hundsun.Framework.Communication.RecvStockInfo,System.Int32)">
+            <summary>
+            获取以收盘价交易的盘后定价大宗交易申报行情
+            </summary>
+            <param name="recvFunc">回调委托接口</param>
+            <param name="iConnectID">指定从某个连接去获取数据</param>
+            <returns>成功返回取以收盘价交易的盘后定价大宗交易申报行情接口实例，失败返回null</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.IStockInfo.GetRealTimeByCloseCache">
+            <summary>
+            获取以收盘价交易的盘后定价大宗交易申报行情快照
+            对应事件RESULT_BYCLOSE_BLOCKTRADING_REALTIME = 15;以收盘价交易的盘后定价大宗交易申报行情
+            </summary>
+            <returns>以收盘价交易的盘后定价大宗交易申报行情</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.IStockInfo.GetByAverageBlockTrade(Hundsun.Framework.Communication.RecvStockInfo,System.Int32)">
+            <summary>
+            获取以加权平均价交易的盘后定价大宗交易申报行情
+            </summary>
+            <param name="recvFunc">回调委托接口</param>
+            <param name="iConnectID">指定从某个连接去获取数据</param>
+            <returns>成功返回取以加权平均价交易的盘后定价大宗交易申报行情接口实例，失败返回null</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.IStockInfo.GetRealTimeByAverageCache">
+            <summary>
+            获取以加权平均价交易的盘后定价大宗交易申报行情快照
+            对应事件RESULT_BYAVERAGE_BLOCKTRADING_REALTIME = 16;以加权平均价交易的盘后定价大宗交易申报行情
+            </summary>
+            <returns>以加权平均价交易的盘后定价大宗交易申报行情</returns>
+        </member>
+        <member name="T:Hundsun.Framework.Communication.IRealTimeEX">
+            <summary>
+            批量行情缓存接口
+            </summary>
+            <remarks>
+            #20180409#，cj，2018-4-9 18:23:33
+            继承自IDisposable接口
+            </remarks>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.IRealTimeEX.StockRealTimeInfoList">
+            <summary>
+            批量行情列表
+            </summary>
+        </member>
+        <member name="T:Hundsun.Framework.Communication.IStockRealTimeInfo">
+            <summary>
+            批量行情具体接口
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.IStockRealTimeInfo.MarketType">
+            <summary>
+            获取市场类别
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.IStockRealTimeInfo.StockCode">
+            <summary>
+            获取股票代码
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.IStockRealTimeInfo.GetSimpleQuoteInfo">
+            <summary>
+            获取简单报价信息
+            </summary>
+            <returns>成功返回取简单报价信息接口实例，失败返回null</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.IStockRealTimeInfo.GetBidOffer">
+            <summary>
+            获取买卖档位信息
+            </summary>
+            <returns>成功返回取买卖档信息接口实例，失败返回null</returns>
+        </member>
+        <member name="T:Hundsun.Framework.Communication.IConnectInfo">
+            <summary>
+            连接信息具体接口
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.IConnectInfo.GetConnectID">
+            <summary>
+            获取连接的连接号
+            </summary>
+            <returns>返回该连接的连接号</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.IConnectInfo.GetMarketCount">
+            <summary>
+            获取连接配置的有效市场总数
+            </summary>
+            <returns>返回该连接配置的市场有效个数</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.IConnectInfo.GetMarket(System.Int32)">
+            <summary>
+            获取连接配置的市场代码
+            </summary>
+            <returns>返回相应索引号的市场代码</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.IConnectInfo.GetAddressCount">
+            <summary>
+            获取连接配置的地址总数
+            </summary>
+            <returns>返回该连接配置的地址总数</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.IConnectInfo.GetConnAddress(System.Int32,Hundsun.Framework.Communication.SvrAddress)">
+            <summary>
+            查询连接的地址信息
+            </summary>
+            <param name="iAddressID">要查询配置地址信息的序号</param>
+            <param name="svrAddress">地址信息对象</param>
+            <returns>-1时为失败， 0表示成功</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.IConnectInfo.GetCurrentAddressID">
+            <summary>
+            获取连接的当前所连地址的id
+            </summary>
+            <returns>返回当前所连地址的id</returns>
+        </member>
+        <member name="T:Hundsun.Framework.Communication.IStockInitInfo">
+            <summary>
+            取股票初始化信息接口
+            </summary>
+            <修改记录>
+            2012-6-16 12:14:30，所有方法采用属性替代之
+            </修改记录>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.IStockInitInfo.StockCode">
+            <summary>
+            获取股票代码
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.IStockInitInfo.StockName">
+            <summary>
+            获取股票名字
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.IStockInitInfo.PrevPrice">
+            <summary>
+            获取昨收盘
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.IStockInitInfo.StockStatus">
+            <summary>
+            获取交易状态
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.IStockInitInfo.CodeType">
+            <summary>
+            获取股票类型
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.IStockInitInfo.MarketType">
+            <summary>
+            获取市场类别
+            </summary>
+        </member>
+        <member name="T:Hundsun.Framework.Communication.IMarketOverview">
+            <summary>
+            取市场概要信息接口
+            </summary>
+            <修改记录>
+            2012-6-16 12:09:09，所有无参方法采用属性替代之
+            2012年8月19日22:24:29
+            MarketState改名为MarketStatus
+            增加GetStockInitInfo
+            </修改记录>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.IMarketOverview.MarketStatus">
+            <summary>
+            获取市场状态	
+            0:	 市场信息尚未获取,也就是说API目前还没有该市场信息,不能操作请稍等
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.IMarketOverview.MarketType">
+            <summary>
+            获取市场代码
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.IMarketOverview.Checksum">
+            <summary>
+            获取市场信息校验和, 应用必须判断当前校验和是否一致
+            暂时未实现
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.IMarketOverview.TradeDate">
+            <summary>
+            获取交易日期
+            暂时不支持
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.IMarketOverview.MarketTime">
+            <summary>
+            获取当前交易时间
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.IMarketOverview.MktSvrCount">
+            <summary>
+            获取该市场对应的上级服务器个数
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.IMarketOverview.TotalCount">
+            <summary>
+            获取股票代码个数
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.IMarketOverview.GetMktSvrInfo(System.Int32)">
+            <summary>
+            获取市场对应的服务器地址
+            </summary>
+            <param name="index">市场索引</param>
+            <returns>成功返回服务器地址，失败返回null</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.IMarketOverview.GetStockInitInfo(System.Int32)">
+            <summary>
+            获取市场下指定股票的初始化信息
+            </summary>
+            <param name="index">市场股票索引</param>
+            <returns>当前市场下指定股票的初始化信息</returns>
+        </member>
+        <member name="T:Hundsun.Framework.Communication.IBidOffer">
+            <summary>
+            取买卖档信息接口
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.IBidOffer.Levels">
+            <summary>
+            获取档位个数
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.IBidOffer.GetBidInfo(System.Int32)">
+            <summary>
+            获取指定买档的信息
+            </summary>
+            <param name="levelNo">档位编号</param>
+            <returns>成功返回买档信息，失败返回null</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.IBidOffer.GetOfferInfo(System.Int32)">
+            <summary>
+            获取指定卖档的信息
+            </summary>
+            <param name="levelNo">档位编号</param>
+            <returns>成功返回卖档信息，失败返回null</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.IBidOffer.GetBidOffers(System.Int32@)">
+            <summary>
+            取买卖档信息
+            按照卖3,2,1...买1,2,3的顺序返回
+            </summary>
+            <param name="count">调用前表示需要获取档位数，调用后表示实际档位数</param>
+            <returns>成功返回买卖档信息集，失败返回null</returns>
+        </member>
+        <member name="T:Hundsun.Framework.Communication.ISimpleQuote">
+            <summary>
+            取简单报价信息接口
+            </summary>
+            <修改记录>
+            2012-6-16 12:02:08，所有方法采用属性替代之
+            2012-8-19 22:33:55，CurrentTimes改名为CurrentMinute
+            </修改记录>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.ISimpleQuote.StockStatus">
+            <summary>
+            获取股票状态
+            0:正常 1:停牌
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.ISimpleQuote.OpenPrice">
+            <summary>
+            获取开盘价
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.ISimpleQuote.HighPrice">
+            <summary>
+            获取最高价
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.ISimpleQuote.LowPrice">
+            <summary>
+            获取最低价
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.ISimpleQuote.LastPrice">
+            <summary>
+            获取最新价
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.ISimpleQuote.PrevPrice">
+            <summary>
+            获取昨收价
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.ISimpleQuote.UpPrice">
+            <summary>
+            获取涨停价
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.ISimpleQuote.DownPrice">
+            <summary>
+            获取跌停价
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.ISimpleQuote.AvgPrice">
+            <summary>
+            获取均价
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.ISimpleQuote.Volume">
+            <summary>
+            获取成交量
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.ISimpleQuote.Amount">
+            <summary>
+            获取成交额
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.ISimpleQuote.CurrentMinute">
+            <summary>
+            获取当前分钟数
+            每交易日有240分钟
+            9:30~11:30 对应 1~120
+            13:30~15:30 对应 121~240
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.ISimpleQuote.CurrentSecond">
+            <summary>
+            获取当前分钟内第几秒
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.ISimpleQuote.Timestamp">
+            <summary>
+            获取行情时间戳
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.ISimpleQuote.PreJieSuanPrice">
+            <summary>
+            获取前结算价（仅期货用）
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.ISimpleQuote.JieSuanPrice">
+            <summary>
+            获取结算价（仅期货用）
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.ISimpleQuote.Position">
+            <summary>
+            获取持仓量
+            仅期货和个股期权使用
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.ISimpleQuote.Hand">
+            <summary>
+            获取股票每手股数 或 期货合约乘数
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.ISimpleQuote.TotalBuy">
+            <summary>
+            获取总买量
+            目前仅支持组合合约
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.ISimpleQuote.TotalSell">
+            <summary>
+            获取总卖量
+            目前仅支持组合合约
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.ISimpleQuote.AutionPrice">
+            <summary>
+            获取动态参考价
+            仅期权使用
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.ISimpleQuote.MatchVolume">
+            <summary>
+            获取虚拟匹配数量
+            仅期权使用，对于期货期权市场,（虚拟匹配数量）获取出来的数据为昨持仓
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.ISimpleQuote.Tradingphasecode">
+            <summary>
+            获取产品实施标志
+            仅期权使用，4个字节
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.ISimpleQuote.NationDebetRatio">
+            <summary>
+            获取T-1日基金净值
+            <para>在国债中为国债利息</para>
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.ISimpleQuote.IOPV">
+            <summary>
+            返回IOPV（仅沪深ETF使用）
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.ISimpleQuote.TradeStatus">
+            <summary>
+            获取交易状态
+            </summary>
+        </member>
+        <member name="T:Hundsun.Framework.Communication.ISimpleTrend">
+            <summary>
+            取分时信息接口
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.ISimpleTrend.GetTrend(System.Int32@)">
+            <summary>
+            获取所有分时线中的第一根分时线
+            </summary>
+            <修改记录>
+            2012-6-18 13:43:39，ref int 改为 out int，只是出参
+            </修改记录>
+            <param name="count">取到分时线根数</param>
+            <returns>成功返回第一根分时线，失败返回null</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.ISimpleTrend.GetTrendByIndex(System.Int32)">
+            <summary>
+            按序号获取分时线
+            </summary>
+            <param name="index">获取第几根分时线</param>
+            <returns>成功返回分时线，失败返回null</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.ISimpleTrend.GetTrendUnits(System.Int32@)">
+            <summary>
+            获取所有分时线
+            </summary>
+            <修改记录>
+            2012-6-18 13:43:39，ref int 改为 out int，只是出参
+            </修改记录>
+            <param name="count">取到分时线根数</param>
+            <returns>成功返回一定量分时线集，失败返回null</returns>
+        </member>
+        <member name="T:Hundsun.Framework.Communication.IKInfo">
+            <summary>
+            取 K线信息 接口
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.IKInfo.GetKLine(Hundsun.Framework.Communication.KType,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            获取K线
+            number即是入参也是出参，
+            入参表示需要查询多少根线，出参表示查询到多少根线...
+            </summary>
+            <修改记录>
+            2012-6-19 9:12:42，GetKlines改为GetKline
+            </修改记录>
+            <param name="KType">K线类型 </param>
+            <param name="deriction">查询方向	0:往前查	1:往后查</param>
+            <param name="offset">开始查询的偏移,0作为一个特殊的值,
+            当往前查时,表示从最近一根线往前查,往后查时,表示从第一根线往后查</param>
+            <param name="number">调用时表示需要查询多少根线，返回时表明查询到多少根线</param>
+            <returns>成功返回K线信息，失败返回null</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.IKInfo.GetKLineByIndex(System.Int32)">
+            <summary>
+            获取指定编号的K线
+            </summary>
+            <param name="index">要获取第几根线</param>
+            <returns>成功返回K线信息，失败返回null</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.IKInfo.GetKLines(System.Int32@)">
+            <summary>
+            取指定数量K线
+            number即是入参也是出参，
+            入参表示需要读取多少根线，出参表示读取到多少根线...
+            </summary>
+            <param name="number">需要获取的K线数量</param>
+            <returns>成功返回K线集，失败返回null</returns>
+        </member>
+        <member name="T:Hundsun.Framework.Communication.INEEQZSLevelQuote">
+            <summary>
+            取股转做市投资者档位行情接口
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.INEEQZSLevelQuote.Timestamp">
+            <summary>
+            获取行情时间戳
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.INEEQZSLevelQuote.Times">
+            <summary>
+            获得当前分钟数
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.INEEQZSLevelQuote.Second">
+            <summary>
+            获得当前分钟内第几秒
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.INEEQZSLevelQuote.Levels">
+            <summary>
+            获得档位个数
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.INEEQZSLevelQuote.GetBidLevelInfo(System.Int32)">
+            <summary>
+            获得第几个买档的信息
+            </summary>
+            <param name="levelNo">档位编号</param>
+            <returns>成功返回买档信息，失败返回null</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.INEEQZSLevelQuote.GetOfferLevelInfo(System.Int32)">
+            <summary>
+            获得第几个卖档的信息
+            </summary>
+            <param name="levelNo">档位编号</param>
+            <returns>成功返回卖档信息，失败返回null</returns>
+        </member>
+        <member name="T:Hundsun.Framework.Communication.INEEQZSOrderQuote">
+            <summary>
+            股转做市做市商申报行情快照
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.INEEQZSOrderQuote.Timestamp">
+            <summary>
+            获取行情时间戳
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.INEEQZSOrderQuote.Times">
+            <summary>
+            获得当前分钟数
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.INEEQZSOrderQuote.Second">
+            <summary>
+            获得当前分钟内第几秒
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.INEEQZSOrderQuote.BidOrderCount">
+            <summary>
+            获得申买笔数
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.INEEQZSOrderQuote.OfferOrderCount">
+            <summary>
+            获得申卖笔数
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.INEEQZSOrderQuote.GetBidOrderInfo(System.Int32)">
+            <summary>
+            获得第几个买档的信息
+            </summary>
+            <param name="levelNo">档位编号</param>
+            <returns>成功返回买档信息，失败返回null</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.INEEQZSOrderQuote.GetOfferOrderInfo(System.Int32)">
+            <summary>
+            获得第几个卖档的信息
+            </summary>
+            <param name="levelNo">档位编号</param>
+            <returns>成功返回卖档信息，失败返回null</returns>
+        </member>
+        <member name="T:Hundsun.Framework.Communication.INEEQXYOrderQuote">
+            <summary>
+            股转协议转让申报行情
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.INEEQXYOrderQuote.Timestamp">
+            <summary>
+            获取行情时间戳
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.INEEQXYOrderQuote.AnsType">
+            <summary>
+            获取当前行情的应答的数据类
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.INEEQXYOrderQuote.OrderCount">
+            <summary>
+            获取当前申报行情数
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.INEEQXYOrderQuote.GetXYOrderInfo(System.Int32)">
+            <summary>
+            获得第几条申报行情
+            </summary>
+            <param name="index">第几条</param>
+            <returns>成功返回申报信息，失败返回null</returns>
+        </member>
+        <member name="T:Hundsun.Framework.Communication.INEEQZSOrderLevelQuote">
+            <summary>
+            做市商申报行情
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.INEEQZSOrderLevelQuote.GetNEEQZSOrderQuoteInfo">
+            <summary>
+            股转做市做市商申报行情
+            </summary>
+            <returns>成功返回做市商申报行情信息，失败返回null</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.INEEQZSOrderLevelQuote.GetNEEQZSLevelQuoteInfo">
+            <summary>
+            股转做市投资者档位行情
+            </summary>
+            <returns>成功返回做市投资者档位行情信息，失败返回null</returns>
+        </member>
+        <member name="T:Hundsun.Framework.Communication.IRealTimeByClose">
+            <summary>
+            以收盘价交易的盘后定价大宗交易申报行情信息
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.IRealTimeByClose.RealTime">
+            <summary>
+            当前的行情时间
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.IRealTimeByClose.GetSimpleQuoteInfo">
+            <summary>
+            获取基本报价信息
+            </summary>
+            <returns>成功返回基本报价信息，失败返回null</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.IRealTimeByClose.GetBidOffer">
+            <summary>
+            获取买卖档位信息
+            </summary>
+            <returns>成功返回买卖档位信息，失败返回null</returns>
+        </member>
+        <member name="T:Hundsun.Framework.Communication.IRealTimeByAverage">
+            <summary>
+            以加权平均价交易的盘后定价大宗交易申报行情信息
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.IRealTimeByAverage.RealTime">
+            <summary>
+            当前的行情时间
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.IRealTimeByAverage.GetSimpleQuoteInfo">
+            <summary>
+            获取基本报价信息
+            </summary>
+            <returns>成功返回基本报价信息，失败返回null</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.IRealTimeByAverage.GetBidOffer">
+            <summary>
+            获取买卖档位信息
+            </summary>
+            <returns>成功返回买卖档位信息，失败返回null</returns>
+        </member>
+        <member name="T:Hundsun.Framework.Communication.KInfo">
+            <summary>
+            K线
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.KInfo.mgrKInfo">
+            <summary>
+            K线信息操作接口
+            托管类型
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.KInfo._kType">
+            <summary>
+            K线类型
+            保存K线类型以支持批量获取K线接口GetKLines
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.KInfo.#ctor(h5apiCharp.CH5IKInfo,Hundsun.Framework.Communication.KType)">
+            <summary>
+            初始化 KInfo 类的实例
+            内部使用
+            </summary>
+            <param name="kInfo">托管的K线信息操作接口实例</param>
+            <param name="kType">K线类型</param>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.KInfo.GetKLine(Hundsun.Framework.Communication.KType,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            获取K线
+            number即是入参也是出参，
+            入参表示需要查询多少根线，出参表示查询到多少根线...
+            </summary>
+            <修改记录>
+            2012-6-19 9:12:42，GetKlines改为GetKline
+            </修改记录>
+            <param name="KType">K线类型 </param>
+            <param name="deriction">查询方向	0:往前查	1:往后查</param>
+            <param name="offset">开始查询的偏移,0作为一个特殊的值,
+            当往前查时,表示从最近一根线往前查,往后查时,表示从第一根线往后查</param>
+            <param name="number">调用时表示需要查询多少根线，返回时表明查询到多少根线</param>
+            <returns>成功返回K线信息，失败返回null</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.KInfo.GetKLineByIndex(System.Int32)">
+            <summary>
+            获取指定编号的K线
+            </summary>
+            <param name="index">要获取第几根线</param>
+            <returns>成功返回K线信息，失败返回null</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.KInfo.GetKLines(System.Int32@)">
+            <summary>
+            取指定数量K线
+            number即是入参也是出参，
+            入参表示需要读取多少根线，出参表示读取到多少根线...
+            </summary>
+            <param name="number">需要获取的K线数量</param>
+            <returns>成功返回K线集，失败返回null</returns>
+        </member>
+        <member name="T:Hundsun.Framework.Communication.MarketOverview">
+            <summary>
+            市场概要信息
+            供应用了解当前市场的业务信息,以及提供市场信息的服务器地址信息
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.MarketOverview.mgrMktOverview">
+            <summary>
+            市场概要信息获取接口
+            托管类型
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.MarketOverview.#ctor(h5apiCharp.CH5IMarketOverview)">
+            <summary>
+            初始化 MarketOverview 类的实例
+            内部使用
+            </summary>
+            <param name="mktOverView">市场概要信息获取接口</param>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.MarketOverview.MarketStatus">
+            <summary>
+            获取市场状态
+            0:	 市场信息尚未获取,也就是说API目前还没有该市场信息,不能操作请稍等
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.MarketOverview.MarketType">
+            <summary>
+            获取市场代码
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.MarketOverview.Checksum">
+            <summary>
+            获取市场信息校验和, 应用必须判断当前校验和是否一致
+            暂时未实现
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.MarketOverview.TradeDate">
+            <summary>
+            获取交易日期
+            暂时不支持
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.MarketOverview.MarketTime">
+            <summary>
+            获取当前交易时间
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.MarketOverview.MktSvrCount">
+            <summary>
+            获取该市场对应的上级服务器个数
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.MarketOverview.TotalCount">
+            <summary>
+            获取股票代码个数
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.MarketOverview.GetMktSvrInfo(System.Int32)">
+            <summary>
+            获取市场对应的服务器地址
+            </summary>
+            <param name="index">市场索引</param>
+            <returns>成功返回服务器地址，失败返回null</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.MarketOverview.GetStockInitInfo(System.Int32)">
+            <summary>
+            获取市场下指定股票的初始化信息
+            </summary>
+            <param name="index">市场股票索引</param>
+            <returns>当前市场下指定股票的初始化信息</returns>
+        </member>
+        <member name="T:Hundsun.Framework.Communication.NEEQXYOrderQuote">
+            <summary>
+            取股转协议转让申报行情接口
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.NEEQXYOrderQuote.mgrNEEQXYOrderQuote">
+            <summary>
+            股转协议转让申报行情读取接口
+            托管类型
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.NEEQXYOrderQuote.#ctor(h5apiCharp.CH5INEEQXYOrderQuote)">
+            <summary>
+            初始化 NEEQXYOrderQuote 类的实例
+            内部使用
+            </summary>
+            <param name="neeqXYOrderQuote">托管的做市投资者档位行情信息读取接口实例</param>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.NEEQXYOrderQuote.Timestamp">
+            <summary>
+            获取行情时间戳
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.NEEQXYOrderQuote.AnsType">
+            <summary>
+            获取当前行情的应答的数据类
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.NEEQXYOrderQuote.OrderCount">
+            <summary>
+            获取当前申报行情数
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.NEEQXYOrderQuote.GetXYOrderInfo(System.Int32)">
+            <summary>
+            获得第几条申报行情
+            </summary>
+            <param name="index">第几条</param>
+            <returns>成功返回申报信息，失败返回null</returns>
+        </member>
+        <member name="T:Hundsun.Framework.Communication.NEEQZSLevelQuote">
+            <summary>
+            取股转做市投资者档位行情接口
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.NEEQZSLevelQuote.mgrNEEQZSLevelQuote">
+            <summary>
+            做市投资者档位行情信息读取接口
+            托管类型
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.NEEQZSLevelQuote.#ctor(h5apiCharp.CH5INEEQZSLevelQuote)">
+            <summary>
+            初始化 NEEQZSLevelQuote 类的实例
+            内部使用
+            </summary>
+            <param name="neeqZSLevelQuote">托管的做市投资者档位行情信息读取接口实例</param>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.NEEQZSLevelQuote.Timestamp">
+            <summary>
+            获取行情时间戳
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.NEEQZSLevelQuote.Times">
+            <summary>
+            获得当前分钟数
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.NEEQZSLevelQuote.Second">
+            <summary>
+            获得当前分钟内第几秒
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.NEEQZSLevelQuote.Levels">
+            <summary>
+            获取档位个数
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.NEEQZSLevelQuote.GetBidLevelInfo(System.Int32)">
+            <summary>
+            获得第几个买档的信息
+            </summary>
+            <param name="levelNo">档位编号</param>
+            <returns>成功返回买档信息，失败返回null</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.NEEQZSLevelQuote.GetOfferLevelInfo(System.Int32)">
+            <summary>
+            获得第几个卖档的信息
+            </summary>
+            <param name="levelNo">档位编号</param>
+            <returns>成功返回卖档信息，失败返回null</returns>
+        </member>
+        <member name="T:Hundsun.Framework.Communication.NEEQZSOrderLevelQuote">
+            <summary>
+            取股转协议转让申报行情接口
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.NEEQZSOrderLevelQuote.mgrNEEQZSOrderLevelQuote">
+            <summary>
+            股转协议转让申报行情读取接口
+            托管类型
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.NEEQZSOrderLevelQuote.#ctor(h5apiCharp.CH5INEEQZSOrderLevelQuote)">
+            <summary>
+            初始化 NEEQZSOrderLevelQuote 类的实例
+            内部使用
+            </summary>
+            <param name="neeqZSOrderLevelQuote">托管的股转协议转让申报行情信息读取接口实例</param>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.NEEQZSOrderLevelQuote.GetNEEQZSOrderQuoteInfo">
+            <summary>
+            股转做市做市商申报行情
+            </summary>
+            <returns>成功返回做市商申报行情信息，失败返回null</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.NEEQZSOrderLevelQuote.GetNEEQZSLevelQuoteInfo">
+            <summary>
+            股转做市投资者档位行情
+            </summary>
+            <returns>成功返回做市投资者档位行情信息，失败返回null</returns>
+        </member>
+        <member name="T:Hundsun.Framework.Communication.NEEQZSOrderQuote">
+            <summary>
+            取股转做市做市商申报行情快照接口
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.NEEQZSOrderQuote.mgrNEEQZSOrderQuote">
+            <summary>
+            股转做市做市商申报行情快照读取接口
+            托管类型
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.NEEQZSOrderQuote.#ctor(h5apiCharp.CH5INEEQZSOrderQuote)">
+            <summary>
+            初始化 NEEQZSOrderQuote 类的实例
+            内部使用
+            </summary>
+            <param name="neeqZSOrderQuote">托管的股转做市做市商申报行情快照信息读取接口实例</param>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.NEEQZSOrderQuote.Timestamp">
+            <summary>
+            获取行情时间戳
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.NEEQZSOrderQuote.Times">
+            <summary>
+            获得当前分钟数
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.NEEQZSOrderQuote.Second">
+            <summary>
+            获得当前分钟内第几秒
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.NEEQZSOrderQuote.BidOrderCount">
+            <summary>
+            获得申买笔数
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.NEEQZSOrderQuote.OfferOrderCount">
+            <summary>
+            获得申卖笔数
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.NEEQZSOrderQuote.GetBidOrderInfo(System.Int32)">
+            <summary>
+            获得第几个买档的信息
+            </summary>
+            <param name="levelNo">档位编号</param>
+            <returns>成功返回买档信息，失败返回null</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.NEEQZSOrderQuote.GetOfferOrderInfo(System.Int32)">
+            <summary>
+            获得第几个卖档的信息
+            </summary>
+            <param name="levelNo">档位编号</param>
+            <returns>成功返回卖档信息，失败返回null</returns>
+        </member>
+        <member name="T:Hundsun.Framework.Communication.RealTimeByAverage">
+            <summary>
+            以加权平均价交易的盘后定价大宗交易申报行情信息
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.RealTimeByAverage.mgrRealTimeByAverage">
+            <summary>
+            以加权平均价交易的盘后定价大宗交易申报行情信息读取接口
+            托管类型
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.RealTimeByAverage.#ctor(h5apiCharp.CH5IRealTimeByAverage)">
+            <summary>
+            初始化 RealTimeByAverage 类的实例
+            内部使用
+            </summary>
+            <param name="realTimeByAverage">托管的以加权平均价交易的盘后定价大宗交易申报行情信息读取接口实例</param>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.RealTimeByAverage.RealTime">
+            <summary>
+            获取行情时间戳
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.RealTimeByAverage.GetSimpleQuoteInfo">
+            <summary>
+            获取基本报价信息
+            </summary>
+            <returns>成功返回基本报价信息，失败返回null</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.RealTimeByAverage.GetBidOffer">
+            <summary>
+            获取买卖档位信息
+            </summary>
+            <returns>成功返回买卖档位信息，失败返回null</returns>
+        </member>
+        <member name="T:Hundsun.Framework.Communication.RealTimeByClose">
+            <summary>
+            以收盘价交易的盘后定价大宗交易申报行情信息
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.RealTimeByClose.mgrRealTimeByClose">
+            <summary>
+            以收盘价交易的盘后定价大宗交易申报行情信息读取接口
+            托管类型
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.RealTimeByClose.#ctor(h5apiCharp.CH5IRealTimeByClose)">
+            <summary>
+            初始化 RealTimeByClose 类的实例
+            内部使用
+            </summary>
+            <param name="realTimeByClose">托管的以收盘价交易的盘后定价大宗交易申报行情信息读取接口实例</param>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.RealTimeByClose.RealTime">
+            <summary>
+            获取行情时间戳
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.RealTimeByClose.GetSimpleQuoteInfo">
+            <summary>
+            获取基本报价信息
+            </summary>
+            <returns>成功返回基本报价信息，失败返回null</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.RealTimeByClose.GetBidOffer">
+            <summary>
+            获取买卖档位信息
+            </summary>
+            <returns>成功返回买卖档位信息，失败返回null</returns>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.RealTimeEX.mgrRealTimeEX">
+            <summary>
+            股票信息读取接口
+            托管类型
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.RealTimeEX.#ctor(h5apiCharp.CH5IRealTimeEX)">
+            <summary>
+            批量行情RealTimeEX 缓存对象
+            </summary>
+            <param name="realTimeEX">托管的批量行情缓存对象实例</param>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.RealTimeEX.GetCH5IRealTimeEX">
+            <summary>
+            本地获取托管对象
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.RealTimeEX.Dispose">
+            <summary>
+            释放RealTimeEX类相关资源
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.RealTimeEX.StockRealTimeInfoList">
+            <summary>
+            批量行情列表
+            </summary>
+        </member>
+        <member name="T:Hundsun.Framework.Communication.SimpleQuote">
+            <summary>
+            简单报价信息
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.SimpleQuote.mgrSimpleQuote">
+            <summary>
+            简单报价信息获取接口
+            托管类型
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.SimpleQuote.#ctor(h5apiCharp.CH5ISimpleQuote)">
+            <summary>
+            初始化 SimpleQuote 类的实例
+            内部使用
+            </summary>
+            <param name="simpleQuote">托管的简单报价信息获取接口实例</param>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.SimpleQuote.StockStatus">
+            <summary>
+            获取股票状态
+            0:正常 1:停牌
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.SimpleQuote.TradeStatus">
+            <summary>
+            获取交易状态
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.SimpleQuote.OpenPrice">
+            <summary>
+            获取开盘价
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.SimpleQuote.HighPrice">
+            <summary>
+            获取最高价
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.SimpleQuote.LowPrice">
+            <summary>
+            获取最低价
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.SimpleQuote.LastPrice">
+            <summary>
+            获取最新价
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.SimpleQuote.PrevPrice">
+            <summary>
+            获取昨收价
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.SimpleQuote.UpPrice">
+            <summary>
+            获取涨停价
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.SimpleQuote.DownPrice">
+            <summary>
+            获取跌停价
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.SimpleQuote.AvgPrice">
+            <summary>
+            获取均价
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.SimpleQuote.Volume">
+            <summary>
+            获取成交额
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.SimpleQuote.Amount">
+            <summary>
+            获取成交量
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.SimpleQuote.CurrentMinute">
+            <summary>
+            获取当前分钟数
+            每交易日有240分钟
+            9:30~11:30 对应 1~120
+            13:30~15:30 对应 121~240
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.SimpleQuote.CurrentSecond">
+            <summary>
+            获取当前分钟内第几秒
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.SimpleQuote.Timestamp">
+            <summary>
+            当获取行情时间戳
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.SimpleQuote.PreJieSuanPrice">
+            <summary>
+            获取前结算价（仅期货用）
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.SimpleQuote.JieSuanPrice">
+            <summary>
+            获取结算价（仅期货用）
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.SimpleQuote.Position">
+            <summary>
+            获取持仓量
+            仅期货和个股期权使用
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.SimpleQuote.Hand">
+            <summary>
+            获取股票每手股数 或 期货合约乘数
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.SimpleQuote.TotalBuy">
+            <summary>
+            获取总买量
+            目前仅支持组合合约
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.SimpleQuote.TotalSell">
+            <summary>
+            获取总卖量
+            目前仅支持组合合约
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.SimpleQuote.AutionPrice">
+            <summary>
+            获取动态参考价
+            仅期权使用
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.SimpleQuote.MatchVolume">
+            <summary>
+            获取虚拟匹配数量
+            仅期权使用
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.SimpleQuote.Tradingphasecode">
+            <summary>
+            获取产品实施标志
+            仅期权使用，4个字节
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.SimpleQuote.NationDebetRatio">
+            <summary>
+            获取T-1日基金净值
+            <para>在国债中为国债利息</para>
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.SimpleQuote.IOPV">
+            <summary>
+            返回IOPV（仅沪深ETF使用）
+            </summary>
+        </member>
+        <member name="T:Hundsun.Framework.Communication.SimpleTrend">
+            <summary>
+            基本分时
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.SimpleTrend.mgrSimpleTrend">
+            <summary>
+            分时信息读取接口
+            托管类型
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.SimpleTrend.#ctor(h5apiCharp.CH5ISimpleTrend)">
+            <summary>
+            初始化 SimpleTrend 类的实例
+            内部使用
+            </summary>
+            <param name="simpleTrend">托管的分时信息读取接口实例</param>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.SimpleTrend.GetTrend(System.Int32@)">
+            <summary>
+            获取所有分时线中的第一根分时线
+            </summary>
+            <修改记录>
+            2012-6-18 13:43:39，ref int 改为 out int，只是出参
+            </修改记录>
+            <param name="count">取到分时线根数</param>
+            <returns>成功返回第一根分时线，失败返回null</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.SimpleTrend.GetTrendByIndex(System.Int32)">
+            <summary>
+            按序号获取分时线
+            </summary>
+            <param name="index">获取第几根分时线</param>
+            <returns>成功返回分时线，失败返回null</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.SimpleTrend.GetTrendUnits(System.Int32@)">
+            <summary>
+            获取所有分时线
+            </summary>
+            <修改记录>
+            2012-6-18 13:43:39，ref int 改为 out int，只是出参
+            </修改记录>
+            <param name="count">取到分时线根数</param>
+            <returns>成功返回一定量分时线集，失败返回null</returns>
+        </member>
+        <member name="T:Hundsun.Framework.Communication.StockInfo">
+            <summary>
+            特定股票的信息
+            股票信息包含该股票所有的标准元数据, 以及自定义结果集
+            <remarks>
+            所有元数据异步读取时的回调应该是临时的,创建一个临时的订阅,
+            当应答回来后,通知应用,同时删除该订阅项
+            这里给出所有可能的元数据
+            如果返回null,说明API还没有最新数据,会在后续调用回调,如果返回非null,
+            应用可用据此信息展现,在有后续的更新数据到来之前,不会触发回调
+            如果recvFunc为null,则是同步调用,API会阻塞调用,一直到取得数据.
+            </remarks>
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.StockInfo.mgrStockInfo">
+            <summary>
+            股票信息读取接口
+            托管类型
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.StockInfo._recvBidOffer">
+            <summary>
+            取买卖档回调委托
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.StockInfo._recvKInfo">
+            <summary>
+            取K线回调委托
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.StockInfo._recvSimpleQuote">
+            <summary>
+            取报价信息回调委托
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.StockInfo._recvSimpleTrend">
+            <summary>
+            取分时回调委托
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.StockInfo._recvHisSimpleTrend">
+            <summary>
+            取历史分时回调委托
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.StockInfo._recvNEEQZSLevelQuote">
+            <summary>
+            取股转做市投资者档位回调委托
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.StockInfo._recvNEEQZSOrderQuote">
+            <summary>
+            取股转做市做市商申报行情快照回调委托
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.StockInfo._recvNEEQXYOrderQuote">
+            <summary>
+            取股转协议转让申报行情回调委托
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.StockInfo._recvNEEQZSOrderLevelQuote">
+            <summary>
+            取做市商申报行情回调委托
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.StockInfo._recvRealTimeByClose">
+            <summary>
+            取以收盘价交易的盘后定价大宗交易申报行情回调委托
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.StockInfo._recvRealTimeByAverage">
+            <summary>
+            取以加权平均价交易的盘后定价大宗交易申报行情回调委托
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.StockInfo.#ctor(h5apiCharp.CH5IStockInfo)">
+            <summary>
+            初始化 StockInfo 类的实例
+            内部使用
+            </summary>
+            <param name="stockInfo">托管的股票信息读取接口实例</param>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.StockInfo.GetInItInfo">
+            <summary>
+            取股票初始化信息, 同步调用
+            </summary>
+            <returns>成功返回取股票初始化信息接口实例，失败返回null</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.StockInfo.GetSimpleTrendInfo(Hundsun.Framework.Communication.RecvStockInfo,System.Int32)">
+            <summary>
+            获取简单分时
+            </summary>
+            <param name="recvFunc">回调委托接口</param>
+            <param name="iConnectID">指定从某个连接去获取数据</param>
+            <returns>成功返回取分时信息接口实例，失败返回null</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.StockInfo.GetHisSimpleTrendInfo(System.String,Hundsun.Framework.Communication.RecvStockInfo,System.Int32)">
+            <summary>
+            获取历史简单分时
+            </summary>
+            <param name="date">日期，如: 20120505</param>
+            <param name="recvFunc">回调委托接口</param>
+            <param name="iConnectID">指定从某个连接去获取数据</param>
+            <returns>成功返回取分时信息接口实例，失败返回null</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.StockInfo.GetSimpleQuoteInfo(Hundsun.Framework.Communication.RecvStockInfo,System.Int32)">
+            <summary>
+            获取简单报价信息
+            </summary>
+            <param name="recvFunc">回调委托接口</param>
+            <param name="iConnectID">指定从某个连接去获取数据</param>
+            <returns>成功返回取简单报价信息接口实例，失败返回null</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.StockInfo.GetBidOffer(Hundsun.Framework.Communication.RecvStockInfo,System.Int32)">
+            <summary>
+            获取买卖档位信息
+            </summary>
+            <param name="recvFunc">回调委托接口</param>
+            <param name="iConnectID">指定从某个连接去获取数据</param>
+            <returns>成功返回取买卖档信息接口实例，失败返回null</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.StockInfo.GetKInfo(Hundsun.Framework.Communication.KType,System.Int32,System.Int32,System.Int32@,Hundsun.Framework.Communication.RecvStockInfo,System.Int32)">
+            <summary>
+            获取K线信息
+            </summary>
+            <param name="kType">K线类型 如 1分钟线 5分钟线该值作为枚举类型定义,只有请求/应答,没有订阅</param>
+            <param name="deriction">查询方向   0:往前查	1:往后查</param>
+            <param name="offset">开始查询的偏移,0作为一个特殊的值,当往前查时,
+            表示从最近一根线往前查,往后查时,表示从第一根线往后查</param>
+            <param name="number">调用时表示需要查询多少根线，返回时表明查询到多少根线</param>
+            <param name="recvFunc">回调委托接口</param>
+            <param name="connectID">指定从某个连接去获取数据</param>
+            <returns>成功返回取K线信息接口实例，失败返回null</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.StockInfo.GetSimpleTrendCache">
+                    当前缓存中数据，不会与行情服务器交互，不能在异步回调函数或订阅回调函数之外使用此接口
+                    *
+            <summary>
+            获得分时快照
+            对应事件 RESULT_TREND=2;基本分时
+            </summary>
+            <returns>分时快照</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.StockInfo.GetKLineCache">
+            <summary>
+            获取k线快照
+            对应事件 RESULT_KLINE=4;基本K线
+            </summary>
+            <returns>k线快照</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.StockInfo.GetBidOfferCache">
+            <summary>
+            获得买卖档位信息快照
+            对应事件RESULT_BIDOFF=5;买卖档位信息
+            </summary>
+            <returns>买卖档位信息快照</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.StockInfo.GetSimpleQuoteInfoCache">
+            <summary>
+            获得简单报价信息快照
+            对应事件RESULT_SIMPLE_QUOTE=3;基本报价
+            </summary>
+            <returns>简单报价信息快照</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.StockInfo.GetNEEQZSLevelQuote(Hundsun.Framework.Communication.RecvStockInfo,System.Int32)">
+            <summary>
+            获取做市投资者档位行情
+            </summary>
+            <param name="recvFunc">回调委托接口</param>
+            <param name="iConnectID">指定从某个连接去获取数据</param>
+            <returns>成功返回取买卖档信息接口实例，失败返回null</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.StockInfo.GetNEEQZSLevelQuoteCache">
+            <summary>
+            获取做市投资者档位行情快照
+            对应事件RESULT_NEEQ_ZS_LEVEL=6;做市投资者档位行情信息
+            </summary>
+            <returns>做市投资者档位行情快照</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.StockInfo.GetNEEQZSOrderQuote(Hundsun.Framework.Communication.RecvStockInfo,System.Int32)">
+            <summary>
+            获取做市商申报行情
+            </summary>
+            <param name="recvFunc">回调委托接口</param>
+            <param name="iConnectID">指定从某个连接去获取数据</param>
+            <returns>成功返回取做市商申报行情接口实例，失败返回null</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.StockInfo.GetNEEQZSOrderQuoteCache">
+            <summary>
+            获取做市商申报行情快照
+            对应事件RESULT_NEEQ_ZS_ORDER=7;做市商申报行情信息
+            </summary>
+            <returns>做市商申报行情快照</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.StockInfo.GetNEEQXYOrderQuote(Hundsun.Framework.Communication.RecvStockInfo,System.Int32)">
+            <summary>
+            获取协议转让申报行情
+            </summary>
+            <param name="recvFunc">回调委托接口</param>
+            <param name="iConnectID">指定从某个连接去获取数据</param>
+            <returns>成功返回取协议转让申报行情接口实例，失败返回null</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.StockInfo.GetNEEQXYOrderQuoteCache">
+            <summary>
+            获取协议转让申报行情快照
+            对应事件RESULT_NEEQ_XY_ORDER=8;协议转让申报行情信息
+            </summary>
+            <returns>协议转让申报行情</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.StockInfo.GetNEEQZSOrderLevelQuote(Hundsun.Framework.Communication.RecvStockInfo,System.Int32)">
+            <summary>
+            获取股转做市做市商申报行情
+            </summary>
+            <param name="recvFunc">回调委托接口</param>
+            <param name="iConnectID">指定从某个连接去获取数据</param>
+            <returns>成功返回取股转做市做市商申报行情接口实例，失败返回null</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.StockInfo.GetNEEQZSOrderLevelQuoteCache">
+            <summary>
+            获取股转做市做市商申报行情快照
+            对应事件RESULT_NEEQ_ZS_ORDER_LEVEL=12;股转做市做市商申报行情
+            </summary>
+            <returns>股转做市做市商申报行情</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.StockInfo.GetByCloseBlockTrade(Hundsun.Framework.Communication.RecvStockInfo,System.Int32)">
+            <summary>
+            获取以收盘价交易的盘后定价大宗交易申报行情
+            </summary>
+            <param name="recvFunc">回调委托接口</param>
+            <param name="iConnectID">指定从某个连接去获取数据</param>
+            <returns>成功返回取以收盘价交易的盘后定价大宗交易申报行情接口实例，失败返回null</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.StockInfo.GetRealTimeByCloseCache">
+            <summary>
+            获取以收盘价交易的盘后定价大宗交易申报行情快照
+            对应事件RESULT_BYCLOSE_BLOCKTRADING_REALTIME = 15;以收盘价交易的盘后定价大宗交易申报行情
+            </summary>
+            <returns>以收盘价交易的盘后定价大宗交易申报行情</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.StockInfo.GetByAverageBlockTrade(Hundsun.Framework.Communication.RecvStockInfo,System.Int32)">
+            <summary>
+            获取以加权平均价交易的盘后定价大宗交易申报行情
+            </summary>
+            <param name="recvFunc">回调委托接口</param>
+            <param name="iConnectID">指定从某个连接去获取数据</param>
+            <returns>成功返回取以加权平均价交易的盘后定价大宗交易申报行情接口实例，失败返回null</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.StockInfo.GetRealTimeByAverageCache">
+            <summary>
+            获取以加权平均价交易的盘后定价大宗交易申报行情快照
+            对应事件RESULT_BYAVERAGE_BLOCKTRADING_REALTIME = 16;以加权平均价交易的盘后定价大宗交易申报行情
+            </summary>
+            <returns>以加权平均价交易的盘后定价大宗交易申报行情</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.StockInfo.RecvBidOffer(System.Int32,h5apiCharp.CH5IStockInfo,System.Int32,System.Int32*,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="iRegID"></param>
+            <param name="stockInfo"></param>
+            <param name="iResults"></param>
+            <param name="lpResultid"></param>
+            <param name="connectID"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Hundsun.Framework.Communication.StockInitInfo">
+            <summary>
+            市场初始化信息
+            股票的静态信息, 初始化后不会再变化
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.StockInitInfo.mgrStockInitInfo">
+            <summary>
+            股票初始化信息读取接口
+            托管类型
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.StockInitInfo.#ctor(h5apiCharp.CH5IStockInitInfo)">
+            <summary>
+            初始化 StockInitInfo 类的实例
+            内部使用
+            </summary>
+            <param name="stockInitInfo">托管的股票初始化信息读取接口实例</param>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.StockInitInfo.StockCode">
+            <summary>
+            获取股票代码
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.StockInitInfo.StockName">
+            <summary>
+            获取股票名字
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.StockInitInfo.PrevPrice">
+            <summary>
+            获取昨收盘
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.StockInitInfo.StockStatus">
+            <summary>
+            获取交易状态
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.StockInitInfo.CodeType">
+            <summary>
+            获取股票类型
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.StockInitInfo.MarketType">
+            <summary>
+            获取市场类别
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Communication.StockRealTimeInfo.mgrStockRealTimeInfo">
+            <summary>
+            股票初始化信息读取接口
+            托管类型
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.StockRealTimeInfo.#ctor(h5apiCharp.CH5IStockRealTimeInfo)">
+            <summary>
+            初始化 StockRealTimeInfo 类的实例
+            </summary>
+            <param name="stockRealTimeInfo">托管的批量股票信息读取接口实例</param>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.StockRealTimeInfo.MarketType">
+            <summary>
+            获取市场类别
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Communication.StockRealTimeInfo.StockCode">
+            <summary>
+            获取股票代码
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.StockRealTimeInfo.GetSimpleQuoteInfo">
+            <summary>
+            获取简单报价信息
+            </summary>
+            <returns>成功返回取简单报价信息接口实例，失败返回null</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Communication.StockRealTimeInfo.GetBidOffer">
+            <summary>
+            获取买卖档位信息
+            </summary>
+            <returns>成功返回取买卖档信息接口实例，失败返回null</returns>
+        </member>
+    </members>
+</doc>

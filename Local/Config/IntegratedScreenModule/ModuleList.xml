@@ -1,0 +1,19 @@
+﻿<?xml version="1.0"?>
+<ModulePaneList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ModuleTempItems>
+    <MoudulePaneTitle>全球综合屏</MoudulePaneTitle>
+    <IsMainPane>true</IsMainPane>
+    <KeyboardSetting>.1</KeyboardSetting>
+    <IsPaneVisibility>true</IsPaneVisibility>
+    <IsSaved>true</IsSaved>
+    <IsDefault>true</IsDefault>
+  </ModuleTempItems>
+  <ModuleTempItems>
+    <MoudulePaneTitle>沪深全景图</MoudulePaneTitle>
+    <IsMainPane>false</IsMainPane>
+    <KeyboardSetting>.2</KeyboardSetting>
+    <IsPaneVisibility>true</IsPaneVisibility>
+    <IsSaved>true</IsSaved>
+    <IsDefault>false</IsDefault>
+  </ModuleTempItems>
+</ModulePaneList>

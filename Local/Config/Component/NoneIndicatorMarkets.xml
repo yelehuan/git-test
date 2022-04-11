@@ -1,0 +1,321 @@
+<?xml version="1.0"?>
+<NoneIndicatorMarkets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<NoneAmountMarkets>
+		<!--上证基金-->
+		<NoneAmountMarket MarketCode="XSHG.EU" All="true"/>
+		<!--外汇-->
+		<NoneAmountMarket MarketCode="FXCFES" IsMic="true" All="true"/>
+		<!--财经外汇-->
+		<NoneAmountMarket MarketCode="CJFX" IsMic="true" All="true"/>
+		<!--港股指数-->
+		<NoneAmountMarket MarketCode="XHKG-I.MRI">
+			<ProdCodes>
+				<ProdCode>HSI</ProdCode>
+				<ProdCode>HZ5101</ProdCode>
+				<ProdCode>HZ5102</ProdCode>
+				<ProdCode>HZ5103</ProdCode>
+				<ProdCode>HZ5104</ProdCode>
+				<ProdCode>HZ5014</ProdCode>
+				<ProdCode>HZ5015</ProdCode>
+			</ProdCodes>
+		</NoneAmountMarket>
+		<!--美洲市场-->
+		<NoneAmountMarket MarketCode="XUSI.MRI">
+			<ProdCodes>
+				<ProdCode>NQUSS</ProdCode>
+			</ProdCodes>
+		</NoneAmountMarket>
+		<!--美洲指数-->
+		<NoneAmountMarket MarketCode="GL-AMER" IsMic="true" All="true"/>
+		<!--圣保罗指数-->
+		<NoneAmountMarket MarketCode="GL-SAPI" IsMic="true" All="true"/>
+		<!--墨西哥指数-->
+		<NoneAmountMarket MarketCode="GL-LEUM" IsMic="true" All="true"/>
+		<!--加拿大多伦多指数-->
+		<NoneAmountMarket MarketCode="GL-GSPTSE" IsMic="true" All="true"/>
+		<!--美洲指数-->
+		<NoneAmountMarket MarketCode="GL-USDIND" IsMic="true" All="true"/>
+
+		<!--荷兰指数-->
+		<NoneAmountMarket MarketCode="GL-AEX" IsMic="true" All="true"/>
+		<!--西班牙指数-->
+		<NoneAmountMarket MarketCode="GL-IBEX" IsMic="true" All="true"/>
+		<!--俄罗斯指数-->
+		<NoneAmountMarket MarketCode="GL-RUSA" IsMic="true" All="true"/>
+		<!--奥地利指数-->
+		<NoneAmountMarket MarketCode="GL-ATX" IsMic="true" All="true"/>
+		<!--比利时指数-->
+		<NoneAmountMarket MarketCode="GL-BFX" IsMic="true" All="true"/>
+		<!--法国巴黎指数-->
+		<NoneAmountMarket MarketCode="GL-FCHI" IsMic="true" All="true"/>
+		<!--帝国法兰克福DAX指数-->
+		<NoneAmountMarket MarketCode="GL-GDAXI" IsMic="true" All="true"/>
+		<!--伦敦金融时报100指数-->
+		<NoneAmountMarket MarketCode="GL-LDUN" IsMic="true" All="true"/>
+		<!--瑞典指数-->
+		<NoneAmountMarket MarketCode="GL-OMXSPI" IsMic="true" All="true"/>
+		<!--意大利指数-->
+		<NoneAmountMarket MarketCode="GL-MIB" IsMic="true" All="true"/>
+		<!--瑞士苏黎世指数-->
+		<NoneAmountMarket MarketCode="GL-SSMI" IsMic="true" All="true"/>
+
+		<!--澳大利亚普通股指数-->
+		<NoneAmountMarket MarketCode="GL-AUST" IsMic="true" All="true"/>
+		<!--香港恒生指数-->
+		<NoneAmountMarket MarketCode="GL-HKHS" IsMic="true" All="true"/>
+		<!--台湾指数-->
+		<NoneAmountMarket MarketCode="GL-TWII" IsMic="true" All="true"/>
+		<!--印尼雅加达指数-->
+		<NoneAmountMarket MarketCode="GL-INDO" IsMic="true" All="true"/>
+		<!--马来西亚吉隆坡指数-->
+		<NoneAmountMarket MarketCode="GL-KLSE" IsMic="true" All="true"/>
+		<!--韩国综合指数-->
+		<NoneAmountMarket MarketCode="GL-KS11" IsMic="true" All="true"/>
+		<!--日经225指数-->
+		<NoneAmountMarket MarketCode="GL-N225" IsMic="true" All="true"/>
+		<!--印度孟买指数-->
+		<NoneAmountMarket MarketCode="GL-MUBA" IsMic="true" All="true"/>
+		<!--新西兰指数-->
+		<NoneAmountMarket MarketCode="GL-NZLD" IsMic="true" All="true"/>
+		<!--银行间远期合约-->
+		<NoneAmountMarket MarketCode="BONDCFES.FBSS" All="true"/>
+		<NoneAmountMarket MarketCode="BONDCFES.FBSR" All="true"/>
+		<NoneAmountMarket MarketCode="BONDCFES.FBFR" All="true"/>
+	</NoneAmountMarkets>
+
+	<NoneBalanceMarkets>
+		<!--美洲市场-->
+		<NoneBalanceMarket MarketCode="XUSI.MRI">
+			<ProdCodes>
+				<ProdCode>NQUSS</ProdCode>
+			</ProdCodes>
+		</NoneBalanceMarket>
+		<!--外汇-->
+		<NoneBalanceMarket MarketCode="FXCFES" IsMic="true" All="true"/>
+		<!--财经外汇-->
+		<NoneBalanceMarket MarketCode="CJFX" IsMic="true" All="true"/>
+		<!--美洲指数-->
+		<NoneBalanceMarket MarketCode="GL-AMER" IsMic="true" All="true"/>
+		<!--圣保罗指数-->
+		<NoneBalanceMarket MarketCode="GL-SAPI" IsMic="true" All="true"/>
+		<!--墨西哥指数-->
+		<NoneBalanceMarket MarketCode="GL-LEUM" IsMic="true" All="true"/>
+		<!--加拿大多伦多指数-->
+		<NoneBalanceMarket MarketCode="GL-GSPTSE" IsMic="true" All="true"/>
+		<!--美洲指数-->
+		<NoneBalanceMarket MarketCode="GL-USDIND" IsMic="true" All="true"/>
+
+		<!--荷兰指数-->
+		<NoneBalanceMarket MarketCode="GL-AEX" IsMic="true" All="true"/>
+		<!--西班牙指数-->
+		<NoneBalanceMarket MarketCode="GL-IBEX" IsMic="true" All="true"/>
+		<!--俄罗斯指数-->
+		<NoneBalanceMarket MarketCode="GL-RUSA" IsMic="true" All="true"/>
+		<!--奥地利指数-->
+		<NoneBalanceMarket MarketCode="GL-ATX" IsMic="true" All="true"/>
+		<!--比利时指数-->
+		<NoneBalanceMarket MarketCode="GL-BFX" IsMic="true" All="true"/>
+		<!--法国巴黎指数-->
+		<NoneBalanceMarket MarketCode="GL-FCHI" IsMic="true" All="true"/>
+		<!--帝国法兰克福DAX指数-->
+		<NoneBalanceMarket MarketCode="GL-GDAXI" IsMic="true" All="true"/>
+		<!--伦敦金融时报100指数-->
+		<NoneBalanceMarket MarketCode="GL-LDUN" IsMic="true" All="true"/>
+		<!--瑞典指数-->
+		<NoneBalanceMarket MarketCode="GL-OMXSPI" IsMic="true" All="true"/>
+		<!--意大利指数-->
+		<NoneBalanceMarket MarketCode="GL-MIB" IsMic="true" All="true"/>
+		<!--瑞士苏黎世指数-->
+		<NoneBalanceMarket MarketCode="GL-SSMI" IsMic="true" All="true"/>
+
+		<!--澳大利亚普通股指数-->
+		<NoneBalanceMarket MarketCode="GL-AUST" IsMic="true" All="true"/>
+		<!--香港恒生指数-->
+		<NoneBalanceMarket MarketCode="GL-HKHS" IsMic="true" All="true"/>
+		<!--台湾指数-->
+		<NoneBalanceMarket MarketCode="GL-TWII" IsMic="true" All="true"/>
+		<!--印尼雅加达指数-->
+		<NoneBalanceMarket MarketCode="GL-INDO" IsMic="true" All="true"/>
+		<!--马来西亚吉隆坡指数-->
+		<NoneBalanceMarket MarketCode="GL-KLSE" IsMic="true" All="true"/>
+		<!--韩国综合指数-->
+		<NoneBalanceMarket MarketCode="GL-KS11" IsMic="true" All="true"/>
+		<!--日经225指数-->
+		<NoneBalanceMarket MarketCode="GL-N225" IsMic="true" All="true"/>
+		<!--印度孟买指数-->
+		<NoneBalanceMarket MarketCode="GL-MUBA" IsMic="true" All="true"/>
+		<!--新西兰指数-->
+		<NoneBalanceMarket MarketCode="GL-NZLD" IsMic="true" All="true"/>
+		<!--银行间债券指数-->
+		<NoneBalanceMarket MarketCode="BONDCFES.BNPJI" IsMic="true" All="true"/>
+		<!-- CDS指数 -->
+		<NoneBalanceMarket MarketCode="BONDCFES.FBCI" IsMic="true" All="true"/>
+		<!--银行间远期合约-->
+		<NoneBalanceMarket MarketCode="BONDCFES.FBSS" IsMic="true" All="true"/>
+		<NoneBalanceMarket MarketCode="BONDCFES.FBSR" IsMic="true" All="true"/>
+		<!--债券-->
+		<NoneBalanceMarket MarketCode="MMCFES" IsMic="true" All="true"/>
+	</NoneBalanceMarkets>
+	<NoneTurnoverRatioMarkets>
+		<!--港股指数-->
+		<NoneTurnoverRatioMarket MarketCode="XHKG-I.MRI">
+			<ProdCodes>
+				<ProdCode>HSI</ProdCode>
+				<ProdCode>HZ5101</ProdCode>
+				<ProdCode>HZ5102</ProdCode>
+				<ProdCode>HZ5103</ProdCode>
+				<ProdCode>HZ5104</ProdCode>
+				<ProdCode>HZ5014</ProdCode>
+				<ProdCode>HZ5015</ProdCode>
+				<ProdCode>H11100</ProdCode>
+				<ProdCode>H11110</ProdCode>
+				<ProdCode>CES100</ProdCode>
+				<ProdCode>CES120</ProdCode>
+				<ProdCode>CESA80</ProdCode>
+			</ProdCodes>
+		</NoneTurnoverRatioMarket>
+		<!--债券-->
+		<NoneTurnoverRatioMarket MarketCode="XSHG.D" All="true"/>
+		<NoneTurnoverRatioMarket MarketCode="XSHE.D" All="true"/>
+
+		<!--期货-->
+		<NoneTurnoverRatioMarket MarketCode="CCFX" IsMic="true" All="true"/>
+		<NoneTurnoverRatioMarket MarketCode="XSGE" IsMic="true" All="true"/>
+		<NoneTurnoverRatioMarket MarketCode="XDCE" IsMic="true" All="true"/>
+		<NoneTurnoverRatioMarket MarketCode="XZCE" IsMic="true" All="true"/>
+		<NoneTurnoverRatioMarket MarketCode="XINE" IsMic="true" All="true"/>
+		<NoneTurnoverRatioMarket MarketCode="SHGE" IsMic="true" All="true"/>
+
+		<!--期权-->
+		<NoneTurnoverRatioMarket MarketCode="XSHO" IsMic="true" All="true"/>
+		<NoneTurnoverRatioMarket MarketCode="XSZO" IsMic="true" All="true"/>
+		<NoneTurnoverRatioMarket MarketCode="XDCE-O" IsMic="true" All="true"/>
+		<NoneTurnoverRatioMarket MarketCode="XZCE-O" IsMic="true" All="true"/>
+		<NoneTurnoverRatioMarket MarketCode="XSGE-O" IsMic="true" All="true"/>
+		<NoneTurnoverRatioMarket MarketCode="CCFX-O" IsMic="true" All="true"/>
+
+		<!--财经外汇-->
+		<NoneTurnoverRatioMarket MarketCode="CJFX" IsMic="true" All="true"/>
+		<!--外汇-->
+		<NoneTurnoverRatioMarket MarketCode="FXCFES" IsMic="true" All="true"/>
+
+		<!--债券-->
+		<NoneTurnoverRatioMarket MarketCode="MMCFES" IsMic="true" All="true"/>
+		<!--申万版块-->
+		<NoneTurnoverRatioMarket MarketCode="XBHS.HY" All="true"/>
+		<NoneTurnoverRatioMarket MarketCode="XBHS.GN" All="true"/>
+		<NoneTurnoverRatioMarket MarketCode="XBHS.DY" All="true"/>
+		<!-- 证监会行业 -->
+		<NoneTurnoverRatioMarket MarketCode="XBHS.ZJHHY" All="true"/>
+
+		<!--美洲指数-->
+		<NoneTurnoverRatioMarket MarketCode="GL-AMER" IsMic="true" All="true"/>
+		<!--圣保罗指数-->
+		<NoneTurnoverRatioMarket MarketCode="GL-SAPI" IsMic="true" All="true"/>
+		<!--墨西哥指数-->
+		<NoneTurnoverRatioMarket MarketCode="GL-LEUM" IsMic="true" All="true"/>
+		<!--加拿大多伦多指数-->
+		<NoneTurnoverRatioMarket MarketCode="GL-GSPTSE" IsMic="true" All="true"/>
+		<!--美洲指数-->
+		<NoneTurnoverRatioMarket MarketCode="GL-USDIND" IsMic="true" All="true"/>
+
+		<!--荷兰指数-->
+		<NoneTurnoverRatioMarket MarketCode="GL-AEX" IsMic="true" All="true"/>
+		<!--西班牙指数-->
+		<NoneTurnoverRatioMarket MarketCode="GL-IBEX" IsMic="true" All="true"/>
+		<!--俄罗斯指数-->
+		<NoneTurnoverRatioMarket MarketCode="GL-RUSA" IsMic="true" All="true"/>
+		<!--奥地利指数-->
+		<NoneTurnoverRatioMarket MarketCode="GL-ATX" IsMic="true" All="true"/>
+		<!--比利时指数-->
+		<NoneTurnoverRatioMarket MarketCode="GL-BFX" IsMic="true" All="true"/>
+		<!--法国巴黎指数-->
+		<NoneTurnoverRatioMarket MarketCode="GL-FCHI" IsMic="true" All="true"/>
+		<!--帝国法兰克福DAX指数-->
+		<NoneTurnoverRatioMarket MarketCode="GL-GDAXI" IsMic="true" All="true"/>
+		<!--伦敦金融时报100指数-->
+		<NoneTurnoverRatioMarket MarketCode="GL-LDUN" IsMic="true" All="true"/>
+		<!--瑞典指数-->
+		<NoneTurnoverRatioMarket MarketCode="GL-OMXSPI" IsMic="true" All="true"/>
+		<!--意大利指数-->
+		<NoneTurnoverRatioMarket MarketCode="GL-MIB" IsMic="true" All="true"/>
+		<!--瑞士苏黎世指数-->
+		<NoneTurnoverRatioMarket MarketCode="GL-SSMI" IsMic="true" All="true"/>
+
+		<!--澳大利亚普通股指数-->
+		<NoneTurnoverRatioMarket MarketCode="GL-AUST" IsMic="true" All="true"/>
+		<!--香港恒生指数-->
+		<NoneTurnoverRatioMarket MarketCode="GL-HKHS" IsMic="true" All="true"/>
+		<!--台湾指数-->
+		<NoneTurnoverRatioMarket MarketCode="GL-TWII" IsMic="true" All="true"/>
+		<!--印尼雅加达指数-->
+		<NoneTurnoverRatioMarket MarketCode="GL-INDO" IsMic="true" All="true"/>
+		<!--马来西亚吉隆坡指数-->
+		<NoneTurnoverRatioMarket MarketCode="GL-KLSE" IsMic="true" All="true"/>
+		<!--韩国综合指数-->
+		<NoneTurnoverRatioMarket MarketCode="GL-KS11" IsMic="true" All="true"/>
+		<!--日经225指数-->
+		<NoneTurnoverRatioMarket MarketCode="GL-N225" IsMic="true" All="true"/>
+		<!--印度孟买指数-->
+		<NoneTurnoverRatioMarket MarketCode="GL-MUBA" IsMic="true" All="true"/>
+		<!--新西兰指数-->
+		<NoneTurnoverRatioMarket MarketCode="GL-NZLD" IsMic="true" All="true"/>
+		<!--银行间债券指数-->
+		<NoneTurnoverRatioMarket MarketCode="BONDCFES.BNPJI" IsMic="true" All="true"/>
+		<!--银行间远期合约-->
+		<NoneTurnoverRatioMarket MarketCode="BONDCFES.FBSS" IsMic="true" All="true"/>
+		<NoneTurnoverRatioMarket MarketCode="BONDCFES.FBSR" IsMic="true" All="true"/>
+
+	</NoneTurnoverRatioMarkets>
+	<NoneBlockMarkets>
+		<NoneBlockMarket MarketCode="NEEQ.MRI" All="true"/>
+		<NoneBlockMarket MarketCode="CNI" IsMic="true" All="true"/>
+		<NoneBlockMarket MarketCode="CSI" IsMic="true" All="true"/>
+		<NoneBlockMarket MarketCode="BONDCFES" IsMic="true" All="true"/>
+		<NoneBlockMarket MarketCode="AUCFES" IsMic="true" All="true"/>
+		<NoneBlockMarket MarketCode="FXCFES" IsMic="true" All="true"/>
+		<NoneBlockMarket MarketCode="MMCFES" IsMic="true" All="true"/>
+		<NoneBlockMarket MarketCode="XHKG-M.TR.REIT" All="true"/>
+		<NoneBlockMarket MarketCode="XHKG-M.TR.ETF" All="true"/>
+		<NoneBlockMarket MarketCode="XHKG-M.TR" All="true"/>
+		<NoneBlockMarket MarketCode="XHKG-M.RW.EW.CALL" All="true"/>
+		<NoneBlockMarket MarketCode="XHKG-M.RW.DW.PUT" All="true"/>
+		<NoneBlockMarket MarketCode="XHKG-M.RW.DW.CALL" All="true"/>
+		<NoneBlockMarket MarketCode="XHKG-M.RW.CBBC.PUT" All="true"/>
+		<NoneBlockMarket MarketCode="XHKG-M.RW.CBBC.CALL" All="true"/>
+		<NoneBlockMarket MarketCode="XHKG-M.DM" All="true"/>
+		<NoneBlockMarket MarketCode="XHKG-M.DB.SARGOV" All="true"/>
+		<NoneBlockMarket MarketCode="XHKG-M.DB.PRCGOV" All="true"/>
+		<NoneBlockMarket MarketCode="XHKG-M.DB.M.HKD" All="true"/>
+		<NoneBlockMarket MarketCode="XHKG-M.DB.M.CNY" All="true"/>
+		<NoneBlockMarket MarketCode="XHKG-M.DB.HKMAE" All="true"/>
+		<NoneBlockMarket MarketCode="XHKG-M.DB" All="true"/>
+		<NoneBlockMarket MarketCode="XHKG-G.RW.EW.CALL" All="true"/>
+		<NoneBlockMarket MarketCode="CCDC-C" IsMic="true" All="true"/>
+		<NoneBlockMarket MarketCode="CCDC-I" IsMic="true" All="true"/>
+		<NoneBlockMarket MarketCode="CCDC-V" IsMic="true" All="true"/>
+	</NoneBlockMarkets>
+	<HasBlockMarkets>
+		<BlockMarket MarketCode="XSHG" IsMic="true" All="true"/>
+		<BlockMarket MarketCode="XSHE" IsMic="true" All="true"/>
+		<BlockMarket MarketCode="NEEQ.ZSZR" All="true"/>
+		<BlockMarket MarketCode="NEEQ.LXJJ" All="true"/>
+		<BlockMarket MarketCode="NEEQ.LWTS" All="true"/>
+		<BlockMarket MarketCode="NEEQ.JJZR" All="true"/>
+		<BlockMarket MarketCode="NEEQ.ER" All="true"/>
+		<BlockMarket MarketCode="XHKG-M.ES" All="true"/>
+		<BlockMarket MarketCode="XHKG-G.ES" All="true"/>
+		<BlockMarket MarketCode="XZCE" IsMic="true" All="true"/>
+		<BlockMarket MarketCode="XSGE" IsMic="true" All="true"/>
+		<BlockMarket MarketCode="XINE" IsMic="true" All="true"/>
+		<BlockMarket MarketCode="XDCE" IsMic="true" All="true"/>
+		<BlockMarket MarketCode="CCFX" IsMic="true" All="true"/>
+		<BlockMarket MarketCode="SHGE" IsMic="true" All="true"/>
+		<BlockMarket MarketCode="CMES" IsMic="true" All="true"/>
+		<BlockMarket MarketCode="XCBT" IsMic="true" All="true"/>
+		<BlockMarket MarketCode="XCEC" IsMic="true" All="true"/>
+		<BlockMarket MarketCode="XNYM" IsMic="true" All="true"/>
+		<BlockMarket MarketCode="ICEU" IsMic="true" All="true"/>
+		<BlockMarket MarketCode="ICEE" IsMic="true" All="true"/>
+	</HasBlockMarkets>
+</NoneIndicatorMarkets>

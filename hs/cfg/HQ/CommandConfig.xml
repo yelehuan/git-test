@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CommandConfig>
+	<!--
+	caption：		命令标题
+	code：			命令代码
+	shortkey:		快捷键
+	aliases:		命令别名
+	params:			命令参数
+	hqform:			是否创建行情窗体
+	iscanback:  该命令是否可以回退
+	-->
+	<Command cmdcode="HQCMD_LOADLAYOUT" caption="000 自定义综合屏" aliases="000,zdyzhp" params="CUSTOM" hqform="true" iscanback="true"/>
+	<Command cmdcode="HQCMD_DEALREPORT" caption="F1 交易报表" shortkey="F1" aliases="01,jybb" params="" hqform="false" iscanback="false"/>  
+	<Command cmdcode="HQCMD_TECHANALYSE" caption="F3 上证指数" shortkey="F3" aliases="03,szzs" params="000001.SH,minute" hqform="true" iscanback="true"/>  
+	<Command cmdcode="HQCMD_TECHANALYSE" caption="F4 深证成指" shortkey="F4" aliases="04,szcz" params="399001.SZ,minute" hqform="true" iscanback="true"/>  
+	<Command cmdcode="HQCMD_F5" caption="F5 切换走势/K线" shortkey="F5" aliases="05,qhzskx" params="" hqform="true" iscanback="true"/>  
+	<Command cmdcode="HQCMD_LOADLAYOUT" caption="F6 自选股" shortkey="F6" aliases="06,zxg" params="f6" hqform="true" iscanback="true"/>
+	<Command cmdcode="HQCMD_SWITCHCYCLE" caption="F8 周期切换" shortkey="F8" aliases="08,zqqh" params="" hqform="false" iscanback="false"/>	
+	<Command cmdcode="HQCMD_REPORT" caption="60 全部A股" aliases="60,601,qbag" params="1101001" hqform="true" iscanback="true"/>
+	<Command cmdcode="HQCMD_REPORT" caption="602 全部B股" aliases="602,qbbg" params="1101009" hqform="true" iscanback="true"/>  
+	<Command cmdcode="HQCMD_REPORT" caption="61 上证A股" aliases="61,szag,hazd" params="1101002" hqform="true" iscanback="true"/>  
+	<Command cmdcode="HQCMD_REPORT" caption="62 上证B股" aliases="62,szbg,hbzd" params="1101010" hqform="true" iscanback="true"/>  
+	<Command cmdcode="HQCMD_REPORT" caption="63 深证A股" aliases="63,szag,sazd" params="1101003" hqform="true" iscanback="true"/>  
+	<Command cmdcode="HQCMD_REPORT" caption="64 深证B股" aliases="64,szbg,sbzd" params="1101011" hqform="true" iscanback="true"/>  	
+	<Command cmdcode="HQCMD_REPORT" caption="65 上交所债券" aliases="65,sjszq" params="1301002" hqform="true" iscanback="true"/>  	
+	<Command cmdcode="HQCMD_REPORT" caption="66 深交所债券" aliases="66,sjszq" params="1301003" hqform="true" iscanback="true"/>  	
+	<Command cmdcode="HQCMD_REPORT" caption="67 上交所基金" aliases="67,sjsjj" params="1211003" hqform="true" iscanback="true"/>  	
+	<Command cmdcode="HQCMD_REPORT" caption="68 深交所基金" aliases="68,sjsjj" params="1211004" hqform="true" iscanback="true"/>  	
+	<Command cmdcode="HQCMD_REPORT" caption="69 中小板" aliases="69,zxb" params="1101005" hqform="true" iscanback="true"/>  	
+	<Command cmdcode="HQCMD_REPORT" caption="LOF 创业板" aliases="30,cyb" params="1101006" hqform="true" iscanback="true"/> 	
+	<Command cmdcode="HQCMD_KLINEINDEX" caption="MACD指标" shortkey="" aliases="macd" params="3" hqform="false" iscanback="false"/>
+	<Command cmdcode="HQCMD_KLINEINDEX" caption="KDJ指标" shortkey="" aliases="kdj" params="4" hqform="false" iscanback="false"/>
+	<Command cmdcode="HQCMD_KLINEINDEX" caption="CCI指标" shortkey="" aliases="cci" params="5" hqform="false" iscanback="false"/>
+	<Command cmdcode="HQCMD_KLINEINDEX" caption="MTM指标" shortkey="" aliases="mtm" params="6" hqform="false" iscanback="false"/>
+	<Command cmdcode="HQCMD_KLINEINDEX" caption="RSI指标" shortkey="" aliases="rsi" params="7" hqform="false" iscanback="false"/>
+	<Command cmdcode="HQCMD_KLINEINDEX" caption="BRAR指标" shortkey="" aliases="brar" params="8" hqform="false" iscanback="false"/>
+	<Command cmdcode="HQCMD_KLINEINDEX" caption="BOLL指标" shortkey="" aliases="boll" params="9" hqform="false" iscanback="false"/>
+	<Command cmdcode="HQCMD_KLINEINDEX" caption="CR指标" shortkey="" aliases="cr" params="10" hqform="false" iscanback="false"/>
+	<Command cmdcode="HQCMD_KLINEINDEX" caption="B3612指标" shortkey="" aliases="b3612" params="11" hqform="false" iscanback="false"/>
+	<Command cmdcode="HQCMD_KLINEINDEX" caption="DMI指标" shortkey="" aliases="dmi" params="12" hqform="false" iscanback="false"/>
+	<Command cmdcode="HQCMD_KLINEINDEX" caption="OBV指标" shortkey="" aliases="obv" params="13" hqform="false" iscanback="false"/>
+	<Command cmdcode="HQCMD_KLINEINDEX" caption="PSY指标" shortkey="" aliases="psy" params="14" hqform="false" iscanback="false"/>
+	<Command cmdcode="HQCMD_KLINEINDEX" caption="WR指标" shortkey="" aliases="wr" params="15" hqform="false" iscanback="false"/>
+	<Command cmdcode="HQCMD_KLINEINDEX" caption="ROC指标" shortkey="" aliases="roc" params="16" hqform="false" iscanback="false"/>
+	<Command cmdcode="HQCMD_KLINEINDEX" caption="BIAS指标" shortkey="" aliases="bias" params="17" hqform="false" iscanback="false"/>
+	<Command cmdcode="HQCMD_KLINEINDEX" caption="OSC指标" shortkey="" aliases="osc" params="18" hqform="false" iscanback="false"/>
+	<Command cmdcode="HQCMD_KLINEINDEX" caption="EMV指标" shortkey="" aliases="emv" params="19" hqform="false" iscanback="false"/>
+	<Command cmdcode="HQCMD_KLINEINDEX" caption="TAPI指标" shortkey="" aliases="tapi" params="20" hqform="false" iscanback="false"/>
+	<Command cmdcode="HQCMD_KLINEINDEX" caption="DMA指标" shortkey="" aliases="dma" params="21" hqform="false" iscanback="false"/>
+	<Command cmdcode="HQCMD_KLINEINDEX" caption="TRIX指标" shortkey="" aliases="trix" params="22" hqform="false" iscanback="false"/>
+	<Command cmdcode="HQCMD_KLINEINDEX" caption="WVAD指标" shortkey="" aliases="wvad" params="23" hqform="false" iscanback="false"/>
+	<Command cmdcode="HQCMD_KLINEINDEX" caption="VR指标" shortkey="" aliases="vr" params="24" hqform="false" iscanback="false"/>
+	<Command cmdcode="HQCMD_KLINEINDEX" caption="SLOWKD指标" shortkey="" aliases="slowkd" params="25" hqform="false" iscanback="false"/>
+	<Command cmdcode="HQCMD_KLINEINDEX" caption="MASS指标" shortkey="" aliases="mass" params="26" hqform="false" iscanback="false"/>
+	<Command cmdcode="HQCMD_KLINEINDEX" caption="CHAIKIN" shortkey="" aliases="chaikin" params="27" hqform="false" iscanback="false"/>
+	<Command cmdcode="HQCMD_KLINEINDEX" caption="SAR指标" shortkey="" aliases="sar" params="28" hqform="false" iscanback="false"/>
+	<Command cmdcode="HQCMD_KLINEINDEX" caption="TWR指标" shortkey="" aliases="twr" params="29" hqform="false" iscanback="false"/>	
+</CommandConfig>

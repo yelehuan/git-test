@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Layout>
+  <PageGroup namelist="BOND_MINUTE">
+    <Page name="MinutePage" caption="债券_分时页面" processcode="true" notifycode="minute">
+      <MinuteContainer name="minutecontainer" caption="分时容器" align="alClient" focustype="ftMove" relatecomp="minute,MinuteTimeLine,minuteIndex">
+        <Container name="minutegroup" caption="分时图组" align="alClient" height="300">
+          <Minute name="minute" caption="分时图" align="alClient" height="100" focustype="ftNone" isrequester="true" canresize="false" relatecode="minutecontainer,MinuteTimeLine,minuteIndex" relateindex="TradeDate,TradeTime,NewPrice,PrevClose,TodayOpen,TodayHigh,TodayLow,Volume,DeltaAmount,DeltaVolume,AveragePrice,HighLimit,LowLimit">
+            </Minute>
+          <MinuteTimeLine name="MinuteTimeLine" caption="时间轴" align="alBottom" focustype="ftNone" height="20" canresize="false"/>
+        </Container>
+        <MinuteSub name="minuteIndex" caption="分时指标" align="alClient" height="100" focustype="ftNone" indextype="4" visible="false"/>
+      </MinuteContainer>
+    </Page>
+  </PageGroup>
+  <PageGroup namelist="BOND_KLINE">
+    <Page name="KLinePage" caption="债券_K线页面" processcode="true" notifycode="kline" deffocused="klinecontainer">
+      <KLineContainer name="klinecontainer" caption="K线容器" align="alClient" focustype="ftMove" relatecomp="kline,klinetimeline,klineInfo,klineVolume,klineAmount" showvalue="all" showfloatpanel="false">
+        <Container name="klinegroup" caption="K线组" align="alClient" height="400">
+          <KLineInfo name="klineInfo" caption="K线信息框" align="alTop" height="20" canresize="false"/>
+          <KLineMainChart name="kline" caption="K线图" align="alClient" height="300" focustype="ftNone" isrequester="true" canresize="false" relatecode="klinecontainer,klineInfo,klinetimeline,klineVolume" relateindex="TradeDate,TradeTime,NewPrice,PrevClose,TodayOpen,TodayHigh,TodayLow,Volume,TotalAmount,DeltaAmount,DeltaVolume">
+            </KLineMainChart>
+          <KLineTimeLine name="klinetimeline" caption="时间轴" align="alBottom" height="18" canresize="false"/>
+        </Container>
+        <KLineSubChart name="klinevolume" caption="K线量图指标" align="alClient" height="100" focustype="ftNone" indextype="1" bottommargin="10" showzeroline="true">
+        </KLineSubChart>
+      </KLineContainer>
+    </Page>
+  </PageGroup>
+</Layout>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ID：属性名称，用于在快照中找属性值
+Name：属性描述，作为基本报价的标签或报价盘的列进行显示
+Base：基准值，可以设定具体的值（此时配置一个数值即可），也可以是指定某个字段（此时配置字符串字段名）
+ValueBrushType：字段显示颜色，0-默认颜色；1-涨跌平色；2-上涨颜色；3-下跌颜色；4-平颜色；5-金额类颜色；6-动态数值颜色；#8CA4B6-自定义颜色
+Precision：保留精度，-1-默认；0-不保留小数位；1-保留一位小数位...
+NameSuffix：名称后缀，如：在报价盘换手率列上标注"%"等后缀
+ValueSuffix：值后缀，用于显示单位等，如：在成交量后面显示手/张、换手率后面显示"%"等后缀
+UseChineseUnit：使用中式单位,如万,亿
+ClearBeforeTrade：盘前是否清空数据 1:清空
+ShowNullDisplayWhenZero：1：数据为0时显示自定义清空字符串
+-->
+<SnapshotFieldsConfig>
+    <Fields>
+        <Field ID="Name"                       Name="名称"/>
+        <Field ID="ProdCode"                   Name="代码" />
+        <Field ID="DisplayProdCode"            Name="代码" />
+        <Field ID="PinYinSpelling"             Name="拼音简称"/>
+        <Field ID="MarketDate"                 Name="市场日期"/>
+        <Field ID="TimeStamp"                  Name="行情推送时间戳"/>
+        <Field ID="DataTime"                   Name="行情推送时间"/>
+        <Field ID="TradeStatus"                Name="交易状态"/>
+        <Field ID="TradeMinutes"               Name="交易分钟数"/>
+        <Field ID="PreClose"                   Name="昨收" ValueBrushType="4"/>
+        <Field ID="UpPrice"                    Name="涨停价" ValueBrushType="2" ShowNullDisplayWhenZero="1"/>
+        <Field ID="DownPrice"                  Name="跌停价" ValueBrushType="3" ShowNullDisplayWhenZero="1"/>
+        <Field ID="SharesPerHand"              Name="每手股数"/>
+        <Field ID="OpenPrice"                  Name="开盘" Base="ChangeBasePrice" ValueBrushType="1" ClearBeforeTrade="1"/>
+        <Field ID="HighPrice"                  Name="最高" Base="ChangeBasePrice" ValueBrushType="1" ClearBeforeTrade="1"/>
+        <Field ID="LowPrice"                   Name="最低" Base="ChangeBasePrice" ValueBrushType="1" ClearBeforeTrade="1"/>
+        <Field ID="ClosePrice"                 Name="收盘" Base="ChangeBasePrice" ValueBrushType="1" ClearBeforeTrade="1"/>
+        <Field ID="LastPrice"                  Name="现价" Base="ChangeBasePrice" ValueBrushType="1" ClearBeforeTrade="1"/>
+        <Field ID="Change"                     Name="涨跌" Base="0" ValueBrushType="1" ClearBeforeTrade="1"/>
+        <Field ID="ChangePct"                  Name="涨幅%" Base="0" Precision="2" ValueBrushType="1" ClearBeforeTrade="1" />
+        <Field ID="ChangeBasePrice"            Name="价位比较基准值"/>
+        <Field ID="ChangePctMin5"              Name="涨速%" ValueBrushType="1" Precision="2"/>
+        <Field ID="TurnoverRatio"              Name="换手%" Precision="2" ClearBeforeTrade="1"/>
+        <Field ID="Amplitude"                  Name="振幅%" Precision="2" ClearBeforeTrade="1"/>
+        <Field ID="CurrentAmount"              Name="现手" UseChineseUnit="1"/>
+        <Field ID="TotalAmount"                Name="成交量" ClearBeforeTrade="1" Precision="0" UseChineseUnit="1" ValueBrushType="5"/>
+        <Field ID="TotalBalance"               Name="金额" ClearBeforeTrade="1" Precision="0" UseChineseUnit="1" ValueBrushType="5" />
+        <Field ID="BusinessAmountAfterMarket"  Name="盘后成交量" Precision="0"  UseChineseUnit="1"/>
+        <Field ID="BusinessBalanceAfterMarket" Name="盘后成交额" UseChineseUnit="1" ValueBrushType="5" />
+        <Field ID="W52HighPrice"               Name="52周最高价"/>
+        <Field ID="W52LowPrice"                Name="52周最低价"/>
+        <Field ID="WAvgPrice"                  Name="加权平均价" Base="ChangeBasePrice" ValueBrushType="1"/>
+        <Field ID="AvgPrice"                   Name="平均价" Base="ChangeBasePrice" ValueBrushType="1"/>
+        <Field ID="VolRatio"                   Name="量比" Base="1" ValueBrushType="1" ClearBeforeTrade="1" Precision="2"/>
+        <Field ID="EntrustRate"                Name="委比" ValueBrushType="1"/>
+        <Field ID="EntrustDiff"                Name="委差"  Precision="0" ValueBrushType="1"/>
+        <Field ID="TotalOffer"                 Name="委卖量"  Precision="0" UseChineseUnit="1"/>
+        <Field ID="TotalBid"                   Name="委买量"  Precision="0" UseChineseUnit="1"/>
+        <Field ID="InAmount"                   Name="内盘成交量" ClearBeforeTrade="1" ValueBrushType="3" Precision="0" UseChineseUnit="1"/>
+        <Field ID="OutAmount"                  Name="外盘成交量" ClearBeforeTrade="1" ValueBrushType="2" Precision="0" UseChineseUnit="1"/>
+        <Field ID="BidInfos"                   Name="委买档信息列表"/>
+        <Field ID="OfferInfos"                 Name="委卖档信息列表"/>
+        <Field ID="BidSeatInfos"               Name="委买席位信息"/>
+        <Field ID="OfferSeatInfos"             Name="委卖席位信息"/>
+        <Field ID="BuyPrice"                   Name="买价" Base="ChangeBasePrice" ValueBrushType="1"/>
+        <Field ID="SellPrice"                  Name="卖价" Base="ChangeBasePrice" ValueBrushType="1"/>
+        <Field ID="BuySize"                    Name="买量" ValueBrushType="2" UseChineseUnit="1"/>
+        <Field ID="SellSize"                   Name="卖量" ValueBrushType="3" UseChineseUnit="1"/>
+        <Field ID="CirculationShares"          Name="流通股本" UseChineseUnit="1" ValueBrushType="5" />
+        <Field ID="TotalShares"                Name="总股本" Precision="0" UseChineseUnit="1" ValueBrushType="5" />
+        <Field ID="MarketValue"                Name="总市值" Precision="0" UseChineseUnit="1" ValueBrushType="5" />
+        <Field ID="CirculationValue"           Name="流通市值" Precision="0" UseChineseUnit="1" ValueBrushType="5" />
+        <Field ID="PE"                         Name="市盈率" Precision="2" />
+        <Field ID="TTMPE"                      Name="TTM市盈率" UseChineseUnit="1" Precision="2" />
+        <Field ID="PB"                         Name="市净率" UseChineseUnit="1" Precision="2" />
+        <Field ID="EPS"                        Name="每股股收益"/>
+        <Field ID="BPS"                        Name="每股净资产"/>
+        <Field ID="NationDebetRatio"           Name="基金净值" Base="ChangeBasePrice" ValueBrushType="1"/>
+        <Field ID="SettlementPrice"            Name="今结"/>
+        <Field ID="PreSettlementPrice"         Name="昨结"/>
+        <Field ID="Position"                   Name="持仓量" Precision="0" UseChineseUnit="1"/>
+        <Field ID="AmountDelta"                Name="日增仓" Precision="0" UseChineseUnit="1"/>
+        <Field ID="IOPV"                       Name="IOPV" Base="ChangeBasePrice" ValueBrushType="1"/>
+        <Field ID="AutionPrice"                Name="动态参考价"/>
+        <Field ID="MatchVolume"                Name="虚拟匹配数量"/>
+        <Field ID="Tradingphasecode"           Name="产品实施标志"/>
+        <Field ID="ExerciseType"               Name="行权方式"/>
+        <Field ID="SpecialMarker"              Name="分类标记"/>
+        <Field ID="Underlying"                 Name="标的证券"/>
+        <Field ID="ExerciseDate"               Name="行权日期"/>
+        <Field ID="ExercisePrice"              Name="行权价格"/>
+        <Field ID="ContractUnit"               Name="合约乘数"/>
+        <Field ID="ContractCode"               Name="合约代码"/>
+        <Field ID="CallPut"                    Name="认购认沽"/>
+        <Field ID="StartTradeDate"             Name="首个交易日"/>
+        <Field ID="EndTradeDate"               Name="最后交易日"/>
+        <Field ID="ExpireDate"                 Name="到期日"/>
+        <Field ID="TickSize"                   Name="最小报价单位"/>
+        <Field ID="SecurityStatusFlag"         Name="期权合约状态信息"/>
+        <Field ID="QuoteLevel"                 Name="行情级别"/>
+        <Field ID="MarketInfo"                 Name="市场信息"/>
+        <Field ID="MemberCount"                Name="成员个数" Precision="0" ClearBeforeTrade="1" />
+        <Field ID="RiseCount"                  Name="上涨家数" Precision="0" ClearBeforeTrade="1" ValueBrushType="2"/>
+        <Field ID="FallCount"                  Name="下跌家数" Precision="0" ClearBeforeTrade="1" ValueBrushType="3"/>
+        <Field ID="TotalBidBalance"            Name="委买金额" UseChineseUnit="1"/>
+        <Field ID="TotalOfferBalance"          Name="委卖金额" UseChineseUnit="1"/>
+        <Field ID="RiseFirstName"  	           Name="领涨股"/>
+        <Field ID="Speculation"                Name="投机度" ClearBeforeTrade="1" ToolTip="成交量/持仓量，表示该合约的投机活跃度"/>
+		<Field ID="Premium"                    Name="溢价率" ClearBeforeTrade="1" ValueBrushType="1"/>
+		<Field ID="ConversionValue"            Name="转股价值" ClearBeforeTrade="1"/>
+		<Field ID="Spread"                     Name="点差" ClearBeforeTrade="1"/>
+		<Field ID="BusinessFinalPrice"         Name="上末笔" ClearBeforeTrade="1" ShowNullDisplayWhenZero="1"/>
+		<Field ID="PriceChange"                Name="涨跌PIP" Base="0" ValueBrushType="1" ClearBeforeTrade="1"/>
+        <Field ID="ChangePIP"                  Name="涨跌PIP" Base="0" ValueBrushType="1" ClearBeforeTrade="1"/>
+		<Field ID="SpreadPIP"                  Name="点差" ClearBeforeTrade="1"/>
+		<Field ID="MidPrice"                   Name="中间价"/>
+		<Field ID="SpecialClosePrice"          Name="16:30收盘价" ValueBrushType="1" ShowNullDisplayWhenZero="1" Base="ChangeBasePrice" ClearBeforeTrade="1"/>
+        <Field ID="NearlyAWeek"                Name="近一周涨幅%" Base="0" Precision="2" ValueBrushType="1" ClearBeforeTrade="1" />
+		<Field ID="NearlyAMonth"               Name="近一月涨幅%" Base="0" Precision="2" ValueBrushType="1" ClearBeforeTrade="1" />
+		<Field ID="NearlyThreeMonth"           Name="近三月涨幅%" Base="0" Precision="2" ValueBrushType="1" ClearBeforeTrade="1" />
+		<Field ID="NearlySixMonth"             Name="近六月涨幅%" Base="0" Precision="2" ValueBrushType="1" ClearBeforeTrade="1" />
+		<Field ID="NearlyAYear"                Name="近一年涨幅%" Base="0" Precision="2" ValueBrushType="1" ClearBeforeTrade="1" />
+		<Field ID="NearlyThreeYear"            Name="近三年涨幅%" Base="0" Precision="2" ValueBrushType="1" ClearBeforeTrade="1" />
+		<Field ID="NearlyFiveYear"             Name="近五年涨幅%" Base="0" Precision="2" ValueBrushType="1" ClearBeforeTrade="1" />
+		<Field ID="YearToDate"                 Name="年初至今涨幅%" Base="0" Precision="2" ValueBrushType="1" ClearBeforeTrade="1"/>
+		<Field ID="SinceEstablish"             Name="成立以来涨幅%" Base="0" Precision="2" ValueBrushType="1" ClearBeforeTrade="1" />
+		<Field ID="AnnualizedYield"            Name="年化收益%" Base="0" Precision="2" ValueBrushType="1" ClearBeforeTrade="1" />
+		<Field ID="LastYTM"                    Name="最新YTM" Base="ChangeBasePrice" Precision="4" ValueBrushType="1" ClearBeforeTrade="1"/>
+		<Field ID="AvgYTM"                     Name="加权YTM" Base="ChangeBasePrice" Precision="4" ValueBrushType="1" ClearBeforeTrade="1" />
+		<Field ID="ChangeBP"                   Name="涨跌BP" Base="0" Precision="2" ValueBrushType="1" ClearBeforeTrade="1" />
+    </Fields>
+</SnapshotFieldsConfig>

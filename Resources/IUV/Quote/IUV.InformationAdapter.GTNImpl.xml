@@ -1,0 +1,566 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>IUV.InformationAdapter.GTNImpl</name>
+    </assembly>
+    <members>
+        <member name="T:IUV.InformationAdapter.GTNImpl.HashMac">
+            <summary>
+            HashMac
+            </summary>
+        </member>
+        <member name="P:IUV.InformationAdapter.GTNImpl.HashMac.hash_key">
+            <summary>
+            key
+            </summary>
+        </member>
+        <member name="P:IUV.InformationAdapter.GTNImpl.HashMac.hash_value">
+            <summary>
+            value
+            </summary>
+        </member>
+        <member name="T:IUV.InformationAdapter.GTNImpl.GTNImplement">
+            <summary>
+            资讯类数据获取
+            </summary>
+        </member>
+        <member name="M:IUV.InformationAdapter.GTNImpl.GTNImplement.GetNewsList(System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            获取新闻列表
+            </summary>
+            <param name="prodCode">股票代码</param>
+            <param name="marketCode">市场代码</param>
+            <param name="pageNo">页面编号</param>
+            <param name="pageCount">页内记录数</param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.InformationAdapter.GTNImpl.GTNImplement.RequestNewsList(System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            Http请求新闻列表
+            </summary>
+            <param name="prodCode">股票代码</param>
+            <param name="marketCode">市场代码</param>
+            <param name="pageNo">页面编号</param>
+            <param name="pageCount">页内记录数</param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.InformationAdapter.GTNImpl.GTNImplement.GetReportList(System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            获取研报列表
+            </summary>
+            <param name="prodCode">股票代码</param>
+            <param name="marketCode">市场代码</param>
+            <param name="pageNo">页面编号</param>
+            <param name="pageCount">页内记录数</param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.InformationAdapter.GTNImpl.GTNImplement.RequestReportList(System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            HTTP请求研报列表
+            </summary>
+            <param name="prodCode">股票代码</param>
+            <param name="marketCode">市场代码</param>
+            <param name="pageNo">页面编号</param>
+            <param name="pageCount">页内记录数</param>
+        </member>
+        <member name="M:IUV.InformationAdapter.GTNImpl.GTNImplement.GetMarqueeList(System.Int32)">
+            <summary>
+            获取跑马灯列表
+            </summary>
+            <param name="count">请求个数</param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.InformationAdapter.GTNImpl.GTNImplement.RequestMarqueeList(System.Int32)">
+            <summary>
+            请求跑马灯数据
+            </summary>
+            <param name="count">请求个数</param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.InformationAdapter.GTNImpl.GTNImplement.GetAnnouncementList(System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            获取公告列表
+            </summary>        
+            /// <param name="prodCode">股票代码</param>
+            <param name="marketCode">市场代码</param>
+            <param name="pageNo">页面编号</param>
+            <param name="pageCount">页内记录数</param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.InformationAdapter.GTNImpl.GTNImplement.RequestAnnouncementList(System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            HTTP请求公告列表
+            </summary>
+            <param name="prodCode">股票代码</param>
+            <param name="pageNo">页面编号</param>
+            <param name="marketCode">市场代码</param>
+            <param name="pageCount">页内记录数</param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.InformationAdapter.GTNImpl.GTNImplement.Initialize(System.Collections.Generic.List{IUV.Adapter.Information.InformationAdapterConfig})">
+            <summary>
+            初始化适配器
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.InformationAdapter.GTNImpl.GTNImplement.RequestToken">
+            <summary>
+            请求Token
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.InformationAdapter.GTNImpl.GTNImplement.HashMacSHA256(System.Byte[],System.Byte[])">
+            <summary>
+            HashMacSHA256加密
+            </summary>
+            <param name="message">加密内容</param>
+            <param name="secret">秘钥</param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.InformationAdapter.GTNImpl.GTNImplement.RequestHashMac">
+            <summary>
+            获取hash_key和hash_value
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.InformationAdapter.GTNImpl.GTNImplement.GetToken">
+            <summary>
+            获取Token
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.InformationAdapter.GTNImpl.GTNImplement.GetFundFlow(System.String,System.String,System.Int32)">
+            <summary>
+            获取资金流
+            </summary>
+            <param name="prodCode">股票代码</param>
+            <param name="marketCode">市场代码</param>
+            <param name="dataCount">数据数量</param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.InformationAdapter.GTNImpl.GTNImplement.GetMarketNewsList(System.String,System.Int32,System.Int32)">
+            <summary>
+            查询市场资讯
+            </summary>
+            <param name="categoryId"></param>
+            <param name="pageNo"></param>
+            <param name="pageCount"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.InformationAdapter.GTNImpl.GTNImplement.GetCalendarList(System.DateTime)">
+            <summary>
+            查询股市日历
+            </summary>
+            <param name="dateTime"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.InformationAdapter.GTNImpl.GTNImplement.GetNewSharesList">
+            <summary>
+            查找新股列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.InformationAdapter.GTNImpl.GTNImplement.GetExpressNews(System.String,System.Int32,System.Int32)">
+            <summary>
+            获取快讯
+            </summary>
+            <param name="prodCode">股票代码</param>
+            <param name="marketCode">市场代码</param>
+            <param name="pageNo">页面编号</param>
+            <param name="pageCount">页内记录数</param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.InformationAdapter.GTNImpl.GTNImplement.GetMarketAnnouncementList(System.String,System.Int32,System.Int32)">
+            <summary>
+            按市场获取公告
+            </summary>
+            <param name="categoryId"></param>
+            <param name="pageNo"></param>
+            <param name="pageCount"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.InformationAdapter.GTNImpl.GTNImplement.GetBondCalendarList(System.Int32,System.Int32)">
+            <summary>
+            获取债市日历
+            </summary>
+            <param name="pageNo"></param>
+            <param name="pageSize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.InformationAdapter.GTNImpl.GTNImplement.GetNewsWebAddr">
+            <summary>
+            获取链接地址
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.InformationAdapter.GTNImpl.GTNImplement.GetHSGTTradingDayInfo(System.Int32,System.DateTime,System.DateTime)">
+            <summary>
+            获取沪深港通交易日状态
+            </summary>
+            <param name="tradingType"></param>
+            <param name="startDate"></param>
+            <param name="endDate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.InformationAdapter.GTNImpl.GTNImplement.GetFundDataList(System.String,System.String)">
+            <summary>
+            查询单只或者多只基金数据
+            </summary>
+            <param name="gilCodes"></param>
+            <param name="indexs"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.InformationAdapter.GTNImpl.GTNImplement.GetBenchmarkOfCreditDebt(System.Int32)">
+            <summary>
+            获取信用债基准
+            </summary>
+            <param name="bondType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.InformationAdapter.GTNImpl.GTNImplement.GetBenchmarkOfCreditDebtOfCoupon(System.Int32,System.String,System.String)">
+            <summary>
+            获取信用债基准-样本券
+            </summary>
+            <param name="bondType"></param>
+            <param name="remainingTerm"></param>
+            <param name="subjectRating"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.InformationAdapter.GTNImpl.GTNImplement.GetBenchmarkOfNewCreditBond(System.Int32,System.String,System.String)">
+            <summary>
+            获取信用债基准-新发信用债
+            </summary>
+            <param name="bondType"></param>
+            <param name="remainingTerm"></param>
+            <param name="subjectRating"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.InformationAdapter.GTNImpl.GTNImplement.GetCreditDebtHistoricalTrend(System.Int32,System.String,System.String,System.String,System.String)">
+            <summary>
+            获取信用债历史走势数据
+            </summary>
+            <param name="bondType"></param>
+            <param name="remainingTerm"></param>
+            <param name="subjectRating"></param>
+            <param name="startDate"></param>
+            <param name="endDate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.InformationAdapter.GTNImpl.GTNImplement.GetInterestRateDebtHistoricalTrend(System.Int32,System.String,System.String,System.String)">
+            <summary>
+            获取利率债历史走势数据
+            </summary>
+            <param name="bondType"></param>
+            <param name="remainingTerm"></param>
+            <param name="startDate"></param>
+            <param name="endDate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.InformationAdapter.GTNImpl.GTNImplement.GetIndexConstituentList(System.String,System.String)">
+            <summary>
+            获取指数成分股
+            </summary>
+            <param name="gilCode"></param>
+            <param name="marketCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.InformationAdapter.GTNImpl.GTNImplement.GetInterbankForeignExchangeRate(System.Int32,System.DateTime)">
+            <summary>
+            获取银行间外汇牌价数据
+            </summary>
+            <param name="priceType"></param>
+            <param name="tradeDate"></param>
+            <returns></returns>
+        </member>
+        <member name="T:IUV.InformationAdapter.GTNImpl.GTNReportList">
+            <summary>
+            研报列表
+            </summary>
+        </member>
+        <member name="P:IUV.InformationAdapter.GTNImpl.GTNReportList.Data">
+            <summary>
+            研报列表数据
+            </summary>
+        </member>
+        <member name="T:IUV.InformationAdapter.GTNImpl.GTNReportItem">
+            <summary>
+            研报列表项
+            </summary>
+        </member>
+        <member name="P:IUV.InformationAdapter.GTNImpl.GTNReportItem.OrgName">
+            <summary>
+            发布机构
+            </summary>
+        </member>
+        <member name="P:IUV.InformationAdapter.GTNImpl.GTNReportItem.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:IUV.InformationAdapter.GTNImpl.GTNReportItem.TextId">
+            <summary>
+            ID
+            </summary>
+        </member>
+        <member name="P:IUV.InformationAdapter.GTNImpl.GTNReportItem.PublishDate">
+            <summary>
+            新闻发布日期
+            </summary>
+        </member>
+        <member name="P:IUV.InformationAdapter.GTNImpl.GTNReportItem.URL">
+            <summary>
+            正文链接
+            </summary>
+        </member>
+        <member name="T:IUV.InformationAdapter.GTNImpl.GTNNewsList">
+            <summary>
+            新闻列表
+            </summary>
+        </member>
+        <member name="P:IUV.InformationAdapter.GTNImpl.GTNNewsList.Data">
+            <summary>
+            新闻列表
+            </summary>
+        </member>
+        <member name="T:IUV.InformationAdapter.GTNImpl.GTNNewsItem">
+            <summary>
+            新闻列表项
+            </summary>
+        </member>
+        <member name="P:IUV.InformationAdapter.GTNImpl.GTNNewsItem.Media">
+            <summary>
+            媒体来源
+            </summary>
+        </member>
+        <member name="P:IUV.InformationAdapter.GTNImpl.GTNNewsItem.InfoTitle">
+            <summary>
+            新闻标题
+            </summary>
+        </member>
+        <member name="P:IUV.InformationAdapter.GTNImpl.GTNNewsItem.NewsId">
+            <summary>
+            新闻ID，配合cfw_newsinfocontent接口使用，得到新闻内容。
+            </summary>
+        </member>
+        <member name="P:IUV.InformationAdapter.GTNImpl.GTNNewsItem.PublishDate">
+            <summary>
+            新闻发布日期
+            </summary>
+        </member>
+        <member name="P:IUV.InformationAdapter.GTNImpl.GTNNewsItem.External">
+            <summary>
+            是否使用外链
+            </summary>
+        </member>
+        <member name="P:IUV.InformationAdapter.GTNImpl.GTNNewsItem.URL">
+            <summary>
+            外链地址
+            </summary>
+        </member>
+        <member name="T:IUV.InformationAdapter.GTNImpl.GTNMarqueeList">
+            <summary>
+            跑马灯列表
+            </summary>
+        </member>
+        <member name="T:IUV.InformationAdapter.GTNImpl.GTNMarqueeItem">
+            <summary>
+            跑马灯
+            </summary>
+        </member>
+        <member name="P:IUV.InformationAdapter.GTNImpl.GTNMarqueeItem.ID">
+            <summary>
+            ID
+            </summary>
+        </member>
+        <member name="P:IUV.InformationAdapter.GTNImpl.GTNMarqueeItem.SourceCode">
+            <summary>
+            来源ID
+            </summary>
+        </member>
+        <member name="P:IUV.InformationAdapter.GTNImpl.GTNMarqueeItem.SourceName">
+            <summary>
+            信息来源
+            </summary>
+        </member>
+        <member name="P:IUV.InformationAdapter.GTNImpl.GTNMarqueeItem.PublishDate">
+            <summary>
+            发布时间
+            </summary>
+        </member>
+        <member name="P:IUV.InformationAdapter.GTNImpl.GTNMarqueeItem.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:IUV.InformationAdapter.GTNImpl.GTNMarqueeItem.Url">
+            <summary>
+            链接地址
+            </summary>
+        </member>
+        <member name="P:IUV.InformationAdapter.GTNImpl.GTNMarqueeItem.Author">
+            <summary>
+            作者
+            </summary>
+        </member>
+        <member name="P:IUV.InformationAdapter.GTNImpl.GTNMarqueeItem.External">
+            <summary>
+            是否使用外链
+            </summary>
+        </member>
+        <member name="T:IUV.InformationAdapter.GTNImpl.GTNAnnouncementList">
+            <summary>
+            公告列表
+            </summary>
+        </member>
+        <member name="P:IUV.InformationAdapter.GTNImpl.GTNAnnouncementItem.ProdCode">
+            <summary>
+            证券代码
+            </summary>
+        </member>
+        <member name="P:IUV.InformationAdapter.GTNImpl.GTNAnnouncementItem.ProdName">
+            <summary>
+            证券简称
+            </summary>
+        </member>
+        <member name="P:IUV.InformationAdapter.GTNImpl.GTNAnnouncementItem.Media">
+            <summary>
+            媒体出处
+            </summary>
+        </member>
+        <member name="P:IUV.InformationAdapter.GTNImpl.GTNAnnouncementItem.InfoTitle">
+            <summary>
+            公告标题
+            </summary>
+        </member>
+        <member name="P:IUV.InformationAdapter.GTNImpl.GTNAnnouncementItem.URLId">
+            <summary>
+            urlid
+            </summary>
+        </member>
+        <member name="P:IUV.InformationAdapter.GTNImpl.GTNAnnouncementItem.FileType">
+            <summary>
+            	文件类别
+            </summary>
+        </member>
+        <member name="P:IUV.InformationAdapter.GTNImpl.GTNAnnouncementItem.PublishDate">
+            <summary>
+            公告发布日期
+            </summary>
+        </member>
+        <member name="P:IUV.InformationAdapter.GTNImpl.GTNAnnouncementItem.SourceName">
+            <summary>
+            源名称
+            </summary>
+        </member>
+        <member name="P:IUV.InformationAdapter.GTNImpl.GTNAnnouncementItem.URL">
+            <summary>
+            正文地址
+            </summary>
+        </member>
+        <member name="T:IUV.InformationAdapter.GTNImpl.FundFlowSnapshot">
+            <summary>
+            资金流数据
+            </summary>
+        </member>
+        <member name="P:IUV.InformationAdapter.GTNImpl.FundFlowSnapshot.Data">
+            <summary>
+            Data
+            </summary>
+        </member>
+        <member name="T:IUV.InformationAdapter.GTNImpl.FundFlowSnapshotModel">
+            <summary>
+            资金流数据集
+            </summary>
+        </member>
+        <member name="P:IUV.InformationAdapter.GTNImpl.FundFlowSnapshotModel.ProdCode">
+            <summary>
+            股票代码
+            </summary>
+        </member>
+        <member name="P:IUV.InformationAdapter.GTNImpl.FundFlowSnapshotModel.FundFlowSnapshotGrps">
+            <summary>
+            FundFlowSnapshotGrps
+            </summary>
+        </member>
+        <member name="T:IUV.InformationAdapter.GTNImpl.FundFlowSnapshotGrp">
+            <summary>
+            FundFlowSnapshotGrp
+            </summary>
+        </member>
+        <member name="P:IUV.InformationAdapter.GTNImpl.FundFlowSnapshotGrp.Date">
+            <summary>
+            时间
+            </summary>
+        </member>
+        <member name="P:IUV.InformationAdapter.GTNImpl.FundFlowSnapshotGrp.SuperGrp">
+            <summary>
+            超大单资金流结果集
+            </summary>
+        </member>
+        <member name="P:IUV.InformationAdapter.GTNImpl.FundFlowSnapshotGrp.LargeGrp">
+            <summary>
+            大单资金流结果集
+            </summary>
+        </member>
+        <member name="P:IUV.InformationAdapter.GTNImpl.FundFlowSnapshotGrp.MediumGrp">
+            <summary>
+            中单资金流结果集
+            </summary>
+        </member>
+        <member name="P:IUV.InformationAdapter.GTNImpl.FundFlowSnapshotGrp.LittleGrp">
+            <summary>
+            小单资金流结果集
+            </summary>
+        </member>
+        <member name="T:IUV.InformationAdapter.GTNImpl.FundFlowInOutItem">
+            <summary>
+            资金流明细数据
+            </summary>
+        </member>
+        <member name="P:IUV.InformationAdapter.GTNImpl.FundFlowInOutItem.AmountIn">
+            <summary>
+            流入成交量
+            </summary>
+        </member>
+        <member name="P:IUV.InformationAdapter.GTNImpl.FundFlowInOutItem.TurnoverIn">
+            <summary>
+            流入成交额
+            </summary>
+        </member>
+        <member name="P:IUV.InformationAdapter.GTNImpl.FundFlowInOutItem.CountIn">
+            <summary>
+            流入成交笔数
+            </summary>
+        </member>
+        <member name="P:IUV.InformationAdapter.GTNImpl.FundFlowInOutItem.EntrustCountIn">
+            <summary>
+            流入委托单数
+            </summary>
+        </member>
+        <member name="P:IUV.InformationAdapter.GTNImpl.FundFlowInOutItem.AmountOut">
+            <summary>
+            流出成交量
+            </summary>
+        </member>
+        <member name="P:IUV.InformationAdapter.GTNImpl.FundFlowInOutItem.TurnoverOut">
+            <summary>
+            流出成交额
+            </summary>
+        </member>
+        <member name="P:IUV.InformationAdapter.GTNImpl.FundFlowInOutItem.CountOut">
+            <summary>
+            流出成交笔数
+            </summary>
+        </member>
+        <member name="P:IUV.InformationAdapter.GTNImpl.FundFlowInOutItem.EntrustCountOut">
+            <summary>
+            流出委托单数
+            </summary>
+        </member>
+        <member name="T:IUV.InformationAdapter.GTNImpl.MarqueePublishDateConverter">
+            <summary>
+            跑马灯时间格式转换
+            </summary>
+        </member>
+    </members>
+</doc>

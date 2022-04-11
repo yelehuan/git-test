@@ -1,0 +1,10 @@
+{
+	"AddInName": "新华财经",
+	"Description": "新华财经Excel插件",
+	"RibbonTabName": "新华财经",
+	"ShowDebugMenu": false,
+	"ShowWebHQWebView": false,
+	"ShowBoshiMenu": false,
+	"ShowJSBridgeWebView": false,
+	"OverrideMessageCenterURL": ""
+}

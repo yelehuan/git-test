@@ -1,0 +1,108 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:HSUCF.WPF.Update">
+    <!--窗体背景-->
+    <SolidColorBrush x:Key="WindowBackground" Color="#222222"/>
+    <!--窗体默认字体画刷-->
+    <SolidColorBrush x:Key="WindowForeground" Color="#ddd"/>
+    <!--窗体系统按钮的背景色-->
+    <SolidColorBrush x:Key="WindowButtonBackground" Color="#565454"/>
+    <!--窗体标题栏背景画刷-->
+    <SolidColorBrush x:Key="WindowTitleBrush" Color="#383838"/>
+    <!--窗体边框画刷-->
+    <SolidColorBrush x:Key="WindowBorderBrush" Color="Black"/>
+    <!--窗体边框发光画刷-->
+    <SolidColorBrush x:Key="WindowGrowBrush" Color="Black"/>
+    <!--更新主界面顶部的装饰条画刷-->
+    <LinearGradientBrush x:Key="MainWndTopDecorate">
+        <GradientStop Color="#3A67F7" Offset="0"/>
+        <GradientStop Color="#FC9804" Offset="0.5"/>
+        <GradientStop Color="#3A67F7" Offset="1"/>
+    </LinearGradientBrush>
+    <DropShadowEffect x:Key="MainWndTopProgressBarEffect" Color="Black"  BlurRadius="5" ShadowDepth="2" Direction="180"/>
+    <!--更新主界面底部的装饰条画刷-->
+    <SolidColorBrush x:Key="MainWndBottomDecorate" Color="#444444"/>
+    <!--更新主界面顶部进度条的背景-->
+    <SolidColorBrush x:Key="MainWndTopProgressBarBackground" Color="#161616"/>
+    <!--更新主界面顶部进度条的前景-->
+    <LinearGradientBrush x:Key="MainWndTopProgressBarForeground">
+        <GradientStop Color="#FF2E7CCE" Offset="0"/>
+        <GradientStop Color="#FF10FAFE" Offset="1"/>
+    </LinearGradientBrush>
+    <!--更新主界面顶部进度条外发光色-->
+    <SolidColorBrush x:Key="MainWndTopProgressBarGlowBrush" Color="Transparent"/>
+    <!--更新主界面表格的滚动条画刷-->
+    <SolidColorBrush x:Key="MainWndDataGridScrollBar" Color="#535353"/>
+    <!--更新主界面表格中文字的默认前景-->
+    <SolidColorBrush x:Key="MainWndDataGridForeground" Color="#ddd"/>
+    <!--更新主界面表格中进度条的前景-->
+    <SolidColorBrush x:Key="MainWndDataGridProgressBarForeground" Color="#2B3453"/>
+    <!--更新主界面表格中进度条的前景（当下载失败时）-->
+    <SolidColorBrush x:Key="MainWndDataGridProgressBarForegroundWhenFailed" Color="#E93735"/>
+    <!--更新主界面表格中单元格的内边框画刷-->
+    <SolidColorBrush x:Key="MainWndDataGridCellBorderBrush" Color="#333333"/>
+    <!--更新主界面表格中单元格选中的前景色-->
+    <SolidColorBrush x:Key="MainWndDataGridSelectedForeground" Color="#FFFFFF"/>
+    <!--更新主界面表格中单元格选中的背景色-->
+    <SolidColorBrush x:Key="MainWndDataGridSelectedBackground" Color="Transparent"/>
+    <!--更新主界面表格中下载成功提示信息的前景-->
+    <SolidColorBrush x:Key="FileLoadedSuccessPrompt" Color="#71B34F"/>
+    <!--更新主界面表格中下载失败提示信息的前景-->
+    <SolidColorBrush x:Key="FileLoadedFailedPrompt" Color="#E93735"/>
+    <!--更新主界面中开始下载按钮的背景-->
+    <SolidColorBrush x:Key="MainWndDownloadBtnBackground" Color="#C02727"/>
+    <!--更新主界面中开始下载按钮的鼠标覆盖时背景-->
+    <SolidColorBrush x:Key="MainWndDownloadBtnMouseOverBackground" Color="#A22727"/>
+    <!--更新主界面中开始下载按钮的鼠标按下时背景-->
+    <SolidColorBrush x:Key="MainWndDownloadBtnPressedBackground" Color="#A22727"/>
+    <!--更新主界面中其它功能按钮的背景-->
+    <SolidColorBrush x:Key="MainWndFunBtnBackground" Color="#353535"/>
+    <!--更新主界面中其它功能按钮的前景-->
+    <SolidColorBrush x:Key="MainWndFunBtnForeground" Color="#FFFFFF"/>
+    <!--更新主界面中其它功能按钮的鼠标覆盖时背景-->
+    <SolidColorBrush x:Key="MainWndFunBtnMouseOverBackground" Color="#565555"/>
+    <!--更新主界面中其它功能按钮的鼠标按下时背景-->
+    <SolidColorBrush x:Key="MainWndFunBtnPressedBackground" Color="#565555"/>
+    <!--更新主界面背景图片的地址-->
+    <BitmapImage x:Key="MainWndBackImage" UriSource="Resources/ImgForDark.png"/>
+    <!--***更新完成的对话框***-->
+    <!--窗体边框颜色-->
+    <SolidColorBrush x:Key="MsgWndBorderBrush" Color="#555"/>
+    <!--窗体背景色-->
+    <SolidColorBrush x:Key="MsgWndBackground" Color="#333"/>
+    <!--窗体标题前景色-->
+    <SolidColorBrush x:Key="MsgWndTitleForeground" Color="#d38b2e"/>
+    <!--窗体关闭按钮前景色-->
+    <SolidColorBrush x:Key="MsgWndCloseBtnForeground" Color="#676767"/>
+    <!--窗体关闭按钮鼠标覆盖时前景色-->
+    <SolidColorBrush x:Key="MsgWndCloseBtnMouseOverForeground" Color="#817F7F"/>
+    <!--窗体关闭按钮鼠标按下时前景色-->
+    <SolidColorBrush x:Key="MsgWndCloseBtnPressedForeground" Color="#676767"/>
+    <!--窗体标题栏背景画刷-->
+    <SolidColorBrush x:Key="MsgWndTitleBrush" Color="#333"/>
+    <!--顶部装饰条画刷-->
+    <SolidColorBrush x:Key="MsgWndTopDecorate" Color="#ff9900"/>
+    <!--提示图标的前景色-->
+    <SolidColorBrush x:Key="MsgWngMsgIcoForeground" Color="#65A1E9"/>
+    <!--底部装饰条画刷-->
+    <SolidColorBrush x:Key="MsgWndBottomDecorate" Color="#444"/>
+    <!--其它功能按钮的背景-->
+    <SolidColorBrush x:Key="MsgWndFunBtnBackground" Color="#5E5D5D"/>
+    <!--其它功能按钮的前景-->
+    <SolidColorBrush x:Key="MsgWndFunBtnForeground" Color="#FFFFFF"/>
+    <!--其它功能按钮的鼠标覆盖时背景-->
+    <SolidColorBrush x:Key="MsgWndFunBtnMouseOverBackground" Color="#565555"/>
+    <!--其它功能按钮的鼠标按下时背景-->
+    <SolidColorBrush x:Key="MsgWndFunBtnPressedBackground" Color="#565555"/>
+    <!--设置icon的外边距-->
+    <Thickness x:Key="TitleIconMargin">5,5,0,5</Thickness>
+
+    <!--更新提示背景颜色-->
+    <SolidColorBrush x:Key="NoticeBackground" Color="#24282e"/>
+    <!--更新提示 滚动条颜色-->
+    <SolidColorBrush x:Key="ThumbBrush" Color="#FF515151"/>
+    <!--更新提示 滚动条 鼠标Over颜色-->
+    <SolidColorBrush x:Key="ThumbMouseOverBrush" Color="#FF666666"/>
+    <!--更新提示 滚动条 鼠标Pressed颜色-->
+    <SolidColorBrush x:Key="ThumbPressedBrush" Color="#FF282828"/>
+</ResourceDictionary>

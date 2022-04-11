@@ -1,0 +1,1133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ID：属性名称，用于在快照中找属性值，必须配置
+Remark：字段用途说明
+HorizontalAlignment：列对齐方式，默认右对齐,Left:左对齐 Right:右对齐 Center:居中
+以下字段在需要定制化时配置：
+Name：属性描述，作为基本报价的标签或报价盘的列进行显示
+Base：基准值，可以设定具体的值（此时配置一个数值即可），也可以是指定某个字段（此时配置字符串字段名）
+ValueBrushType：字段显示颜色，0-默认颜色；1-涨跌平色；2-上涨颜色；3-下跌颜色；4-平颜色；5-动态数值颜色；#8CA4B6-自定义颜色
+Precision：保留精度，-1-默认；0-不保留小数位；1-保留一位小数位...
+NameSuffix：名称后缀，如：在报价盘换手率列上标注"%"等后缀
+ValueSufix：值后缀，用于显示单位等，如：在成交量后面显示手/张、换手率后面显示"%"等后缀
+PlusSign：是否显示 + 符号,默认为 0, 需要显示为 1;
+CanSort：是否支持排序，默认不支持 0 :不支持
+-->
+<ArrayOfIuvQuoteBoardLayout>
+	<IuvQuoteBoardLayout>
+		<Category desc="股票">1010,1020</Category>
+		<Fields>
+			<Field ID="Index" Name="序号" CanSort="0" HorizontalAlignment="Center"/>
+			<Field ID="SpecialMarker" CanSort="0" HorizontalAlignment="Center"/>
+			<Field ID="DisplayProdCode" HorizontalAlignment="Left" />
+			<Field ID="Name" CanSort="0" HorizontalAlignment="Left" />
+			<Field ID="ChangePct" PlusSign="1" BackgroundRemind="1"/>
+			<Field ID="LastPrice"  BackgroundRemind="1"/>
+			<Field ID="Change" BackgroundRemind="1" />
+			<Field ID="TotalBalance" />
+			<Field ID="TotalAmount" />
+			<Field ID="TurnoverRatio" />
+			<Field ID="VolRatio" />
+			<Field ID="ChangePctMin5" />
+			<Field ID="MarketValue" />
+			<Field ID="CirculationValue" />
+			<Field ID="TTMPE" />
+			<Field ID="PB" />
+			<!--<Field ID="所属行业" />-->
+			<Field ID="Amplitude" />
+			<Field ID="BuyPrice" BackgroundRemind="1" />
+			<Field ID="SellPrice" BackgroundRemind="1"/>
+			<Field ID="OpenPrice" />
+			<Field ID="HighPrice" />
+			<Field ID="LowPrice" />
+			<Field ID="PreClose" />
+		</Fields>
+	</IuvQuoteBoardLayout>
+	<IuvQuoteBoardLayout>
+		<Category desc="股票全量">-1000,-1010,-1020</Category>
+		<Fields>
+			<Field ID="Index" Name="序号" CanSort="0" HorizontalAlignment="Center" />
+			<Field ID="SpecialMarker" CanSort="0" HorizontalAlignment="Center" />
+			<Field ID="DisplayProdCode" HorizontalAlignment="Left"  />
+			<Field ID="Name" CanSort="0" HorizontalAlignment="Left" />
+			<Field ID="LastPrice" BackgroundRemind="1" />
+			<Field ID="OpenPrice" />
+			<Field ID="Change" BackgroundRemind="1" />
+			<Field ID="HighPrice" />
+			<Field ID="ChangePct" BackgroundRemind="1" />
+			<Field ID="LowPrice" />
+			<Field ID="TotalAmount" />
+			<Field ID="TotalBalance" />
+			<Field ID="TurnoverRatio" />
+			<Field ID="VolRatio" />
+			<Field ID="OutAmount" />
+			<Field ID="InAmount" />
+			<Field ID="UpPrice" CanSort="0" />
+			<Field ID="DownPrice" CanSort="0" />
+			<Field ID="TotalShares" />
+			<Field ID="CirculationShares" />
+			<Field ID="MarketValue" />
+			<Field ID="CirculationValue" />
+			<Field ID="PE" />
+			<Field ID="TTMPE" />
+			<Field ID="PB" />
+			<Field ID="Amplitude" />
+			<Field ID="PreClose" />
+			<Field ID="ChangePctMin5" />
+			<Field ID="BuyPrice" BackgroundRemind="1" />
+			<Field ID="SellPrice" BackgroundRemind="1" />
+			<Field ID="BuySize" />
+			<Field ID="SellSize" />
+			<Field ID="BusinessAmountAfterMarket" CanSort="0" />
+			<Field ID="BusinessBalanceAfterMarket" CanSort="0" />
+			<Field ID="EntrustRate" />
+			<Field ID="CurrentAmount" />
+			<Field ID="WAvgPrice" />
+			<Field ID="W52HighPrice" CanSort="0" />
+			<Field ID="W52LowPrice" CanSort="0" />
+		</Fields>
+	</IuvQuoteBoardLayout>
+	<IuvQuoteBoardLayout>
+		<Category desc="美港股">1030</Category>
+		<Fields>
+			<Field ID="Index" Name="序号" CanSort="0" HorizontalAlignment="Center" />
+			<Field ID="SpecialMarker" CanSort="0" HorizontalAlignment="Center"/>
+			<Field ID="DisplayProdCode" HorizontalAlignment="Left"  />
+			<Field ID="Name" CanSort="0" HorizontalAlignment="Left" Width="120"/>
+			<Field ID="ChangePct" BackgroundRemind="1" />
+			<Field ID="LastPrice" BackgroundRemind="1" />
+			<Field ID="Change" BackgroundRemind="1" />
+			<Field ID="TotalBalance" />
+			<Field ID="TotalAmount" />
+			<Field ID="TurnoverRatio" />
+			<Field ID="VolRatio" />
+			<Field ID="ChangePctMin5" />
+			<Field ID="MarketValue" />
+			<Field ID="CirculationValue" />
+			<Field ID="TTMPE" />
+			<Field ID="PB" />
+			<Field ID="Amplitude" />
+			<Field ID="BuyPrice" BackgroundRemind="1" />
+			<Field ID="SellPrice" BackgroundRemind="1"/>
+			<Field ID="OpenPrice" />
+			<Field ID="HighPrice" />
+			<Field ID="LowPrice" />
+			<Field ID="PreClose" />
+		</Fields>
+	</IuvQuoteBoardLayout>
+	<IuvQuoteBoardLayout>
+		<Category desc="美港股全量">-1030</Category>
+		<Fields>
+			<Field ID="Index" Name="序号" CanSort="0" HorizontalAlignment="Center" />
+			<Field ID="SpecialMarker" CanSort="0" HorizontalAlignment="Center" />
+			<Field ID="DisplayProdCode" HorizontalAlignment="Left"  />
+			<Field ID="Name" CanSort="0" HorizontalAlignment="Left" Width="120"/>
+			<Field ID="ChangePct" BackgroundRemind="1" />
+			<Field ID="LastPrice" BackgroundRemind="1" />
+			<Field ID="Change" BackgroundRemind="1" />
+			<Field ID="TurnoverRatio" />
+			<Field ID="VolRatio" />
+			<Field ID="Amplitude" />
+			<Field ID="OpenPrice" />
+			<Field ID="PreClose" />
+			<Field ID="HighPrice" />
+			<Field ID="LowPrice" />
+			<Field ID="ChangePctMin5" />
+			<Field ID="MarketValue" />
+			<Field ID="BuyPrice" BackgroundRemind="1" />
+			<Field ID="SellPrice" BackgroundRemind="1"/>
+			<Field ID="BuySize" />
+			<Field ID="SellSize" />
+			<Field ID="TotalAmount" />
+			<Field ID="TotalBalance" />
+			<Field ID="BusinessAmountAfterMarket" />
+			<Field ID="BusinessBalanceAfterMarket" />
+			<Field ID="PE" />
+			<Field ID="EntrustRate" />
+			<Field ID="AmountDelta" />
+			<Field ID="OutAmount" />
+			<Field ID="InAmount" />
+			<Field ID="CurrentAmount" />
+			<Field ID="TotalShares" />
+			<Field ID="W52HighPrice" />
+			<Field ID="W52LowPrice" />
+			<Field ID="WAvgPrice" />
+		</Fields>
+	</IuvQuoteBoardLayout>
+	<IuvQuoteBoardLayout>
+		<Category desc="香港非股票品种">1040,4020,5010</Category>
+		<Fields>
+			<Field ID="Index" Name="序号" CanSort="0" HorizontalAlignment="Center" />
+			<Field ID="DisplayProdCode" HorizontalAlignment="Left"  />
+			<Field ID="Name" CanSort="0" HorizontalAlignment="Left"  Width="140"/>
+			<Field ID="LastPrice" BackgroundRemind="1" />
+			<Field ID="ChangePct" BackgroundRemind="1" />	
+			<Field ID="TotalBalance" />
+			<Field ID="VolRatio" />			
+			<Field ID="TotalAmount" />
+			<Field ID="ChangePctMin5" />
+			<Field ID="Amplitude" />
+			<Field ID="OpenPrice" />
+			<Field ID="HighPrice" />
+			<Field ID="LowPrice" />
+			<Field ID="PreClose" />		
+		</Fields>
+	</IuvQuoteBoardLayout>
+	<IuvQuoteBoardLayout>
+		<Category desc="期货">2000</Category>
+		<Fields>
+			<Field ID="Index" Name="序号" CanSort="0" HorizontalAlignment="Center" />
+			<Field ID="DisplayProdCode" HorizontalAlignment="Left"  />
+			<Field ID="Name" CanSort="0" HorizontalAlignment="Left"  Width="140"/>
+			<Field ID="ChangePct" BackgroundRemind="1" />
+			<Field ID="LastPrice" BackgroundRemind="1" />
+			<Field ID="Change" BackgroundRemind="1" />			
+			<Field ID="TotalBalance" />			
+			<Field ID="TotalAmount" />
+            <Field ID="Position"      />
+			<Field ID="AmountDelta" CanSort="0"/>
+			<Field ID="VolRatio" />
+			<Field ID="Speculation"  CanSort="0" /> 
+			<Field ID="Amplitude" />			
+			<Field ID="PreSettlementPrice" CanSort="0"/>			
+			<Field ID="SettlementPrice" CanSort="0"/>			
+			<Field ID="BuyPrice" BackgroundRemind="1" />
+			<Field ID="SellPrice" BackgroundRemind="1"/>			
+			<Field ID="OpenPrice" />
+			<Field ID="HighPrice" />
+			<Field ID="LowPrice" />
+			<Field ID="PreClose" />			
+			<Field ID="BuySize" />
+			<Field ID="SellSize" />
+		</Fields>
+	</IuvQuoteBoardLayout>
+	<IuvQuoteBoardLayout>
+		<Category desc="期货全量">-2000</Category>
+		<Fields>
+			<Field ID="Index" Name="序号" CanSort="0" HorizontalAlignment="Center" />
+			<Field ID="DisplayProdCode" HorizontalAlignment="Left"  />
+			<Field ID="Name" CanSort="0" HorizontalAlignment="Left"  Width="140"/>
+			<Field ID="ChangePct" BackgroundRemind="1" />
+			<Field ID="LastPrice" BackgroundRemind="1" />
+			<Field ID="Change" BackgroundRemind="1" />
+			<Field ID="TurnoverRatio" />
+			<Field ID="VolRatio" />
+			<Field ID="Speculation"  CanSort="0" /> 
+			<Field ID="Amplitude" />
+			<Field ID="OpenPrice" />
+			<Field ID="PreClose" />
+			<Field ID="HighPrice" />
+			<Field ID="LowPrice" />
+			<Field ID="BuyPrice" BackgroundRemind="1" />
+			<Field ID="SellPrice" BackgroundRemind="1"/>
+			<Field ID="BuySize" />
+			<Field ID="SellSize" />
+			<Field ID="TotalAmount" />
+			<Field ID="TotalBalance" />
+			<Field ID="BusinessAmountAfterMarket" />
+			<Field ID="BusinessBalanceAfterMarket" />
+			<Field ID="PE" />
+			<Field ID="EntrustRate" />
+			<Field ID="AmountDelta" CanSort="0"/>
+			<Field ID="Position" />
+			<Field ID="PreSettlementPrice" CanSort="0"/>
+			<Field ID="OutAmount" />
+			<Field ID="InAmount" />
+			<Field ID="SettlementPrice" CanSort="0"/>
+			<Field ID="CurrentAmount" />
+			<Field ID="TotalShares" />
+			<Field ID="W52HighPrice" />
+			<Field ID="W52LowPrice" />
+			<Field ID="WAvgPrice" />
+		</Fields>
+	</IuvQuoteBoardLayout>
+	<IuvQuoteBoardLayout>
+		<Category desc="期权">3010,3020</Category>
+		<Fields>
+			<Field ID="Index" Name="序号" CanSort="0" HorizontalAlignment="Center" />
+			<Field ID="DisplayProdCode" HorizontalAlignment="Left"  />
+			<Field ID="Name" CanSort="0" HorizontalAlignment="Left"  Width="120"/>
+			<Field ID="ChangePct" BackgroundRemind="1" />
+			<Field ID="LastPrice" BackgroundRemind="1" />
+			<Field ID="Change" BackgroundRemind="1" />
+			<Field ID="TotalBalance" />
+			<Field ID="TotalAmount" />
+			<Field ID="Position"   />
+			<Field ID="AmountDelta"     />
+			<Field ID="VolRatio" />
+			<Field ID="Amplitude" />			
+            <Field ID="PreSettlementPrice"/>
+			<Field ID="SettlementPrice" />
+			<Field ID="BuyPrice" BackgroundRemind="1" />
+			<Field ID="SellPrice" BackgroundRemind="1"/>			
+			<Field ID="OpenPrice" />
+			<Field ID="HighPrice" />
+			<Field ID="LowPrice" />
+			<Field ID="PreClose" />
+			<Field ID="BuySize" />
+			<Field ID="SellSize" />
+		</Fields>
+	</IuvQuoteBoardLayout>
+	<IuvQuoteBoardLayout>
+		<Category desc="期权全量">-3000</Category>
+		<Fields>
+			<Field ID="Index" Name="序号" CanSort="0" HorizontalAlignment="Center" />
+			<Field ID="DisplayProdCode" HorizontalAlignment="Left"  />
+			<Field ID="Name" CanSort="0" HorizontalAlignment="Left"  Width="120"/>
+			<Field ID="ChangePct" BackgroundRemind="1" />
+			<Field ID="LastPrice" BackgroundRemind="1" />
+			<Field ID="Change" BackgroundRemind="1" />
+			<Field ID="TurnoverRatio" />
+			<Field ID="VolRatio" />
+			<Field ID="Amplitude" />
+			<Field ID="OpenPrice" />
+			<Field ID="PreClose" />
+			<Field ID="HighPrice" />
+			<Field ID="LowPrice" />
+			<Field ID="ChangePctMin5" />
+			<Field ID="MarketValue" />
+			<Field ID="BuyPrice" BackgroundRemind="1" />
+			<Field ID="SellPrice" BackgroundRemind="1"/>
+			<Field ID="BuySize" />
+			<Field ID="SellSize" />
+			<Field ID="TotalAmount" />
+			<Field ID="TotalBalance" />
+			<Field ID="BusinessAmountAfterMarket" />
+			<Field ID="BusinessBalanceAfterMarket" />
+			<Field ID="PE" />
+			<Field ID="EntrustRate" />
+			<Field ID="AmountDelta" />
+			<Field ID="Position" />
+			<Field ID="PreSettlementPrice" />
+			<Field ID="OutAmount" />
+			<Field ID="InAmount" />
+			<Field ID="SettlementPrice" />
+			<Field ID="CurrentAmount" />
+			<Field ID="TotalShares" />
+			<Field ID="W52HighPrice" />
+			<Field ID="W52LowPrice" />
+			<Field ID="WAvgPrice" />
+		</Fields>
+	</IuvQuoteBoardLayout>
+	<IuvQuoteBoardLayout>
+		<Category desc="基金">4000,4010</Category>
+		<Fields>
+			<Field ID="Index" Name="序号" CanSort="0" HorizontalAlignment="Center" />
+			<Field ID="DisplayProdCode" HorizontalAlignment="Left"  />
+			<Field ID="Name" CanSort="0" HorizontalAlignment="Left"  Width="160"/>
+			<Field ID="ChangePct" BackgroundRemind="1" />
+			<Field ID="LastPrice" BackgroundRemind="1" />
+			<Field ID="Change" BackgroundRemind="1" />			
+			<Field ID="TotalBalance" />			
+			<Field ID="TotalAmount" />
+			<Field ID="VolRatio" />			
+			<Field ID="ChangePctMin5" />			
+			<Field ID="Amplitude" />			
+			<Field ID="BuyPrice" BackgroundRemind="1" />
+			<Field ID="SellPrice" BackgroundRemind="1"/>			
+			<Field ID="OpenPrice" />
+			<Field ID="HighPrice" />
+			<Field ID="LowPrice" />
+			<Field ID="PreClose" />
+		</Fields>
+	</IuvQuoteBoardLayout>
+	<IuvQuoteBoardLayout>
+		<Category desc="基金全量">-4000,4010</Category>
+		<Fields>
+			<Field ID="Index" Name="序号" CanSort="0" HorizontalAlignment="Center" />
+			<Field ID="DisplayProdCode" HorizontalAlignment="Left"  />
+			<Field ID="Name" CanSort="0" HorizontalAlignment="Left"  Width="160"/>
+			<Field ID="ChangePct" BackgroundRemind="1" />
+			<Field ID="LastPrice" BackgroundRemind="1" />
+			<Field ID="Change" BackgroundRemind="1" />
+			<Field ID="VolRatio" />
+			<Field ID="Amplitude" />
+			<Field ID="OpenPrice" />
+			<Field ID="PreClose" />
+			<Field ID="HighPrice" />
+			<Field ID="LowPrice" />
+			<Field ID="ChangePctMin5" />
+			<Field ID="BuyPrice" BackgroundRemind="1" />
+			<Field ID="SellPrice" BackgroundRemind="1"/>
+			<Field ID="BuySize" />
+			<Field ID="SellSize" />
+			<Field ID="TotalAmount" />
+			<Field ID="TotalBalance" />
+			<Field ID="EntrustRate" />
+			<Field ID="OutAmount" />
+			<Field ID="InAmount" />
+		</Fields>
+	</IuvQuoteBoardLayout>
+    <IuvQuoteBoardLayout>
+		<Category desc="国内债券">5000</Category>
+		<Fields>
+			<Field ID="Index" Name="序号" CanSort="0" HorizontalAlignment="Center" />
+			<Field ID="DisplayProdCode" HorizontalAlignment="Left"  />
+			<Field ID="Name" CanSort="0" HorizontalAlignment="Left"  Width="120"/>
+			<Field ID="ChangePct" BackgroundRemind="1" />
+			<Field ID="LastPrice" BackgroundRemind="1" />
+			<Field ID="Change" BackgroundRemind="1" />
+			<Field ID="TotalBalance" />	
+			<Field ID="TotalAmount" />
+			<Field ID="VolRatio"     />
+			<Field ID="Amplitude" />
+			<Field ID="OpenPrice" />
+			<Field ID="HighPrice" />
+			<Field ID="LowPrice" />
+			<Field ID="PreClose"/>
+		</Fields>
+	</IuvQuoteBoardLayout>
+	<IuvQuoteBoardLayout>
+		<Category desc="国内债券全量">-5000</Category>
+		<Fields>
+			<Field ID="Index" Name="序号" CanSort="0" HorizontalAlignment="Center" />
+			<Field ID="DisplayProdCode" HorizontalAlignment="Left"  />
+			<Field ID="Name" CanSort="0" HorizontalAlignment="Left"  Width="120"/>
+			<Field ID="ChangePct" BackgroundRemind="1" />
+			<Field ID="LastPrice" BackgroundRemind="1" />
+			<Field ID="Change" BackgroundRemind="1" />
+			<Field ID="TotalBalance" />	
+			<Field ID="TotalAmount" />
+			<Field ID="VolRatio" />
+			<Field ID="Amplitude" />
+			<Field ID="OpenPrice" />
+			<Field ID="HighPrice" />
+			<Field ID="LowPrice" />
+			<Field ID="PreClose"/>
+		</Fields>
+	</IuvQuoteBoardLayout>
+    <IuvQuoteBoardLayout>
+		<Category desc="指数">6000,6010,6020,6030,6040</Category>
+		<Fields>
+			<Field ID="Index" Name="序号" CanSort="0" HorizontalAlignment="Center" />
+			<Field ID="DisplayProdCode" HorizontalAlignment="Left"  />
+			<Field ID="Name" CanSort="0" HorizontalAlignment="Left" Width="100" />
+			<Field ID="ChangePct" BackgroundRemind="1" />
+			<Field ID="LastPrice" BackgroundRemind="1" />
+			<Field ID="Change" BackgroundRemind="1" />			
+			<Field ID="TotalBalance" /> 
+			<Field ID="TotalAmount" />			
+			<Field ID="VolRatio" />
+			<Field ID="ChangePctMin5" />			
+			<Field ID="Amplitude" />
+			<Field ID="OpenPrice" />
+			<Field ID="HighPrice" />
+			<Field ID="LowPrice" />
+			<Field ID="PreClose" />
+		</Fields>
+	</IuvQuoteBoardLayout>
+	<IuvQuoteBoardLayout>
+		<Category desc="指数全量">-6000,-6010,-6020,-6030,-6040</Category>
+		<Fields>
+			<Field ID="Index" Name="序号" CanSort="0" HorizontalAlignment="Center" />
+			<Field ID="DisplayProdCode" HorizontalAlignment="Left"  />
+			<Field ID="Name" CanSort="0" HorizontalAlignment="Left"  Width="100"/>
+			<Field ID="ChangePct" BackgroundRemind="1" />
+			<Field ID="LastPrice" BackgroundRemind="1" />
+			<Field ID="Change" BackgroundRemind="1" />
+			<Field ID="VolRatio" />
+			<Field ID="Amplitude" />
+			<Field ID="OpenPrice" />
+			<Field ID="PreClose" />
+			<Field ID="HighPrice" />
+			<Field ID="LowPrice" />
+			<Field ID="ChangePctMin5" />
+			<Field ID="TotalAmount" />
+			<Field ID="TotalBalance" />
+			<Field ID="CurrentAmount" />
+			<Field ID="W52HighPrice" />
+			<Field ID="W52LowPrice" />
+			<Field ID="WAvgPrice" />
+		</Fields>
+	</IuvQuoteBoardLayout>
+	<IuvQuoteBoardLayout>
+		<Category desc="外汇">7000,7010,7020,7030,7040</Category>
+		<Fields>
+			<Field ID="Index" Name="序号" CanSort="0" HorizontalAlignment="Center"/>
+			<Field ID="DisplayProdCode" HorizontalAlignment="Left" Width="150"/>
+			<Field ID="Name" CanSort="0" HorizontalAlignment="Left" Width="240"/>
+			<Field ID="ChangePct" PlusSign="1" BackgroundRemind="1"/>
+			<Field ID="LastPrice"  BackgroundRemind="1"/>
+			<Field ID="Change" BackgroundRemind="1" />
+			<Field ID="OpenPrice" />
+			<Field ID="HighPrice" />
+			<Field ID="LowPrice" />
+			<Field ID="PreClose" />
+		</Fields>
+	</IuvQuoteBoardLayout>
+	<IuvQuoteBoardLayout>
+		<Category desc="外汇全量">-7000,-7010,-7020,-7030,-7040</Category>
+		<Fields>
+			<Field ID="Index" Name="序号" CanSort="0" HorizontalAlignment="Center"/>
+			<Field ID="DisplayProdCode" HorizontalAlignment="Left" />
+			<Field ID="Name" CanSort="0" HorizontalAlignment="Left" />
+			<Field ID="ChangePct" PlusSign="1" BackgroundRemind="1"/>
+			<Field ID="LastPrice"  BackgroundRemind="1"/>
+			<Field ID="Change" BackgroundRemind="1" />
+			<Field ID="OpenPrice" />
+			<Field ID="HighPrice" />
+			<Field ID="LowPrice" />
+			<!--昨收无行情-->
+			<Field ID="PreClose" />
+		</Fields>
+	</IuvQuoteBoardLayout>		
+	    <IuvQuoteBoardLayout>
+		<Category desc="一般债券">8000,8010</Category>
+		<Fields>
+			<Field ID="Index" Name="序号" CanSort="0" HorizontalAlignment="Center" />
+			<Field ID="DisplayProdCode" HorizontalAlignment="Left"  />
+			<Field ID="Name" CanSort="0" HorizontalAlignment="Left" />
+			<Field ID="ChangePct" BackgroundRemind="1" />
+			<Field ID="LastPrice" BackgroundRemind="1" />
+			<Field ID="Change" BackgroundRemind="1" />
+			<Field ID="TotalBalance" />			
+			<Field ID="TotalAmount" />
+			<Field ID="LastYTM"  />
+			<Field ID="ChangeBP"     />
+			<Field ID="AvgYTM"   />
+			<Field ID="OpenPrice" />
+			<Field ID="HighPrice" />
+			<Field ID="LowPrice" />
+			<Field ID="PreClose"/>
+		</Fields>
+	</IuvQuoteBoardLayout>
+	<IuvQuoteBoardLayout>
+		<Category desc="一般债券全量">-8000,-8010</Category>
+		<Fields>
+			<Field ID="Index" Name="序号" CanSort="0" HorizontalAlignment="Center" />
+			<Field ID="DisplayProdCode" HorizontalAlignment="Left"  />
+			<Field ID="Name" CanSort="0" HorizontalAlignment="Left" />
+			<Field ID="ChangePct" BackgroundRemind="1" />
+			<Field ID="LastPrice" BackgroundRemind="1" />
+			<Field ID="Change" BackgroundRemind="1" />
+			<Field ID="TotalBalance" />
+			<Field ID="VolRatio" />
+			<Field ID="LastYTM"  />
+			<Field ID="ChangeBP"     />
+			<Field ID="AvgYTM"   />
+			<Field ID="Amplitude" />
+			<Field ID="OpenPrice" />
+			<Field ID="HighPrice" />
+			<Field ID="LowPrice" />
+			<Field ID="PreClose"/>
+		</Fields>
+	</IuvQuoteBoardLayout>
+	<IuvQuoteBoardLayout>
+		<Category desc="场外基金">9000</Category>
+		<Fields>
+			<Field ID="Index" Name="序号" CanSort="0" HorizontalAlignment="Center"/>
+			<Field ID="DisplayProdCode" CanSort="0" HorizontalAlignment="Left" />
+			<Field ID="Name" CanSort="0" HorizontalAlignment="Left"  Width="240"/>
+			<Field ID="LastPrice" CanSort="0" Name="净值"  BackgroundRemind="1"  Precision="4"/>
+			<Field ID="ChangePct" CanSort="0" PlusSign="1" BackgroundRemind="1"/>
+			<Field ID="NearlyAWeek" CanSort="0" />
+		    <Field ID="NearlyAMonth"  CanSort="0"    />
+		    <Field ID="NearlyThreeMonth"  CanSort="0"      />
+		    <Field ID="NearlySixMonth"    CanSort="0"         />
+		    <Field ID="YearToDate"      CanSort="0"            />
+		    <Field ID="NearlyAYear"     CanSort="0"           />
+		    <Field ID="NearlyThreeYear"  CanSort="0"          />
+		    <Field ID="NearlyFiveYear"  CanSort="0"           />
+		    <Field ID="SinceEstablish"  CanSort="0"            />
+		    <Field ID="AnnualizedYield"   CanSort="0"       />
+		</Fields>
+	</IuvQuoteBoardLayout>
+	<IuvQuoteBoardLayout>
+		<Category desc="场外基金全量">-9000</Category>
+		<Fields>
+			<Field ID="Index" Name="序号" CanSort="0" HorizontalAlignment="Center"/>
+			<Field ID="DisplayProdCode" HorizontalAlignment="Left" CanSort="0" />
+			<Field ID="Name" CanSort="0" HorizontalAlignment="Left"  Width="240"/>
+			<Field ID="ChangePct" PlusSign="1" BackgroundRemind="1" CanSort="0"  />
+			<Field ID="LastPrice"  Name="净值"  BackgroundRemind="1" CanSort="0" Precision="4"/>
+			<Field ID="Change" BackgroundRemind="1" CanSort="0" />
+			<Field ID="NearlyAWeek" CanSort="0" />
+		    <Field ID="NearlyAMonth"  CanSort="0"    />
+		    <Field ID="NearlyThreeMonth"  CanSort="0"      />
+		    <Field ID="NearlySixMonth"    CanSort="0"         />
+		    <Field ID="YearToDate"      CanSort="0"            />
+		    <Field ID="NearlyAYear"     CanSort="0"           />
+		    <Field ID="NearlyThreeYear"  CanSort="0"          />
+		    <Field ID="NearlyFiveYear"  CanSort="0"           />
+		    <Field ID="SinceEstablish"  CanSort="0"            />
+		    <Field ID="AnnualizedYield"   CanSort="0"       />
+		</Fields>
+	</IuvQuoteBoardLayout>
+	<IuvQuoteBoardLayout>
+		<Category desc="股转系统">12000</Category>
+		<Fields>
+			<Field ID="Index" Name="序号" CanSort="0" HorizontalAlignment="Center"/>
+			<Field ID="DisplayProdCode" HorizontalAlignment="Left" />
+			<Field ID="Name" CanSort="0" HorizontalAlignment="Left" />
+			<Field ID="ChangePct" PlusSign="1" BackgroundRemind="1"/>
+			<Field ID="LastPrice"  BackgroundRemind="1"/>
+			<Field ID="Change" BackgroundRemind="1" />
+			<Field ID="TotalBalance" />
+			<Field ID="TotalAmount" />
+			<Field ID="TurnoverRatio" />
+			<Field ID="VolRatio" />
+			<Field ID="ChangePctMin5" />
+			<Field ID="MarketValue" />
+			<Field ID="CirculationValue" />
+			<Field ID="TTMPE" />
+			<Field ID="PB" />
+			<Field ID="Amplitude" />
+			<Field ID="BuyPrice" BackgroundRemind="1" />
+			<Field ID="SellPrice" BackgroundRemind="1"/>
+			<Field ID="OpenPrice" />
+			<Field ID="HighPrice" />
+			<Field ID="LowPrice" />
+			<Field ID="PreClose" />
+		</Fields>
+	</IuvQuoteBoardLayout>
+	<IuvQuoteBoardLayout>
+		<Category desc="股转系统">-12000</Category>
+		<Fields>
+			<Field ID="Index" Name="序号" CanSort="0" HorizontalAlignment="Center" />
+			<Field ID="DisplayProdCode" HorizontalAlignment="Left"  />
+			<Field ID="Name" CanSort="0" HorizontalAlignment="Left" />
+			<Field ID="LastPrice" BackgroundRemind="1" />
+			<Field ID="OpenPrice" />
+			<Field ID="Change" BackgroundRemind="1" />
+			<Field ID="HighPrice" />
+			<Field ID="ChangePct" BackgroundRemind="1" />
+			<Field ID="LowPrice" />
+			<Field ID="TotalAmount" />
+			<Field ID="TotalBalance" />
+			<Field ID="TurnoverRatio" />
+			<Field ID="VolRatio" />
+			<Field ID="OutAmount" />
+			<Field ID="InAmount" />
+			<Field ID="UpPrice" CanSort="0" />
+			<Field ID="DownPrice" CanSort="0" />
+			<Field ID="TotalShares" />
+			<Field ID="CirculationShares" />
+			<Field ID="MarketValue" />
+			<Field ID="CirculationValue" />
+			<Field ID="PE" />
+			<Field ID="TTMPE" />
+			<Field ID="PB" />
+			<Field ID="Amplitude" />
+			<Field ID="PreClose" />
+			<Field ID="ChangePctMin5" />
+			<Field ID="BuyPrice" BackgroundRemind="1" />
+			<Field ID="SellPrice" BackgroundRemind="1" />
+			<Field ID="BuySize" />
+			<Field ID="SellSize" />
+			<Field ID="BusinessAmountAfterMarket" CanSort="0" />
+			<Field ID="BusinessBalanceAfterMarket" CanSort="0" />
+			<Field ID="EntrustRate" />
+			<Field ID="CurrentAmount" />
+			<Field ID="WAvgPrice" />
+			<Field ID="W52HighPrice" CanSort="0" />
+			<Field ID="W52LowPrice" CanSort="0" />
+		</Fields>
+	</IuvQuoteBoardLayout>
+	<IuvQuoteBoardLayout>
+		<Category desc="全量">0</Category>
+		<Fields>
+			<Field ID="Index" Name="序号" CanSort="0" HorizontalAlignment="Center" />
+			<Field ID="SpecialMarker" HorizontalAlignment="Center" />
+			<Field ID="DisplayProdCode" HorizontalAlignment="Left"  />
+			<Field ID="Name" CanSort="0" HorizontalAlignment="Left" Width="120"/>
+			<Field ID="ChangePct" BackgroundRemind="1" />
+			<Field ID="LastPrice" BackgroundRemind="1" />
+			<Field ID="Change" BackgroundRemind="1" />
+			<Field ID="TurnoverRatio" />
+			<Field ID="VolRatio" />
+			<Field ID="Amplitude" />
+			<Field ID="OpenPrice" />
+			<Field ID="PreClose" />
+			<Field ID="HighPrice" />
+			<Field ID="LowPrice" />
+			<Field ID="ChangePctMin5" />
+			<Field ID="MarketValue" />
+			<Field ID="BuyPrice" BackgroundRemind="1" />
+			<Field ID="SellPrice" BackgroundRemind="1"/>
+			<Field ID="BuySize" />
+			<Field ID="SellSize" />
+			<Field ID="TotalAmount" />
+			<Field ID="TotalBalance" />
+			<Field ID="BusinessAmountAfterMarket" />
+			<Field ID="BusinessBalanceAfterMarket" />
+			<Field ID="PE" />
+			<Field ID="EntrustRate" />
+			<Field ID="AmountDelta" />
+			<Field ID="Position" />
+			<Field ID="PreSettlementPrice" />
+			<Field ID="OutAmount" />
+			<Field ID="InAmount" />
+			<Field ID="SettlementPrice" />
+			<Field ID="CurrentAmount" />
+			<Field ID="TotalShares" />
+			<Field ID="W52HighPrice" />
+			<Field ID="W52LowPrice" />
+		</Fields>
+	</IuvQuoteBoardLayout>
+    
+    
+    <!--关联报价 字段配置, 勿修改 Category 内容-->
+    <IuvQuoteBoardLayout>
+		<Category desc="关联报价">关联报价</Category>
+		<Fields>
+			<Field ID="DisplayProdCode"           Name="代码" HorizontalAlignment="Left" />
+			<Field ID="Name"               Name="名称" CanSort="0" HorizontalAlignment="Left" Width="120"/>
+			<Field ID="LastPrice"          Name="最新价"/>
+			<Field ID="ChangePct"          Name="涨幅%"/>
+			<Field ID="BuyPrice"           Name="买入价"/>
+			<Field ID="SellPrice"          Name="卖出价"/>
+			<Field ID="BuySize"            Name="买量"/>
+			<Field ID="SellSize"           Name="卖量"/>
+			<Field ID="TotalAmount"        Name="成交量"/>
+			<Field ID="ChangePctMin5"      Name="涨跌速率%"/>
+		</Fields>
+	</IuvQuoteBoardLayout>
+	
+	<!--成分股 字段配置, 勿修改 Category 内容-->
+    <IuvQuoteBoardLayout>
+		<Category desc="成分股">成分股</Category>
+		<Fields>
+			<Field ID="Index" 			   Name="序号" CanSort="0" HorizontalAlignment="Center" />
+			<Field ID="DisplayProdCode"           Name="代码" CanSort="0" HorizontalAlignment="Left" />
+			<Field ID="Name"               Name="名称" CanSort="0" HorizontalAlignment="Left" Width="120"/>
+			<Field ID="ChangePct"          Name="涨幅%"  BackgroundRemind="1"/>
+			<Field ID="LastPrice"          Name="现价"  BackgroundRemind="1"/>
+			<Field ID="Change"             Name="涨跌"  BackgroundRemind="1"/>
+			<Field ID="VolRatio" 	   	   Name="量比"/>
+			<Field ID="ChangePctMin5"      Name="涨速%"/>
+			<Field ID="TurnoverRatio"      Name="换手率%"/>
+			<Field ID="TotalAmount"        Name="成交量"/>
+			<Field ID="TotalBalance"       Name="金额"/>
+			<Field ID="Amplitude"          Name="振幅%"/>
+			<Field ID="MarketValue"        Name="总市值"/>
+			<Field ID="CirculationValue"   Name="流通市值"/>
+			<Field ID="TTMPE"              Name="TTM市盈率"/>
+			<Field ID="PB"                 Name="市净率"/>
+			<Field ID="OpenPrice"	   	   Name="开盘"/>
+			<Field ID="HighPrice"          Name="最高"/>
+			<Field ID="LowPrice"           Name="最低"/>
+			<Field ID="PreClose"           Name="昨收"/>
+		</Fields>
+	</IuvQuoteBoardLayout>
+
+  <!--自选股 字段配置, 勿修改 Category 内容-->
+  <IuvQuoteBoardLayout>
+    <Category desc="自选股">自选股</Category>
+    <Fields>
+      <Field ID="Index" Name="序号" CanSort="0" HorizontalAlignment="Center" />
+	  <Field ID="SpecialMarker" CanSort="0" HorizontalAlignment="Center" />
+      <Field ID="DisplayProdCode" HorizontalAlignment="Left"  />
+      <Field ID="Name"   CanSort="0" HorizontalAlignment="Left" Width="120"/>
+      <Field ID="ChangePct" 	Name="涨幅%"  BackgroundRemind="1"/>
+      <Field ID="LastPrice" BackgroundRemind="1" />
+      <Field ID="Change"   BackgroundRemind="1"  />
+      <Field ID="TotalBalance" />
+      <Field ID="TotalAmount"   Name="成交量"/>
+      <Field ID="TurnoverRatio" />
+      <Field ID="VolRatio" />
+      <Field ID="ChangePctMin5" />
+      <Field ID="MarketValue"   Name="总市值"/>
+      <Field ID="CirculationValue" />
+	  <Field ID="TTMPE" />
+	  <Field ID="PB" />
+      <Field ID="Amplitude"     Name="振幅%"/>
+      <Field ID="BuyPrice" BackgroundRemind="1" />
+      <Field ID="SellPrice" BackgroundRemind="1"/>
+      <Field ID="OpenPrice" />
+      <Field ID="HighPrice" />
+      <Field ID="LowPrice" />
+      <Field ID="PreClose" />
+    </Fields>
+  </IuvQuoteBoardLayout>
+  
+  	<!--指数 字段配置, 勿修改 Category 内容-->
+    <IuvQuoteBoardLayout>
+		<Category desc="指数">指数</Category>
+		<Fields>
+			<Field ID="Index" Name="序号" CanSort="0" HorizontalAlignment="Center" />
+			<Field ID="DisplayProdCode"  Name="代码" HorizontalAlignment="Left" />
+			<Field ID="Name"               Name="名称" CanSort="0" HorizontalAlignment="Left" Width="120"/>
+			<Field ID="LastPrice"    BackgroundRemind="1"      />
+			<Field ID="ChangePct"    BackgroundRemind="1"       />		
+			<Field ID="Change"   BackgroundRemind="1"            />			
+            <Field ID="TotalBalance"       />
+			<Field ID="VolRatio" 	   	   />
+			<Field ID="Amplitude" 	   	   />
+			<Field ID="OpenPrice" 	   	   />
+			<Field ID="HighPrice" 	   	   />
+			<Field ID="LowPrice" 	   	   />
+			<Field ID="PreClose" 	   	   />
+		</Fields>
+	</IuvQuoteBoardLayout>
+	
+  	<!--沪深板块指数 字段配置, 勿修改 Category 内容-->
+	 <IuvQuoteBoardLayout>
+		<Category desc="沪深板块指数">沪深板块指数</Category>
+		<Fields>
+			<Field ID="Index" Name="序号" CanSort="0" HorizontalAlignment="Center" />
+			<Field ID="DisplayProdCode"  Name="代码" HorizontalAlignment="Left" />
+			<Field ID="Name"               Name="名称" CanSort="0" HorizontalAlignment="Left" Width="120"/>
+			<Field ID="LastPrice"    BackgroundRemind="1"      />
+			<Field ID="ChangePct"    BackgroundRemind="1"       />	
+			<Field ID="Change"   BackgroundRemind="1"            />		
+            <Field ID="TotalBalance"       />
+			<Field ID="VolRatio" 	   	   />
+			<Field ID="Amplitude" 	   	   />
+			<Field ID="MarketValue" 	   />
+			<Field ID="RiseCount" 	   	   Name="涨家数" CanSort="0"/>
+			<Field ID="FallCount" 	   	  Name="跌家数"  CanSort="0"/>
+			<Field ID="RiseFirstName" 	   CanSort="0"/>
+			
+		</Fields>
+	</IuvQuoteBoardLayout>
+	<!--沪深重点指数 字段配置, 勿修改 Category 内容-->
+	 <IuvQuoteBoardLayout>
+		<Category desc="沪深重点指数">沪深重点指数</Category>
+		<Fields>
+			<Field ID="Index" Name="序号" CanSort="0" HorizontalAlignment="Center" />
+			<Field ID="Name"               Name="名称" CanSort="0" HorizontalAlignment="Left" Width="120"/>
+			<Field ID="LastPrice"          Name="现价"  BackgroundRemind="1"/>
+			<Field ID="ChangePct"          Name="涨幅%"  BackgroundRemind="1"/>
+		</Fields>
+	</IuvQuoteBoardLayout>
+	<!--板块热点 字段配置, 勿修改 Category 内容-->
+	 <IuvQuoteBoardLayout>
+		<Category desc="板块热点">板块热点</Category>
+		<Fields>
+			<Field ID="Index" Name="序号" CanSort="0" HorizontalAlignment="Center" />
+			<Field ID="Name"           Name="板块名称" CanSort="0" HorizontalAlignment="Left" Width="120"/>
+			<Field ID="ChangePct"      Name="涨幅%" BackgroundRemind="1"/>
+			<Field ID="LastPrice"      Name="现价" BackgroundRemind="1"/> 
+			<Field ID="Change"         Name="涨跌" BackgroundRemind="1"/>
+			<Field ID="ChangePctMin5"  Name="涨速%"/>
+			<Field ID="VolRatio" 	   Name="量比"/>
+			<Field ID="TotalAmount"    Name="成交量"/>
+			<Field ID="TotalBalance"   Name="金额"/>
+			<Field ID="Amplitude"      Name="振幅%"/>
+			<Field ID="MarketValue"    Name="总市值"/>
+			<Field ID="RiseCount" 	   Name="涨家数" CanSort="0"/>
+			<Field ID="FallCount" 	   Name="跌家数" CanSort="0"/>
+			<Field ID="RiseFirstName"  Name="领涨股" CanSort="0"/>
+			<Field ID="OpenPrice"	   Name="开盘"/>
+			<Field ID="HighPrice"      Name="最高"/>
+			<Field ID="LowPrice"       Name="最低"/>
+			<Field ID="PreClose"       Name="昨收"/>
+		</Fields>
+	</IuvQuoteBoardLayout>
+	
+		<!--综合屏市场报价 字段配置, 勿修改 Category 内容-->
+    <IuvQuoteBoardLayout>
+		<Category desc="综合屏市场报价">综合屏市场报价</Category>
+		<Fields>
+			<Field ID="Index" Name="序号" CanSort="0" HorizontalAlignment="Center" />
+			<Field ID="DisplayProdCode"  Name="代码" HorizontalAlignment="Left" />
+			<Field ID="Name"               Name="名称" CanSort="0" HorizontalAlignment="Left" Width="120"/>
+			<Field ID="LastPrice" BackgroundRemind="1"      />
+			<Field ID="ChangePct" BackgroundRemind="1"       />			
+            <Field ID="TotalBalance"       />
+			<Field ID="VolRatio" 	   	   />
+			<Field ID="TotalAmount" />
+			<Field ID="TurnoverRatio" />
+			<Field ID="ChangePctMin5" />
+			<Field ID="MarketValue" />
+			<Field ID="CirculationValue" />
+			<Field ID="TTMPE" />
+			<Field ID="PB" />
+		</Fields>
+	</IuvQuoteBoardLayout>
+	<IuvQuoteBoardLayout>
+		<Category desc="场内基金报价">场内基金报价</Category>
+		<Fields>
+			<Field ID="Index" Name="序号" CanSort="0" HorizontalAlignment="Center" />
+			<Field ID="DisplayProdCode"  Name="代码" HorizontalAlignment="Left"  />
+			<Field ID="Name"               Name="名称" CanSort="0" HorizontalAlignment="Left" Width="160"/>
+			<Field ID="LastPrice" BackgroundRemind="1"      />
+			<Field ID="ChangePct" BackgroundRemind="1"       />			
+            <Field ID="TotalBalance"       />
+			<Field ID="VolRatio" 	   	   />
+			<Field ID="TotalAmount" />
+			<Field ID="NationDebetRatio" />
+		</Fields>
+	</IuvQuoteBoardLayout>
+	<IuvQuoteBoardLayout>
+		<Category desc="ETF基金报价">ETF基金报价</Category>
+		<Fields>
+			<Field ID="Index" Name="序号" CanSort="0" HorizontalAlignment="Center" />
+			<Field ID="DisplayProdCode"  Name="代码" HorizontalAlignment="Left"  />
+			<Field ID="Name"               Name="名称" CanSort="0" HorizontalAlignment="Left" Width="160"/>
+			<Field ID="LastPrice" BackgroundRemind="1"      />
+			<Field ID="ChangePct" BackgroundRemind="1"       />			
+            <Field ID="TotalBalance"       />
+			<Field ID="VolRatio" 	   	   />
+			<Field ID="TotalAmount" />
+			<Field ID="NationDebetRatio" Name="基金净值" />
+		</Fields>
+	</IuvQuoteBoardLayout>
+	<IuvQuoteBoardLayout>
+		<Category desc="开放式基金报价">开放式基金报价</Category>
+		<Fields>
+			<Field ID="Index" Name="序号" CanSort="0" HorizontalAlignment="Center" />
+			<Field ID="DisplayProdCode"  Name="代码" HorizontalAlignment="Left" />
+			<Field ID="Name"               Name="名称" CanSort="0" HorizontalAlignment="Left" Width="160"/>
+			<Field ID="NationDebetRatio"       />
+			<Field ID="ChangePct" BackgroundRemind="1"       />			
+		</Fields>
+	</IuvQuoteBoardLayout>
+	<IuvQuoteBoardLayout>
+		<Category desc="期货商品报价">期货商品报价</Category>
+		<Fields>
+			<Field ID="Index" Name="序号" CanSort="0" HorizontalAlignment="Center" />
+			<Field ID="DisplayProdCode" HorizontalAlignment="Left"  />
+			<Field ID="Name" CanSort="0" HorizontalAlignment="Left" Width="160"/>
+			<Field ID="ChangePct" BackgroundRemind="1" />
+			<Field ID="LastPrice" BackgroundRemind="1" />
+			<Field ID="Change" BackgroundRemind="1" />
+			<Field ID="TotalBalance" />
+			<Field ID="TotalAmount" />
+			<Field ID="Position" />
+			<Field ID="AmountDelta" CanSort="0"/>
+			<Field ID="VolRatio" />
+			<Field ID="Speculation"  CanSort="0"/>
+			<Field ID="Amplitude" />
+			<Field ID="PreSettlementPrice" CanSort="0" />
+			<Field ID="SettlementPrice" CanSort="0" />
+			<Field ID="BuyPrice" BackgroundRemind="1" />
+			<Field ID="SellPrice" BackgroundRemind="1"/>
+			<Field ID="OpenPrice" />
+			<Field ID="HighPrice" />
+			<Field ID="LowPrice" />
+			<Field ID="PreClose" />
+			<Field ID="BuySize" />
+			<Field ID="SellSize" />
+		</Fields>
+	</IuvQuoteBoardLayout>
+	<IuvQuoteBoardLayout>
+		<Category desc="债券重要指数">债券重要指数</Category>
+		<Fields>
+			<Field ID="Index" Name="序号" CanSort="0" HorizontalAlignment="Center" />
+			<Field ID="DisplayProdCode" HorizontalAlignment="Left"  CanSort="0" />
+			<Field ID="Name" CanSort="0" HorizontalAlignment="Left" Width="120"/>
+			<Field ID="LastPrice" CanSort="0" BackgroundRemind="1"/>
+			<Field ID="ChangePct" CanSort="0" BackgroundRemind="1"/>
+			<Field ID="Change" CanSort="0" BackgroundRemind="1"/>
+			<Field ID="TotalBalance" CanSort="0"/>
+			<Field ID="VolRatio" CanSort="0"/>
+			<Field ID="Amplitude" CanSort="0"/>
+			<Field ID="OpenPrice" CanSort="0"/>
+			<Field ID="HighPrice" CanSort="0"/>
+			<Field ID="LowPrice" CanSort="0"/>
+			<Field ID="PreClose" CanSort="0"/>
+		</Fields>
+	</IuvQuoteBoardLayout>
+	<IuvQuoteBoardLayout>
+		<Category desc="商品综合屏报价">商品综合屏报价</Category>
+		<Fields>
+			<Field ID="Index" Name="序号" CanSort="0" HorizontalAlignment="Center" />
+			<Field ID="Name" Name="名称"  CanSort="0" HorizontalAlignment="Left" Width="120"/>
+			<Field ID="LastPrice" BackgroundRemind="1" />
+			<Field ID="ChangePct" BackgroundRemind="1" />
+			<Field ID="Change" BackgroundRemind="1" />
+			<Field ID="TotalBalance" />
+			<Field ID="TotalAmount"  Name="成交量" />
+			<Field ID="Position" />
+			<Field ID="AmountDelta" CanSort="0"/>
+			<Field ID="VolRatio" />
+			<Field ID="Amplitude" />
+			<Field ID="OpenPrice" />
+			<Field ID="HighPrice" />
+			<Field ID="LowPrice" />
+			<Field ID="PreClose" />
+		</Fields>
+	</IuvQuoteBoardLayout>
+	<IuvQuoteBoardLayout>
+		<Category desc="国际期货综合屏报价">国际期货综合屏报价</Category>
+		<Fields>
+			<Field ID="Index" Name="序号" CanSort="0" HorizontalAlignment="Center" />
+			<Field ID="Name" Name="名称"  CanSort="0" HorizontalAlignment="Left"  Width="190"/>
+			<Field ID="LastPrice" BackgroundRemind="1" />
+			<Field ID="ChangePct" BackgroundRemind="1" />
+			<Field ID="Change" BackgroundRemind="1" />
+			<Field ID="TotalBalance" />
+			<Field ID="TotalAmount"  Name="成交量" />
+			<Field ID="Position" />
+			<Field ID="AmountDelta" CanSort="0"/>
+			<Field ID="VolRatio" />
+			<Field ID="Amplitude" />
+			<Field ID="OpenPrice" />
+			<Field ID="HighPrice" />
+			<Field ID="LowPrice" />
+			<Field ID="PreClose" />
+		</Fields>
+	</IuvQuoteBoardLayout>
+	 <IuvQuoteBoardLayout>
+		<Category desc="全球指数报价">全球指数报价</Category>
+		<Fields>
+			<Field ID="Index" Name="序号" CanSort="0" HorizontalAlignment="Center" />
+			<Field ID="DisplayProdCode"  Name="代码" HorizontalAlignment="Left" CanSort="0" />
+			<Field ID="Name"               Name="名称" CanSort="0" HorizontalAlignment="Left" Width="120"/>
+			<Field ID="LastPrice" BackgroundRemind="1"      />
+			<Field ID="ChangePct" BackgroundRemind="1"       />		
+			<Field ID="Change" BackgroundRemind="1"            />	
+			<Field ID="Amplitude" 	   	   />
+			<Field ID="OpenPrice" 	   	   />
+			<Field ID="HighPrice" 	   	   />
+			<Field ID="LowPrice" 	   	   />
+			<Field ID="PreClose" 	   	   />
+		</Fields>
+	</IuvQuoteBoardLayout>
+	 <IuvQuoteBoardLayout>
+		<Category desc="其他指数报价">其他指数报价</Category>
+		<Fields>
+			<Field ID="Index" Name="序号" CanSort="0" HorizontalAlignment="Center" />
+			<Field ID="DisplayProdCode"  Name="代码" HorizontalAlignment="Left" CanSort="0" />
+			<Field ID="Name"               Name="名称" CanSort="0" HorizontalAlignment="Left" Width="120"/>
+			<Field ID="LastPrice" BackgroundRemind="1"      />
+			<Field ID="ChangePct" BackgroundRemind="1"       />		
+			<Field ID="Change" BackgroundRemind="1"            />			
+            <Field ID="TotalBalance" />
+			<Field ID="VolRatio" 	   	   />
+			<Field ID="Amplitude" 	   	   />
+			<Field ID="OpenPrice" 	   	   />
+			<Field ID="HighPrice" 	   	   />
+			<Field ID="LowPrice" 	   	   />
+			<Field ID="PreClose" 	   	   />
+		</Fields>
+	</IuvQuoteBoardLayout>
+	 <IuvQuoteBoardLayout>
+		<Category desc="大中华指数报价">大中华指数报价</Category>
+		<Fields>
+			<Field ID="Index" Name="序号" CanSort="0" HorizontalAlignment="Center" />
+			<Field ID="DisplayProdCode"  Name="代码" HorizontalAlignment="Left" CanSort="0" />
+			<Field ID="Name"               Name="名称" CanSort="0" HorizontalAlignment="Left" Width="120"/>
+			<Field ID="LastPrice"         CanSort="0" BackgroundRemind="1" />
+			<Field ID="ChangePct"         CanSort="0"   BackgroundRemind="1"/>		
+			<Field ID="Change"            CanSort="0"  BackgroundRemind="1"/>			
+            <Field ID="TotalBalance"      CanSort="0" />
+			<Field ID="VolRatio" 	   	   CanSort="0"/>
+			<Field ID="Amplitude" 	   	  CanSort="0" />
+			<Field ID="OpenPrice" 	   	  CanSort="0" />
+			<Field ID="HighPrice" 	   	  CanSort="0" />
+			<Field ID="LowPrice" 	   	  CanSort="0" />
+			<Field ID="PreClose" 	   	   CanSort="0"/>
+		</Fields>
+	</IuvQuoteBoardLayout>
+	
+	<!--指数成份 字段配置, 勿修改 Category 内容-->
+    <IuvQuoteBoardLayout>
+		<Category desc="指数成份">指数成份</Category>
+		<Fields>
+			<Field ID="Index" 			   Name="序号" CanSort="0" HorizontalAlignment="Center" />
+			<Field ID="DisplayProdCode"           Name="代码" CanSort="0" HorizontalAlignment="Left" />
+			<Field ID="Name"               Name="名称" CanSort="0" HorizontalAlignment="Left" Width="120"/>
+			<Field ID="LastPrice"          Name="现价"  BackgroundRemind="1"/>
+			<Field ID="ChangePct"          Name="涨幅%"  BackgroundRemind="1"/>
+			<Field ID="Change"             Name="涨跌"  BackgroundRemind="1"/>
+			<Field ID="TotalBalance"       Name="金额"/>
+			<Field ID="VolRatio" 	   	   Name="量比"/>			
+			<Field ID="TotalAmount"        Name="成交量"/>
+			<Field ID="TurnoverRatio"      Name="换手%"/>
+			<Field ID="ChangePctMin5"      Name="涨速%"/>			
+			<Field ID="MarketValue"        Name="总市值"/>
+			<Field ID="CirculationValue"   Name="流通市值"/>
+			<Field ID="TTMPE"              Name="TTM市盈率"/>			
+			<Field ID="PB"                 Name="市净率"/>
+		</Fields>
+	</IuvQuoteBoardLayout>
+    <IuvQuoteBoardLayout>
+		<Category desc="证券期权标的">证券期权标的</Category>
+		<Fields>
+			<Field ID="Index" 			   Name="序号" CanSort="0" HorizontalAlignment="Center" />
+			<Field ID="DisplayProdCode"           Name="代码" HorizontalAlignment="Left" />
+			<Field ID="Name"               Name="名称" CanSort="0" HorizontalAlignment="Left" />
+			<Field ID="ChangePct" BackgroundRemind="1" />
+			<Field ID="LastPrice" BackgroundRemind="1" />
+			<Field ID="Change" BackgroundRemind="1" />
+			<Field ID="TotalBalance" />
+			<Field ID="TotalAmount" Name="成交量" />
+			<Field ID="VolRatio" />		
+			<Field ID="ChangePctMin5" />		
+			<Field ID="Amplitude" />
+			<Field ID="BuyPrice" BackgroundRemind="1" />
+			<Field ID="SellPrice" BackgroundRemind="1"/>
+			<Field ID="OpenPrice" />
+			<Field ID="HighPrice" />
+			<Field ID="LowPrice" />	
+			<Field ID="PreClose" />
+		</Fields>
+	</IuvQuoteBoardLayout>
+    <IuvQuoteBoardLayout>
+		<Category desc="商品期权标的">商品期权标的</Category>
+		<Fields>
+			<Field ID="Index"    Name="序号" CanSort="0" HorizontalAlignment="Center" />
+			<Field ID="DisplayProdCode" Name="代码" HorizontalAlignment="Left"  />
+			<Field ID="Name"     Name="名称" CanSort="0" HorizontalAlignment="Left" />
+			<Field ID="ChangePct" BackgroundRemind="1" />
+			<Field ID="LastPrice" BackgroundRemind="1" />
+			<Field ID="Change" BackgroundRemind="1" />
+			<Field ID="TotalBalance" />
+			<Field ID="TotalAmount" Name="成交量" />
+			<Field ID="Position" />
+			<Field ID="AmountDelta" CanSort="0"/>
+			<Field ID="VolRatio" />
+			<Field ID="Speculation"  CanSort="0"/>
+			<Field ID="Amplitude" />
+			<Field ID="BuyPrice" BackgroundRemind="1" />
+			<Field ID="SellPrice" BackgroundRemind="1"/>
+			<Field ID="OpenPrice" />
+			<Field ID="HighPrice" />
+			<Field ID="LowPrice" />
+			<Field ID="PreSettlementPrice" CanSort="0" />
+		</Fields>
+	</IuvQuoteBoardLayout>
+	<IuvQuoteBoardLayout>
+		<Category desc="商品综合屏报价">全球商品综合屏报价</Category>
+		<Fields>
+			<Field ID="Index" Name="序号" CanSort="0" HorizontalAlignment="Center" />
+			<Field ID="Name" Name="名称"  CanSort="0" HorizontalAlignment="Left" Width="140"/>
+			<Field ID="LastPrice" CanSort="0" BackgroundRemind="1" />
+			<Field ID="ChangePct" CanSort="0" BackgroundRemind="1" />
+			<Field ID="Change" CanSort="0" BackgroundRemind="1" />
+			<Field ID="TotalBalance" CanSort="0" />
+			<Field ID="TotalAmount"  Name="成交量" CanSort="0" />
+			<Field ID="Position" CanSort="0" />
+			<Field ID="AmountDelta" CanSort="0"/>
+			<Field ID="VolRatio" CanSort="0" />
+			<Field ID="Amplitude" CanSort="0" />
+			<Field ID="OpenPrice" CanSort="0" />
+			<Field ID="HighPrice" CanSort="0" />
+			<Field ID="LowPrice" CanSort="0" />
+			<Field ID="PreClose" CanSort="0" />
+		</Fields>
+	</IuvQuoteBoardLayout>
+	<IuvQuoteBoardLayout>
+		<Category desc="人民币汇率指数">人民币汇率指数</Category>
+		<Fields>
+			<Field ID="Index" Name="序号" CanSort="0" HorizontalAlignment="Center" />
+			<Field ID="ProdCode" Name="代码" HorizontalAlignment="Left"  />
+			<Field ID="Name" Name="名称"  CanSort="0" HorizontalAlignment="Left" Width="120"/>
+			<Field ID="LastPrice"          Name="最新"/>
+			<Field ID="ChangePct"/>
+			<Field ID="Change"  />
+			<Field ID="MarketDate" Name="日期"  CanSort="0" />
+		</Fields>
+	</IuvQuoteBoardLayout>
+	<IuvQuoteBoardLayout>
+		<Category desc="沪深港通成分股">沪深港通成分股</Category>
+		<Fields>
+			<Field ID="Index" CanSort="0" HorizontalAlignment="Center" />
+			<Field ID="DisplayProdCode" HorizontalAlignment="Left"  />
+			<Field ID="Name" CanSort="0" HorizontalAlignment="Left" Width="120"/>
+			<Field ID="LastPrice" />
+			<Field ID="ChangePct"/>
+			<Field ID="TotalBalance" />
+			<Field ID="VolRatio" />
+			<Field ID="TotalAmount" />
+			<Field ID="TurnoverRatio" />
+			<Field ID="ChangePctMin5" />
+			<Field ID="MarketValue" />
+			<Field ID="CirculationValue" />
+			<Field ID="TTMPE" />
+			<Field ID="PB" />
+		</Fields>
+	</IuvQuoteBoardLayout>
+</ArrayOfIuvQuoteBoardLayout>

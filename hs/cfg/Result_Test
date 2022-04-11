@@ -1,0 +1,3948 @@
+﻿{
+ "permission": [
+  {
+   "command": "",
+   "mask": 0,
+   "cmdid": 1
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 2
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 3
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 4
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 5
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 6
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 7
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 11
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 12
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 13
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 14
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 15
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 16
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 17
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 18
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 19
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 20
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 21
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 22
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 23
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 24
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 25
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 26
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 27
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 30
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 31
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 32
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 33
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 34
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 35
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 36
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 51
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 52
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 53
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 54
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 55
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 56
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 57
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 58
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 80
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 1000
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 1001
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 1002
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 2000
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 2001
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 2002
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 2003
+  },{
+   "command": "",
+   "mask": 1,
+   "cmdid": 3000
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 3001
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 3002
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 3003
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 9001
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 9002
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 9003
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 9004
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 9005
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 9006
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 9007
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 9008
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 9009
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 9010
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 9011
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 9012
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 9013
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 9014
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 9015
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 9016
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 9017
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 9018
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 9019
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 9020
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 10000
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 10001
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 10002
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 10003
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 10004
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 10005
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 10006
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 10007
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 10008
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 10009
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 10010
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 10011
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 10012
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 10013
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 10000
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 10100
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 10200
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 10201
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 10202
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 10203
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 10204
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 10300
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 10301
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 10302
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 10400
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 10401
+  },{
+   "command": "13,34",
+   "mask": 0,
+   "cmdid": 100002
+  },{
+   "command": "1002,f6",
+   "mask": 0,
+   "cmdid": 100003
+  },{
+   "command": "1012,zhp1",
+   "mask": 0,
+   "cmdid": 100004
+  },{
+   "command": "1012,zjlx",
+   "mask": 0,
+   "cmdid": 100005
+  },{
+   "command": "1001,1101001",
+   "mask": 0,
+   "cmdid": 100011
+  },{
+   "command": "1001,1101009",
+   "mask": 0,
+   "cmdid": 100012
+  },{
+   "command": "1001,1101005",
+   "mask": 0,
+   "cmdid": 100017
+  },{
+   "command": "1001,1101006",
+   "mask": 0,
+   "cmdid": 100018
+  },{
+   "command": "1002,CUSTOM",
+   "mask": 0,
+   "cmdid": 100019
+  },{
+   "command": "1002,ZHP1",
+   "mask": 0,
+   "cmdid": 100020
+  },{
+   "command": "1001,1501001",
+   "mask": 0,
+   "cmdid": 100021
+  },{
+   "command": "12,,,F9NQ",
+   "mask": 0,
+   "cmdid": 100022
+  },{
+   "command": "12,,,F9JY",
+   "mask": 0,
+   "cmdid": 100024
+  },{
+   "command": "12,,,F9INDEX",
+   "mask": 0,
+   "cmdid": 100025
+  },{
+   "command": "12,CU1903.SHF",
+   "mask": 0,
+   "cmdid": 100026
+  },{
+   "command": "12,IF1903.CFE",
+   "mask": 0,
+   "cmdid": 100027
+  },{
+   "command": "12,TF1903.CFE",
+   "mask": 0,
+   "cmdid": 100028
+  },{
+   "command": "12,,,F9FUND",
+   "mask": 0,
+   "cmdid": 100032
+  },{
+   "command": "2001,http:\/\/{$webserver}\/bond\/newbondcalendar\/index.html?skin=white,ZSRL",
+   "mask": 0,
+   "cmdid": 100036
+  },{
+   "command": "2001,http:\/\/{$webserver}\/macroindustry\/antfin\/index.html?skin=white,WXZSZT",
+   "mask": 0,
+   "cmdid": 100037
+  },{
+   "command": "2001,http:\/\/{$webserver}\/fund\/fundcalendar\/index.html?skin=white&userid={$userid},JJRL",
+   "mask": 0,
+   "cmdid": 100038
+  },{
+   "command": "2001,http:\/\/{$webserver}\/stock\/stockcalendar\/index.html?skin=white&userid={$userid},GSRL",
+   "mask": 0,
+   "cmdid": 100039
+  },{
+   "command": "2001,http:\/\/{$webserver}\/stock\/newstockcenter\/index.html?skin=white,XGZX",
+   "mask": 0,
+   "cmdid": 100040
+  },{
+   "command": "2001,http:\/\/{$webserver}\/information\/newsinfo2.0\/index.html?skin=white&userid={$userid},XWZX",
+   "mask": 0,
+   "cmdid": 100041
+  },{
+   "command": "2001,http:\/\/{$webserver}\/information\/bulletininfo\/index.html?skin=white&userid={$userid},GSGG",
+   "mask": 0,
+   "cmdid": 100042
+  },{
+   "command": "27,STOCK",
+   "mask": 0,
+   "cmdid": 100043
+  },{
+   "command": "27,HKSTOCK",
+   "mask": 0,
+   "cmdid": 100044
+  },{
+   "command": "12,,,F9HK",
+   "mask": 0,
+   "cmdid": 100045
+  },{
+   "command": "12,,,F9BOND",
+   "mask": 0,
+   "cmdid": 100046
+  },{
+   "command": "2001,http:\/\/{$webserver}\/information\/reportinfo\/route_ui.html?userId={$userid}&skin=white#\/index,YJBG",
+   "mask": 0,
+   "cmdid": 100047
+  },{
+   "command": "2003,430002.OC",
+   "mask": 0,
+   "cmdid": 100048
+  },{
+   "command": "2003,000011.OF",
+   "mask": 0,
+   "cmdid": 100049
+  },{
+   "command": "1001,1201003001",
+   "mask": 0,
+   "cmdid": 100050
+  },{
+   "command": "1001,1201003002",
+   "mask": 0,
+   "cmdid": 100051
+  },{
+   "command": "1001,1201003003",
+   "mask": 0,
+   "cmdid": 100052
+  },{
+   "command": "1001,1201003004",
+   "mask": 0,
+   "cmdid": 100053
+  },{
+   "command": "1001,1401002",
+   "mask": 0,
+   "cmdid": 100054
+  },{
+   "command": "1001,1401003",
+   "mask": 0,
+   "cmdid": 100055
+  },{
+   "command": "1001,1401005",
+   "mask": 0,
+   "cmdid": 100056
+  },{
+   "command": "1001,1401006",
+   "mask": 0,
+   "cmdid": 100057
+  },{
+   "command": "1001,1401009",
+   "mask": 0,
+   "cmdid": 100059
+  },{
+   "command": "1001,1401010",
+   "mask": 0,
+   "cmdid": 100060
+  },{
+   "command": "2003,00001.HK",
+   "mask": 0,
+   "cmdid": 100061
+  },{
+   "command": "11,zghg",
+   "mask": 0,
+   "cmdid": 100062
+  },{
+   "command": "11,qqhg",
+   "mask": 0,
+   "cmdid": 100063
+  },{
+   "command": "11,hyjj",
+   "mask": 0,
+   "cmdid": 100064
+  },{
+   "command": "2003,600000.SH",
+   "mask": 0,
+   "cmdid": 100065
+  },{
+   "command": "13,JYTOPIC,14542",
+   "mask": 0,
+   "cmdid": 100100
+  },{
+   "command": "13,JYTOPIC,14345",
+   "mask": 0,
+   "cmdid": 100101
+  },{
+   "command": "13,JYTOPIC,33596",
+   "mask": 0,
+   "cmdid": 100102
+  },{
+   "command": "13,JYTOPIC,33933",
+   "mask": 0,
+   "cmdid": 100103
+  },{
+   "command": "13,JYTOPIC,33728",
+   "mask": 0,
+   "cmdid": 100104
+  },{
+   "command": "13,JYTOPIC,33811",
+   "mask": 0,
+   "cmdid": 100105
+  },{
+   "command": "13,JYTOPIC,15298",
+   "mask": 0,
+   "cmdid": 100106
+  },{
+   "command": "13,NQTOPIC,48571",
+   "mask": 0,
+   "cmdid": 100110
+  },{
+   "command": "13,NQTOPIC,2119",
+   "mask": 0,
+   "cmdid": 100111
+  },{
+   "command": "13,NQTOPIC,342127",
+   "mask": 0,
+   "cmdid": 100112
+  },{
+   "command": "13,NQTOPIC,342111",
+   "mask": 0,
+   "cmdid": 100113
+  },{
+   "command": "13,NQTOPIC,44589",
+   "mask": 0,
+   "cmdid": 100114
+  },{
+   "command": "13,NQTOPIC,342083",
+   "mask": 0,
+   "cmdid": 100115
+  },{
+   "command": "13,NQTOPIC,342086",
+   "mask": 0,
+   "cmdid": 100116
+  },{
+   "command": "13,NQTOPIC,342122",
+   "mask": 0,
+   "cmdid": 100117
+  },{
+   "command": "13,NQTOPIC,100235",
+   "mask": 0,
+   "cmdid": 100118
+  },{
+   "command": "13,FUNDTOPIC,115430",
+   "mask": 0,
+   "cmdid": 100120
+  },{
+   "command": "13,FUNDTOPIC,53198",
+   "mask": 0,
+   "cmdid": 100121
+  },{
+   "command": "13,FUNDTOPIC,60983",
+   "mask": 0,
+   "cmdid": 100122
+  },{
+   "command": "13,FUNDTOPIC,61003",
+   "mask": 0,
+   "cmdid": 100123
+  },{
+   "command": "13,FUNDTOPIC,55161",
+   "mask": 0,
+   "cmdid": 100124
+  },{
+   "command": "13,BONDTOPIC,73638",
+   "mask": 0,
+   "cmdid": 100130
+  },{
+   "command": "13,BONDTOPIC,73640",
+   "mask": 0,
+   "cmdid": 100131
+  },{
+   "command": "13,BONDTOPIC,73642",
+   "mask": 0,
+   "cmdid": 100132
+  },{
+   "command": "13,BONDTOPIC,79582",
+   "mask": 0,
+   "cmdid": 100133
+  },{
+   "command": "13,BONDTOPIC,73683",
+   "mask": 0,
+   "cmdid": 100134
+  },{
+   "command": "13,BONDTOPIC,79586",
+   "mask": 0,
+   "cmdid": 100135
+  },{
+   "command": "13,BONDTOPIC,79584",
+   "mask": 0,
+   "cmdid": 100136
+  },{
+   "command": "13,BONDTOPIC,73650",
+   "mask": 0,
+   "cmdid": 100137
+  },{
+   "command": "13,HKTOPIC,79607",
+   "mask": 0,
+   "cmdid": 100140
+  },{
+   "command": "13,HKTOPIC,69250",
+   "mask": 0,
+   "cmdid": 100141
+  },{
+   "command": "13,HKTOPIC,79726",
+   "mask": 0,
+   "cmdid": 100142
+  },{
+   "command": "13,HKTOPIC,70542",
+   "mask": 0,
+   "cmdid": 100143
+  },{
+   "command": "13,HKTOPIC,79828",
+   "mask": 0,
+   "cmdid": 100144
+  },{
+   "command": "13,HKTOPIC,73636",
+   "mask": 0,
+   "cmdid": 100145
+  },{
+   "command": "13,INDEXANALY,82311",
+   "mask": 0,
+   "cmdid": 100150
+  },{
+   "command": "13,TOPIC_FTRS_SP,97256",
+   "mask": 0,
+   "cmdid": 100160
+  },{
+   "command": "13,TOPIC_FTRS_GZ,97438",
+   "mask": 0,
+   "cmdid": 100161
+  },{
+   "command": "13,TOPIC_FTRS_GUOZ,97440",
+   "mask": 0,
+   "cmdid": 100162
+  },{
+   "command": "1001,1101002",
+   "mask": 0,
+   "cmdid": 100163
+  },{
+   "command": "1001,1101003",
+   "mask": 0,
+   "cmdid": 100164
+  },{
+   "command": "1001,1401001",
+   "mask": 0,
+   "cmdid": 100165
+  },{
+   "command": "1001,4010008000000000000",
+   "mask": 0,
+   "cmdid": 100166
+  },{
+   "command": "13,TOPIC_MACRO,98073",
+   "mask": 0,
+   "cmdid": 100167
+  },{
+   "command": "1001,1501002",
+   "mask": 0,
+   "cmdid": 100168
+  },{
+   "command": "1001,1501003",
+   "mask": 0,
+   "cmdid": 100169
+  },{
+   "command": "2003,000001.SH",
+   "mask": 0,
+   "cmdid": 100170
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 59
+  },{
+   "command": "1001,1503001",
+   "mask": 0,
+   "cmdid": 100171
+  },{
+   "command": "1001,1503006",
+   "mask": 0,
+   "cmdid": 100172
+  },{
+   "command": "1001,1503007",
+   "mask": 0,
+   "cmdid": 100173
+  },{
+   "command": "1001,1503008",
+   "mask": 0,
+   "cmdid": 100174
+  },{
+   "command": "1001,1503009",
+   "mask": 0,
+   "cmdid": 100175
+  },{
+   "command": "1001,1503010",
+   "mask": 0,
+   "cmdid": 100176
+  },{
+   "command": "2001,http:\/\/{$webserver}\/gftfaq\/index.html?skin=white&userid={$userid}#\/home",
+   "mask": 0,
+   "cmdid": 100177
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 8
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 9
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 10303
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 60
+  },{
+   "command": "1001,1701001",
+   "mask": 0,
+   "cmdid": 100178
+  },{
+   "command": "1001,1701002",
+   "mask": 0,
+   "cmdid": 100179
+  },{
+   "command": "1001,1701010",
+   "mask": 0,
+   "cmdid": 100180
+  },{
+   "command": "1001,1701003002",
+   "mask": 0,
+   "cmdid": 100181
+  },{
+   "command": "1001,1701003003",
+   "mask": 0,
+   "cmdid": 100182
+  },{
+   "command": "1001,1701003005",
+   "mask": 0,
+   "cmdid": 100183
+  },{
+   "command": "1001,1701003006",
+   "mask": 0,
+   "cmdid": 100184
+  },{
+   "command": "1001,1701003007",
+   "mask": 0,
+   "cmdid": 100185
+  },{
+   "command": "1001,1701003008",
+   "mask": 0,
+   "cmdid": 100186
+  },{
+   "command": "1001,1701003009",
+   "mask": 0,
+   "cmdid": 100187
+  },{
+   "command": "1001,1701004001",
+   "mask": 0,
+   "cmdid": 100188
+  },{
+   "command": "1001,1801099",
+   "mask": 0,
+   "cmdid": 100189
+  },{
+   "command": "1001,1802099",
+   "mask": 0,
+   "cmdid": 100190
+  },{
+   "command": "1001,1803099",
+   "mask": 0,
+   "cmdid": 100191
+  },{
+   "command": "1001,1804099",
+   "mask": 0,
+   "cmdid": 100192
+  },{
+   "command": "1001,1301002",
+   "mask": 0,
+   "cmdid": 100193
+  },{
+   "command": "1001,1301003",
+   "mask": 0,
+   "cmdid": 100194
+  },{
+   "command": "1001,1308002",
+   "mask": 0,
+   "cmdid": 100195
+  },{
+   "command": "1001,1308003",
+   "mask": 0,
+   "cmdid": 100196
+  },{
+   "command": "1001,1302015",
+   "mask": 0,
+   "cmdid": 100197
+  },{
+   "command": "1001,1201001001",
+   "mask": 0,
+   "cmdid": 100198
+  },{
+   "command": "1001,1211001",
+   "mask": 0,
+   "cmdid": 100199
+  },{
+   "command": "1001,1201004",
+   "mask": 0,
+   "cmdid": 100200
+  },{
+   "command": "1001,1701001",
+   "mask": 0,
+   "cmdid": 100201
+  },{
+   "command": "1001,1701001002",
+   "mask": 0,
+   "cmdid": 100202
+  },{
+   "command": "1001,1701001003",
+   "mask": 0,
+   "cmdid": 100203
+  },{
+   "command": "1001,1701001005",
+   "mask": 0,
+   "cmdid": 100204
+  },{
+   "command": "1001,1701001006",
+   "mask": 0,
+   "cmdid": 100205
+  },{
+   "command": "1001,1701001007",
+   "mask": 0,
+   "cmdid": 100206
+  },{
+   "command": "1001,1701001008",
+   "mask": 0,
+   "cmdid": 100207
+  },{
+   "command": "1001,1701001009",
+   "mask": 0,
+   "cmdid": 100208
+  },{
+   "command": "1001,1701002",
+   "mask": 0,
+   "cmdid": 100209
+  },{
+   "command": "1001,1701002002",
+   "mask": 0,
+   "cmdid": 100210
+  },{
+   "command": "1001,1701002003",
+   "mask": 0,
+   "cmdid": 100211
+  },{
+   "command": "1001,1701002004",
+   "mask": 0,
+   "cmdid": 100212
+  },{
+   "command": "1001,1701002005",
+   "mask": 0,
+   "cmdid": 100213
+  },{
+   "command": "1001,1701002006",
+   "mask": 0,
+   "cmdid": 100214
+  },{
+   "command": "1001,1701002007",
+   "mask": 0,
+   "cmdid": 100215
+  },{
+   "command": "1001,1701002008",
+   "mask": 0,
+   "cmdid": 100216
+  },{
+   "command": "1001,1701002012",
+   "mask": 0,
+   "cmdid": 100217
+  },{
+   "command": "1001,1701010001",
+   "mask": 0,
+   "cmdid": 100218
+  },{
+   "command": "1001,1701010002",
+   "mask": 0,
+   "cmdid": 100219
+  },{
+   "command": "1001,1701010003",
+   "mask": 0,
+   "cmdid": 100220
+  },{
+   "command": "1001,1701010005",
+   "mask": 0,
+   "cmdid": 100221
+  },{
+   "command": "1001,1701010006",
+   "mask": 0,
+   "cmdid": 100222
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 61
+  },{
+   "command": "2001,http:\/\/{$webserver}\/bonds\/fv\/index.html?skin=white&ucode=44003,ZQJZLL",
+   "mask": 0,
+   "cmdid": 100223
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 10
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 28
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 65
+  },{
+   "command": "13,INDUSTRYDATA,107527",
+   "mask": 0,
+   "cmdid": 100224
+  },{
+   "command": "2001,http:\/\/{$webserver}\/futures\/calendar\/index.html?skin=white,QSRL",
+   "mask": 0,
+   "cmdid": 100225
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 82
+  },{
+   "command": "27,ITFUND",
+   "mask": 0,
+   "cmdid": 100226
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 81
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 83
+  },{
+   "command": "13,HKTOPIC,107970",
+   "mask": 0,
+   "cmdid": 100146
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 200
+  },{
+   "command": "2001,http:\/\/{$webserver}\/futures\/macroeconomic\/index.html?skin=white",
+   "mask": 0,
+   "cmdid": 100227
+  },{
+   "command": "27,ITINDEX",
+   "mask": 0,
+   "cmdid": 100229
+  },{
+   "command": "1002,FUND",
+   "mask": 0,
+   "cmdid": 100230
+  },{
+   "command": "202,Quant\\Python\\QuantAPI_Python_使用手册.pdf",
+   "mask": 0,
+   "cmdid": 100241
+  },{
+   "command": "202,Quant\\指标手册.CHM",
+   "mask": 0,
+   "cmdid": 100242
+  },{
+   "command": "202,Quant\\MATLAB\\QuantAPI_MATLAB_使用手册.pdf",
+   "mask": 0,
+   "cmdid": 100243
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 203
+  },{
+   "command": "202,cfg\\help.pdf",
+   "mask": 0,
+   "cmdid": 100244
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 204
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 66
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 10205
+  },{
+   "command": "",
+   "mask": 0,
+   "cmdid": 10206
+  },{
+   "command": "202,Quant\\C#WPFDemo\\QuantAPI_C#_使用手册.pdf",
+   "mask": 0,
+   "cmdid": 100245
+  },{
+   "command": "202,Quant\\C\\QuantAPI_C++_使用手册.pdf",
+   "mask": 0,
+   "cmdid": 100246
+  },{
+   "command": "202,Quant\\R\\QuantAPI_R_使用手册.pdf",
+   "mask": 0,
+   "cmdid": 100247
+  }],
+ "manager": {
+  "tel": "021-67888888",
+  "mobile": "1852158888",
+  "email": "bohut@gildata.com",
+  "company": "上海恒生聚源",
+  "name": "唐伯虎",
+  "code": 16029
+ },
+ "menu": [
+  {
+   "order": 0,
+   "favorite": "",
+   "visible": true,
+   "id": 10000,
+   "imageindex": -1,
+   "shortcut": "",
+   "cmdid": 0,
+   "parentid": 0,
+   "caption": "股票"
+  },{
+   "order": 0,
+   "favorite": "",
+   "visible": true,
+   "id": 11000,
+   "imageindex": -1,
+   "shortcut": "",
+   "cmdid": 0,
+   "parentid": 10000,
+   "caption": "资讯速递"
+  },{
+   "order": 0,
+   "favorite": "",
+   "visible": true,
+   "id": 11001,
+   "imageindex": 21,
+   "shortcut": "caption=股市日历;key=;alias=gsrl,stc",
+   "cmdid": 100039,
+   "parentid": 11000,
+   "caption": "股市日历(STC)"
+  },{
+   "order": 1,
+   "favorite": "",
+   "visible": true,
+   "id": 11002,
+   "imageindex": 22,
+   "shortcut": "caption=新股中心;key=;alias=xgzx,ipo",
+   "cmdid": 100040,
+   "parentid": 11000,
+   "caption": "新股中心(IPO)"
+  },{
+   "order": 1,
+   "favorite": "",
+   "visible": true,
+   "id": 12000,
+   "imageindex": -1,
+   "shortcut": "",
+   "cmdid": 0,
+   "parentid": 10000,
+   "caption": "多维数据"
+  },{
+   "order": 0,
+   "favorite": "",
+   "visible": true,
+   "id": 12100,
+   "imageindex": -1,
+   "shortcut": "",
+   "cmdid": 0,
+   "parentid": 12000,
+   "caption": "沪深"
+  },{
+   "order": 0,
+   "favorite": "股票F9",
+   "visible": true,
+   "id": 12101,
+   "imageindex": 8,
+   "shortcut": "caption=股票深度资料;key=;alias=gpsdzl",
+   "cmdid": 100024,
+   "parentid": 12100,
+   "caption": "深度资料(F9)"
+  },{
+   "order": 1,
+   "favorite": "股票F10",
+   "visible": true,
+   "id": 12102,
+   "imageindex": 9,
+   "shortcut": "caption=股票基本资料;key=;alias=gpjbzl",
+   "cmdid": 100065,
+   "parentid": 12100,
+   "caption": "基本资料(F10)"
+  },{
+   "order": 2,
+   "favorite": "股票数据浏览器",
+   "visible": true,
+   "id": 12103,
+   "imageindex": 10,
+   "shortcut": "caption=股票数据浏览器;key=;alias=gpsjllq,ede",
+   "cmdid": 14,
+   "parentid": 12100,
+   "caption": "数据浏览器(EDE)"
+  },{
+   "order": 3,
+   "favorite": "",
+   "visible": true,
+   "id": 111096,
+   "imageindex": 33,
+   "shortcut": "caption=板块数据浏览器;key=;alias=bksjllq,see",
+   "cmdid": 21,
+   "parentid": 12100,
+   "caption": "板块数据浏览器(SEE)"
+  },{
+   "order": 4,
+   "favorite": "",
+   "visible": true,
+   "id": 12105,
+   "imageindex": 12,
+   "shortcut": "caption=股票财务纵比;key=;alias=gpcwzb,fa",
+   "cmdid": 22,
+   "parentid": 12100,
+   "caption": "财务纵比(FA)"
+  },{
+   "order": 5,
+   "favorite": "",
+   "visible": true,
+   "id": 12106,
+   "imageindex": 12,
+   "shortcut": "caption=板块财务纵比;key=;alias=bkcwzb,sfa",
+   "cmdid": 24,
+   "parentid": 12100,
+   "caption": "板块财务纵比(SFA)"
+  },{
+   "order": 6,
+   "favorite": "股票行情序列",
+   "visible": true,
+   "id": 12107,
+   "imageindex": 20,
+   "shortcut": "caption=股票行情序列;key=;alias=gphqxl,hps",
+   "cmdid": 100043,
+   "parentid": 12100,
+   "caption": "行情序列(HPS)"
+  },{
+   "order": 7,
+   "favorite": "",
+   "visible": true,
+   "id": 12104,
+   "imageindex": 11,
+   "shortcut": "caption=条件选股;key=;alias=tjxg,eqs",
+   "cmdid": 25,
+   "parentid": 12100,
+   "caption": "条件选股(EQS)"
+  },{
+   "order": 8,
+   "favorite": "",
+   "visible": true,
+   "id": 111134,
+   "imageindex": 20,
+   "shortcut": "",
+   "cmdid": 28,
+   "parentid": 12100,
+   "caption": "板块行情序列"
+  },{
+   "order": 1,
+   "favorite": "",
+   "visible": true,
+   "id": 12200,
+   "imageindex": -1,
+   "shortcut": "",
+   "cmdid": 0,
+   "parentid": 12000,
+   "caption": "港股"
+  },{
+   "order": 0,
+   "favorite": "港股F9",
+   "visible": true,
+   "id": 12201,
+   "imageindex": 8,
+   "shortcut": "caption=港股深度资料;key=;alias=ggsdzl",
+   "cmdid": 100045,
+   "parentid": 12200,
+   "caption": "深度资料(F9)"
+  },{
+   "order": 1,
+   "favorite": "港股F10",
+   "visible": true,
+   "id": 12202,
+   "imageindex": 9,
+   "shortcut": "caption=港股基本资料;key=;alias=ggjbzl",
+   "cmdid": 100061,
+   "parentid": 12200,
+   "caption": "基本资料(F10)"
+  },{
+   "order": 2,
+   "favorite": "港股数据浏览器",
+   "visible": true,
+   "id": 12203,
+   "imageindex": 10,
+   "shortcut": "caption=港股数据浏览器;key=;alias=ggsjllq",
+   "cmdid": 18,
+   "parentid": 12200,
+   "caption": "数据浏览器"
+  },{
+   "order": 3,
+   "favorite": "港股行情序列",
+   "visible": true,
+   "id": 12204,
+   "imageindex": 20,
+   "shortcut": "caption=港股行情序列;key=;alias=gghqxl",
+   "cmdid": 100044,
+   "parentid": 12200,
+   "caption": "行情序列"
+  },{
+   "order": 4,
+   "favorite": "",
+   "visible": false,
+   "id": 111097,
+   "imageindex": 11,
+   "shortcut": "",
+   "cmdid": 0,
+   "parentid": 12200,
+   "caption": "条件选股"
+  },{
+   "order": 2,
+   "favorite": "",
+   "visible": true,
+   "id": 12300,
+   "imageindex": -1,
+   "shortcut": "",
+   "cmdid": 0,
+   "parentid": 12000,
+   "caption": "新三板"
+  },{
+   "order": 0,
+   "favorite": "新三板F9",
+   "visible": true,
+   "id": 12301,
+   "imageindex": 8,
+   "shortcut": "caption=新三板深度资料;key=;alias=xsbsdzl",
+   "cmdid": 100022,
+   "parentid": 12300,
+   "caption": "深度资料(F9)"
+  },{
+   "order": 1,
+   "favorite": "新三板F10",
+   "visible": true,
+   "id": 12302,
+   "imageindex": 9,
+   "shortcut": "caption=新三板基本资料;key=;alias=xsbjbzl",
+   "cmdid": 100048,
+   "parentid": 12300,
+   "caption": "基本资料(F10)"
+  },{
+   "order": 2,
+   "favorite": "新三板数据浏览器",
+   "visible": true,
+   "id": 12303,
+   "imageindex": 10,
+   "shortcut": "caption=新三板数据浏览器;key=;alias=xsbsjllq",
+   "cmdid": 17,
+   "parentid": 12300,
+   "caption": "数据浏览器"
+  },{
+   "order": 2,
+   "favorite": "",
+   "visible": true,
+   "id": 13000,
+   "imageindex": -1,
+   "shortcut": "",
+   "cmdid": 0,
+   "parentid": 10000,
+   "caption": "专题统计"
+  },{
+   "order": 0,
+   "favorite": "",
+   "visible": true,
+   "id": 13100,
+   "imageindex": -1,
+   "shortcut": "",
+   "cmdid": 0,
+   "parentid": 13000,
+   "caption": "沪深"
+  },{
+   "order": 0,
+   "favorite": "市场概况-股票",
+   "visible": true,
+   "id": 13101,
+   "imageindex": 13,
+   "shortcut": "",
+   "cmdid": 100100,
+   "parentid": 13100,
+   "caption": "市场概况"
+  },{
+   "order": 1,
+   "favorite": "一级市场-股票",
+   "visible": true,
+   "id": 13102,
+   "imageindex": 14,
+   "shortcut": "",
+   "cmdid": 100101,
+   "parentid": 13100,
+   "caption": "一级市场"
+  },{
+   "order": 2,
+   "favorite": "二级市场-股票",
+   "visible": true,
+   "id": 13103,
+   "imageindex": 15,
+   "shortcut": "",
+   "cmdid": 100102,
+   "parentid": 13100,
+   "caption": "二级市场"
+  },{
+   "order": 3,
+   "favorite": "公司研究-股票",
+   "visible": true,
+   "id": 13104,
+   "imageindex": 16,
+   "shortcut": "",
+   "cmdid": 100103,
+   "parentid": 13100,
+   "caption": "公司研究"
+  },{
+   "order": 4,
+   "favorite": "公司财务-股票",
+   "visible": true,
+   "id": 13105,
+   "imageindex": 17,
+   "shortcut": "",
+   "cmdid": 100104,
+   "parentid": 13100,
+   "caption": "公司财务"
+  },{
+   "order": 5,
+   "favorite": "机构研究-股票",
+   "visible": true,
+   "id": 13106,
+   "imageindex": 18,
+   "shortcut": "",
+   "cmdid": 100105,
+   "parentid": 13100,
+   "caption": "机构研究"
+  },{
+   "order": 6,
+   "favorite": "盈利预测-股票",
+   "visible": true,
+   "id": 13107,
+   "imageindex": 24,
+   "shortcut": "",
+   "cmdid": 100106,
+   "parentid": 13100,
+   "caption": "盈利预测"
+  },{
+   "order": 1,
+   "favorite": "",
+   "visible": true,
+   "id": 13200,
+   "imageindex": -1,
+   "shortcut": "",
+   "cmdid": 0,
+   "parentid": 13000,
+   "caption": "港股"
+  },{
+   "order": 0,
+   "favorite": "市场概况-港股",
+   "visible": true,
+   "id": 13201,
+   "imageindex": 13,
+   "shortcut": "",
+   "cmdid": 100140,
+   "parentid": 13200,
+   "caption": "市场概况"
+  },{
+   "order": 1,
+   "favorite": "一级市场-港股",
+   "visible": true,
+   "id": 13202,
+   "imageindex": 14,
+   "shortcut": "",
+   "cmdid": 100141,
+   "parentid": 13200,
+   "caption": "一级市场"
+  },{
+   "order": 2,
+   "favorite": "二级市场-港股",
+   "visible": true,
+   "id": 13203,
+   "imageindex": 15,
+   "shortcut": "",
+   "cmdid": 100142,
+   "parentid": 13200,
+   "caption": "二级市场"
+  },{
+   "order": 3,
+   "favorite": "公司研究-港股",
+   "visible": true,
+   "id": 13204,
+   "imageindex": 16,
+   "shortcut": "",
+   "cmdid": 100143,
+   "parentid": 13200,
+   "caption": "公司研究"
+  },{
+   "order": 4,
+   "favorite": "公司财务-港股",
+   "visible": true,
+   "id": 13205,
+   "imageindex": 17,
+   "shortcut": "",
+   "cmdid": 100144,
+   "parentid": 13200,
+   "caption": "公司财务"
+  },{
+   "order": 5,
+   "favorite": "权证发行-港股",
+   "visible": false,
+   "id": 13206,
+   "imageindex": 25,
+   "shortcut": "",
+   "cmdid": 100145,
+   "parentid": 13200,
+   "caption": "权证发行"
+  },{
+   "order": 6,
+   "favorite": "",
+   "visible": true,
+   "id": 111147,
+   "imageindex": 25,
+   "shortcut": "",
+   "cmdid": 100146,
+   "parentid": 13200,
+   "caption": "港股机构"
+  },{
+   "order": 2,
+   "favorite": "",
+   "visible": true,
+   "id": 13300,
+   "imageindex": -1,
+   "shortcut": "",
+   "cmdid": 0,
+   "parentid": 13000,
+   "caption": "新三板"
+  },{
+   "order": 0,
+   "favorite": "三板速览-新三板",
+   "visible": true,
+   "id": 13301,
+   "imageindex": 26,
+   "shortcut": "",
+   "cmdid": 100110,
+   "parentid": 13300,
+   "caption": "三板速览"
+  },{
+   "order": 1,
+   "favorite": "",
+   "visible": true,
+   "id": 111144,
+   "imageindex": 13,
+   "shortcut": "",
+   "cmdid": 100114,
+   "parentid": 13300,
+   "caption": "市场概况"
+  },{
+   "order": 2,
+   "favorite": "一级市场-新三板",
+   "visible": true,
+   "id": 13302,
+   "imageindex": 14,
+   "shortcut": "",
+   "cmdid": 100111,
+   "parentid": 13300,
+   "caption": "一级市场"
+  },{
+   "order": 3,
+   "favorite": "二级市场-新三板",
+   "visible": true,
+   "id": 13303,
+   "imageindex": 15,
+   "shortcut": "",
+   "cmdid": 100112,
+   "parentid": 13300,
+   "caption": "二级市场"
+  },{
+   "order": 4,
+   "favorite": "公司研究-新三板",
+   "visible": true,
+   "id": 13304,
+   "imageindex": 16,
+   "shortcut": "",
+   "cmdid": 100113,
+   "parentid": 13300,
+   "caption": "公司研究"
+  },{
+   "order": 5,
+   "favorite": "公司财务-新三板",
+   "visible": true,
+   "id": 13307,
+   "imageindex": 17,
+   "shortcut": "",
+   "cmdid": 100116,
+   "parentid": 13300,
+   "caption": "公司财务"
+  },{
+   "order": 6,
+   "favorite": "机构投资-新三板",
+   "visible": true,
+   "id": 13309,
+   "imageindex": 32,
+   "shortcut": "",
+   "cmdid": 100117,
+   "parentid": 13300,
+   "caption": "机构投资"
+  },{
+   "order": 7,
+   "favorite": "新三板资讯-新三板",
+   "visible": true,
+   "id": 13306,
+   "imageindex": 485,
+   "shortcut": "",
+   "cmdid": 100118,
+   "parentid": 13300,
+   "caption": "新三板资讯"
+  },{
+   "order": 3,
+   "favorite": "",
+   "visible": true,
+   "id": 111019,
+   "imageindex": -1,
+   "shortcut": "",
+   "cmdid": 0,
+   "parentid": 10000,
+   "caption": "分析工具"
+  },{
+   "order": 0,
+   "favorite": "",
+   "visible": true,
+   "id": 12108,
+   "imageindex": 23,
+   "shortcut": "caption=BETA计算器;key=;alias=betajsq,beta",
+   "cmdid": 30,
+   "parentid": 111019,
+   "caption": "BETA计算器(BETA)"
+  },{
+   "order": 1,
+   "favorite": "",
+   "visible": true,
+   "id": 12109,
+   "imageindex": 23,
+   "shortcut": "caption=WACC计算器;key=;alias=waccjsq,wacc",
+   "cmdid": 33,
+   "parentid": 111019,
+   "caption": "WACC计算器(WACC)"
+  },{
+   "order": 2,
+   "favorite": "",
+   "visible": true,
+   "id": 12110,
+   "imageindex": 23,
+   "shortcut": "caption=DDM计算器;key=;alias=ddmjsq,ddm",
+   "cmdid": 32,
+   "parentid": 111019,
+   "caption": "DDM计算器(DDM)"
+  },{
+   "order": 4,
+   "favorite": "",
+   "visible": true,
+   "id": 14000,
+   "imageindex": -1,
+   "shortcut": "",
+   "cmdid": 0,
+   "parentid": 10000,
+   "caption": "行情"
+  },{
+   "order": 0,
+   "favorite": "",
+   "visible": true,
+   "id": 14100,
+   "imageindex": -1,
+   "shortcut": "",
+   "cmdid": 0,
+   "parentid": 14000,
+   "caption": "沪深"
+  },{
+   "order": 0,
+   "favorite": "",
+   "visible": true,
+   "id": 14101,
+   "imageindex": 0,
+   "shortcut": "",
+   "cmdid": 100019,
+   "parentid": 14100,
+   "caption": "自定义综合屏(000)"
+  },{
+   "order": 1,
+   "favorite": "",
+   "visible": false,
+   "id": 111079,
+   "imageindex": 34,
+   "shortcut": "",
+   "cmdid": 0,
+   "parentid": 14100,
+   "caption": "沪深综合屏"
+  },{
+   "order": 2,
+   "favorite": "",
+   "visible": true,
+   "id": 14102,
+   "imageindex": 1,
+   "shortcut": "",
+   "cmdid": 100003,
+   "parentid": 14100,
+   "caption": "自选股(F6)"
+  },{
+   "order": 3,
+   "favorite": "",
+   "visible": true,
+   "id": 14103,
+   "imageindex": 2,
+   "shortcut": "",
+   "cmdid": 100011,
+   "parentid": 14100,
+   "caption": "全部A股(60)"
+  },{
+   "order": 4,
+   "favorite": "",
+   "visible": true,
+   "id": 111020,
+   "imageindex": 35,
+   "shortcut": "",
+   "cmdid": 100163,
+   "parentid": 14100,
+   "caption": "上证A股(61)"
+  },{
+   "order": 5,
+   "favorite": "",
+   "visible": true,
+   "id": 111021,
+   "imageindex": 36,
+   "shortcut": "",
+   "cmdid": 100164,
+   "parentid": 14100,
+   "caption": "深证A股(63)"
+  },{
+   "order": 6,
+   "favorite": "",
+   "visible": true,
+   "id": 14104,
+   "imageindex": 3,
+   "shortcut": "",
+   "cmdid": 100012,
+   "parentid": 14100,
+   "caption": "全部B股(602)"
+  },{
+   "order": 7,
+   "favorite": "",
+   "visible": true,
+   "id": 14105,
+   "imageindex": 4,
+   "shortcut": "",
+   "cmdid": 100017,
+   "parentid": 14100,
+   "caption": "中小板(69)"
+  },{
+   "order": 8,
+   "favorite": "",
+   "visible": true,
+   "id": 14106,
+   "imageindex": 5,
+   "shortcut": "",
+   "cmdid": 100018,
+   "parentid": 14100,
+   "caption": "创业板(CYB)"
+  },{
+   "order": 1,
+   "favorite": "",
+   "visible": true,
+   "id": 14200,
+   "imageindex": -1,
+   "shortcut": "",
+   "cmdid": 0,
+   "parentid": 14000,
+   "caption": "港股"
+  },{
+   "order": 0,
+   "favorite": "",
+   "visible": false,
+   "id": 111022,
+   "imageindex": 37,
+   "shortcut": "",
+   "cmdid": 0,
+   "parentid": 14200,
+   "caption": "港股综合屏"
+  },{
+   "order": 1,
+   "favorite": "",
+   "visible": true,
+   "id": 111023,
+   "imageindex": 38,
+   "shortcut": "",
+   "cmdid": 100165,
+   "parentid": 14200,
+   "caption": "全部港股"
+  },{
+   "order": 2,
+   "favorite": "",
+   "visible": true,
+   "id": 14201,
+   "imageindex": 39,
+   "shortcut": "",
+   "cmdid": 100054,
+   "parentid": 14200,
+   "caption": "港股主板"
+  },{
+   "order": 3,
+   "favorite": "",
+   "visible": true,
+   "id": 14202,
+   "imageindex": 40,
+   "shortcut": "",
+   "cmdid": 100055,
+   "parentid": 14200,
+   "caption": "港股创业板"
+  },{
+   "order": 4,
+   "favorite": "",
+   "visible": true,
+   "id": 14203,
+   "imageindex": 41,
+   "shortcut": "",
+   "cmdid": 100056,
+   "parentid": 14200,
+   "caption": "H股"
+  },{
+   "order": 5,
+   "favorite": "",
+   "visible": true,
+   "id": 14204,
+   "imageindex": 42,
+   "shortcut": "",
+   "cmdid": 100057,
+   "parentid": 14200,
+   "caption": "含A股的H股"
+  },{
+   "order": 6,
+   "favorite": "",
+   "visible": false,
+   "id": 111024,
+   "imageindex": 43,
+   "shortcut": "",
+   "cmdid": 100166,
+   "parentid": 14200,
+   "caption": "全部港股通"
+  },{
+   "order": 7,
+   "favorite": "",
+   "visible": true,
+   "id": 14207,
+   "imageindex": 45,
+   "shortcut": "",
+   "cmdid": 100060,
+   "parentid": 14200,
+   "caption": "深市港股通"
+  },{
+   "order": 8,
+   "favorite": "",
+   "visible": true,
+   "id": 14206,
+   "imageindex": 44,
+   "shortcut": "",
+   "cmdid": 100059,
+   "parentid": 14200,
+   "caption": "沪市港股通"
+  },{
+   "order": 2,
+   "favorite": "",
+   "visible": true,
+   "id": 14300,
+   "imageindex": -1,
+   "shortcut": "",
+   "cmdid": 0,
+   "parentid": 14000,
+   "caption": "新三板"
+  },{
+   "order": 0,
+   "favorite": "",
+   "visible": false,
+   "id": 111029,
+   "imageindex": 46,
+   "shortcut": "",
+   "cmdid": 0,
+   "parentid": 14300,
+   "caption": "新三板综合屏"
+  },{
+   "order": 1,
+   "favorite": "",
+   "visible": true,
+   "id": 111025,
+   "imageindex": 6,
+   "shortcut": "",
+   "cmdid": 100021,
+   "parentid": 14300,
+   "caption": "全部新三板"
+  },{
+   "order": 2,
+   "favorite": "",
+   "visible": true,
+   "id": 111027,
+   "imageindex": 47,
+   "shortcut": "",
+   "cmdid": 100168,
+   "parentid": 14300,
+   "caption": "创新层"
+  },{
+   "order": 3,
+   "favorite": "",
+   "visible": true,
+   "id": 111026,
+   "imageindex": 48,
+   "shortcut": "",
+   "cmdid": 100169,
+   "parentid": 14300,
+   "caption": "基础层"
+  },{
+   "order": 4,
+   "favorite": "",
+   "visible": false,
+   "id": 111028,
+   "imageindex": 49,
+   "shortcut": "",
+   "cmdid": 0,
+   "parentid": 14300,
+   "caption": "两网及退市"
+  },{
+   "order": 5,
+   "favorite": "",
+   "visible": true,
+   "id": 111084,
+   "imageindex": 51,
+   "shortcut": "",
+   "cmdid": 100171,
+   "parentid": 14300,
+   "caption": "做市转让"
+  },{
+   "order": 6,
+   "favorite": "",
+   "visible": true,
+   "id": 111085,
+   "imageindex": 50,
+   "shortcut": "",
+   "cmdid": 100172,
+   "parentid": 14300,
+   "caption": "集合竞价"
+  },{
+   "order": 7,
+   "favorite": "",
+   "visible": true,
+   "id": 111086,
+   "imageindex": 52,
+   "shortcut": "",
+   "cmdid": 100173,
+   "parentid": 14300,
+   "caption": "创新层竞价"
+  },{
+   "order": 8,
+   "favorite": "",
+   "visible": true,
+   "id": 111087,
+   "imageindex": 54,
+   "shortcut": "",
+   "cmdid": 100174,
+   "parentid": 14300,
+   "caption": "创新层做市"
+  },{
+   "order": 9,
+   "favorite": "",
+   "visible": true,
+   "id": 111088,
+   "imageindex": 53,
+   "shortcut": "",
+   "cmdid": 100175,
+   "parentid": 14300,
+   "caption": "基础层竞价"
+  },{
+   "order": 10,
+   "favorite": "",
+   "visible": true,
+   "id": 111089,
+   "imageindex": 55,
+   "shortcut": "",
+   "cmdid": 100176,
+   "parentid": 14300,
+   "caption": "基础层做市"
+  },{
+   "order": 1,
+   "favorite": "",
+   "visible": true,
+   "id": 20000,
+   "imageindex": -1,
+   "shortcut": "",
+   "cmdid": 0,
+   "parentid": 0,
+   "caption": "基金"
+  },{
+   "order": 0,
+   "favorite": "",
+   "visible": true,
+   "id": 21000,
+   "imageindex": -1,
+   "shortcut": "",
+   "cmdid": 0,
+   "parentid": 20000,
+   "caption": "资讯速递"
+  },{
+   "order": 0,
+   "favorite": "",
+   "visible": true,
+   "id": 21001,
+   "imageindex": 128,
+   "shortcut": "caption=MFC 基金日历;key=;alias=mfc,jjrl",
+   "cmdid": 100038,
+   "parentid": 21000,
+   "caption": "基金日历(MFC)"
+  },{
+   "order": 1,
+   "favorite": "",
+   "visible": true,
+   "id": 22000,
+   "imageindex": -1,
+   "shortcut": "",
+   "cmdid": 0,
+   "parentid": 20000,
+   "caption": "多维数据"
+  },{
+   "order": 0,
+   "favorite": "基金F9",
+   "visible": true,
+   "id": 22001,
+   "imageindex": 120,
+   "shortcut": "caption=基金深度资料;key=;alias=jjsdzl",
+   "cmdid": 100032,
+   "parentid": 22000,
+   "caption": "深度资料(F9)"
+  },{
+   "order": 1,
+   "favorite": "基金F10",
+   "visible": true,
+   "id": 22002,
+   "imageindex": 9,
+   "shortcut": "caption=基金基本资料;key=;alias=jjjbzl",
+   "cmdid": 100049,
+   "parentid": 22000,
+   "caption": "基本资料(F10)"
+  },{
+   "order": 2,
+   "favorite": "基金数据浏览器",
+   "visible": true,
+   "id": 22003,
+   "imageindex": 121,
+   "shortcut": "caption=基金数据浏览器;key=;alias=jjsjllq,mfde",
+   "cmdid": 15,
+   "parentid": 22000,
+   "caption": "数据浏览器(MFDE)"
+  },{
+   "order": 3,
+   "favorite": "",
+   "visible": true,
+   "id": 22004,
+   "imageindex": 122,
+   "shortcut": "caption=MFS 基金筛选;key=;alias=jjsx,mfs",
+   "cmdid": 26,
+   "parentid": 22000,
+   "caption": "基金筛选(MFS)"
+  },{
+   "order": 4,
+   "favorite": "",
+   "visible": true,
+   "id": 22005,
+   "imageindex": 129,
+   "shortcut": "caption=MFSC 基金比较;key=;alias=jjbj,mfsc",
+   "cmdid": 80,
+   "parentid": 22000,
+   "caption": "基金比较(MFSC)"
+  },{
+   "order": 5,
+   "favorite": "基金行情序列",
+   "visible": true,
+   "id": 111138,
+   "imageindex": 20,
+   "shortcut": "caption=基金行情序列;key=;alias=jjhqxl,hps",
+   "cmdid": 100226,
+   "parentid": 22000,
+   "caption": "行情序列(HPS)"
+  },{
+   "order": 2,
+   "favorite": "",
+   "visible": true,
+   "id": 23000,
+   "imageindex": -1,
+   "shortcut": "",
+   "cmdid": 0,
+   "parentid": 20000,
+   "caption": "专题统计"
+  },{
+   "order": 0,
+   "favorite": "市场概况-基金",
+   "visible": true,
+   "id": 23001,
+   "imageindex": 123,
+   "shortcut": "",
+   "cmdid": 100120,
+   "parentid": 23000,
+   "caption": "市场概况"
+  },{
+   "order": 1,
+   "favorite": "资产配置-基金",
+   "visible": true,
+   "id": 23002,
+   "imageindex": 124,
+   "shortcut": "",
+   "cmdid": 100121,
+   "parentid": 23000,
+   "caption": "资产配置"
+  },{
+   "order": 2,
+   "favorite": "基金公司-基金",
+   "visible": true,
+   "id": 23003,
+   "imageindex": 125,
+   "shortcut": "",
+   "cmdid": 100122,
+   "parentid": 23000,
+   "caption": "基金公司"
+  },{
+   "order": 3,
+   "favorite": "机构研究-基金",
+   "visible": true,
+   "id": 23004,
+   "imageindex": 126,
+   "shortcut": "",
+   "cmdid": 100123,
+   "parentid": 23000,
+   "caption": "机构研究"
+  },{
+   "order": 4,
+   "favorite": "业绩评价-基金",
+   "visible": true,
+   "id": 23005,
+   "imageindex": 127,
+   "shortcut": "",
+   "cmdid": 100124,
+   "parentid": 23000,
+   "caption": "业绩评价"
+  },{
+   "order": 3,
+   "favorite": "",
+   "visible": false,
+   "id": 111030,
+   "imageindex": -1,
+   "shortcut": "",
+   "cmdid": 0,
+   "parentid": 20000,
+   "caption": "分析工具"
+  },{
+   "order": 0,
+   "favorite": "",
+   "visible": false,
+   "id": 111031,
+   "imageindex": 130,
+   "shortcut": "",
+   "cmdid": 0,
+   "parentid": 111030,
+   "caption": "基金仓位估算"
+  },{
+   "order": 4,
+   "favorite": "",
+   "visible": true,
+   "id": 24000,
+   "imageindex": -1,
+   "shortcut": "",
+   "cmdid": 0,
+   "parentid": 20000,
+   "caption": "行情分析"
+  },{
+   "order": 0,
+   "favorite": "",
+   "visible": true,
+   "id": 111032,
+   "imageindex": 0,
+   "shortcut": "",
+   "cmdid": 100230,
+   "parentid": 24000,
+   "caption": "基金综合屏"
+  },{
+   "order": 1,
+   "favorite": "",
+   "visible": true,
+   "id": 111033,
+   "imageindex": 131,
+   "shortcut": "",
+   "cmdid": 100198,
+   "parentid": 24000,
+   "caption": "全部基金净值"
+  },{
+   "order": 2,
+   "favorite": "",
+   "visible": true,
+   "id": 111034,
+   "imageindex": 132,
+   "shortcut": "",
+   "cmdid": 100199,
+   "parentid": 24000,
+   "caption": "全部上市基金"
+  },{
+   "order": 3,
+   "favorite": "",
+   "visible": true,
+   "id": 111035,
+   "imageindex": 133,
+   "shortcut": "",
+   "cmdid": 100200,
+   "parentid": 24000,
+   "caption": "分级基金"
+  },{
+   "order": 4,
+   "favorite": "",
+   "visible": true,
+   "id": 24001,
+   "imageindex": 134,
+   "shortcut": "",
+   "cmdid": 100050,
+   "parentid": 24000,
+   "caption": "开放式基金"
+  },{
+   "order": 5,
+   "favorite": "",
+   "visible": true,
+   "id": 24002,
+   "imageindex": 135,
+   "shortcut": "",
+   "cmdid": 100051,
+   "parentid": 24000,
+   "caption": "封闭式基金"
+  },{
+   "order": 6,
+   "favorite": "",
+   "visible": true,
+   "id": 24003,
+   "imageindex": 136,
+   "shortcut": "",
+   "cmdid": 100053,
+   "parentid": 24000,
+   "caption": "ETF基金"
+  },{
+   "order": 7,
+   "favorite": "",
+   "visible": true,
+   "id": 24004,
+   "imageindex": 137,
+   "shortcut": "",
+   "cmdid": 100052,
+   "parentid": 24000,
+   "caption": "LOF基金"
+  },{
+   "order": 2,
+   "favorite": "",
+   "visible": true,
+   "id": 30000,
+   "imageindex": -1,
+   "shortcut": "",
+   "cmdid": 0,
+   "parentid": 0,
+   "caption": "债券"
+  },{
+   "order": 0,
+   "favorite": "",
+   "visible": true,
+   "id": 31000,
+   "imageindex": -1,
+   "shortcut": "",
+   "cmdid": 0,
+   "parentid": 30000,
+   "caption": "资讯速递"
+  },{
+   "order": 0,
+   "favorite": "",
+   "visible": true,
+   "id": 31001,
+   "imageindex": 180,
+   "shortcut": "caption=BDC 债市日历;key=;alias=bdc,zsrl",
+   "cmdid": 100036,
+   "parentid": 31000,
+   "caption": "债市日历(BDC)"
+  },{
+   "order": 1,
+   "favorite": "",
+   "visible": true,
+   "id": 111132,
+   "imageindex": 218,
+   "shortcut": "",
+   "cmdid": 100223,
+   "parentid": 31000,
+   "caption": "基准利率速览"
+  },{
+   "order": 1,
+   "favorite": "",
+   "visible": false,
+   "id": 32000,
+   "imageindex": -1,
+   "shortcut": "",
+   "cmdid": 0,
+   "parentid": 30000,
+   "caption": "综合屏"
+  },{
+   "order": 0,
+   "favorite": "",
+   "visible": true,
+   "id": 32001,
+   "imageindex": 181,
+   "shortcut": "",
+   "cmdid": 0,
+   "parentid": 32000,
+   "caption": "现券综合屏"
+  },{
+   "order": 1,
+   "favorite": "",
+   "visible": true,
+   "id": 32002,
+   "imageindex": 182,
+   "shortcut": "",
+   "cmdid": 0,
+   "parentid": 32000,
+   "caption": "资金面综合屏"
+  },{
+   "order": 2,
+   "favorite": "",
+   "visible": true,
+   "id": 32003,
+   "imageindex": 183,
+   "shortcut": "",
+   "cmdid": 0,
+   "parentid": 32000,
+   "caption": "基准利率综合屏"
+  },{
+   "order": 2,
+   "favorite": "",
+   "visible": true,
+   "id": 35000,
+   "imageindex": -1,
+   "shortcut": "",
+   "cmdid": 0,
+   "parentid": 30000,
+   "caption": "多维数据"
+  },{
+   "order": 0,
+   "favorite": "债券F9",
+   "visible": true,
+   "id": 35001,
+   "imageindex": 193,
+   "shortcut": "caption=债券深度资料;key=;alias=zqsdzl",
+   "cmdid": 100046,
+   "parentid": 35000,
+   "caption": "深度资料(F9)"
+  },{
+   "order": 1,
+   "favorite": "",
+   "visible": true,
+   "id": 35002,
+   "imageindex": 194,
+   "shortcut": "",
+   "cmdid": 65,
+   "parentid": 35000,
+   "caption": "期限结构"
+  },{
+   "order": 2,
+   "favorite": "",
+   "visible": false,
+   "id": 35003,
+   "imageindex": 195,
+   "shortcut": "",
+   "cmdid": 0,
+   "parentid": 35000,
+   "caption": "短期基准利率"
+  },{
+   "order": 3,
+   "favorite": "债券数据浏览器",
+   "visible": true,
+   "id": 35004,
+   "imageindex": 196,
+   "shortcut": "caption=BDE 债券数据浏览器;key=;alias=zqsjllq,bde",
+   "cmdid": 16,
+   "parentid": 35000,
+   "caption": "数据浏览器(BDE)"
+  },{
+   "order": 4,
+   "favorite": "",
+   "visible": true,
+   "id": 35005,
+   "imageindex": 197,
+   "shortcut": "",
+   "cmdid": 82,
+   "parentid": 35000,
+   "caption": "利率走势分析"
+  },{
+   "order": 5,
+   "favorite": "",
+   "visible": true,
+   "id": 111163,
+   "imageindex": 11,
+   "shortcut": "caption=债券筛选;key=;alias=zqsx",
+   "cmdid": 66,
+   "parentid": 35000,
+   "caption": "债券筛选"
+  },{
+   "order": 3,
+   "favorite": "",
+   "visible": false,
+   "id": 36000,
+   "imageindex": -1,
+   "shortcut": "",
+   "cmdid": 0,
+   "parentid": 30000,
+   "caption": "专题统计"
+  },{
+   "order": 0,
+   "favorite": "市场概况-债券",
+   "visible": true,
+   "id": 36001,
+   "imageindex": 198,
+   "shortcut": "",
+   "cmdid": 100130,
+   "parentid": 36000,
+   "caption": "市场概况"
+  },{
+   "order": 1,
+   "favorite": "公开市场操作-债券",
+   "visible": true,
+   "id": 36002,
+   "imageindex": 206,
+   "shortcut": "",
+   "cmdid": 100131,
+   "parentid": 36000,
+   "caption": "公开市场操作"
+  },{
+   "order": 2,
+   "favorite": "一级市场-债券",
+   "visible": true,
+   "id": 36003,
+   "imageindex": 199,
+   "shortcut": "",
+   "cmdid": 100132,
+   "parentid": 36000,
+   "caption": "一级市场"
+  },{
+   "order": 3,
+   "favorite": "二级市场-债券",
+   "visible": true,
+   "id": 36004,
+   "imageindex": 200,
+   "shortcut": "",
+   "cmdid": 100133,
+   "parentid": 36000,
+   "caption": "二级市场"
+  },{
+   "order": 4,
+   "favorite": "信用债研究-债券",
+   "visible": true,
+   "id": 36005,
+   "imageindex": 207,
+   "shortcut": "",
+   "cmdid": 100134,
+   "parentid": 36000,
+   "caption": "信用债研究"
+  },{
+   "order": 5,
+   "favorite": "可转债研究-债券",
+   "visible": true,
+   "id": 36006,
+   "imageindex": 207,
+   "shortcut": "",
+   "cmdid": 100135,
+   "parentid": 36000,
+   "caption": "可转债研究"
+  },{
+   "order": 6,
+   "favorite": "机构研究-债券",
+   "visible": true,
+   "id": 36007,
+   "imageindex": 208,
+   "shortcut": "",
+   "cmdid": 100136,
+   "parentid": 36000,
+   "caption": "机构研究"
+  },{
+   "order": 7,
+   "favorite": "海外研究-债券",
+   "visible": true,
+   "id": 36008,
+   "imageindex": 209,
+   "shortcut": "",
+   "cmdid": 100137,
+   "parentid": 36000,
+   "caption": "海外研究"
+  },{
+   "order": 4,
+   "favorite": "",
+   "visible": true,
+   "id": 34000,
+   "imageindex": -1,
+   "shortcut": "",
+   "cmdid": 0,
+   "parentid": 30000,
+   "caption": "试算分析"
+  },{
+   "order": 0,
+   "favorite": "",
+   "visible": true,
+   "id": 34001,
+   "imageindex": 188,
+   "shortcut": "",
+   "cmdid": 50,
+   "parentid": 34000,
+   "caption": "现券综合分析"
+  },{
+   "order": 1,
+   "favorite": "",
+   "visible": true,
+   "id": 34002,
+   "imageindex": 189,
+   "shortcut": "",
+   "cmdid": 51,
+   "parentid": 34000,
+   "caption": "质押式回购计算"
+  },{
+   "order": 2,
+   "favorite": "",
+   "visible": true,
+   "id": 34003,
+   "imageindex": 189,
+   "shortcut": "",
+   "cmdid": 52,
+   "parentid": 34000,
+   "caption": "拆借分析"
+  },{
+   "order": 3,
+   "favorite": "",
+   "visible": true,
+   "id": 34004,
+   "imageindex": 190,
+   "shortcut": "",
+   "cmdid": 53,
+   "parentid": 34000,
+   "caption": "持有期收益率分析"
+  },{
+   "order": 4,
+   "favorite": "",
+   "visible": true,
+   "id": 34005,
+   "imageindex": 191,
+   "shortcut": "",
+   "cmdid": 54,
+   "parentid": 34000,
+   "caption": "买断式回购计算-单券"
+  },{
+   "order": 5,
+   "favorite": "",
+   "visible": true,
+   "id": 34006,
+   "imageindex": 192,
+   "shortcut": "",
+   "cmdid": 55,
+   "parentid": 34000,
+   "caption": "买断式回购计算-多券"
+  },{
+   "order": 6,
+   "favorite": "",
+   "visible": true,
+   "id": 34007,
+   "imageindex": 210,
+   "shortcut": "",
+   "cmdid": 56,
+   "parentid": 34000,
+   "caption": "固息债定价分析"
+  },{
+   "order": 7,
+   "favorite": "",
+   "visible": true,
+   "id": 34008,
+   "imageindex": 210,
+   "shortcut": "",
+   "cmdid": 57,
+   "parentid": 34000,
+   "caption": "浮息债定价分析"
+  },{
+   "order": 8,
+   "favorite": "",
+   "visible": false,
+   "id": 34009,
+   "imageindex": 210,
+   "shortcut": "",
+   "cmdid": 58,
+   "parentid": 34000,
+   "caption": "含权债定价分析"
+  },{
+   "order": 9,
+   "favorite": "",
+   "visible": true,
+   "id": 111083,
+   "imageindex": 211,
+   "shortcut": "",
+   "cmdid": 59,
+   "parentid": 34000,
+   "caption": "债券流动性分析"
+  },{
+   "order": 10,
+   "favorite": "",
+   "visible": true,
+   "id": 111095,
+   "imageindex": 212,
+   "shortcut": "",
+   "cmdid": 60,
+   "parentid": 34000,
+   "caption": "债券比较分析"
+  },{
+   "order": 11,
+   "favorite": "",
+   "visible": true,
+   "id": 111131,
+   "imageindex": 219,
+   "shortcut": "",
+   "cmdid": 61,
+   "parentid": 34000,
+   "caption": "债券风险收益分析"
+  },{
+   "order": 5,
+   "favorite": "",
+   "visible": true,
+   "id": 33000,
+   "imageindex": -1,
+   "shortcut": "",
+   "cmdid": 0,
+   "parentid": 30000,
+   "caption": "行情报价"
+  },{
+   "order": 0,
+   "favorite": "",
+   "visible": false,
+   "id": 33100,
+   "imageindex": -1,
+   "shortcut": "",
+   "cmdid": 0,
+   "parentid": 33000,
+   "caption": "报价行情"
+  },{
+   "order": 0,
+   "favorite": "",
+   "visible": true,
+   "id": 33101,
+   "imageindex": 184,
+   "shortcut": "",
+   "cmdid": 0,
+   "parentid": 33100,
+   "caption": "现券报价"
+  },{
+   "order": 1,
+   "favorite": "",
+   "visible": true,
+   "id": 33102,
+   "imageindex": 185,
+   "shortcut": "",
+   "cmdid": 0,
+   "parentid": 33100,
+   "caption": "银行间质押式回购"
+  },{
+   "order": 2,
+   "favorite": "",
+   "visible": true,
+   "id": 33103,
+   "imageindex": 186,
+   "shortcut": "",
+   "cmdid": 0,
+   "parentid": 33100,
+   "caption": "沪深债券行情"
+  },{
+   "order": 3,
+   "favorite": "",
+   "visible": true,
+   "id": 33104,
+   "imageindex": 186,
+   "shortcut": "",
+   "cmdid": 0,
+   "parentid": 33100,
+   "caption": "现券行情"
+  },{
+   "order": 4,
+   "favorite": "",
+   "visible": true,
+   "id": 33105,
+   "imageindex": 185,
+   "shortcut": "",
+   "cmdid": 0,
+   "parentid": 33100,
+   "caption": "银行间买断式回购"
+  },{
+   "order": 5,
+   "favorite": "",
+   "visible": true,
+   "id": 33106,
+   "imageindex": 186,
+   "shortcut": "",
+   "cmdid": 0,
+   "parentid": 33100,
+   "caption": "沪深回购行情"
+  },{
+   "order": 6,
+   "favorite": "",
+   "visible": true,
+   "id": 33107,
+   "imageindex": 187,
+   "shortcut": "",
+   "cmdid": 0,
+   "parentid": 33100,
+   "caption": "银行间拆借"
+  },{
+   "order": 1,
+   "favorite": "",
+   "visible": false,
+   "id": 33200,
+   "imageindex": -1,
+   "shortcut": "",
+   "cmdid": 0,
+   "parentid": 33000,
+   "caption": "指数"
+  },{
+   "order": 0,
+   "favorite": "",
+   "visible": true,
+   "id": 33201,
+   "imageindex": 202,
+   "shortcut": "",
+   "cmdid": 0,
+   "parentid": 33200,
+   "caption": "中债债券指数"
+  },{
+   "order": 1,
+   "favorite": "",
+   "visible": true,
+   "id": 33202,
+   "imageindex": 203,
+   "shortcut": "",
+   "cmdid": 0,
+   "parentid": 33200,
+   "caption": "中证债券指数"
+  },{
+   "order": 2,
+   "favorite": "",
+   "visible": true,
+   "id": 33203,
+   "imageindex": 204,
+   "shortcut": "",
+   "cmdid": 0,
+   "parentid": 33200,
+   "caption": "沪深债券指数"
+  },{
+   "order": 3,
+   "favorite": "",
+   "visible": true,
+   "id": 33204,
+   "imageindex": 205,
+   "shortcut": "",
+   "cmdid": 0,
+   "parentid": 33200,
+   "caption": "CFETS债券指数"
+  },{
+   "order": 2,
+   "favorite": "",
+   "visible": true,
+   "id": 111098,
+   "imageindex": 213,
+   "shortcut": "",
+   "cmdid": 100193,
+   "parentid": 33000,
+   "caption": "上证债券"
+  },{
+   "order": 3,
+   "favorite": "",
+   "visible": true,
+   "id": 111099,
+   "imageindex": 214,
+   "shortcut": "",
+   "cmdid": 100194,
+   "parentid": 33000,
+   "caption": "深证债券"
+  },{
+   "order": 4,
+   "favorite": "",
+   "visible": true,
+   "id": 111100,
+   "imageindex": 215,
+   "shortcut": "",
+   "cmdid": 100195,
+   "parentid": 33000,
+   "caption": "上交所回购"
+  },{
+   "order": 5,
+   "favorite": "",
+   "visible": true,
+   "id": 111101,
+   "imageindex": 216,
+   "shortcut": "",
+   "cmdid": 100196,
+   "parentid": 33000,
+   "caption": "深交所回购"
+  },{
+   "order": 6,
+   "favorite": "",
+   "visible": true,
+   "id": 111102,
+   "imageindex": 217,
+   "shortcut": "",
+   "cmdid": 100197,
+   "parentid": 33000,
+   "caption": "可转债"
+  },{
+   "order": 3,
+   "favorite": "",
+   "visible": true,
+   "id": 70000,
+   "imageindex": -1,
+   "shortcut": "",
+   "cmdid": 0,
+   "parentid": 0,
+   "caption": "指数"
+  },{
+   "order": 0,
+   "favorite": "",
+   "visible": true,
+   "id": 71000,
+   "imageindex": -1,
+   "shortcut": "",
+   "cmdid": 0,
+   "parentid": 70000,
+   "caption": "多维数据"
+  },{
+   "order": 0,
+   "favorite": "指数F9",
+   "visible": true,
+   "id": 71001,
+   "imageindex": 423,
+   "shortcut": "caption=指数深度资料;key=;alias=zssdzl",
+   "cmdid": 100025,
+   "parentid": 71000,
+   "caption": "深度资料(F9)"
+  },{
+   "order": 1,
+   "favorite": "指数F10",
+   "visible": true,
+   "id": 111078,
+   "imageindex": 424,
+   "shortcut": "caption=指数基本资料;key=;alias=zsjbzl",
+   "cmdid": 100170,
+   "parentid": 71000,
+   "caption": "基本资料(F10)"
+  },{
+   "order": 2,
+   "favorite": "",
+   "visible": true,
+   "id": 71002,
+   "imageindex": 420,
+   "shortcut": "caption=IA 指数分析;key=;alias=zsfx,ia",
+   "cmdid": 100150,
+   "parentid": 71000,
+   "caption": "指数分析(IA)"
+  },{
+   "order": 3,
+   "favorite": "指数数据浏览器",
+   "visible": true,
+   "id": 111142,
+   "imageindex": 10,
+   "shortcut": "caption=指数数据浏览器;key=;alias=zssjllq,ide",
+   "cmdid": 20,
+   "parentid": 71000,
+   "caption": "数据浏览器(IDE)"
+  },{
+   "order": 4,
+   "favorite": "",
+   "visible": true,
+   "id": 111154,
+   "imageindex": 20,
+   "shortcut": "caption=指数行情序列;key=;alias=zshqxl",
+   "cmdid": 100229,
+   "parentid": 71000,
+   "caption": "行情序列"
+  },{
+   "order": 1,
+   "favorite": "",
+   "visible": true,
+   "id": 111036,
+   "imageindex": -1,
+   "shortcut": "",
+   "cmdid": 0,
+   "parentid": 70000,
+   "caption": "行情"
+  },{
+   "order": 0,
+   "favorite": "",
+   "visible": true,
+   "id": 111108,
+   "imageindex": 425,
+   "shortcut": "",
+   "cmdid": 100201,
+   "parentid": 111036,
+   "caption": "上证指数"
+  },{
+   "order": 1,
+   "favorite": "",
+   "visible": true,
+   "id": 111116,
+   "imageindex": 426,
+   "shortcut": "",
+   "cmdid": 100209,
+   "parentid": 111036,
+   "caption": "深证指数"
+  },{
+   "order": 2,
+   "favorite": "",
+   "visible": true,
+   "id": 111046,
+   "imageindex": 421,
+   "shortcut": "",
+   "cmdid": 100182,
+   "parentid": 111036,
+   "caption": "中证指数"
+  },{
+   "order": 3,
+   "favorite": "",
+   "visible": true,
+   "id": 111059,
+   "imageindex": 422,
+   "shortcut": "",
+   "cmdid": 100188,
+   "parentid": 111036,
+   "caption": "申万指数"
+  },{
+   "order": 4,
+   "favorite": "",
+   "visible": true,
+   "id": 111126,
+   "imageindex": 427,
+   "shortcut": "",
+   "cmdid": 100218,
+   "parentid": 111036,
+   "caption": "恒生指数"
+  },{
+   "order": 4,
+   "favorite": "",
+   "visible": true,
+   "id": 50000,
+   "imageindex": -1,
+   "shortcut": "",
+   "cmdid": 0,
+   "parentid": 0,
+   "caption": "期货"
+  },{
+   "order": 0,
+   "favorite": "",
+   "visible": true,
+   "id": 111141,
+   "imageindex": -1,
+   "shortcut": "",
+   "cmdid": 0,
+   "parentid": 50000,
+   "caption": "资讯速递"
+  },{
+   "order": 0,
+   "favorite": "",
+   "visible": true,
+   "id": 111139,
+   "imageindex": 180,
+   "shortcut": "caption=FTC 期市日历;key=;alias=ftc,qsrl",
+   "cmdid": 100225,
+   "parentid": 111141,
+   "caption": "期市日历(FTC)"
+  },{
+   "order": 1,
+   "favorite": "",
+   "visible": true,
+   "id": 51000,
+   "imageindex": -1,
+   "shortcut": "",
+   "cmdid": 0,
+   "parentid": 50000,
+   "caption": "多维数据"
+  },{
+   "order": 0,
+   "favorite": "",
+   "visible": true,
+   "id": 51001,
+   "imageindex": 300,
+   "shortcut": "caption=商品期货深度资料;key=;alias=spqhsdzl,spqhf9",
+   "cmdid": 100026,
+   "parentid": 51000,
+   "caption": "商品期货(F9)"
+  },{
+   "order": 1,
+   "favorite": "",
+   "visible": true,
+   "id": 51002,
+   "imageindex": 301,
+   "shortcut": "caption=股指期货深度资料;key=;alias=gzqhsdzl,gzqhf9",
+   "cmdid": 100027,
+   "parentid": 51000,
+   "caption": "股指期货(F9)"
+  },{
+   "order": 2,
+   "favorite": "",
+   "visible": true,
+   "id": 51003,
+   "imageindex": 302,
+   "shortcut": "caption=国债期货深度资料;key=;alias=gzqhsdzl,gzqhf9",
+   "cmdid": 100028,
+   "parentid": 51000,
+   "caption": "国债期货(F9)"
+  },{
+   "order": 3,
+   "favorite": "期货数据浏览器",
+   "visible": true,
+   "id": 111136,
+   "imageindex": 10,
+   "shortcut": "caption=期货数据浏览器;key=;alias=qhsjllq,fde",
+   "cmdid": 19,
+   "parentid": 51000,
+   "caption": "数据浏览器(FDE)"
+  },{
+   "order": 2,
+   "favorite": "",
+   "visible": true,
+   "id": 52000,
+   "imageindex": -1,
+   "shortcut": "",
+   "cmdid": 0,
+   "parentid": 50000,
+   "caption": "专题统计"
+  },{
+   "order": 0,
+   "favorite": "商品期货专题",
+   "visible": true,
+   "id": 52001,
+   "imageindex": 303,
+   "shortcut": "caption=商品期货专题统计;key=;alias=spqhzttj",
+   "cmdid": 100160,
+   "parentid": 52000,
+   "caption": "商品期货"
+  },{
+   "order": 1,
+   "favorite": "股指期货专题",
+   "visible": true,
+   "id": 52002,
+   "imageindex": 303,
+   "shortcut": "caption=股指期货专题统计;key=;alias=gzqhzttj",
+   "cmdid": 100161,
+   "parentid": 52000,
+   "caption": "股指期货"
+  },{
+   "order": 2,
+   "favorite": "国债期货专题",
+   "visible": true,
+   "id": 52003,
+   "imageindex": 303,
+   "shortcut": "caption=国债期货专题统计;key=;alias=gzqhzttj",
+   "cmdid": 100162,
+   "parentid": 52000,
+   "caption": "国债期货"
+  },{
+   "order": 3,
+   "favorite": "",
+   "visible": true,
+   "id": 111145,
+   "imageindex": -1,
+   "shortcut": "",
+   "cmdid": 0,
+   "parentid": 50000,
+   "caption": "分析工具"
+  },{
+   "order": 0,
+   "favorite": "",
+   "visible": true,
+   "id": 111146,
+   "imageindex": 23,
+   "shortcut": "",
+   "cmdid": 83,
+   "parentid": 111145,
+   "caption": "波动率计算器"
+  },{
+   "order": 4,
+   "favorite": "",
+   "visible": true,
+   "id": 111060,
+   "imageindex": -1,
+   "shortcut": "",
+   "cmdid": 0,
+   "parentid": 50000,
+   "caption": "行情报价"
+  },{
+   "order": 0,
+   "favorite": "",
+   "visible": true,
+   "id": 111061,
+   "imageindex": -1,
+   "shortcut": "",
+   "cmdid": 0,
+   "parentid": 111060,
+   "caption": "境内商品"
+  },{
+   "order": 0,
+   "favorite": "",
+   "visible": false,
+   "id": 111063,
+   "imageindex": 304,
+   "shortcut": "",
+   "cmdid": 0,
+   "parentid": 111061,
+   "caption": "商品期货综合屏"
+  },{
+   "order": 1,
+   "favorite": "",
+   "visible": false,
+   "id": 111064,
+   "imageindex": 304,
+   "shortcut": "",
+   "cmdid": 0,
+   "parentid": 111061,
+   "caption": "股指期货综合屏"
+  },{
+   "order": 2,
+   "favorite": "",
+   "visible": false,
+   "id": 111065,
+   "imageindex": 304,
+   "shortcut": "",
+   "cmdid": 0,
+   "parentid": 111061,
+   "caption": "国债期货综合屏"
+  },{
+   "order": 3,
+   "favorite": "",
+   "visible": true,
+   "id": 111066,
+   "imageindex": 305,
+   "shortcut": "",
+   "cmdid": 100189,
+   "parentid": 111061,
+   "caption": "上海期货"
+  },{
+   "order": 4,
+   "favorite": "",
+   "visible": true,
+   "id": 111067,
+   "imageindex": 306,
+   "shortcut": "",
+   "cmdid": 100190,
+   "parentid": 111061,
+   "caption": "大连期货"
+  },{
+   "order": 5,
+   "favorite": "",
+   "visible": true,
+   "id": 111068,
+   "imageindex": 307,
+   "shortcut": "",
+   "cmdid": 100191,
+   "parentid": 111061,
+   "caption": "郑州期货"
+  },{
+   "order": 6,
+   "favorite": "",
+   "visible": true,
+   "id": 111103,
+   "imageindex": 311,
+   "shortcut": "",
+   "cmdid": 100192,
+   "parentid": 111061,
+   "caption": "金融期货"
+  },{
+   "order": 1,
+   "favorite": "",
+   "visible": false,
+   "id": 111062,
+   "imageindex": -1,
+   "shortcut": "",
+   "cmdid": 0,
+   "parentid": 111060,
+   "caption": "全球商品"
+  },{
+   "order": 0,
+   "favorite": "",
+   "visible": false,
+   "id": 111069,
+   "imageindex": 310,
+   "shortcut": "",
+   "cmdid": 0,
+   "parentid": 111062,
+   "caption": "纽约商品"
+  },{
+   "order": 1,
+   "favorite": "",
+   "visible": false,
+   "id": 111070,
+   "imageindex": 310,
+   "shortcut": "",
+   "cmdid": 0,
+   "parentid": 111062,
+   "caption": "芝加哥期货"
+  },{
+   "order": 2,
+   "favorite": "",
+   "visible": false,
+   "id": 111071,
+   "imageindex": 310,
+   "shortcut": "",
+   "cmdid": 0,
+   "parentid": 111062,
+   "caption": "纽约期货"
+  },{
+   "order": 3,
+   "favorite": "",
+   "visible": false,
+   "id": 111072,
+   "imageindex": 308,
+   "shortcut": "",
+   "cmdid": 0,
+   "parentid": 111062,
+   "caption": "伦敦金属"
+  },{
+   "order": 4,
+   "favorite": "",
+   "visible": false,
+   "id": 111073,
+   "imageindex": 309,
+   "shortcut": "",
+   "cmdid": 0,
+   "parentid": 111062,
+   "caption": "伦敦洲际"
+  },{
+   "order": 5,
+   "favorite": "",
+   "visible": false,
+   "id": 111074,
+   "imageindex": 310,
+   "shortcut": "",
+   "cmdid": 0,
+   "parentid": 111062,
+   "caption": "纽约商业"
+  },{
+   "order": 6,
+   "favorite": "",
+   "visible": false,
+   "id": 111075,
+   "imageindex": 310,
+   "shortcut": "",
+   "cmdid": 0,
+   "parentid": 111062,
+   "caption": "芝加哥商业"
+  },{
+   "order": 7,
+   "favorite": "",
+   "visible": false,
+   "id": 111076,
+   "imageindex": 310,
+   "shortcut": "",
+   "cmdid": 0,
+   "parentid": 111062,
+   "caption": "芝加哥国际货币市场"
+  },{
+   "order": 5,
+   "favorite": "",
+   "visible": true,
+   "id": 80000,
+   "imageindex": -1,
+   "shortcut": "",
+   "cmdid": 0,
+   "parentid": 0,
+   "caption": "宏观"
+  },{
+   "order": 0,
+   "favorite": "",
+   "visible": true,
+   "id": 81000,
+   "imageindex": -1,
+   "shortcut": "",
+   "cmdid": 0,
+   "parentid": 80000,
+   "caption": "EDB"
+  },{
+   "order": 0,
+   "favorite": "",
+   "visible": true,
+   "id": 81001,
+   "imageindex": 541,
+   "shortcut": "caption=CMD 中国宏观;key=;alias=zghg,cmd",
+   "cmdid": 100062,
+   "parentid": 81000,
+   "caption": "中国宏观(CMD)"
+  },{
+   "order": 1,
+   "favorite": "",
+   "visible": true,
+   "id": 81002,
+   "imageindex": 542,
+   "shortcut": "caption=GMD 全球宏观;key=;alias=qqhg,gmd",
+   "cmdid": 100063,
+   "parentid": 81000,
+   "caption": "全球宏观(GMD)"
+  },{
+   "order": 2,
+   "favorite": "",
+   "visible": true,
+   "id": 81003,
+   "imageindex": 543,
+   "shortcut": "caption=IED 行业经济;key=;alias=hyjj,ied",
+   "cmdid": 100064,
+   "parentid": 81000,
+   "caption": "行业经济(IED)"
+  },{
+   "order": 1,
+   "favorite": "",
+   "visible": true,
+   "id": 82000,
+   "imageindex": -1,
+   "shortcut": "",
+   "cmdid": 0,
+   "parentid": 80000,
+   "caption": "专题统计"
+  },{
+   "order": 0,
+   "favorite": "",
+   "visible": true,
+   "id": 111077,
+   "imageindex": 541,
+   "shortcut": "caption=EDR 中国宏观专题;key=;alias=zghgzt,edr",
+   "cmdid": 100167,
+   "parentid": 82000,
+   "caption": "中国宏观专题(EDR)"
+  },{
+   "order": 1,
+   "favorite": "",
+   "visible": true,
+   "id": 111137,
+   "imageindex": 545,
+   "shortcut": "",
+   "cmdid": 100224,
+   "parentid": 82000,
+   "caption": "行业数据专题"
+  },{
+   "order": 2,
+   "favorite": "",
+   "visible": true,
+   "id": 111143,
+   "imageindex": 546,
+   "shortcut": "",
+   "cmdid": 81,
+   "parentid": 82000,
+   "caption": "企业绩效评价"
+  },{
+   "order": 2,
+   "favorite": "",
+   "visible": true,
+   "id": 111149,
+   "imageindex": -1,
+   "shortcut": "",
+   "cmdid": 0,
+   "parentid": 80000,
+   "caption": "资讯"
+  },{
+   "order": 0,
+   "favorite": "",
+   "visible": true,
+   "id": 111150,
+   "imageindex": 21,
+   "shortcut": "",
+   "cmdid": 100227,
+   "parentid": 111149,
+   "caption": "宏观经济日历"
+  },{
+   "order": 6,
+   "favorite": "",
+   "visible": true,
+   "id": 90000,
+   "imageindex": -1,
+   "shortcut": "",
+   "cmdid": 0,
+   "parentid": 0,
+   "caption": "资讯"
+  },{
+   "order": 0,
+   "favorite": "",
+   "visible": true,
+   "id": 91000,
+   "imageindex": -1,
+   "shortcut": "",
+   "cmdid": 0,
+   "parentid": 90000,
+   "caption": "新闻资讯"
+  },{
+   "order": 0,
+   "favorite": "",
+   "visible": true,
+   "id": 91001,
+   "imageindex": 485,
+   "shortcut": "caption=NEWS 新闻资讯;key=;alias=xwzx,news",
+   "cmdid": 100041,
+   "parentid": 91000,
+   "caption": "新闻资讯(NEWS)"
+  },{
+   "order": 1,
+   "favorite": "",
+   "visible": true,
+   "id": 91002,
+   "imageindex": 487,
+   "shortcut": "caption=RPP 研究报告;key=;alias=yjbg,rpp",
+   "cmdid": 100047,
+   "parentid": 91000,
+   "caption": "研究报告(RPP)"
+  },{
+   "order": 2,
+   "favorite": "",
+   "visible": true,
+   "id": 91003,
+   "imageindex": 486,
+   "shortcut": "caption=公司公告;key=;alias=gsgg",
+   "cmdid": 100042,
+   "parentid": 91000,
+   "caption": "公司公告"
+  },{
+   "order": 3,
+   "favorite": "",
+   "visible": true,
+   "id": 111135,
+   "imageindex": 609,
+   "shortcut": "",
+   "cmdid": 10,
+   "parentid": 91000,
+   "caption": "财经直播"
+  },{
+   "order": 7,
+   "favorite": "",
+   "visible": true,
+   "id": 111091,
+   "imageindex": -1,
+   "shortcut": "",
+   "cmdid": 0,
+   "parentid": 0,
+   "caption": "工具"
+  },{
+   "order": 0,
+   "favorite": "",
+   "visible": true,
+   "id": 111092,
+   "imageindex": -1,
+   "shortcut": "",
+   "cmdid": 0,
+   "parentid": 111091,
+   "caption": "EXCEL插件"
+  },{
+   "order": 0,
+   "favorite": "",
+   "visible": true,
+   "id": 111093,
+   "imageindex": 606,
+   "shortcut": "",
+   "cmdid": 8,
+   "parentid": 111092,
+   "caption": "启动EXCEL插件"
+  },{
+   "order": 1,
+   "favorite": "",
+   "visible": true,
+   "id": 111094,
+   "imageindex": 607,
+   "shortcut": "",
+   "cmdid": 9,
+   "parentid": 111092,
+   "caption": "修复EXCEL插件"
+  },{
+   "order": 1,
+   "favorite": "",
+   "visible": true,
+   "id": 111104,
+   "imageindex": -1,
+   "shortcut": "",
+   "cmdid": 0,
+   "parentid": 111091,
+   "caption": "管理工具"
+  },{
+   "order": 0,
+   "favorite": "",
+   "visible": true,
+   "id": 111105,
+   "imageindex": 608,
+   "shortcut": "",
+   "cmdid": 6,
+   "parentid": 111104,
+   "caption": "板块管理(F7)"
+  },{
+   "order": 8,
+   "favorite": "",
+   "visible": true,
+   "id": 100000,
+   "imageindex": -1,
+   "shortcut": "",
+   "cmdid": 0,
+   "parentid": 0,
+   "caption": "系统"
+  },{
+   "order": 0,
+   "favorite": "",
+   "visible": true,
+   "id": 101000,
+   "imageindex": -1,
+   "shortcut": "",
+   "cmdid": 0,
+   "parentid": 100000,
+   "caption": "系统"
+  },{
+   "order": 0,
+   "favorite": "",
+   "visible": true,
+   "id": 101002,
+   "imageindex": 602,
+   "shortcut": "caption=用户设置;key=;alias=yhsz",
+   "cmdid": 2,
+   "parentid": 101000,
+   "caption": "用户设置"
+  },{
+   "order": 1,
+   "favorite": "",
+   "visible": true,
+   "id": 111148,
+   "imageindex": 602,
+   "shortcut": "",
+   "cmdid": 200,
+   "parentid": 101000,
+   "caption": "切换用户"
+  },{
+   "order": 2,
+   "favorite": "",
+   "visible": true,
+   "id": 101003,
+   "imageindex": 604,
+   "shortcut": "",
+   "cmdid": 7,
+   "parentid": 101000,
+   "caption": "下载"
+  },{
+   "order": 3,
+   "favorite": "",
+   "visible": true,
+   "id": 101004,
+   "imageindex": 601,
+   "shortcut": "caption=检查更新;key=;alias=jcsz",
+   "cmdid": 4,
+   "parentid": 101000,
+   "caption": "检查更新"
+  },{
+   "order": 4,
+   "favorite": "",
+   "visible": true,
+   "id": 101005,
+   "imageindex": 600,
+   "shortcut": "",
+   "cmdid": 1,
+   "parentid": 101000,
+   "caption": "关于我们"
+  },{
+   "order": 5,
+   "favorite": "",
+   "visible": true,
+   "id": 111090,
+   "imageindex": 605,
+   "shortcut": "caption=用户社区;key=;alias=yhsq",
+   "cmdid": 100177,
+   "parentid": 101000,
+   "caption": "用户社区"
+  },{
+   "order": 6,
+   "favorite": "",
+   "visible": true,
+   "id": 101001,
+   "imageindex": 603,
+   "shortcut": "caption=F1 帮助手册;key=F1;alias=bzsc,f1",
+   "cmdid": 100244,
+   "parentid": 101000,
+   "caption": "帮助手册(F1)"
+  },{
+   "order": 9,
+   "favorite": "",
+   "visible": true,
+   "id": 110000,
+   "imageindex": -1,
+   "shortcut": "",
+   "cmdid": 0,
+   "parentid": 0,
+   "caption": "测试"
+  },{
+   "order": 0,
+   "favorite": "",
+   "visible": true,
+   "id": 111000,
+   "imageindex": -1,
+   "shortcut": "",
+   "cmdid": 0,
+   "parentid": 110000,
+   "caption": "通用测试"
+  },{
+   "order": 0,
+   "favorite": "",
+   "visible": true,
+   "id": 111001,
+   "imageindex": 1,
+   "shortcut": "",
+   "cmdid": 9001,
+   "parentid": 111000,
+   "caption": "板块树测试"
+  },{
+   "order": 1,
+   "favorite": "",
+   "visible": true,
+   "id": 111002,
+   "imageindex": 2,
+   "shortcut": "",
+   "cmdid": 9002,
+   "parentid": 111000,
+   "caption": "配置管理"
+  },{
+   "order": 2,
+   "favorite": "",
+   "visible": true,
+   "id": 111003,
+   "imageindex": 3,
+   "shortcut": "",
+   "cmdid": 9003,
+   "parentid": 111000,
+   "caption": "编辑\\反转表格测试"
+  },{
+   "order": 3,
+   "favorite": "",
+   "visible": true,
+   "id": 111004,
+   "imageindex": 4,
+   "shortcut": "",
+   "cmdid": 9004,
+   "parentid": 111000,
+   "caption": "图形控件测试"
+  },{
+   "order": 4,
+   "favorite": "",
+   "visible": true,
+   "id": 111005,
+   "imageindex": 5,
+   "shortcut": "",
+   "cmdid": 9005,
+   "parentid": 111000,
+   "caption": "代码选择器测试"
+  },{
+   "order": 5,
+   "favorite": "",
+   "visible": true,
+   "id": 111006,
+   "imageindex": 6,
+   "shortcut": "",
+   "cmdid": 9006,
+   "parentid": 111000,
+   "caption": "数据请求与通讯测试"
+  },{
+   "order": 6,
+   "favorite": "",
+   "visible": true,
+   "id": 111007,
+   "imageindex": 7,
+   "shortcut": "",
+   "cmdid": 9007,
+   "parentid": 111000,
+   "caption": "专题框架测试"
+  },{
+   "order": 7,
+   "favorite": "",
+   "visible": true,
+   "id": 111008,
+   "imageindex": 8,
+   "shortcut": "",
+   "cmdid": 9008,
+   "parentid": 111000,
+   "caption": "JSON测试"
+  },{
+   "order": 8,
+   "favorite": "",
+   "visible": true,
+   "id": 111009,
+   "imageindex": 9,
+   "shortcut": "",
+   "cmdid": 9009,
+   "parentid": 111000,
+   "caption": "Excel导出测试"
+  },{
+   "order": 9,
+   "favorite": "",
+   "visible": true,
+   "id": 111010,
+   "imageindex": 10,
+   "shortcut": "",
+   "cmdid": 9010,
+   "parentid": 111000,
+   "caption": "模板树测试"
+  },{
+   "order": 10,
+   "favorite": "",
+   "visible": true,
+   "id": 111011,
+   "imageindex": 11,
+   "shortcut": "",
+   "cmdid": 9011,
+   "parentid": 111000,
+   "caption": "新版界面测试"
+  },{
+   "order": 11,
+   "favorite": "",
+   "visible": true,
+   "id": 111012,
+   "imageindex": 12,
+   "shortcut": "",
+   "cmdid": 9012,
+   "parentid": 111000,
+   "caption": "树控件测试"
+  },{
+   "order": 12,
+   "favorite": "",
+   "visible": true,
+   "id": 111013,
+   "imageindex": 13,
+   "shortcut": "",
+   "cmdid": 9013,
+   "parentid": 111000,
+   "caption": "Web测试"
+  },{
+   "order": 13,
+   "favorite": "",
+   "visible": true,
+   "id": 111014,
+   "imageindex": 14,
+   "shortcut": "",
+   "cmdid": 9014,
+   "parentid": 111000,
+   "caption": "界面风格测试"
+  },{
+   "order": 14,
+   "favorite": "",
+   "visible": true,
+   "id": 111015,
+   "imageindex": 15,
+   "shortcut": "",
+   "cmdid": 9015,
+   "parentid": 111000,
+   "caption": "数据服务测试"
+  },{
+   "order": 15,
+   "favorite": "",
+   "visible": true,
+   "id": 111016,
+   "imageindex": 16,
+   "shortcut": "",
+   "cmdid": 9016,
+   "parentid": 111000,
+   "caption": "行情调用测试"
+  },{
+   "order": 16,
+   "favorite": "",
+   "visible": true,
+   "id": 111017,
+   "imageindex": 17,
+   "shortcut": "",
+   "cmdid": 9017,
+   "parentid": 111000,
+   "caption": "弹出窗体测试"
+  },{
+   "order": 17,
+   "favorite": "",
+   "visible": true,
+   "id": 111018,
+   "imageindex": 18,
+   "shortcut": "",
+   "cmdid": 3000,
+   "parentid": 111000,
+   "caption": "产品管理"
+  },{
+   "order": 18,
+   "favorite": "",
+   "visible": true,
+   "id": 111151,
+   "imageindex": 18,
+   "shortcut": "",
+   "cmdid": 3003,
+   "parentid": 111000,
+   "caption": "行为分析"
+  },{
+   "order": 19,
+   "favorite": "",
+   "visible": true,
+   "id": 111160,
+   "imageindex": 18,
+   "shortcut": "",
+   "cmdid": 203,
+   "parentid": 111000,
+   "caption": "量化帮助生成工具"
+  },{
+   "order": 10,
+   "favorite": "",
+   "visible": false,
+   "id": 111081,
+   "imageindex": -1,
+   "shortcut": "",
+   "cmdid": 0,
+   "parentid": 0,
+   "caption": "键盘精灵注册"
+  },{
+   "order": 0,
+   "favorite": "",
+   "visible": false,
+   "id": 111080,
+   "imageindex": -1,
+   "shortcut": "caption=F9 深度资料;key=F9;alias=F9,sdzl",
+   "cmdid": 12,
+   "parentid": 111081,
+   "caption": "键盘精灵菜单-F9"
+  },{
+   "order": 1,
+   "favorite": "",
+   "visible": false,
+   "id": 111082,
+   "imageindex": -1,
+   "shortcut": "caption=F10 基本资料;key=F10;alias=F10,jbzl",
+   "cmdid": 2003,
+   "parentid": 111081,
+   "caption": "键盘精灵菜单-F10"
+  },{
+   "order": 11,
+   "favorite": "",
+   "visible": true,
+   "id": 111161,
+   "imageindex": -1,
+   "shortcut": "",
+   "cmdid": 0,
+   "parentid": 0,
+   "caption": "量化"
+  },{
+   "order": 0,
+   "favorite": "",
+   "visible": true,
+   "id": 111155,
+   "imageindex": -1,
+   "shortcut": "",
+   "cmdid": 0,
+   "parentid": 111161,
+   "caption": "量化工具"
+  },{
+   "order": 0,
+   "favorite": "",
+   "visible": true,
+   "id": 111156,
+   "imageindex": 602,
+   "shortcut": "",
+   "cmdid": 100240,
+   "parentid": 111155,
+   "caption": "量化登录"
+  },{
+   "order": 1,
+   "favorite": "",
+   "visible": true,
+   "id": 111158,
+   "imageindex": 487,
+   "shortcut": "",
+   "cmdid": 100242,
+   "parentid": 111155,
+   "caption": "指标手册"
+  },{
+   "order": 2,
+   "favorite": "",
+   "visible": true,
+   "id": 111157,
+   "imageindex": 487,
+   "shortcut": "",
+   "cmdid": 100241,
+   "parentid": 111155,
+   "caption": "Python说明"
+  },{
+   "order": 3,
+   "favorite": "",
+   "visible": true,
+   "id": 111159,
+   "imageindex": 487,
+   "shortcut": "",
+   "cmdid": 100243,
+   "parentid": 111155,
+   "caption": "matlab说明"
+  },{
+   "order": 4,
+   "favorite": "",
+   "visible": true,
+   "id": 111164,
+   "imageindex": 487,
+   "shortcut": "",
+   "cmdid": 100245,
+   "parentid": 111155,
+   "caption": "C#说明"
+  },{
+   "order": 5,
+   "favorite": "",
+   "visible": true,
+   "id": 111165,
+   "imageindex": 487,
+   "shortcut": "",
+   "cmdid": 100246,
+   "parentid": 111155,
+   "caption": "C++说明"
+  },{
+   "order": 6,
+   "favorite": "",
+   "visible": true,
+   "id": 111166,
+   "imageindex": 487,
+   "shortcut": "",
+   "cmdid": 100247,
+   "parentid": 111155,
+   "caption": "R说明"
+  },{
+   "order": 7,
+   "favorite": "",
+   "visible": true,
+   "id": 111162,
+   "imageindex": 10,
+   "shortcut": "caption=命令生成;key=;alias=mlsc",
+   "cmdid": 204,
+   "parentid": 111155,
+   "caption": "命令生成"
+  }]
+}

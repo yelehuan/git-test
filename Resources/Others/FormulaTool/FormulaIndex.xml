@@ -1,0 +1,276 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <Index>
+    <IndexItem name="MA" description="均线" explain="1.股价高于平均线，视为强势；股价低于平均线，视为弱势&#xD;&#xA;2.平均线向上涨升，具有助涨力道；平均线向下跌降，具有助跌力道；&#xD;&#xA;3.二条以上平均线向上交叉时，买进；&#xD;&#xA;4.二条以上平均线向下交叉时，卖出；&#xD;&#xA;5.移动平均线的信号经常落后股价，若以EXPMA、VMA辅助，可以改善。" readonly="true" panellocation="0" type="0" isshow="true">
+      <Content>MA5:MA(CLOSE, M1);
+MA10:MA(CLOSE, M2);
+MA20:MA(CLOSE, M3);
+MA30:MA(CLOSE, M4);
+MA60:MA(CLOSE, M5);
+MA120:MA(CLOSE, M6);</Content>
+      <Param>
+        <Item name="M1" resetvalue="5" default="5" min="0" max="1000" />
+        <Item name="M2" resetvalue="10" default="10" min="0" max="1000" />
+        <Item name="M3" resetvalue="20" default="20" min="0" max="1000" />
+        <Item name="M4" resetvalue="30" default="30" min="0" max="1000" />
+        <Item name="M5" resetvalue="60" default="60" min="0" max="1000" />
+        <Item name="M6" resetvalue="120" default="120" min="0" max="1000" />
+      </Param>
+    </IndexItem>
+    <IndexItem name="BOLL" description="布林线"  explain="1.股价处于盘整状态时，股价下碰支撑线买入，上碰阻力线卖出。&#xD;&#xA;2.股价连续上涨时，会沿着中线和阻力线形成的通道上升。当股价不能再触及阻力线时，则上涨趋势减弱，应卖出。&#xD;&#xA;3.当股价连续下跌时，会沿着中线和支撑线形成的下降通道下跌，当股价不能再触及支撑线时，下跌趋势减弱，应买入。" readonly="true" panellocation="0" type="0" isshow="true">
+      <Content>STDN:=STD(CLOSE,N);
+BOLL:MA(CLOSE,N);
+UPPER:BOLL+M*STDN;
+LOWER:BOLL-M*STDN;</Content>
+      <Param>
+        <Item name="N" resetvalue="20" default="20" min="2" max="1000" />
+        <Item name="M" resetvalue="2" default="2" min="1" max="10" />
+      </Param>
+    </IndexItem>
+    <IndexItem name="ENE" description="轨道线" explain="轨道线（ENE）由上轨线(UPPER)和下轨线(LOWER)及中轨线(ENE)组成，轨道线的优势在于其不仅具有趋势轨道的研判分析作用，也可以敏锐的觉察股价运行过程中方向的改变。&#xD;&#xA; 1.当轨道线ENE向下缓慢运行时，如果股价跌穿下轨LOWER后，很快重新上涨穿越LOWER时，可以买入。&#xD;&#xA;2.当轨道线ENE向上缓慢运行时，如果股价跌至下轨LOWER附近后重新恢复上涨行情，这时即使没有击穿LOWER也可以买入。&#xD;&#xA;3.当轨道线ENE向上缓慢运行时，如果股价上涨穿越上轨UPPER后，很快掉头向下并跌穿上轨UPPER时可以卖出。&#xD;&#xA;4.当轨道线向下缓慢运行时，如果股价涨至上轨UPPER附近后，出现掉头下跌行情，这时即使股价没有触及上轨UPPER，也可以卖出。&#xD;&#xA;5.轨道线在平稳震荡的波段行情中能够准确提示出买卖信号，但在股价处于单边上涨或者单边下跌中技巧就完全不一样了。甚至相反。当股市处于急速上涨的过程中，需要在股价向上突破上轨UPPER时买入时机；当股市处于熊市中，在股价处于急速下跌过程中，需要以股价向下跌穿下轨线LOWER时为卖出时机。" readonly="true" panellocation="0" type="0" isshow="true">
+      <Content>UPPER:(1+M1/100)*MA(CLOSE,N);
+LOWER:(1-M2/100)*MA(CLOSE,N);
+ENE:(UPPER+LOWER)/2;</Content>
+      <Param>
+        <Item name="N" resetvalue="25" default="25" min="2" max="120" />
+        <Item name="M1" resetvalue="6" default="6" min="2" max="120" />
+        <Item name="M2" resetvalue="6" default="6" min="2" max="120" />
+      </Param>
+    </IndexItem>
+    <IndexItem name="SAR" description="抛物转向" explain="1.任何时候都可以使用SAR为停损点；&#xD;&#xA;2.价格涨跌的速度必须比SAR升降的速度快，否则必会产生停损信号；&#xD;&#xA;3.SAR由红色变成绿色时，卖出；&#xD;&#xA;4.SAR由绿色变成红色时，买进；&#xD;&#xA;5.本指标周期参数一般设定为4天；&#xD;&#xA;6.本设定主要为寻找出现多头停损或空头停损的个股。" readonly="true" panellocation="0" type="0" isshow="true">
+      <Content>SAR1:SAR(P,STEP,MAXP);</Content>
+      <Param>
+        <Item name="P" resetvalue="10" default="10" min="1" max="200" />
+        <Item name="STEP" resetvalue="2" default="2" min="1" max="200" />
+        <Item name="MAXP" resetvalue="20" default="20" min="5" max="100" />
+      </Param>
+    </IndexItem>
+    <IndexItem name="EXPMA" description="指数平均线" explain="EXPMA为因移动平均线被视为落后指标的缺失而发展出来的，为解决一旦价格已脱离均线差值扩大，而平均线未能立即反应，EXPMA可以减少类似缺点。&#xD;&#xA;EXPMA译为指数平均线，修正移动平均线较股价落后的缺点，本指标随股价波动反应快速，用法与移动平均线相同。" readonly="true" panellocation="0" type="0" isshow="true">
+      <Content>EXP1:EMA(CLOSE,M1);
+EXP2:EMA(CLOSE,M2);</Content>
+      <Param>
+        <Item name="M1" resetvalue="12" default="12" min="2" max="500" />
+        <Item name="M2" resetvalue="50" default="50" min="2" max="500" />
+      </Param>
+    </IndexItem>
+	<IndexItem name="DKX" description="多空线" explain="多空线(DKX)是一个统计性指标。它是将主动买、主动卖的成交按时间区间分别统计而形成的一个曲线。&#xD;&#xA;多空线有两条线，以交叉方式提示买入卖出。" readonly="true" panellocation="0" type="0" isshow="true">
+      <Content>MID:=(3*CLOSE+LOW+OPEN+HIGH)/6;
+DKX:(20*MID+19*REF(MID,1)+18*REF(MID,2)+17*REF(MID,3)+16*REF(MID,4)+15*REF(MID,5)+14*REF(MID,6)+13*REF(MID,7)+12*REF(MID,8)+11*REF(MID,9)+10*REF(MID,10)+9*REF(MID,11)+8*REF(MID,12)+7*REF(MID,13)+6*REF(MID,14)+5*REF(MID,15)+4*REF(MID,16)+3*REF(MID,17)+2*REF(MID,18)+REF(MID,20))/210;
+MADKX:MA(DKX,M);</Content>
+      <Param>
+        <Item name="M" resetvalue="10" default="10" min="2" max="250" />
+      </Param>
+    </IndexItem>
+    <IndexItem name="MACD" description="平滑异同平均" explain="MACD指数平滑异同移动平均线为两条长、短的平滑平均线。其买卖原则为：&#xD;&#xA;1.DIF、DEA均为正，DIF向上突破DEA，买入信号参考。&#xD;&#xA;2.DIF、DEA均为负，DIF向下跌破DEA，卖出信号参考。&#xD;&#xA;3.DEA线与K线发生背离，行情可能出现反转信号。&#xD;&#xA;4.分析MACD柱状线，由红变绿(正变负)，卖出信号参考；由绿变红，买入信号参考。" readonly="true" panellocation="1" type="0" isshow="true">
+      <Content>SHORTEMA:=EMA(CLOSE,SHORT);
+LONGEMA:=EMA(CLOSE,LONG);
+DIF:SHORTEMA-LONGEMA;
+DEA:EMA(DIF,MID);
+MACD:(DIF-DEA)*2;</Content>
+      <Param>
+        <Item name="SHORT" resetvalue="12" default="12" min="2" max="200" />
+        <Item name="LONG" resetvalue="26" default="26" min="2" max="200" />
+        <Item name="MID" resetvalue="9" default="9" min="2" max="200" />
+      </Param>
+    </IndexItem>
+    <IndexItem name="KDJ" description="经典版KDJ" explain="KDJ，其综合动量观念、强弱指标及移动平均线的优点，早年应用在期货投资方面，功能颇为显著，目前为股市中最常被使用的指标之一。买卖原则：&#xD;&#xA;1.K线由右边向下交叉D值做卖，K线由右边向上交叉D值做买。&#xD;&#xA;2.高档连续二次向下交叉确认跌势，低挡连续二次向上交叉确认涨势。&#xD;&#xA;3.D值 &lt; 20 % 超卖，D值 &gt; 80 % 超买，J &gt; 100 % 超买，J &lt; 10 % 超卖。&#xD;&#xA;4.KD值于50 % 左右徘徊或交叉时，无意义。&#xD;&#xA;5.投机性太强的个股不适用。&#xD;&#xA;6.可观察KD值同股价的背离，以确认高低点。" readonly="true" panellocation="1" type="0" isshow="true">
+      <Content>LLVN:=LLV(LOW,N);
+HIGHN:=HHV(HIGH,N);
+RSV:=(CLOSE-LLVN)/(HIGHN-LLVN)*100;
+K:SMA(RSV,M1,1);
+D:SMA(K,M2,1);
+J:3*K-2*D;</Content>
+      <Param>
+        <Item name="N" resetvalue="9" default="9" min="2" max="90" />
+        <Item name="M1" resetvalue="3" default="3" min="2" max="30" />
+        <Item name="M2" resetvalue="3" default="3" min="2" max="30" />
+      </Param>
+    </IndexItem>
+    <IndexItem name="RSI" description="相对强弱指标" explain="RSI的基本原理是在一个正常的股市中，多空买卖双方的力道必须得到均衡，股价才能稳定；而RSI是对于固定期间内，股价上涨总幅度平均值占总幅度平均值的比例。&#xD;&#xA;1.RSI值于0-100之间呈常态分配，当6日RSI值为80‰以上时，股市呈超买现象，若出现M头，市场风险较大；当6日RSI值在20‰以下时，股市呈超卖现象，若出现W头，市场机会增大。&#xD;&#xA;2.RSI一般选用6日、12日、24日作为参考基期，基期越长越有趋势性(慢速RSI)，基期越短越有敏感性(快速RSI)。当快速RSI由下往上突破慢速RSI时，机会增大；当快速RSI由上而下跌破慢速RSI时，风险增大。" readonly="true" panellocation="1" type="0" isshow="true">
+      <Content>LC:=REF(CLOSE,1);
+SMA1:=SMA(MAX(CLOSE-LC,0),N1,1);
+SMAABS1:=SMA(ABS(CLOSE-LC),N1,1);
+SMA2:=SMA(MAX(CLOSE-LC,0),N2,1);
+SMAABS2:=SMA(ABS(CLOSE-LC),N2,1);
+SMA3:=SMA(MAX(CLOSE-LC,0),N3,1);
+SMAABS3:=SMA(ABS(CLOSE-LC),N3,1);
+RSI1:SMA1/SMAABS1*100;
+RSI2:SMA2/SMAABS2*100;
+RSI3:SMA3/SMAABS3*100;</Content>
+      <Param>
+        <Item name="N1" resetvalue="6" default="6" min="2" max="120" />
+        <Item name="N2" resetvalue="12" default="12" min="2" max="250" />
+        <Item name="N3" resetvalue="24" default="24" min="2" max="500" />
+      </Param>
+    </IndexItem>
+    <IndexItem name="DMI" description="趋向指标" explain="DMI指标又叫动向指标或趋向指标，其全称叫“Directional Movement Index,简称DMI”，是通过分析股票价格在涨跌过程中买卖双方力量均衡点的变化情况，即多空双方的力量的变化受价格波动的影响而发生由均衡到失衡的循环过程，从而提供对趋势判断依据的一种技术指标。 " readonly="true" panellocation="1" type="0" isshow="true">
+      <Content>MTR:=EXPMEMA(MAX(MAX(HIGH-LOW,ABS(HIGH-REF(CLOSE,1))),ABS(REF(CLOSE,1)-LOW)),N);
+HD :=HIGH-REF(HIGH,1);
+LD :=REF(LOW,1)-LOW;
+DMP:=EXPMEMA(IF(HD&gt;0&amp;&amp;HD&gt;LD,HD,0),N);
+DMM:=EXPMEMA(IF(LD&gt;0&amp;&amp;LD&gt;HD,LD,0),N);
+PDI: DMP*100/MTR;
+MDI: DMM*100/MTR;
+ADXEXP:=ABS(MDI-PDI)/(MDI+PDI)*100;
+ADX:EXPMEMA(ADXEXP,MM);
+ADXR:EXPMEMA(ADX,MM);</Content>
+      <Param>
+        <Item name="N" resetvalue="14" default="14" min="2" max="90" />
+        <Item name="MM" resetvalue="6" default="6" min="2" max="60" />
+      </Param>
+    </IndexItem>
+    <IndexItem name="BIAS" description="乖离率" explain="1.股价处于盘整状态时，股价下碰支撑线买入，上碰阻力线卖出。&#xD;&#xA;2.股价连续上涨时，会沿着中线和阻力线形成的通道上升。当股价不能再触及阻力线时，则上涨趋势减弱，应卖出。&#xD;&#xA;3.当股价连续下跌时，会沿着中线和支撑线形成的下降通道下跌，当股价不能再触及支撑线时，下跌趋势减弱，应买入。" readonly="true" panellocation="1" type="0" isshow="true">
+      <Content>MA1:=MA(CLOSE,N1);
+MA2:=MA(CLOSE,N2);
+MA3:=MA(CLOSE,N3);
+BIAS1:(CLOSE-MA1)/MA1*100;
+BIAS2:(CLOSE-MA2)/MA2*100;
+BIAS3:(CLOSE-MA3)/MA3*100;</Content>
+      <Param>
+        <Item name="N1" resetvalue="6" default="6" min="2" max="250" />
+        <Item name="N2" resetvalue="12" default="12" min="2" max="250" />
+        <Item name="N3" resetvalue="24" default="24" min="2" max="250" />
+      </Param>
+    </IndexItem>
+    <IndexItem name="ASI" description="振动升降指标"  explain="当ASI向下跌破前一次低点时为卖出讯号，当ASI向上突破前一次高点时为买入讯号，价由下往上欲穿过前一波的高点套牢区时，于接近高点处，尚未确定能否顺利穿越之际。如果ASI领先股价，提早一步，通过相对股价的前一波ASI高点，则次一日之后，可以确定股价必然能顺利突破高点套牢区。&#xD;&#xA;股价由上往下，欲穿越前一波低点的密集支撑区时，于接近低点处，尚未确定是否将因失去信心，而跌破支撑之际。如果ASI领先股价，提早一步，跌破相对股价的前一波ASI低点，则次一日之后，可以确定股价将随后跌破价点支撑区。&#xD;&#xA;股价走势一波比一波高，而ASI却未相对创新高点形成“牛背离”时，为卖出参考。股价走势一波比一波低，而ASI却未相对创新低点形成“熊背离”时，为买进参考。" readonly="true" panellocation="1" type="0" isshow="true">
+      <Content>LC:=REF(CLOSE,1);AA:=ABS(HIGH-LC);
+BB:=ABS(LOW-LC);
+CC:=ABS(HIGH-REF(LOW,1));
+DD:=ABS(LC-REF(OPEN,1));
+R:=IF(AA&gt;BB AND AA&gt;CC,AA+BB/2+DD/4,IF(BB&gt;CC AND BB&gt;AA,BB+AA/2+DD/4,CC+DD/4));
+X:=(CLOSE-LC+(CLOSE-OPEN)/2+LC-REF(OPEN,1));
+SI:=16*X/R*MAX(AA,BB);
+ASI:SUM(SI,0);
+MASI:MA(ASI,M);</Content>
+      <Param>
+        <Item name="M" resetvalue="6" default="6" min="2" max="60" />
+      </Param>
+    </IndexItem>
+    <IndexItem name="OBV" description="累积能量线"  explain="该指标通过统计成交量变动的趋势来推测股价趋势。&#xD;&#xA;OBV线最大的用处，在于观察股市盘局整理后，何时会脱离盘局以及突破后的未来走势，OBV线变动方向是重要参考指数，其具体的数值并无实际意义。" readonly="true" panellocation="1" type="0" isshow="true">
+      <Content>VA:=IF(CLOSE&gt;REF(CLOSE,1),VOL,-VOL);
+OBV:SUM(IF(CLOSE=REF(CLOSE,1),0,VA),0);
+MAOBV:MA(OBV,M);</Content>
+      <Param>
+        <Item name="M" resetvalue="30" default="30" min="2" max="100" />
+      </Param>
+    </IndexItem>
+    <IndexItem name="WAD" description="威廉多空力度线" explain="1.股价一顶比一顶高，而WAD一顶比一顶低，暗示头部即将形成；&#xD;&#xA;2.股价一底比一底低，而WAD一底比一底高，暗示底部即将形成；&#xD;&#xA;3.WAD与OBV、ADVOL、ADL同属一组指标群，使用时应综合研判。" readonly="true" panellocation="1" type="0" isshow="true">
+      <Content>MIDA:=CLOSE-MIN(REF(CLOSE,1),LOW);
+MIDB:=IF(CLOSE&lt;REF(CLOSE,1),CLOSE-MAX(REF(CLOSE,1),HIGH),0);
+WAD:SUM(IF(CLOSE&gt;REF(CLOSE,1),MIDA,MIDB),0);
+MAWAD:MA(WAD,M);</Content>
+      <Param>
+        <Item name="M" resetvalue="30" default="30" min="2" max="120" />
+      </Param>
+    </IndexItem>
+    <IndexItem name="PSY" description="心理线" explain="1.PSY&gt;75，形成Ｍ头时，股价容易遭遇压力；&#xD;&#xA;2.PSY&lt;25，形成Ｗ底时，股价容易获得支撑；&#xD;&#xA;3.PSY与VR指标属一组指标群，须互相搭配使用。" readonly="true" panellocation="1" type="0" isshow="true">
+      <Content>CLOSEREF:=CLOSE&gt;REF(CLOSE,1);
+COUNTN:=COUNT(CLOSEREF,N);
+PSY:COUNTN/N*100;
+PSYMA:MA(PSY,M);</Content>
+      <Param>
+        <Item name="N" resetvalue="12" default="12" min="2" max="100" />
+        <Item name="M" resetvalue="6" default="6" min="2" max="100" />
+      </Param>
+    </IndexItem>
+    <IndexItem name="ATR" description="真实波幅" explain="算法：今日振幅、今日最高与昨收差价、今日最低与昨收差价中的最大值，为真实波幅，求真实波幅的N日移动平均&#xD;&#xA;参数：N　天数，一般取14" readonly="true" panellocation="1" type="0" isshow="true">
+      <Content>MTR:MAX(MAX((HIGH-LOW),ABS(REF(CLOSE,1)-HIGH)),ABS(REF(CLOSE,1)-LOW));
+ATR:MA(MTR,N);</Content>
+      <Param>
+        <Item name="N" resetvalue="14" default="14" min="2" max="300" />
+      </Param>
+    </IndexItem>
+    <IndexItem name="PVI" description="正成交量" explain="1.观察PVI时，必须先设定一条平均线才能研判；&#xD;&#xA;2.PVI主要是追踪散户资金流向的指标；&#xD;&#xA;3.PVI向上穿越其平均线时，买进；&#xD;&#xA;4.PVI向下穿越其平均线时，卖出；&#xD;&#xA;5.PVI须配合NVI同时使用。" readonly="true" panellocation="1" type="0" isshow="true">
+      <Content>MULAR0:=MULAR(IF(V&gt;REF(V,1),C/REF(C,1),1),0);
+NVI:100*MULAR0;
+MANVI:MA(NVI,N);</Content>
+      <Param>
+        <Item name="N" resetvalue="72" default="72" min="2" max="250" />
+      </Param>
+    </IndexItem>
+    <IndexItem name="TRIX" description="三重指数平均线" explain="1.TRIX由下往上交叉其平均线时，为长期买进信号；&#xD;&#xA;2.TRIX由上往下交叉其平均线时，为长期卖出信号；&#xD;&#xA;3.DMA、MACD、TRIX三者构成一组指标群，互相验证。" readonly="true" panellocation="1" type="0" isshow="true">
+      <Content>MTR:=EMA(EMA(EMA(CLOSE,N),N),N);
+TRIX:(MTR-REF(MTR,1))/REF(MTR,1)*100;
+TRMA:MA(TRIX,M);</Content>
+      <Param>
+        <Item name="N" resetvalue="12" default="12" min="2" max="100" />
+        <Item name="M" resetvalue="9" default="9" min="2" max="100" />
+      </Param>
+    </IndexItem>
+    <IndexItem name="ARBR" description="情绪指标" explain="1.BR&gt;400，暗示行情过热，应反向卖出；BR&lt;40，行情将起死回生，应买进；&#xD;&#xA;2.AR&gt;180，能量耗尽，应卖出；AR&lt;40，能量已累积爆发力，应买进；&#xD;&#xA;3.BR由300以上的高点下跌至50以下的水平,低于AR时,为绝佳买点；&#xD;&#xA;4.BR、AR、CR、VR四者合为一组指标群，须综合搭配使用。" readonly="true" panellocation="1" type="0" isshow="true">
+      <Content>AR:SUM(HIGH-OPEN,N)/SUM(OPEN-LOW,N)*100;
+BR:SUM(MAX(0,HIGH-REF(CLOSE,1)),N)/SUM(MAX(0,REF(CLOSE,1)-LOW),N)*100;</Content>
+      <Param>
+        <Item name="N" resetvalue="26" default="26" min="2" max="120" />
+      </Param>
+    </IndexItem>
+    <IndexItem name="VR" description="成交量变异率" explain="1.VR常态分布介于80％～350％之间，此时股价波动较小。&#xD;&#xA;2.VR低于60％，为严重超跌，有筑底反弹机会，可买进。&#xD;&#xA;3.VR超过350％以上，已进入超买区，可降低或逐步出清持股。&#xD;&#xA;4.若VR上升至550％～700％时，买方的买盘力道进入衰退期，容易处顶而回档。&#xD;&#xA;5.若VR低于30％～40％时，卖方的卖盘利到会进入萎缩期，亦容易探底而反弹。 " readonly="true" panellocation="1" type="0" isshow="true">
+      <Content>TH:=SUM(IF(CLOSE&gt;REF(CLOSE,1),VOL,0),N);
+TL:=SUM(IF(CLOSE&lt;REF(CLOSE,1),VOL,0),N);
+TQ:=SUM(IF(CLOSE=REF(CLOSE,1),VOL,0),N);
+VR:100*(TH*2+TQ)/(TL*2+TQ);</Content>
+      <Param>
+        <Item name="N" resetvalue="26" default="26" min="2" max="100" />
+      </Param>
+    </IndexItem>
+    <IndexItem name="DPO" description="区间震荡线" explain="1.DOP&gt;0，表示目前处于多头市场；DOP&lt;0，表示目前处于空头市场；&#xD;&#xA;2.在0轴上方设定一条超买线，当股价波动至超买线时，会形成短期高点；&#xD;&#xA;3.在0轴下方设定一条超卖线，当股价波动至超卖线时，会形成短期低点；&#xD;&#xA;4.超买超卖的范围随个股不同而不同，使用者应自行调整；&#xD;&#xA;5.本指标可设参考线。" readonly="true" panellocation="1" type="0" isshow="true">
+      <Content>DPO:CLOSE-REF(MA(CLOSE,N),N/2+1);
+MADPO:MA(DPO,M);</Content>
+      <Param>
+        <Item name="N" resetvalue="20" default="20" min="2" max="90" />
+        <Item name="M" resetvalue="6" default="6" min="2" max="60" />
+      </Param>
+    </IndexItem>
+    <IndexItem name="DMA" description="平均差" explain="1.DMA向上交叉其平均线时，买进；&#xD;&#xA;2.DMA向下交叉其平均线时，卖出；&#xD;&#xA;3.DMA的交叉信号比MACD、TRIX略快；&#xD;&#xA;4.DMA与股价产生背离时的交叉信号，可信度较高；&#xD;&#xA;5.DMA、MACD、TRIX三者构成一组指标群，互相验证。" readonly="true" panellocation="1" type="0" isshow="true">
+      <Content>DDD:MA(CLOSE,N1)-MA(CLOSE,N2);
+AMA:MA(DDD,M);</Content>
+      <Param>
+        <Item name="N1" resetvalue="10" default="10" min="2" max="60" />
+        <Item name="N2" resetvalue="50" default="50" min="2" max="250" />
+        <Item name="M" resetvalue="6" default="6" min="2" max="100" />
+      </Param>
+    </IndexItem>
+    <IndexItem name="BBI" description="多空指标" explain="1.股价位于BBI上方，视为多头市场；&#xD;&#xA;2.股价位于BBI下方，视为空头市场。" readonly="true" panellocation="1" type="0" isshow="true">
+      <Content>BBI:(MA(CLOSE,M1)+MA(CLOSE,M2)+MA(CLOSE,M3)+MA(CLOSE,M4))/4;
+A:CLOSE;</Content>
+      <Param>
+        <Item name="M1" resetvalue="3" default="3" min="2" max="100" />
+        <Item name="M2" resetvalue="6" default="6" min="2" max="100" />
+        <Item name="M3" resetvalue="12" default="12" min="2" max="100" />
+        <Item name="M4" resetvalue="24" default="24" min="2" max="100" />
+      </Param>
+    </IndexItem>
+    <IndexItem name="MTM" description="动量线" explain="MTM线:当日收盘价与N日前的收盘价的差；&#xD;&#xA;MTMMA线:对上面的差值求N日移动平均；&#xD;&#xA;参数：N间隔天数，也是求移动平均的天数，一般取6&#xD;&#xA;用法：&#xD;&#xA;1.MTM从下向上突破MTMMA，买入信号；&#xD;&#xA;2.MTM从上向下跌破MTMMA，卖出信号；&#xD;&#xA;3.股价续创新高，而MTM未配合上升，意味上涨动力减弱；&#xD;&#xA;4.股价续创新低，而MTM未配合下降，意味下跌动力减弱；&#xD;&#xA;5.股价与MTM在低位同步上升，将有反弹行情；反之，从高位同步下降，将有回落走势。" readonly="true" panellocation="1" type="0" isshow="true">
+      <Content>MTM:CLOSE-REF(CLOSE,N);
+MAMTM:MA(MTM,M);</Content>
+      <Param>
+        <Item name="N" resetvalue="12" default="12" min="2" max="120" />
+        <Item name="M" resetvalue="6" default="6" min="2" max="60" />
+      </Param>
+    </IndexItem>
+    <IndexItem name="WR" description="威廉指标" explain="威廉指标是一种兼具超买超卖和强弱分界的指标，同KDJ指标有相似之处，分别有一条天线和地线，以及一条以50为分隔的中界线，并且也波动于0-100之间。但是，其与RSI和KDJ有一点重要分别是，其以0为顶部，以100为底。&#xD;&#xA;1.低于20，可能超买见顶，可考虑卖出&#xD;&#xA;2.高于80，可能超卖见底，可考虑买进&#xD;&#xA;3.与RSI、MTM指标配合使用，效果更好&#xD;&#xA;" readonly="true" panellocation="1" type="0" isshow="true">
+      <Content>WR1:100*(HHV(HIGH,N)-CLOSE)/(HHV(HIGH,N)-LLV(LOW,N));
+WR2:100*(HHV(HIGH,N1)-CLOSE)/(HHV(HIGH,N1)-LLV(LOW,N1));</Content>
+      <Param>
+        <Item name="N" resetvalue="10" default="10" min="2" max="100" />
+        <Item name="N1" resetvalue="6" default="6" min="2" max="100" />
+      </Param>
+    </IndexItem>
+	    <IndexItem name="MAVOL" description="MAVOL" explain="MAVOL&#xD;&#xA;" readonly="true" panellocation="1" type="0" isshow="false">
+      <Content>MAVOL5:MA(VOL, M1);
+MAVOL10:MA(VOL, M2);</Content>
+      <Param>
+        <Item name="M1" resetvalue="5" default="5" min="2" max="500" />
+        <Item name="M2" resetvalue="10" default="10" min="2" max="500" />
+      </Param>
+    </IndexItem>
+	    <IndexItem name="MAAMO" description="MAAMO" explain="MAAMO&#xD;&#xA;" readonly="true" panellocation="1" type="0" isshow="false">
+      <Content>MAAMO5:MA(AMOUNT, M1);
+MAAMO10:MA(AMOUNT, M2);</Content>
+      <Param>
+        <Item name="M1" resetvalue="5" default="5" min="2" max="500" />
+        <Item name="M2" resetvalue="10" default="10" min="2" max="500" />
+      </Param>
+    </IndexItem>
+  </Index>
+</root>

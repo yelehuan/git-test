@@ -1,0 +1,2616 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+元素基本属性说明:
+fontheight:字体高度 fontfamily:字库名 fontischinesecharset:是否中文字符集 fontbold:是否粗体 fontitalic:是否斜体 fontunderline:是否下划线  (默认为宋体\高度17\颜色为框架文字色\不是粗体\不是斜体\不是下划线)
+align:元素内文字停靠方式 [alright| alleft | alcenter] & [altop| albootom | alvcenter] ,(默认停靠位置为alright,alvcenter)
+bgcolor:元素背景色                                                  (默认为框架背景色)
+textcolor:字体颜色																									(默认为框架字体色)
+bordercolor : 元素边框颜色                                          (默认为框架边框色)
+bordertype:元素边框类型 none | all | [left & right & top & bottom]  (默认为none)
+height:行默认高度(对table和td无效)																	(默认为20)
+width:单元格默认宽度(对tr无效)																			(默认为20)
+isfix:是否固定(在行对象中表示固定高度,在单元格对象中表示固定宽度)		(默认为false)
+leftpadding:文字距离左边格线的距离																	(默认为4)
+toppadding:文字距离上边格线的距离																		(默认为4)
+rightpadding:文字距离右边格线的距离																	(默认为4)
+bottompadding:文字距离下边格线的距离																(默认为4)
+isconfigcolor : 文字的颜色是否只使用配置的颜色,而不使用格式化的颜色 (默认为false)
+disremain:是否将行或列区间计算时产生的误差分散处理,如果分散处理,可能导致配置的等高的行货等宽的列不在相等,导致字体放大比率不同,使字体不一致.如果不分散处理误差,则会导致该充满的行或列最后没有充满.建议自动缩放字体的单元格不要处理误差,对于单元格或行的颜色和背景不同的,需要处理误差(默认为不分散处理)
+
+table表格:
+key:表格对应样式索引键
+
+td单元格:
+celltype: 单元格类型 ctText文本 | ctGuid变量 | ctBlock色块 | ctVBlock垂直色块 | ctGradient渐变彩条   (默认值为ctText,如果单元格中含有行,则类型自动设置为ctRows)
+值:文本或变量
+
+tr行:
+
+ht提示单元格:和td\的属性设置相同,但类型只有ctText和ctGuid两种,如果信息中含有变量,必须把CellType设为ctGuid,同时建议ht的位置紧跟需要显示提示的元素.
+tf上标单元格:和td\的属性设置相同,但类型只有ctText和ctGuid两种,如果信息中含有变量,必须把CellType设为ctGuid
+bf下标单元格:和td\的属性设置相同,但类型只有ctText和ctGuid两种,如果信息中含有变量,必须把CellType设为ctGuid
+
+配置说明:如果元件为自动缩放字体,为了实现字体的自动缩放,最底层的<tr height=""><td width="">Value</td></tr>中的行高和列宽要赋以实际的宽高.
+-->
+<ContentLayout> 
+  <table key="StockInfo" caption="股票信息" fontbold="true"> 
+    <tr height="40" fontheight="26"> 
+      <td celltype="ctGuid" width="180" align="alleft,alvcenter">{$StockName}</td>  
+      <td celltype="ctGuid" width="120">{$StockCode}</td> 
+    </tr>  
+    <tr height="40"> 
+      <td celltype="ctGuid" width="140" align="alleft,alvcenter" fontheight="34">{$last_px}</td>  
+      <td celltype="ctGuid" width="140" fontheight="20"> 
+        <tr height="20" rightpadding="20"> 
+          <td celltype="ctGuid">{$px_change}</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$px_change_rate}</td> 
+        </tr> 
+      </td> 
+    </tr> 
+  </table>  
+  <table key="StockInfo_Fund" caption="股票信息_基金(三位小数)" fontbold="true"> 
+    <tr height="40" fontheight="26"> 
+      <td celltype="ctGuid" width="140" align="alleft,alvcenter">{$StockName}</td>  
+      <td celltype="ctGuid" width="140">{$StockCode}</td> 
+    </tr>  
+    <tr height="40"> 
+      <td celltype="ctGuid" width="140" align="alleft,alvcenter" fontheight="34">{$last_px}</td>  
+      <td celltype="ctGuid" width="140" fontheight="20"> 
+        <tr height="20" rightpadding="12"> 
+          <td celltype="ctGuid">{$px_change}</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$px_change_rate}</td> 
+        </tr> 
+      </td> 
+    </tr> 
+  </table>  
+  <table key="StockInfo_CFE" caption="期指(一位小数)" fontbold="true"> 
+    <tr height="40" fontheight="26"> 
+      <td celltype="ctGuid" width="140" align="alleft,alvcenter">{$StockName}</td>  
+      <td celltype="ctGuid" width="140">{$StockCode}</td> 
+    </tr>  
+    <tr height="40"> 
+      <td celltype="ctGuid" width="140" align="alleft,alvcenter" fontheight="34">{$last_px}</td>  
+      <td celltype="ctGuid" width="140" fontheight="20"> 
+        <tr height="20" rightpadding="30"> 
+          <td celltype="ctGuid">{$px_change}</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$px_change_rate}</td> 
+        </tr> 
+      </td> 
+    </tr> 
+  </table>  
+  <table key="StockName" caption="股票名称" fontbold="true"> 
+    <tr height="40" fontheight="26"> 
+      <td celltype="ctGuid" width="140" align="alleft,alvcenter">{$StockName}</td>  
+      <td celltype="ctGuid" width="140">{$StockCode}</td> 
+    </tr> 
+  </table>  
+  <table key="AskPrice" caption="委卖指标"> 
+    <tr> 
+      <td caption="文字列" width="60" align="alleft,alvcenter"> 
+        <tr> 
+          <td>卖五</td> 
+        </tr>  
+        <tr> 
+          <td>卖四</td> 
+        </tr>  
+        <tr> 
+          <td>卖三</td> 
+        </tr>  
+        <tr> 
+          <td>卖二</td> 
+        </tr>  
+        <tr> 
+          <td>卖一</td> 
+        </tr> 
+      </td>  
+      <td caption="现价" width="80"> 
+        <tr> 
+          <td celltype="ctGuid">{$SellPrice5}</td> 
+        </tr>  
+        <tr> 
+          <td celltype="ctGuid">{$SellPrice4}</td> 
+        </tr>  
+        <tr> 
+          <td celltype="ctGuid">{$SellPrice3}</td> 
+        </tr>  
+        <tr> 
+          <td celltype="ctGuid">{$SellPrice2}</td> 
+        </tr>  
+        <tr> 
+          <td celltype="ctGuid">{$SellPrice1}</td> 
+        </tr> 
+      </td>  
+      <td caption="成交量" width="80"> 
+        <tr> 
+          <td celltype="ctGuid">{$SellVolume5}</td> 
+        </tr>  
+        <tr> 
+          <td celltype="ctGuid">{$SellVolume4}</td> 
+        </tr>  
+        <tr> 
+          <td celltype="ctGuid">{$SellVolume3}</td> 
+        </tr>  
+        <tr> 
+          <td celltype="ctGuid">{$SellVolume2}</td> 
+        </tr>  
+        <tr> 
+          <td celltype="ctGuid">{$SellVolume1}</td> 
+        </tr> 
+      </td>  
+      <td caption="量差" width="60"> 
+        <tr> 
+          <td celltype="ctGuid">{$SellVolumeDiffLot5}</td> 
+        </tr>  
+        <tr> 
+          <td celltype="ctGuid">{$SellVolumeDiffLot4}</td> 
+        </tr>  
+        <tr> 
+          <td celltype="ctGuid">{$SellVolumeDiffLot3}</td> 
+        </tr>  
+        <tr> 
+          <td celltype="ctGuid">{$SellVolumeDiffLot2}</td> 
+        </tr>  
+        <tr> 
+          <td celltype="ctGuid">{$SellVolumeDiffLot1}</td> 
+        </tr> 
+      </td> 
+    </tr> 
+  </table>  
+  <table key="BidPrice" caption="委买指标"> 
+    <tr> 
+      <td caption="文字列" width="60" align="alleft,alvcenter"> 
+        <tr height="20"> 
+          <td>买一</td> 
+        </tr>  
+        <tr height="20"> 
+          <td>买二</td> 
+        </tr>  
+        <tr height="20"> 
+          <td>买三</td> 
+        </tr>  
+        <tr height="20"> 
+          <td>买四</td> 
+        </tr>  
+        <tr height="20"> 
+          <td>买五</td> 
+        </tr> 
+      </td>  
+      <td caption="现价" width="80"> 
+        <tr height="20"> 
+          <td celltype="ctGuid">{$BuyPrice1}</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$BuyPrice2}</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$BuyPrice3}</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$BuyPrice4}</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$BuyPrice5}</td> 
+        </tr> 
+      </td>  
+      <td caption="成交量" width="80"> 
+        <tr height="20"> 
+          <td celltype="ctGuid">{$BuyVolume1}</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$BuyVolume2}</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$BuyVolume3}</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$BuyVolume4}</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$BuyVolume5}</td> 
+        </tr> 
+      </td>  
+      <td caption="量差" width="60"> 
+        <tr height="20"> 
+          <td celltype="ctGuid">{$BuyVolumeDiffLot1}</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$BuyVolumeDiffLot2}</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$BuyVolumeDiffLot3}</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$BuyVolumeDiffLot4}</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$BuyVolumeDiffLot5}</td> 
+        </tr> 
+      </td> 
+    </tr> 
+  </table>  
+  <table key="NewIndicaAB" caption="AB股盘面指标"> 
+    <tr> 
+      <td width="70" align="alleft,alvcenter"> 
+        <tr height="20"> 
+          <td celltype="ctText">外盘</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">总手</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">现手</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">总额</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">均价</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">最高</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">涨停</td> 
+        </tr> 
+      </td>  
+      <td width="70"> 
+        <tr height="20"> 
+          <td celltype="ctGuid">{$business_amount_out}</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$business_amount}</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$current_amount}</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$business_balance}</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$wavg_px}</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$high_px}</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$up_px}</td> 
+        </tr> 
+      </td>  
+      <td width="70" align="alleft,alvcenter"> 
+        <tr height="20"> 
+          <td celltype="ctText">内盘</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">换手</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">量比</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">振幅</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">开盘</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">最低</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">跌停</td> 
+        </tr> 
+      </td>  
+      <td width="70"> 
+        <tr height="20"> 
+          <td celltype="ctGuid">{$business_amount_in}</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$turnover_ratio}</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$vol_ratio}</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$amplitude}</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$open_px}</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$low_px}</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$down_px}</td> 
+        </tr> 
+      </td> 
+    </tr> 
+  </table>
+  <table key="NewIndicaKCB" caption="科创板股盘面指标"> 
+    <tr> 
+      <td width="70" align="alleft,alvcenter"> 
+        <tr height="20"> 
+          <td celltype="ctText">外盘</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">总手</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">现手</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">总额</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">均价</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">最高</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">涨停</td> 
+        </tr> 
+	<tr height="20"> 
+          <td celltype="ctText">盘后量</td> 
+        </tr> 
+      </td>  
+      <td width="70"> 
+        <tr height="20"> 
+          <td celltype="ctGuid">{$business_amount_out}</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$business_amount}</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$current_amount}</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$business_balance}</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$wavg_px}</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$high_px}</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$up_px}</td> 
+        </tr> 
+	<tr height="20"> 
+          <td celltype="ctGuid">{$business_amount_am}</td> 
+        </tr> 
+      </td>  
+      <td width="70" align="alleft,alvcenter"> 
+        <tr height="20"> 
+          <td celltype="ctText">内盘</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">换手</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">量比</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">振幅</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">开盘</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">最低</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">跌停</td> 
+        </tr> 
+	<tr height="20"> 
+          <td celltype="ctText">盘后额</td> 
+        </tr> 
+      </td>  
+      <td width="70"> 
+        <tr height="20"> 
+          <td celltype="ctGuid">{$business_amount_in}</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$turnover_ratio}</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$vol_ratio}</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$amplitude}</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$open_px}</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$low_px}</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$down_px}</td> 
+        </tr> 
+	<tr height="20"> 
+          <td celltype="ctGuid">{$business_balance_am}</td> 
+        </tr> 
+      </td> 
+    </tr> 
+  </table>
+  <table key="NewIndicaF" caption="基金盘面指标"> 
+    <tr> 
+      <td width="70" align="alleft,alvcenter"> 
+        <tr height="20"> 
+          <td celltype="ctText">外盘</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">总手</td> 
+        </tr>          
+        <tr height="20"> 
+          <td celltype="ctText">总额</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">均价</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">最高</td> 
+        </tr>          
+      </td>  
+      <td width="70"> 
+        <tr height="20"> 
+          <td celltype="ctGuid">{$business_amount_out}</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$business_amount}</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$business_balance}</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$wavg_px}</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$high_px}</td> 
+        </tr>  
+      </td>  
+      <td width="70" align="alleft,alvcenter"> 
+        <tr height="20"> 
+          <td celltype="ctText">内盘</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">量比</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">振幅</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">开盘</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">最低</td> 
+        </tr>  
+      </td>  
+      <td width="70"> 
+        <tr height="20"> 
+          <td celltype="ctGuid">{$business_amount_in}</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$vol_ratio}</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$amplitude}</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$open_px}</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$low_px}</td> 
+        </tr>  
+      </td> 
+    </tr> 
+  </table>  
+  <table key="NewIndicaHK" caption="港股盘面指标"> 
+    <tr> 
+      <td width="70" align="alleft,alvcenter"> 
+        <tr height="20"> 
+          <td celltype="ctText">外盘</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">总量</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">现量</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">总额</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">均价</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">最高</td> 
+        </tr>  
+        <!--
+        <tr height="20">
+          <td celltype="ctText">涨停</td>
+        </tr>--> 
+      </td>  
+      <td width="70"> 
+        <tr height="20"> 
+          <td celltype="ctGuid">{$business_amount_out}</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$business_amount}</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$current_amount}</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$business_balance}</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$wavg_px}</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$high_px}</td> 
+        </tr>  
+        <!--
+        <tr height="20">
+          <td celltype="ctGuid">{$up_px}</td>
+        </tr> --> 
+      </td>  
+      <td width="70" align="alleft,alvcenter"> 
+        <tr height="20"> 
+          <td celltype="ctText">内盘</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">换手</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">量比</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">振幅</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">开盘</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">最低</td> 
+        </tr>  
+        <!--
+        <tr height="20">
+          <td celltype="ctText">跌停</td>
+        </tr>--> 
+      </td>  
+      <td width="70"> 
+        <tr height="20"> 
+          <td celltype="ctGuid">{$business_amount_in}</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$turnover_ratio}</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$vol_ratio}</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$amplitude}</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$open_px}</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$low_px}</td> 
+        </tr>  
+        <!--
+        <tr height="20">
+          <td celltype="ctGuid">{$down_px}</td>
+        </tr> --> 
+      </td> 
+    </tr> 
+  </table>  
+  <table key="NewIndicaFU1" caption="期货盘面指标1"> 
+    <tr> 
+      <td width="70" align="alleft,alvcenter"> 
+        <tr height="20"> 
+          <td celltype="ctText">总手</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">总额</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">开盘</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">最高</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">外盘</td> 
+        </tr> 
+      </td>  
+      <td width="70"> 
+        <tr height="20"> 
+          <td celltype="ctGuid">{$business_amount}</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$business_balance}</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$open_px}</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$high_px}</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$TotalBidVolume}</td> 
+        </tr> 
+      </td>  
+      <td width="70" align="alleft,alvcenter"> 
+        <tr height="20"> 
+          <td celltype="ctText">现手</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">振幅</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">均价</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">最低</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">内盘</td> 
+        </tr> 
+      </td>  
+      <td width="70"> 
+        <tr height="20"> 
+          <td celltype="ctGuid">{$DeltaVolume}</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$Fluctuation}</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$AveragePrice}</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$low_px}</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$TotalAskVolume}</td> 
+        </tr> 
+      </td> 
+    </tr> 
+  </table>  
+  <table key="NewIndicaFU2" caption="期货盘面指标2"> 
+    <tr> 
+      <td width="70" align="alleft,alvcenter"> 
+        <tr height="20"> 
+          <td celltype="ctText">持仓</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">昨结</td> 
+        </tr> 
+      </td>  
+      <td width="70"> 
+        <tr height="20"> 
+          <td celltype="ctGuid">{$Position}</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$PrevSettle}</td> 
+        </tr> 
+      </td>  
+      <td width="70" align="alleft,alvcenter"> 
+        <tr height="20"> 
+          <td celltype="ctText">增仓</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">结算</td> 
+        </tr> 
+      </td>  
+      <td width="70"> 
+        <tr height="20"> 
+          <td celltype="ctGuid">{$DailyPositionChange}</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$Settle}</td> 
+        </tr> 
+      </td> 
+    </tr> 
+  </table>  
+  <table key="DealReportTitle" caption="股指期货逐笔成交标题栏"> 
+    <tr> 
+      <td width="90" celltype="ctText" align="alleft,alvcenter">时间</td>  
+      <td width="80" celltype="ctText">价格</td>  
+      <td width="90" celltype="ctText">现手</td>  
+      <td width="70" celltype="ctText">增仓</td>  
+      <td width="80" celltype="ctText">性质</td> 
+    </tr> 
+  </table>  
+  <table key="BaseIndicaAB" caption="国内市场估值指标"> 
+    <tr> 
+      <td caption="第一列" width="80" align="alleft,alvcenter"> 
+        <tr height="20"> 
+          <ht celltype="ctText">每股收益(Earnings Per Share)的缩写，指普通股每股税后利润</ht>  
+          <td celltype="ctText">
+            <tt>EPS</tt>
+            <tf celltype="ctText">TTM</tf>
+          </td> 
+        </tr>  
+        <tr height="20"> 
+          <ht celltype="ctText">每股净资产(TTM)=股东权益/总股数</ht>  
+          <td celltype="ctText">BPS</td>
+        </tr>  
+        <tr height="20"> 
+          <ht celltype="ctText">市盈率(TTM)=现价/最近四个季度摊薄每股收益之和</ht>  
+          <td celltype="ctText">
+            <tt>市盈率</tt>
+            <tf celltype="ctText">TTM</tf>
+          </td> 
+        </tr>  
+        <tr height="20"> 
+          <ht celltype="ctText">市净率(LF)=现价/每股净资产</ht>  
+          <td celltype="ctText">
+            <tt>市净率</tt>
+            <tf celltype="ctText">LF</tf>
+          </td> 
+        </tr> 
+      </td>  
+      <td caption="第二列" width="60"> 
+        <tr height="20"> 
+          <td celltype="ctGuid">{$eps_ttm}</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$bps}</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$ttm_pe_rate}</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$dyn_pb_rate}</td> 
+        </tr> 
+      </td>  
+      <td caption="第三列" width="70" align="alleft,alvcenter"> 
+        <tr height="20"> 
+          <td celltype="ctText">流通盘</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">总股本</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">流通值</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">总市值</td> 
+        </tr> 
+      </td>  
+      <td caption="第四列" width="70"> 
+        <tr height="20"> 
+          <td celltype="ctGuid">{$circulation_amount}</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$total_shares}</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$circulation_value}</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$market_value}</td> 
+        </tr> 
+      </td> 
+    </tr> 
+  </table>  
+  <table key="BaseIndicaKCB" caption="国内市场估值指标"> 
+    <tr> 
+      <td caption="第一列" width="80" align="alleft,alvcenter"> 
+        <tr height="20"> 
+          <ht celltype="ctText">每股收益(Earnings Per Share)的缩写，指普通股每股税后利润</ht>  
+          <td celltype="ctText">EPS</td>
+        </tr>  
+        <tr height="20"> 
+          <ht celltype="ctText">每股净资产(TTM)=股东权益/总股数</ht>  
+          <td celltype="ctText">BPS</td>
+        </tr>  
+        <tr height="20"> 
+          <ht celltype="ctText">市盈率=现价/最新报告期摊薄每股收益之和</ht>  
+	  <td celltype="ctText">市盈率</td>
+        </tr>  
+        <tr height="20"> 
+          <ht celltype="ctText">市净率(LF)=现价/每股净资产</ht>  
+          <td celltype="ctText">
+            <tt>市净率</tt>
+            <tf celltype="ctText">LF</tf>
+          </td> 
+        </tr> 
+      </td>  
+      <td caption="第二列" width="60"> 
+        <tr height="20"> 
+          <td celltype="ctGuid">{$eps}</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$bps}</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$pe_rate}</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$dyn_pb_rate}</td> 
+        </tr> 
+      </td>  
+      <td caption="第三列" width="70" align="alleft,alvcenter"> 
+        <tr height="20"> 
+          <td celltype="ctText">流通盘</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">总股本</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">流通值</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">总市值</td> 
+        </tr> 
+      </td>  
+      <td caption="第四列" width="70"> 
+        <tr height="20"> 
+          <td celltype="ctGuid">{$circulation_amount}</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$total_shares}</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$circulation_value}</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$market_value}</td> 
+        </tr> 
+      </td> 
+    </tr> 
+  </table>  
+  <table key="NewIndicaBone" caption="债券盘面指标"> 
+    <tr> 
+      <td width="70" align="alleft,alvcenter"> 
+        <tr height="20"> 
+          <td celltype="ctText">委比</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">外盘</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">总手</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">现手</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">最高</td> 
+        </tr>  
+      </td>  
+      <td width="70"> 
+	<tr height="20"> 
+          <td celltype="ctGuid">{$entrust_rate}</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$business_amount_out}</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$business_amount}</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$current_amount}</td> 
+        </tr>          
+        <tr height="20"> 
+          <td celltype="ctGuid">{$high_px}</td> 
+        </tr>        
+      </td>  
+      <td width="70" align="alleft,alvcenter"> 
+        <tr height="20"> 
+          <td celltype="ctText">委差</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">内盘</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">总额</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">振幅</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">最低</td> 
+        </tr>  
+      </td>  
+      <td width="70"> 
+        <tr height="20"> 
+          <td celltype="ctGuid">{$entrust_diff}</td> 
+        </tr>  
+	<tr height="20"> 
+          <td celltype="ctGuid">{$business_amount_in}</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$business_balance}</td> 
+        </tr>        
+        <tr height="20"> 
+          <td celltype="ctGuid">{$amplitude}</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$low_px}</td> 
+        </tr>  
+      </td> 
+    </tr> 
+  </table>
+  <table key="Evalueator_BO" caption="债券（中债估值，中证估值）"> 
+    <tr> 
+      <td caption="第一列" width="80" align="alleft,alvcenter"> 
+        <tr height="20"> 
+          <td celltype="ctText">中债估值</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">中证估值</td> 
+        </tr> 
+      </td>  
+      <td caption="第二列" width="80" align="alleft,alvcenter"> 
+        <!-- 中债估值 -->  
+        <tr height="20"> 
+          <td celltype="ctGuid"/> 
+        </tr>  
+        <!-- 中证估值 -->  
+        <tr height="20"> 
+          <td celltype="ctGuid"/> 
+        </tr> 
+      </td>  
+      <td caption="第三列" width="80" align="alleft,alvcenter"> 
+        <!-- 中债估值 -->  
+        <tr height="20"> 
+          <td celltype="ctGuid"/> 
+        </tr>  
+        <!-- 中证估值 -->  
+        <tr height="20"> 
+          <td celltype="ctGuid"/> 
+        </tr> 
+      </td> 
+    </tr> 
+  </table>  
+  <table key="BaseIndica_BO" caption="上交所，深交所 债券估值指标"> 
+    <tr> 
+      <td caption="第一列" width="80" align="alleft,alvcenter"> 
+        <tr height="20"> 
+          <td celltype="ctText">久性</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">凸性</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">开盘</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">均价</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">期限(年)</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">当期票息</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">债券余额</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">发行人</td> 
+        </tr> 
+      </td>  
+      <td caption="第二列" width="60"> 
+        <!-- 久性 -->  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$Bond_Duration}</td> 
+        </tr>  
+        <!-- 凸性 -->  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$Bond_Convexity}</td> 
+        </tr>  
+        <!-- 开盘 -->  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$open_px}</td> 
+        </tr>  
+        <!-- 均价 -->  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$AveragePrice}</td> 
+        </tr>  
+        <!-- 期限(年) -->  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$Bond_Naturity}</td> 
+        </tr>  
+        <!-- 当期票息 -->  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$Bond_CouponRate}</td> 
+        </tr>  
+        <!-- 债券余额(亿) -->  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$Bond_Balance}</td> 
+        </tr>  
+        <!-- 发行人 此处空值  -->  
+        <tr height="20"> 
+          <td celltype="ctGuid"/> 
+        </tr> 
+      </td>  
+      <td caption="第三列" width="70" align="alleft,alvcenter"> 
+        <tr height="20"> 
+          <td celltype="ctText">成交量</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">成交额</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">最高</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">最低</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">剩余(年/天)</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">利率类型</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">应计利息</td> 
+        </tr>  
+        <!-- 此处空值 -->  
+        <tr height="20"> 
+          <td celltype="ctText"/> 
+        </tr> 
+      </td>  
+      <td caption="第四列" width="70"> 
+        <!-- 成交量 -->  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$business_amount}</td> 
+        </tr>  
+        <!-- 成交额 -->  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$business_balance}</td> 
+        </tr>  
+        <!-- 最高 -->  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$high_px}</td> 
+        </tr>  
+        <!-- 最低 -->  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$low_px}</td> 
+        </tr>  
+        <!-- 剩余(年/天) -->  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$Bond_RemainingDays}</td> 
+        </tr>  
+        <!-- 利率类型 -->  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$Bond_InterestType}</td> 
+        </tr>  
+        <!-- 应计利息 -->  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$Bond_AccuedInterest}</td> 
+        </tr>  
+        <!-- 发行人 -->  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$Bond_Issuer}</td> 
+        </tr> 
+      </td> 
+    </tr> 
+  </table>  
+  <table key="BaseIndica_CB" caption="上交所，深交所 可转债估值指标"> 
+    <tr> 
+      <td caption="第一列" width="80" align="alleft,alvcenter"> 
+        <tr height="20"> 
+          <td celltype="ctText">久性</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">凸性</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">开盘</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">均价</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">债券评级</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">期限(年)</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">当期票息</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">应计利息</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">特殊条款</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">债券余额</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">转股价</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">转股价值</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">转股溢价率</td> 
+        </tr> 
+      </td>  
+      <td caption="第二列" width="60"> 
+        <!-- 久性 -->  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$Bond_Duration}</td> 
+        </tr>  
+        <!-- 凸性 -->  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$Bond_Convexity}</td> 
+        </tr>  
+        <!-- 开盘 -->  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$open_px}</td> 
+        </tr>  
+        <!-- 均价 -->  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$AveragePrice}</td> 
+        </tr>  
+        <!-- 债券评级 -->  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$Bond_Rating}</td> 
+        </tr>  
+        <!-- 期限(年) -->  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$Bond_Naturity}</td> 
+        </tr>  
+        <!-- 当期票息 -->  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$Bond_CouponRate}</td> 
+        </tr>  
+        <!-- 应计利息 -->  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$Bond_AccuedInterest}</td> 
+        </tr>  
+        <!-- 特殊条款 -->  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$Bond_SpecialClauses}</td> 
+        </tr>  
+        <!-- 债券余额(亿) -->  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$Bond_Balance}</td> 
+        </tr>  
+        <!-- 转股价  -->  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$Bond_ConversionPrice}</td> 
+        </tr>  
+        <!-- 转股价值  -->  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$Bond_ConversionValue}</td> 
+        </tr>  
+        <!-- 转股溢价率  -->  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$Bond_OverflowRatio}</td> 
+        </tr> 
+      </td>  
+      <td caption="第三列" width="70" align="alleft,alvcenter"> 
+        <tr height="20"> 
+          <td celltype="ctText">成交量</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">成交额</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">最高</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">最低</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">主体评级</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">剩余(年/天)</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">利率类型</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">是否担保</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">最近行权日</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">转股比例</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">纯债价值</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">纯债溢价率</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">交易市场</td> 
+        </tr> 
+      </td>  
+      <td caption="第四列" width="70"> 
+        <!-- 成交量 -->  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$business_amount}</td> 
+        </tr>  
+        <!-- 成交额 -->  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$business_balance}</td> 
+        </tr>  
+        <!-- 最高 -->  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$high_px}</td> 
+        </tr>  
+        <!-- 最低 -->  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$low_px}</td> 
+        </tr>  
+        <!-- 主体评级 -->  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$Bond_LongTermRating}</td> 
+        </tr>  
+        <!-- 剩余(年/天) -->  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$Bond_RemainingDays}</td> 
+        </tr>  
+        <!-- 利率类型 -->  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$Bond_InterestType}</td> 
+        </tr>  
+        <!-- 是否担保 -->  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$Bond_IsGuarantee}</td> 
+        </tr>  
+        <!-- 最近行权日 -->  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$Bond_LastExerciseDate}</td> 
+        </tr>  
+        <!-- 转股比例 -->  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$Bond_ConversionRatio}</td> 
+        </tr>  
+        <!-- 纯债价值 -->  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$Bond_ConvertibleValue}</td> 
+        </tr>  
+        <!-- 纯债溢价率 -->  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$Bond_PremiumPB}</td> 
+        </tr>  
+        <!-- 交易市场 -->  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$Bond_Market}</td> 
+        </tr> 
+      </td> 
+    </tr> 
+  </table>  
+  <table key="AvgPrice_IR" caption="利率品种指标"> 
+    <tr> 
+      <td caption="第一列" width="80" align="alleft,alvcenter"> 
+        <tr height="20"> 
+          <td celltype="ctText">5日平均</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">10日平均</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">20日平均</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">60日平均</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">120日平均</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">250日平均</td> 
+        </tr> 
+      </td>  
+      <td caption="第二列" width="60"> 
+        <!-- 5日平均 -->  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$Bond_AvgPrice5D}</td> 
+        </tr>  
+        <!-- 10日平均 -->  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$Bond_AvgPrice10D}</td> 
+        </tr>  
+        <!-- 20日平均 -->  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$Bond_AvgPrice20D}</td> 
+        </tr>  
+        <!-- 60日平均 -->  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$Bond_AvgPrice60D}</td> 
+        </tr>  
+        <!-- 120日平均 -->  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$Bond_AvgPrice120D}</td> 
+        </tr>  
+        <!-- 250日平均 -->  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$Bond_AvgPrice250D}</td> 
+        </tr> 
+      </td> 
+    </tr> 
+  </table>  
+  <table key="StockPrice_IR" caption="利率品种价格指标"> 
+    <tr> 
+      <td caption="第一列" width="80" align="alleft,alvcenter"> 
+        <tr height="20"> 
+          <td celltype="ctText">开盘</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">均价</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">前加权</td> 
+        </tr> 
+      </td>  
+      <td caption="第二列" width="60"> 
+        <!-- 开盘 -->  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$open_px}</td> 
+        </tr>  
+        <!-- 均价 -->  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$AveragePrice}</td> 
+        </tr>  
+        <!-- 前加权 -->  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$Bond_PrevWeightAvgPrice}</td> 
+        </tr> 
+      </td>  
+      <td caption="第三列" width="70" align="alleft,alvcenter"> 
+        <tr height="20"> 
+          <td celltype="ctText">成交量</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">最高</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">最低</td> 
+        </tr> 
+      </td>  
+      <td caption="第四列" width="70"> 
+        <!-- 成交量 -->  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$business_amount}</td> 
+        </tr>  
+        <!-- 最高 -->  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$high_px}</td> 
+        </tr>  
+        <!-- 最低 -->  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$low_px}</td> 
+        </tr> 
+      </td> 
+    </tr> 
+  </table>  
+  <table key="Sale_CFE" caption="委卖指标--中金期货"> 
+    <tr> 
+      <td caption="文字列" width="60" align="alleft,alvcenter"> 
+        <tr> 
+          <td>卖一</td> 
+        </tr> 
+      </td>  
+      <td caption="现价" width="80"> 
+        <tr> 
+          <td celltype="ctGuid">{$SellPrice1}</td> 
+        </tr> 
+      </td>  
+      <td caption="成交量" width="80"> 
+        <tr> 
+          <td celltype="ctGuid">{$SellVolume1}</td> 
+        </tr> 
+      </td>  
+      <td caption="量差" width="60"> 
+        <tr> 
+          <td celltype="ctGuid">{$SellVolumeDiff1}</td> 
+        </tr> 
+      </td> 
+    </tr> 
+  </table>  
+  <table key="Buy_CFE" caption="委买指标--中金期货"> 
+    <tr> 
+      <td caption="文字列" width="60" align="alleft,alvcenter"> 
+        <tr height="20"> 
+          <td>买一</td> 
+        </tr> 
+      </td>  
+      <td caption="现价" width="80"> 
+        <tr height="20"> 
+          <td celltype="ctGuid">{$BuyPrice1}</td> 
+        </tr> 
+      </td>  
+      <td caption="成交量" width="80"> 
+        <tr height="20"> 
+          <td celltype="ctGuid">{$BuyVolume1}</td> 
+        </tr> 
+      </td>  
+      <td caption="量差" width="60"> 
+        <tr height="20"> 
+          <td celltype="ctGuid">{$BuyVolumeDiff1}</td> 
+        </tr> 
+      </td> 
+    </tr> 
+  </table>  
+  <table key="StockInfo1_CFE" caption="中金期货股票信息"> 
+    <tr> 
+      <td caption="第一列" width="80" align="alleft,alvcenter"> 
+        <tr height="20"> 
+          <td celltype="ctText">总量</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">最高</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">均价</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">外盘</td> 
+        </tr>  
+	<tr height="20"> 
+          <td celltype="ctText">开盘</td> 
+        </tr> 
+        <tr height="20"> 
+          <td celltype="ctText">涨停</td> 
+        </tr>          
+      </td>  
+      <td caption="第二列" width="60"> 
+        <!-- 总量 -->  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$business_amount}</td> 
+        </tr>  
+        <!-- 最高 -->  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$high_px}</td> 
+        </tr>  
+        <!-- 均价 -->  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$wavg_px}</td> 
+        </tr>  
+        <!-- 外盘 -->  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$business_amount_out}</td> 
+        </tr>  
+	<!-- 开盘 -->  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$open_px}</td> 
+        </tr> 
+        <!-- 涨停 -->  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$up_px}</td> 
+        </tr>          
+      </td>  
+      <td caption="第三列" width="70" align="alleft,alvcenter"> 
+        <tr height="20"> 
+          <td celltype="ctText">现手</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">最低</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">振幅</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">内盘</td> 
+        </tr>  
+	<tr height="20"> 
+          <td celltype="ctText">昨收</td> 
+        </tr> 
+        <tr height="20"> 
+          <td celltype="ctText">跌停</td> 
+        </tr>          
+      </td>  
+      <td caption="第四列" width="70"> 
+        <!-- 现手 -->  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$current_amount}</td> 
+        </tr>  
+        <!-- 最低 -->  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$low_px}</td> 
+        </tr>  
+        <!-- 振幅 -->  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$amplitude}</td> 
+        </tr>  
+        <!-- 内盘 -->  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$business_amount_in}</td> 
+        </tr>  
+	<!-- 昨收 -->  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$preclose_px}</td> 
+        </tr> 
+        <!-- 跌停 -->  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$down_px}</td> 
+        </tr>          
+      </td> 
+    </tr> 
+  </table>  
+  <table key="StockPrice_CFE" caption="中金期货价格"> 
+    <tr> 
+      <td caption="第一列" width="80" align="alleft,alvcenter"> 
+        <tr height="20"> 
+          <td celltype="ctText">持仓</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">结算价</td> 
+        </tr> 
+      </td>  
+      <td caption="第二列" width="60"> 
+        <!-- 持仓 -->  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$amount}</td> 
+        </tr>  
+        <!-- 结算价 -->  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$settlement}</td> 
+        </tr> 
+      </td>  
+      <td caption="第三列" width="70" align="alleft,alvcenter"> 
+        <tr height="20"> 
+          <td celltype="ctText">增仓</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">昨结</td> 
+        </tr> 
+      </td>  
+      <td caption="第四列" width="70"> 
+        <!-- 增仓 -->  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$AmountChange}</td> 
+        </tr>  
+        <!-- 昨结 -->  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$prev_settlement}</td> 
+        </tr> 
+      </td> 
+    </tr> 
+  </table>  
+  <table key="StockPrice_SHF" caption="上海期货价格"> 
+    <tr> 
+      <td caption="第一列" width="80" align="alleft,alvcenter"> 
+        <tr height="20"> 
+          <td celltype="ctText">总量</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">持仓</td> 
+        </tr> 
+      </td>  
+      <td caption="第二列" width="60"> 
+        <!-- 总量 -->  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$business_amount}</td> 
+        </tr>  
+        <!-- 持仓 -->  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$amount}</td> 
+        </tr> 
+      </td>  
+      <td caption="第三列" width="70" align="alleft,alvcenter"> 
+        <tr height="20"> 
+          <td celltype="ctText">现手</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">增仓</td> 
+        </tr> 
+      </td>  
+      <td caption="第四列" width="70"> 
+        <!-- 现手 -->  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$current_amount}</td> 
+        </tr>  
+        <!-- 增仓 -->  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$AmountChange}</td> 
+        </tr> 
+      </td> 
+    </tr> 
+  </table>  
+  <table key="StockInfo_SHF" caption="上海期货股票信息"> 
+    <tr> 
+      <td caption="第一列" width="80" align="alleft,alvcenter"> 
+        <tr height="20"> 
+          <td celltype="ctText">均价</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">最高</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">涨停</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">外盘</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">昨收</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">昨结</td> 
+        </tr> 
+      </td>  
+      <td caption="第二列" width="60"> 
+        <!--均价-->  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$wavg_px}</td> 
+        </tr>  
+        <!-- 最高 -->  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$high_px}</td> 
+        </tr>  
+        <!--涨停-->  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$up_px}</td> 
+        </tr>  
+        <!--外盘-->  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$business_amount_out}</td> 
+        </tr>  
+        <!--昨收-->  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$preclose_px}</td> 
+        </tr>  
+        <!--昨结-->  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$prev_settlement}</td> 
+        </tr> 
+      </td>  
+      <td caption="第三列" width="70" align="alleft,alvcenter"> 
+        <tr height="20"> 
+          <td celltype="ctText">开盘</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">最低</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">跌停</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">内盘</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">振幅</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">结算价</td> 
+        </tr> 
+      </td>  
+      <td caption="第四列" width="70"> 
+        <!--开盘-->  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$open_px}</td> 
+        </tr>  
+        <!-- 最低 -->  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$low_px}</td> 
+        </tr>  
+        <!--跌停-->  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$down_px}</td> 
+        </tr>  
+        <!--内盘-->  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$business_amount_in}</td> 
+        </tr>  
+        <!--振幅-->  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$amplitude}</td> 
+        </tr>  
+        <!--结算价-->  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$settlement}</td> 
+        </tr> 
+      </td> 
+    </tr> 
+  </table>  
+  <!--基金净值-->  
+  <table key="StockInfo_OFT" caption="股票信息" fontbold="true"> 
+    <tr height="40" fontheight="26"> 
+      <td celltype="ctGuid" width="180" align="alleft,alvcenter">{$StockName}</td>  
+      <td celltype="ctGuid" width="120">{$StockCode}</td> 
+    </tr> 
+  </table>  
+  <!--基金净值最新信息-->  
+  <table key="LatestInfo" caption="非货币基金净值估值指标"> 
+    <tr> 
+      <td align="alleft,alvcenter">最新日期</td>  
+      <td celltype="ctGuid">{$Fund_Date}</td> 
+    </tr>  
+    <tr> 
+      <td align="alleft,alvcenter">最新净值</td>  
+      <td celltype="ctGuid">{$Fund_NAV}</td> 
+    </tr>  
+    <tr> 
+      <td align="alleft,alvcenter">最新涨幅</td>  
+      <td celltype="ctGuid">{$latest_change_rate}</td> 
+    </tr>  
+    <tr> 
+      <td align="alleft,alvcenter">累计净值</td>  
+      <td celltype="ctGuid">{$Fund_CumulativeNAV}</td> 
+    </tr> 
+  </table>  
+  <table key="FundIndica_OF" caption="货币基金估值指标"> 
+    <tr height="20"> 
+      <td align="alleft,alvcenter" celltype="ctText" width="80">最新日期</td>  
+      <td align="alright,alvcenter" celltype="ctGuid" width="140">{$Fund_Date}</td> 
+    </tr>  
+    <tr height="20"> 
+      <td align="alleft,alvcenter" celltype="ctText" width="80">七日年化收益率</td>  
+      <td align="alright,alvcenter" celltype="ctGuid" width="140">{$Fund_7DaysYield}</td> 
+    </tr>  
+    <tr height="20"> 
+      <td align="alleft,alvcenter" celltype="ctText" width="80">万份基金收益</td>  
+      <td align="alright,alvcenter" celltype="ctGuid" width="140">{$Fund_Yield}</td> 
+    </tr> 
+  </table>  
+  <table key="AnnualReturn" caption="基金净值近期收益率"> 
+    <tr> 
+      <td align="alleft,alvcenter">近一月</td>  
+      <td celltype="ctGuid">{$Fund_NGRLast1M}</td> 
+    </tr>  
+    <tr> 
+      <td align="alleft,alvcenter">近三月</td>  
+      <td celltype="ctGuid">{$Fund_NGRLast3M}</td> 
+    </tr>  
+    <tr> 
+      <td align="alleft,alvcenter">近六月</td>  
+      <td celltype="ctGuid">{$Fund_NGRLast6M}</td> 
+    </tr>  
+    <tr> 
+      <td align="alleft,alvcenter">近一年</td>  
+      <td celltype="ctGuid">{$Fund_NGRLast1Y}</td> 
+    </tr>  
+    <tr> 
+      <td align="alleft,alvcenter">近三年</td>  
+      <td celltype="ctGuid">{$Fund_NGRLast3Y}</td> 
+    </tr>  
+    <tr> 
+      <td align="alleft,alvcenter">近五年</td>  
+      <td celltype="ctGuid">{$Fund_NGRLast5Y}</td> 
+    </tr>  
+    <tr> 
+      <td align="alleft,alvcenter">成立以来</td>  
+      <td celltype="ctGuid">{$Fund_NGRSinceInception}</td> 
+    </tr>  
+    <tr> 
+      <td align="alleft,alvcenter">年化收益</td>  
+      <td celltype="ctGuid">{$Fund_AnnualizedReturn}</td> 
+    </tr> 
+  </table>  
+  <table key="FundInfo" caption="基金净值基本信息"> 
+    <tr> 
+      <td align="alleft,alvcenter">成立日期</td>  
+      <td celltype="ctGuid">{$Fund_InceptionDate}</td> 
+    </tr>  
+    <tr> 
+      <td align="alleft,alvcenter">到期日期</td>  
+      <td celltype="ctGuid">{$Fund_LiquidationDate}</td> 
+    </tr>  
+    <tr> 
+      <td align="alleft,alvcenter" width="80" isfix="true">投资类型</td>  
+      <td celltype="ctGuid">{$Fund_AssetClass}</td> 
+    </tr>  
+    <tr> 
+      <td align="alleft,alvcenter" width="80" isfix="true">类型说明</td>  
+      <td celltype="ctGuid">{$Fund_TypeDesc}</td> 
+    </tr>  
+    <tr> 
+      <td align="alleft,alvcenter">最新份额</td>  
+      <td celltype="ctGuid">{$Fund_LastSize}</td>  
+      <td align="alright,alvcenter" width="35" isfix="true" textcolor="VolumeValue">万份</td> 
+    </tr>  
+    <tr> 
+      <td align="alleft,alvcenter" width="80" isfix="true">申赎状态</td>  
+      <td celltype="ctGuid">{$Fund_PurchaseState}</td> 
+    </tr>  
+    <tr> 
+      <td align="alleft,alvcenter">基金经理</td>  
+      <td celltype="ctGuid">{$Fund_Manager}</td> 
+    </tr>  
+    <tr> 
+      <td align="alleft,alvcenter" width="80" isfix="true">基金公司</td>  
+      <td celltype="ctGuid">{$Fund_Company}</td> 
+    </tr> 
+  </table>  
+  <table key="BaseIndicaHK" caption="国内市场估值指标"> 
+    <tr> 
+      <td caption="第一列" width="80" align="alleft,alvcenter"> 
+        <tr height="20"> 
+          <ht celltype="ctText">每股收益(Earnings Per Share)的缩写，指普通股每股税后利润</ht>  
+          <td celltype="ctText">
+            <tt>EPS</tt>
+            <tf celltype="ctText">TTM</tf>
+          </td> 
+        </tr>  
+        <tr height="20"> 
+          <ht celltype="ctText">市盈率(TTM)=现价/最近四个季度摊薄每股收益之和</ht>  
+          <td celltype="ctText">
+            <tt>市盈率</tt>
+            <tf celltype="ctText">TTM</tf>
+          </td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">总股本</td> 
+        </tr> 
+      </td>  
+      <td caption="第二列" width="60"> 
+        <tr height="20"> 
+          <td celltype="ctGuid">{$eps_ttm}</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$ttm_pe_rate}</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$total_shares}</td> 
+        </tr> 
+      </td>  
+      <td caption="第三列" width="70" align="alleft,alvcenter"> 
+        <tr height="20"> 
+          <ht celltype="ctText">每股净资产(TTM)=股东权益/总股数</ht>  
+          <td celltype="ctText">BPS</td> 
+        </tr>  
+        <tr height="20"> 
+          <ht celltype="ctText">市净率(LF)=现价/每股净资产</ht>  
+          <td celltype="ctText">
+            <tt>市净率</tt>
+            <tf celltype="ctText">LF</tf>
+          </td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">总市值</td> 
+        </tr> 
+      </td>  
+      <td caption="第四列" width="70"> 
+        <tr height="20"> 
+          <td celltype="ctGuid">{$bps}</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$dyn_pb_rate}</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$market_value}</td> 
+        </tr> 
+      </td> 
+    </tr> 
+  </table>  
+  <table key="StatIndica" caption="指数统计指标"> 
+    <tr height="20"> 
+      <td align="alleft,alvcenter" celltype="ctText" width="30">涨</td>  
+      <td align="alright,alvcenter" celltype="ctGuid" width="60">{$rise_count}家</td>  
+      <td align="alleft,alvcenter" celltype="ctText" width="30">平</td>  
+      <td align="alright,alvcenter" celltype="ctGuid" width="60">{$same_count}家</td>  
+      <td align="alleft,alvcenter" celltype="ctText" width="30">跌</td>  
+      <td align="alright,alvcenter" celltype="ctGuid" width="60">{$fall_count}家</td> 
+    </tr> 
+  </table>  
+  <table key="NewIndicaIndex" caption="指数盘面指标"> 
+    <tr> 
+      <td align="alleft,alvcenter" width="80"> 
+        <tr height="20"> 
+          <td celltype="ctText">金额</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">开盘</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">最高</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">最低</td> 
+        </tr> 
+      </td>  
+      <td align="alright,alvcenter" width="200"> 
+        <tr height="20"> 
+          <td celltype="ctGuid">{$business_balance}</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$open_px}</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$high_px}</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$low_px}</td> 
+        </tr> 
+      </td> 
+    </tr> 
+  </table>  
+  <table key="NewIndicaBond" caption="债券盘面指标"> 
+    <tr> 
+      <td width="70" align="alleft,alvcenter"> 
+        <tr height="20"> 
+          <td celltype="ctText">总手</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">总额</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">均价</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">最高</td> 
+        </tr> 
+      </td>  
+      <td width="70"> 
+        <tr height="20"> 
+          <td celltype="ctGuid">{$business_amount}</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$business_balance}</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$AveragePrice}</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$high_px}</td> 
+        </tr> 
+      </td>  
+      <td width="70" align="alleft,alvcenter"> 
+        <tr height="20"> 
+          <td celltype="ctText">换手</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">振幅</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">开盘</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">最低</td> 
+        </tr> 
+      </td>  
+      <td width="70"> 
+        <tr height="20"> 
+          <td celltype="ctGuid">{$ChangeHandRate}</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$Fluctuation}</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$open_px}</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$low_px}</td> 
+        </tr> 
+      </td> 
+    </tr> 
+  </table>  
+  <table key="stock_zhp" caption="综合屏股票" fontheight="15"> 
+    <tr isfix="true"> 
+      <td height="20" align="alleft,alvcenter" width="80"> 
+        <tr> 
+          <td>卖出</td> 
+        </tr>  
+        <tr> 
+          <td>买入</td> 
+        </tr>  
+        <tr> 
+          <td>现价</td> 
+        </tr>  
+        <tr> 
+          <td>涨幅</td> 
+        </tr>  
+        <tr> 
+          <td>开盘</td> 
+        </tr>  
+        <tr> 
+          <td>最高</td> 
+        </tr>  
+        <tr> 
+          <td>最低</td> 
+        </tr>  
+        <tr> 
+          <td>成交</td> 
+        </tr>  
+        <tr> 
+          <td>金额</td> 
+        </tr>  
+        <tr> 
+          <td>EPS(TTM)</td> 
+        </tr>  
+        <tr> 
+          <td>BPS</td> 
+        </tr>  
+        <tr> 
+          <td>市盈率(TTM)</td> 
+        </tr>  
+        <tr> 
+          <td>市净率(LF)</td> 
+        </tr>  
+        <tr> 
+          <td>总市值</td> 
+        </tr> 
+      </td>  
+      <td height="20" align="alright,alvcenter" width="80" isfix="false"> 
+        <tr isfix="true"> 
+          <td celltype="ctGuid" isfix="false">{$SellPrice1}</td>  
+          <td celltype="ctGuid" isfix="false">{$SellVolume1}</td> 
+        </tr>  
+        <tr isfix="true"> 
+          <td celltype="ctGuid" isfix="false">{$BuyPrice1}</td>  
+          <td celltype="ctGuid" isfix="false">{$BuyVolume1}</td> 
+        </tr>  
+        <tr isfix="true"> 
+          <td celltype="ctGuid" isfix="false">{$last_px}</td> 
+        </tr>  
+        <tr isfix="true"> 
+          <td celltype="ctGuid" isfix="false">{$px_change_rate}({$px_change})</td> 
+        </tr>  
+        <tr isfix="true"> 
+          <td celltype="ctGuid" isfix="false">{$open_px}</td> 
+        </tr>  
+        <tr isfix="true"> 
+          <td celltype="ctGuid" isfix="false">{$high_px}</td> 
+        </tr>  
+        <tr isfix="true"> 
+          <td celltype="ctGuid" isfix="false">{$low_px}</td> 
+        </tr>  
+        <tr isfix="true"> 
+          <td celltype="ctGuid" isfix="false">{$business_amount}</td> 
+        </tr>  
+        <tr isfix="true"> 
+          <td celltype="ctGuid" isfix="false">{$business_balance}</td> 
+        </tr>  
+        <tr isfix="true"> 
+          <td celltype="ctGuid" isfix="false">{$eps_ttm}</td> 
+        </tr>  
+        <tr isfix="true"> 
+          <td celltype="ctGuid" isfix="false">{$bps}</td> 
+        </tr>  
+        <tr isfix="true"> 
+          <td celltype="ctGuid" isfix="false">{$ttm_pe_rate}</td> 
+        </tr>  
+        <tr isfix="true"> 
+          <td celltype="ctGuid" isfix="false">{$dyn_pb_rate}</td> 
+        </tr>  
+        <tr isfix="true"> 
+          <td celltype="ctGuid" isfix="false">{$market_value}</td> 
+        </tr> 
+      </td> 
+    </tr> 
+  </table>  
+  <table key="index_zhp" caption="综合屏指数" fontheight="15"> 
+    <tr isfix="true"> 
+      <td height="20" align="alleft,alvcenter" width="80"> 
+        <tr> 
+          <td>现价</td> 
+        </tr>  
+        <tr> 
+          <td>涨幅</td> 
+        </tr>  
+        <tr> 
+          <td>金额</td> 
+        </tr>  
+        <tr> 
+          <td>成交</td> 
+        </tr>  
+        <tr> 
+          <td>开盘</td> 
+        </tr>  
+        <tr> 
+          <td>最高</td> 
+        </tr>  
+        <tr> 
+          <td>最低</td> 
+        </tr>  
+        <tr> 
+          <td>市盈率</td> 
+        </tr>  
+        <tr> 
+          <td>市净率</td> 
+        </tr> 
+      </td>  
+      <td height="20" align="alright,alvcenter" width="80" isfix="false"> 
+        <tr isfix="true"> 
+          <td celltype="ctGuid" isfix="false">{$last_px}</td> 
+        </tr>  
+        <tr isfix="true"> 
+          <td celltype="ctGuid" isfix="false">{$px_change_rate}({$px_change})</td> 
+        </tr>  
+        <tr isfix="true"> 
+          <td celltype="ctGuid" isfix="false">{$business_balance}</td> 
+        </tr>  
+        <tr isfix="true"> 
+          <td celltype="ctGuid" isfix="false">{$business_amount}</td> 
+        </tr>  
+        <tr isfix="true"> 
+          <td celltype="ctGuid" isfix="false">{$open_px}</td> 
+        </tr>  
+        <tr isfix="true"> 
+          <td celltype="ctGuid" isfix="false">{$high_px}</td> 
+        </tr>  
+        <tr isfix="true"> 
+          <td celltype="ctGuid" isfix="false">{$low_px}</td> 
+        </tr>  
+        <tr isfix="true"> 
+          <td celltype="ctGuid" isfix="false">{$ttm_pe_rate}</td> 
+        </tr>  
+        <tr isfix="true"> 
+          <td celltype="ctGuid" isfix="false">{$dyn_pb_rate}</td> 
+        </tr> 
+      </td> 
+    </tr> 
+  </table>  
+  <table key="FundIndica" caption="非货币基金估值指标"> 
+    <tr> 
+      <td align="alleft,alvcenter">最新日期</td>  
+      <td celltype="ctGuid">{$Fund_LastestDate}</td> 
+    </tr>  
+    <tr> 
+      <td align="alleft,alvcenter">最新净值</td>  
+      <td celltype="ctGuid">{$NetValue}</td> 
+    </tr>  
+    <tr> 
+      <td align="alleft,alvcenter">最新涨幅</td>  
+      <td celltype="ctGuid">{$GrowthRate}</td> 
+    </tr>  
+    <tr> 
+      <td align="alleft,alvcenter">累计净值</td>  
+      <td celltype="ctGuid">{$AccumulatedNetValue}</td> 
+    </tr> 
+  </table>  
+  <table key="FundIndicaMF" caption="货币基金估值指标"> 
+    <tr height="20"> 
+      <td align="alleft,alvcenter" celltype="ctText" width="60">最新日期</td>  
+      <td align="alright,alvcenter" celltype="ctGuid" width="140">{$TradeDate}</td> 
+    </tr>  
+    <tr height="20"> 
+      <td align="alleft,alvcenter" celltype="ctText" width="60">七日年化收益率</td>  
+      <td align="alright,alvcenter" celltype="ctGuid" width="140">0.00%</td> 
+    </tr>  
+    <tr height="20"> 
+      <td align="alleft,alvcenter" celltype="ctText" width="60">万份基金收益</td>  
+      <td align="alright,alvcenter" celltype="ctGuid" width="140">0.0000</td> 
+    </tr> 
+  </table>  
+  <table key="RecentRate" caption="近期收益率"> 
+    <tr> 
+      <td align="alleft,alvcenter">近一月</td>  
+      <td celltype="ctGuid">{$GrowthRateLastMonth}</td> 
+    </tr>  
+    <tr> 
+      <td align="alleft,alvcenter">近三月</td>  
+      <td celltype="ctGuid">{$GrowthRateLastSeason}</td> 
+    </tr>  
+    <tr> 
+      <td align="alleft,alvcenter">近六月</td>  
+      <td celltype="ctGuid">{$GrowthRateLast6Month}</td> 
+    </tr>  
+    <tr> 
+      <td align="alleft,alvcenter">近一年</td>  
+      <td celltype="ctGuid">{$GrowthRateLastYear}</td> 
+    </tr>  
+    <tr> 
+      <td align="alleft,alvcenter">近三年</td>  
+      <td celltype="ctGuid">{$Fund_Change3Year}</td> 
+    </tr>  
+    <tr> 
+      <td align="alleft,alvcenter">近五年</td>  
+      <td celltype="ctGuid">{$Fund_Change5Year}</td> 
+    </tr>  
+    <tr> 
+      <td align="alleft,alvcenter">成立以来</td>  
+      <td celltype="ctGuid">{$GrowthRateFromDay1}</td> 
+    </tr>  
+    <tr> 
+      <td align="alleft,alvcenter">年化收益</td>  
+      <td celltype="ctGuid">{$AverateYearYied}</td> 
+    </tr> 
+  </table>  
+  <table key="FundNIR" caption="基金收益率信息"> 
+    <tr> 
+      <td caption="年份" width="60" align="alleft,alvcenter"> 
+        <tr> 
+          <td celltype="ctGuid">{$Fund_CurYear}</td> 
+        </tr>  
+        <tr> 
+          <td celltype="ctGuid">{$Fund_Pre1Year}</td> 
+        </tr>  
+        <tr> 
+          <td celltype="ctGuid">{$Fund_Pre2Year}</td> 
+        </tr>  
+        <tr> 
+          <td celltype="ctGuid">{$Fund_Pre3Year}</td> 
+        </tr>  
+        <tr> 
+          <td celltype="ctGuid">{$Fund_Pre4Year}</td> 
+        </tr>  
+        <tr> 
+          <td celltype="ctGuid">{$Fund_Pre5Year}</td> 
+        </tr> 
+      </td>  
+      <td caption="收益率" width="100"> 
+        <tr> 
+          <td celltype="ctGuid">{$Fund_NIR}</td> 
+        </tr>  
+        <tr> 
+          <td celltype="ctGuid">{$Fund_NIRPre1}</td> 
+        </tr>  
+        <tr> 
+          <td celltype="ctGuid">{$Fund_NIRPre2}</td> 
+        </tr>  
+        <tr> 
+          <td celltype="ctGuid">{$Fund_NIRPre3}</td> 
+        </tr>  
+        <tr> 
+          <td celltype="ctGuid">{$Fund_NIRPre4}</td> 
+        </tr>  
+        <tr> 
+          <td celltype="ctGuid">{$Fund_NIRPre5}</td> 
+        </tr> 
+      </td>  
+      <td caption="收益率排名" width="120"> 
+        <tr> 
+          <td celltype="ctGuid">({$Fund_IRR}/{$Fund_TRR})</td> 
+        </tr>  
+        <tr> 
+          <td celltype="ctGuid">({$Fund_IRRPre1}/{$Fund_TRRPre1})</td> 
+        </tr>  
+        <tr> 
+          <td celltype="ctGuid">({$Fund_IRRPre2}/{$Fund_TRRPre2})</td> 
+        </tr>  
+        <tr> 
+          <td celltype="ctGuid">({$Fund_IRRPre3}/{$Fund_TRRPre3})</td> 
+        </tr>  
+        <tr> 
+          <td celltype="ctGuid">({$Fund_IRRPre4}/{$Fund_TRRPre4})</td> 
+        </tr>  
+        <tr> 
+          <td celltype="ctGuid">({$Fund_IRRPre5}/{$Fund_TRRPre5})</td> 
+        </tr> 
+      </td> 
+    </tr> 
+  </table>  
+  <table key="Volume" caption="外盘内盘"> 
+    <tr> 
+      <td align="alleft,alvcenter">外盘</td>  
+      <td celltype="ctGuid">{$TotalBidVolume}</td>  
+      <td align="alleft,alvcenter">内盘</td>  
+      <td celltype="ctGuid">{$TotalAskVolume}</td> 
+    </tr> 
+  </table>  
+  <table key="ETFBaseIndica" caption="国内ETF(场内)基金估值指标"> 
+    <tr> 
+      <td align="alleft,alvcenter">
+        <tt>IOPV</tt>
+        <ht>IOPV: 是ＥＴＦ的参考性基金单位净值，由上海证券交易所根据基金管理人每日提供的申购赎回清单，按照清单内一篮子股票的最新成交价格每１５秒计算并公告，作为对ＥＴＦ基金单位净值的估计</ht>
+      </td>  
+      <td celltype="ctGuid">{$IOPV}</td>  
+      <td align="alleft,alvcenter">
+        <tt>溢折率</tt>
+        <ht>溢折率:(现价-IOPV)×100%/IOPV</ht>
+      </td>  
+      <td celltype="ctGuid">{$PremiumDiscountRate}</td> 
+    </tr>  
+    <tr> 
+      <td align="alleft,alvcenter">
+        <tt>净值</tt>
+        <ht>净值</ht>
+      </td>  
+      <td celltype="ctGuid">{$NetValue}</td>  
+      <td align="alleft,alvcenter">
+        <tt>贴水率</tt>
+        <ht>贴水率</ht>
+      </td>  
+      <td celltype="ctGuid">{$ForwardDiscount}</td> 
+    </tr> 
+  </table>  
+  <table key="000001SH" caption="上证综指"> 
+    <tr fontbold="true" align="alvcenter,alleft" height="25"> 
+      <td celltype="ctText" width="60">上证:</td>  
+      <td celltype="ctGuid" width="70">{$last_px}</td>  
+      <td celltype="ctGuid" width="60">{$px_change}</td>  
+      <td celltype="ctGuid" width="60">{$px_change_rate}</td>  
+      <td celltype="ctGuid" width="100">{$business_balance}</td> 
+    </tr> 
+  </table>  
+  <table key="399001SZ" caption="深证成指"> 
+    <tr fontbold="true" align="alvcenter,alleft" height="25"> 
+      <td celltype="ctText" width="60">深证:</td>  
+      <td celltype="ctGuid" width="70">{$last_px}</td>  
+      <td celltype="ctGuid" width="60">{$px_change}</td>  
+      <td celltype="ctGuid" width="60">{$px_change_rate}</td> 
+    </tr> 
+  </table>  
+  <table key="399106SZ" caption="深证综指"> 
+    <tr fontbold="true" align="alvcenter,alleft" height="100"> 
+      <td celltype="ctGuid">{$business_balance}</td> 
+    </tr> 
+  </table>  
+  <table key="000300SH" caption="沪深300"> 
+    <tr fontbold="true" align="alvcenter,alleft" height="25"> 
+      <td celltype="ctText" width="80">沪深300:</td>  
+      <td celltype="ctGuid" width="70">{$last_px}</td>  
+      <td celltype="ctGuid" width="60">{$px_change}</td>  
+      <td celltype="ctGuid" width="60">{$px_change_rate}</td>  
+      <td celltype="ctGuid" width="100">{$business_balance}</td> 
+    </tr> 
+  </table>  
+  <table key="399102SZ" caption="创业板"> 
+    <tr fontbold="true" align="alvcenter,alleft" height="25"> 
+      <td celltype="ctText" width="80">创业板:</td>  
+      <td celltype="ctGuid" width="70">{$last_px}</td>  
+      <td celltype="ctGuid" width="60">{$px_change}</td>  
+      <td celltype="ctGuid" width="60">{$px_change_rate}</td>  
+      <td celltype="ctGuid" width="100">{$business_balance}</td> 
+    </tr> 
+  </table>  
+  <table key="399101SZ" caption="中小板"> 
+    <tr fontbold="true" align="alvcenter,alleft" height="25"> 
+      <td celltype="ctText" width="80">中小板:</td>  
+      <td celltype="ctGuid" width="70">{$last_px}</td>  
+      <td celltype="ctGuid" width="60">{$px_change}</td>  
+      <td celltype="ctGuid" width="60">{$px_change_rate}</td>  
+      <td celltype="ctGuid" width="100">{$business_balance}</td> 
+    </tr> 
+  </table>
+
+<!-- 全部外汇 -->  
+  <table key="FX_Info" caption="全部外汇" fontheight="15"> 
+    <tr> 
+      <td width="70" align="alleft,alvcenter"> 
+        <tr height="20"> 
+          <td celltype="ctText">卖出</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">前收</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">最高</td> 
+        </tr>  
+      </td>  
+      <td width="70"> 
+        <tr height="20"> 
+          <td celltype="ctGuid">{$SellPrice1}</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$preclose_px}</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$high_px}</td> 
+        </tr>  
+      </td>  
+      <td width="70" align="alleft,alvcenter"> 
+        <tr height="20"> 
+          <td celltype="ctText">买入</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">开盘</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">最低</td> 
+        </tr>  
+      </td>  
+      <td width="70"> 
+        <tr height="20"> 
+          <td celltype="ctGuid">{$BuyPrice1}</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$open_px}</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$low_px}</td> 
+        </tr>  
+
+      </td> 
+    </tr> 
+  </table>  
+  
+  <table key="NewIndica_FSR" caption="外汇即期盘面指标"> 
+    <tr> 
+      <td width="70" align="alleft,alvcenter">         
+        <tr height="20"> 
+          <td celltype="ctText">开盘</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">最高</td> 
+        </tr>  
+		<tr height="20"> 
+          <td celltype="ctText">收盘</td>
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">涨跌</td>
+        </tr>
+		<tr height="20"> 
+          <td celltype="ctText">市场日期</td> 
+        </tr>  
+      </td>  
+      <td width="70">         
+		<tr height="20"> 
+          <td celltype="ctGuid">{$open_px}</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$high_px}</td> 
+        </tr>  
+		<tr height="20"> 
+          <td celltype="ctGuid">{$special_close_px}</td> 
+        </tr>
+        <tr height="20"> 
+          <td celltype="ctGuid">{$px_change}</td> 
+        </tr>
+		<tr height="20"> 
+          <td celltype="ctGuid">{$market_date}</td> 
+        </tr>  
+      </td>  
+      <td width="70" align="alleft,alvcenter">         
+        <tr height="20"> 
+          <td celltype="ctText">昨收</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">最低</td> 
+        </tr>
+		<tr height="20"> 
+          <td celltype="ctText">末笔</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">涨跌幅</td> 
+        </tr>		
+		<tr height="20"> 
+          <td celltype="ctText">上收盘日期</td> 
+        </tr>  
+      </td>  
+      <td width="70">           
+        <tr height="20"> 
+          <td celltype="ctGuid">{$preclose_px}</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$low_px}</td> 
+        </tr>
+		<tr height="20"> 
+          <td celltype="ctGuid">{$business_final_px}</td> 
+        </tr>
+        <tr height="20"> 
+          <td celltype="ctGuid">{$px_change_rate}</td> 
+        </tr>
+		<tr height="20"> 
+          <td celltype="ctGuid">{$last_closedate}</td> 
+        </tr>
+      </td> 
+    </tr> 
+  </table>
+
+  <table key="NewIndica_RBD" caption="外汇中间价盘面指标"> 
+    <tr> 
+      <td width="70" align="alleft,alvcenter">         
+        <tr height="20"> 
+          <td celltype="ctText">开盘</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">最高</td> 
+        </tr>
+		<tr height="20"> 
+          <td celltype="ctText">涨跌</td>
+        </tr>
+		<tr height="20"> 
+          <td celltype="ctText">最高限价</td>
+        </tr>  
+      </td>  
+      <td width="70">         
+		<tr height="20"> 
+          <td celltype="ctGuid">{$open_px}</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$high_px}</td> 
+        </tr>  
+		<tr height="20"> 
+          <td celltype="ctGuid">{$px_change}</td> 
+        </tr>
+        <tr height="20"> 
+          <td celltype="ctGuid">{$up_px}</td> 
+        </tr>
+      </td>  
+      <td width="70" align="alleft,alvcenter">         
+        <tr height="20"> 
+          <td celltype="ctText">昨收</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">最低</td> 
+        </tr>
+		<tr height="20"> 
+          <td celltype="ctText">涨跌幅</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">最低限价</td> 
+        </tr>		
+      </td>  
+      <td width="70">           
+        <tr height="20"> 
+          <td celltype="ctGuid">{$preclose_px}</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$low_px}</td> 
+        </tr>
+		<tr height="20"> 
+          <td celltype="ctGuid">{$px_change_rate}</td> 
+        </tr>
+        <tr height="20"> 
+          <td celltype="ctGuid">{$down_px}</td> 
+        </tr>
+      </td> 
+    </tr> 
+  </table>
+  <table key="NewIndica_FWR" caption="外汇掉期盘面指标"> 
+    <tr> 
+      <td width="70" align="alleft,alvcenter">         
+        <tr height="20"> 
+          <td celltype="ctText">开盘</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">最高</td> 
+        </tr>  		
+        <tr height="20"> 
+          <td celltype="ctText">涨跌</td>
+        </tr>
+		<tr height="20"> 
+          <td celltype="ctText">期限</td>
+        </tr>
+		<tr height="20"> 
+          <td celltype="ctText">市场日期</td> 
+        </tr>  
+      </td>  
+      <td width="70">         
+		<tr height="20"> 
+          <td celltype="ctGuid">{$open_px}</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$high_px}</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$px_change}</td> 
+        </tr>
+		<tr height="20"> 
+          <td celltype="ctGuid">{$business_term}</td> 
+        </tr>
+		<tr height="20"> 
+          <td celltype="ctGuid">{$market_date}</td> 
+        </tr>  
+      </td>  
+      <td width="70" align="alleft,alvcenter">         
+        <tr height="20"> 
+          <td celltype="ctText">昨收</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctText">最低</td> 
+        </tr>		
+        <tr height="20"> 
+          <td celltype="ctText">涨跌幅</td> 
+        </tr>
+		<tr height="20"> 
+          <td celltype="ctText">末笔</td> 
+        </tr>  
+		<tr height="20"> 
+          <td celltype="ctText">上收盘日期</td> 
+        </tr>  
+      </td>  
+      <td width="70">           
+        <tr height="20"> 
+          <td celltype="ctGuid">{$preclose_px}</td> 
+        </tr>  
+        <tr height="20"> 
+          <td celltype="ctGuid">{$low_px}</td> 
+        </tr>		
+        <tr height="20"> 
+          <td celltype="ctGuid">{$px_change_rate}</td> 
+        </tr>
+		<tr height="20"> 
+          <td celltype="ctGuid">{$business_final_px}</td> 
+        </tr>
+		<tr height="20"> 
+          <td celltype="ctGuid">{$last_closedate}</td> 
+        </tr>
+      </td> 
+    </tr> 
+  </table>
+</ContentLayout>

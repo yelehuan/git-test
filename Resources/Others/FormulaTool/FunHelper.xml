@@ -1,0 +1,583 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<FunType type="0x00000000" name="所有函数">
+	</FunType>
+	
+	<FunType type="0x00000002" name="行情函数">
+		<Fun name="OPEN">
+			<Item name="OPEN" description="返回该周期开盘价" usage="用法:OPEN" algorithm="" suchas=""/>
+		</Fun>
+		<Fun name="O">
+			<Item name="O" description="返回该周期开盘价" usage="用法:O" algorithm="" suchas=""/>
+		</Fun>
+		<Fun name="HIGH">
+			<Item name="HIGH" description="返回该周期最高价" usage="用法:HIGH" algorithm="" suchas=""/>
+		</Fun>
+		<Fun name="H">
+			<Item name="H" description="返回该周期最高价" usage="用法:H" algorithm="" suchas=""/>
+		</Fun>
+		<Fun name="LOW">
+			<Item name="LOW" description="返回该周期最低价" usage="用法:LOW" algorithm="" suchas=""/>
+		</Fun>
+		<Fun name="L">
+			<Item name="L" description="返回该周期最低价" usage="用法:L" algorithm="" suchas=""/>
+		</Fun>
+		<Fun name="CLOSE">
+			<Item name="CLOSE" description="返回该周期收盘价" usage="用法:CLOSE" algorithm="" suchas=""/>
+		</Fun>
+		<Fun name="C">
+			<Item name="C" description="返回该周期收盘价" usage="用法:C" algorithm="" suchas=""/>
+		</Fun>
+		<Fun name="VOL">
+			<Item name="VOL" description="返回该周期成交量" usage="用法:VOL" algorithm="" suchas=""/>
+		</Fun>
+		<Fun name="V">
+			<Item name="V" description="返回该周期成交量" usage="用法:V" algorithm="" suchas=""/>
+		</Fun>
+		<Fun name="AMOUNT">
+			<Item name="AMOUNT" description="返回该周期成交额" usage="用法:AMOUNT" algorithm="" suchas=""/>
+		</Fun>
+	</FunType>
+	
+	<FunType type="0x00000004" name="时间函数">
+		<Fun name="PERIOD">
+			<Item name="PERIOD" description="周期" usage="用法:结果从1到9,依次分别是1/5/15/30/60分钟,日/周/月,多分钟,年" algorithm="" suchas=""/>
+		</Fun>
+		<Fun name="DATE">
+			<Item name="DATE" description="取得该周期的年月日" usage="用法:DATE,取得该周期的年月日" algorithm="" suchas="例如:函数返回20000101,表示2000年1月1日"/>
+		</Fun>
+		<Fun name="DAY">
+			<Item name="DAY" description="取得该周期的日期" usage="用法:DAY,函数返回有效值范围为(1-31)" algorithm="" suchas=""/>
+		</Fun>
+		<Fun name="HOUR">
+			<Item name="HOUR" description="取得该周期的小时数" usage="用法:HOUR,函数返回有效值范围为(0-23),对于日线及更长的分析周期值为0" algorithm="" suchas=""/>
+		</Fun>
+		<Fun name="MINUTE">
+			<Item name="MINUTE" description="取得该周期的分钟数" usage="用法:MINUTE,函数返回有效值范围为(0-59),对于日线及更长的分析周期值为0" algorithm="" suchas=""/>
+		</Fun>
+		<Fun name="MONTH">
+			<Item name="MONTH" description="取得该周期的月份" usage="用法:MONTH,函数返回有效值范围为(1-12)" algorithm="" suchas=""/>
+		</Fun>
+		<Fun name="TIME">
+			<Item name="TIME" description="取得该周期的时分秒" usage="用法:TIME,函数返回有效值范围为(000000-235959)" algorithm="" suchas=""/>
+		</Fun>
+		<Fun name="YEAR">
+			<Item name="YEAR" description="取得该周期的年份" usage="用法:YEAR" algorithm="" suchas=""/>
+		</Fun>
+		<Fun name="WEEKDAY">
+			<Item name="WEEKDAY" description="取得该周期的星期数" usage="用法:WEEKDAY,函数返回有效值范围为(1-7)" algorithm="" suchas=""/>
+		</Fun>
+	</FunType>
+	
+	<FunType type="0x00000008" name="引用函数">
+		<Fun name="DRAWNULL">
+			<Item name="DRAWNULL" description="返回无效数" usage="用法:DRAWNULL" algorithm="" suchas="例如:IF(CLOSE&lt;REF(CLOSE,1),CLOSE,DRAWNULL),表示下跌时分析图上不画线"/>
+		</Fun>
+		<Fun name="BACKSET">
+			<Item name="BACKSET" description="将当前位置到若干周期前的数据设为1" usage="用法:BACKSET(X,N),若X非0,则将当前位置到N周期前的数值设为1" algorithm="" suchas="例如:BACKSET(CLOSE>OPEN,2)若收阳则将该周期及前一周期数值设为1,否则为0"/>
+		</Fun>
+		<Fun name="BARSCOUNT">
+			<Item name="BARSCOUNT" description="求总的周期数" usage="用法:BARSCOUNT(X)第一个有效数据到当前的天数" algorithm="" suchas="例如:BARSCOUNT(CLOSE)对于日线数据取得上市以来总交易日数"/>
+		</Fun>
+		<Fun name="BARSTATUS">
+			<Item name="BARSTATUS" description="返回数据位置信息" usage="用法:BARSTATUS,返回数据位置信息,1表示第一根K线,2表示最后一个数据,0表示中间位置" algorithm="" suchas="例如:BARSTATUS=2表示当天是该股票数据的最后一个周期"/>
+		</Fun>
+		<Fun name="BARSSINCE">
+			<Item name="BARSSINCE" description="第一个条件成立到当前的周期数" usage="用法:BARSSINCE(X):第一次X不为0到现在的天数" algorithm="" suchas="例如:BARSSINCE(HIGH>10)表示股价超过10元时到当前的周期数"/>
+		</Fun>
+		<Fun name="BARSSINCEN">
+			<Item name="BARSSINCEN" description="N周期内第一个条件成立到当前的周期数" usage="用法:BARSSINCEN(X,N):N周期内第一次X不为0到现在的天数" algorithm="" suchas="例如:BARSSINCEN(HIGH>10,10)表示10个周期内股价超过10元时到当前的周期数"/>
+		</Fun>
+		<Fun name="BARSLAST">
+			<Item name="BARSLAST" description="上一次条件成立到当前的周期数" usage="用法:BARSLAST(X):上一次X不为0到现在的天数" algorithm="" suchas="例如:BARSLAST(CLOSE/REF(CLOSE,1)>=1.1)表示上一个涨停板到当前的周期数"/>
+		</Fun>
+		<Fun name="BARSLASTCOUNT">
+			<Item name="BARSLASTCOUNT" description="统计连续满足条件的周期数" usage="用法:BARSLASTCOUNT(X),统计连续满足条件的周期数 " algorithm="" suchas="例如:BARSLASTCOUNT(C>O),表示统计连续收阳的周期数"/>
+		</Fun>
+		<Fun name="BARSNEXT">
+			<Item name="BARSNEXT" description="下一次条件成立到当前的周期数" usage="用法:BARSNEXT(X):下一次X不为0到现在的天数" algorithm="" suchas="例如:BARSNEXT(CLOSE/REF(CLOSE,1)>=1.1)表示下一个涨停板到当前的周期数"/>
+		</Fun>
+		<Fun name="CURRBARSCOUNT">
+			<Item name="CURRBARSCOUNT" description="求到最后交易日的周期数" usage="用法:CURRBARSCOUNT,求到最后交易日的周期数" algorithm="" suchas="例如:CURRBARSCOUNT,对于日线数据取得距离最新交易日的交易日数"/>
+		</Fun>
+		<Fun name="COUNT">
+			<Item name="COUNT" description="统计满足条件的周期数" usage="用法:COUNT(X,N),统计N周期中满足X条件的周期数,若N&lt;0则从第一个有效值开始" algorithm="" suchas="例如:COUNT(CLOSE>OPEN,20)表示统计20周期内收阳的周期数"/>
+		</Fun>
+		<Fun name="CONST">
+			<Item name="CONST" description="取值设为常数" usage="用法:CONST(A),取A最后的值为常量" algorithm="" suchas="例如:CONST(INDEXC),表示取大盘现价"/>
+		</Fun>
+		<Fun name="DMA">
+			<Item name="DMA" description="求动态移动平均" usage="用法:DMA(X,A),求X的动态移动平均" algorithm="算法:若Y=DMA(X,A)则 Y=A*X+(1-A)*Y',其中Y'表示上一周期Y值,A必须小于1" suchas="例如:DMA(CLOSE,VOL/CAPITAL)表示求以换手率作平滑因子的平均价"/>
+		</Fun>
+		<Fun name="EMA">
+			<Item name="EMA" description="返回指数移动平均" usage="用法:EMA(X,M):X的M日指数移动平均" algorithm="算法:Y=(X*2+Y'*(M-1))/(M+1)" suchas=""/>
+		</Fun>
+		<Fun name="HHV">
+			<Item name="HHV" description="求最高值" usage="用法:HHV(X,N),求N周期内X最高值,N=0则从第一个有效值开始" algorithm="" suchas="例如:HHV(HIGH,30)表示求30日最高价"/>
+		</Fun>
+		<Fun name="HHVBARS">
+			<Item name="HHVBARS" description="求上一高点到当前的周期数" usage="用法:HHVBARS(X,N):求N周期内X最高值到当前周期数,N=0表示从第一个有效值开始统计" algorithm="" suchas="例如:HHVBARS(HIGH,0)求得历史新高到到当前的周期数"/>
+		</Fun>
+		<Fun name="HOD">
+			<Item name="HOD" description="求高值名次" usage="用法:HOD(X,N):求当前X数据是N周期内的第几个高值,N=0则从第一个有效值开始" algorithm="" suchas="例如:HOD(HIGH,20)返回是20日的第几个高价"/>
+		</Fun>
+		<Fun name="ISLASTBAR">
+			<Item name="ISLASTBAR" description="判断是否为最后一个周期" usage="用法:ISLASTBAR,判断是否为最后一个周期" algorithm="" suchas=""/>
+		</Fun>
+		<Fun name="LLV">
+			<Item name="LLV" description="求最低值" usage="用法:LLV(X,N),求N周期内X最低值,N=0则从第一个有效值开始" algorithm="" suchas="例如:LLV(LOW,0)表示求历史最低价"/>
+		</Fun>
+		<Fun name="LLVBARS">
+			<Item name="LLVBARS" description="求上一低点到当前的周期数" usage="用法:LLVBARS(X,N):求N周期内X最低值到当前周期数,N=0表示从第一个有效值开始统计" algorithm="" suchas="例如:LLVBARS(HIGH,20)求得20日最低点到当前的周期数"/>
+		</Fun>
+		<Fun name="LOD">
+			<Item name="LOD" description="求低值名次" usage="用法:LOD(X,N):求当前X数据是N周期内的第几个低值,N=0则从第一个有效值开始" algorithm="" suchas="例如:LOD(LOW,20)返回是20日的第几个低价"/>
+		</Fun>
+		<Fun name="LOWRANGE">
+			<Item name="LOWRANGE" description="当前值是近多少周期内的最小值" usage="用法:LOWRANGE(X):X是近多少周期内X的最小值" algorithm="" suchas="例如:LOWRANGE(LOW)表示当前最低价是近多少周期内最低价的最小值"/>
+		</Fun>
+		<Fun name="MA">
+			<Item name="MA" description="返回简单移动平均" usage="用法:MA(X,M):X的M日简单移动平均" algorithm="" suchas=""/>
+		</Fun>
+		<Fun name="MEMA">
+			<Item name="MEMA" description="返回平滑移动平均" usage="用法:MEMA(X,M):X的M日平滑移动平均" algorithm="" suchas=""/>
+		</Fun>
+		<Fun name="EXPMEMA">
+			<Item name="EXPMEMA" description="返回指数平滑移动平均" usage="用法:EXPMEMA(X,M):X的M日指数平滑移动平均" algorithm="" suchas=""/>
+		</Fun>
+		<Fun name="MULAR">
+			<Item name="MULAR" description="求累乘" usage="用法:MULAR(X,N),统计N周期中X的乘积,N=0则从第一个有效值开始" algorithm="" suchas="例如:MULAR(C/REF(C,1),0)表示统计从上市第一天以来的复利"/>
+		</Fun>
+		<Fun name="RANGE">
+			<Item name="RANGE" description="介于某个范围之间" usage="用法:RANGE(A,B,C):A在B和C范围之间" algorithm="" suchas="RANGE(A,B,C)表示A大于B同时小于C时返回1，否则返回0"/>
+		</Fun>
+    <!--Fun name="REFDATE">
+			<Item name="REFDATE" description="引用自1900年以来指定日期的数据" usage="用法:REFDATE(X,A),引用A日期的X值" algorithm="" suchas="例如:REFDATE(CLOSE,1011208)表示2001年12月08日的收盘价"/>
+		</Fun-->
+		<Fun name="REFV">
+			<Item name="REFV" description="日前的(未做平滑处理)" usage="用法:引用若干周期前的数据(未做平滑处理),REFV(X,A),引用A周期前的X值.A可以是变量。平滑处理：当引用不到数据时进行的操作" algorithm="" suchas="例如:REFV(CLOSE,BARSCOUNT(C)-1)表示第二根K线的收盘价"/>
+		</Fun>
+		<Fun name="REFXV">
+			<Item name="REFXV" description="日后的(未做平滑处理)" usage="用法:引用若干周期后的数据(未做平滑处理),REFXV(X,A),引用A周期后的X值.A可以是变量。平滑处理：当引用不到数据时进行的操作" algorithm="" suchas="例如:TT:=IF(C>O,1,2);REFXV(CLOSE,TT);表示阳线引用下一周期的收盘价,阴线引用日后第二周期的收盘价"/>
+		</Fun>
+		<Fun name="REFX">
+			<Item name="REFX" description="日后的" usage="用法:引用若干周期后的数据(平滑处理),REFX(X,A),引用A周期后的X值.A可以是变量。平滑处理:当引用不到数据时进行的操作。此函数中，平滑时使用上一个周期的引用值" algorithm="" suchas="例如:REFX(CLOSE,1)表示下一周期的收盘价,在日线上就是明天收盘价"/>
+		</Fun>
+		<Fun name="REF">
+			<Item name="REF" description="引用若干周期前的数据" usage="用法: REF(X,A),引用A周期前的X值.A可以是变量.平滑处理：当引用不到数据时进行的操作。此函数中，平滑时使用上一个周期的引用值" algorithm="" suchas="例如:REF(CLOSE,BARSCOUNT(C)-1)表示第二根K线的收盘价"/>
+		</Fun>
+		<Fun name="REVERSE">
+			<Item name="REVERSE" description="求相反数" usage="用法:REVERSE(X)返回-X" algorithm="" suchas="例如:REVERSE(CLOSE)返回-CLOSE"/>
+		</Fun>
+		<Fun name="SMA">
+			<Item name="SMA" description="返回移动平均" usage="用法:SMA(X,N,M),X的N日移动平均,M为权重" algorithm="算法:若Y=SMA(X,N,M)则 Y=[M*X+(N-M)*Y')/N,其中Y'表示上一周期Y值,N必须大于M" suchas="例如:SMA(CLOSE,30,1)表示求30日移动平均价"/>
+		</Fun>
+		<Fun name="SUMBARS">
+			<Item name="SUMBARS" description="向前累加到指定值到现在的周期数" usage="用法:SUMBARS(X,A):将X向前累加直到大于等于A,返回这个区间的周期数" algorithm="" suchas="例如:SUMBARS(VOL,CAPITAL)求完全换手到现在的周期数"/>
+		</Fun>
+		<Fun name="SUM">
+			<Item name="SUM" description="求总和" usage="用法:SUM(X,N),统计N周期中X的总和,N=0则从第一个有效值开始" algorithm="" suchas="例如:SUM(VOL,0)表示统计从上市第一天以来的成交量总和"/>
+		</Fun>
+    <!--Fun name="FILTERX">
+			<Item name="FILTERX" description="反向过滤连续出现的信号" usage="用法:FILTERX(X,N):X满足条件后，将其前N周期内的数据置为0" algorithm="" suchas="例如:FILTERX(CLOSE>OPEN,5)查找阳线,前5天内出现过的阳线不被记录在内"/>
+		</Fun>
+		<Fun name="FILTER">
+			<Item name="FILTER" description="过滤连续出现的信号" usage="用法:FILTER(X,N):X满足条件后，删除其后N周期内的数据置为0" algorithm="" suchas="例如:FILTER(CLOSE>OPEN,5)查找阳线,5天内再次出现的阳线不被记录在内"/>
+		</Fun>
+		<Fun name="FINDHIGHBARS">
+			<Item name="FINDHIGHBARS" description="N周期前的M周期内的第T个最大值到当前周期的周期数" usage="用法:FINDHIGHBARS(VAR,N,M,T):VAR在N日前的M天内第T个最高价到当前周期的周期数" algorithm="" suchas=""/>
+		</Fun>
+		<Fun name="FINDHIGH">
+			<Item name="FINDHIGH" description="N周期前的M周期内的第T个最大值" usage="用法:FINDHIGH(VAR,N,M,T):VAR在N日前的M天内第T个最高价" algorithm="" suchas=""/>
+		</Fun>
+		<Fun name="FINDLOWBARS">
+			<Item name="FINDLOWBARS" description="N周期前的M周期内的第T个最小值到当前周期的周期数" usage="用法:FINDLOWBARS(VAR,N,M,T):VAR在N日前的M天内第T个最低价到当前周期的周期数" algorithm="" suchas=""/>
+		</Fun>
+		<Fun name="FINDLOW">
+			<Item name="FINDLOW" description="N周期前的M周期内的第T个最小值" usage="用法:FINDLOW(VAR,N,M,T):VAR在N日前的M天内第T个最低价" algorithm="" suchas=""/>
+		</Fun>
+		<Fun name="TFILT">
+			<Item name="TFILT" description="对指定时间段的数据进行过滤,该时间段以外的数据无效" usage="用法:TFILT(X,D1,M1,D2,M2)" algorithm="" suchas="例如TFILT(CLOSE,1040101,1025,1040101,1345)表示在2004年1月1日的10:25到2004年1月1日的13:45的收盘价是有效的,周期以日为基本单位的,分时为0有效"/>
+		</Fun-->
+		<Fun name="TMA">
+			<Item name="TMA" description="返回移动平均" usage="用法:TMA(X,N,M),如若Y=TMA(X,N,M) 则 Y=(N*Y'+M*X), 其中Y'表示上一周期Y值。初值为X" algorithm="" suchas=""/>
+		</Fun>
+    <!--Fun name="TOPRANGE">
+			<Item name="TOPRANGE" description="当前值是近多少周期内的最大值" usage="用法:TOPRANGE(X):X是近多少周期内X的最大值" algorithm="" suchas="例如:TOPRANGE(HIGH)表示当前最高价是近多少周期内最高价的最大值"/>
+		</Fun>
+		<Fun name="TOTALBARSCOUNT">
+			<Item name="TOTALBARSCOUNT" description="求总的周期数" usage="用法:TOTALBARSCOUNT,求总的周期数" algorithm="" suchas=""/>
+		</Fun-->
+		<Fun name="WMA">
+			<Item name="WMA" description="加权移动平均" usage="用法:WMA(X,N),统计N周期的数组X,若Y=WMA(X,N),则 Y=(N*X0+(N-1)*X1+(N-2)*X2)+...+1*XN)/(N+(N-1)+(N-2)+...+1),X0表示本周期值,X1表示上一周期值" algorithm="" suchas="例如:WMA(CLOSE,30),表示求30日加权均价"/>
+		</Fun>
+    <!--Fun name="XMA">
+			<Item name="XMA" description="返回偏移移动平均" usage="用法:XMA(X,M):X的M日偏移移动平均" algorithm="" suchas=""/>
+		</Fun-->
+	</FunType>
+	
+	<FunType type="0x00000010" name="逻辑函数">
+		<Fun name="CROSS">
+			<Item name="CROSS" description="两条线交叉" usage="用法:CROSS(A,B)表示当A从下方向上穿过B时返回1,否则返回0" algorithm="" suchas="例如:CROSS(MA(CLOSE,5),MA(CLOSE,10))表示5日均线与10日均线交金叉"/>
+		</Fun>
+		<Fun name="LONGCROSS">
+			<Item name="LONGCROSS" description="两条线维持一定周期后交叉" usage="用法:LONGCROSS(A,B,N)表示A在N周期内都小于B，本周期从下方向上穿过B时返回1，否则返回0" algorithm="" suchas="例如:LONGCROSS(MA(5),MA(10),3), 表示5日均线在3周期后上穿10日均线"/>
+		</Fun>
+		<Fun name="UPNDAY">
+			<Item name="UPNDAY" description="返回是否连涨周期数" usage="用法:UPNDAY(CLOSE,M),表示连涨M个周期" algorithm="" suchas=""/>
+		</Fun>
+		<Fun name="DOWNNDAY">
+			<Item name="DOWNNDAY" description="返回是否连跌周期" usage="用法:DOWNNDAY(CLOSE,M),表示连跌M个周期" algorithm="" suchas=""/>
+		</Fun>
+		<Fun name="NDAY">
+			<Item name="NDAY" description="返回是否持续存在X>Y" usage="用法:NDAY(CLOSE,OPEN,3),表示连续3日收阳线" algorithm="" suchas=""/>
+		</Fun>
+		<Fun name="EXIST">
+			<Item name="EXIST" description="是否存在" usage="用法:EXIST(CLOSE>OPEN,10),表示前10日内存在着阳线" algorithm="" suchas=""/>
+		</Fun>
+		<Fun name="EVERY">
+			<Item name="EVERY" description="一直存在" usage="用法:EVERY(CLOSE>OPEN,10),表示前10日内一直阳线" algorithm="" suchas=""/>
+		</Fun>
+    <!--Fun name="LAST">
+			<Item name="LAST" description="持续存在" usage="用法:LAST(X,A,B),表示从前A日到前B日一直满足X条件。若A为0,表示从第一天开始,B为0,表示到最后日止" algorithm="" suchas="例如:LAST(CLOSE>OPEN,10,5),表示从前10日到前5日内一直阳线"/>
+		</Fun>
+		<Fun name="TESTSKIP">
+			<Item name="TESTSKIP" description="不满足A则直接返回" usage="用法:TESTSKIP(A)不满足A则直接返回,不计算接下来的表达式" algorithm="" suchas=""/>
+		</Fun-->
+		<Fun name="NOT">
+			<Item name="NOT" description="求逻辑非" usage="用法:NOT(X)返回非X,即当X=0时返回1,否则返回0" algorithm="" suchas="例如:NOT(ISUP)表示平盘或收阴"/>
+		</Fun>
+		<Fun name="IFC">
+			<Item name="IFC" description="根据条件求不同的值" usage="" algorithm="用法:IFC(X,A,B)若X不为0则返回A,否则返回B.IFC与IF函数的区别:根据X的值来选择性执行A、B表达式" suchas="例如:IFC(CLOSE>OPEN,HIGH,TESTSKIP(1));L;表示当日收阳则返回最高值,并执行下一句L;,否则退出公式计算"/>
+		</Fun>
+		<Fun name="IF">
+			<Item name="IF" description="根据条件求不同的值" usage="用法:IF(X,A,B)若X不为0则返回A,否则返回B" algorithm="" suchas="例如:IF(CLOSE>OPEN,HIGH,LOW)表示该周期收阳则返回最高值,否则返回最低值"/>
+		</Fun>
+		<Fun name="IFF">
+			<Item name="IFF" description="根据条件求不同的值" usage="用法:IFF(X,A,B)若X不为0则返回A,否则返回B" algorithm="" suchas="例如:IFF(CLOSE>OPEN,HIGH,LOW)表示该周期收阳则返回最高值,否则返回最低值"/>
+		</Fun>
+		<Fun name="IFN">
+			<Item name="IFN" description="根据条件求不同的值" usage="用法:IFN(X,A,B)若X不为0则返回B,否则返回A" algorithm="" suchas="例如:IFN(CLOSE>OPEN,HIGH,LOW)表示该周期收阴则返回最高值,否则返回最低值"/>
+		</Fun>
+	</FunType>
+	
+	<FunType type="0x00000020" name="数学函数">
+		<Fun name="ABS">
+			<Item name="ABS" description="求绝对值" usage="用法:ABS(X)返回X的绝对值" algorithm="" suchas="例如:ABS(-34)返回34"/>
+		</Fun>
+		<Fun name="ACOS">
+			<Item name="ACOS" description="反余弦值" usage="用法:ACOS(X)返回X的反余弦值" algorithm="" suchas=""/>
+		</Fun>
+		<Fun name="ASIN">
+			<Item name="ASIN" description="反正弦值" usage="用法:ASIN(X)返回X的反正弦值" algorithm="" suchas=""/>
+		</Fun>
+		<Fun name="ATAN">
+			<Item name="ATAN" description="反正切值" usage="用法:ATAN(X)返回X的反正切值" algorithm="" suchas=""/>
+		</Fun>
+		<Fun name="BETWEEN">
+			<Item name="BETWEEN" description="介于" usage="用法:BETWEEN(A,B,C)表示A处于B和C之间时返回1，否则返回0" algorithm="" suchas="例如:BETWEEN(CLOSE,MA(CLOSE,10),MA(CLOSE,5))表示收盘价介于5日均线和10日均线之间"/>
+		</Fun>
+		<Fun name="CEILING">
+			<Item name="CEILING" description="向上舍入" usage="用法:CEILING(A)返回沿A数值增大方向最接近的整数" algorithm="" suchas="例如:CEILING(12.3)求得13,CEILING(-3.5)求得-3"/>
+		</Fun>
+		<Fun name="COS">
+			<Item name="COS" description="余弦值" usage="用法:COS(X)返回X的余弦值" algorithm="" suchas=""/>
+		</Fun>
+		<Fun name="EXP">
+			<Item name="EXP" description="指数" usage="用法:EXP(X)为e的X次幂" algorithm="" suchas="例如:EXP(CLOSE)返回e的CLOSE次幂"/>
+		</Fun>
+		<Fun name="FLOOR">
+			<Item name="FLOOR" description="向下舍入" usage="用法:FLOOR(A)返回沿A数值减小方向最接近的整数" algorithm="" suchas="例如:FLOOR(12.3)求得12,FLOOR(-3.5)求得-4"/>
+		</Fun>
+		<Fun name="FRACPART">
+			<Item name="FRACPART" description="小数部分" usage="用法:FRACPART(X),返回X的小数部分" algorithm="" suchas=""/>
+		</Fun>
+		<Fun name="INTPART">
+			<Item name="INTPART" description="取整" usage="用法:INTPART(A)返回沿A绝对值减小方向最接近的整数" algorithm="" suchas="例如:INTPART(12.3)求得12,INTPART(-3.5)求得-3"/>
+		</Fun>
+		<Fun name="LN">
+			<Item name="LN" description="求自然对数" usage="用法:LN(X)以e为底的对数" algorithm="" suchas="例如:LN(CLOSE)求收盘价的对数"/>
+		</Fun>
+		<Fun name="LOG">
+			<Item name="LOG" description="求10为底的对数" usage="用法:LOG(X)取得X的对数" algorithm="" suchas="例如:LOG(100)等于2"/>
+		</Fun>
+		<Fun name="MAX">
+			<Item name="MAX" description="求最大值" usage="用法:MAX(A,B)返回A和B中的较大值" algorithm="" suchas="例如:MAX(CLOSE-OPEN,0)表示若收盘价大于开盘价返回它们的差值,否则返回0"/>
+		</Fun>
+		<Fun name="MIN">
+			<Item name="MIN" description="求最小值" usage="用法:MIN(A,B)返回A和B中的较小值" algorithm="" suchas="例如:MIN(CLOSE,OPEN)返回开盘价和收盘价中的较小值"/>
+		</Fun>
+		<Fun name="MOD">
+			<Item name="MOD" description="取模" usage="用法:MOD(M,N),返回M关于N的模(M除以N的余数)" algorithm="" suchas="例如:MOD(5,3)返回2"/>
+		</Fun>
+		<Fun name="POW">
+			<Item name="POW" description="乘幂" usage="用法:POW(A,B)返回A的B次幂" algorithm="" suchas="例如:POW(CLOSE,3)求得收盘价的3次方"/>
+		</Fun>
+		<Fun name="RAND">
+			<Item name="RAND" description="取随机数" usage="用法:RAND(N),返回一个范围在1-N的随机数" algorithm="" suchas=""/>
+		</Fun>
+		<Fun name="ROUND">
+			<Item name="ROUND" description="四舍五入" usage="用法:ROUND(X),返回X四舍五入到个位的数值" algorithm="" suchas=""/>
+		</Fun>
+		<Fun name="SIGN">
+			<Item name="SIGN" description="取符号" usage="用法:SIGN(X),返回X的符号.当X>0,X=0,X&lt;0分别返回1,0,-1" algorithm="" suchas=""/>
+		</Fun>
+		<Fun name="SIN">
+			<Item name="SIN" description="正弦值" usage="用法:SIN(X)返回X的正弦值" algorithm="" suchas=""/>
+		</Fun>
+		<Fun name="SQRT">
+			<Item name="SQRT" description="开平方" usage="用法:SQRT(X)为X的平方根" algorithm="" suchas="例如:SQRT(CLOSE)收盘价的平方根"/>
+		</Fun>
+		<Fun name="TAN">
+			<Item name="TAN" description="正切值" usage="用法:TAN(X)返回X的正切值" algorithm="" suchas=""/>
+		</Fun>
+	</FunType>
+	
+	<FunType type="0x00000040" name="统计函数">
+    <Fun name="AVEDEV">
+			<Item name="AVEDEV" description="平均绝对偏差" usage="用法:AVEDEV(X,N),返回平均绝对偏差" algorithm="" suchas=""/>
+		</Fun>
+		<Fun name="DEVSQ">
+			<Item name="DEVSQ" description="数据偏差平方和" usage="用法:DEVSQ(X,N) 返回数据偏差平方和" algorithm="" suchas=""/>
+		</Fun>
+		<Fun name="FORCAST">
+			<Item name="FORCAST" description="线性回归预测值" usage="用法:FORCAST(X,N)为X的N周期线性回归预测值" algorithm="" suchas="例如:FORCAST(CLOSE,20),表示求20周期线性回归预测本周期收盘价"/>
+		</Fun>
+		<Fun name="SLOPE">
+			<Item name="SLOPE" description="线性回归斜率" usage="用法:SLOPE(X,N)为X的N周期线性回归线的斜率" algorithm="" suchas="例如:SLOPE(CLOSE,20)表示求20周期线性回归线的斜率"/>
+		</Fun>
+		<Fun name="STD">
+			<Item name="STD" description="估算标准差" usage="用法:STD(X,N)为X的N日估算标准差" algorithm="" suchas=""/>
+		</Fun>
+    <Fun name="STDP">
+			<Item name="STDP" description="总体标准差" usage="用法:STDP(X,N)为X的N日总体标准差" algorithm="" suchas=""/>
+		</Fun>
+		<Fun name="VAR">
+			<Item name="VAR" description="估算样本方差" usage="用法:VAR(X,N)为X的N日估算样本方差" algorithm="" suchas=""/>
+		</Fun>
+		<Fun name="VARP">
+			<Item name="VARP" description="总体样本方差" usage="用法:VARP(X,N)为X的N日总体样本方差" algorithm="" suchas=""/>
+		</Fun>
+		<Fun name="COVAR">
+			<Item name="COVAR" description="协方差" usage="用法:COVAR(X,Y,N)为X与Y的N周期协方差" algorithm="" suchas="例如:COVAR(CLOSE,INDEXC,10)表示收盘价与大盘指数之间的10周期协方差"/>
+		</Fun>
+	</FunType>
+	
+	<FunType type="0x00000100" name="指标函数">
+    <!--Fun name="COST">
+			<Item name="COST" description="成本分布情况" usage="用法:COST(10),表示10%获利盘的价格是多少,即有10%的持仓量在该价格以下,其余90%在该价格以上,为套牢盘。该函数仅对日线分析周期有效" algorithm="" suchas=""/>
+		</Fun>
+		<Fun name="PEAK">
+			<Item name="PEAK" description="前M个ZIG转向波峰值" usage="用法:PEAK(K,N,M)表示之字转向ZIG(K,N)的前M个波峰的数值,M必须大于等于1" algorithm="" suchas="例如:PEAK(1,5,1)表示%5最高价ZIG转向的上一个波峰的数值"/>
+		</Fun>
+		<Fun name="PEAKBARS">
+			<Item name="PEAKBARS" description="前M个ZIG转向波峰到当前距离" usage="用法:PEAKBARS(K,N,M)表示之字转向ZIG(K,N)的前M个波峰到当前的周期数,M必须大于等于1" algorithm="" suchas="例如:PEAK(0,5,1)表示%5开盘价ZIG转向的上一个波峰到当前的周期数"/>
+		</Fun-->
+		<Fun name="SAR">
+			<Item name="SAR" description="抛物转向" usage="用法:SAR(N,S,M),N为计算周期,S为步长,M为极值" algorithm="" suchas="例如:SAR(10,2,20)表示计算10日抛物转向,步长为2%,极限值为20%"/>
+		</Fun>
+    <!--Fun name="SARTURN">
+			<Item name="SARTURN" description="抛物转向点" usage="用法:SARTURN(N,S,M),N为计算周期,S为步长,M为极值,若发生向上转向则返回1,若发生向下转向则返回-1,否则为0,其用法与SAR函数相同" algorithm="" suchas=""/>
+		</Fun>
+		<Fun name="TROUGH">
+			<Item name="TROUGH" description="前M个ZIG转向波谷值" usage="用法:TROUGH(K,N,M)表示之字转向ZIG(K,N)的前M个波谷的数值,M必须大于等于1" algorithm="" suchas="例如:TROUGH(2,5,2)表示%5最低价ZIG转向的前2个波谷的数值"/>
+		</Fun>
+		<Fun name="TROUGHBARS">
+			<Item name="TROUGHBARS" description="前M个ZIG转向波谷到当前距离" usage="用法:TROUGHBARS(K,N,M)表示之字转向ZIG(K,N)的前M个波谷到当前的周期数,M必须大于等于1" algorithm="" suchas="例如:TROUGH(2,5,2)表示%5最低价ZIG转向的前2个波谷到当前的周期数"/>
+		</Fun>
+		<Fun name="WINNER">
+			<Item name="WINNER" description="获利盘比例" usage="用法:WINNER(CLOSE),表示以当前收市价卖出的获利盘比例,例如返回0.1表示10%获利盘;WINNER(10.5)表示10.5元价格的获利盘比例,该函数仅对日线分析周期有效" algorithm="" suchas=""/>
+		</Fun>
+		<Fun name="LWINNER">
+			<Item name="LWINNER" description="近期获利盘比例" usage="用法:LWINNER(5,CLOSE),表示最近5天的那部分成本以当前收市价卖出的获利盘比例" algorithm="" suchas="例如:返回0.1表示10%获利盘"/>
+		</Fun>
+		<Fun name="PWINNER">
+			<Item name="PWINNER" description="远期获利盘比例" usage="用法:PWINNER(5,CLOSE),表示5天前的那部分成本以当前收市价卖出的获利盘比例" algorithm="" suchas="例如:返回0.1表示10%获利盘"/>
+		</Fun>
+		<Fun name="ZIG">
+			<Item name="ZIG" description="之字转向" usage="用法:ZIG(K,N),当价格变化量超过N%时转向,K表示0:开盘价,1:最高价,2:最低价,3:收盘价,其余:数组信息" algorithm="" suchas="例如:ZIG(3,5)表示收盘价的5%的ZIG转向"/>
+		</Fun-->
+	</FunType>
+	
+	<!--FunType type="0x00000200" name="财务函数">
+		<Fun name="CAPITAL">
+			<Item name="CAPITAL" description="当前流通股本(手)" usage="用法:CAPITAL,当前流通股本" algorithm="" suchas=""/>
+		</Fun>
+		<Fun name="FINANCE">
+			<Item name="FINANCE" description="获取财务数据" usage="用法:FINANCE(N),返回对应ID的财务数据" algorithm="" suchas=""/>
+			<Item name="FINANCE(1)" description="总股本(股)" usage="用法:FINANCE(1),总股本(股)" algorithm="" suchas=""/>
+			<Item name="FINANCE(2)" description="国家股(股)" usage="用法:FINANCE(2),国家股" algorithm="" suchas=""/>
+			<Item name="FINANCE(3)" description="发起人法人股(股)" usage="用法:FINANCE(3),发起人法人股" algorithm="" suchas=""/>
+			<Item name="FINANCE(4)" description="法人股(股)" usage="用法:FINANCE(4),法人股" algorithm="" suchas=""/>
+			<Item name="FINANCE(5)" description="B股(股)" usage="用法:FINANCE(5),B股" algorithm="" suchas=""/>
+			<Item name="FINANCE(6)" description="H股(股)" usage="用法:FINANCE(6),H股" algorithm="" suchas=""/>
+			<Item name="FINANCE(7)" description="流通A股(股)" usage="用法:FINANCE(7),流通A股" algorithm="" suchas=""/>
+			<Item name="FINANCE(8)" description="职工股(股)" usage="用法:FINANCE(8),职工股" algorithm="" suchas=""/>
+			<Item name="FINANCE(9)" description="A2转配股(股)" usage="用法:FINANCE(9),A2转配股" algorithm="" suchas=""/>
+			<Item name="FINANCE(10)" description="总资产" usage="用法:FINANCE(10),总资产(万元)" algorithm="" suchas=""/>
+			<Item name="FINANCE(11)" description="流动资产" usage="用法:FINANCE(11),流动资产" algorithm="" suchas=""/>
+			<Item name="FINANCE(12)" description="固定资产" usage="用法:FINANCE(12),固定资产" algorithm="" suchas=""/>
+			<Item name="FINANCE(13)" description="无形资产" usage="用法:FINANCE(13),无形资产" algorithm="" suchas=""/>
+			<Item name="FINANCE(14)" description="长期投资" usage="用法:FINANCE(14),长期投资" algorithm="" suchas=""/>
+			<Item name="FINANCE(15)" description="流动负债" usage="用法:FINANCE(15),流动负债" algorithm="" suchas=""/>
+			<Item name="FINANCE(16)" description="长期负债" usage="用法:FINANCE(16),长期负债" algorithm="" suchas=""/>
+			<Item name="FINANCE(17)" description="资本公积金" usage="用法:FINANCE(17),资本公积金" algorithm="" suchas=""/>
+			<Item name="FINANCE(18)" description="每股公积金" usage="用法:FINANCE(18),每股公积金" algorithm="" suchas=""/>
+			<Item name="FINANCE(19)" description="股东权益" usage="用法:FINANCE(19),股东权益" algorithm="" suchas=""/>
+			<Item name="FINANCE(20)" description="主营收入" usage="用法:FINANCE(20),主营收入" algorithm="" suchas=""/>
+			<Item name="FINANCE(21)" description="主营利润" usage="用法:FINANCE(21),主营利润" algorithm="" suchas=""/>
+			<Item name="FINANCE(22)" description="其他利润" usage="用法:FINANCE(22),其他利润" algorithm="" suchas=""/>
+			<Item name="FINANCE(23)" description="营业利润" usage="用法:FINANCE(23),营业利润" algorithm="" suchas=""/>
+			<Item name="FINANCE(24)" description="投资收益" usage="用法:FINANCE(24),投资收益" algorithm="" suchas=""/>
+			<Item name="FINANCE(25)" description="补贴收入" usage="用法:FINANCE(25),补贴收入" algorithm="" suchas=""/>
+			<Item name="FINANCE(26)" description="营业外收支" usage="用法:FINANCE(26),营业外收支" algorithm="" suchas=""/>
+			<Item name="FINANCE(27)" description="上年损益调整" usage="用法:FINANCE(27),上年损益调整" algorithm="" suchas=""/>
+			<Item name="FINANCE(28)" description="利润总额" usage="用法:FINANCE(28),利润总额" algorithm="" suchas=""/>
+			<Item name="FINANCE(29)" description="税后利润" usage="用法:FINANCE(29),税后利润" algorithm="" suchas=""/>
+			<Item name="FINANCE(30)" description="净利润" usage="用法:FINANCE(30),净利润" algorithm="" suchas=""/>
+			<Item name="FINANCE(31)" description="未分配利润" usage="用法:FINANCE(31),未分配利润" algorithm="" suchas=""/>
+			<Item name="FINANCE(32)" description="每股未分配" usage="用法:FINANCE(32),每股未分配" algorithm="" suchas=""/>
+			<Item name="FINANCE(33)" description="每股收益" usage="用法:FINANCE(33),每股收益" algorithm="" suchas=""/>
+			<Item name="FINANCE(34)" description="每股净资产" usage="用法:FINANCE(34),每股净资产" algorithm="" suchas=""/>
+			<Item name="FINANCE(35)" description="调整每股净资" usage="用法:FINANCE(35),调整每股净资" algorithm="" suchas=""/>
+			<Item name="FINANCE(36)" description="股东权益" usage="用法:FINANCE(36),股东权益" algorithm="" suchas=""/>
+		</Fun>
+	</FunType-->
+	
+	<FunType type="0x00000400" name="动态行情函数">
+    <Fun name="DYNAINFO">
+			<Item name="DYNAINFO" description="获取即时行情数据" usage="用法:DYNAINFO(N),返回对应ID的即时行情数据" algorithm="" suchas=""/>
+      <!--Item name="DYNAINFO(1)" description="交易分钟数" usage="用法:DYNAINFO(1),交易分钟数,即时行情数据" algorithm="" suchas=""/-->
+			<Item name="DYNAINFO(2)" description="昨收价" usage="用法:DYNAINFO(2),昨收价,即时行情数据" algorithm="" suchas=""/>
+			<Item name="DYNAINFO(3)" description="开盘价" usage="用法:DYNAINFO(3),开盘价,即时行情数据" algorithm="" suchas=""/>
+			<Item name="DYNAINFO(4)" description="最新价" usage="用法:DYNAINFO(4),最新价,即时行情数据" algorithm="" suchas=""/>
+			<Item name="DYNAINFO(5)" description="最高价" usage="用法:DYNAINFO(5),最高价,即时行情数据" algorithm="" suchas=""/>
+			<Item name="DYNAINFO(6)" description="最低价" usage="用法:DYNAINFO(6),最低价,即时行情数据" algorithm="" suchas=""/>
+			<Item name="DYNAINFO(7)" description="收盘价" usage="用法:DYNAINFO(7),收盘价,即时行情数据" algorithm="" suchas=""/>
+			<Item name="DYNAINFO(8)" description="成交量" usage="用法:DYNAINFO(8),成交量,即时行情数据" algorithm="" suchas=""/>
+			<Item name="DYNAINFO(9)" description="成交额" usage="用法:DYNAINFO(9),成交额,即时行情数据" algorithm="" suchas=""/>
+      <Item name="DYNAINFO(10)" description="涨停价" usage="用法:DYNAINFO(10),涨停价,即时行情数据" algorithm="" suchas=""/>
+      <Item name="DYNAINFO(11)" description="跌停价" usage="用法:DYNAINFO(11),跌停价,即时行情数据" algorithm="" suchas=""/>
+			<Item name="DYNAINFO(12)" description="现手" usage="用法:DYNAINFO(12),现手,即时行情数据" algorithm="" suchas=""/>
+			<Item name="DYNAINFO(13)" description="内盘" usage="用法:DYNAINFO(13),内盘,即时行情数据" algorithm="" suchas=""/>
+			<Item name="DYNAINFO(14)" description="外盘" usage="用法:DYNAINFO(14),外盘,即时行情数据" algorithm="" suchas=""/>
+			<Item name="DYNAINFO(15)" description="委比" usage="用法:DYNAINFO(15),委比,即时行情数据" algorithm="" suchas=""/>
+			<Item name="DYNAINFO(16)" description="委差" usage="用法:DYNAINFO(16),委差,即时行情数据" algorithm="" suchas=""/>
+			<Item name="DYNAINFO(17)" description="涨跌额" usage="用法:DYNAINFO(17),涨跌额,即时行情数据" algorithm="" suchas=""/>
+			<Item name="DYNAINFO(18)" description="涨跌幅" usage="用法:DYNAINFO(18),涨跌幅,即时行情数据" algorithm="" suchas=""/>
+			<Item name="DYNAINFO(19)" description="振幅" usage="用法:DYNAINFO(19),振幅,即时行情数据" algorithm="" suchas=""/>
+			<Item name="DYNAINFO(20)" description="量比" usage="用法:DYNAINFO(20),量比,即时行情数据" algorithm="" suchas=""/>
+			<Item name="DYNAINFO(21)" description="换手率" usage="用法:DYNAINFO(21),换手率,即时行情数据" algorithm="" suchas=""/>
+			<Item name="DYNAINFO(22)" description="五分钟涨速" usage="用法:DYNAINFO(22),五分钟涨速,即时行情数据" algorithm="" suchas=""/>
+			<Item name="DYNAINFO(23)" description="委买价1" usage="用法:DYNAINFO(23),委买价1,即时行情数据" algorithm="" suchas=""/>
+      <Item name="DYNAINFO(24)" description="委买价2" usage="用法:DYNAINFO(24),委买价2,即时行情数据" algorithm="" suchas=""/>
+      <Item name="DYNAINFO(25)" description="委买价3" usage="用法:DYNAINFO(25),委买价3,即时行情数据" algorithm="" suchas=""/>
+      <Item name="DYNAINFO(26)" description="委买价4" usage="用法:DYNAINFO(26),委买价4,即时行情数据" algorithm="" suchas=""/>
+      <Item name="DYNAINFO(27)" description="委买价5" usage="用法:DYNAINFO(27),委买价5,即时行情数据" algorithm="" suchas=""/>
+      <Item name="DYNAINFO(28)" description="委买量1" usage="用法:DYNAINFO(28),委买量1,即时行情数据" algorithm="" suchas=""/>
+      <Item name="DYNAINFO(29)" description="委买量2" usage="用法:DYNAINFO(29),委买量2,即时行情数据" algorithm="" suchas=""/>
+      <Item name="DYNAINFO(30)" description="委买量3" usage="用法:DYNAINFO(30),委买量3,即时行情数据" algorithm="" suchas=""/>
+      <Item name="DYNAINFO(31)" description="委买量4" usage="用法:DYNAINFO(31),委买量4,即时行情数据" algorithm="" suchas=""/>
+      <Item name="DYNAINFO(32)" description="委买量5" usage="用法:DYNAINFO(32),委买量5,即时行情数据" algorithm="" suchas=""/>
+      <Item name="DYNAINFO(33)" description="委卖价1" usage="用法:DYNAINFO(33),委卖价1,即时行情数据" algorithm="" suchas=""/>
+      <Item name="DYNAINFO(34)" description="委卖价2" usage="用法:DYNAINFO(34),委卖价2,即时行情数据" algorithm="" suchas=""/>
+      <Item name="DYNAINFO(35)" description="委卖价3" usage="用法:DYNAINFO(35),委卖价3,即时行情数据" algorithm="" suchas=""/>
+      <Item name="DYNAINFO(36)" description="委卖价4" usage="用法:DYNAINFO(36),委卖价4,即时行情数据" algorithm="" suchas=""/>
+      <Item name="DYNAINFO(37)" description="委卖价5" usage="用法:DYNAINFO(37),委卖价5" algorithm="" suchas="例如:DYNAINFO(37)>0.25表示换手超过25%"/>
+      <Item name="DYNAINFO(38)" description="委卖量1" usage="用法:DYNAINFO(38),委卖量1,即时行情数据" algorithm="" suchas=""/>
+      <Item name="DYNAINFO(39)" description="委卖量2" usage="用法:DYNAINFO(39),委卖量2,即时行情数据" algorithm="" suchas=""/>
+			<Item name="DYNAINFO(40)" description="委卖量3" usage="用法:DYNAINFO(40),委卖量3,即时行情数据" algorithm="" suchas=""/>
+      <Item name="DYNAINFO(41)" description="委卖量4" usage="用法:DYNAINFO(41),委卖量4,即时行情数据" algorithm="" suchas=""/>
+      <Item name="DYNAINFO(42)" description="委卖量5" usage="用法:DYNAINFO(42),委卖量5,即时行情数据" algorithm="" suchas=""/>
+      <Item name="DYNAINFO(43)" description="动态市盈率" usage="用法:DYNAINFO(43),动态市盈率,即时行情数据" algorithm="" suchas=""/>
+      <Item name="DYNAINFO(44)" description="市净率" usage="用法:DYNAINFO(44),市净率,即时行情数据" algorithm="" suchas=""/>
+    </Fun>
+	</FunType>
+
+  <FunType type="0x00000800" name="资讯函数">
+    <Fun name="INFORMATION">
+      <Item name="INFORMATION" description="获取资讯数据" usage="用法:INFORMATION(N),返回对应ID的资讯数据" algorithm="" suchas=""/>
+      <Item name="INFORMATION(1)" description="高管增持数" usage="用法:INFORMATION(1),高管增持数,资讯数据" algorithm="" suchas=""/>
+      <Item name="INFORMATION(2)" description="市现率" usage="用法:INFORMATION(2),市现率,资讯数据" algorithm="" suchas=""/>
+      <Item name="INFORMATION(3)" description="流动率" usage="用法:INFORMATION(3),流动率,资讯数据" algorithm="" suchas=""/>
+      <Item name="INFORMATION(4)" description="长期债务与营运资金比率" usage="用法:INFORMATION(4),长期债务与营运资金比率,资讯数据" algorithm="" suchas=""/>
+      <Item name="INFORMATION(5)" description="净利润增长率" usage="用法:INFORMATION(5),净利润增长率,资讯数据" algorithm="" suchas=""/>
+      <Item name="INFORMATION(6)" description="买方机构调研数" usage="用法:INFORMATION(6),买方机构调研数,资讯数据" algorithm="" suchas=""/>
+    </Fun>
+  </FunType>
+	<FunType type="0x00002000" name="操作符函数">
+		<Fun name="+">
+			<Item name="+" description="加" usage="" algorithm="" suchas="例如:X + Y"/>
+		</Fun>
+		<Fun name="-">
+			<Item name="-" description="减" usage="" algorithm="" suchas="例如:X - Y"/>
+		</Fun>
+		<Fun name="+">
+			<Item name="*" description="乘" usage="" algorithm="" suchas="例如:X * Y"/>
+		</Fun>
+		<Fun name="/">
+			<Item name="/" description="除" usage="" algorithm="" suchas="例如:X / Y"/>
+		</Fun>
+		<Fun name="&lt;">
+			<Item name="&lt;" description="小于" usage="" algorithm="" suchas="例如:X &lt; Y"/>
+		</Fun>
+		<Fun name=">">
+			<Item name=">" description="大于" usage="" algorithm="" suchas="例如:X > Y"/>
+		</Fun>
+		<Fun name="&lt;=">
+			<Item name="&lt;=" description="小于等于" usage="" algorithm="" suchas="例如:X &lt;= Y"/>
+		</Fun>
+		<Fun name=">=">
+			<Item name=">=" description="大于等于" usage="" algorithm="" suchas="例如:X >= Y"/>
+		</Fun>
+		<Fun name="=">
+			<Item name="=" description="等于" usage="" algorithm="" suchas="例如:X = Y"/>
+		</Fun>
+		<Fun name="!=">
+			<Item name="!=" description="不等于" usage="" algorithm="" suchas="例如:X != Y"/>
+		</Fun>
+		<Fun name="| |">
+			<Item name="| |" description="绝对值" usage="" algorithm="" suchas="例如:|-1| = 1"/>
+		</Fun>
+		<Fun name="^">
+			<Item name="^" description="乘幂" usage="A^B返回A的B次幂" algorithm="" suchas="例如:CLOSE^3求得收盘价的3次方"/>
+		</Fun>
+		<Fun name="{}">
+			<Item name="{}" description="注释符号" usage="" algorithm="" suchas="例如:{注释部分}"/>
+		</Fun>
+		<Fun name="AND">
+			<Item name="AND" description="并且" usage="" algorithm="" suchas="例如:X>Y AND Y>Z"/>
+		</Fun>
+		<Fun name="OR">
+			<Item name="OR" description="或者" usage="" algorithm="" suchas="例如:X>Y OR Y>Z"/>
+		</Fun>
+		<Fun name="&amp;&amp;">
+			<Item name="&amp;&amp;" description="并且" usage="用法:与AND的用法一样" algorithm="" suchas="例如:X + Y"/>
+		</Fun>
+		<Fun name="||">
+			<Item name="||" description="或者" usage="用法:与OR的用法一致" algorithm="" suchas="例如:X + Y"/>
+		</Fun>
+		<Fun name="()">
+			<Item name="()" description="括号" usage="" algorithm="" suchas="例如:HIGH/(CLOSE+OPEN)"/>
+		</Fun>
+		<Fun name=",">
+			<Item name="," description="逗号" usage="" algorithm="" suchas="例如:MA(Close,3)"/>
+		</Fun>
+		<Fun name=":">
+			<Item name=":" description="输出" usage="" algorithm="" suchas="例如:输出:CLOSE+OPEN"/>
+		</Fun>
+		<Fun name=":=">
+			<Item name=":=" description="赋值" usage="" algorithm="" suchas="例如:变量1:=HIGH"/>
+		</Fun>
+		<Fun name=".">
+			<Item name="." description="点号" usage="" algorithm="" suchas="例如:KDJ.K"/>
+		</Fun>
+		<Fun name=";">
+			<Item name=";" description="分号" usage="" algorithm="" suchas="例如:A:=CLOSE;"/>
+		</Fun>
+		<!--Fun name="#">
+			<Item name="#" description="跨周期引用" usage="用法:#后可用DAY，WEEK,MONTH" algorithm="" suchas="例如:TMP1:=CLOSE#WEEK;{非指标引用，只可用于基本行情,开高低收}TMP2:=KDJ.K#WEEK;{跨周期指标引用}"/>
+		</Fun-->
+	</FunType>
+</root>
+

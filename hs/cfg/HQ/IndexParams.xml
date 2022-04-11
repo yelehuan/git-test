@@ -1,0 +1,663 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- 技术指标参数配置 -->
+<!--由于当前配置文件加载用户配置及弹出的参数编辑框需要用到指标在本文件中的顺序。因此，如果某些指标被废弃，请在修改读取方式前不要修改本文件中指标的顺序-->
+<configuration>
+	<!-- 缺省参数 -->
+	<defaultParams>
+		<!-- item的title属性用来显示在参数配置里-->
+		<param id="3" fullname="MACD指标">
+			<items>
+				<item titleid="301" title="MACD周期数1" value="12"/>
+				<item titleid="302" title="MACD周期数2" value="26"/>
+				<item titleid="303" title="MACD周期数3" value="9"/>
+			</items>
+			<infos>
+				<infosummary>    
+MACD（Moving  Average  Convergence  Divergence），中文名称平滑异同移动平均线。主要是根据长、短两条不同周期的平均线之间的离差值变化，来研究行情。
+</infosummary>
+				<infofunction>
+DIF = 短期移动平均值 - 长期移动平均值
+DEA = DIF的移动平均值
+MACD = 2 * （DIF - DEA）
+				</infofunction>
+				<inforule>
+（1）柱线正值线线变长，说明是涨势，负值绿线变长说明是跌势；
+（2）DIF向上交叉MACD为买点；
+（3）DIF向下交叉MACD为卖点；
+（4）股价的高点比前一次的高点高，而MACD的高点却比前一次的高点低时，称为牛背离，牛背离时，暗示股份很快就会反转下跌；
+（5）股价的低点比前一次的低点低，而MACD指标的低点比前一次的低点高时，称为熊背离，熊背离，暗示股价很快就会上涨；
+（6）MACD指标是中长线指标，适用于较长趋势行情，震荡行情要尽量避免使用；
+（7）MACD有一定的滞后性，当一、二天内的涨跌幅度特别大时，MACD来不及反应，此时指标无法发生作用；
+（8）MACD指标的常用三个参数值是12、26、9。
+</inforule>
+			</infos>
+		</param>
+		<param id="4" fullname="KDJ随机指标">
+			<items>
+				<item titleid="401" title="N" value="9"/>
+				<item titleid="401" title="M1" value="3"/>
+				<item titleid="401" title="M2" value="3"/>
+			</items>
+			<infos>
+				<infosummary>    
+KDJ指标是目前中国股市最普及的指标之一，全称为随机指标（Stochastics），它综合了动量观念、强弱指标及移动平均线的优点，是波段操作的有力武器。
+</infosummary>
+				<infofunction>
+以计算日KDJ为例，计算方法如下：
+对每一交易日求RSV（未成熟随机值）
+RSV = （收盘价－最近N日最低价） / （最近N日最高价－最近N日最低价） × 100
+K线 ： RSV的M1日移动平均
+D线 ： K值的M2日移动平均
+J线 ： 3 × K － 2 × D 
+参数：N、M1、M2 天数，一般取9、3、3
+				</infofunction>
+				<inforule>
+（1）D &gt; 80，超买；D &lt; 20，超卖；J &gt; 100%超买；J &lt; 10%超卖
+（2）线K向上突破线D，买进信号；线K向下跌破线D，卖出信号
+（3）线K与线D的交叉发生在70以上，30以下，才有效
+（4）KD指标不适于发行量小，交易不活跃的股票
+（5）KD指标对大盘和热门大盘股有极高准确性
+</inforule>
+			</infos>
+		</param>
+		<param id="5" fullname="CCI顺势指标">
+			<items>
+				<item titleid="501" title="周期数" value="14"/>
+			</items>
+			<infos>
+				<infosummary>    
+CCI（Commodity Channel Index），中文名称：顺势指标。CCI指标主要是用来对付极端行情的，适合于快进快出的短线。
+</infosummary>
+				<infofunction>
+TP = （最高价 + 最低价 +收盘价） / 3
+MA = 最近N周期收盘价累计和  / N
+MD = （最近N周期（MA - 收盘价）累计和） / N
+CCI(N) = （TP - MA） / 0.015MD            
+说明：N缺省值为14
+				</infofunction>
+				<inforule>
+（1）CCI的常态区为 -100至+100；
+（2）当CCI从0~+100的正常范围内，由下往上突破+100时，股指或股价有可能出现强势上涨，是买入的时机；当CCI从+100之上，由上往下跌破+100，股指或股价短线有可能出现回调，是卖出的时机；
+（3）当CCI从0~-100的正常范围内，由上往下跌破-100时，股指或股价有可能出现弱势下跌，是抛出的时机。当CCI从-100的下方，由下往上突破-100时，有可能出现反弹，可逢低买入；
+（4）当股指或股价创出新高，而CCI没有同步创出新高时，顶背离出现，短线股指或股价有可能出现回挡，可逢高卖出；
+（5）当股指或股价创出新低，而CCI没有同步创出新低时，底背离出现，短线股指或股价有可能出现反弹，可逢低买入。
+</inforule>
+			</infos>
+		</param>
+		<param id="6" fullname="MTM动向指标">
+			<items>
+				<item titleid="601" title="MTM周期数1" value="12"/>
+				<item titleid="602" title="MTM周期数2" value="6"/>
+			</items>
+			<infos>
+				<infosummary>    MTM动力指标是测量涨跌速度的技术工具，属于短线指标。它着重分析股价波动的速度，研究股价在波动过程中各种加速、减速、惯性作用以及股价由静到动或由动到静的过程，从而预测多空双方的强弱，确认大市自高峰或谷底反转的信号。
+</infosummary>
+				<infofunction>
+MTM = 当周期收盘价 - N周期前收盘价
+MAMTM = MTM的M周期移动平均
+说明：默认参数N为12，M为6
+				</infofunction>
+				<inforule>
+（1）MTM线由下向上突破零时为买进信号，相反，MTM由上向下跌破零时为卖出信号；
+（2）MTM线由下向上突破MTMMA线为买入信号；当MTM线由上向下跌破MTMMA为卖出信号；
+（3）股价在上涨行情中创新高，而MTM未能配合上升，出现背离现象，意味着上涨动力减弱，谨防股价反转下跌；
+（4）股价在下跌行情中创新低，而MTM未能配合下降，出现背离现象，意味着下跌动力减弱，此时可以注意逢低吸纳；
+（5）如股价与MTM在低位同步上升，显示短期将有反弹行情；如股价与MTM在高位同步下降，显示短期可能出现回落走势；
+（6）动力指标也有以"振荡点"的方式计算，以10日动力指标为例，其10日动力指标值等于当日收盘价除以10日前收盘价乘上100。
+</inforule>
+			</infos>
+		</param>
+		<param id="7" fullname="RSI相对强弱指标">
+			<items>
+				<item titleid="701" title="周期数1" value="6"/>
+				<item titleid="702" title="周期数2" value="12"/>
+				<item titleid="703" title="周期数3" value="24"/>
+			</items>
+			<infos>
+				<infosummary>    
+RSI（Relative Strength Index），中文名称：相对强弱指标。在一段时间内，上涨幅度代表多方力量，下跌幅度代表空方力量，两种力量的对比决定了个股及大盘所处的状态：强势或弱势。
+</infosummary>
+				<infofunction>
+RSI = N日内上涨幅度累计 / N日内上涨及下跌幅度累计 * 100
+				</infofunction>
+				<inforule>
+（1）图形上一般都有长、短两条不同周期的RSI，即快速RSI和慢速RSI；
+（2）快速RSI在20以下水平由下往上交叉慢速RSI，是买入信号；
+（3）快速RSI在80以上的水平由上往下交叉慢速RSI，是卖出信号；
+（4）从RSI值的变动范围来看：
+     当0 &lt; RSI &lt; 20 时， 极弱，超卖，买入；
+     当20 &lt; RSI &lt; 50 时， 弱势，卖出，空仓；
+     当50 &lt; RSI &lt; 80 时， 强势，买入，持仓；
+     当80 &lt; RSI &lt; 100时， 极强，超买，卖出。
+（5）股价一波比一波低，而RSI却一波比一波高，股价很容易反转上涨；
+（6）股价一波比一波高，而RSI却一波比一波低，股价很容易反转下跌；
+（7）介于40-60之间的RSI交叉信号要尽量不用，因为骗线的可能性比较大；
+（8）投机性极强的个股RSI会出现高位钝化或低位钝化的现象。
+</inforule>
+			</infos>
+		</param>
+		<param id="8" fullname="BRAR能量指标">
+			<items>
+				<item titleid="801" title="周期数" value="26"/>
+			</items>
+			<infos>
+				<infosummary>    
+AR人气指标和BR意愿指标都是以分析历史股价为手段的技术指标，AR人气指标重视开盘价，反映市场买卖的人气；BR意愿指标重视收盘价，反映市场买卖意愿的程度；两项指标分别从不同的角度对股价波动进行分析，进而达到追踪股价未来动向的目的。
+</infosummary>
+				<infofunction>
+AR = （（最高价 - 开盘价）的N周期之和） / （（开盘价 - 最低价）的N周期之和） * 100
+BR = （（最高价 - 收盘价）的N周期之和） / （（收盘价 - 最低价）的N周期之和） * 100
+				</infofunction>
+				<inforule>
+（1）一般AR可以单独使用，而BR却需与AR并用，才能发挥BR的效用；
+（2）AR指标值大约以100为中心，当介于80-120之间时，属于盘整行情，股价不会激烈地上升或下降；AR指标上升至150以上时，就必须注意股价将回档下跌；
+（3）AR指标有股价达到峰顶或落至谷底的领先功能；
+（4）BR指标介于70-150间属于盘整行情；BR指标值高于300以上时，需注意股价的回档行情；BR值低于50以下时，需注意股价的反弹行情；
+（5）AR、BR急速上升，表示距股价高峰已近，持股应获利了结；
+（6）BR比AR低时，可逢低买入；
+（7）BR急速上升，而AR盘整或小回时，应逢高出货；
+</inforule>
+			</infos>
+		</param>
+		<param id="9" fullname="BOLLIN布林线">
+			<items>
+				<item titleid="901" title="布林周期数" value="26"/>
+				<item titleid="902" title="布林宽度" value="2"/>
+			</items>
+			<infos>
+				<infosummary>    Bollin布林线是一个路径型指标，由上限和下限两条线，构成一个带状的路径。股价超越上限时，代表超买，股价超越下限时，代表超卖。布林线指标的超买超卖作用，只能运用在横向整理的行情。
+</infosummary>
+				<infofunction>
+中线MB = N周期移动平均收盘价      N为周期数
+偏移值 = P * N周期收盘价的标准差    P为参数，缺省为2
+上轨UP（阻力线） = 中线 + 偏移值
+下轨DOWN（支撑线） = 中线 - 偏移值
+				</infofunction>
+				<inforule>
+（1）布林线利用波带显示股价的安全高低价位；
+（2）股价向上穿越支撑线，买入信号；
+（3）股价向上穿越阻力线，卖出信号
+（4）当易变性变小，而波带变窄时，激烈的价格波动有可能马上发生
+（5）高低点穿越上轨或下轨，立刻又回到波带内会有短期回档或短期反弹发生
+（6）波带的移动对寻找目标值有很大帮助
+</inforule>
+			</infos>
+		</param>
+		<param id="10" fullname="CR综合人气">
+			<items>
+				<item titleid="1001" title="周期数" value="26"/>
+				<item titleid="1002" title="周期数A" value="62"/>
+				<item titleid="1003" title="周期数B" value="20"/>
+				<item titleid="1004" title="周期数C" value="40"/>
+				<item titleid="1005" title="周期数D" value="10"/>
+			</items>
+			<infos>
+				<infosummary>    
+CR综合人气指标，与BR、AR最大的不同在于采用中间价作为计算的基准，CR能够测量价格动量的潜能，又能测量人气热度，同时还能显示压力带和支撑带可以补充BR、AR的不足。
+</infosummary>
+				<infofunction>
+中价 = （最高价 + 最低价） / 2
+上升值 = 今最高价 - 昨中价
+下跌值 = 昨中价 - 今最低价
+CR(N) = N周期上升值之和 / N周期下跌值之和 * 100
+				</infofunction>
+				<inforule>
+（1）CR配置四条不同周期的均线A、B、C、D：
+     A: CR的10周期均线后移5周期
+     B: CR的20周期均线后移9周期
+     C: CR的40周期均线后移17周期
+     D: CR的62周期均线后移26周期
+     
+	 A、B两线所夹成的区域称为“副地震带”
+     C、D两线所夹成的区域称为“主地震带”
+（2）CR上穿或下穿“地震带”将遇到不同级别的阻力和支撑
+（3）CR下跌至40以下时，股价形成底部的机会相当高
+（4）CR进入地震带无法得知能否顺利通过可参考“威廉比例”
+（5）CR寻找底部效果不错，但逃顶则功效不明显。
+</inforule>
+			</infos>
+		</param>			
+		<param id="11" fullname="36乖离">
+			<items>
+				<item titleid="1101" title="周期数" value="9"/>
+			</items>
+			<infos>
+				<infosummary>
+    36乖离指标考虑不同周期的移动平均线之间的差距，衡量短期和中期投资者获利的相互状态，进而评估短、中期投资者对后市的看法。
+    不同周期移动平均线之间的差距称为乖离，3日平均数值与6日平均数值之间的差值为B36，6日平均数值与12日平均数值之间的差值为B612。</infosummary>
+				<infofunction>B36 = 最近3日的收盘价之和 / 3  -  最近6日的收盘价值和 / 6	</infofunction>
+				<inforule>（1）B3612的数值有正值与负数，多空平衡点为0，其数值随着股市的强弱，周而复始地在0的上下波动；
+（2）当股价的正乖离扩大到一定极限时，股价会产生向下拉回的作用力；当股价的负乖离扩大到一定极限时，股价会产生向上拉回的作用力；
+（3）从长期图像变动可看出，正乖离达到某个程度无法再往上升高的时候，便是卖出时机；反之，便是买进时机；
+（4）大涨小回时，不必着急获利了结；大跌小回时，不必着急买进；
+（5）多头走势中，行情回档多半在三减六日乖离达到0附近获得支撑，即使跌破，也很快能够拉回；
+（6）从长期的角度观察B36或B612的波动规律，这样更能判断个股的顶底形成的趋势。
+</inforule>
+			</infos>
+		</param>
+		<param id="12" fullname="DMI趋向指标">
+			<items>
+				<item titleid="1201" title="周期数" value="14"/>
+				<item titleid="1202" title="周期数" value="6"/>
+			</items>
+			<infos>
+				<infosummary>    
+DMI（Directional  Movement  Index），中文名称：趋向指标，是通过分析股票价格在涨跌过程中买卖双方力量均衡点的变化情况，即多空双方的力量的变化受价格波动的影响而发生由均衡到失衡的循环过程，从而提供对趋势判断依据的一种技术指标。
+</infosummary>
+				<infofunction>
+（1）计算当日动向值 
+　　动向指数的当日动向值分为上升动向、下降动向和无动向等三种情况，每日的当日动向值只能是三种情况的一种。 
+　　A、上升动向（+DM） 
+		+DM代表正趋向变动值即上升动向值，其数值等于当日的最高价减去前一日的最低价。上升动向值必须大于当日最低价减去前一日最低价的绝对值，否则+DM=0。 　
+	B、下降动向（-DM） 
+　　	﹣DM代表负趋向变动值即下降动向值，其数值等于当日的最低价减去前一日的最低价。下降动向值必须大于当日的最高价减去前一日最低价的绝对值，否则﹣DM=0。 
+　　C、无动向 
+         无动向代表当日动向值为“零”的情况，即当日的+DM和﹣DM同时等于零。有两种股价波动情况下可能出现无动向。一是当当日的最高价低于前一日的最高价并且当日的最低价高于前一日的最低价，二是当上升动向值正好等于下降动向值。 
+（2）计算真实波幅（TR） 
+　　TR代表真实波幅，是当日价格较前一日价格的最大变动值。取以下三项差额的数值中的最大值（取绝对值）为当日的真实波幅： 
+　　A、当日的最高价减去当日的最低价的价差。 
+　　B、当日的最高价减去前一日的收盘价的价差。 
+　　C、当日的最低价减去前一日的收盘价的价差。 
+　　		TR是A、B、C中的数值最大者 
+（3）计算方向线DI 
+　　方向线DI是衡量股价上涨或下跌的指标，分为“上升指标”和“下降指标”。在有的股市分析软件上，+DI代表上升方向线，﹣DI代表下降方向线。其计算方法如下： 
+　　+DI=（DM÷TR）×100 
+　　﹣DI=﹣（DM÷TR）×100 
+　　要使方向线具有参考价值，则必须运用平滑移动平均的原理对其进行累积运算。以12日作为计算周期为例，先将12日内的+DM、-DM及TR平均化，所得数值分别为+DM12，-DM12和TR12，具体如下： 
+　　+DI（12）=（+DM12÷TR12）×100 
+　　﹣DI（12）=﹣（DM12÷TR12）×100 
+　　随后计算第13天的+DI12、-DI12或TR12时，只要利用平滑移动平均公式运算即可。 
+
+　　例如： 
+　　当日的TR12=11/12÷前一日TR12＋当日TR 
+　　上升或下跌方向线的数值永远介于0与100之间。 
+（4）计算动向平均数ADX 
+　　依据DI值可以计算出DX指标值。其计算方法是将+DI和—DI间的差的绝对值除以总和的百分比得到动向指数DX。由于DX的波动幅度比较大，一般以一定的周期的平滑计算，得到平均动向指标ADX。具体过程如下： 
+　　DX=(DI DIF÷DI SUM) ×100 
+　　其中，DI DIF为上升指标和下降指标的价差的绝对值 
+　　DI SUM为上升指标和下降指标的总和 
+　　ADX就是DX的一定周期n的移动平均值。 
+（5）计算评估数值ADXR 
+　　在DMI指标中还可以添加ADXR指标，以便更有利于行情的研判。 
+　　ADXR的计算公式为： 
+　　ADXR=（当日的ADX＋前一日的ADX）÷2 
+　　和其他指标的计算一样，由于选用的计算周期的不同，DMI指标也包括日DMI指标、周DMI指标、月DMI指标年DMI指标以及分钟DMI指标等各种类型。经常被用于股市研判的是日DMI指标和周DMI指标。虽然它们的计算时的取值有所不同，但基本的计算方法一样。另外，随着股市软件分析技术的发展，投资者只需掌握DMI形成的基本原理和计算方法，无须去计算指标的数值，更为重要的是利用DMI指标去分析、研判股票行情。
+				</infofunction>
+				<inforule>
+（1）当股价走势向上发展，而同时+DI从下方向上突破-DI时，表明市场上有新多买家进场，为买入信号，如果ADX伴随上升，则预示股价的涨势可能更强劲；
+（2）当股价走势向下发展时，而同时-DI从上向下突破+DI时，表明市场上做空力量在加强，为卖出信号，如果ADX伴随下降，则预示跌势将加剧；
+（3）当股价维持某种上升或下降行情时，+DI和﹣DI的交叉突破信号比较准确，但当股价维持盘整时，应将+DI和-DI交叉发出的买卖信号视为无效。
+（4）判断行情趋势，当行情走势向上发展时，ADX值会不断递增。因此，当ADX值高于前一日时，可以判断当前市场行情仍在维持原有的上升趋势，即股价将继续上涨，如果+DI和﹣DI同时增加，则表明当前上升趋势将十分强劲； 
+当行情走势向下发展时，ADX值会不断递减。因此，当ADX值低于前一日时，可以判断当前市场行情仍维持原有的下降趋势，即股价将继续下跌，如果+DI和-DI同时减少，则表示当前的跌势将延续。 
+（5）判断行情是否盘整，当市场行情在一定区域内小幅横盘盘整时，ADX值会出现递减情况。当ADX值降至20以下，且呈横向窄幅移动时，可以判断行情为牛皮盘整，上升或下跌趋势不明朗，投资者应以观望为主，不可依据+DI和-DI的交叉信号来买卖股票；
+（6）判断行情是否转势，当ADX值在高点由升转跌时，预示行情即将反转。在涨势中的ADX在高点由升转跌，预示涨势即将告一段落；在跌势中的ADX值从高位回落，预示跌势可能停止；
+</inforule>
+			</infos>
+		</param>
+				<param id="13" fullname="OBV能量潮">
+			<items/>
+			<infos>
+				<infosummary>    
+OBV（On Balance Volume），中文名称：累积能量线，俗名：能量潮。其主要理论基础是市场价格的变化必须有成交量的配合，股价的波动与成交量的扩大或萎缩有密切的关连。通常股价上升所需的成交量总是较大；下跌时，则成交量总是较小。价格升降而成交量不相应升降，则市场价格的变动难以为继。
+</infosummary>
+				<infofunction>
+当周期收盘价比前一周期收盘价高，其成交量记为正数
+当周期收盘价较前一周期收盘价低，其成交量记为负数
+累计每周期之正或负成交量，即得OBV值
+				</infofunction>
+				<inforule>
+（1）OBV线下降，股价上升，表示买盘无力，是卖出信号；
+（2）OBV线上升，股价下降，表示逢低承接强，是买进信号；
+（3）可能形成天价的M头，如果第二顶OBV线无力上扬成交量反而萎缩，此时易于形成M头而股价下跌；
+（4）反之，可能形成低价的W底，如果第二底，OBV线领先则形成W底的可能性大；
+（5）投资者使用OBV时，注意力应集中在OBV的形态上，其具体数值意义不大。
+</inforule>
+			</infos>
+		</param>
+				<param id="14" fullname="PSY心理线">
+			<items>
+				<item titleid="1401" title="PSY周期数" value="12"/>
+				<item titleid="1402" title="PSY周期数" value="6"/>
+			</items>
+			<infos>
+				<infosummary>    
+PSY（Psydhology Line），中文名称：心理线。它是研究某段时间的投资人趋向于买方或卖方的心理与事实，是考察市场中群体心理变化的依据。
+</infosummary>
+				<infofunction>
+PSY = N周期内上涨的周期数 / N * 100
+				</infofunction>
+				<inforule>
+（1）PSY在25~75之间是常态分布；
+（2）PSY超过75或低于25时，就是超买或超卖关牛市中可设超买点为83，在熊市中可将超卖17；
+（3）一段上升行情展开前，通常超卖之低点会出现两次。同样，一段下跌行情展开前，超买的最高点也会出现两次；
+（4）心理线与价量线配合使用，一般效果较好。
+</inforule>
+			</infos>
+		</param>
+		<param id="15" fullname="W&amp;R威廉指标">
+			<items>
+				<item titleid="1501" title="周期数" value="10"/>
+				<item titleid="1502" title="周期数" value="6"/>
+			</items>
+			<infos>
+				<infosummary>    
+W&amp;R（William 's Overoought/Oversold Index ），中文名称：威廉指标，是测量超买、超卖程度的简易指标，用于分析市场短期买卖走势的技术指标。
+</infosummary>
+				<infofunction>
+H = 基期内最高价
+L = 基期内最低价
+C = 当日收盘价
+指标值 = （H - C） / （H - L） * 100
+				</infofunction>
+				<inforule>
+</inforule>
+			</infos>
+		</param>
+		<param id="16" fullname="ROC变动速率">
+			<items>
+				<item titleid="1601" title="周期数1" value="12"/>
+				<item titleid="1602" title="周期数2" value="6"/>
+			</items>
+			<infos>
+				<infosummary>    
+ROC（RATE OF CHANGE），中文名称：变动率指标。该指标测量股价动量，可以用来监视常态性和极端性两种行情，对买卖股票提供强有力的参考
+</infosummary>
+				<infofunction>
+ROC = （今收盘 - 前N周期收盘） / 前N周期收盘 * 100
+				</infofunction>
+				<inforule>
+（1）在过去一年以上行情的基础上确定每只股票的三条不同的超买超卖线；
+（2）ROC波动于“常态范围”内，而上升至第一条超买一时，应卖出股票，同理下降至第一条超卖线时应买进股票；
+（3）ROC向上突破第一条超买线后，指标继续朝第二条超买线涨升的可能性很大（中期多头行情），指标触碰第二条超买线时，涨势多半将结束。反之，中期空头行情，亦应顺理操作；
+（4）ROC向上穿越第三条超买线时，属于疯狂性多头行情，回档之后还要涨，应尽量不轻易卖出持股，反之，疯狂性空头行情，不轻易买进股票。
+</inforule>
+			</infos>
+		</param>
+		<param id="17" fullname="BIAS乖离率">
+			<items>
+				<item titleid="1701" title="周期数1" value="6"/>
+				<item titleid="1702" title="周期数2" value="12"/>
+				<item titleid="1703" title="周期数3" value="24"/>
+			</items>
+			<infos>
+				<infosummary>	    BIAS乖离率也称为Y值，是用股价指数与移动平均线的比值关系，来描述股票价格与移动平均线之间的偏离程度。乖离率功能主要是通过测算股价在波动过程 中与移动平均线出现偏离程度，从而得出股价在剧烈波动时因偏离移动平均趋势而造成可能的回挡或反弹，以及股价在正常波动范围内移动而形成继续原有势的可信度</infosummary>
+				<infofunction>
+BIAS(N) = （收盘价 - N周期移动平均价） / N周期移动平均价 * 100
+				</infofunction>
+				<inforule>
+（1）若股价在移动平均线之上，乖离率为正，反之为负；当股价与平均线相同，乖离率为零；
+（2）正乖离率值越大，说明股价向上偏离移动平均线的程度越大，有可能回档下调；
+（3）负乖离值越小，表明股价向下偏离移动平均线的程度越大，随时可能反弹；
+（4）多头市场的狂涨与空头市场的狂跌会使乖高率达到意想不到的百分比，但是出现次数极少，时间亦短。
+</inforule>
+			</infos>
+		</param>
+		<param id="18" fullname="OSC摆动量">
+			<items>
+				<item titleid="1801" title="周期数1" value="20"/>
+				<item titleid="1802" title="周期数2" value="6"/>
+			</items>
+			<infos>
+				<infosummary>    
+OSC摆动量，反映的是股价与移动平均价的偏离的绝对距离，OSC的构造思想同Bias是相同的。
+</infosummary>
+				<infofunction>
+OSC = 当周期收盘价 - N周期的平均线价
+				</infofunction>
+				<inforule>
+（1）当震荡点大于0且股价趋势仍属上升时，为多头走势；
+（2）反之当震荡点小于0且股价趋势为下跌是为空头走势；
+（3）OSC可用切线研判研涨跌讯号；
+（4）OSC可用形态学指示进出点；
+（5）OSC与价格背离则反转周期为时不远。
+</inforule>
+			</infos>
+		</param>
+		<param id="19" fullname="EMV简易波动">
+			<items>
+				<item titleid="1901" title="周期数1" value="14"/>
+				<item titleid="1902" title="周期数2" value="9"/>
+			</items>
+			<infos>
+				<infosummary>    
+EMV（Ease Of Movement Value），中文名称：简易波动指标，运用成交量和人气的荣枯，构成一个完整的股价系统循环，指示股民在人气汇集且成交热络的时候买进股票，并且在成交量逐渐展现无力，而狂热的群众尚未觉察能量即将用尽时卖出股票。
+</infosummary>
+				<infofunction>
+以计算日EMV为例，计算方法如下：
+A = （今日最高价 + 今日最低价） / 2
+B = （前日最高价 + 前日最低价） / 2
+C = 今日最高价 - 今日最低价
+EM = （A - B） * C / 今日成交额
+EMV = 累计N天的EM值
+				</infofunction>
+				<inforule>
+（1）EMV由下往上穿越0轴时，视为中期买进信号
+（2）EMV由上往下穿越0轴时，视为中期卖出信号
+（3）EMV属于中长线指标，须长期使用EMV，才能获得最佳利润
+（4）当趋向指标DMI中的ADX低于±DI时，本指标失去效用
+
+</inforule>
+			</infos>
+		</param>
+		<param id="20" fullname="TAPI加权指数成交值">
+			<items>
+				<item titleid="2001" title="周期数" value="6"/>
+			</items>
+			<infos>
+				<infosummary>    
+TAPI指标表示每一加权指数点的成交值，中文名称：现值率。成交量的变化会反映出股票的强弱程度及对未来股价的期望。
+</infosummary>
+				<infofunction>
+TAPI = 每个周期的成交总额 / 当周期的收盘价
+				</infofunction>
+				<inforule>
+（1）TAPI无一定的高和低的界限，必须根据实际情况进行观察，与大势、K线图等一起使用，不能单独使用；
+（2）在多头市场中，TAPI将同股价一样不断创出新高，但等到TAPI与股价不同步的时候，就是多头市场进入尾声的信号；
+（3）在空头市场中，TAPI将同股价一样不断地创新低，如果TAPI并未创新低，反而有所上升，这可能就是空头市场，将要结束的前兆。
+</inforule>
+			</infos>
+		</param>
+		<param id="21" fullname="DMA趋向指标">
+			<items>
+				<item titleid="2101" title="周期数1" value="10"/>
+				<item titleid="2102" title="周期数2" value="50"/>
+				<item titleid="2103" title="周期数2" value="6"/>
+			</items>
+			<infos>
+				<infosummary>    DMA指标是属于趋向类指标，也是一种趋势分析指标。DMA是依据快慢两条移动平均线的差值情况来分析价格趋势的一种技术分析指标。它主要通过计算两条基准周期不同的移动平均线的差值，来判断当前买入卖出的能量的大小和未来价格走势的趋势
+</infosummary>
+				<infofunction>
+DMA = 短期平均值 - 长期平均值
+AMA = 短期平均值
+				</infofunction>
+				<inforule>
+（1）当DMA和AMA均大于0，并向上移动时，一般表示为股市处于多头行情中，可以买入或持股；
+（2）当DMA和AMA均小于0，并向下移动时，一般表示为股市处于空头行情中，可以卖出股票或观望。
+（3）当DMA和AMA均大于0，但在经过一段比较长时间的向上运动后，如果两者同时从高位向下移动时，一般表示为股票行情处于退潮阶段，股票将下跌，可以卖出股票和观望；
+（4）当DMA和AMA均小于0，但在经过一段比较长时间的的向下运动后，如果两者同时从低位向上移动时，一般表示为短期行情即将启动，股票将上涨，可以短期买进股票或持股待涨。
+</inforule>
+			</infos>
+		</param>
+		<param id="22" fullname="TRIX趋向指标">
+			<items>
+				<item titleid="2201" title="周期数1" value="12"/>
+				<item titleid="2202" title="周期数2" value="9"/>
+			</items>
+			<infos>
+				<infosummary>    TRIX趋向指标是一种三重指数平滑平均线，长线操作时采用本指标的讯号，可以过滤掉一些短期波动的干扰，避免交易次数过于频繁，造成部分无利润的买卖，及手续费的损失，但该指标在盘整行情中不适用。TRIX指标波动频率较低，一年到头出现讯号的机率不多，是一项超长周期的指标，长时间按照本指标讯号交易，获利百分比大于损失百分比，特别是打算进行长期控盘或投资时，利润相当可观。
+</infosummary>
+				<infofunction>
+以计算日TRIX为例，计算方法如下：
+TR=收盘价的N日指数移动平均的N日指数移动平均的N日指数移动平均
+TRIX=(TR-昨日TR)/昨日TR*100
+MATRIX=TRIX的M日简单移动平均
+说明：默认参数N设为12，参数M设为20
+				</infofunction>
+				<inforule>
+（1）打算进行长期投资时，趋向类指标中以TRIX指标最合适；
+（2）TRIX向上交叉MATRIX，买进。TRIX向下交叉MATRIX，卖出；
+（3）TRIX与股价产生背离时，应注意随时会反转；
+（4）在中长期的操作中，以TRIX上穿0轴为买进信号；以TRIX跌穿0轴为卖出信号；
+（5）盘整行情中，本指标不适用。
+
+</inforule>
+			</infos>
+		</param>
+		<param id="23" fullname="WVAD价量指标">
+			<items>
+				<item titleid="2301" title="周期数" value="24"/>
+				<item titleid="2302" title="周期数" value="6"/>
+			</items>
+			<infos>
+				<infosummary>    
+WVAD（William's Variable Accumulation Distribution），中文名称：威廉变异离散量；它是将成交量加权的量价指标，其作用在测量从开盘至收盘期间，买方与卖方各自爆发力的程度。
+</infosummary>
+				<infofunction>
+V = 当周期成交额
+A = 当周期收盘价 - 当周期开盘价
+B = 当周期最高价 - 当周期最低价
+C = A / B * V
+WVAD = 累计N周期的C值
+				</infofunction>
+				<inforule>
+（1）WVAD是测量股价由开盘至收盘期间，多空两方的战斗力平衡；
+（2）当WVAD指标处于上升初期时，可考虑买进；
+（3）当WVAD指标处于下降初期时，可考虑卖出；
+（4）当WVAD长期为负值时，股价也处于下跌尾声，而某周期出现正值，可以考虑建仓；
+（5）当WVAD长期为正值时，股价也处于高位，而某周期出现负值，可以考虑平仓；
+</inforule>
+			</infos>
+		</param>
+		<param id="24" fullname="VR成交量比率">
+			<items>
+				<item titleid="2401" title="周期数1" value="26"/>
+				<item titleid="2402" title="周期数2" value="6"/>
+			</items>
+			<infos>
+				<infosummary>    
+VR（Volitility Volume Ratio），中文名称：成交量变异率。该指标是成交量的强弱指标，运用在过热市场及低速盘局中，对辨别头部及认错部的形成有很重要的作用。
+</infosummary>
+				<infofunction>
+TAPI = （N周期中上涨日成交量 + 1/2股价不变周期成交量） / （N日中下跌周期成交量 + 1/2股价不变周期成交量） * 100
+				</infofunction>
+				<inforule>
+（1）VR下跌至40以下时，市场极易形成底部；
+（2）VR值一般分布在150左右最多，一旦越过250时市场极易产生一段多头行情；
+（3）VR超过350以上，应有高档危机意识，随时注意反转之可能；
+（4）VR运用在寻找底部时较可靠，确认头部时，要配合其它指标使用。
+</inforule>
+			</infos>
+		</param>
+		<param id="25" fullname="慢速KD指标">
+			<items>
+				<item titleid="2501" title="RSV周期" value="9"/>
+				<item titleid="2502" title="平滑周期1" value="3"/>
+				<!--<item titleid="2503" title="平滑周期2" value="3"/>
+				<item titleid="2504" title="平滑周期3" value="5"/> -->
+			</items>
+			<infos>
+				<infosummary>    
+Slowed KD是在KD的基础上，对D再进行一次平滑，选择的平滑工具是移动平均，而不是指数平滑。Slowed KD中的K就是KD中的D，Slowed KD中的D是KD中的D的值的移动平均；经过平滑的比未经过平滑的慢，所以Slowed KD同KD的本质没有什么不同。
+</infosummary>
+				<infofunction>
+				</infofunction>
+				<inforule>
+</inforule>
+			</infos>
+		</param>
+		<param id="26" fullname="梅斯线">
+			<items>
+				<item titleid="2601" title="MASS周期数" value="9"/>
+				<item titleid="2602" title="求和周期" value="25"/>
+				<item titleid="2603" title="求和周期" value="6"/>
+			</items>
+			<infos>
+				<infosummary>    
+梅斯线（Mass Index），是Donald Dorsey累积股价波幅宽度之后，所设计的震荡曲线。本指标最主要的作用，在于寻找飙涨股或者极度弱势股的重要趋势反转点。MASS指标是所有区间震荡指标中，风险系数最小的一个。由于股价高低点之间的价差波带，忽而宽忽而窄，并且不断的重复循环。利用这种重复循环的波带，可以预测股价的趋势反转点。
+</infosummary>
+				<infofunction>
+AHL = DIF的N1日移动平均值
+BHL = AHL的N2日移动平均值
+MASS = SUM(AHL / BHL)
+MAMASS = MASS的M日移动平均值
+说明：默认参数N1为9， 参数N2为25，参数M为6
+				</infofunction>
+				<inforule>
+（1）MASS曲线向上穿越27，随后又掉头跌落26.5。当时，如果股价的9天移动平均线正处于上升状态，代表多头行情即将反转下跌；
+（2）MASS曲线向上穿越27，随后又掉头跌落26.5。当时，如果股价的9天移动平均线正处于下跌状态，代表空头行情即将反转上涨；
+（3）MASS曲线低于25的股票，一般较不具投资利润。
+</inforule>
+			</infos>
+		</param>
+		<param id="27" fullname="佳庆指标">
+			<items>
+				<item titleid="2701" title="周期数1" value="10"/>
+				<item titleid="2702" title="周期数2" value="20"/>
+				<item titleid="2703" title="周期数2" value="6"/>
+			</items>
+			<infos>
+				<infosummary>    
+CHAIKIN指标，英文名：Chaikin Oscilator，中文名称：佳庆指标。它是利用升降量的两根均线的离差来判断量价配合是否完好。
+</infosummary>
+				<infofunction>
+指标值 = 升降量短期均值 - 升降量长期均值
+				</infofunction>
+				<inforule>
+（1）当佳庆指标由峰顶下滑，而股价正处于上升趋势，代表卖点出现，若佳庆指标由谷底上升，而股价正处于下跌状态，表示买点出现；
+（2）CHAIKIN曲线产生急促的凸起时，表示行情即将反转；
+（3）佳庆指标由负值向上穿越0轴时，为买进讯号。（注意！股价必须位于90周期移动平均线之上，才可视为有效）；
+（4）佳庆指标由正值向下穿越0轴时，为卖出讯号。（注意！股价必须位于90周期移动平卷线之下，才可视为有效）；
+（5）投资者可根据经验自定超买超卖的界限值。
+</inforule>
+			</infos>
+		</param>
+		<param id="28" fullname="SAR停损点转向">
+			<items>
+				<item titleid="2801" title="周期数" value="4"/>
+			</items>
+			<infos>
+				<infosummary>    
+SAR（Stop And Reverse），中文名称：停损指标，另名为抛物线指标，它是用来衡量多头市场与空头市场的反转讯号，当投资者判断失误时，可依据它来进行止损操作。
+</infosummary>
+				<infofunction>
+以计算日SAR为例，计算方法如下：
+先选定时间，判断价格是在上涨还是在下跌：
+若是看涨，则进场第一天的SAR必须是近期内的最低价，若是看跌则进场第一天的SAR必须是近期内的最高价；
+第二天的SAR则为第一天的最高价（看涨时）或最低价（看跌时）与第一天的SAR的差距乘上调整系数，再加上第一天的SAR就可求得。
+ 按逐步递推的方法，每日的SAR可日纳如下：
+SAR（N）= SAR（N-1）+ AF * [ EP（N-1）-SAR（N-1）]
+其中SAR（N）为第N日的SAR值，AF是调整系数，EP为极点价；
+第一个调整系数AF为0.02，若每隔一天的最高价比前一天的最高价还高，则AF递增0.02，若未创新高，则AF沿用前一天的数值，但调整系数最高不超过0.2；
+若是买进期间，计算出某日的SAR比当日或前一日的最低价还高，则应以当日或者前一日的最低价为某日之SAR，卖出期间也对应服从类似原则。
+				</infofunction>
+				<inforule>
+（1）股价在红色圆圈上方，是多头市场；
+（2）股价在绿色圆圈下方，是空头市场；
+（3）收盘价跌破SAR，多头停损，开始空头交易；
+（4）收盘价突破SAR，空头停损，开始多头交易；
+</inforule>
+			</infos>
+		</param>
+		<param id="29" fullname="TWR宝塔线">
+			<infos>
+				<infosummary>    
+TWR宝塔线是以红绿棒线来区分股价涨跌，并研判其涨跌趋势的一种线，配合K线、移动平均线，效果更好。系统提供两个宝塔线指标，分别显示在主图和附图。
+</infosummary>
+				<infofunction>
+以计算日TWR为例，计算方法如下：
+1、每天总是在起步价和当日收盘价间画线，涨升时，画红色空心实体；下跌时，画绿色实心实体。
+2、若前一天为涨升红线，今日为下跌，股价未跌破前一天红线低点的那一部分跌幅仍画红线，跌破部分才画绿线。
+3、若前一天为下跌绿线，今日为上涨，股价未涨过前一天绿线高点的那一部分涨幅仍画绿色实体，涨过部分才画红线。				</infofunction>
+
+				<inforule>
+（1）宝塔线翻红后,股价后市总要延伸一段上升行情。反之, 宝塔线翻绿之后, 股价后市总要延伸一段下降行情；
+（2）在高档时，宝塔线长绿而下，应立即获利了结。反之,在低档时，宝塔线长红而上, 则是买进时机；
+（3）盘局时宝塔线的小翻红、小翻绿可依设定损失点或利润点之大小而决定是否进出；
+（4）宝塔线分析若能与K线、移动平均线等共同使用, 效果更佳；
+（5）当日大势指数或收盘价，高于最近三根阴线的最高收盘价时，为买进信号；
+（6）当日大势指数或收盘价，低于最近三根阳线的最低收盘价时，为卖出信号。
+</inforule>
+			</infos>
+		</param>
+</defaultParams>
+</configuration>

@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Configs>
+<!--类型匹配优先级CategoryII_Exchange > CategoryI_Exchange > CategoryII_0-->
+<!--index 默认叠加指数代码-->
+<!--sector 默认所属板块ID-->
+<!--TimeScale 分时交易时间段：
+	时段格式: 
+		开始时间-结束时间:时段标记; 
+		如果一个时段跨天，则拆分成两个时段，如2200-0200，拆分为2200-2400;0000-0200
+		时间为4位，时段标记为1位，以分号分割作为一个完整时段，最后一个时段不加分号。
+		例如 0930-1130:0;
+	时段标记:
+		0: 正常交易时段
+		1: 集合竞价时段
+		2. 盘后定价时段
+-->
+  <StockTypes>
+	<type name="CY.SZ" caption="创业板" desc="" category="106" exchange="90" index="399001.SZ" sector="1101006" timescale="0915-0930:1;0930-1130:0;1300-1500:0"/>
+	<type name="A.SH" IsDefault="True" caption="上证A股" desc="" category="101" exchange="83" index="000001.SH" sector="1101002" timescale="0915-0930:1;0930-1130:0;1300-1500:0"/>
+	<type name="A.SZ" caption="深证主板A股" desc="" category="101" exchange="90" index="399001.SZ" sector="1101004" timescale="0915-0930:1;0930-1130:0;1300-1500:0"/>
+	<type name="B.SH" caption="上证B股" desc="" category="102" exchange="83" index="000001.SH" sector="1101010" timescale="0915-0930:1;0930-1130:0;1300-1500:0"/>
+	<type name="B.SZ" caption="深证B股" desc="" category="102" exchange="90" index="399001.SZ" sector="1101011" timescale="0915-0930:1;0930-1130:0;1300-1500:0"/>
+	<type name="T.OC" caption="股转系统" desc="" category="103" exchange="81" index="000001.SH" sector="1501001" timescale="0915-0930:1;0930-1130:0;1300-1500:0"/>
+	<type name="P.SH" caption="优先股" desc="上证优先股" category="104" exchange="83" index="000001.SH" sector="" timescale="0930-1130:0;1300-1500:0"/>
+	<type name="P.SZ" caption="优先股" desc="深证优先股" category="104" exchange="90" index="399001.SZ" sector="" timescale="0930-1130:0;1300-1500:0"/>
+	<type name="P.OC" caption="股转优先股" desc="" category="104" exchange="81" index="000001.SH" sector="" timescale="0930-1130:0;1300-1500:0"/>
+	<type name="X.HK" caption="港股" desc="" category="105" exchange="72" index="HSI.HI" sector="1401001" timescale="0930-1200:0;1300-1600:0"/>
+	<type name="K.SH" caption="科创板" desc="" category="107" exchange="83" index="000001.SH" sector="1101025" timescale="0915-0930:1;0930-1130:0;1300-1500:0;1500-1530:2"/>
+	<type name="C.SH" caption="CDR" desc="" category="108" exchange="83" index="000001.SH" sector="" timescale="0915-0930:1;0930-1130:0;1300-1500:0;1500-1530:2"/>
+	<type name="F.SH" caption="上证基金" desc="" category="2" exchange="83" index="000001.SH" sector="1211003" timescale="0930-1130:0;1300-1500:0"/>
+	<type name="F.SZ" caption="深证基金" desc="" category="2" exchange="90" index="399001.SZ" sector="1211004" timescale="0930-1130:0;1300-1500:0"/>
+	<type name="OFT" caption="基金(非货币型)" desc="" category="201,203,204,205,206,208" exchange="0" index="000001.SH" sector="1201001002" timescale=""/>
+	<type name="OF" caption="基金(货币型)" desc="" category="202" exchange="0" index="000001.SH" sector="1201001002" timescale=""/>
+	<type name="S.OC" caption="股转指数" desc="" category="3" exchange="81" index="000001.SH" sector="" timescale="0930-1130:0;1300-1500:0"/>
+	<type name="S.SH" caption="上证指数" desc="" category="3" exchange="83" index="" sector="" timescale="0930-1130:0;1300-1500:0"/>
+	<type name="S.SZ" caption="深证指数" desc="" category="3" exchange="90" index="" sector="" timescale="0930-1130:0;1300-1500:0"/>
+	<type name="S.CSI" caption="中证指数" desc="" category="3" exchange="84" index="" sector="" timescale="0930-1130:0;1300-1500:0"/>
+	<type name="S.HK" caption="港股指数" desc="" category="3" exchange="72" index="" sector="" timescale="0930-1200:0;1300-1600:0"/>
+	<type name="S" caption="指数" desc="申万指数、部分市场为9999的中证指数、市场为9999的指数" category="301,302,303,304,305,306,309" exchange="0" index="" sector="" timescale="0930-1130:0;1300-1500:0"/>
+	<type name="S.IB" caption="债券指数" desc="外汇交易中心债券指数" category="303" exchange="89" index="" sector="" timescale="0900-1200:0;1330-1700:0;"/>
+	<type name="BO.SH" caption="债券" desc="上交所债券" category="5" exchange="83" index="" sector="1301002" timescale="0930-1130:0;1300-1500:0"/>
+	<type name="BO.SZ" caption="债券" desc="深交所债券" category="5" exchange="90" index="" sector="1301003" timescale="0930-1130:0;1300-1500:0"/>
+	<type name="BO.IB" caption="债券" desc="外汇交易中心债券" category="501,502,503,504,505,506,507,508,509,510,511,512,513,514,515,517,518,519,521,524" exchange="89" index="" sector="1301001" timescale="0900-1200:0;1330-1430:0"/>
+	<type name="BOND" caption="债券" desc="其他债券" category="501,502,503,504,505,506,507,508,509,510,511,512,513,514,515,516,517,518,519,520,521,522,523,524,525,526,527,528" exchange="0" index="" sector="" timescale="0930-1130:0;1300-1500:0"/>
+	<type name="FU" caption="商品期货" desc="" category="610" exchange="0" index="" sector="" timescale="0930-1130:0;1300-1530:0"/>
+	<type name="FU1.SHF" caption="上海期货" desc="" category="611" exchange="10" index="" sector="1801099" timescale="0900-1015:0;1030-1130:0;1330-1500:0"/>
+	<type name="FU1.DCE" caption="大连期货" desc="" category="611" exchange="13" index="" sector="1802099" timescale="0900-1015:0;1030-1130:0;1330-1500:0"/>
+	<type name="FU1.CZC" caption="郑州期货" desc="" category="611" exchange="15" index="" sector="1803099" timescale="0900-1015:0;1030-1130:0;1330-1500:0"/>
+	<type name="FU1.INE" caption="上海原油" desc="" category="611" exchange="11" index="" sector="" timescale="0900-1015:0;1030-1130:0;1330-1500:0"/>
+	<type name="FU2.SHF" caption="上海期货" desc="" category="612" exchange="10" index="" sector="1801099" timescale="2100-2300:0;0900-1015:0;1030-1130:0;1330-1500:0"/>
+	<type name="FU2.DCE" caption="大连期货" desc="" category="612" exchange="13" index="" sector="1802099" timescale="2100-2300:0;0900-1015:0;1030-1130:0;1330-1500:0"/>
+	<type name="FU2.CZC" caption="郑州期货" desc="" category="612" exchange="15" index="" sector="1803099" timescale="2100-2300:0;0900-1015:0;1030-1130:0;1330-1500:0"/>
+	<type name="FU2.INE" caption="上海原油" desc="" category="612" exchange="11" index="" sector="" timescale="2100-2300:0;0900-1015:0;1030-1130:0;1330-1500:0"/>
+	<type name="FU3.SHF" caption="上海期货" desc="" category="613" exchange="10" index="" sector="1801099" timescale="2100-2400:0;0000-0100:0;0900-1015:0;1030-1130:0;1330-1500:0"/>
+	<type name="FU3.DCE" caption="大连期货" desc="" category="613" exchange="13" index="" sector="1802099" timescale="2100-2400:0;0000-0100:0;0900-1015:0;1030-1130:0;1330-1500:0"/>
+	<type name="FU3.CZC" caption="郑州期货" desc="" category="613" exchange="15" index="" sector="1803099" timescale="2100-2400:0;0000-0100:0;0900-1015:0;1030-1130:0;1330-1500:0"/>
+	<type name="FU3.INE" caption="上海原油" desc="" category="613" exchange="11" index="" sector="" timescale="2100-2400:0;0000-0100:0;0900-1015:0;1030-1130:0;1330-1500:0"/>
+	<type name="FU4.SHF" caption="上海期货" desc="" category="614" exchange="10" index="" sector="1801099" timescale="2100-2400:0;0000-0230:0;0900-1015:0;1030-1130:0;1330-1500:0"/>
+	<type name="FU4.DCE" caption="大连期货" desc="" category="614" exchange="13" index="" sector="1802099" timescale="2100-2400:0;0000-0230:0;0900-1015:0;1030-1130:0;1330-1500:0"/>
+	<type name="FU4.CZC" caption="郑州期货" desc="" category="614" exchange="15" index="" sector="1803099" timescale="2100-2400:0;0000-0230:0;0900-1015:0;1030-1130:0;1330-1500:0"/>
+	<type name="FU4.INE" caption="上海原油" desc="" category="614" exchange="11" index="" sector="" timescale="2100-2400:0;0000-0230:0;0900-1015:0;1030-1130:0;1330-1500:0"/>
+	<type name="FU5.SHF" caption="上海期货" desc="" category="615" exchange="10" index="" sector="1801099" timescale="2100-2330:0;0900-1015:0;1030-1130:0;1330-1500:0"/>
+	<type name="FU5.DCE" caption="大连期货" desc="" category="615" exchange="13" index="" sector="1802099" timescale="2100-2330:0;0900-1015:0;1030-1130:0;1330-1500:0"/>
+	<type name="FU5.CZC" caption="郑州期货" desc="" category="615" exchange="15" index="" sector="1803099" timescale="2100-2330:0;0900-1015:0;1030-1130:0;1330-1500:0"/>
+	<type name="FU5.INE" caption="上海原油" desc="" category="615" exchange="11" index="" sector="" timescale="2100-2330:0;0900-1015:0;1030-1130:0;1330-1500:0"/>
+	<type name="TF.CFE" caption="国债期货" desc="" category="630" exchange="20" index="" sector="" timescale="0915-1130:0;1300-1515:0"/>
+	<type name="IF.CFE" caption="股指期货" desc="" category="640" exchange="20" index="" sector="" timescale="0930-1130:0;1300-1500:0"/>
+	<type name="FUO.SH" caption="上证期权" desc="" category="7" exchange="83" index="000001.SH" sector="1901" timescale="0930-1130:0;1300-1500:0"/>
+	<type name="FUO3.SHF" caption="上海商品期权" desc="" category="703" exchange="10" index="" sector="1902001" timescale="2100-2400:0;0000-0100:0;0900-1015:0;1030-1130:0;1330-1500:0"/>
+	<type name="FUO5.DCE" caption="大连商品期权" desc="" category="703" exchange="13" index="" sector="1904001" timescale="2100-2330:0;0900-1015:0;1030-1130:0;1330-1500:0"/>
+	<type name="FUO5.CZC" caption="郑州商品期权" desc="" category="703" exchange="15" index="" sector="1803099" timescale="2100-2330:0;0900-1015:0;1030-1130:0;1330-1500:0"/>
+	<type name="FSR.CFES" caption="外汇即期" category="812" exchange="89" index="" sector="1601002001" timescale="0930-1130:0;1300-1500:0"/>
+	<type name="FSQ.CFES" caption="外汇即期" category="813" exchange="89" index="" sector="1601002002" timescale="0930-1130:0;1300-1500:0"/>
+	<type name="RBD.CFES" caption="外汇中间价" category="801" exchange="89" index="" sector="1601001" timescale="0930-1130:0;1300-1500:0"/>
+	<type name="FWR.CFES" caption="外汇掉期" category="831,832" exchange="89" index="" sector="" timescale="0930-1130:0;1300-1500:0"/>
+	<type name="FWQ.CFES" caption="外汇掉期" category="833" exchange="89" index="" sector="" timescale="0930-1130:0;1300-1500:0"/>
+	<type name="FFR.CFES" caption="外汇远期" category="823" exchange="89" index="" sector="" timescale="0930-1130:0;1300-1500:0"/>
+	<type name="FOR.CFES" caption="外汇期权" category="715" exchange="89" index="" sector="" timescale="0930-1130:0;1300-1500:0"/>
+	
+	<type name="GZQH.CFE" caption="股指期货指数" category="640" exchange="51" index="" sector="" timescale="0930-1130:0;1300-1500:0"/>
+
+	<type name="SQS.SHF" caption="上期所 期权" category="703" exchange="10" index="" sector="" timescale="0930-1130:0;1300-1500:0"/>
+	<type name="LV1.IB" caption="外汇中心利率品种1" desc="" category="522,525" exchange="89" index="" sector="" timescale="0930-1130:0;1300-1500:0"/>
+	<type name="LV2.IB" caption="外汇中心利率品种2" desc="" category="523" exchange="93" index="" sector="" timescale="0930-1130:0;1300-1500:0"/>
+	<type name="BOND.HK" caption="香港基金" desc="" category="208,302,105,307,303,309,301" exchange="72" index="" sector="" timescale="0930-1130:0;1300-1500:0"/>
+	<type name="XH.CNI" caption="新华指数" desc="" category="301,302,303,306,307,309" exchange="84" index="" sector="" timescale="0930-1130:0;1300-1500:0"/>
+	<type name="FU.CBOT" caption="CBOT期货" desc="" category="610,630,640,306,307,309" exchange="39" index="" sector="" timescale="0930-1130:0;1300-1500:0"/>
+	<type name="FU.CME" caption="CME期货" desc="" category="510001,510003,510004" exchange="40" index="" sector="" timescale="0930-1130:0;1300-1500:0"/>
+	<type name="FU.CMX" caption="COMEX期货" desc="" category="610,510001" exchange="43" index="" sector="" timescale="0930-1130:0;1300-1500:0"/>
+	<type name="FU.NYM" caption="NYMEX期货" desc="" category="610" exchange="38" index="" sector="" timescale="0930-1130:0;1300-1500:0"/>
+	<type name="FU.ICE" caption="ICE美国期货" desc="" category="510001,510004" exchange="41,44" index="" sector="" timescale="0930-1130:0;1300-1500:0"/>
+	
+	<type name="WNNX.HK" caption="香港涡轮牛熊证" desc="" category="540000,210000" exchange="72" index="" sector="" timescale="0930-1130:0;1300-1500:0"/>
+	
+  </StockTypes>
+</Configs>

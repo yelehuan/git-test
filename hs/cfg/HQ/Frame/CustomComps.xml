@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CustomComps>
+<!--需要向外发送代码通知的，只需代码通知组件容器即可。
+		需要接收外界代码的，只需被组件容器代码通知即可。-->
+  <Group caption="自选股">
+    <CompContainer imageindex = "20" name="compUserReport" caption="报价" align="alClient">
+      <DynamicReport name="dynamicreport" caption="动态报价" align="alClient" canzoom="true" focustype="ftMove" defreportname="Dynamic" processcode="true" relatecode="compUserReport">
+        <PopupMenu key="Report" caption="报价菜单"/>
+      </DynamicReport>
+      <SectorToolBar name="SectorToolBar" caption="板块切换栏" sectorlist="[UserSector]" canclosebutton="false" showaddbutton="false" align="alBottom" height="20" canresize="false" relatecode="dynamicreport">	
+			</SectorToolBar>
+    </CompContainer>
+  </Group>
+  <Group caption="个股行情">
+    <CompContainer name="compMinute" imageindex = "0" caption="分时组件" align="alClient" relatecode="minute">
+      <MinuteContainer name="minutecontainer" caption="分时容器" align="alClient" width="100" focustype="ftNone" showcross="false" relatecomp="minute,MinuteTimeLine" showvalue="价格,涨跌" canresize="false">
+        <Minute name="minute" caption="分时图" align="alClient" focustype="ftNone" minrequest="true" defcode="600000.SH" relatecode="minutecontainer,MinuteTimeLine" relateindex="TradeDate,TradeTime,NewPrice,PrevClose,TodayOpen,TodayHigh,TodayLow,Volume,DeltaAmount,DeltaVolume,AveragePrice,HighLimit,LowLimit,SuspensionFlag"/>
+        <MinuteTimeLine name="MinuteTimeLine" caption="时间轴" align="alBottom" focustype="ftNone" height="20" canresize="false"/>
+      </MinuteContainer>
+    </CompContainer>
+    <CompContainer name="compKLine" imageindex = "1" caption="K线组件" align="alClient" relatecode="kline">
+      <KLineContainer name="klinecontainer" caption="K线容器" align="alClient" width="100" focustype="ftMove" showfloatpanel="false" relatecomp="kline,klinetimeline,klineInfo,klineVolume,klineAmount" showvalue="收,幅,量,换,额" canresize="false">
+        <Container name="klinegroup" caption="K线组" align="alClient" height="400">
+          <KLineInfo name="klineInfo" caption="K线信息框" align="alTop" height="20" canresize="false"/>
+          <KLineMainChart name="kline" caption="K线图" align="alClient" height="300" canresize="false" focustype="ftNone" defcode="600000.SH" relatecode="klinecontainer,klineInfo,klinetimeline,klineVolume,klineAmount" relateindex="TradeDate,TradeTime,NewPrice,PrevClose,TodayOpen,TodayHigh,TodayLow,Volume,TotalAmount,DeltaAmount,DeltaVolume,SuspensionFlag">
+            <PopupMenu key="KLine_Fix" caption="K线附图菜单"/>
+          </KLineMainChart>
+          <KLineTimeLine name="klinetimeline" caption="时间轴" align="alBottom" height="18" canresize="false"/>
+        </Container>
+        <KLineSubChart name="klinevolume" caption="K线量图指标" align="alClient" height="150" focustype="ftNone" indextype="1" canclose="false" bottommargin="10" showzeroline="true" relateindex="DeltaVolume,BidVolume1,BidVolume2"/>
+        <KLineSubChart name="klineamount" caption="K线成交额指标" visible="false" align="alClient" height="150" focustype="ftNone" indextype="2" canclose="false" bottommargin="10" showzeroline="true" relateindex="DeltaAmount,BidPrice1,BidPrice2"/>
+      </KLineContainer>
+    </CompContainer>
+    <CompContainer name="compMinuteKLine" imageindex = "2" caption="分时K线" align="alClient" relatecode="ctMinuteKLine">
+      <MinuteKLineContainer name="ctMinuteKLine" caption="分时K线切换容器" align="alClient" processkeydown="true" relatecomp="minutecontainer,klinecontainer" relatecode="TimeTrend,klinecontainer" defcode="600000.SH">
+        <MinuteContainer name="minutecontainer" caption="分时容器" visible="true" align="alClient" width="100" focustype="ftClick" processcode="true" showcross="false" relatecomp="minute,MinuteTimeLine" showvalue="价格,涨跌" canresize="false" relatecode="minute" focusedborder="true">
+          <Minute name="minute" caption="分时图" align="alClient" focustype="ftNone" minrequest="true" relatecode="minutecontainer,kline,MinuteTimeLine" relateindex="TradeDate,TradeTime,NewPrice,PrevClose,TodayOpen,TodayHigh,TodayLow,Volume,DeltaAmount,DeltaVolume,AveragePrice,HighLimit,LowLimit,SuspensionFlag">
+			<PopupMenu key="F6Minute" caption="F6分时图菜单"/>
+		  </Minute>
+          <MinuteTimeLine name="MinuteTimeLine" caption="时间轴" align="alBottom" focustype="ftNone" height="20" canresize="false"/>
+        </MinuteContainer>
+        <KLineContainer name="klinecontainer" caption="K线容器" visible="false" align="alClient" width="100" focustype="ftClick" processcode="true" showfloatpanel="false" relatecomp="kline,klinetimeline,klineInfo,klineVolume,klineAmount" showvalue="收,幅,量,换,额" canresize="false" relatecode="kline" focusedborder="true">
+          <Container name="klinegroup" caption="K线组" align="alClient" height="400">
+            <KLineInfo name="klineInfo" caption="K线信息框" align="alTop" height="20" canresize="false" focustype="ftNone"/>
+            <KLineMainChart name="kline" caption="K线图" align="alClient" height="300" focustype="ftNone" canresize="false" relatecode="klinecontainer,klineInfo,klinetimeline,klineVolume,klineAmount,minute,compMinuteKLine,AutoContent" relateindex="TradeDate,TradeTime,NewPrice,PrevClose,TodayOpen,TodayHigh,TodayLow,Volume,TotalAmount,DeltaAmount,DeltaVolume,SuspensionFlag">
+              <PopupMenu key="KLine_Fix" caption="K线附图菜单"/>
+            </KLineMainChart>
+            <KLineTimeLine name="klinetimeline" caption="时间轴" align="alBottom" height="18" canresize="false" focustype="ftNone"/>
+          </Container>
+          <KLineSubChart name="klinevolume" caption="K线量图指标" align="alClient" height="150" focustype="ftNone" indextype="1" canclose="false" bottommargin="10" showzeroline="true" relateindex="DeltaVolume,BidVolume1,BidVolume2"/>
+          <KLineSubChart name="klineamount" caption="K线成交额指标" visible="false" align="alClient" height="150" focustype="ftNone" indextype="2" canclose="false" bottommargin="10" showzeroline="true" relateindex="DeltaAmount,BidPrice1,BidPrice2"/>
+        </KLineContainer>
+      </MinuteKLineContainer>
+      <Content name="AutoContent" AutoKeyParam="ContentKey" Caption="股票指标" Align="alRight" width="200" focustype="ftNone"/>
+    </CompContainer>
+    <CompContainer name="compMinuteKLine2" imageindex = "2" caption="分时K线2" align="alClient" relatecode="ctMinuteKLine">
+      <MinuteKLineContainer name="ctMinuteKLine" caption="分时K线切换容器" align="alClient" processkeydown="true" relatecomp="minutecontainer,klinecontainer" relatecode="TimeTrend,klinecontainer" defcode="600000.SH">
+        <MinuteContainer name="minutecontainer" caption="分时容器" visible="true" align="alClient" width="100" focustype="ftClick" processcode="true" showcross="false" relatecomp="minute,MinuteTimeLine" showvalue="价格,涨跌" canresize="false" relatecode="minute" focusedborder="true">
+          <Minute name="minute" caption="分时图" align="alClient" focustype="ftNone" minrequest="true" relatecode="minutecontainer,kline,MinuteTimeLine" relateindex="TradeDate,TradeTime,NewPrice,PrevClose,TodayOpen,TodayHigh,TodayLow,Volume,DeltaAmount,DeltaVolume,AveragePrice,HighLimit,LowLimit,SuspensionFlag">
+		  <PopupMenu key="F6Minute" caption="F6分时图菜单"/>
+		  </Minute>
+          <MinuteTimeLine name="MinuteTimeLine" caption="时间轴" align="alBottom" focustype="ftNone" height="20" canresize="false"/>
+        </MinuteContainer>
+        <KLineContainer name="klinecontainer" caption="K线容器" visible="false" align="alClient" width="100" focustype="ftClick" processcode="true" showfloatpanel="false" relatecomp="kline,klinetimeline,klineInfo,klineVolume,klineAmount" showvalue="收,幅,量,换,额" canresize="false" relatecode="kline" focusedborder="true">
+          <Container name="klinegroup" caption="K线组" align="alClient" height="400">
+            <KLineInfo name="klineInfo" caption="K线信息框" align="alTop" height="20" canresize="false" focustype="ftNone"/>
+            <KLineMainChart name="kline" caption="K线图" align="alClient" height="300" focustype="ftNone" canresize="false" relatecode="klinecontainer,klineInfo,klinetimeline,klineVolume,klineAmount,minute,compMinuteKLine2" relateindex="TradeDate,TradeTime,NewPrice,PrevClose,TodayOpen,TodayHigh,TodayLow,Volume,TotalAmount,DeltaAmount,DeltaVolume,SuspensionFlag">
+              <PopupMenu key="KLine_Fix" caption="K线附图菜单"/>
+            </KLineMainChart>
+            <KLineTimeLine name="klinetimeline" caption="时间轴" align="alBottom" height="18" canresize="false" focustype="ftNone"/>
+          </Container>
+          <KLineSubChart name="klinevolume" caption="K线量图指标" align="alClient" height="150" focustype="ftNone" indextype="1" canclose="false" bottommargin="10" showzeroline="true" relateindex="DeltaVolume,BidVolume1,BidVolume2"/>
+          <KLineSubChart name="klineamount" caption="K线成交额指标" visible="false" align="alClient" height="150" focustype="ftNone" indextype="2" canclose="false" bottommargin="10" showzeroline="true" relateindex="DeltaAmount,BidPrice1,BidPrice2"/>
+        </KLineContainer>
+      </MinuteKLineContainer>
+    </CompContainer>
+    <Separator caption="-"/>
+    <CompContainer name="compStockInfo" imageindex = "13" caption="个股信息" align="alClient" relatecode="StockInfo">
+      <Content name="StockInfo" Key="StockInfo" Caption="股票信息" defcode="600000.SH" Align="alClient" focustype="ftClick" autofontsize="true" manualfontsize="true"/>
+    </CompContainer>
+    <CompContainer name="compAskPrice" imageindex = "5" caption="委卖指标" align="alClient" relatecode="AskPrice">
+      <Content name="AskPrice" Key="AskPrice" Caption="委卖指标" defcode="600000.SH" Align="alClient" focustype="ftClick" autofontsize="true" manualfontsize="true"/>
+    </CompContainer>
+    <CompContainer name="compBidPrice" imageindex = "6" caption="委买指标" align="alClient" relatecode="BidPrice">
+      <Content name="BidPrice" Key="BidPrice" Caption="委买指标" defcode="600000.SH" Align="alClient" focustype="ftClick" autofontsize="true" manualfontsize="true"/>
+    </CompContainer>
+    <CompContainer name="compNewIndica" imageindex = "7" caption="盘面指标" align="alClient" relatecode="NewIndica">
+      <Content name="NewIndica" Key="NewIndicaAB" Caption="盘面指标" defcode="600000.SH" Align="alClient" focustype="ftClick" autofontsize="true" manualfontsize="true"/>
+    </CompContainer>
+    <CompContainer name="compBaseIndica" imageindex = "8" caption="估值指标" align="alClient" relatecode="BaseIndica">
+      <Content name="BaseIndica" Key="BaseIndicaAB" Caption="估值指标" defcode="600000.SH" Align="alClient" focustype="ftClick" autofontsize="true" manualfontsize="true"/>
+    </CompContainer>
+    <Separator caption="-"/>
+    <CompContainer name="compMinuteDealReport" imageindex = "11" caption="最新成交" align="alClient" relatecode="MinuteDealReport">
+      <Deal24Report name="MinuteDealReport" caption="分时明细" align="alClient" defcode="600000.SH"/>
+    </CompContainer>
+    <CompContainer name="compDealReport" imageindex = "9" caption="成交明细" align="alClient" relatecode="DealReport">
+      <Container name="ctToolBar" caption="上容器" align="alTop" Height="20" canresize="false">
+        <CaptionComponent name="ccTip" caption="【说明】成交记录的数据将限制在5000以内。" align="alRight" width="250" textalign="alright,alvcenter" bkgcolor="ToolBar_Flat" bordertype="" textfont="small"/>
+        <ToolBar name="ToolBar" caption="工具栏" canmovebutton="false" showaddbutton="false" align="alClient" canresize="false">
+          <Button caption="过滤大单" showseparator="true" allowstaydown="false" bindname="DealReport" propname="BigOrder" propvalue="1"/>
+          <Button caption="导出数据" showseparator="true" allowstaydown="false" bindname="DealReport" propname="ExportData" propvalue="1"/>
+        </ToolBar>
+      </Container>
+      <DealReport name="DealReport" caption="分时明细" align="alClient" defcode="600000.SH"/>
+    </CompContainer>
+    <Separator caption="-"/>
+    <CompContainer name="compMinuteSH" imageindex = "3" caption="上证分时" align="alClient">
+      <MinuteContainer name="minutecontainerSH" caption="上证分时容器" visible="true" align="alClient" width="100" focustype="ftClick" processcode="true" showcross="false" relatecomp="minuteSH,minutetimelineSH" showvalue="价格,涨跌" canresize="false" relatecode="minuteSH" focusedborder="true">
+        <Minute name="minuteSH" caption="上证分时图" align="alClient" focustype="ftNone" minrequest="true" relatecode="minutecontainerSH,minutetimelineSH" defcode="000001.SH" relateindex="TradeDate,TradeTime,NewPrice,PrevClose,TodayOpen,TodayHigh,TodayLow,Volume,DeltaAmount,DeltaVolume,AveragePrice,HighLimit,LowLimit,SuspensionFlag"/>
+        <MinuteTimeLine name="minutetimelineSH" caption="上证分时时间轴" align="alBottom" focustype="ftNone" height="20" canresize="false"/>
+      </MinuteContainer>
+    </CompContainer>
+    <CompContainer name="compMinuteSZ" imageindex = "4" caption="深证分时" align="alClient">
+      <MinuteContainer name="minutecontainerSZ" caption="深证分时容器" visible="true" align="alClient" width="100" focustype="ftClick" processcode="true" showcross="false" relatecomp="minuteSZ,minutetimelineSZ" showvalue="价格,涨跌" canresize="false" relatecode="minuteSZ" focusedborder="true">
+        <Minute name="minuteSZ" caption="深证分时图" align="alClient" focustype="ftNone" minrequest="true" relatecode="minutecontainerSZ,minutetimelineSZ" defcode="399001.SZ" relateindex="TradeDate,TradeTime,NewPrice,PrevClose,TodayOpen,TodayHigh,TodayLow,Volume,DeltaAmount,DeltaVolume,AveragePrice,HighLimit,LowLimit,SuspensionFlag"/>
+        <MinuteTimeLine name="minutetimelineSZ" caption="深证分时时间轴" align="alBottom" focustype="ftNone" height="20" canresize="false"/>
+      </MinuteContainer>
+    </CompContainer>
+  </Group>
+  <Group caption="市场监控">
+    <!--<CompContainer name="compSectorTree" imageindex = "1" caption="市场切换" align="alClient" relatecode="SectorTree">
+      <SectorTree name="SectorTree" caption="板块树" align="alClient" relatecode="compSectorTree"/>
+    </CompContainer>
+    <Separator caption="-"/-->
+    <CompContainer name="compReport" imageindex = "22" caption="列表报价" align="alClient" relatecode="SectorToolBar" accepttype="astSector">
+      <SectorToolBar name="SectorToolBar" caption="板块切换栏" align="alBottom" height="20" canresize="false" relatecode="dynamicreport,compReport">
+        <Button caption="全部A股" staydown="true" bindname="SectorToolBar" propname="SectorId" propvalue="1101001"/>
+        <Button caption="上证A股" bindname="SectorToolBar" propname="SectorId" propvalue="1101002"/>
+        <Button caption="深证A股" bindname="SectorToolBar" propname="SectorId" propvalue="1101003"/>
+        <Button caption="中小板" bindname="SectorToolBar" propname="SectorId" propvalue="1101005"/>
+        <Button caption="创业板" bindname="SectorToolBar" propname="SectorId" propvalue="1101006"/>
+        <Button caption="全部B股" bindname="SectorToolBar" propname="SectorId" propvalue="1101009"/>
+      </SectorToolBar>
+      <DynamicReport name="dynamicreport" caption="动态报价" align="alClient" defreportname="Dynamic" canzoom="true" defsectorid="1101001" firesetcodetype="ftManual" relatecode="compReport">
+        <PopupMenu key="Report" caption="报价菜单"/>
+      </DynamicReport>
+    </CompContainer>
+<!--
+    <CompContainer name="compMultiChart" caption="多图同列" align="alClient" relatecode="SectorToolBar">
+      <SectorToolBar name="SectorToolBar" caption="板块切换栏" align="alBottom" height="20" canresize="false" relatecode="multichart,compMultiChart">
+        <Button caption="全部A股" staydown="true" bindname="SectorToolBar" propname="SectorId" propvalue="1001001000000000000"/>
+        <Button caption="上证A股" bindname="SectorToolBar" propname="SectorId" propvalue="1001002000000000000"/>
+        <Button caption="深证A股" bindname="SectorToolBar" propname="SectorId" propvalue="1001003000000000000"/>
+        <Button caption="中小板" bindname="SectorToolBar" propname="SectorId" propvalue="1001005000000000000"/>
+        <Button caption="创业板" bindname="SectorToolBar" propname="SectorId" propvalue="1001006000000000000"/>
+        <Button caption="全部B股" bindname="SectorToolBar" propname="SectorId" propvalue="1001008000000000000"/>
+      </SectorToolBar>
+      <MultiChart name="multichart" caption="分时同列" align="alClient" processcode="true" focustype="ftClick" relatecode="compMultiChart"/>
+    </CompContainer>    
+    <CompContainer name="compTopContainer" caption="综合排名" align="alClient" relatecode="SectorToolBar" accepttype="astSector">
+      <SectorToolBar name="SectorToolBar" caption="板块切换栏" align="alBottom" height="20" canresize="false" relatecode="topcontainer,compTopContainer">
+        <Button caption="全部A股" staydown="true" bindname="SectorToolBar" propname="SectorId" propvalue="1001001000000000000"/>
+        <Button caption="上证A股" bindname="SectorToolBar" propname="SectorId" propvalue="1001002000000000000"/>
+        <Button caption="深证A股" bindname="SectorToolBar" propname="SectorId" propvalue="1001003000000000000"/>
+        <Button caption="中小板" bindname="SectorToolBar" propname="SectorId" propvalue="1001005000000000000"/>
+        <Button caption="创业板" bindname="SectorToolBar" propname="SectorId" propvalue="1001006000000000000"/>
+        <Button caption="全部B股" bindname="SectorToolBar" propname="SectorId" propvalue="1001008000000000000"/>
+      </SectorToolBar>
+      <TopContainer name="topcontainer" caption="综合排名" align="alClient" focustype="ftClick" relatecode="compTopContainer"/>
+    </CompContainer>    
+    <Separator caption="-"/>
+    <CompContainer name="compIndexSector" caption="指数成分报表" align="alClient" relatecode="report2" accepttype="astCode" sendtype="astCode">
+      <IndexSectorReport name="report2" caption="指数成分报价" align="alClient" defgroupname="ZHP" defreportname="stock" firesetcodetype="ftManual" selrowbyfocused="true" defsectorid="1001001000000000000" relatecode="compIndexSector,ToolBar2" changedrate="0.8" autofitwidth="true"/>
+      <SectorToolBar name="ToolBar2" caption="板块切换栏" align="alBottom" height="20" canresize="false" relatecode="report2">
+        <Button caption="全部A股" staydown="true" bindname="report2" propname="SectorId" propvalue="1001001000000000000"/>
+        <Button caption="全部B股" bindname="report2" propname="SectorId" propvalue="1001008000000000000"/>
+        <Button caption="中小板" bindname="report2" propname="SectorId" propvalue="1001005000000000000"/>
+        <Button caption="创业板" bindname="report2" propname="SectorId" propvalue="1001006000000000000"/>
+      </SectorToolBar>
+    </CompContainer>
+    <CompContainer name="compRelateIndex" caption="相关指数报表" align="alClient" relatecode="RelateIndex">
+      <RelateIndexReport name="RelateIndex" caption="相关指数报价" focustype="ftMove" align="alClient" width="100" autofitwidth="true" changedrate="0.8" relatecode="IndexSector"/>
+      <IndexSectorReport name="IndexSector" caption="指数相关板块报价" focustype="ftMove" align="alClient" width="200" autofitwidth="true" changedrate="0.8"/>
+    </CompContainer>
+    <Separator caption="-"/>
+    <CompContainer name="compStockIndex" caption="上证深证指数" align="alClient">
+      <DynamicReport name="report1" caption="指数报价" align="alClient" defgroupname="ZHP" defreportname="Index" firesetcodetype="ftManual" selrowbyfocused="true" defsectorid="712130102" relatecode="compStockIndex" changedrate="0.8" autofitwidth="true" cansetheader="false"/>
+      <ToolBar name="ToolBar1" caption="板块切换栏" canclosebutton="false" showaddbutton="false" align="alBottom" height="20" canresize="false" style="fsGradient">
+        <Button caption="上证综合" staydown="true" bindname="report1" propname="SectorId" propvalue="712130102"/>
+        <Button caption="上证主题" bindname="report1" propname="SectorId" propvalue="712130106"/>
+        <Button caption="深证综合" bindname="report1" propname="SectorId" propvalue="712130206"/>
+        <Button caption="深证主题" bindname="report1" propname="SectorId" propvalue="712130204"/>
+      </ToolBar>
+    </CompContainer>
+    <CompContainer name="compStockIndex2" caption="申万中证指数" align="alClient">
+      <DynamicReport name="report3" caption="指数报价" align="alClient" defgroupname="ZHP" defreportname="Index" firesetcodetype="ftManual" selrowbyfocused="true" defsectorid="712130503" relatecode="compStockIndex2" changedrate="0.8" autofitwidth="true" cansetheader="false"/>
+      <ToolBar name="ToolBar3" caption="板块切换栏" canclosebutton="false" showaddbutton="false" align="alBottom" height="20" canresize="false" style="fsGradient">
+        <Button caption="申万一级" staydown="true" bindname="report3" propname="SectorId" propvalue="712130503"/>
+        <Button caption="申万二级" bindname="report3" propname="SectorId" propvalue="712130504"/>
+        <Button caption="中证行业" bindname="report3" propname="SectorId" propvalue="712130302"/>
+        <Button caption="中证主题" bindname="report3" propname="SectorId" propvalue="712130305"/>
+      </ToolBar>
+    </CompContainer>
+    -->
+  </Group>
+  
+  <Group caption="新闻公告">
+    <CompContainer name="compNews" caption="个股新闻" align="alClient" relatecode="nrNews">
+      <NewsReport name="nrNews" reporttype="rtStockNews" align="alClient" width="500" defcode="600000.SH"/>
+    </CompContainer>
+    <CompContainer name="compBullitin" caption="个股公告" align="alClient" relatecode="nrBulletin">
+      <NewsReport name="nrBulletin" reporttype="rtBulletin" caption="个股公告" align="alClient" width="500" defcode="600000.SH"/>
+    </CompContainer>	
+
+    <!--CompContainer name="compNews2" caption="新闻研报2" align="alClient" relatecode="News,Reports">
+      <NewsReport name="News" caption="个股新闻" align="alClient" visible="true" defcode="600000.SH"/>
+      <NewsReport name="Reports" reporttype="rtReport" caption="个股研报" align="alClient" visible="false" defcode="600000.SH"/>
+      <ToolBar name="switchToolBar" caption="功能切换工具栏" canmovebutton="false" showaddbutton="false" align="alBottom" height="20" canresize="false" style="fsGradient">
+        <Button caption="公司新闻" staydown="true" bindname="News" istoggle="true" propname="visible" propvalue="true"/>
+        <Button caption="研究报告" bindname="Reports" istoggle="true" propname="visible" propvalue="true"/>
+      </ToolBar>
+    </CompContainer-->
+  </Group>
+
+</CustomComps>

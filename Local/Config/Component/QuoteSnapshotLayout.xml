@@ -1,0 +1,460 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--根据不同业务类型，配置不同的展示字段；建议使用Category方式进行控制 0:默认布局-->
+<!--Category值说明：1000:股票 2000:期货 3000:期权 4000:基金 5000:债券 6000:指数-->
+<!--LableBrush值说明：0-默认颜色；#8CA4B6-自定义颜色-->
+<!--ValueBrush值说明：0-默认颜色；1-涨跌色；2-上涨颜色；3-下跌颜色 ；4-平颜色；5-动态数值颜色；#8CA4B6-自定义颜色-->
+<!--Stretch值说明：0-默认；1-满屏-->
+<!--Description值说明：字段说明-->
+<!--Precision值说明：-1:默认；0:不保留小数位；1:保留一位小数位...-->
+<ArrayOfIuvQuoteSnapshotLayout>
+	<IuvQuoteSnapshotLayout>
+		<Category  desc="股票">1010,1020</Category>
+		<Fields>
+		  <Field ID="LastPrice"          Name="最新"/>
+		  <Field ID="OpenPrice"          Name="开盘"/>
+		  <Field ID="Change"             Name="涨跌"/>
+		  <Field ID="HighPrice"          Name="最高"/>
+		  <Field ID="ChangePct"          Name="涨幅" Precision="2" ValueBrushType="1" ClearBeforeTrade="1" ValueSuffix="%" />
+		  <Field ID="LowPrice"           Name="最低"/>
+		  <Field ID="TotalAmount"        Name="总量"/>
+		  <Field ID="TotalBalance"       Name="金额"/>
+		  <Field ID="TurnoverRatio"      Name="换手" ValueSuffix="%" />
+		  <!--<Field ID="Amplitude"          Name="振幅"/>-->
+		  <Field ID="VolRatio"           Name="量比"/>
+		  <Field ID="OutAmount"          Name="外盘"/>
+		  <Field ID="InAmount"           Name="内盘"/>
+		  <Field ID="UpPrice"            Name="涨停"/>
+		  <Field ID="DownPrice"          Name="跌停"/>
+		  <!--分割线-->
+		  <Field ID="TotalShares"	     Name="总股本"/>
+		  <Field ID="CirculationShares"	 Name="流通股"/>
+		  <Field ID="MarketValue"        Name="总市值"/>
+		  <Field ID="CirculationValue"   Name="流通值"/>
+		  <Field ID="TTMPE"              Name="TTM市盈"/>
+		  <!--<Field ID="PE"                 Name="市盈率"/>-->
+		  <Field ID="PB"                 Name="市净率"/>
+		</Fields>
+	</IuvQuoteSnapshotLayout>
+	<IuvQuoteSnapshotLayout>
+		<Category  desc="港股">1030</Category>
+		<Fields>
+		  <Field ID="LastPrice"          Name="最新"/>
+		  <Field ID="OpenPrice"          Name="开盘"/>
+		  <Field ID="Change"             Name="涨跌"/>
+		  <Field ID="HighPrice"          Name="最高"/>
+		  <Field ID="ChangePct"          Name="涨幅" Precision="2" ValueBrushType="1" ClearBeforeTrade="1" ValueSuffix="%" />
+		  <Field ID="LowPrice"           Name="最低"/>
+		  <Field ID="TotalAmount"        Name="总量"/>
+		  <Field ID="TotalBalance"       Name="金额"/>
+		  <Field ID="TurnoverRatio"      Name="换手" ValueSuffix="%" />
+		  <Field ID="VolRatio"           Name="量比"/>
+		  <Field ID="OutAmount"          Name="外盘"/>
+		  <Field ID="InAmount"           Name="内盘"/>
+		  <Field ID="TotalShares"	     Name="总股本"/>
+		  <Field ID="CirculationShares"	 Name="流通股"/>
+		  <Field ID="MarketValue"        Name="总市值"/>
+		  <Field ID="CirculationValue"   Name="流通值"/>
+		  <Field ID="TTMPE"              Name="TTM市盈"/>
+		  <Field ID="PB"                 Name="市净率"/>
+		</Fields>
+	</IuvQuoteSnapshotLayout>
+	<IuvQuoteSnapshotLayout>
+		<Category  desc="港股">1040</Category>
+		<Fields>
+		  <Field ID="LastPrice"          Name="最新"/>
+		  <Field ID="OpenPrice"          Name="开盘"/>
+		  <Field ID="Change"             Name="涨跌"/>
+		  <Field ID="HighPrice"          Name="最高"/>
+		  <Field ID="ChangePct"          Name="涨幅" Precision="2" ValueBrushType="1" ClearBeforeTrade="1" ValueSuffix="%" />
+		  <Field ID="LowPrice"           Name="最低"/>
+		  <Field ID="TotalAmount"        Name="总量"/>
+		  <Field ID="TotalBalance"       Name="金额"/>		  
+		  <Field ID="Amplitude"          Name="振幅" Precision="2" ClearBeforeTrade="1" ValueSuffix="%" />		  
+		  <Field ID="VolRatio"           Name="量比"/>
+		  <Field ID="OutAmount"          Name="外盘"/>
+		  <Field ID="InAmount"           Name="内盘"/>
+		</Fields>
+	</IuvQuoteSnapshotLayout>
+	<IuvQuoteSnapshotLayout>
+		<Category desc="期货">2000</Category>
+		<Fields>
+			<Field ID="LastPrice"          Name="现价"/>
+			<Field ID="OpenPrice"          Name="今开"/>
+			<Field ID="Change"             Name="涨跌"/>
+			<Field ID="HighPrice"          Name="最高"/>
+			<Field ID="ChangePct"          Name="涨幅" Precision="2" ValueBrushType="1" ClearBeforeTrade="1" ValueSuffix="%" />
+			<Field ID="LowPrice"           Name="最低"/>
+			<Field ID="Amplitude"          Name="振幅" Precision="2" ClearBeforeTrade="1" ValueSuffix="%" />
+			<Field ID="WAvgPrice"          Name="均价"/>
+			<Field ID="SettlementPrice"    Name="结算"/>
+			<Field ID="PreSettlementPrice" Name="昨结"/>
+			<Field ID="TotalAmount"        Name="总量"/>
+			<Field ID="TotalBalance"       Name="金额"/>
+			<!--分割线-->
+			<Field ID="Position"           Name="持仓"/>
+			<Field ID="AmountDelta"        Name="日增仓"/>
+			<Field ID="UpPrice"            Name="涨停"/>
+			<Field ID="DownPrice"          Name="跌停"/>
+			<Field ID="OutAmount"          Name="外盘"/>
+			<Field ID="InAmount"           Name="内盘"/>
+    </Fields>
+	</IuvQuoteSnapshotLayout>
+
+	<IuvQuoteSnapshotLayout>
+        <Category desc="股票期权">3010</Category>
+        <Fields>
+          <Field ID="LastPrice"            Name="现价"/>
+          <Field ID="OpenPrice"            Name="今开"/>
+          <Field ID="Change"               Name="涨跌"/>
+          <Field ID="HighPrice"            Name="最高"/>
+          <Field ID="ChangePct"            Name="涨幅" Precision="2" ValueBrushType="1" ClearBeforeTrade="1" ValueSuffix="%" />
+          <Field ID="LowPrice"             Name="最低"/>
+          <Field ID="SettlementPrice"      Name="结算"/>
+          <Field ID="PreSettlementPrice"   Name="昨结"/>
+          <Field ID="TotalAmount"          Name="总量"/>
+          <Field ID="TotalBalance"         Name="总额"/>
+          <Field ID="Position"             Name="持仓"/>
+          <Field ID="AmountDelta"          Name="仓差"/>
+          <Field ID="UpPrice"              Name="涨停"/>
+          <Field ID="DownPrice"            Name="跌停"/>
+        </Fields>
+  </IuvQuoteSnapshotLayout>
+
+	<IuvQuoteSnapshotLayout>
+		<Category desc="商品期权">3020</Category>
+		<Fields>
+			<Field ID="LastPrice"          Name="现价"/>
+			<Field ID="OpenPrice"          Name="今开"/>
+			<Field ID="Change"             Name="涨跌"/>
+			<Field ID="HighPrice"          Name="最高"/>
+			<Field ID="ChangePct"          Name="涨幅" Precision="2" ValueBrushType="1" ClearBeforeTrade="1" ValueSuffix="%" />
+			<Field ID="LowPrice"           Name="最低"/>
+			<Field ID="SettlementPrice"    Name="结算"/>
+			<Field ID="PreSettlementPrice" Name="昨结"/>
+			<Field ID="TotalAmount"        Name="总量"/>
+			<Field ID="TotalBalance"       Name="总额"/>
+			<Field ID="Amplitude"          Name="振幅" Precision="2" ClearBeforeTrade="1" ValueSuffix="%" />
+			<Field ID="AvgPrice"           Name="均价"/>
+			<Field ID="Position"           Name="持仓"/>
+			<Field ID="AmountDelta"        Name="仓差"/>
+			<Field ID="CurrentAmount"      Name="现量"/>
+            <Field ID="AmountDelta"        Name="增仓"/>
+            <Field ID="CurrentAmount"      Name="笔数"/>
+            <Field ID="AmountDelta"        Name="均量"/>
+			<Field ID="UpPrice"            Name="涨停"/>
+			<Field ID="DownPrice"          Name="跌停"/>
+			<Field ID="CurrentAmount"      Name="开仓"/>
+            <Field ID="AvgPrice"           Name="平仓"/>
+			<Field ID="OutAmount"          Name="外盘"/>
+			<Field ID="InAmount"           Name="内盘"/>
+		</Fields>
+	</IuvQuoteSnapshotLayout>
+
+	<IuvQuoteSnapshotLayout>
+		<Category desc="基金">4000</Category>
+		<Fields>
+			<Field ID="LastPrice"          Name="最新"/>
+			<Field ID="OpenPrice"          Name="开盘"/>
+			<Field ID="Change"             Name="涨跌"/>
+			<Field ID="HighPrice"          Name="最高"/>
+			<Field ID="ChangePct"          Name="涨幅" Precision="2" ValueBrushType="1" ClearBeforeTrade="1" ValueSuffix="%" />
+			<Field ID="LowPrice"           Name="最低"/>
+			<Field ID="TotalAmount"        Name="总量"/>
+			<Field ID="TotalBalance"       Name="金额"/>
+			<Field ID="TurnoverRatio"      Name="换手" ValueSuffix="%" />
+			<Field ID="VolRatio"           Name="量比"/>
+			<Field ID="OutAmount"          Name="外盘"/>
+			<Field ID="InAmount"           Name="内盘"/>
+			<Field ID="UpPrice"            Name="涨停"/>
+			<Field ID="DownPrice"          Name="跌停"/>
+			<Field ID="NationDebetRatio"   Name="净值" Description="昨日收盘净值"/>
+			<Field ID="Premium"			   Name="溢价率" Precision="2" ValueSuffix="%" />
+		</Fields>
+	</IuvQuoteSnapshotLayout>
+
+	<IuvQuoteSnapshotLayout>
+		<Category desc="ETF基金">4010</Category>
+		<Fields>
+			<Field ID="LastPrice"          Name="最新"/>
+			<Field ID="OpenPrice"          Name="开盘"/>
+			<Field ID="Change"             Name="涨跌"/>
+			<Field ID="HighPrice"          Name="最高"/>
+			<Field ID="ChangePct"          Name="涨幅" Precision="2" ValueBrushType="1" ClearBeforeTrade="1" ValueSuffix="%" />
+			<Field ID="LowPrice"           Name="最低"/>
+			<Field ID="TotalAmount"        Name="总量"/>
+			<Field ID="TotalBalance"       Name="金额"/>
+			<Field ID="TurnoverRatio"      Name="换手" ValueSuffix="%" />
+			<Field ID="VolRatio"           Name="量比"/>
+			<Field ID="OutAmount"          Name="外盘"/>
+			<Field ID="InAmount"           Name="内盘"/>
+			<Field ID="UpPrice"            Name="涨停"/>
+			<Field ID="DownPrice"          Name="跌停"/>
+			<Field ID="IOPV"               Name="净值" Description="盘中实时净值"/>
+			<Field ID="Premium"			   Name="溢价率" Precision="2" ValueSuffix="%" />
+		</Fields>
+	</IuvQuoteSnapshotLayout>
+
+	<IuvQuoteSnapshotLayout>
+		<Category desc="债券">5000</Category>
+		<Fields>
+			<Field ID="LastPrice"          Name="最新"/>
+			<Field ID="OpenPrice"          Name="开盘"/>
+			<Field ID="Change"             Name="涨跌"/>
+			<Field ID="HighPrice"          Name="最高"/>
+			<Field ID="ChangePct"          Name="涨幅" Precision="2" ValueBrushType="1" ClearBeforeTrade="1" ValueSuffix="%" />
+			<Field ID="LowPrice"           Name="最低"/>
+			<Field ID="TotalAmount"        Name="总量"/>
+			<Field ID="TotalBalance"       Name="金额"/>
+			<Field ID="OutAmount"          Name="外盘"/>
+			<Field ID="InAmount"           Name="内盘"/>
+		</Fields>
+	</IuvQuoteSnapshotLayout>
+
+	<IuvQuoteSnapshotLayout>
+		<Category desc="可转债">5010</Category>
+		<Fields>
+			<Field ID="LastPrice"          Name="最新"/>
+			<Field ID="OpenPrice"          Name="开盘"/>
+			<Field ID="Change"             Name="涨跌"/>
+			<Field ID="HighPrice"          Name="最高"/>
+			<Field ID="ChangePct"          Name="涨幅" Precision="2" ValueBrushType="1" ClearBeforeTrade="1" ValueSuffix="%" />
+			<Field ID="LowPrice"           Name="最低"/>
+			<Field ID="TotalAmount"        Name="总量"/>
+			<Field ID="TotalBalance"       Name="金额"/>
+			<Field ID="WAvgPrice"           Name="均价"/>
+			<Field ID="VolRatio"           Name="量比"/>
+			<Field ID="OutAmount"          Name="外盘"/>
+			<Field ID="InAmount"           Name="内盘"/>
+			<!-- <Field ID="Premium"            Name="溢价率" Precision="2" ValueSuffix="%" /> -->
+			<!-- <Field ID="ConversionValue"    Name="转股价值" /> -->
+		</Fields>
+	</IuvQuoteSnapshotLayout>
+	
+	<IuvQuoteSnapshotLayout>
+		<Category desc="指数">6000</Category>
+		<Fields>
+		  <Field ID="LastPrice"          Name="最新"/>
+		  <Field ID="OpenPrice"          Name="开盘"/>
+		  <Field ID="Change"             Name="涨跌"/>
+		  <Field ID="HighPrice"          Name="最高"/>
+		  <Field ID="ChangePct"          Name="涨幅" Precision="2" ValueBrushType="1" ClearBeforeTrade="1" ValueSuffix="%" />
+		  <Field ID="LowPrice"           Name="最低"/>
+		  <Field ID="VolRatio"           Name="量比"/>
+		  <Field ID="Amplitude"          Name="振幅" Precision="2" ClearBeforeTrade="1" ValueSuffix="%" />
+		  <Field ID="TotalAmount"        Name="总量"/>
+		  <Field ID="RiseCount"          Name="上涨"/>
+		  <Field ID="TotalBalance"       Name="金额"/>
+		  <Field ID="MemberCount"        Name="平盘"/>
+		  <Field ID="TurnoverRatio"      Name="换手" ValueSuffix="%" />
+		  <Field ID="FallCount"          Name="下跌"/>
+		  <!--分割线-->
+		  <!-- <Field ID="TotalOffer"         Name="委卖量"/> -->
+		  <!-- <Field ID="TotalBid"           Name="委买量"/> -->
+		  <!-- <Field ID="MemberCount"          Name="成分数"/> -->
+
+		  <!--分割线-->
+		  <!--
+		  <Field ID="TurnoverRatio"      Name="换手率"/>
+		  <Field ID="TotalShares"      Name="总股本"/>
+		  <Field ID="PE"                 Name="市盈率"/>
+		  <Field ID="PB"                 Name="市净率"/>
+		  <Field ID="MarketValue"        Name="总市值"/>
+		  <Field ID="CirculationValue"   Name="流通量"/>-->
+		</Fields>
+    </IuvQuoteSnapshotLayout>
+
+	<!--增加港股指数和境外指数，chegnjin，2021-4-20 19:08:19 -->
+	<IuvQuoteSnapshotLayout>
+		<Category desc="港股指数">6010</Category>
+		<Fields>
+		  <Field ID="LastPrice"          Name="最新"/>
+		  <Field ID="OpenPrice"          Name="开盘"/>
+		  <Field ID="Change"             Name="涨跌"/>
+		  <Field ID="HighPrice"          Name="最高"/>
+		  <Field ID="ChangePct"          Name="涨幅" Precision="2" ValueBrushType="1" ClearBeforeTrade="1" ValueSuffix="%" />
+		  <Field ID="LowPrice"           Name="最低"/>
+		  <Field ID="Amplitude"          Name="振幅" Precision="2" ClearBeforeTrade="1" ValueSuffix="%" />
+		  <Field ID="TotalBalance"       Name="金额"/>
+		</Fields>
+    </IuvQuoteSnapshotLayout>
+	<IuvQuoteSnapshotLayout>
+		<Category desc="境外指数">6020</Category>
+		<Fields>
+		  <Field ID="LastPrice"          Name="最新"/>
+		  <Field ID="OpenPrice"          Name="开盘"/>
+		  <Field ID="Change"             Name="涨跌"/>
+		  <Field ID="HighPrice"          Name="最高"/>
+		  <Field ID="ChangePct"          Name="涨幅" Precision="2" ValueBrushType="1" ClearBeforeTrade="1" ValueSuffix="%" />
+		  <Field ID="LowPrice"           Name="最低"/>
+		  <Field ID="Amplitude"          Name="振幅" Precision="2" ClearBeforeTrade="1" ValueSuffix="%" />
+		  <Field ID="PreClose"           Name="昨收"/>
+		</Fields>
+    </IuvQuoteSnapshotLayout>
+	
+	<!--增加银行间债券指数，chenyj，2021-5-12 16:19:19 -->
+	<IuvQuoteSnapshotLayout>
+		<Category desc="银行间债券指数">6030</Category>
+		<Fields>
+		  <Field ID="LastPrice"          Name="最新"/>
+		  <Field ID="OpenPrice"          Name="开盘"/>
+		  <Field ID="Change"             Name="涨跌"/>
+		  <Field ID="HighPrice"          Name="最高"/>
+		  <Field ID="ChangePct"          Name="涨幅" Precision="2" ValueBrushType="1" ClearBeforeTrade="1" ValueSuffix="%" />
+		  <Field ID="LowPrice"           Name="最低"/>
+		  <Field ID="TotalBalance"       Name="成交量"/>
+		  <Field ID="BusinessFinalPrice" Name="昨收"/>
+		</Fields>
+    </IuvQuoteSnapshotLayout>
+	
+	<!--增加银行间汇率指数，chenyj，2021-5-19 17:09:19 -->
+	<IuvQuoteSnapshotLayout>
+		<Category desc="银行间汇率指数">6040</Category>
+		<Fields>
+		  <Field ID="LastPrice"          Name="最新"/>
+		  <Field ID="OpenPrice"          Name="开盘"/>
+		  <Field ID="Change"             Name="涨跌"/>
+		  <Field ID="HighPrice"          Name="最高"/>
+		  <Field ID="ChangePct"          Name="涨幅" Precision="2" ValueBrushType="1" ClearBeforeTrade="1" ValueSuffix="%" />
+		  <Field ID="LowPrice"           Name="最低"/>
+		</Fields>
+    </IuvQuoteSnapshotLayout>
+	
+	<IuvQuoteSnapshotLayout>
+		<Category desc="外汇">7000</Category>
+		<Fields>
+		  <Field ID="LastPrice"          Name="最新"/>
+		  <Field ID="SpreadPIP"          Name="点差"/>
+		  <Field ID="ChangePIP"          Name="涨跌PIP"/>
+		  <Field ID="HighPrice"          Name="最高"/>
+		  <Field ID="ChangePct"          Name="涨幅" Precision="2" ValueBrushType="1" ClearBeforeTrade="1" ValueSuffix="%" />
+		  <Field ID="LowPrice"           Name="最低"/>
+		  <Field ID="OpenPrice"          Name="开盘"/>
+		  <Field ID="BusinessFinalPrice" Name="上末笔"/>
+		</Fields>
+    </IuvQuoteSnapshotLayout>
+
+	<IuvQuoteSnapshotLayout>
+		<Category desc="远期外汇">7010</Category>
+		<Fields>
+		  <Field ID="LastPrice"          Name="最新"/>
+		  <Field ID="HighPrice"          Name="最高"/>
+		  <Field ID="ChangePct"          Name="涨幅" Precision="2" ValueBrushType="1" ClearBeforeTrade="1" ValueSuffix="%" />
+		  <Field ID="LowPrice"           Name="最低"/>
+		  <Field ID="OpenPrice"          Name="开盘"/>
+		  <Field ID="BusinessFinalPrice" Name="上末笔"/>
+		</Fields>
+    </IuvQuoteSnapshotLayout>
+
+	<IuvQuoteSnapshotLayout>
+		<Category desc="掉期外汇">7020</Category>
+		<Fields>
+		  <Field ID="LastPrice"          Name="最新"/>
+		  <Field ID="Spread"             Name="点差"/>
+		  <Field ID="Change"             Name="涨跌"/>
+		  <Field ID="HighPrice"          Name="最高"/>
+		  <Field ID="ChangePct"          Name="涨幅" Precision="2" ValueBrushType="1" ClearBeforeTrade="1" ValueSuffix="%" />
+		  <Field ID="LowPrice"           Name="最低"/>
+		  <Field ID="OpenPrice"          Name="开盘"/>
+		  <Field ID="BusinessFinalPrice" Name="上末笔"/>
+		</Fields>
+    </IuvQuoteSnapshotLayout>
+
+	<IuvQuoteSnapshotLayout>
+		<Category desc="中间价外汇">7030</Category>
+		<Fields>
+		  <Field ID="LastPrice"          Name="最新"/>
+		  <Field ID="ChangePIP"          Name="涨跌PIP"/>
+		  <Field ID="ChangePct"          Name="涨幅" Precision="2" ValueBrushType="1" ClearBeforeTrade="1" ValueSuffix="%" />
+		  <Field ID="BusinessFinalPrice" Name="昨收"/>
+		</Fields>
+    </IuvQuoteSnapshotLayout>
+	
+	<!--增加人民币即期，chenyj，2021-5-12 16:18:19 -->
+	<IuvQuoteSnapshotLayout>
+		<Category desc="人民币即期外汇">7040</Category>
+		<Fields>
+		  <Field ID="LastPrice"          Name="最新"/>
+		  <Field ID="SpreadPIP"          Name="点差"/>
+		  <Field ID="ChangePIP"          Name="涨跌PIP"/>
+		  <Field ID="HighPrice"          Name="最高"/>
+		  <Field ID="ChangePct"          Name="涨幅" Precision="2" ValueBrushType="1" ClearBeforeTrade="1" ValueSuffix="%" />
+		  <Field ID="LowPrice"           Name="最低"/>
+		  <Field ID="OpenPrice"          Name="开盘"/>
+		  <Field ID="BusinessFinalPrice" Name="上末笔"/>
+		  <Field ID="LastPrice" 		 Name="中间价"/>
+		  <Field ID="SpecialClosePrice"  Name="16:30收盘"/>
+		</Fields>
+    </IuvQuoteSnapshotLayout>
+	
+	<IuvQuoteSnapshotLayout>
+		<Category desc="外汇竞价">7050</Category>
+		<Fields>
+		  <Field ID="LastPrice"          Name="最新"/>
+		  <Field ID="SpreadPIP"          Name="点差"/>
+		  <Field ID="ChangePIP"          Name="涨跌PIP"/>
+		  <Field ID="HighPrice"          Name="最高"/>
+		  <Field ID="ChangePct"          Name="涨幅" Precision="2" ValueBrushType="1" ClearBeforeTrade="1" ValueSuffix="%" />
+		  <Field ID="LowPrice"           Name="最低"/>
+		  <Field ID="OpenPrice"          Name="开盘"/>
+		  <Field ID="BusinessFinalPrice" Name="上末笔"/>
+		</Fields>
+    </IuvQuoteSnapshotLayout>
+
+	<IuvQuoteSnapshotLayout>
+		<Category desc="债券远期合约">8010</Category>
+		<Fields>
+		  <Field ID="LastPrice"          Name="最新" />
+		  <Field ID="OpenPrice"          Name="开盘" />
+		  <Field ID="Change"             Name="涨跌" />
+		  <Field ID="HighPrice"          Name="最高" />
+		  <Field ID="ChangePct"          Name="涨幅" Precision="2" ValueBrushType="1" ClearBeforeTrade="1" ValueSuffix="%" />
+		  <Field ID="LowPrice"           Name="最低" />
+		  <Field ID="SettlementPrice"    Name="结算" />
+	      <Field ID="BusinessFinalPrice" Name="昨收" />
+		</Fields>
+   	 </IuvQuoteSnapshotLayout>
+	 
+	<IuvQuoteSnapshotLayout>
+		<Category  desc="新三板">12000</Category>
+		<Fields>
+		  <Field ID="LastPrice"          Name="最新"/>
+		  <Field ID="OpenPrice"          Name="开盘"/>
+		  <Field ID="Change"             Name="涨跌"/>
+		  <Field ID="HighPrice"          Name="最高"/>
+		  <Field ID="ChangePct"          Name="涨幅" Precision="2" ValueBrushType="1" ClearBeforeTrade="1" ValueSuffix="%" />
+		  <Field ID="LowPrice"           Name="最低"/>
+		  <Field ID="TotalAmount"        Name="总量"/>
+		  <Field ID="TotalBalance"       Name="金额"/>
+		  <Field ID="TurnoverRatio"      Name="换手" ValueSuffix="%" />
+		  <Field ID="VolRatio"           Name="量比"/>
+		  <Field ID="OutAmount"          Name="外盘"/>
+		  <Field ID="InAmount"           Name="内盘"/>
+		  <Field ID="UpPrice"            Name="涨停"/>
+		  <Field ID="DownPrice"          Name="跌停"/>
+		  <!--分割线-->
+		  <Field ID="TotalShares"	     Name="总股本"/>
+		  <Field ID="CirculationShares"	 Name="流通股"/>
+		  <Field ID="MarketValue"        Name="总市值"/>
+		  <Field ID="CirculationValue"   Name="流通值"/>		  
+		  <Field ID="PE"                 Name="市盈[动]"/>
+		  <Field ID="PB"                 Name="市净率"/>
+		</Fields>
+	</IuvQuoteSnapshotLayout>
+	
+	<IuvQuoteSnapshotLayout>
+		<Category desc="其他">0</Category>
+		<Fields>
+			<Field ID="HighPrice"          Name="最高价"/>
+			<Field ID="OpenPrice"          Name="开盘价"/>
+			<Field ID="TotalAmount"        Name="总量"/>
+			<Field ID="LowPrice"           Name="最低价"/>
+			<Field ID="PreClose"           Name="昨收价"/>
+			<Field ID="TotalBalance"       Name="成交额"/>
+			<Field ID="PE"                 Name="市盈率"/>
+			<Field ID="MarketValue"        Name="总市值"/>
+			<Field ID="CirculationValue"   Name="流通量"/>
+			<Field ID="Amplitude"          Name="振   幅" Precision="2" ClearBeforeTrade="1" ValueSuffix="%" />
+			<Field ID="TurnoverRatio"      Name="换手率" ValueSuffix="%" />
+		</Fields>
+	</IuvQuoteSnapshotLayout>
+</ArrayOfIuvQuoteSnapshotLayout>

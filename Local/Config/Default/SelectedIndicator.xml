@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Index>
+  <SelectedIndicators>
+    <SelectedIndicator IndicatorName="MACD" Description="" IsTopPanel="false" />
+    <SelectedIndicator IndicatorName="MA" Description="" IsTopPanel="true" />
+  </SelectedIndicators>
+</Index>

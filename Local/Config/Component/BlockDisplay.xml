@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BlockDispaySettings>
+	<BlockAbbrs>
+		<BlockAbbr BlockCode="XBHS.ZS" Abbr="指数" />
+		<BlockAbbr BlockCode="XBHS.ZJHHY" Abbr="证监会行业" />
+		<BlockAbbr BlockCode="XBHS.HY" Abbr="行业" />
+		<BlockAbbr BlockCode="XBHS.GN" Abbr="概念" />
+		<BlockAbbr BlockCode="XBHS.DY" Abbr="地域" />
+		<BlockAbbr BlockCode="XBCJHS.ZZZSHY2016B" Abbr="中证指数行业" />
+		<BlockAbbr BlockCode="XBCJHS.ZXHY" Abbr="中信行业" />
+		<BlockAbbr BlockCode="XBCJHS.ZSCF" Abbr="指数成份" />
+		<BlockAbbr BlockCode="XBCJHS.ZJHHY2012ZBPL" Abbr="证监会行业" />
+		<BlockAbbr BlockCode="XBCJHS.ZJHHY2012" Abbr="证监会行业" />
+		<BlockAbbr BlockCode="XBCJHS.SWHY2014" Abbr="申万行业" />
+		<BlockAbbr BlockCode="XBCJHS.SC" Abbr="市场" />
+		<BlockAbbr BlockCode="XBCJHS.JYDY" Abbr="聚源地域" />
+		<BlockAbbr BlockCode="XBCJHS.HY" Abbr="SSE行业" />
+		<BlockAbbr BlockCode="XBCJHS.GN" Abbr="概念" />
+		<BlockAbbr BlockCode="XBCJHS.DY" Abbr="地域" />
+		<BlockAbbr BlockCode="DefaultAbbr" Abbr="其他" />
+	</BlockAbbrs>
+	<!--未设置filter时默认展示全部板块，设置后只展示列表中的板块-->
+	<BlockFilters MarketCategory="1010,1020">
+		<BlockFilter BlockCode="XBCJHS.ZZZSHY2016B"/>
+		<BlockFilter BlockCode="XBCJHS.ZXHY"/>
+		<BlockFilter BlockCode="XBCJHS.ZJHHY2012"/>
+		<BlockFilter BlockCode="XBCJHS.SWHY2014"/>
+		<BlockFilter BlockCode="XBCJHS.SC"/>
+		<BlockFilter BlockCode="XBCJHS.HY"/>
+		<BlockFilter BlockCode="XBCJHS.GN"/>
+		<BlockFilter BlockCode="XBCJHS.DY"/>
+	</BlockFilters>
+</BlockDispaySettings>

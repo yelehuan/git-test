@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jsplugins>
+    <jspluginonline type="et" url="https://client.cnfic.com.cn/web/wps/" enable="enable_dev" name="新华财经"/>
+</jsplugins>

@@ -1,0 +1,116 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>IUV.Common.ThemesManager</name>
+    </assembly>
+    <members>
+        <member name="T:IUV.Common.ThemesManager.AssemblySkin">
+            <summary>
+            load skin form assembly
+            </summary>
+        </member>
+        <member name="T:IUV.Common.ThemesManager.SkinBase">
+            <summary>
+            skinBase
+            </summary>
+        </member>
+        <member name="M:IUV.Common.ThemesManager.SkinBase.Load">
+            <summary>
+            load
+            </summary>
+        </member>
+        <member name="P:IUV.Common.ThemesManager.CustomResourceDictionary.Symbol">
+            <summary>
+            用于区分皮肤种类
+            同种皮肤的Symbol必须一致
+            一种皮肤可以包含多个ResourceDictionary文件
+            </summary>
+        </member>
+        <member name="F:IUV.Common.ThemesManager.Common.ThemeManager._skinCache">
+            <summary>
+            引用皮肤缓存
+            </summary>
+        </member>
+        <member name="E:IUV.Common.ThemesManager.Common.ThemeManager.OnSkinChanged">
+            <summary>
+            换肤事件通知
+            </summary>
+        </member>
+        <member name="M:IUV.Common.ThemesManager.Common.ThemeManager.LoadDefaultResource">
+            <summary>
+            载入默认样式Default.xaml
+            </summary>
+        </member>
+        <member name="M:IUV.Common.ThemesManager.Common.ThemeManager.TryChangeSkin(System.String)">
+            <summary>
+            换肤(建议使用 TryChangeSkin换肤,暂时有Light,Dark皮肤,不要使用 Application.Current.Resources.MergedDictionaries换肤)
+            </summary>
+        </member>
+        <member name="M:IUV.Common.ThemesManager.Common.ThemeManager.TryChangeSkin(System.String,System.String)">
+            <summary>
+            换肤(建议使用 TryChangeSkin换肤,暂时有Light,Dark皮肤,不要使用 Application.Current.Resources.MergedDictionaries换肤)
+            </summary>
+            <param name="skinType">皮肤XAML文件名称(不含后缀名)</param>
+            <param name="skinUrl">XAML文件绝对路径(如: pack://application:,,,//IUV.Common.Themes;component/DarkSkin/Style/Dark.xaml )</param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.Common.ThemesManager.Common.ThemeManager.GetUrl(System.String)">
+            <summary>
+            获取皮肤字符串地址
+            </summary>
+            <param name="skinType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.Common.ThemesManager.Common.ThemeManager.TryRemoveOldSkin">
+            <summary>
+            尝试移除原有皮肤样式
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:IUV.Common.ThemesManager.XamlSkin">
+            <summary>
+            加载Xaml文件类型的皮肤
+            </summary>
+        </member>
+        <member name="T:IUV.Common.ThemesManager.Properties.Resources">
+            <summary>
+              强类型资源类，用于查找本地化字符串等。
+            </summary>
+        </member>
+        <member name="P:IUV.Common.ThemesManager.Properties.Resources.ResourceManager">
+            <summary>
+              返回此类使用的缓存 ResourceManager 实例。
+            </summary>
+        </member>
+        <member name="P:IUV.Common.ThemesManager.Properties.Resources.Culture">
+            <summary>
+              覆盖当前线程的 CurrentUICulture 属性
+              使用此强类型的资源类的资源查找。
+            </summary>
+        </member>
+        <member name="T:IUV.Common.ThemesManager.ThemesManagerContext">
+            <summary>
+            皮肤管理器
+            </summary>
+        </member>
+        <member name="M:IUV.Common.ThemesManager.ThemesManagerContext.ChangeSkin(System.String,System.Uri)">
+            <summary>
+            change skin by xmal
+            </summary>
+        </member>
+        <member name="M:IUV.Common.ThemesManager.ThemesManagerContext.ChangeSkin(System.String,System.String)">
+            <summary>
+            change skin by assmbly
+            under the 3.5 of .net FrameWork
+            </summary>
+            <param name="skinName">skinName</param>
+            <param name="assemblyPath">assemblyPath</param>
+        </member>
+        <member name="M:IUV.Common.ThemesManager.ThemesManagerContext.OnSkinChanged(System.String)">
+            <summary>
+            OnSkinChanged
+            </summary>
+            <param name="themeName"></param>
+        </member>
+    </members>
+</doc>

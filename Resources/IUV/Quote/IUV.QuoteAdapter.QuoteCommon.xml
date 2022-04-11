@@ -1,0 +1,276 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>IUV.QuoteAdapter.QuoteCommon</name>
+    </assembly>
+    <members>
+        <member name="T:IUV.QuoteAdapter.QuoteCommon.QuoteData">
+            <summary>
+            缓存适配层
+            <para>用于缓存实现层各种行情数据,如订阅列表，市场代码集合等</para>
+            </summary>
+        </member>
+        <member name="F:IUV.QuoteAdapter.QuoteCommon.QuoteData.subProductDic">
+            <summary>
+            行情快照订阅缓存列表
+            </summary>
+        </member>
+        <member name="F:IUV.QuoteAdapter.QuoteCommon.QuoteData.subYhjProductDic">
+            <summary>
+            银行间行情快照订阅缓存列表
+            </summary>
+        </member>
+        <member name="F:IUV.QuoteAdapter.QuoteCommon.QuoteData.subOptionIndexProductDic">
+            <summary>
+            期权增值数据快照订阅缓存列表
+            </summary>
+        </member>
+        <member name="F:IUV.QuoteAdapter.QuoteCommon.QuoteData.marketInfoDic">
+            <summary>
+            市场分类缓存列表
+            </summary>
+        </member>
+        <member name="F:IUV.QuoteAdapter.QuoteCommon.QuoteData.marketSnapDic">
+            <summary>
+            市场代码缓存列表
+            </summary>
+        </member>
+        <member name="F:IUV.QuoteAdapter.QuoteCommon.QuoteData.preNameDic">
+            <summary>
+            键盘精灵曾用名缓存列表
+            </summary>
+        </member>
+        <member name="P:IUV.QuoteAdapter.QuoteCommon.QuoteData.TypeCodeDic">
+            <summary>
+            类型代码字典
+            </summary>
+        </member>
+        <member name="M:IUV.QuoteAdapter.QuoteCommon.QuoteData.ManageSubYhjData(System.Object,IUV.Common.Models.BankQuoteCode,IUV.Common.Models.SubscribeType)">
+            <summary>
+            
+            </summary>
+            <param name="targetObj"></param>
+            <param name="prodObj"></param>
+            <param name="subType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.QuoteAdapter.QuoteCommon.QuoteData.GetAlreadyExistSubscribe(IUV.Common.Models.MarketInfo)">
+            <summary>
+            市场初始化完成后，重新订阅代码。
+            </summary>
+            <param name="marketInfo"></param>
+        </member>
+        <member name="M:IUV.QuoteAdapter.QuoteCommon.QuoteData.GetAllAlreadyExistSubscribe">
+            <summary>
+            获取所有已订阅代码、断网重连后重新订阅
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.QuoteAdapter.QuoteCommon.QuoteData.GetCacheDataByTargetObj(System.Object)">
+            <summary>
+            通过模块获取该模块的订阅列表
+            </summary>
+            <param name="targetObj">模块对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.QuoteAdapter.QuoteCommon.QuoteData.GetTargetSub(IUV.Common.Models.QuoteCode)">
+            <summary>
+            获取初始化字典集合
+            </summary>
+            <param name="prodObj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.QuoteAdapter.QuoteCommon.QuoteData.ExcuteOverSubData(System.Object,IUV.Common.Models.QuoteCode)">
+            <summary>
+            覆盖订阅
+            </summary>
+            <param name="targetObj">订阅主推的界面对象</param>
+            <param name="prodObj">订阅代码</param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.QuoteAdapter.QuoteCommon.QuoteData.ManageSubData(System.Object,System.Collections.Generic.IList{IUV.Common.Models.QuoteCode},IUV.Common.Models.SubscribeType)">
+            <summary>
+            多个代码维护
+            </summary>
+            <param name="targetObj"></param>
+            <param name="prodObjList"></param>
+            <param name="subType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.QuoteAdapter.QuoteCommon.QuoteData.InvokeSubDelegate(System.Object,IUV.Common.Models.QuoteSnapshot)">
+            <summary>
+            判断当前对象是否需要执行回调
+            </summary>
+            <param name="key"></param>
+            <param name="prod"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.QuoteAdapter.QuoteCommon.QuoteData.GetSubDelegate(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.QuoteAdapter.QuoteCommon.QuoteData.InvokeSubYhjDelegate(System.Object,IUV.Common.Models.BankQuoteCode)">
+            <summary>
+            
+            </summary>
+            <param name="key"></param>
+            <param name="prod"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.QuoteAdapter.QuoteCommon.QuoteData.InvokeSubDelegate(System.Object,IUV.Common.Models.QuoteCode)">
+            <summary>
+            
+            </summary>
+            <param name="key"></param>
+            <param name="prod"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.QuoteAdapter.QuoteCommon.QuoteData.ManageSubOptionIndexData(System.Object,IUV.Common.Models.QuoteCode,IUV.Common.Models.SubscribeType)">
+            <summary>
+            
+            </summary>
+            <param name="targetObj"></param>
+            <param name="prodObj"></param>
+            <param name="subType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.QuoteAdapter.QuoteCommon.QuoteData.InvokeSubOptionIndexDelegate(System.Object,IUV.Common.Models.QuoteCode)">
+            <summary>
+            判断当前对象是否需要执行回调
+            </summary>
+            <param name="key"></param>
+            <param name="prod"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.QuoteAdapter.QuoteCommon.QuoteData.GetMarketInfo(System.String)">
+            <summary>
+            获取缓存的市场分类
+            <para>若不存在则返回null</para>
+            </summary>
+            <param name="marketCode">市场代码</param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.QuoteAdapter.QuoteCommon.QuoteData.AddOrUpdateMarketInfo(System.String,System.Collections.Generic.List{IUV.Common.Models.MarketInfo})">
+            <summary>
+            新增或者更新市市场分类
+            </summary>
+            <param name="marketCode">市场代码</param>
+            <param name="mktInfo">市场分类对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.QuoteAdapter.QuoteCommon.QuoteData.GetAllMaketKeys">
+            <summary>
+            获取全市场市场代码
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.QuoteAdapter.QuoteCommon.QuoteData.GetAllMaketSnaps">
+            <summary>
+            获取全市场数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.QuoteAdapter.QuoteCommon.QuoteData.GetMarketSnap(System.String)">
+            <summary>
+            获取缓存的市场代码列表
+            <para>若不存在则返回null</para>
+            </summary>
+            <param name="marketCode">市场代码</param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.QuoteAdapter.QuoteCommon.QuoteData.GetQuoteSnapshot(System.String,System.String)">
+            <summary>
+            获取缓存的市场代码对象
+            <para>若不存在则返回null</para>
+            </summary>
+            <param name="marketCode">市场代码</param>
+            <param name="quoteCode">代码</param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.QuoteAdapter.QuoteCommon.QuoteData.AddOrUpdateMarketSnap(System.String,IUV.Common.Models.MarketSnap)">
+            <summary>
+            新增或者更新市市场代码表
+            </summary>
+            <param name="marketCode">市场代码</param>
+            <param name="mktSnap">市场代码列表对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.QuoteAdapter.QuoteCommon.QuoteData.GetMarketTypes(System.String,System.String)">
+            <summary>
+            获取市场分类
+            </summary>
+            <param name="mic"></param>
+            <param name="blockCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.QuoteAdapter.QuoteCommon.QuoteData.FormatMarketCode(System.String)">
+            <summary>
+            格式化市场代码，获取出主市场代码
+            </summary>
+            <param name="marketCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.QuoteAdapter.QuoteCommon.QuoteData.GetPreNameList(System.String)">
+            <summary>
+            获取曾用名
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.QuoteAdapter.QuoteCommon.QuoteData.AddPreNameInfo(System.String,System.Collections.Generic.List{System.String})">
+            <summary>
+            新增曾用名
+            </summary>
+            <param name="key"></param>
+            <param name="oldNameList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.QuoteAdapter.QuoteCommon.QuoteData.UpdateTypeCode(System.String,System.String)">
+            <summary>
+            更新分类字典
+            </summary>
+            <param name="key"></param>
+            <param name="value"></param>
+        </member>
+        <member name="T:IUV.QuoteAdapter.QuoteCommon.SubscribeManager">
+            <summary>
+            订阅管理器
+            </summary>
+        </member>
+        <member name="M:IUV.QuoteAdapter.QuoteCommon.SubscribeManager.Lock">
+            <summary>
+            Lock
+            </summary>
+        </member>
+        <member name="M:IUV.QuoteAdapter.QuoteCommon.SubscribeManager.Unlock">
+            <summary>
+            Unlock
+            </summary>
+        </member>
+        <member name="M:IUV.QuoteAdapter.QuoteCommon.SubscribeManager.Subscribe(System.Object,IUV.Common.Models.QuoteCode,IUV.Common.Models.SubscribeType)">
+            <summary>
+            订阅
+            </summary>
+            <param name="target"></param>
+            <param name="prodObj"></param>
+            <param name="subType"></param>
+            <returns>是否需要继续操作</returns>
+        </member>
+        <member name="M:IUV.QuoteAdapter.QuoteCommon.SubscribeManager.IsSubscribed(System.Object,IUV.Common.Models.QuoteCode)">
+            <summary>
+            是否订阅
+            </summary>
+            <param name="target"></param>
+            <param name="product"></param>
+            <returns></returns>
+        </member>
+        <member name="T:IUV.QuoteAdapter.QuoteCommon.TimeoutFuncUtility">
+            <summary>
+            超时方法通用类
+            </summary>
+        </member>
+    </members>
+</doc>

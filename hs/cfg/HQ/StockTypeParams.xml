@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Configs>
+<!--default放最前面，后面的可以对default值进行覆盖-->
+<!--Scale:价格值转换比率(double值扩大倍数变为int64值)-->
+  <StockTypes name="default">
+    <param name="ContentKey" value="stock_zhp"/>
+    <param name="MinuteKline" value="minute,kline"/>
+    <param name="PrevSettle" value="false"/>
+    <param name="Scale" value="1000"/>
+    <param name="ShowMinuteMenu" value="true"/>
+    <param name="IsShowMonitor" value="true"/>
+    <param name="ShowChangeHand" value="true"/>
+  </StockTypes>
+  <StockTypes name="S.SH,S.SZ,S.OC,S.CSI,S.HK,S">
+    <param name="ShowAvgLine" value="false"/>
+    <param name="ShowAmount" value="true"/>
+    <param name="ShowLingXian" value="true"/>
+    <param name="IsIndex" value="true"/>
+    <param name="ContentKey" value="index_zhp"/>
+    <param name="DoNotShowChip" value="true"/>
+    <param name="ShowChangeHand" value="false"/>
+  </StockTypes>
+  <StockTypes name="F.SH,F.SZ">
+    <param name="MinuteKline" value="minute,kline,netvalue"/>
+    <param name="ShowChangeHand" value="false"/>
+  </StockTypes>
+  <StockTypes name="OF,OFT">
+    <param name="ShowMinuteMenu" value="false"/>
+    <param name="IsShowForwardExerType" value="false"/>
+    <param name="IsShowMonitor" value="false"/><!-- 是否显示闪电预警菜单 -->
+    <param name="IsShowHistoryMinute" value="False"/><!-- 是否显示历史分时 -->
+    <param name="ShowChangeHand" value="false"/>
+  </StockTypes>
+  <StockTypes name="TF.CFE,IF.CFE,FU1.SHF,FU1.DCE,FU1.CZC,FU2.SHF,FU2.DCE,FU2.CZC,FU3.SHF,FU4.SHF,FU5.DCE,FU5.CZC,FU4.INE">
+    <param name="MinuteKline" value="minute,kline,netvalue"/>
+    <param name="PrevSettle" value="true"/>
+    <param name="IsFuture" value="true"/>
+    <param name="HideAFQDType" value="true"/>
+    <param name="ShowChangeHand" value="false"/>
+  </StockTypes>
+  <StockTypes name="FSR.CFES,FSQ.CFES,RBD.CFES,FWR.CFES,FWQ.CFES,FFR.CFES,FOR.CFES">
+	<param name="Scale" value="1000000"/>
+	<param name="ShowMinuteMenu" value="false"/>
+    <param name="IsShowForwardExerType" value="false"/>
+    <param name="IsShowMonitor" value="false"/><!-- 是否显示闪电预警菜单 -->
+    <param name="IsShowHistoryMinute" value="False"/><!-- 是否显示历史分时 -->
+    <param name="ShowChangeHand" value="false"/>
+  </StockTypes>
+  <StockTypes name="FUO.SH,FUO3.SHF,FUO5.DCE,FUO5.CZC">
+	<param name="Scale" value="10000"/>
+  </StockTypes>  
+  
+  <StockTypes name="BO.IB">
+	<param name="Scale" value="1000000"/>
+  </StockTypes>  
+  
+  <StockTypes name="FU.NYM,FU.ICE,FU.CBOT,FU.CME,FU.CMX">
+	<param name="Scale" value="10000"/>
+  </StockTypes>     
+</Configs>

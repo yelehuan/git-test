@@ -1,0 +1,84 @@
+﻿<?xml version="1.0"?>
+<ArrayOfXmlConfigItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <XmlConfigItem>
+    <Key>KLineZoomLevelKey</Key>
+    <Value><![CDATA[<?xml version="1.0"?>
+<KLineConfigModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <KeepRecordCount>false</KeepRecordCount>
+  <ZoomLevel>5</ZoomLevel>
+</KLineConfigModel>]]></Value>
+  </XmlConfigItem>
+  <XmlConfigItem>
+    <Key>TradeStatus</Key>
+    <Value><![CDATA[<?xml version="1.0"?>
+<TradeStatusModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CustomData>
+    <TradeStatusDic>
+      <Key>Start</Key>
+      <Value>准备开市</Value>
+    </TradeStatusDic>
+    <TradeStatusDic>
+      <Key>PreTrade</Key>
+      <Value>盘前</Value>
+    </TradeStatusDic>
+    <TradeStatusDic>
+      <Key>CollectBid</Key>
+      <Value>集合竞价</Value>
+    </TradeStatusDic>
+    <TradeStatusDic>
+      <Key>Trade</Key>
+      <Value>连续竞价</Value>
+    </TradeStatusDic>
+    <TradeStatusDic>
+      <Key>Halt</Key>
+      <Value>暂停交易</Value>
+    </TradeStatusDic>
+    <TradeStatusDic>
+      <Key>Suspend</Key>
+      <Value>停牌</Value>
+    </TradeStatusDic>
+    <TradeStatusDic>
+      <Key>STOPT</Key>
+      <Value>停牌</Value>
+    </TradeStatusDic>
+    <TradeStatusDic>
+      <Key>Break</Key>
+      <Value>午间休市</Value>
+    </TradeStatusDic>
+    <TradeStatusDic>
+      <Key>PosTrade</Key>
+      <Value>盘后</Value>
+    </TradeStatusDic>
+    <TradeStatusDic>
+      <Key>EndTrade</Key>
+      <Value>闭市</Value>
+    </TradeStatusDic>
+    <TradeStatusDic>
+      <Key>POSMT</Key>
+      <Value>盘后固定交易</Value>
+    </TradeStatusDic>
+    <TradeStatusDic>
+      <Key>TemporarySuspend</Key>
+      <Value>临时停牌</Value>
+    </TradeStatusDic>
+  </CustomData>
+</TradeStatusModel>]]></Value>
+  </XmlConfigItem>
+  <XmlConfigItem>
+    <Key>MenuManagerConfig</Key>
+    <Value><![CDATA[<?xml version="1.0"?>
+<ArrayOfMenuManagerConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" />]]></Value>
+  </XmlConfigItem>
+  <XmlConfigItem>
+    <Key>KLineWindowNumKey</Key>
+    <Value><![CDATA[<?xml version="1.0"?>
+<KlineWindowNumModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <WindowNum>3</WindowNum>
+</KlineWindowNumModel>]]></Value>
+  </XmlConfigItem>
+  <XmlConfigItem>
+    <Key>UserBlockConfig</Key>
+    <Value><![CDATA[<?xml version="1.0"?>
+<UserBlockConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" LastBlockId="1101001" LastBlockIds="1101001,1101100" />]]></Value>
+  </XmlConfigItem>
+</ArrayOfXmlConfigItem>

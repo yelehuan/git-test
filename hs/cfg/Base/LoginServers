@@ -1,0 +1,6 @@
+﻿NAME,DESC,SERVER,PORT,URL,TAG,
+ZJS0,MVP版,zhimou.gildata.com,80,/isv/test/jintan/authuser/zd/serverlist,0,
+ZJS,聚源开发服务器,zhimou.gildata.com,80,/isv/test/jintan/authuser/zd/serverlist,1,
+ZB1,聚源中经社测试服务器,zhimou.gildata.com,80,/xhcj/usercenter/auth/zd/serverlist,2,
+ZB1,中经社开发环境,172.25.4.213,80,/usercenter/auth/zd/serverlist,3,
+ZB1,中经社测试环境,172.25.4.192,80,/usercenter/auth/zd/serverlist,4,

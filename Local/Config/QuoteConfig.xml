@@ -1,0 +1,41 @@
+﻿<?xml version="1.0"  ?>
+<adapterConfig >
+    <!--全局配置-->
+    <globalSettings>
+        <log path="..\QuoteLogs" logLevel="1" />
+        <!--功能路由配置-->
+        <routers>
+            <router func="*"  adapterId ="101" serverId="1011" />
+        </routers>
+    </globalSettings>
+
+    <!--适配层配置-->
+    <adapters>
+        <adapter id="101" name="Sdk适配器" assembly="Resources\IUV\Quote\IUV.QuoteAdapter.H5SdkImpl.dll" className="IUV.QuoteAdapter.H5SdkImpl.SdkQuoteAdapter">
+            <customData>
+                <subscribe_per_market value="true"/>
+            </customData>
+            <servers>
+                <server serverId="1011" ip="114.247.108.227" port="9000" serverName="中金社环境"  QuoteLevel="L1">
+                    <markets>
+                        <market describe="上海交易所" mic="XSHG" />
+                        <market describe="深圳交易所" mic="XSHE" />
+                        <market describe="上海期货交易所" mic="XSGE"/>
+                        <market describe="大连商品交易所" mic="XDCE"/>
+                        <market describe="郑州商品交易所" mic="XZCE"/>
+                        <market describe="中金期货交易所" mic="CCFX"/>
+                        <market describe="上海能源期货交易中心" mic="XINE"/>
+                        <market describe="板块分类" mic="XBHS"/>
+                        <market describe="美股" mic="XNYS"/>
+                        <market describe="港股主板" mic="XHKG-M"/>
+                        <market describe="港股创业板" mic="XHKG-G"/>
+                        <market describe="港股指数" mic="XHKG-I"/>
+                        <market describe="外汇交易中心" mic="FXCFES"/>
+                        <market describe="外汇交易中心债券市场" mic="BONDCFES"/>
+                        <market describe="上海商品期权" mic="XSGE-O"/>
+                    </markets>
+                </server>
+            </servers>
+        </adapter>
+    </adapters>
+</adapterConfig>

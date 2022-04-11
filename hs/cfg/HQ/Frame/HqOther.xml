@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Layout>
+  <PageGroup namelist="DEALREPORT">
+    <Page name="MinutePage" caption="分时明细" relatecode="DealReport" processcode="true">
+      <ToolBar name="ToolBar" caption="工具栏" canmovebutton="false" showaddbutton="false" align="alTop" height="20" canresize="false">
+        <Button caption="过滤大单" showseparator="true" allowstaydown="false" bindname="DealReport" propname="BigOrder" propvalue="1"/>
+        <Button caption="导出数据" showseparator="true" allowstaydown="false" bindname="DealReport" propname="ExportData" propvalue="1"/>
+      </ToolBar>
+      <DealReport name="DealReport" caption="分时明细" align="alClient"/>
+    </Page>
+  </PageGroup>
+  
+   <PageGroup namelist="A.SH,A.SZ,B.SH,B.SZ,K.SH,P.SH,P.SZ,T.OC,P.OC,S.OC,S.SH,S.SZ,S.CSI,S,F.SH,F.SZ,OF,OFT,X.HK,S.HK,IF.CFE,TF.CFE,FU1.SHF,FU1.DCE,FU1.CZC,FU2.SHF,FU2.DCE,FU2.CZC,FU3.SHF,FU4.SHF,FU5.DCE,FU5.CZC,BO.SH,BO.SZ,BO.IB,BOND,CB.SH,CB.SZ,IR.SH,IR.SZ,IR.IB,STIR">
+    <Page name="MinutePage" caption="默认分时页面" pagetype="ptMinute" relatecode="minute" deffocused="minutecontainer">
+      <Container name="ctRight" caption="右侧容器" align="alClient">
+        <MinuteContainer name="minutecontainer" caption="分时容器" align="alClient" focustype="ftMove" relatecomp="minute,minutetimeline,minuteIndex" showvalue="日期,时间,价格,均价,成交量">
+          <Container name="minutegroup" caption="分时图组" align="alClient" height="300">
+            <Minute name="minute" IsHistory="true" caption="分时图" align="alClient" height="100" focustype="ftNone" canresize="false" relatecode="kline,minutecontainer,minutetimeline,minuteIndex,StockInfo,AskPrice,BidPrice,NewIndica,BaseIndica,MinuteDealReport,News,Reports,RelateIndex" relateindex="TradeDate,TradeTime,NewPrice,PrevClose,TodayOpen,TodayHigh,TodayLow,Volume,DeltaAmount,DeltaVolume,AveragePrice,HighLimit,LowLimit,SuspensionFlag">
+            </Minute>
+            <MinuteTimeLine name="minutetimeline" caption="时间轴" align="alBottom" focustype="ftNone" height="20" canresize="false"/>
+          </Container>
+          <MinuteSub name="minuteIndex" caption="分时指标" align="alClient" height="100" focustype="ftNone" indextype="4" visible="false"/>
+        </MinuteContainer>
+      </Container>
+    </Page>
+  </PageGroup>
+  
+  <PageGroup namelist="HISTORYKLINE">
+    <Page name="MinutePage" caption="K线报表" relatecode="HistoryKLine" processcode="true">
+      <ToolBar name="ToolBar" caption="工具栏" canmovebutton="false" showaddbutton="false" align="alTop" height="20" canresize="false">
+        <Button caption="导出数据" showseparator="true" allowstaydown="false" bindname="HistoryKLine" propname="ExportData" propvalue="true"/>
+      </ToolBar>
+      <KLineDataReport name="HistoryKLine" caption="K线报表" align="alClient"/>
+    </Page>
+  </PageGroup>
+</Layout>

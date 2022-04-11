@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LayoutRoot>
+  <RootPanel Orientation="Horizontal" LockStatus="Adjust">
+    <LayoutAnchorablePaneGroup Orientation="Horizontal" LockStatus="Adjust">
+      <LayoutAnchorablePaneGroup Orientation="Vertical" DockWidth="0.906752411575563*" LockStatus="Adjust">
+        <LayoutAnchorablePane ContentTitleDirction="LeftBottom" DockWidth="0.906752411575563*" LockStatus="Adjust">
+          <LayoutAnchorable CanHide="False" AutoHideMinWidth="100" AutoHideMinHeight="100" GroupNumber="Two" IsEject="NEject" LockStatus="Adjust" BarTitle="沪深重要指数" IsGroup="True" CustomPropertyHandler="PlatForm\HSUCF.Platform.Infrastructure.dll|HSUCF.Platform.Infrastructure.IUVCustomPropertyHandler" Title="沪深重要指数" IsSelected="True" ContentId="d63093be-4ccb-49cf-94e1-10acb9c393c5" DllName="CEIS.Module.Quote" ClassFullName="CEIS.Module.Quote.QuoteHSIndex" CanClose="True" LastActivationTimeStamp="12/23/2020 14:42:01" />
+          <LayoutAnchorable CanHide="False" AutoHideMinWidth="100" AutoHideMinHeight="100" GroupNumber="Two" IsEject="NEject" LockStatus="Adjust" BarTitle="香港重要指数" IsGroup="True" CustomPropertyHandler="PlatForm\HSUCF.Platform.Infrastructure.dll|HSUCF.Platform.Infrastructure.IUVCustomPropertyHandler" Title="香港重要指数" ContentId="108b9c8c-c3f0-4b9b-847e-559c5b0179ab" DllName="CEIS.Module.Quote" ClassFullName="CEIS.Module.Quote.QuoteHKIndex" CanClose="True" LastActivationTimeStamp="12/23/2020 14:42:07" />
+        </LayoutAnchorablePane>
+        <LayoutAnchorablePane ContentTitleDirction="LeftBottom" LockStatus="Adjust">
+          <LayoutAnchorable CanHide="False" AutoHideMinWidth="100" AutoHideMinHeight="100" GroupNumber="Two" IsEject="NEject" LockStatus="Adjust" BarTitle="申万板块" IsGroup="True" CustomPropertyHandler="PlatForm\HSUCF.Platform.Infrastructure.dll|HSUCF.Platform.Infrastructure.IUVCustomPropertyHandler" Title="申万板块" IsSelected="True" ContentId="eab22925-1aa7-4fb0-9672-e4527c99ac0a" DllName="CEIS.Module.Quote" ClassFullName="CEIS.Module.Quote.QuoteSWBoard" CanClose="True" LastActivationTimeStamp="12/31/2020 11:05:22" />
+          <LayoutAnchorable CanHide="False" AutoHideMinWidth="100" AutoHideMinHeight="100" GroupNumber="Two" IsEject="NEject" LockStatus="Adjust" BarTitle="行业板块" IsGroup="True" CustomPropertyHandler="PlatForm\HSUCF.Platform.Infrastructure.dll|HSUCF.Platform.Infrastructure.IUVCustomPropertyHandler" Title="行业板块" ContentId="c61f7e23-3388-4c04-9df5-0196b9ab766f" DllName="CEIS.Module.Quote" ClassFullName="CEIS.Module.Quote.QuoteHYBoard" CanClose="True" LastActivationTimeStamp="12/23/2020 14:42:20" />
+          <LayoutAnchorable CanHide="False" AutoHideMinWidth="100" AutoHideMinHeight="100" GroupNumber="Two" IsEject="NEject" LockStatus="Adjust" BarTitle="概念板块" IsGroup="True" CustomPropertyHandler="PlatForm\HSUCF.Platform.Infrastructure.dll|HSUCF.Platform.Infrastructure.IUVCustomPropertyHandler" Title="概念板块" ContentId="3a6fc48c-5d4c-4514-b7c6-e813741ab93a" DllName="CEIS.Module.Quote" ClassFullName="CEIS.Module.Quote.QuoteGNBoard" CanClose="True" LastActivationTimeStamp="12/23/2020 14:42:25" />
+          <LayoutAnchorable CanHide="False" AutoHideMinWidth="100" AutoHideMinHeight="100" GroupNumber="Two" IsEject="NEject" LockStatus="Adjust" BarTitle="地域板块" IsGroup="True" CustomPropertyHandler="PlatForm\HSUCF.Platform.Infrastructure.dll|HSUCF.Platform.Infrastructure.IUVCustomPropertyHandler" Title="地域板块" ContentId="77478a8f-8231-4b86-b76e-34db5871ffe1" DllName="CEIS.Module.Quote" ClassFullName="CEIS.Module.Quote.QuoteDYBoard" CanClose="True" LastActivationTimeStamp="12/23/2020 14:42:30" />
+          <LayoutAnchorable CanHide="False" AutoHideMinWidth="100" AutoHideMinHeight="100" GroupNumber="Two" IsEject="NEject" LockStatus="Adjust" BarTitle="证监会行业" IsGroup="True" CustomPropertyHandler="PlatForm\HSUCF.Platform.Infrastructure.dll|HSUCF.Platform.Infrastructure.IUVCustomPropertyHandler" Title="证监会行业" ContentId="a9fd555e-217d-43bf-96ff-de3ddbeee32a" DllName="CEIS.Module.Quote" ClassFullName="CEIS.Module.Quote.QuoteZJHHYBoard" CanClose="True" LastActivationTimeStamp="12/23/2020 15:28:22" />
+        </LayoutAnchorablePane>
+      </LayoutAnchorablePaneGroup>
+      <LayoutAnchorablePaneGroup Orientation="Vertical" DockWidth="1.18971061093248*" LockStatus="Adjust">
+        <LayoutAnchorablePane ContentTitleDirction="None" DockWidth="1.18971061093248*" LockStatus="Adjust">
+          <LayoutAnchorable CanHide="False" AutoHideMinWidth="100" AutoHideMinHeight="100" GroupNumber="One" IsEject="NEject" LockStatus="Adjust" BarTitle="自选股和板块股" IsGroup="True" CustomPropertyHandler="PlatForm\HSUCF.Platform.Infrastructure.dll|HSUCF.Platform.Infrastructure.IUVCustomPropertyHandler" Title="自选股和板块股" IsSelected="True" ContentId="75eb0fe6-e8d6-4ed4-842c-ed4ce69b9818" DllName="CEIS.Module.Quote" ClassFullName="CEIS.Module.Quote.QuoteBlockBoard" CanClose="True" LastActivationTimeStamp="03/05/2021 18:11:59" />
+        </LayoutAnchorablePane>
+        <LayoutAnchorablePane ContentTitleDirction="LeftBottom" LockStatus="Adjust">
+          <LayoutAnchorable CanHide="False" AutoHideMinWidth="100" AutoHideMinHeight="100" GroupNumber="One" IsEject="NEject" LockStatus="Adjust" BarTitle="分时图" IsGroup="True" CustomPropertyHandler="PlatForm\HSUCF.Platform.Infrastructure.dll|HSUCF.Platform.Infrastructure.IUVCustomPropertyHandler" Title="分时图" IsSelected="True" ContentId="78cc80b9-7813-4335-b6ff-6c4c40813427" DllName="CEIS.Module.Quote" ClassFullName="CEIS.Module.Quote.QuoteTrendChart" CanClose="True" LastActivationTimeStamp="12/23/2020 15:26:47" />
+          <LayoutAnchorable CanHide="False" AutoHideMinWidth="100" AutoHideMinHeight="100" GroupNumber="One" IsEject="NEject" LockStatus="Adjust" BarTitle="K线图" IsGroup="True" CustomPropertyHandler="PlatForm\HSUCF.Platform.Infrastructure.dll|HSUCF.Platform.Infrastructure.IUVCustomPropertyHandler" Title="K线图" ContentId="245f4372-4663-4ce1-b94b-7ae72d2155fd" DllName="CEIS.Module.Quote" ClassFullName="CEIS.Module.Quote.QuoteKLineChart" CanClose="True" LastActivationTimeStamp="12/23/2020 15:36:42" />
+        </LayoutAnchorablePane>
+      </LayoutAnchorablePaneGroup>
+      <LayoutAnchorablePaneGroup Orientation="Vertical" DockWidth="0.903536977491961*" LockStatus="Adjust">
+        <LayoutAnchorablePane ContentTitleDirction="LeftBottom" LockStatus="Adjust">
+          <LayoutAnchorable CanHide="False" AutoHideMinWidth="100" AutoHideMinHeight="100" GroupNumber="One" IsEject="NEject" LockStatus="Adjust" BarTitle="个券新闻" IsGroup="True" CustomPropertyHandler="PlatForm\HSUCF.Platform.Infrastructure.dll|HSUCF.Platform.Infrastructure.IUVCustomPropertyHandler" Title="个券新闻" IsSelected="True" ContentId="f7dd4586-5a49-4612-9fc8-89794e7a11d2" DllName="CEIS.Module.Information" ClassFullName="CEIS.Module.Information.InfoNews" CanClose="True" LastActivationTimeStamp="12/23/2020 14:45:46" />
+          <LayoutAnchorable CanHide="False" AutoHideMinWidth="100" AutoHideMinHeight="100" GroupNumber="One" IsEject="NEject" LockStatus="Adjust" BarTitle="个券公告" IsGroup="True" CustomPropertyHandler="PlatForm\HSUCF.Platform.Infrastructure.dll|HSUCF.Platform.Infrastructure.IUVCustomPropertyHandler" Title="个券公告" ContentId="6e0bd0a3-8e92-4278-8bee-f36c6da081ef" DllName="CEIS.Module.Information" ClassFullName="CEIS.Module.Information.InfoAnnouncement" CanClose="True" LastActivationTimeStamp="12/23/2020 14:45:50" />
+        </LayoutAnchorablePane>
+        <LayoutAnchorablePane ContentTitleDirction="LeftBottom" DockWidth="0.903536977491961*" LockStatus="Adjust">
+          <LayoutAnchorable CanHide="False" AutoHideMinWidth="100" AutoHideMinHeight="100" GroupNumber="One" IsEject="NEject" LockStatus="Adjust" BarTitle="沪深快讯" IsGroup="True" CustomPropertyHandler="PlatForm\HSUCF.Platform.Infrastructure.dll|HSUCF.Platform.Infrastructure.IUVCustomPropertyHandler" Title="沪深快讯" IsSelected="True" ContentId="dde34db8-1c2f-4514-9ea7-bd9c2195c0f3" DllName="CEIS.Module.Information" ClassFullName="CEIS.Module.Information.InfoHSRollingNews" CanClose="True" LastActivationTimeStamp="12/23/2020 14:46:03" />
+          <LayoutAnchorable CanHide="False" AutoHideMinWidth="100" AutoHideMinHeight="100" GroupNumber="None" IsEject="NEject" LockStatus="Adjust" BarTitle="股市日历" CustomPropertyHandler="PlatForm\HSUCF.Platform.Infrastructure.dll|HSUCF.Platform.Infrastructure.IUVCustomPropertyHandler" Title="股市日历" ContentId="829317a5-d5c2-45ca-8375-c818256a8937" DllName="CEIS.Module.Information" ClassFullName="CEIS.Module.Information.InfoCalendar" CanClose="True" LastActivationTimeStamp="12/23/2020 14:46:17" />
+        </LayoutAnchorablePane>
+      </LayoutAnchorablePaneGroup>
+    </LayoutAnchorablePaneGroup>
+  </RootPanel>
+  <TopSide />
+  <RightSide />
+  <LeftSide />
+  <BottomSide />
+  <FloatingWindows />
+  <Hidden />
+</LayoutRoot>

@@ -1,0 +1,45 @@
+﻿<?xml version="1.0"?>
+<ArrayOfXmlConfigItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <XmlConfigItem>
+    <Key>SupportInfoMarketType</Key>
+    <Value><![CDATA[<?xml version="1.0"?>
+<string>1010,1020,1030,1040,2000,3010,3020,4000,4010,5000,5010,6000,6010,12000</string>]]></Value>
+  </XmlConfigItem>
+  <XmlConfigItem>
+    <Key>SupportEntrustQueue</Key>
+    <Value><![CDATA[<?xml version="1.0"?>
+<string>1010,1020</string>]]></Value>
+  </XmlConfigItem>
+  <XmlConfigItem>
+    <Key>SupportThousandLevel</Key>
+    <Value><![CDATA[<?xml version="1.0"?>
+<string>1020</string>]]></Value>
+  </XmlConfigItem>
+  <XmlConfigItem>
+    <Key>SupportStockBlockRankMarketType</Key>
+    <Value><![CDATA[<?xml version="1.0"?>
+<string>1010,1020</string>]]></Value>
+  </XmlConfigItem>
+  <XmlConfigItem>
+    <Key>SupportTransactionMarketType</Key>
+    <Value><![CDATA[<?xml version="1.0"?>
+<string>1010,1020</string>]]></Value>
+  </XmlConfigItem>
+    <XmlConfigItem>
+    <Key>SupportConstituentMarketType</Key>
+    <Value><![CDATA[<?xml version="1.0"?>
+<string>6000,6010</string>]]></Value>
+  </XmlConfigItem>
+	<XmlConfigItem>
+		<Key>SupportRedGreenProdCode</Key>
+		<Value>
+			<![CDATA[<?xml version="1.0"?>
+<string>000001,399001,399006,399005</string>]]>
+		</Value>
+	</XmlConfigItem>
+<XmlConfigItem>
+    <Key>SupportExportCount</Key>
+    <Value><![CDATA[<?xml version="1.0"?>
+<string>2400</string>]]></Value>
+  </XmlConfigItem>
+</ArrayOfXmlConfigItem>

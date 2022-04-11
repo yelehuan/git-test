@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<ArrayOfGlobalIndex>
+	<GlobalIndex MarketCode = "XSHG.MRI,XSHE.MRI" MarketName="沪深市场">
+		<CommonIndex ProdCode = "000001"  MarketCode = "XSHG.MRI" Name="上证指数"/>
+		<CommonIndex ProdCode = "399001"  MarketCode = "XSHE.MRI" Name="深证成指"/>
+		<CommonIndex ProdCode = "000300"  MarketCode = "XSHG.MRI" Name="沪深300"/>
+		<CommonIndex ProdCode = "989001"  MarketCode = "CNI" Name="新华500指数"/>	
+		<CommonIndex ProdCode = "000688"  MarketCode = "XSHG.MRI" Name="科创50"/>		
+		<CommonIndex ProdCode = "399006"  MarketCode = "XSHE.MRI" Name="创业板指"/>
+		<CommonIndex ProdCode = "399005"  MarketCode = "XSHE.MRI" Name="中小100"/>
+		<CommonIndex ProdCode = "000016"  MarketCode = "XSHG.MRI" Name="上证50"/>		
+		<CommonIndex ProdCode = "000905"  MarketCode = "XSHG.MRI" Name="中证500"/>
+		<CommonIndex ProdCode = "000010"  MarketCode = "XSHG.MRI" Name="上证180"/>
+		<CommonIndex ProdCode = "000009"  MarketCode = "XSHG.MRI" Name="上证380"/>
+		<CommonIndex ProdCode = "399330"  MarketCode = "XSHE.MRI" Name="深证100"/>
+		<CommonIndex ProdCode = "399612"  MarketCode = "XSHE.MRI" Name="中创100"/>
+		
+		<CommonIndex ProdCode = "399673"  MarketCode = "XSHE.MRI" Name="创业板50"/>
+		<CommonIndex ProdCode = "399295"  MarketCode = "XSHE.MRI" Name="创业蓝筹"/>
+		<CommonIndex ProdCode = "399296"  MarketCode = "XSHE.MRI" Name="创成长"/>
+		<CommonIndex ProdCode = "000903"  MarketCode = "XSHG.MRI" Name="中证100"/>
+		<CommonIndex ProdCode = "000904"  MarketCode = "CSI.MRI" Name="中证200"/>
+		<CommonIndex ProdCode = "000906"  MarketCode = "XSHG.MRI" Name="中证800"/>
+		<CommonIndex ProdCode = "000852"  MarketCode = "XSHG.MRI" Name="中证1000"/>
+		<CommonIndex ProdCode = "000002"  MarketCode = "XSHG.MRI" Name="A股指数"/>
+		<CommonIndex ProdCode = "000003"  MarketCode = "XSHG.MRI" Name="B股指数"/>
+		<CommonIndex ProdCode = "399106"  MarketCode = "XSHE.MRI" Name="深证综指"/>
+		<CommonIndex ProdCode = "399101"  MarketCode = "XSHE.MRI" Name="中小综指"/>
+		<CommonIndex ProdCode = "399102"  MarketCode = "XSHE.MRI" Name="创业板综"/>
+		<CommonIndex ProdCode = "399107"  MarketCode = "XSHE.MRI" Name="深证A指"/>
+		<CommonIndex ProdCode = "399108"  MarketCode = "XSHE.MRI" Name="深证B指"/>
+	</GlobalIndex>
+	<GlobalIndex MarketCode = "XHKG-I" MarketName="香港市场">
+		<CommonIndex ProdCode = "HSI"  MarketCode = "XHKG-I.MRI" Name="恒生指数"/>
+		<CommonIndex ProdCode = "HZ5014"  MarketCode = "XHKG-I.MRI" Name="恒生国企指数"/>
+		<CommonIndex ProdCode = "HZ5015"  MarketCode = "XHKG-I.MRI" Name="恒生中资指数"/>
+		<CommonIndex ProdCode = "HKL"  MarketCode = "XHKG-I.MRI" Name="恒生综合大型股"/>
+		<CommonIndex ProdCode = "H11120"  MarketCode = "XHKG-I.MRI" Name="香港中盘精选"/>
+		<CommonIndex ProdCode = "GEM"  MarketCode = "XHKG-I.MRI" Name="标普香港创业板"/>
+	</GlobalIndex>
+	<GlobalIndex MarketCode = "GL-N225.N225,GL-TOPIX.TOPIX,GL-AUST.AUST,GL-NZLD.NZLD,GL-KS11.KS11,GL-THLD.THLD,GL-KLSE.KLSE,GL-INDO.INDO" MarketName="亚太市场">
+	</GlobalIndex>	
+	<GlobalIndex MarketCode = "GL-LDUN.LDUN,GL-FCHI.FCHI,GL-GDAXI.GDAXI,GL-MIB.MIB,GL-AEX.AEX,GL-BFX.BFX,GL-SSMI.SSMI,GL-IBEX.IBEX,GL-ATX.ATX,GL-OMXSPI.OMXSPI,GL-RUSA.RUSA" MarketName="欧洲市场">
+	</GlobalIndex>	
+	<GlobalIndex MarketCode = "GL-AMER.AMER,GL-GSPTSE.GSPTSE,GL-SAPI.SAPI,GL-LEUM.LEUM" MarketName="美洲市场">
+	</GlobalIndex>	
+	<GlobalIndex MarketCode = "BOND_MRI" MarketName="债券重要指数">
+		<CommonIndex ProdCode = "000012"  MarketCode = "XSHG.MRI" Name="上证国债"/>
+		<CommonIndex ProdCode = "000013"  MarketCode = "CSI.MRI" Name="企债指数"/>
+		<CommonIndex ProdCode = "000022"  MarketCode = "XSHG.MRI" Name="上证公司债"/>
+		<CommonIndex ProdCode = "000139"  MarketCode = "XSHG.MRI" Name="上证转债"/>
+		<CommonIndex ProdCode = "399301"  MarketCode = "XSHE.MRI" Name="深信用债"/>
+		<CommonIndex ProdCode = "399302"  MarketCode = "XSHE.MRI" Name="深公司债"/>
+		<CommonIndex ProdCode = "399307"  MarketCode = "XSHE.MRI" Name="深证转债"/>
+		<CommonIndex ProdCode = "CNTSYD.NI"  MarketCode = "BONDCFES.BNPJI" Name="国债净价指数"/>
+		<CommonIndex ProdCode = "CNMTSYD.NI"  MarketCode = "BONDCFES.BNPJI" Name="中期国债净价指数"/>
+		<CommonIndex ProdCode = "CNSTSYD.NI"  MarketCode = "BONDCFES.BNPJI" Name="短期国债净价指数"/>
+		<CommonIndex ProdCode = "CNLTSYD.NI"  MarketCode = "BONDCFES.BNPJI" Name="长期国债净价指数"/>
+		<CommonIndex ProdCode = "CNPFBD.NI"  MarketCode = "BONDCFES.BNPJI" Name="政策性金融债净价指数"/>
+		<CommonIndex ProdCode = "CNCPBD.NI"  MarketCode = "BONDCFES.BNPJI" Name="综合债券净价指数"/>
+		<CommonIndex ProdCode = "CNCORPD.NI"  MarketCode = "BONDCFES.BNPJI" Name="企业债净价指数"/>
+		<CommonIndex ProdCode = "CNMTND.NI"  MarketCode = "BONDCFES.BNPJI" Name="中期票据净价指数"/>
+	</GlobalIndex>
+	<GlobalIndex MarketCode = "Default" MarketName="默认指数">
+		<CommonIndex ProdCode = "000001"  MarketCode = "XSHG.MRI" Name="上证指数"/>
+		<CommonIndex ProdCode = "399001"  MarketCode = "XSHE.MRI" Name="深证成指"/>
+		<CommonIndex ProdCode = "399006"  MarketCode = "XSHE.MRI" Name="创业板指"/>
+		<CommonIndex ProdCode = "000688"  MarketCode = "XSHG.MRI" Name="科创50"/>
+	</GlobalIndex>
+</ArrayOfGlobalIndex>

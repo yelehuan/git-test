@@ -1,0 +1,418 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>IUV.Adapter.Information</name>
+    </assembly>
+    <members>
+        <member name="T:IUV.Adapter.Information.InfoAdapterConfig">
+            <summary>
+            资讯配置类
+            </summary>
+        </member>
+        <member name="T:IUV.Adapter.Information.Adapter">
+            <summary>
+            适配层配置类
+            </summary>
+        </member>
+        <member name="M:IUV.Adapter.Information.Adapter.#ctor">
+            <summary>
+            初始化 Adapter类的实例
+            </summary>
+        </member>
+        <member name="P:IUV.Adapter.Information.Adapter.Name">
+            <summary>
+            适配器名称
+            </summary>
+        </member>
+        <member name="P:IUV.Adapter.Information.Adapter.Assembly">
+            <summary>
+            行情程序集的相对路径
+            <para>
+             如：DLL\IUV\Quote\IUV.InformationAdapter.GTNImpl.dll
+            </para>
+            </summary>
+        </member>
+        <member name="P:IUV.Adapter.Information.Adapter.ClassName">
+            <summary>
+            程序集反射类名,含命名空间
+            <para>
+            如：IUV.InformationAdapter.GTNImpl.GTNImplement
+            </para>
+            </summary>
+        </member>
+        <member name="P:IUV.Adapter.Information.Adapter.CustomData">
+            <summary>
+            客户自定义适配器数据
+            </summary>
+        </member>
+        <member name="T:IUV.Adapter.Information.IInformationAdapter">
+            <summary>
+            资讯数据获取接口
+            </summary>
+        </member>
+        <member name="M:IUV.Adapter.Information.IInformationAdapter.Initialize(System.Collections.Generic.List{IUV.Adapter.Information.InformationAdapterConfig})">
+            <summary>
+            初始化资讯适配器
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.Adapter.Information.IInformationAdapter.GetNewsWebAddr">
+            <summary>
+            获取链接地址
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.Adapter.Information.IInformationAdapter.GetNewsList(System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            获取新闻列表
+            </summary>
+            <param name="prodCode">股票代码</param>
+            <param name="marketCode">市场代码</param>
+            <param name="pageNo">页面编号</param>
+            <param name="pageCount">页内记录数</param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.Adapter.Information.IInformationAdapter.GetMarketNewsList(System.String,System.Int32,System.Int32)">
+            <summary>
+            获取市场新闻列表
+            </summary>
+            <param name="categoryId">市场ID</param>
+            <param name="pageNo">页面编号</param>
+            <param name="pageCount">页内记录数</param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.Adapter.Information.IInformationAdapter.GetReportList(System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            获取研报列表
+            </summary>
+            <param name="prodCode">股票代码</param>
+            <param name="marketCode">市场代码</param>
+            <param name="pageNo">页面编号</param>
+            <param name="pageCount">页内记录数</param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.Adapter.Information.IInformationAdapter.GetMarqueeList(System.Int32)">
+            <summary>
+            获取跑马灯
+            </summary>
+            <param name="count">请求个数</param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.Adapter.Information.IInformationAdapter.GetAnnouncementList(System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            获取公告列表
+            </summary>        
+            /// <param name="prodCode">股票代码</param>
+            <param name="marketCode">市场代码</param>
+            <param name="pageNo">页面编号</param>
+            <param name="pageCount">页内记录数</param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.Adapter.Information.IInformationAdapter.GetMarketAnnouncementList(System.String,System.Int32,System.Int32)">
+            <summary>
+            获取市场公告列表
+            </summary>
+            <param name="categoryId">市场ID</param>
+            <param name="pageNo">页面编号</param>
+            <param name="pageCount">页内记录数</param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.Adapter.Information.IInformationAdapter.GetCalendarList(System.DateTime)">
+            <summary>
+            获取股市日历
+            </summary>
+            <param name="dateTime"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.Adapter.Information.IInformationAdapter.GetBondCalendarList(System.Int32,System.Int32)">
+            <summary>
+            获取债市日历
+            </summary>
+            <param name="pageNo"></param>
+            <param name="pageSize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.Adapter.Information.IInformationAdapter.GetEconomicCalendarList(System.DateTime,System.Int32,System.Int32)">
+            <summary>
+            获取宏观经济日历
+            </summary>
+            <param name="dateTime"></param>
+            <param name="pageNo"></param>
+            <param name="pageCount"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.Adapter.Information.IInformationAdapter.GetNewSharesList">
+            <summary>
+            获取新股列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.Adapter.Information.IInformationAdapter.GetFundFlow(System.String,System.String,System.Int32)">
+            <summary>
+            获取资金流数据
+            </summary>
+            <param name="prodCode">股票代码</param>
+            <param name="marketCode">市场代码</param>
+            <param name="dataCount">数据数量</param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.Adapter.Information.IInformationAdapter.GetExpressNews(System.String,System.Int32,System.Int32)">
+            <summary>
+            获取快讯
+            </summary>
+            <param name="prodCode">股票代码</param>
+            <param name="marketCode">市场代码</param>
+            <param name="pageNo">页面编号</param>
+            <param name="pageCount">页内记录数</param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.Adapter.Information.IInformationAdapter.GetFinanceData(System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            获取财务分析
+            </summary>
+            <param name="prodCode">股票代码</param>
+            <param name="marketCode">市场代码</param>
+            <param name="pageNo">页面编号</param>
+            <param name="pageCount">页内记录数</param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.Adapter.Information.IInformationAdapter.GetFinanceIndex(System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            获取财务指标
+            </summary>
+            <param name="prodCode">股票代码</param>
+            <param name="marketCode">市场代码</param>
+            <param name="pageNo">页面编号</param>
+            <param name="pageCount">页内记录数</param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.Adapter.Information.IInformationAdapter.GetFinanceEPS(System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            获取每股收益EPS
+            </summary>
+            <param name="prodCode">股票代码</param>
+            <param name="marketCode">市场代码</param>
+            <param name="pageNo">页面编号</param>
+            <param name="pageCount">页内记录数</param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.Adapter.Information.IInformationAdapter.GetFinanceBond(System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            获取可转债指标
+            </summary>
+            <param name="prodCode">股票代码</param>
+            <param name="marketCode">市场代码</param>
+            <param name="pageNo">页面编号</param>
+            <param name="pageCount">页内记录数</param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.Adapter.Information.IInformationAdapter.GetFinanceETF(System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            获取ETF指标
+            </summary>
+            <param name="prodCode">股票代码</param>
+            <param name="marketCode">市场代码</param>
+            <param name="pageNo">页面编号</param>
+            <param name="pageCount">页内记录数</param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.Adapter.Information.IInformationAdapter.GetFundAllBaseInfo(System.String,System.String)">
+            <summary>
+            获取基金基本信息
+            </summary>
+            <param name="prodCode">证券代码</param>
+            <param name="marketCode">市场代码</param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.Adapter.Information.IInformationAdapter.GetFundAllManagerInfo(System.String,System.String)">
+            <summary>
+            获取基金经理信息
+            </summary>
+            <param name="prodCode">证券代码</param>
+            <param name="marketCode">市场代码</param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.Adapter.Information.IInformationAdapter.GetFundAllCompanyInfo(System.String,System.String)">
+            <summary>
+            获取基金公司信息
+            </summary>
+            <param name="prodCode">证券代码</param>
+            <param name="marketCode">市场代码</param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.Adapter.Information.IInformationAdapter.GetFundAllPerformanceInfo(System.String,System.String)">
+            <summary>
+            获取基金公司业绩相关信息
+            </summary>
+            <param name="prodCode">证券代码</param>
+            <param name="marketCode">市场代码</param>IFundAllPerformanceInfo
+            <returns></returns>
+        </member>
+        <member name="M:IUV.Adapter.Information.IInformationAdapter.GetFundAllValueList(System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            获取基金净值
+            </summary>
+            <param name="prodCode">证券代码</param>
+            <param name="marketCode">市场代码</param>
+            <param name="startDate">起始日期</param>
+            <param name="endDate">结束日期</param>
+            <param name="period">周期</param>
+            <param name="rightRecovery">复权模式</param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.Adapter.Information.IInformationAdapter.GetFundDividendRecordList(System.String,System.String)">
+            <summary>
+            获取基金分红记录相关信息
+            </summary>
+            <param name="prodCode">证券代码</param>
+            <param name="marketCode">市场代码</param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.Adapter.Information.IInformationAdapter.GetFundNetWorthDataList(System.String,System.Int32,System.Int32,System.String,System.Nullable{IUV.Common.Models.SortType})">
+            <summary>
+            获取各类基金净值数据
+            </summary>
+            <param name="plateCode"></param>
+            <param name="pageNo"></param>
+            <param name="pageSize"></param>
+            <param name="sortField"></param>
+            <param name="sortDirection"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.Adapter.Information.IInformationAdapter.GetFundDataList(System.String,System.String)">
+            <summary>
+            获取指定基金净值数据
+            </summary>
+            <param name="gilCodes"></param>
+            <param name="indexs"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.Adapter.Information.IInformationAdapter.GetBankBondBaseInfo(System.String,System.String)">
+            <summary>
+            获取银行间债券基本面信息
+            </summary>
+            <param name="prodCode">股票代码</param>
+            <param name="marketCode">市场代码</param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.Adapter.Information.IInformationAdapter.GetHSGTTradingDayInfo(System.Int32,System.DateTime,System.DateTime)">
+            <summary>
+            获取沪港通交易日信息
+            </summary>
+            <param name="tradingType">交易类型，1：沪股通，2：港股通（沪），3：深股通，4：港股通（深）</param>
+            <param name="startDate">开始日期</param>
+            <param name="endDate">结束日期</param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.Adapter.Information.IInformationAdapter.GetExchangeBondDataList(IUV.Common.Models.ExchangeBondParams,System.Int32,System.Int32,System.String,System.Nullable{IUV.Common.Models.SortType})">
+            <summary>
+            获取交易所债券
+            </summary>
+            <param name="pageNo">页码</param>
+            <param name="pageSize">每页数量</param>
+            <param name="extParams">其他参数</param>
+            <param name="sortField">排序字段</param>
+            <param name="sortDirection">排序方向</param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.Adapter.Information.IInformationAdapter.GetExchangeBondDataExtendList(System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.Int32})">
+            <summary>
+            获取交易所债券扩展数据
+            </summary>
+            <param name="gilCodes">代码列表</param>
+            <param name="indexs">指标</param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.Adapter.Information.IInformationAdapter.GetExchangeBondIndustryList">
+            <summary>
+            获取交易所债券行业
+            <para>返回格式为Key-Value</para>
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.Adapter.Information.IInformationAdapter.GetExchangeBondRegionList">
+            <summary>
+            获取交易所债券地区
+            <para>返回格式为Key-Value</para>
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.Adapter.Information.IInformationAdapter.GetBenchmarkOfCreditDebt(System.Int32)">
+            <summary>
+            获取信用债基准
+            </summary>
+            <param name="bondType">债券类别，1：中票短融，2：企业债，3：城投债，4：产业债，5：资产支持证券，6：全部信用债</param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.Adapter.Information.IInformationAdapter.GetInterestBondInfos(IUV.Common.Models.BondTypeEnum)">
+            <summary>
+            获取利率债信息
+            </summary>
+            <param name="bondType">债券类别，1：国债，2：国开债，3：非国开</param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.Adapter.Information.IInformationAdapter.GetInterestBondSamples(IUV.Common.Models.BondTypeEnum,System.String)">
+            <summary>
+            获取利率债样本券信息
+            </summary>
+            <param name="bondType">债券类别，1：国债，2：国开债，3：非国开</param>
+            <param name="remainingTerm">剩余期限</param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.Adapter.Information.IInformationAdapter.GetBenchmarkOfCreditDebtOfCoupon(System.Int32,System.String,System.String)">
+            <summary>
+            获取信用债基准-样本券
+            </summary>
+            <param name="bondType">债券类别，1：中票短融，2：企业债，3：城投债，4：产业债，5：资产支持证券，6：全部信用债</param>
+            <param name="remainingTerm"></param>
+            <param name="subjectRating"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.Adapter.Information.IInformationAdapter.GetBenchmarkOfNewCreditBond(System.Int32,System.String,System.String)">
+            <summary>
+            获取信用债基准-新发信用债
+            </summary>
+            <param name="bondType">债券类别，1：中票短融，2：企业债，3：城投债，4：产业债，5：资产支持证券，6：全部信用债</param>
+            <param name="remainingTerm"></param>
+            <param name="subjectRating"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.Adapter.Information.IInformationAdapter.GetCreditDebtHistoricalTrend(System.Int32,System.String,System.String,System.String,System.String)">
+            <summary>
+            获取信用债历史走势数据
+            </summary>
+            <param name="bondType">债券类别，1：中票短融，2：企业债，3：城投债，4：产业债，5：资产支持证券，6：全部信用债</param>
+            <param name="remainingTerm">剩余期限</param>
+            <param name="subjectRating"></param>
+            <param name="startDate"></param>
+            <param name="endDate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.Adapter.Information.IInformationAdapter.GetInterestRateDebtHistoricalTrend(System.Int32,System.String,System.String,System.String)">
+            <summary>
+            获取利率债历史走势数据
+            </summary>
+            <param name="bondType">债券类别，1：国债，2：国开债，3：非国开</param>
+            <param name="remainingTerm">剩余期限</param>
+            <param name="startDate"></param>
+            <param name="endDate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.Adapter.Information.IInformationAdapter.GetIndexConstituentList(System.String,System.String)">
+            <summary>
+            获取指数成分股
+            </summary>
+            <param name="gilCode"></param>
+            <param name="marketCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IUV.Adapter.Information.IInformationAdapter.GetInterbankForeignExchangeRate(System.Int32,System.DateTime)">
+            <summary>
+            获取银行间外汇牌价数据
+            </summary>
+            <param name="priceType"></param>
+            <param name="tradeDate"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

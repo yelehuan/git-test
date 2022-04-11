@@ -1,0 +1,490 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--MarketCode值说明：市场代码-->
+<!--Category值说明：1000:股票 2000:期货 3000:期权 4000:基金 5000:债券 6000:指数-->
+<ArrayOfMarketCategory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<MarketCategory>
+		<Category>1010</Category>
+		<MarketCodes>
+			<!-- 上海证券交易所 -->
+			<MarketCode>XSHG</MarketCode>
+			<MarketCode>XSHG.N</MarketCode>
+			<MarketCode>XSHG.M</MarketCode>
+			<MarketCode>XSHG.KSH</MarketCode>
+			<MarketCode>XSHG.ESB</MarketCode>
+			<MarketCode>XSHG.ESA.M</MarketCode>
+			<MarketCode>XSHG.ER</MarketCode>
+		</MarketCodes>
+	</MarketCategory>
+	<MarketCategory>
+		<Category>1020</Category>
+		<MarketCodes>
+			<!-- 深圳证券交易所 -->
+			<MarketCode>XSHE</MarketCode>
+			<MarketCode>XSHE.N</MarketCode>
+			<MarketCode>XSHE.M</MarketCode>
+			<MarketCode>XSHE.ESB</MarketCode>
+			<MarketCode>XSHE.ESA.SMSE</MarketCode>
+			<MarketCode>XSHE.ESA.M</MarketCode>
+			<MarketCode>XSHE.ESA.GEM</MarketCode>
+		</MarketCodes>
+	</MarketCategory>
+	<MarketCategory>
+		<Category>1030</Category>
+		<MarketCodes>
+			<!-- 沪港通 -->
+			<MarketCode>XHKG-SS</MarketCode>
+			<MarketCode>XHKG-SS.GME</MarketCode>
+			<MarketCode>XHKG-SS.ES</MarketCode>
+
+			<!-- 深港通 -->
+			<MarketCode>XHKG-SZ</MarketCode>
+			<MarketCode>XHKG-SZ.ES</MarketCode>
+
+			<!-- 美股 -->
+			<MarketCode>XNAS</MarketCode>
+			<MarketCode>XASE</MarketCode>
+			<MarketCode>XNYS</MarketCode>
+
+			<!-- 港股 -->
+			<MarketCode>XHKG-I</MarketCode>
+			<MarketCode>XHKG-M</MarketCode>
+			<MarketCode>XHKG-G</MarketCode>
+			<MarketCode>XHKG-N</MarketCode>
+			<MarketCode>XHKG-E</MarketCode>
+		</MarketCodes>
+	</MarketCategory>
+	<MarketCategory>
+		<Category>1040</Category>
+		<MarketCodes>
+			<!-- 港股 股本认股权证认购证-->
+			<MarketCode>XHKG-M.RW.EW.CALL</MarketCode>
+			<!-- 港股 认沽证-->
+			<MarketCode>XHKG-M.RW.DW.PUT</MarketCode>
+			<!-- 港股 认购证-->
+			<MarketCode>XHKG-M.RW.DW.CALL</MarketCode>
+			<!-- 港股 熊证-->
+			<MarketCode>XHKG-M.RW.CBBC.PUT</MarketCode>
+			<!-- 港股 牛证-->
+			<MarketCode>XHKG-M.RW.CBBC.CALL</MarketCode>
+			<!-- 港股 基金-->
+			<MarketCode>XHKG-M.TR.REIT</MarketCode>
+			<MarketCode>XHKG-M.TR.ETF</MarketCode>
+			<MarketCode>XHKG-M.TR</MarketCode>
+			<!-- 港股 债券-->  
+			<MarketCode>XHKG-M.DB.PRCGOV</MarketCode>
+			<MarketCode>XHKG-M.DB.HKMAE</MarketCode>
+			<MarketCode>XHKG-M.DB</MarketCode>
+			<MarketCode>XHKG-M.DB.SARGOV</MarketCode>
+			<MarketCode>XHKG-M.DB.M.HKD</MarketCode>
+			<MarketCode>XHKG-M.DB.M.CNY</MarketCode>
+		</MarketCodes>
+	</MarketCategory>
+	<MarketCategory>
+		<Category>2000</Category>
+		<MarketCodes>
+			<!-- 中国金融期货交易所 -->
+			<MarketCode>CCFX</MarketCode>
+			<MarketCode>CCFX.FF.INDEX.ZZ500</MarketCode>
+			<MarketCode>CCFX.FF.INDEX.SZ50</MarketCode>
+			<MarketCode>CCFX.FF.INDEX.HS300</MarketCode>
+			<MarketCode>CCFX.FF.DEBT.TS</MarketCode>
+			<MarketCode>CCFX.FF.DEBT</MarketCode>
+
+			<!-- 上海期货交易所 -->
+			<MarketCode>XSGE</MarketCode>
+			<MarketCode>XSGE.FC.WIRE</MarketCode>
+			<MarketCode>XSGE.FC.SILVER</MarketCode>
+			<MarketCode>XSGE.FC.RUBBER</MarketCode>
+			<MarketCode>XSGE.FC.REBAR</MarketCode>
+			<MarketCode>XSGE.FC.PULP</MarketCode>
+			<MarketCode>XSGE.FC.PITCH</MarketCode>
+			<MarketCode>XSGE.FC.NiSn</MarketCode>
+			<MarketCode>XSGE.FC.METAL</MarketCode>
+			<MarketCode>XSGE.FC.GOLD</MarketCode>
+			<MarketCode>XSGE.FC.FUEL</MarketCode>
+			<MarketCode>XSGE.FC.COIL</MarketCode>
+
+			<!-- 大连商品交易所 -->
+			<MarketCode>XDCE</MarketCode>
+			<MarketCode>XDCE.FC.STARCH</MarketCode>
+			<MarketCode>XDCE.FC.SLAB</MarketCode>
+			<MarketCode>XDCE.FC.RR</MarketCode>
+			<MarketCode>XDCE.FC.PG</MarketCode>
+			<MarketCode>XDCE.FC.PETR</MarketCode>
+			<MarketCode>XDCE.FC.PALM</MarketCode>
+			<MarketCode>XDCE.FC.INRU</MarketCode>
+			<MarketCode>XDCE.FC.FB</MarketCode>
+			<MarketCode>XDCE.FC.EGG</MarketCode>
+			<MarketCode>XDCE.FC.EG</MarketCode>
+			<MarketCode>XDCE.FC.CORN</MarketCode>
+			<MarketCode>XDCE.FC.COKE</MarketCode>
+			<MarketCode>XDCE.FC.COAL</MarketCode>
+			<MarketCode>XDCE.FC.BOIL</MarketCode>
+			<MarketCode>XDCE.FC.BEAN</MarketCode>
+
+			<!-- 郑州商品交易所 -->
+			<MarketCode>XZCE</MarketCode>
+			<MarketCode>XZCE.FC.WHEAT</MarketCode>
+			<MarketCode>XZCE.FC.UR</MarketCode>
+			<MarketCode>XZCE.FC.SUGAR</MarketCode>
+			<MarketCode>XZCE.FC.STEAMCOAL</MarketCode>
+			<MarketCode>XZCE.FC.RICE</MarketCode>
+			<MarketCode>XZCE.FC.RAPOIL</MarketCode>
+			<MarketCode>XZCE.FC.PTA</MarketCode>
+			<MarketCode>XZCE.FC.METAL</MarketCode>
+			<MarketCode>XZCE.FC.MEAL</MarketCode>
+			<MarketCode>XZCE.FC.MA</MarketCode>
+			<MarketCode>XZCE.FC.GLASS</MarketCode>
+			<MarketCode>XZCE.FC.COTTON</MarketCode>
+			<MarketCode>XZCE.FC.CJ</MarketCode>
+			<MarketCode>XZCE.FC.AP</MarketCode>
+
+			<!-- 上海能源期货交易中心 -->
+			<MarketCode>XINE</MarketCode>
+			<MarketCode>XINE.FC.OIL</MarketCode>
+			<MarketCode>XINE.FC.NR</MarketCode>
+
+			<!-- 上海黄金现货交易所 -->
+			<MarketCode>SHGE</MarketCode>
+			<MarketCode>SHGE.FC.METAL</MarketCode>
+			
+			<!-- 外盘期货 -->
+			<MarketCode>XCBM</MarketCode>
+			<MarketCode>XCBT</MarketCode>
+			<MarketCode>XLME</MarketCode>
+			<MarketCode>XCEC</MarketCode>
+			<MarketCode>XNYM</MarketCode>
+			<MarketCode>CMES</MarketCode>
+			<MarketCode>ICEU</MarketCode>
+			<MarketCode>ICEE</MarketCode>
+		</MarketCodes>
+	</MarketCategory>
+	<MarketCategory>
+		<Category>3010</Category>
+		<MarketCodes>
+			<!--上海个股期权-->
+			<MarketCode>XSHO</MarketCode>
+			<MarketCode>XSHO.O.ETF</MarketCode>
+
+			<!--深圳个股期权-->
+			<MarketCode>XSZO</MarketCode>
+			<MarketCode>XSZO.O.ETF</MarketCode>
+
+			<!-- 中金所商品期权 -->
+			<MarketCode>CCFX-O</MarketCode>
+			<MarketCode>CCFX-O.O.IO</MarketCode>
+		</MarketCodes>
+	</MarketCategory>
+	<MarketCategory>
+		<Category>3020</Category>
+		<MarketCodes>
+			<!-- 上海商品期权 -->
+			<MarketCode>XSGE-O</MarketCode>
+			<MarketCode>XSGE-O.O.ZN</MarketCode>
+			<MarketCode>XSGE-O.O.RU</MarketCode>
+			<MarketCode>XSGE-O.O.CU</MarketCode>
+			<MarketCode>XSGE-O.O.AU</MarketCode>
+			<MarketCode>XSGE-O.O.AL</MarketCode>
+			
+			<!-- 大连商品期权 -->
+			<MarketCode>XDCE-O</MarketCode>
+			<MarketCode>XDCE-O.O.V</MarketCode>
+			<MarketCode>XDCE-O.O.PP</MarketCode>
+			<MarketCode>XDCE-O.O.PG</MarketCode>
+			<MarketCode>XDCE-O.O.M</MarketCode>
+			<MarketCode>XDCE-O.O.L</MarketCode>
+			<MarketCode>XDCE-O.O.I</MarketCode>
+			<MarketCode>XDCE-O.O.C</MarketCode>
+
+			<!-- 郑州商品期权 -->
+			<MarketCode>XZCE-O</MarketCode>
+			<MarketCode>XZCE-O.O.ZC</MarketCode>
+			<MarketCode>XZCE-O.O.TA</MarketCode>
+			<MarketCode>XZCE-O.O.SR</MarketCode>
+			<MarketCode>XZCE-O.O.RM</MarketCode>
+			<MarketCode>XZCE-O.O.MA</MarketCode>
+			<MarketCode>XZCE-O.O.CF</MarketCode>
+			
+			<!-- 大商所组合 -->
+			<MarketCode>XDCC</MarketCode>
+			<MarketCode>XDCC.F.M</MarketCode>
+
+			<!-- 郑商所组合 -->
+			<MarketCode>XZCC</MarketCode>
+			<MarketCode>XZCC.F.M</MarketCode>
+		</MarketCodes>
+	</MarketCategory>
+	<MarketCategory>
+		<Category>4000</Category>
+		<MarketCodes>
+			<!--上证基金-->
+			<MarketCode>XSHG.EU</MarketCode>
+			<MarketCode>XSHG.EM.SF</MarketCode>
+			<MarketCode>XSHG.EM.LOF</MarketCode>
+
+			<!--深证基金-->
+			<MarketCode>XSHE.EM.SF</MarketCode>
+			<MarketCode>XSHE.EM.LOF</MarketCode>
+			<MarketCode>XSHE.EM.CEF</MarketCode>
+		</MarketCodes>
+	</MarketCategory>
+	<MarketCategory>
+		<Category>4010</Category>
+		<MarketCodes>
+			<!--上证ETF基金-->
+			<MarketCode>XSHG.EM.ETF</MarketCode>
+
+			<!--深证ETF基金-->
+			<MarketCode>XSHE.EM.ETF</MarketCode>
+		</MarketCodes>
+	</MarketCategory>
+	<MarketCategory>
+		<Category>4020</Category>
+		<MarketCodes>
+		    <!-- 香港信托 -->
+			<MarketCode>XHKG-M.TR</MarketCode>
+			<!--港股基金 房地产投资信托基金-->
+			<MarketCode>XHKG-M.TR.REIT</MarketCode>
+			<!--港股基金 交易所买卖基金-->
+			<MarketCode>XHKG-M.TR.ETF</MarketCode>
+		</MarketCodes>
+	</MarketCategory>
+	<MarketCategory>
+		<Category>5000</Category>
+		<MarketCodes>
+			<!--上证债券-->
+			<MarketCode>XSHG.D</MarketCode>
+			<MarketCode>XSHG.DB.REPO</MarketCode>
+			<MarketCode>XSHG.DB.GBF</MarketCode>
+			<MarketCode>XSHG.DB.CPF</MarketCode>
+			<MarketCode>XSHG.DB.CCF</MarketCode>
+			<MarketCode>XSHG.DB.CBF</MarketCode>
+
+			<!--深证债券-->
+			<MarketCode>XSHE.D</MarketCode>
+			<MarketCode>XSHE.DB.REPO</MarketCode>
+			<MarketCode>XSHE.DB.GBF</MarketCode>
+			<MarketCode>XSHE.DB.CPF</MarketCode>
+			<MarketCode>XSHE.DB.CCF</MarketCode>
+			<MarketCode>XSHE.DB.CBF</MarketCode>
+			
+			<!--公司债-->
+			<MarketCode>XBCJIF</MarketCode>
+
+		</MarketCodes>
+	</MarketCategory>
+	<MarketCategory>
+		<Category>5010</Category>
+		<MarketCodes>
+			<!--香港债券-->
+			<MarketCode>XHKG-M.DB</MarketCode>
+			<!--香港债券 香港政府债券-->
+			<MarketCode>XHKG-M.DB.SARGOV</MarketCode>
+			<!--香港债券 中国政府债券-->
+			<MarketCode>XHKG-M.DB.PRCGOV</MarketCode>
+			<!--香港债券 其它债券-->
+			<MarketCode>XHKG-M.DB.M.HKD</MarketCode>
+			<!--香港债券 其它债券(人民币交易)-->
+			<MarketCode>XHKG-M.DB.M.CNY</MarketCode>
+			<!--香港债券 香港金融管理局外汇基金债券-->
+			<MarketCode>XHKG-M.DB.HKMAE</MarketCode>
+		</MarketCodes>
+	</MarketCategory>
+	<MarketCategory>
+		<Category>6000</Category>
+		<MarketCodes>
+			<!--沪深指数-->
+			<MarketCode>XSHG.MRI</MarketCode>
+			<MarketCode>XSHE.MRI</MarketCode>
+
+			<!--沪深板块-->
+			<MarketCode>XBHS</MarketCode>
+			<MarketCode>XBHS.ZS</MarketCode>
+			<MarketCode>XBHS.ZJHHY</MarketCode>
+			<MarketCode>XBHS.HY</MarketCode>
+			<MarketCode>XBHS.GN</MarketCode>
+			<MarketCode>XBHS.DY</MarketCode>
+
+			<!--中证指数-->
+			<MarketCode>CSI</MarketCode>
+			<MarketCode>CSI.MRI.SZSE</MarketCode>
+			<MarketCode>CSI.MRI.SSE</MarketCode>
+			<MarketCode>CSI.MRI.OTHER</MarketCode>
+			<MarketCode>CSI.MRI.HS</MarketCode>
+			<MarketCode>CSI.MRI.HK</MarketCode>
+			<MarketCode>CSI.MRI.GLB</MarketCode>
+			<MarketCode>CSI.MRI.AP</MarketCode>
+
+			<!--申万指数-->
+			<MarketCode>SWI</MarketCode>
+			<MarketCode>SWI.MRI.SW</MarketCode>			
+			
+			<!-- 国证指数 -->
+			<MarketCode>CNI</MarketCode>		
+			 <!-- 板块指数 -->
+			<MarketCode>XBCJHS.SWHY2014</MarketCode>
+			<MarketCode>XBCJHS.GN</MarketCode>
+			<MarketCode>XBCJHS.DY</MarketCode>	
+			<MarketCode>XBCJHS.ZJHHY2012</MarketCode>
+			<!-- 三板指数 -->
+			<MarketCode>NEEQ.MRI</MarketCode>
+		</MarketCodes>
+	</MarketCategory>
+	<!--增加港股指数和境外指数，chegnjin，2021-4-20 19:08:19 -->
+	<MarketCategory>
+		<Category desc="港股指数">6010</Category>
+		<MarketCodes>
+			<!--港股指数-->
+			<MarketCode>XHKG-I.MRI</MarketCode>
+		</MarketCodes>
+	</MarketCategory>
+	<MarketCategory>
+		<Category desc="境外指数">6020</Category>
+		<MarketCodes>
+			<!-- 美股指数 -->
+			<MarketCode>GL-AMER.AMER</MarketCode>
+			<MarketCode>GL-SAPI.SAPI</MarketCode>
+			<MarketCode>GL-LEUM.LEUM</MarketCode>
+			<MarketCode>GL-GSPTSE.GSPTSE</MarketCode>
+			<MarketCode>GL-USDIND.USDIND</MarketCode>
+			<!-- 欧洲市场指数 -->
+			<MarketCode>GL-IBEX.IBEX</MarketCode>
+			<MarketCode>GL-RUSA.RUSA</MarketCode>
+			<MarketCode>GL-LDUN.LDUN</MarketCode>
+			<MarketCode>GL-GDAXI.GDAXI</MarketCode>
+			<MarketCode>GL-AEX.AEX</MarketCode>
+			<MarketCode>GL-ATX.ATX</MarketCode>
+			<MarketCode>GL-BFX.BFX</MarketCode>
+			<MarketCode>GL-FCHI.FCHI</MarketCode>
+			<MarketCode>GL-MIB.MIB</MarketCode>
+			<MarketCode>GL-SSMI.SSMI</MarketCode>
+			<MarketCode>GL-OMXSPI.OMXSPI</MarketCode>
+			 <!-- 亚洲市场指数 -->
+			<MarketCode>GL-HKHS.HKHS</MarketCode>
+			<MarketCode>GL-TWII.TWII</MarketCode>
+			<MarketCode>GL-N225.N225</MarketCode>
+			<MarketCode>GL-INDO.INDO</MarketCode>
+			<MarketCode>GL-MUBA.MUBA</MarketCode>
+			<MarketCode>GL-KLSE.KLSE</MarketCode>
+			<MarketCode>GL-KS11.KS11</MarketCode>
+			<MarketCode>GL-NZLD.NZLD</MarketCode>
+			<MarketCode>GL-AUST.AUST</MarketCode>
+		</MarketCodes>
+	</MarketCategory>
+	<!--增加银行间债券指数，zhuys，2021-5-11 -->
+	<MarketCategory>
+		<Category desc="银行间债券指数">6030</Category>
+		<MarketCodes>
+			<!--银行间债券指数-->
+			<MarketCode>BONDCFES.BNPJI</MarketCode>
+			<!-- 全价指数 -->
+			<MarketCode>BONDCFES.BNPQI</MarketCode>
+		</MarketCodes>
+	</MarketCategory>
+
+	<!--增加人民币汇率指数，zhuys，2021-5-17 16:18:19 -->
+	<MarketCategory>
+		<Category>6040</Category>
+		<MarketCodes>
+			<!--人民币汇率指数-->
+			<MarketCode>FXCFES.RMBI</MarketCode>			
+		</MarketCodes>
+	</MarketCategory>
+	
+	<MarketCategory>
+		<Category>7000</Category>
+		<MarketCodes>
+			<!--外汇交易中心-->
+			<MarketCode>FXCFES</MarketCode>			
+		</MarketCodes>
+	</MarketCategory>
+	
+	<MarketCategory>
+		<Category>7010</Category>
+		<MarketCodes>
+			<!--远期外汇-->
+			<MarketCode>FXCFES.FFRX</MarketCode>			
+		</MarketCodes>
+	</MarketCategory>
+	
+	<MarketCategory>
+		<Category>7020</Category>
+		<MarketCodes>
+			<!--掉期外汇-->
+			<MarketCode>FXCFES.FWRX</MarketCode>
+			<MarketCode>FXCFES.FWQX</MarketCode>
+			<MarketCode>FXCFES.FWRC</MarketCode>
+		</MarketCodes>
+	</MarketCategory>
+	
+	<MarketCategory>
+		<Category>7030</Category>
+		<MarketCodes>
+			<!--中间价外汇-->
+			<MarketCode>FXCFES.RBD</MarketCode>			
+		</MarketCodes>
+	</MarketCategory>	
+	
+	<!--增加人民币即期，chenyj，2021-5-12 16:18:19 -->
+	<MarketCategory>
+		<Category>7040</Category>
+		<MarketCodes>
+			<!--人民币即期外汇-->
+			<MarketCode>FXCFES.FSRH</MarketCode>			
+		</MarketCodes>
+	</MarketCategory>	
+
+	<MarketCategory>
+		<Category>7050</Category>
+		<MarketCodes>
+			<!--外币对竞价-->
+			<MarketCode>FXCFES.FSRJ</MarketCode>			
+		</MarketCodes>
+	</MarketCategory>	
+
+	<MarketCategory>
+		<Category>8000</Category>
+		<MarketCodes>
+			<!--外汇交易中心债券市场-->
+			<MarketCode>BONDCFES</MarketCode>			
+		</MarketCodes>
+	</MarketCategory>
+	<!--增加债券远期，zhuys，2021-5-18 16:18:19 -->
+	<MarketCategory>
+		<Category>8010</Category>
+		<MarketCodes>
+			<!--债券远期-->
+			<MarketCode>BONDCFES.FBSS</MarketCode>
+			<MarketCode>BONDCFES.FBSR</MarketCode>			
+		</MarketCodes>
+	</MarketCategory>
+	<MarketCategory>
+		<Category>9000</Category>
+		<MarketCodes>
+			<!--场外基金市场-->
+			<MarketCode>OF</MarketCode>			
+		</MarketCodes>
+	</MarketCategory>
+	<MarketCategory>
+		<Category>10000</Category>
+		<MarketCodes>
+			<!--财经外汇-->
+			<MarketCode>CJFX</MarketCode>			
+		</MarketCodes>
+	</MarketCategory>
+	
+	<MarketCategory>
+		<Category>11000</Category>
+		<MarketCodes>
+			<!--财经外汇-->
+			<MarketCode>MMCFES</MarketCode>			
+		</MarketCodes>
+	</MarketCategory>	
+	<MarketCategory>
+		<Category>12000</Category>
+		<MarketCodes>
+			<!--股转系统-->
+			<MarketCode>NEEQ</MarketCode>			
+		</MarketCodes>
+	</MarketCategory>
+</ArrayOfMarketCategory>

@@ -1,0 +1,284 @@
+﻿<?xml version="1.0"?>
+<ArrayOfVarietyOrderConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <VarietyOrderConfig Mic="中金所">
+    <VarietyOrder>
+		<Variety>沪深</Variety>
+		<Variety>上证</Variety>
+		<Variety>中证</Variety>
+		<Variety>十债</Variety>
+		<Variety>五债</Variety>
+		<Variety>二债</Variety>
+    </VarietyOrder>
+  </VarietyOrderConfig>
+
+  <VarietyOrderConfig Mic="上期所">
+    <VarietyOrder>
+		<Variety>沪铜</Variety>
+		<Variety>沪铝</Variety>
+		<Variety>沪锌</Variety>
+		<Variety>沪铅</Variety>
+		<Variety>沪镍</Variety>
+		<Variety>沪锡</Variety>
+		<Variety>沪金</Variety>
+		<Variety>沪银</Variety>
+		<Variety>螺纹</Variety>
+		<Variety>线材</Variety>
+		<Variety>沥青</Variety>
+		<Variety>热卷</Variety>
+		<Variety>橡胶</Variety>
+		<Variety>纸浆</Variety>
+		<Variety>不锈钢</Variety>
+		<Variety>燃油</Variety>
+    </VarietyOrder>
+  </VarietyOrderConfig>
+  
+  <VarietyOrderConfig Mic="上能源">
+    <VarietyOrder>
+		<Variety>原油</Variety>
+		<Variety>低硫燃油</Variety>
+		<Variety>20号胶</Variety>
+		<Variety>国际铜</Variety>
+    </VarietyOrder>
+  </VarietyOrderConfig>
+  
+  <VarietyOrderConfig Mic="大商所">
+    <VarietyOrder>
+		<Variety>豆粕</Variety>
+		<Variety>豆油</Variety>
+		<Variety>豆一</Variety>
+		<Variety>豆二</Variety>
+		<Variety>玉米</Variety>
+		<Variety>棕榈</Variety>
+		<Variety>PP</Variety>
+		<Variety>PVC</Variety>
+		<Variety>塑料</Variety>
+		<Variety>乙二醇</Variety>
+		<Variety>苯乙烯</Variety>
+		<Variety>铁矿</Variety>
+		<Variety>焦炭</Variety>
+		<Variety>焦煤</Variety>
+		<Variety>淀粉</Variety>
+		<Variety>鸡蛋</Variety>
+		<Variety>生猪</Variety>
+		<Variety>粳米</Variety>
+		<Variety>LPG</Variety>
+		<Variety>纤板</Variety>
+		<Variety>胶板</Variety>
+    </VarietyOrder>
+  </VarietyOrderConfig>
+  
+  <VarietyOrderConfig Mic="郑商所">
+    <VarietyOrder>
+		<Variety>PTA</Variety>
+		<Variety>甲醇</Variety>
+		<Variety>玻璃</Variety>
+		<Variety>白糖</Variety>
+		<Variety>棉花</Variety>
+		<Variety>菜粕</Variety>
+		<Variety>菜籽</Variety>
+		<Variety>菜油</Variety>
+		<Variety>苹果</Variety>
+		<Variety>纯碱</Variety>
+		<Variety>硅铁</Variety>
+		<Variety>锰硅</Variety>
+		<Variety>短纤</Variety>
+		<Variety>动力煤</Variety>
+		<Variety>尿素</Variety>
+		<Variety>红枣</Variety>
+		<Variety>花生</Variety>
+		<Variety>棉纱</Variety>
+		<Variety>粳稻</Variety>
+		<Variety>晚稻</Variety>
+		<Variety>早稻</Variety>
+		<Variety>普麦</Variety>
+		<Variety>强麦</Variety>
+    </VarietyOrder>
+  </VarietyOrderConfig>
+  
+  <VarietyOrderConfig Mic="夜盘合约">
+    <VarietyOrder>
+		<Variety>沪铜</Variety>
+		<Variety>沪铝</Variety>
+		<Variety>沪锌</Variety>
+		<Variety>沪铅</Variety>
+		<Variety>沪镍</Variety>
+		<Variety>沪锡</Variety>
+		<Variety>沪金</Variety>
+		<Variety>沪银</Variety>
+		<Variety>螺纹</Variety>
+		<Variety>热卷</Variety>
+		<Variety>燃油</Variety>
+		<Variety>沥青</Variety>
+		<Variety>橡胶</Variety>
+		<Variety>纸浆</Variety>
+		<Variety>不锈钢</Variety>
+		<Variety>原油</Variety>
+		<Variety>低硫燃油</Variety>
+		<Variety>20号胶</Variety>
+		<Variety>国际铜</Variety>
+		<Variety>PTA</Variety>
+		<Variety>甲醇</Variety>
+		<Variety>玻璃</Variety>
+		<Variety>白糖</Variety>
+		<Variety>棉花</Variety>
+		<Variety>菜粕</Variety>
+		<Variety>菜油</Variety>
+		<Variety>纯碱</Variety>
+		<Variety>短纤</Variety>
+		<Variety>动力煤</Variety>
+		<Variety>棉纱</Variety>
+		<Variety>豆粕</Variety>
+		<Variety>豆油</Variety>
+		<Variety>豆一</Variety>
+		<Variety>豆二</Variety>
+		<Variety>玉米</Variety>
+		<Variety>棕榈</Variety>
+		<Variety>PP</Variety>
+		<Variety>PVC</Variety>
+		<Variety>塑料</Variety>
+		<Variety>乙二醇</Variety>
+		<Variety>苯乙烯</Variety>
+		<Variety>铁矿</Variety>
+		<Variety>焦炭</Variety>
+		<Variety>焦煤</Variety>
+		<Variety>淀粉</Variety>
+		<Variety>粳米</Variety>
+		<Variety>LPG</Variety>
+    </VarietyOrder>
+  </VarietyOrderConfig>
+  
+  <VarietyOrderConfig Mic="ICE美国">
+    <VarietyOrder>
+		<Variety>美棉花</Variety>
+		<Variety>美糖11号</Variety>
+		<Variety>美可可</Variety>
+		<Variety>美咖啡</Variety>
+		<Variety>美橙汁</Variety>
+		<Variety>美元指数</Variety>
+		<Variety>美国龙头科技指数</Variety>
+		<Variety>小型黄金</Variety>
+		<Variety>小型白银</Variety>
+    </VarietyOrder>
+  </VarietyOrderConfig>
+  
+  <VarietyOrderConfig Mic="ICE欧洲">
+    <VarietyOrder>
+		<Variety>布伦特原油</Variety>
+		<Variety>低硫柴油</Variety>
+		<Variety>WTI原油</Variety>
+		<Variety>取暖油</Variety>
+		<Variety>NYH RBOB汽油</Variety>
+		<Variety>伦敦可可</Variety>
+		<Variety>罗布斯塔咖啡</Variety>
+		<Variety>泛欧白糖</Variety>
+		<Variety>鹿特丹煤炭</Variety>
+		<Variety>理查德湾煤炭</Variety>
+		<Variety>三月英镑利率</Variety>
+		<Variety>英国10年金边债券</Variety>
+    </VarietyOrder>
+  </VarietyOrderConfig>
+  
+  <VarietyOrderConfig Mic="CME">
+    <VarietyOrder>
+		<Variety>活牛</Variety>
+		<Variety>育肥牛</Variety>
+		<Variety>瘦肉猪</Variety>
+		<Variety>标普500指数</Variety>
+		<Variety>微型标普500指数</Variety>
+		<Variety>标普中盘400指数</Variety>
+		<Variety>日经指数美元</Variety>
+		<Variety>日经指数日元</Variety>
+		<Variety>纳斯达克100指数</Variety>
+		<Variety>微型纳斯达克100指数</Variety>
+		<Variety>罗素2000指数</Variety>
+		<Variety>微型罗素2000指数</Variety>
+		<Variety>MPC SONIA</Variety>
+		<Variety>IMM SONIA</Variety>
+		<Variety>三个月SOFR</Variety>
+		<Variety>一个月SOFR</Variety>
+		<Variety>澳元</Variety>
+		<Variety>日元</Variety>
+		<Variety>欧元</Variety>
+		<Variety>欧洲美元利率</Variety>
+		<Variety>英镑</Variety>
+		<Variety>纽元</Variety>
+		<Variety>加元</Variety>
+		<Variety>墨西哥比索</Variety>
+		<Variety>瑞郎</Variety>
+		<Variety>一个月欧洲美元</Variety>
+    </VarietyOrder>
+  </VarietyOrderConfig>
+  
+  <VarietyOrderConfig Mic="CBOT">
+    <VarietyOrder>
+		<Variety>大豆</Variety>
+		<Variety>玉米</Variety>
+		<Variety>小麦</Variety>
+		<Variety>燕麦</Variety>
+		<Variety>稻谷</Variety>
+		<Variety>豆油</Variety>
+		<Variety>豆粕</Variety>
+		<Variety>堪萨斯小麦</Variety>
+		<Variety>迷你玉米</Variety>
+		<Variety>迷你大豆</Variety>
+		<Variety>迷你小麦</Variety>
+		<Variety>2年美债</Variety>
+		<Variety>5年美债</Variety>
+		<Variety>10年美债</Variety>
+		<Variety>30年美债</Variety>
+		<Variety>超10年美债</Variety>
+		<Variety>超30年美债</Variety>
+		<Variety>30天联邦基金</Variety>
+		<Variety>道琼斯指数</Variety>
+		<Variety>微型道琼斯指数</Variety>
+    </VarietyOrder>
+  </VarietyOrderConfig>
+  
+  <VarietyOrderConfig Mic="NYMEX">
+    <VarietyOrder>
+		<Variety>WTI原油</Variety>
+		<Variety>迷你原油</Variety>
+		<Variety>布伦特原油</Variety>
+		<Variety>天然气</Variety>
+		<Variety>迷你天然气</Variety>
+		<Variety>汽油</Variety>
+		<Variety>燃油</Variety>
+		<Variety>铂金</Variety>
+		<Variety>钯金</Variety>
+    </VarietyOrder>
+  </VarietyOrderConfig>
+  
+  <VarietyOrderConfig Mic="COMEX">
+    <VarietyOrder>
+		<Variety>黄金</Variety>
+		<Variety>白银</Variety>
+		<Variety>迷你黄金</Variety>
+		<Variety>迷你白银</Variety>
+		<Variety>微黄金</Variety>
+		<Variety>铜</Variety>
+		<Variety>迷你铜</Variety>
+		<Variety>上海金(美元)</Variety>
+		<Variety>上海金(离岸人民币)</Variety>
+		<Variety>铝</Variety>
+		<Variety>锌</Variety>
+    </VarietyOrder>
+  </VarietyOrderConfig>
+  
+  <VarietyOrderConfig Mic="LME">
+    <VarietyOrder>
+		<Variety MarketCode="XLME.FC.CA.S">铜</Variety>
+		<Variety MarketCode="XLME.FC.AH.S">铝</Variety>
+		<Variety MarketCode="XLME.FC.PB.S">铅</Variety>
+		<Variety MarketCode="XLME.FC.ZS.S">锌</Variety>
+		<Variety MarketCode="XLME.FC.NI.S">镍</Variety>
+		<Variety MarketCode="XLME.FC.SN.S">锡</Variety>
+		<Variety MarketCode="XLME.FC.CO.S">钴</Variety>
+		<Variety MarketCode="XLME.FC.AA.S">铝合金</Variety>
+		<Variety MarketCode="XLME.FC.NA.S">北美特种铝合金</Variety>
+		<Variety MarketCode="XLME.FC.SC.S">废钢</Variety>
+		<Variety MarketCode="XLME.FC.HC.S">离岸钢</Variety>
+		<Variety MarketCode="XLME.FC.SR.S">钢筋</Variety>
+		<Variety MarketCode="XLME.FC.HU.S">普氏钢</Variety>
+    </VarietyOrder>
+  </VarietyOrderConfig>
+</ArrayOfVarietyOrderConfig>

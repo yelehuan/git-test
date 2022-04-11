@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<IndexsConfig> 
+  
+  <!--沪深股票--> 
+  <Index id="10178" type="itBasic" pname="Time" name="data_timestamp" caption="时间" datatype="dtInt32"/>
+  <Index id="31" type="itBasic" pname="Now" name="last_px" caption="现价" datatype="dtInt64" scaletype="1" relateindex="preclose_px,prev_settlement"/>
+  <Index id="332" type="itBasic" pname="High" name="high_px" caption="最高价" datatype="dtInt64" scaletype="1" relateindex="preclose_px,prev_settlement"/>  
+  <Index id="333" type="itBasic" pname="Low" name="low_px" caption="最低价" datatype="dtInt64" scaletype="1" relateindex="preclose_px,prev_settlement"/>  
+  <Index id="10018" type="itBasic" pname="Open" name="open_px" caption="今开盘" datatype="dtInt64" scaletype="1" relateindex="preclose_px,prev_settlement"/>  
+  <Index id="140" type="itBasic" pname="PreClose" name="preclose_px" caption="昨收价" datatype="dtInt64" scaletype="1"/>  
+  <Index id="-100" type="itDeri" pname="Roundlot" name="DealVolume" caption="现手" datatype="dtInt64" relateindex="business_amount"/>
+  <Index id="20037" type="itBasic" pname="Change" name="px_change" caption="涨跌" datatype="dtInt64" scaletype="1"/>  
+  <Index id="20038" type="itBasic" pname="PctChange" name="px_change_rate" caption="涨跌幅" datatype="dtInt32" scaletype="2"/> 
+  <Index type="itFunc" pname="Volume" name="TotalVolume" caption="总成交量(股)" datatype="dtDouble" relateindex="business_amount"/>
+  <Index id="8504" type="itBasic" pname="Amount" name="business_balance" caption="总成交额" datatype="dtInt64"/>   
+  <Index id="34" type="itBasic" pname="VolumeRatio" name="vol_ratio" caption="量比" scaletype="1" datatype="dtInt32"/> 
+  <Index id="99" type="itBasic" pname="CommissionRatio" name="entrust_rate" caption="委比" datatype="dtInt32" scaletype="2"/>
+  <Index id="101" type="itBasic" pname="CommissionDiff" name="entrust_diff" caption="委差" datatype="dtInt64"/>
+  <Index id="10135" type="itBasic" pname="Tradestatus" name="trade_status" caption="交易状态" datatype="dtString"/>
+  <Index id="20033" type="itBasic" pname="InVolume" name="business_amount_in" caption="内盘成交量" datatype="dtInt64"/>  
+  <Index id="20034" type="itBasic" pname="OutVolume" name="business_amount_out" caption="外盘成交量" datatype="dtInt64"/>
+  <Index id="20028" type="itBasic" pname="HighLimit" name="up_px" caption="涨停价格" scaletype="1" datatype="dtInt64"/>  
+  <Index id="20029" type="itBasic" pname="LowLimit" name="down_px" caption="跌停价格" scaletype="1" datatype="dtInt64"/>
+  <Index id="47" type="itBasic" pname="Speed" name="min5_chgpct" caption="五分钟涨跌幅" scaletype="2" datatype="dtInt32"/>  
+  <Index id="-1" type="itDeri" pname="BuyPrice1" name="BuyPrice1" caption="买一" datatype="dtInt64" scaletype="1" relateindex="preclose_px,prev_settlement,bid_grp"/>  
+  <Index id="-2" type="itDeri" pname="BuyPrice2" name="BuyPrice2" caption="买二" datatype="dtInt64" scaletype="1" relateindex="preclose_px,prev_settlement,bid_grp"/>  
+  <Index id="-3" type="itDeri" pname="BuyPrice3" name="BuyPrice3" caption="买三" datatype="dtInt64" scaletype="1" relateindex="preclose_px,prev_settlement,bid_grp"/>  
+  <Index id="-4" type="itDeri" pname="BuyPrice4" name="BuyPrice4" caption="买四" datatype="dtInt64" scaletype="1" relateindex="preclose_px,prev_settlement,bid_grp"/>  
+  <Index id="-5" type="itDeri" pname="BuyPrice5" name="BuyPrice5" caption="买五" datatype="dtInt64" scaletype="1" relateindex="preclose_px,prev_settlement,bid_grp"/>  
+  <Index id="-11" type="itDeri" pname="SellPrice1" name="SellPrice1" caption="卖一" datatype="dtInt64" scaletype="1" relateindex="preclose_px,prev_settlement,offer_grp"/>  
+  <Index id="-12" type="itDeri" pname="SellPrice2" name="SellPrice2" caption="卖二" datatype="dtInt64" scaletype="1" relateindex="preclose_px,prev_settlement,offer_grp"/>  
+  <Index id="-13" type="itDeri" pname="SellPrice3" name="SellPrice3" caption="卖三" datatype="dtInt64" scaletype="1" relateindex="preclose_px,prev_settlement,offer_grp"/>  
+  <Index id="-14" type="itDeri" pname="SellPrice4" name="SellPrice4" caption="卖四" datatype="dtInt64" scaletype="1" relateindex="preclose_px,prev_settlement,offer_grp"/>  
+  <Index id="-15" type="itDeri" pname="SellPrice5" name="SellPrice5" caption="卖五" datatype="dtInt64" scaletype="1" relateindex="preclose_px,prev_settlement,offer_grp"/>  
+  <Index id="-21" type="itDeri" pname="BuyVolume1" name="BuyVolume1" caption="买一量" datatype="dtInt64" relateindex="bid_grp"/>  
+  <Index id="-22" type="itDeri" pname="BuyVolume2" name="BuyVolume2" caption="买二量" datatype="dtInt64" relateindex="bid_grp"/>  
+  <Index id="-23" type="itDeri" pname="BuyVolume3" name="BuyVolume3" caption="买三量" datatype="dtInt64" relateindex="bid_grp"/>  
+  <Index id="-24" type="itDeri" pname="BuyVolume4" name="BuyVolume4" caption="买四量" datatype="dtInt64" relateindex="bid_grp"/>  
+  <Index id="-25" type="itDeri" pname="BuyVolume5" name="BuyVolume5" caption="买五量" datatype="dtInt64" relateindex="bid_grp"/>  
+  <Index id="-31" type="itDeri" pname="SellVolume1" name="SellVolume1" caption="卖一量" datatype="dtInt64" relateindex="offer_grp"/>  
+  <Index id="-32" type="itDeri" pname="SellVolume2" name="SellVolume2" caption="卖二量" datatype="dtInt64" relateindex="offer_grp"/>  
+  <Index id="-33" type="itDeri" pname="SellVolume3" name="SellVolume3" caption="卖三量" datatype="dtInt64" relateindex="offer_grp"/>  
+  <Index id="-34" type="itDeri" pname="SellVolume4" name="SellVolume4" caption="卖四量" datatype="dtInt64" relateindex="offer_grp"/>  
+  <Index id="-35" type="itDeri" pname="SellVolume5" name="SellVolume5" caption="卖五量" datatype="dtInt64" relateindex="offer_grp"/>  
+  
+  <!--美股--> 
+  <Index id="10178" type="itBasic" pname="Time" name="data_timestamp" caption="时间" datatype="dtInt32"/>
+  <Index id="31" type="itBasic" pname="Now" name="last_px" caption="现价" datatype="dtInt64" scaletype="1" relateindex="preclose_px,prev_settlement"/>
+  <Index id="332" type="itBasic" pname="High" name="high_px" caption="最高价" datatype="dtInt64" scaletype="1" relateindex="preclose_px,prev_settlement"/>  
+  <Index id="333" type="itBasic" pname="Low" name="low_px" caption="最低价" datatype="dtInt64" scaletype="1" relateindex="preclose_px,prev_settlement"/>  
+  <Index id="10018" type="itBasic" pname="Open" name="open_px" caption="今开盘" datatype="dtInt64" scaletype="1" relateindex="preclose_px,prev_settlement"/>  
+  <Index id="140" type="itBasic" pname="PreClose" name="preclose_px" caption="昨收价" datatype="dtInt64" scaletype="1"/>
+  <Index id="-100" type="itDeri" pname="Roundlot" name="DealVolume" caption="现手" datatype="dtInt64" relateindex="business_amount"/>
+  <Index id="20037" type="itBasic" pname="Change" name="px_change" caption="涨跌" datatype="dtInt64" scaletype="1"/>  
+  <Index id="20038" type="itBasic" pname="PctChange" name="px_change_rate" caption="涨跌幅" datatype="dtInt32" scaletype="2"/> 
+  <Index type="itFunc" pname="Volume" name="TotalVolume" caption="总成交量(股)" datatype="dtDouble" relateindex="business_amount"/>
+  <Index id="-1" type="itDeri" pname="BuyPrice1" name="BuyPrice1" caption="买一" datatype="dtInt64" scaletype="1" relateindex="preclose_px,prev_settlement,bid_grp"/>  
+  <Index id="-2" type="itDeri" pname="BuyPrice2" name="BuyPrice2" caption="买二" datatype="dtInt64" scaletype="1" relateindex="preclose_px,prev_settlement,bid_grp"/>  
+  <Index id="-3" type="itDeri" pname="BuyPrice3" name="BuyPrice3" caption="买三" datatype="dtInt64" scaletype="1" relateindex="preclose_px,prev_settlement,bid_grp"/>  
+  <Index id="-4" type="itDeri" pname="BuyPrice4" name="BuyPrice4" caption="买四" datatype="dtInt64" scaletype="1" relateindex="preclose_px,prev_settlement,bid_grp"/>  
+  <Index id="-5" type="itDeri" pname="BuyPrice5" name="BuyPrice5" caption="买五" datatype="dtInt64" scaletype="1" relateindex="preclose_px,prev_settlement,bid_grp"/>  
+  <Index id="-11" type="itDeri" pname="SellPrice1" name="SellPrice1" caption="卖一" datatype="dtInt64" scaletype="1" relateindex="preclose_px,prev_settlement,offer_grp"/>  
+  <Index id="-12" type="itDeri" pname="SellPrice2" name="SellPrice2" caption="卖二" datatype="dtInt64" scaletype="1" relateindex="preclose_px,prev_settlement,offer_grp"/>  
+  <Index id="-13" type="itDeri" pname="SellPrice3" name="SellPrice3" caption="卖三" datatype="dtInt64" scaletype="1" relateindex="preclose_px,prev_settlement,offer_grp"/>  
+  <Index id="-14" type="itDeri" pname="SellPrice4" name="SellPrice4" caption="卖四" datatype="dtInt64" scaletype="1" relateindex="preclose_px,prev_settlement,offer_grp"/>  
+  <Index id="-15" type="itDeri" pname="SellPrice5" name="SellPrice5" caption="卖五" datatype="dtInt64" scaletype="1" relateindex="preclose_px,prev_settlement,offer_grp"/>  
+  <Index id="-21" type="itDeri" pname="BuyVolume1" name="BuyVolume1" caption="买一量" datatype="dtInt64" relateindex="bid_grp"/>  
+  <Index id="-22" type="itDeri" pname="BuyVolume2" name="BuyVolume2" caption="买二量" datatype="dtInt64" relateindex="bid_grp"/>  
+  <Index id="-23" type="itDeri" pname="BuyVolume3" name="BuyVolume3" caption="买三量" datatype="dtInt64" relateindex="bid_grp"/>  
+  <Index id="-24" type="itDeri" pname="BuyVolume4" name="BuyVolume4" caption="买四量" datatype="dtInt64" relateindex="bid_grp"/>  
+  <Index id="-25" type="itDeri" pname="BuyVolume5" name="BuyVolume5" caption="买五量" datatype="dtInt64" relateindex="bid_grp"/>  
+  <Index id="-31" type="itDeri" pname="SellVolume1" name="SellVolume1" caption="卖一量" datatype="dtInt64" relateindex="offer_grp"/>  
+  <Index id="-32" type="itDeri" pname="SellVolume2" name="SellVolume2" caption="卖二量" datatype="dtInt64" relateindex="offer_grp"/>  
+  <Index id="-33" type="itDeri" pname="SellVolume3" name="SellVolume3" caption="卖三量" datatype="dtInt64" relateindex="offer_grp"/>  
+  <Index id="-34" type="itDeri" pname="SellVolume4" name="SellVolume4" caption="卖四量" datatype="dtInt64" relateindex="offer_grp"/>  
+  <Index id="-35" type="itDeri" pname="SellVolume5" name="SellVolume5" caption="卖五量" datatype="dtInt64" relateindex="offer_grp"/>  
+  
+<!--基金--> 
+  <Index id="10178" type="itBasic" pname="Time" name="data_timestamp" caption="时间" datatype="dtInt32"/>
+  <Index id="31" type="itBasic" pname="Now" name="last_px" caption="现价" datatype="dtInt64" scaletype="1" relateindex="preclose_px,prev_settlement"/>
+  <Index id="332" type="itBasic" pname="High" name="high_px" caption="最高价" datatype="dtInt64" scaletype="1" relateindex="preclose_px,prev_settlement"/>  
+  <Index id="333" type="itBasic" pname="Low" name="low_px" caption="最低价" datatype="dtInt64" scaletype="1" relateindex="preclose_px,prev_settlement"/>  
+  <Index id="10018" type="itBasic" pname="Open" name="open_px" caption="今开盘" datatype="dtInt64" scaletype="1" relateindex="preclose_px,prev_settlement"/>  
+  <Index id="140" type="itBasic" pname="PreClose" name="preclose_px" caption="昨收价" datatype="dtInt64" scaletype="1"/>
+  <Index id="-100" type="itDeri" pname="Roundlot" name="DealVolume" caption="现手" datatype="dtInt64" relateindex="business_amount"/>
+  <Index id="20037" type="itBasic" pname="Change" name="px_change" caption="涨跌" datatype="dtInt64" scaletype="1"/>  
+  <Index id="20038" type="itBasic" pname="PctChange" name="px_change_rate" caption="涨跌幅" datatype="dtInt32" scaletype="2"/> 
+  <Index type="itFunc" pname="Volume" name="TotalVolume" caption="总成交量(股)" datatype="dtDouble" relateindex="business_amount"/>
+  <Index id="8504" type="itBasic" pname="Amount" name="business_balance" caption="总成交额" datatype="dtInt64"/>
+  <Index id="99" type="itBasic" pname="CommissionRatio" name="entrust_rate" caption="委比" datatype="dtInt32" scaletype="2"/>
+  <Index id="20033" type="itBasic" pname="InVolume" name="business_amount_in" caption="内盘成交量" datatype="dtInt64"/>  
+  <Index id="20034" type="itBasic" pname="OutVolume" name="business_amount_out" caption="外盘成交量" datatype="dtInt64"/>
+  <Index id="20028" type="itBasic" pname="HighLimit" name="up_px" caption="涨停价格" scaletype="1" datatype="dtInt64"/>  
+  <Index id="20029" type="itBasic" pname="LowLimit" name="down_px" caption="跌停价格" scaletype="1" datatype="dtInt64"/>    
+
+
+<!--指数--> 
+  <Index id="10178" type="itBasic" pname="Time" name="data_timestamp" caption="时间" datatype="dtInt32"/>
+  <Index id="31" type="itBasic" pname="Now" name="last_px" caption="现价" datatype="dtInt64" scaletype="1" relateindex="preclose_px,prev_settlement"/>
+  <Index id="332" type="itBasic" pname="High" name="high_px" caption="最高价" datatype="dtInt64" scaletype="1" relateindex="preclose_px,prev_settlement"/>  
+  <Index id="333" type="itBasic" pname="Low" name="low_px" caption="最低价" datatype="dtInt64" scaletype="1" relateindex="preclose_px,prev_settlement"/>  
+  <Index id="10018" type="itBasic" pname="Open" name="open_px" caption="今开盘" datatype="dtInt64" scaletype="1" relateindex="preclose_px,prev_settlement"/>  
+  <Index id="140" type="itBasic" pname="PreClose" name="preclose_px" caption="昨收价" datatype="dtInt64" scaletype="1"/>
+  <Index id="-100" type="itDeri" pname="Roundlot" name="DealVolume" caption="现手" datatype="dtInt64" relateindex="business_amount"/>
+  <Index id="20037" type="itBasic" pname="Change" name="px_change" caption="涨跌" datatype="dtInt64" scaletype="1"/>  
+  <Index id="20038" type="itBasic" pname="PctChange" name="px_change_rate" caption="涨跌幅" datatype="dtInt32" scaletype="2"/> 
+  <Index type="itFunc" pname="Volume" name="TotalVolume" caption="总成交量(股)" datatype="dtDouble" relateindex="business_amount"/>
+  <Index id="8504" type="itBasic" pname="Amount" name="business_balance" caption="总成交额" datatype="dtInt64"/>  
+  
+
+<!--债券--> 
+  <Index id="10178" type="itBasic" pname="Time" name="data_timestamp" caption="时间" datatype="dtInt32"/>
+  <Index id="31" type="itBasic" pname="Now" name="last_px" caption="现价" datatype="dtInt64" scaletype="1" relateindex="preclose_px,prev_settlement"/>
+  <Index id="332" type="itBasic" pname="High" name="high_px" caption="最高价" datatype="dtInt64" scaletype="1" relateindex="preclose_px,prev_settlement"/>  
+  <Index id="333" type="itBasic" pname="Low" name="low_px" caption="最低价" datatype="dtInt64" scaletype="1" relateindex="preclose_px,prev_settlement"/>  
+  <Index id="10018" type="itBasic" pname="Open" name="open_px" caption="今开盘" datatype="dtInt64" scaletype="1" relateindex="preclose_px,prev_settlement"/>  
+  <Index id="140" type="itBasic" pname="PreClose" name="preclose_px" caption="昨收价" datatype="dtInt64" scaletype="1"/>
+  <Index id="-100" type="itDeri" pname="Roundlot" name="DealVolume" caption="现手" datatype="dtInt64" relateindex="business_amount"/>
+  <Index id="20037" type="itBasic" pname="Change" name="px_change" caption="涨跌" datatype="dtInt64" scaletype="1"/>  
+  <Index id="20038" type="itBasic" pname="PctChange" name="px_change_rate" caption="涨跌幅" datatype="dtInt32" scaletype="2"/> 
+  <Index type="itFunc" pname="Volume" name="TotalVolume" caption="总成交量(股)" datatype="dtDouble" relateindex="business_amount"/>
+  <Index id="8504" type="itBasic" pname="Amount" name="business_balance" caption="总成交额" datatype="dtInt64"/> 
+  <Index id="-1" type="itDeri" pname="BuyPrice1" name="BuyPrice1" caption="买一" datatype="dtInt64" scaletype="1" relateindex="preclose_px,prev_settlement,bid_grp"/>  
+  <Index id="-2" type="itDeri" pname="BuyPrice2" name="BuyPrice2" caption="买二" datatype="dtInt64" scaletype="1" relateindex="preclose_px,prev_settlement,bid_grp"/>  
+  <Index id="-3" type="itDeri" pname="BuyPrice3" name="BuyPrice3" caption="买三" datatype="dtInt64" scaletype="1" relateindex="preclose_px,prev_settlement,bid_grp"/>  
+  <Index id="-4" type="itDeri" pname="BuyPrice4" name="BuyPrice4" caption="买四" datatype="dtInt64" scaletype="1" relateindex="preclose_px,prev_settlement,bid_grp"/>  
+  <Index id="-5" type="itDeri" pname="BuyPrice5" name="BuyPrice5" caption="买五" datatype="dtInt64" scaletype="1" relateindex="preclose_px,prev_settlement,bid_grp"/>  
+  <Index id="-11" type="itDeri" pname="SellPrice1" name="SellPrice1" caption="卖一" datatype="dtInt64" scaletype="1" relateindex="preclose_px,prev_settlement,offer_grp"/>  
+  <Index id="-12" type="itDeri" pname="SellPrice2" name="SellPrice2" caption="卖二" datatype="dtInt64" scaletype="1" relateindex="preclose_px,prev_settlement,offer_grp"/>  
+  <Index id="-13" type="itDeri" pname="SellPrice3" name="SellPrice3" caption="卖三" datatype="dtInt64" scaletype="1" relateindex="preclose_px,prev_settlement,offer_grp"/>  
+  <Index id="-14" type="itDeri" pname="SellPrice4" name="SellPrice4" caption="卖四" datatype="dtInt64" scaletype="1" relateindex="preclose_px,prev_settlement,offer_grp"/>  
+  <Index id="-15" type="itDeri" pname="SellPrice5" name="SellPrice5" caption="卖五" datatype="dtInt64" scaletype="1" relateindex="preclose_px,prev_settlement,offer_grp"/>  
+  <Index id="-21" type="itDeri" pname="BuyVolume1" name="BuyVolume1" caption="买一量" datatype="dtInt64" relateindex="bid_grp"/>  
+  <Index id="-22" type="itDeri" pname="BuyVolume2" name="BuyVolume2" caption="买二量" datatype="dtInt64" relateindex="bid_grp"/>  
+  <Index id="-23" type="itDeri" pname="BuyVolume3" name="BuyVolume3" caption="买三量" datatype="dtInt64" relateindex="bid_grp"/>  
+  <Index id="-24" type="itDeri" pname="BuyVolume4" name="BuyVolume4" caption="买四量" datatype="dtInt64" relateindex="bid_grp"/>  
+  <Index id="-25" type="itDeri" pname="BuyVolume5" name="BuyVolume5" caption="买五量" datatype="dtInt64" relateindex="bid_grp"/>  
+  <Index id="-31" type="itDeri" pname="SellVolume1" name="SellVolume1" caption="卖一量" datatype="dtInt64" relateindex="offer_grp"/>  
+  <Index id="-32" type="itDeri" pname="SellVolume2" name="SellVolume2" caption="卖二量" datatype="dtInt64" relateindex="offer_grp"/>  
+  <Index id="-33" type="itDeri" pname="SellVolume3" name="SellVolume3" caption="卖三量" datatype="dtInt64" relateindex="offer_grp"/>  
+  <Index id="-34" type="itDeri" pname="SellVolume4" name="SellVolume4" caption="卖四量" datatype="dtInt64" relateindex="offer_grp"/>  
+  <Index id="-35" type="itDeri" pname="SellVolume5" name="SellVolume5" caption="卖五量" datatype="dtInt64" relateindex="offer_grp"/>
+
+<!--期货--> 
+  <Index id="10178" type="itBasic" pname="Time" name="data_timestamp" caption="时间" datatype="dtInt32"/>
+  <Index id="31" type="itBasic" pname="Now" name="last_px" caption="现价" datatype="dtInt64" scaletype="1" relateindex="preclose_px,prev_settlement"/>
+  <Index id="332" type="itBasic" pname="High" name="high_px" caption="最高价" datatype="dtInt64" scaletype="1" relateindex="preclose_px,prev_settlement"/>  
+  <Index id="333" type="itBasic" pname="Low" name="low_px" caption="最低价" datatype="dtInt64" scaletype="1" relateindex="preclose_px,prev_settlement"/>  
+  <Index id="27" type="itBasic" pname="Clear" name="settlement" caption="结算价" datatype="dtInt64" scaletype="1" relateindex="prev_settlement"/>  
+  <Index id="28" type="itBasic" pname="PreClear" name="prev_settlement" caption="昨结算价" scaletype="1" datatype="dtInt64"/>  
+  <Index id="10018" type="itBasic" pname="Open" name="open_px" caption="今开盘" datatype="dtInt64" scaletype="1" relateindex="preclose_px,prev_settlement"/>  
+  <Index id="140" type="itBasic" pname="PreClose" name="preclose_px" caption="昨收价" datatype="dtInt64" scaletype="1"/>
+  <Index id="-100" type="itDeri" pname="Roundlot" name="DealVolume" caption="现手" datatype="dtInt64" relateindex="business_amount"/>
+  <Index id="20037" type="itBasic" pname="Change" name="px_change" caption="涨跌" datatype="dtInt64" scaletype="1"/>  
+  <Index id="20038" type="itBasic" pname="PctChange" name="px_change_rate" caption="涨跌幅" datatype="dtInt32" scaletype="2"/> 
+  <Index type="itFunc" pname="Volume" name="TotalVolume" caption="总成交量(股)" datatype="dtDouble" relateindex="business_amount"/>
+  <Index id="8504" type="itBasic" pname="Amount" name="business_balance" caption="总成交额" datatype="dtInt64"/> 
+  <Index id="20033" type="itBasic" pname="InVolume" name="business_amount_in" caption="内盘成交量" datatype="dtInt64"/>  
+  <Index id="20034" type="itBasic" pname="OutVolume" name="business_amount_out" caption="外盘成交量" datatype="dtInt64"/>
+  <Index id="20028" type="itBasic" pname="HighLimit" name="up_px" caption="涨停价格" scaletype="1" datatype="dtInt64"/>  
+  <Index id="20029" type="itBasic" pname="LowLimit" name="down_px" caption="跌停价格" scaletype="1" datatype="dtInt64"/>
+  <Index id="95" type="itBasic" pname="OpenInterest" name="amount" caption="持仓量" datatype="dtInt64"/>
+  <Index id="-1" type="itDeri" pname="BuyPrice1" name="BuyPrice1" caption="买一" datatype="dtInt64" scaletype="1" relateindex="preclose_px,prev_settlement,bid_grp"/>  
+  <Index id="-2" type="itDeri" pname="BuyPrice2" name="BuyPrice2" caption="买二" datatype="dtInt64" scaletype="1" relateindex="preclose_px,prev_settlement,bid_grp"/>  
+  <Index id="-3" type="itDeri" pname="BuyPrice3" name="BuyPrice3" caption="买三" datatype="dtInt64" scaletype="1" relateindex="preclose_px,prev_settlement,bid_grp"/>  
+  <Index id="-4" type="itDeri" pname="BuyPrice4" name="BuyPrice4" caption="买四" datatype="dtInt64" scaletype="1" relateindex="preclose_px,prev_settlement,bid_grp"/>  
+  <Index id="-5" type="itDeri" pname="BuyPrice5" name="BuyPrice5" caption="买五" datatype="dtInt64" scaletype="1" relateindex="preclose_px,prev_settlement,bid_grp"/>  
+  <Index id="-11" type="itDeri" pname="SellPrice1" name="SellPrice1" caption="卖一" datatype="dtInt64" scaletype="1" relateindex="preclose_px,prev_settlement,offer_grp"/>  
+  <Index id="-12" type="itDeri" pname="SellPrice2" name="SellPrice2" caption="卖二" datatype="dtInt64" scaletype="1" relateindex="preclose_px,prev_settlement,offer_grp"/>  
+  <Index id="-13" type="itDeri" pname="SellPrice3" name="SellPrice3" caption="卖三" datatype="dtInt64" scaletype="1" relateindex="preclose_px,prev_settlement,offer_grp"/>  
+  <Index id="-14" type="itDeri" pname="SellPrice4" name="SellPrice4" caption="卖四" datatype="dtInt64" scaletype="1" relateindex="preclose_px,prev_settlement,offer_grp"/>  
+  <Index id="-15" type="itDeri" pname="SellPrice5" name="SellPrice5" caption="卖五" datatype="dtInt64" scaletype="1" relateindex="preclose_px,prev_settlement,offer_grp"/>  
+  <Index id="-21" type="itDeri" pname="BuyVolume1" name="BuyVolume1" caption="买一量" datatype="dtInt64" relateindex="bid_grp"/>  
+  <Index id="-22" type="itDeri" pname="BuyVolume2" name="BuyVolume2" caption="买二量" datatype="dtInt64" relateindex="bid_grp"/>  
+  <Index id="-23" type="itDeri" pname="BuyVolume3" name="BuyVolume3" caption="买三量" datatype="dtInt64" relateindex="bid_grp"/>  
+  <Index id="-24" type="itDeri" pname="BuyVolume4" name="BuyVolume4" caption="买四量" datatype="dtInt64" relateindex="bid_grp"/>  
+  <Index id="-25" type="itDeri" pname="BuyVolume5" name="BuyVolume5" caption="买五量" datatype="dtInt64" relateindex="bid_grp"/>  
+  <Index id="-31" type="itDeri" pname="SellVolume1" name="SellVolume1" caption="卖一量" datatype="dtInt64" relateindex="offer_grp"/>  
+  <Index id="-32" type="itDeri" pname="SellVolume2" name="SellVolume2" caption="卖二量" datatype="dtInt64" relateindex="offer_grp"/>  
+  <Index id="-33" type="itDeri" pname="SellVolume3" name="SellVolume3" caption="卖三量" datatype="dtInt64" relateindex="offer_grp"/>  
+  <Index id="-34" type="itDeri" pname="SellVolume4" name="SellVolume4" caption="卖四量" datatype="dtInt64" relateindex="offer_grp"/>  
+  <Index id="-35" type="itDeri" pname="SellVolume5" name="SellVolume5" caption="卖五量" datatype="dtInt64" relateindex="offer_grp"/>
+
+
+</IndexsConfig>

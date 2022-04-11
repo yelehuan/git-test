@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<IndividualData>
+  <IndividualMenu ID="-1" Name="自选股" SortNo="0">
+    <QuoteCode ProdCode="000001" MarketCode="XSHG.MRI" />
+    <QuoteCode ProdCode="600519" MarketCode="XSHG.ESA.M" />
+    <QuoteCode ProdCode="399001" MarketCode="XSHE.MRI" />
+    <QuoteCode ProdCode="000333" MarketCode="XSHE.ESA.M" />
+    <QuoteCode ProdCode="HSI" MarketCode="XHKG-I.MRI" />
+    <QuoteCode ProdCode="00700" MarketCode="XHKG-M.ES" />
+    <!-- <QuoteCode ProdCode = "600570"  MarketCode = "XSHG.ESA.M" /> -->
+    <!-- <QuoteCode ProdCode = "399001"  MarketCode = "XSHE.MRI" /> -->
+    <!-- <QuoteCode ProdCode = "600446"  MarketCode = "XSHG.ESA.M" /> -->
+    <!-- <QuoteCode ProdCode = "600571"  MarketCode = "XSHG.ESA.M" /> -->
+    <!-- <QuoteCode ProdCode = "600000"  MarketCode = "XSHG.ESA.M" /> -->
+    <!-- <QuoteCode ProdCode = "600572"  MarketCode = "XSHG.ESA.M" /> -->
+    <!-- <QuoteCode ProdCode = "600180"  MarketCode = "XSHG.ESA.M" /> -->
+
+    <!-- <QuoteCode ProdCode = "002024"  MarketCode = "XSHE.ESA.SMSE" /> -->
+    <!-- <QuoteCode ProdCode = "000565"  MarketCode = "XSHE.ESA.M" /> -->
+    <!-- <QuoteCode ProdCode = "000630"  MarketCode = "XSHE.ESA.M" /> -->
+    <!-- <QuoteCode ProdCode = "002195"  MarketCode = "XSHE.ESA.SMSE" /> -->
+    <!-- <QuoteCode ProdCode = "002115"  MarketCode = "XSHE.ESA.SMSE" /> -->
+    <!-- <QuoteCode ProdCode = "002030"  MarketCode = "XSHE.ESA.SMSE" /> -->
+  
+    <!-- <QuoteCode ProdCode = "600023"  MarketCode = "XSHG.ESA.M" /> -->
+    <!-- <QuoteCode ProdCode = "600026"  MarketCode = "XSHG.ESA.M" /> -->
+    <!-- <QuoteCode ProdCode = "600028"  MarketCode = "XSHG.ESA.M" /> -->
+    <!-- <QuoteCode ProdCode = "600029"  MarketCode = "XSHG.ESA.M" /> -->
+    <!-- <QuoteCode ProdCode = "600030"  MarketCode = "XSHG.ESA.M" /> -->
+    <!-- <QuoteCode ProdCode = "600036"  MarketCode = "XSHG.ESA.M" /> -->
+    <!-- <QuoteCode ProdCode = "600037"  MarketCode = "XSHG.ESA.M" /> -->
+    <!-- <QuoteCode ProdCode = "600050"  MarketCode = "XSHG.ESA.M" /> -->
+    <!-- <QuoteCode ProdCode = "600052"  MarketCode = "XSHG.ESA.M" /> -->
+    <!-- <QuoteCode ProdCode = "600056"  MarketCode = "XSHG.ESA.M" /> -->
+    <!-- <QuoteCode ProdCode = "600060"  MarketCode = "XSHG.ESA.M" /> -->
+    <!-- <QuoteCode ProdCode = "600066"  MarketCode = "XSHG.ESA.M" /> -->
+    <!-- <QuoteCode ProdCode = "600071"  MarketCode = "XSHG.ESA.M" /> -->
+    <!-- <QuoteCode ProdCode = "600077"  MarketCode = "XSHG.ESA.M" /> -->
+    <!-- <QuoteCode ProdCode = "600085"  MarketCode = "XSHG.ESA.M" /> -->
+    <!-- <QuoteCode ProdCode = "600089"  MarketCode = "XSHG.ESA.M" /> -->
+    <!-- <QuoteCode ProdCode = "600096"  MarketCode = "XSHG.ESA.M" /> -->
+    <!-- <QuoteCode ProdCode = "600101"  MarketCode = "XSHG.ESA.M" /> -->
+  
+    <!-- <QuoteCode ProdCode = "000001"  MarketCode = "XSHE.ESA.M" /> -->
+    <!-- <QuoteCode ProdCode = "000016"  MarketCode = "XSHE.ESA.M" /> -->
+    <!-- <QuoteCode ProdCode = "000100"  MarketCode = "XSHE.ESA.M" /> -->
+    <!-- <QuoteCode ProdCode = "000063"  MarketCode = "XSHE.ESA.M" /> -->
+    <!-- <QuoteCode ProdCode = "000151"  MarketCode = "XSHE.ESA.M" /> -->
+    <!-- <QuoteCode ProdCode = "000156"  MarketCode = "XSHE.ESA.M" /> -->
+    <!-- <QuoteCode ProdCode = "000017"  MarketCode = "XSHE.ESA.M" /> -->
+    <!-- <QuoteCode ProdCode = "000022"  MarketCode = "XSHE.ESA.M" /> -->
+    <!-- <QuoteCode ProdCode = "RA51005000"  MarketCode = "XSHO" /> -->
+    <!-- <QuoteCode ProdCode = "10001577"  MarketCode = "XSHO" /> -->
+
+
+    <!-- <QuoteCode ProdCode = "00700"  MarketCode = "XHKG-M.ES" /> -->
+    <!-- <QuoteCode ProdCode = "00175"  MarketCode = "XHKG-M.ES" /> -->
+    <!-- <QuoteCode ProdCode = "03301"  MarketCode = "XHKG-M.ES" /> -->
+    <!-- <QuoteCode ProdCode = "01766"  MarketCode = "XHKG-M.ES" /> -->
+    <!-- <QuoteCode ProdCode = "00001"  MarketCode = "XHKG-M.ES" /> -->
+    <!-- <QuoteCode ProdCode = "00002"  MarketCode = "XHKG-M.ES" /> -->
+    <!-- <QuoteCode ProdCode = "00003"  MarketCode = "XHKG-M.ES" /> -->
+    <!-- <QuoteCode ProdCode = "00004"  MarketCode = "XHKG-M.ES" /> -->
+
+    <!-- <QuoteCode ProdCode = "BABA"  MarketCode = "XNYS.ES" /> -->
+    <!-- <QuoteCode ProdCode = "WUBA"  MarketCode = "XNYS.ES" /> -->
+    <!-- <QuoteCode ProdCode = "WBAI"  MarketCode = "XNYS.ES" /> -->
+    <!-- <QuoteCode ProdCode = "AAPL"  MarketCode = "XNAS.ES" /> -->
+    <!-- <QuoteCode ProdCode = "MSFT"  MarketCode = "XNAS.ES" /> -->
+    <!-- <QuoteCode ProdCode = "GOOG"  MarketCode = "XNAS.ES" /> -->
+    <!-- <QuoteCode ProdCode = "TSLA"  MarketCode = "XNAS.ES" /> -->
+    <!-- <QuoteCode ProdCode = "BIDU"  MarketCode = "XNAS.M" /> -->
+    <!-- <QuoteCode ProdCode = "AAV"  MarketCode = "XNYS.ES" /> -->
+    <!-- <QuoteCode ProdCode = "CEI"  MarketCode = "XASE.ES" /> -->
+    <!-- <QuoteCode ProdCode = "ONP"  MarketCode = "XASE.ES" /> -->
+  </IndividualMenu>
+</IndividualData>

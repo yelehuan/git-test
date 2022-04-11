@@ -1,0 +1,73 @@
+{20220401-103235-179}{INFO} {56296}{22}{Hundsun.H5.SDK.Session.OnConnect} {Start SDK OnConnect }
+{20220401-103237-145}{INFO} {56296}{25}{IUV.QuoteAdapter.H5SdkImpl.Session._sdkCallback_OnLogin()} {业务登陆成功}
+{20220401-140658-601}{ERROR}{56296}{41}{IUV.InformationAdapter.GilDataImpl.RequestMarqueeList(...)} {RequestMarqueeList error:}
+{20220401-140758-619}{ERROR}{56296}{59}{IUV.InformationAdapter.GilDataImpl.RequestMarqueeList(...)} {RequestMarqueeList error:}
+{20220401-140909-646}{ERROR}{56296}{39}{IUV.InformationAdapter.GilDataImpl.RequestMarqueeList(...)} {RequestMarqueeList error:}
+{20220401-140948-604}{ERROR}{56296}{39}{IUV.InformationAdapter.GilDataImpl.RequestMarqueeList(...)} {RequestMarqueeList error:}
+{20220401-141048-635}{ERROR}{56296}{55}{IUV.InformationAdapter.GilDataImpl.RequestMarqueeList(...)} {RequestMarqueeList error:}
+{20220401-141148-628}{ERROR}{56296}{40}{IUV.InformationAdapter.GilDataImpl.RequestMarqueeList(...)} {RequestMarqueeList error:}
+{20220401-151608-904}{ERROR}{56296}{28}{IUV.InformationAdapter.GilDataImpl.RequestMarqueeList(...)} {RequestMarqueeList error:}
+{20220401-151708-902}{ERROR}{56296}{28}{IUV.InformationAdapter.GilDataImpl.RequestMarqueeList(...)} {RequestMarqueeList error:}
+{20220401-190501-268}{ERROR}{56296}{60}{IUV.InformationAdapter.GilDataImpl.RequestMarqueeList(...)} {RequestMarqueeList error:}
+{20220401-190518-994}{INFO} {56296}{62}{Hundsun.H5.SDK.Session.OnClose} {Start SDK OnClose }
+{20220401-190518-995}{INFO} {56296}{62}{Hundsun.H5.SDK.Session.AsyncConnect} {InnerAsyncConnect Start AsyncConnect }
+{20220401-190526-075}{INFO} {56296}{22}{Hundsun.H5.SDK.Session.OnCore} {Start SDK OnCore }
+{20220401-190526-075}{INFO} {56296}{22}{Hundsun.H5.SDK.Session.AsyncConnect} {InnerAsyncConnect Start AsyncConnect }
+{20220401-190530-078}{INFO} {56296}{22}{Hundsun.H5.SDK.Session.OnCore} {Start SDK OnCore }
+{20220401-190530-078}{INFO} {56296}{22}{Hundsun.H5.SDK.Session.AsyncConnect} {InnerAsyncConnect Start AsyncConnect }
+{20220401-190534-080}{INFO} {56296}{22}{Hundsun.H5.SDK.Session.OnCore} {Start SDK OnCore }
+{20220401-190534-080}{INFO} {56296}{22}{Hundsun.H5.SDK.Session.AsyncConnect} {InnerAsyncConnect Start AsyncConnect }
+{20220401-190538-081}{INFO} {56296}{22}{Hundsun.H5.SDK.Session.OnCore} {Start SDK OnCore }
+{20220401-190538-081}{INFO} {56296}{22}{Hundsun.H5.SDK.Session.AsyncConnect} {InnerAsyncConnect Start AsyncConnect }
+{20220401-190542-083}{INFO} {56296}{22}{Hundsun.H5.SDK.Session.OnCore} {Start SDK OnCore }
+{20220401-190542-083}{INFO} {56296}{22}{Hundsun.H5.SDK.Session.AsyncConnect} {InnerAsyncConnect Start AsyncConnect }
+{20220401-190546-084}{INFO} {56296}{22}{Hundsun.H5.SDK.Session.OnCore} {Start SDK OnCore }
+{20220401-190546-084}{INFO} {56296}{22}{Hundsun.H5.SDK.Session.AsyncConnect} {InnerAsyncConnect Start AsyncConnect }
+{20220401-190550-085}{INFO} {56296}{22}{Hundsun.H5.SDK.Session.OnCore} {Start SDK OnCore }
+{20220401-190550-085}{INFO} {56296}{22}{Hundsun.H5.SDK.Session.AsyncConnect} {InnerAsyncConnect Start AsyncConnect }
+{20220401-190554-087}{INFO} {56296}{22}{Hundsun.H5.SDK.Session.OnCore} {Start SDK OnCore }
+{20220401-190554-087}{INFO} {56296}{22}{Hundsun.H5.SDK.Session.AsyncConnect} {InnerAsyncConnect Start AsyncConnect }
+{20220401-190558-090}{INFO} {56296}{22}{Hundsun.H5.SDK.Session.OnCore} {Start SDK OnCore }
+{20220401-190558-090}{INFO} {56296}{22}{Hundsun.H5.SDK.Session.AsyncConnect} {InnerAsyncConnect Start AsyncConnect }
+{20220401-190601-398}{ERROR}{56296}{65}{IUV.InformationAdapter.GilDataImpl.RequestMarqueeList(...)} {RequestMarqueeList error:}
+{20220401-190602-092}{INFO} {56296}{22}{Hundsun.H5.SDK.Session.OnCore} {Start SDK OnCore }
+{20220401-190602-092}{INFO} {56296}{22}{Hundsun.H5.SDK.Session.AsyncConnect} {InnerAsyncConnect Start AsyncConnect }
+{20220401-190606-093}{INFO} {56296}{22}{Hundsun.H5.SDK.Session.OnCore} {Start SDK OnCore }
+{20220401-190606-093}{INFO} {56296}{22}{Hundsun.H5.SDK.Session.AsyncConnect} {InnerAsyncConnect Start AsyncConnect }
+{20220401-190610-095}{INFO} {56296}{22}{Hundsun.H5.SDK.Session.OnCore} {Start SDK OnCore }
+{20220401-190610-095}{INFO} {56296}{22}{Hundsun.H5.SDK.Session.AsyncConnect} {InnerAsyncConnect Start AsyncConnect }
+{20220401-190614-098}{INFO} {56296}{22}{Hundsun.H5.SDK.Session.OnCore} {Start SDK OnCore }
+{20220401-190614-098}{INFO} {56296}{22}{Hundsun.H5.SDK.Session.AsyncConnect} {InnerAsyncConnect Start AsyncConnect }
+{20220401-190618-101}{INFO} {56296}{22}{Hundsun.H5.SDK.Session.OnCore} {Start SDK OnCore }
+{20220401-190618-101}{INFO} {56296}{22}{Hundsun.H5.SDK.Session.AsyncConnect} {InnerAsyncConnect Start AsyncConnect }
+{20220401-190622-102}{INFO} {56296}{22}{Hundsun.H5.SDK.Session.OnCore} {Start SDK OnCore }
+{20220401-190622-102}{INFO} {56296}{22}{Hundsun.H5.SDK.Session.AsyncConnect} {InnerAsyncConnect Start AsyncConnect }
+{20220401-190626-105}{INFO} {56296}{22}{Hundsun.H5.SDK.Session.OnCore} {Start SDK OnCore }
+{20220401-190626-105}{INFO} {56296}{22}{Hundsun.H5.SDK.Session.AsyncConnect} {InnerAsyncConnect Start AsyncConnect }
+{20220401-190630-107}{INFO} {56296}{22}{Hundsun.H5.SDK.Session.OnCore} {Start SDK OnCore }
+{20220401-190630-107}{INFO} {56296}{22}{Hundsun.H5.SDK.Session.AsyncConnect} {InnerAsyncConnect Start AsyncConnect }
+{20220401-190634-109}{INFO} {56296}{22}{Hundsun.H5.SDK.Session.OnCore} {Start SDK OnCore }
+{20220401-190634-109}{INFO} {56296}{22}{Hundsun.H5.SDK.Session.AsyncConnect} {InnerAsyncConnect Start AsyncConnect }
+{20220401-190638-110}{INFO} {56296}{22}{Hundsun.H5.SDK.Session.OnCore} {Start SDK OnCore }
+{20220401-190638-110}{INFO} {56296}{22}{Hundsun.H5.SDK.Session.AsyncConnect} {InnerAsyncConnect Start AsyncConnect }
+{20220401-190642-113}{INFO} {56296}{22}{Hundsun.H5.SDK.Session.OnCore} {Start SDK OnCore }
+{20220401-190642-113}{INFO} {56296}{22}{Hundsun.H5.SDK.Session.AsyncConnect} {InnerAsyncConnect Start AsyncConnect }
+{20220401-190646-114}{INFO} {56296}{22}{Hundsun.H5.SDK.Session.OnCore} {Start SDK OnCore }
+{20220401-190646-114}{INFO} {56296}{22}{Hundsun.H5.SDK.Session.AsyncConnect} {InnerAsyncConnect Start AsyncConnect }
+{20220401-190650-116}{INFO} {56296}{22}{Hundsun.H5.SDK.Session.OnCore} {Start SDK OnCore }
+{20220401-190650-116}{INFO} {56296}{22}{Hundsun.H5.SDK.Session.AsyncConnect} {InnerAsyncConnect Start AsyncConnect }
+{20220401-190654-117}{INFO} {56296}{22}{Hundsun.H5.SDK.Session.OnCore} {Start SDK OnCore }
+{20220401-190654-117}{INFO} {56296}{22}{Hundsun.H5.SDK.Session.AsyncConnect} {InnerAsyncConnect Start AsyncConnect }
+{20220401-190658-120}{INFO} {56296}{22}{Hundsun.H5.SDK.Session.OnCore} {Start SDK OnCore }
+{20220401-190658-120}{INFO} {56296}{22}{Hundsun.H5.SDK.Session.AsyncConnect} {InnerAsyncConnect Start AsyncConnect }
+{20220401-190701-523}{ERROR}{56296}{31}{IUV.InformationAdapter.GilDataImpl.RequestMarqueeList(...)} {RequestMarqueeList error:}
+{20220401-190702-122}{INFO} {56296}{22}{Hundsun.H5.SDK.Session.OnCore} {Start SDK OnCore }
+{20220401-190702-122}{INFO} {56296}{22}{Hundsun.H5.SDK.Session.AsyncConnect} {InnerAsyncConnect Start AsyncConnect }
+{20220401-190706-124}{INFO} {56296}{22}{Hundsun.H5.SDK.Session.OnCore} {Start SDK OnCore }
+{20220401-190706-124}{INFO} {56296}{22}{Hundsun.H5.SDK.Session.AsyncConnect} {InnerAsyncConnect Start AsyncConnect }
+{20220401-190710-125}{INFO} {56296}{22}{Hundsun.H5.SDK.Session.OnCore} {Start SDK OnCore }
+{20220401-190710-125}{INFO} {56296}{22}{Hundsun.H5.SDK.Session.AsyncConnect} {InnerAsyncConnect Start AsyncConnect }
+{20220401-190711-149}{INFO} {56296}{22}{Hundsun.H5.SDK.Session.OnConnect} {Start SDK OnConnect }
+{20220401-190711-327}{INFO} {56296}{66}{IUV.QuoteAdapter.H5SdkImpl.Session._sdkCallback_OnLogin()} {业务登陆成功}
+{20220401-192711-404}{ERROR}{56296}{56}{IUV.InformationAdapter.GilDataImpl.RequestMarqueeList(...)} {RequestMarqueeList error:}
+{20220401-194611-936}{ERROR}{56296}{55}{IUV.InformationAdapter.GilDataImpl.RequestMarqueeList(...)} {RequestMarqueeList error:}

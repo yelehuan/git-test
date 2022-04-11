@@ -1,0 +1,14 @@
+﻿<?xml version="1.0"  ?>
+<AdapterConfigs >
+    <!--适配层配置-->
+	<Adapter name="资讯适配器" assembly="IUV.InformationAdapter.GilDataImpl" className="IUV.InformationAdapter.GilDataImpl.GilDataImplement">
+    <AdapterConfig>
+      <Config key="serveraddr" value="http://cloud.gildata.com"/>
+      <Config key="webaddr" value="http://cloud.gildata.com"/>
+      <Config key="gtn_serveraddr" value="https://sandbox.hscloud.cn" />
+      <Config key="gtn_tokenaddr" value="https://sandbox.hscloud.cn/token" />
+      <Config key="appkey" value=""/>
+      <Config key="appsecret" value=""/>
+    </AdapterConfig>
+  </Adapter>                   
+</AdapterConfigs>

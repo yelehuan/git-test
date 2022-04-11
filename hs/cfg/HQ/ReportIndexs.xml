@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<!--Group
+	name:		分组标题
+	type:		分组类型 gtIndex:实时指标组(在IndexConfig.xml中有配置)  gtField:报表字段组(关联报表服务字段)
+-->
+<!--Index
+	name:		指标名称
+	caption:	指标标题	
+	width:		默认列的宽度	
+	islocal:	是否是本地列,默认为false
+	issort:		是否排序列，默认为true
+	align:		文字对齐方式，默认为alRight
+	textType:	文字显示风格(ttText文字、ttImage图片、ttBlock色块、ttGradient渐变),默认为ttText
+	flag:		附加字段，默认为空
+-->
+<ReportIndexs> 
+  <Group name="基本行情"> 
+    <Index name="SERIALID" caption="序号" width="50" islocal="True" issort="False" align="alLeft"/>  
+    <Index name="STOCKCODE" caption="代码" width="90" islocal="True" align="alLeft"/>  
+    <Index name="STOCKNAME" caption="名称" width="90" islocal="True" align="alLeft"/> 	
+    <Index name="last_px" caption="现价" width="90"/>  
+    <Index name="current_amount" caption="现量" width="120"/>  
+    <Index name="px_change" caption="涨跌" width="90"/>  
+    <Index name="px_change_rate" caption="涨跌幅" width="100"/>  
+    <Index name="wavg_px" caption="均价" width="90"/>  
+    <Index name="amplitude" caption="振幅" width="90"/>  
+    <Index name="preclose_px" caption="前收" width="90"/>  
+    <Index name="open_px" caption="今开" width="90"/>  
+    <Index name="high_px" caption="最高" width="90"/>  
+    <Index name="low_px" caption="最低" width="90"/>  
+    <Index name="TotalVolume" caption="成交量" width="120"/>
+    <Index name="business_balance" caption="成交额" width="120"/>  
+    <Index name="turnover_ratio" caption="换手率" width="100"/>  
+    <Index name="w52_high_px" issort="false" caption="52周最高" width="100"/>  
+    <Index name="w52_low_px" issort="false" caption="52周最低" width="100"/>  
+    <Index name="vol_ratio" caption="量比" width="90"/>  
+    <Index name="entrust_rate" caption="委比" width="90"/>  
+    <Index name="entrust_diff" caption="委差" width="90"/>  
+    <Index name="business_amount_out" caption="外盘" width="100"/>  
+    <Index name="business_amount_in" caption="内盘" width="100"/>  
+    <Index name="up_px" issort="false" caption="涨停价" width="90"/>  
+    <Index name="down_px" issort="false" caption="跌停价" width="90"/>  
+    <Index name="min5_chgpct" caption="5分钟涨跌幅" width="120"/>
+    <Index name="change_rate_5days" caption="5日涨跌幅" issort="false" width="120"/>
+    <Index name="change_rate_10days" caption="10日涨跌幅" issort="false" width="120"/>
+    <Index name="change_rate_20days" caption="20日涨跌幅" issort="false" width="120"/>
+    <Index name="change_rate_60days" caption="60日涨跌幅" issort="false" width="120"/>
+    <Index name="change_rate_120days" caption="120日涨跌幅" issort="false" width="120"/>
+    <Index name="change_rate_250days" caption="250日涨跌幅" issort="false" width="120"/>
+    <Index name="change_rate_lastyear" caption="年初至今" issort="false" width="120"/>
+  </Group>  
+  <Group name="行情扩展"> 
+    <Index name="BuyPrice1" caption="买一价" issort="False" width="100"/>  
+    <Index name="BuyPrice2" caption="买二价" issort="False" width="100"/>  
+    <Index name="BuyPrice3" caption="买三价" issort="False" width="100"/>  
+    <Index name="BuyPrice4" caption="买四价" issort="False" width="100"/>  
+    <Index name="BuyPrice5" caption="买五价" issort="False" width="100"/>  
+    <Index name="SellPrice1" caption="卖一价" issort="False" width="100"/>  
+    <Index name="SellPrice2" caption="卖二价" issort="False" width="100"/>  
+    <Index name="SellPrice3" caption="卖三价" issort="False" width="100"/>  
+    <Index name="SellPrice4" caption="卖四价" issort="False" width="100"/>  
+    <Index name="SellPrice5" caption="卖五价" issort="False" width="100"/>  
+    <Index name="BuyVolume1" caption="买一量" issort="False" width="100"/>  
+    <Index name="BuyVolume2" caption="买二量" issort="False" width="100"/>  
+    <Index name="BuyVolume3" caption="买三量" issort="False" width="100"/>  
+    <Index name="BuyVolume4" caption="买四量" issort="False" width="100"/>  
+    <Index name="BuyVolume5" caption="买五量" issort="False" width="100"/>  
+    <Index name="SellVolume1" caption="卖一量" issort="False" width="100"/>  
+    <Index name="SellVolume2" caption="卖二量" issort="False" width="100"/>  
+    <Index name="SellVolume3" caption="卖三量" issort="False" width="100"/>  
+    <Index name="SellVolume4" caption="卖四量" issort="False" width="100"/>  
+    <Index name="SellVolume5" caption="卖五量" issort="False" width="100"/> 
+  </Group>  
+  <Group name="股票指标"> 
+    <Index name="eps_ttm" caption="每股收益(TTM)" width="100"/>  
+    <Index name="bps" caption="每股净资产" width="100"/>  
+    <Index name="ttm_pe_rate" caption="市盈率(TTM)" width="100"/>  
+    <Index name="dyn_pb_rate" caption="市净率(LF)" width="100"/>  
+    <Index name="circulation_amount" caption="流通股本" width="100"/>  
+    <Index name="total_shares" caption="总股本" width="100"/>  
+    <Index name="circulation_value" caption="流通市值" width="100"/>  
+    <Index name="market_value" caption="总市值" width="100"/> 
+  </Group>
+  <Group name="基金净值">
+    <Index name="Fund_NAV" issort="false" caption="最新净值" width="100"/>  
+    <Index name="Fund_PrevNAV" issort="false" caption="上期净值" width="100"/>  
+    <Index name="Fund_CumulativeNAV" issort="false" caption="累计净值" width="100"/>
+    <Index name="Fund_Date" issort="false" caption="最新日期" width="130"/>  
+    <Index name="Fund_NGRLast1W" issort="false" caption="近一周增长率" width="120"/>  
+    <Index name="Fund_NGRLast1M" issort="false" caption="近一月增长率" width="120"/>  
+    <Index name="Fund_NGRLast3M" issort="false" caption="近三月增长率" width="120"/>  
+    <Index name="Fund_NGRLast6M" issort="false" caption="近六月增长率" width="120"/>  
+    <Index name="Fund_NGRLast1Y" issort="false" caption="近一年增长率" width="120"/>  
+    <Index name="Fund_NGRLast3Y" issort="false" caption="近三年增长率" width="120"/>  
+    <Index name="Fund_NGRLast5Y" issort="false" caption="近五年增长率" width="120"/>  
+    <Index name="Fund_NGRSinceInception" issort="false" caption="成立以来增长率" width="150"/>  
+    <Index name="Fund_AnnualizedReturn" issort="false" caption="平均年化收益率" width="150"/>  
+    <Index name="Fund_InceptionDate" issort="false" caption="成立日期" width="130"/>  
+    <Index name="Fund_LiquidationDate" issort="false" caption="到期日期" width="130"/>  
+    <Index name="Fund_AssetClass" issort="false" caption="投资类型" width="250"/>  
+    <Index name="Fund_TypeDesc" issort="false" caption="类型说明" width="210"/>  
+    <Index name="Fund_LastSize" issort="false" caption="最新份额(万份)" width="140"/>  
+    <Index name="Fund_PurchaseState" issort="false" caption="申赎状态" width="200"/>  
+    <Index name="Fund_Manager" issort="false" caption="基金经理" width="200"/>  
+    <Index name="Fund_Company" issort="false" caption="基金公司" width="320"/>  
+    <Index name="Fund_Custodian" issort="false" caption="基金托管人" width="300"/>  
+    <Index name="Fund_Yield" issort="false" caption="万份基金收益" width="130"/>  
+    <Index name="Fund_7DaysYield" issort="false" caption="七日年化" width="130"/>
+  </Group>
+  <Group name="期货指标"> 
+    <Index name="settlement" caption="结算价" width="100"/>  
+    <Index name="prev_settlement" caption="昨结" width="100"/>
+    <Index name="amount" caption="持仓" width="100"/>
+    <Index name="AmountChange" caption="增仓" width="100"/>
+  </Group>
+  <Group name="外汇指标"> 
+    <Index name="special_close_px" caption="16:30收盘价" width="100"/>  
+    <Index name="business_final_px" caption="上末笔价" width="100"/>
+    <Index name="last_closedate" caption="上收盘日期" width="120"/>
+	<Index name="data_timestamp" caption="时间" width="100"/>
+	<Index name="market_date" caption="市场日期" width="120"/>
+	<Index name="start_rest_date" caption="起息日" width="120"/>
+	<Index name="last_px0" caption="最优买价" width="100"/>
+	<Index name="open_px0" caption="买价开盘" width="100"/>
+	<Index name="high_px0" caption="买价日高" width="100"/>
+	<Index name="low_px0" caption="买价日低" width="100"/>
+	<Index name="business_final_px0" caption="买价末笔" width="100"/>
+	<Index name="px_change0" caption="买价涨跌" width="100"/>
+	<Index name="last_closedate0" caption="买价上收盘日期" width="120"/>
+	<Index name="last_px1" caption="最优卖价" width="100"/>
+	<Index name="open_px1" caption="卖价开盘" width="100"/>
+	<Index name="high_px1" caption="卖价日高" width="100"/>
+	<Index name="low_px1" caption="卖价日低" width="100"/>
+	<Index name="business_final_px1" caption="卖价末笔" width="100"/>
+	<Index name="px_change1" caption="卖价涨跌" width="100"/>
+    <Index name="last_closedate1" caption="卖价上收盘日期" width="120"/>
+	<Index name="business_term" caption="期限" width="80"/>
+	<Index name="volatility" caption="波动率" width="120"/>
+	<Index name="option_fee_rate" caption="期权费率" width="120"/>
+	<Index name="option_fee_type" caption="期权费率类型" width="140"/>
+	<Index name="option_portfolio_type" caption="期权组合类型" align="alCenter" width="160"/>
+  </Group>
+  
+  <Group name="基金综合屏"> 
+    <Index name="change_rate_1month" caption="近1月" width="120"/> 
+	<Index name="change_rate_3month" caption="近3月" width="120"/> 
+	<Index name="change_rate_6month" caption="近6月" width="120"/> 
+	<Index name="change_rate_1year" caption="近1年" width="120"/> 
+	<Index name="change_rate_2year" caption="近2年" width="120"/> 
+	<Index name="change_rate_3year" caption="近3年" width="120"/> 
+	<Index name="change_rate_thisyear" caption="今年以来" width="120"/>
+	<Index name="LastTradeDate" caption="时间" width="100" /> 
+    <Index name="change_rate_1day" caption="日回报" width="120"/> 	
+  </Group>
+  
+  <Group name="基金净值页面下配置的报表" type="gtField"> 
+    <!--重仓持股-->  
+    <Index name="HoldVol" caption="持仓量(万股)" width="100" islocal="True" align="alRight" datatype="dtDouble"/>  
+    <Index name="HoldMarketValue" caption="持仓市值(万元)" width="120" islocal="True" align="alRight" datatype="dtDouble"/>  
+    <Index name="StockMarketValuePecent" caption="占股票市值比(%)" width="130" islocal="True" align="alRight" datatype="dtDouble"/>  
+    <!--重仓行业-->  
+    <Index name="MarketConfig" caption="相对市场配置" width="120" islocal="True" align="alRight" datatype="dtDouble"/>  
+    <Index name="Bond_Naturity" caption="期限" width="80"/>  
+    <!--重仓债券-->  
+    <Index name="NetValuePecent" caption="占净值比(%)" width="120" islocal="True" align="alRight" datatype="dtDouble"/>  
+    <Index name="HoldBondPecent" caption="持仓占债券比(%)" width="135" islocal="True" align="alRight" datatype="dtDouble"/>  
+    <!--基金经理-->  
+    <Index name="FundManager" caption="基金经理" width="120" islocal="True" align="alLeft"/>  
+    <Index name="HoldOfPostDate" caption="任职日期" width="120" islocal="True" align="alLeft"/>  
+    <Index name="DimissionDate" caption="离职日期" width="120" islocal="True" align="alLeft"/>  
+    <Index name="HoldOfPostReturn" caption="任职总回报(%)" width="140" islocal="True"  align="alRight" datatype="dtDouble"/>  
+    <Index name="YearReturn" caption="年化回报(%)" width="140" islocal="true"  align="alRight" datatype="dtDouble"/>  
+    <Index name="CongenerSort" caption="同类排名" width="120" islocal="true" issort="false" align="alRight"/>
+    <!-- 基金净值增长率排名 -->  
+    <Index name="Date" caption="年份" width="80" islocal="True" align="alLeft"/>  
+    <Index name="NGR" caption="增长率" width="80" islocal="True" align="alRight"/>  
+    <Index name="Ranking" caption="排名(排名/排名总数)" width="120" islocal="True" align="alRight"/> 
+  </Group> 
+   <Group name="外汇交易中心债券" > 
+	<Index  name="TRDPRC_1" caption="现价" width="100" />  
+	<Index  name="YTM1" caption="最新YTM" width="100"  /> 
+	<Index  name="TRD_NT_CHGP" caption="涨跌幅" width="100"  /> 
+	<Index  name="WV_PRC" caption="最新均价"  width="100"  /> 
+	<Index  name="WV_YLD" caption="最新加权YTM" width="100" /> 
+	<Index  name="D_H_PRC" caption="最高价(净)" width="100"  /> 
+	<Index  name="D_L_PRC" caption="最低价(净)" width="100" /> 
+	<Index  name="H_YLD" caption="最高价(YTM)" width="100"  /> 
+	<Index  name="L_YLD" caption="最低价(YTM)" width="100"  /> 
+	<Index  name="AC_TNOVER" caption="成交量（万元）"  width="100" /> 
+	<Index  name="LAST_CLS" caption="前收(净)"  width="100"  /> 
+	<Index  name="LAST_AC_TNOVER" caption="前成交量（万）" width="100"  /> 
+	<Index  name="LD_WV_PRC" caption="前加权平均净价" width="100"  />
+	<Index  name="LCLS_YLD" caption="前收(YTM)" width="100"  />
+	<Index  name="LD_WV_YLD" caption="前加权平均收益率" width="100"  />
+	<Index  name="OPEN_PRC" caption="开盘价(净)" width="100"  />
+	<Index  name="CLS_PRC" caption="收盘净价" width="100"  />
+	<Index  name="OPEN_YLD" caption="开盘价(YTM)" width="100"  />
+	<Index  name="CLS_YLD" caption="收盘收益率" width="100"  />
+	<Index  name="YLD_NT_CHG2" caption="涨跌（BP）" width="100"  />	
+	<Index  name="BID_1" caption="买一价"  width="100"  />
+	<Index  name="BID_SETTL_S" caption="清算速度" width="100"  />
+	<Index  name="BID_CTBTRN1" caption="报买机构" width="100"  />
+	<Index  name="FULL_BID1" caption="买入全价" width="100"  />
+	<Index  name="BID_YLD1" caption="买一YTM" width="100"  />
+	<Index  name="ASK_1" caption="卖一价" width="100"  />
+	<Index  name="FULL_ASK1" caption="卖出全价" width="100"  />
+	<Index  name="ASK_YLD1" caption="卖一YTM" width="100"  />
+   </Group> 
+   
+   <Group name="外汇交易中心利率" > 
+	<Index name="OPEN_YLD" caption="开盘"  /> 
+	<Index  name="YTM1" caption="最新"  /> 
+	<Index  name="H_YLD" caption="最高"  /> 
+	<Index  name="L_YLD" caption="最低"  />
+	<Index  name="YLD_NT_CHG1" caption="涨跌BP"  />
+	<Index  name="TRDPRC_1" caption="均价"  />
+  </Group>
+</ReportIndexs>

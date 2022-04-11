@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+    <meta name="author" content="xgqfrms">
+    <meta name="generator" content="VS code">
+    <!-- <title>no title</title> -->
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+    <!-- dom -->
+    <section class="content-container">
+        <article>
+            <p class="article-title">
+                <span class="article-title-icon"></span>!TITILE
+            </p>
+        </article>
+        <section id="section1" class="!ISTARGET">
+            <div>
+                <p class="indicator-box">
+                    <span class="indicator-point"></span>指标说明
+                </p>
+            </div>
+            <table id="table1">
+                <thead>
+                    <tr>
+                        <th class="th-key" data-position="left">指标名</th>
+                        <th class="th-key" data-position="middle">指标函数</th>
+                        <th class="th-key" data-position="right" colspan="!TARGET_COLSPAN">备注</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody1">
+                    !TARGET_CONTENT
+                </tbody>
+                <tfoot></tfoot>
+            </table>
+        </section>
+        <section id="section2" class="!ISPARAMS">
+            <div>
+                <p class="indicator-box">
+                    <span class="indicator-point"></span>备注
+                </p>
+            </div>
+            <table id="table2">
+                <thead>
+                    <tr>
+                        <th class="th-key" data-position="left">编号</th>
+                        <th class="th-key" data-position="middle">英文简称</th>
+                        <th class="th-key" data-position="right" colspan="!PARAMS_COLSPAN">备注说明</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody2">
+                    !PARAMS_CONTENT
+                </tbody>
+                <tfoot></tfoot>
+            </table>
+        </section>
+    </section>
+    <!-- js -->
+</body>
+
+</html>
